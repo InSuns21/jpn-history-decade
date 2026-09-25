@@ -6,6 +6,8 @@ const root = process.cwd()
 const periodDir = path.join(root, 'content', 'periods')
 const glossaryDir = path.join(root, 'content', 'glossary')
 const outputFile = path.join(root, 'src', 'generated', 'content.generated.ts')
+const { mapDefinitions } = await import('../src/maps/registry.ts')
+const knownMapIds = new Set(mapDefinitions.map((definition) => definition.id))
 
 const errors = []
 
@@ -266,6 +268,9 @@ function compilePeriod(filePath) {
   const contemporaryAssumptions = requireStringArray(frontmatter, 'contemporaryAssumptions', relative)
   const nextIssues = requireStringArray(frontmatter, 'nextIssues', relative)
   const maps = requireStringArray(frontmatter, 'maps', relative)
+  for (const mapId of maps) {
+    if (!knownMapIds.has(mapId)) pushError(relative, 'map reference has no matching definition: ' + mapId)
+  }
   const sources = validateSources(frontmatter, source, relative)
   const sections = parseMarkdownSections(parsed.body, relative)
   const glossary = loadGlossary(routeKey, relative)

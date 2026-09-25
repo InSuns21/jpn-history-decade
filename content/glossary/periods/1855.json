@@ -1,0 +1,19 @@
+{
+  "period": "1855",
+  "termRefs": [
+    { "id": "abe-masahiro", "core": false },
+    { "id": "nagasaki-kaigun-denshusho", "core": true },
+    { "id": "bansho-shirabesho", "core": true },
+    { "id": "gaikoku-bugyo", "core": true },
+    { "id": "townsend-harris", "core": true },
+    { "id": "hotta-masayoshi", "core": true },
+    { "id": "chokkyo", "core": true },
+    { "id": "ii-naosuke", "core": true },
+    { "id": "shogun-keishi-mondai", "core": true },
+    { "id": "nichibei-shuko-tsusho-joyaku", "core": true },
+    { "id": "ryoji-saibanken", "core": true },
+    { "id": "kaikojo", "core": true },
+    { "id": "ansei-no-taigoku", "core": true },
+    { "id": "kingin-hika", "core": true }
+  ]
+}

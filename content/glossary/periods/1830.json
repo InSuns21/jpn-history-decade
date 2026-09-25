@@ -1,0 +1,61 @@
+{
+  "period": "1830",
+  "termRefs": [
+    {
+      "id": "bakuhan-taisei",
+      "core": true
+    },
+    {
+      "id": "mura-uke-sei",
+      "core": true
+    },
+    {
+      "id": "kokudaka-sei",
+      "core": true
+    },
+    {
+      "id": "kurayashiki",
+      "core": true
+    },
+    {
+      "id": "kaisen",
+      "core": true
+    },
+    {
+      "id": "kabu-nakama",
+      "core": false
+    },
+    {
+      "id": "tenpo-famine",
+      "core": true
+    },
+    {
+      "id": "osukui-goya",
+      "core": true
+    },
+    {
+      "id": "uchikowashi",
+      "core": true
+    },
+    {
+      "id": "oshio-rebellion",
+      "core": true
+    },
+    {
+      "id": "ikokusen-uchiharai-rei",
+      "core": false
+    },
+    {
+      "id": "morrison-incident",
+      "core": false
+    },
+    {
+      "id": "rangaku",
+      "core": false
+    },
+    {
+      "id": "bansha-no-goku",
+      "core": false
+    }
+  ]
+}

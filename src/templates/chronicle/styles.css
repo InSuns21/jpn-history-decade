@@ -644,6 +644,8 @@ body {
   overflow: visible;
   background: transparent;
   cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
   font-family: var(--font-ui);
 }
 .historical-map-marker__icon {

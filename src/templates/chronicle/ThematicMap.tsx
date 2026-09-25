@@ -85,38 +85,56 @@ export function ThematicMap({ mapId }: { mapId: string }) {
 
           markerButton.append(markerIcon, markerLabel)
 
-          markerButton.addEventListener('click', () => {
-            activePopup?.remove()
+          const popupBody = document.createElement('div')
+          popupBody.className = 'historical-map-popup'
 
-            const popupBody = document.createElement('div')
-            popupBody.className = 'historical-map-popup'
+          const title = document.createElement('strong')
+          title.textContent = label
+          popupBody.appendChild(title)
 
-            const title = document.createElement('strong')
-            title.textContent = label
-            popupBody.appendChild(title)
+          const meta = document.createElement('span')
+          meta.textContent = [year, legend.label].filter(Boolean).join(' / ')
+          popupBody.appendChild(meta)
 
-            const meta = document.createElement('span')
-            meta.textContent = [year, legend.label].filter(Boolean).join(' / ')
-            popupBody.appendChild(meta)
+          const paragraph = document.createElement('p')
+          paragraph.textContent = detail
+          popupBody.appendChild(paragraph)
 
-            const paragraph = document.createElement('p')
-            paragraph.textContent = detail
-            popupBody.appendChild(paragraph)
-
-            activePopup = new maplibregl.Popup({
-              offset: 24,
-              maxWidth: '320px',
-              closeButton: true,
-              closeOnClick: true,
-            })
-              .setLngLat([longitude, latitude])
-              .setDOMContent(popupBody)
-              .addTo(map)
+          const popup = new maplibregl.Popup({
+            offset: 24,
+            maxWidth: '320px',
+            closeButton: true,
+            closeOnClick: true,
           })
+            .setLngLat([longitude, latitude])
+            .setDOMContent(popupBody)
 
           const marker = new maplibregl.Marker({ element: markerButton, anchor: 'center' })
             .setLngLat([longitude, latitude])
+            .setPopup(popup)
             .addTo(map)
+
+          const openPopup = () => {
+            if (activePopup && activePopup !== popup) activePopup.remove()
+            if (!popup.isOpen()) popup.addTo(map)
+            activePopup = popup
+          }
+
+          markerButton.addEventListener('click', (event) => {
+            event.stopPropagation()
+            openPopup()
+          })
+
+          markerButton.addEventListener(
+            'touchend',
+            (event) => {
+              event.preventDefault()
+              event.stopPropagation()
+              openPopup()
+            },
+            { passive: false },
+          )
+
           markers.push(marker)
         }
       }

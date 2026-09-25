@@ -28,6 +28,8 @@
 
 Visual Audit は完全自動化が難しいため、機械判定できない項目は **human review required** として残す。
 
+特に interactive map は、viewport 幅だけでなく入力方式も監査対象とする。Desktop の mouse 操作が成功しても、Tablet / Touch で同じ操作が成立するとは限らないため、少なくとも代表的な touch 環境を独立に確認する。
+
 ---
 
 # 2. 地図データの provenance を必須にする
@@ -260,6 +262,8 @@ derived data は transformation history を必須とする。
 - point size が重要度を偽装しない
 - 同一地点に複数 feature がある場合の重なりを処理
 - approximate location は必要に応じて別記号にする
+- 読者が地点そのものを識別する必要がある場合、カテゴリ記号・単漢字・色だけを主要表示にしない
+- interactive point は mouse だけでなく touch でも押しやすい十分な hit area を持たせる
 
 ## 7.4 ラベル
 
@@ -267,6 +271,10 @@ derived data は transformation history を必須とする。
 - 表記ゆれを統一
 - zoom level ごとのラベル過密を抑える
 - 重要地点を優先して表示する
+- 初期表示で重要地点を識別できるよう、地点名など意味のあるテキストラベルを優先する
+- 「来」「交」「防」「港」のようなカテゴリ略号は補助記号として使い、地点名の代替にしない
+- popup は補足説明を提供するために使い、地点の基本識別を popup を開くまで隠さない
+- 密集地域では label placement を地点ごとに調整し、重なりを human review で確認する
 
 ## 7.5 凡例
 
@@ -298,6 +306,16 @@ derived data は transformation history を必須とする。
 - [ ] 地図タイトル・対象期間が明確
 - [ ] 不確実な境界・位置が確定情報のように見えない
 
+## Tablet / Touch
+
+- [ ] 重要地点のラベルを初期表示で読める
+- [ ] マーカーまたは対応ラベルをタップすると popup が開く
+- [ ] popup を閉じられる
+- [ ] tap が map の drag / pan 判定に吸収されず、意図した操作として成立する
+- [ ] hover 前提の情報や操作がない
+- [ ] マーカーの tap target が実機で小さすぎない
+- [ ] タッチ操作後も地図の pan / pinch zoom が破綻しない
+
 ## Mobile
 
 - [ ] 地図が横にはみ出さない
@@ -306,6 +324,7 @@ derived data は transformation history を必須とする。
 - [ ] touch操作とページscrollが致命的に競合しない
 - [ ] 重要地点が小さすぎない
 - [ ] ラベルが画面を覆わない
+- [ ] popup を開いた状態でも本文へ戻れる
 
 ## Zoom
 
@@ -410,7 +429,8 @@ Human Visual Audit をGitHub Pages上で行うため、`draft` / `pending-human`
 - template変更
 - 地図コンテナサイズ変更
 - popup / legend UI変更
-- mobile layout変更
+- marker / label の click・tap interaction変更
+- mobile / tablet layout変更
 - basemap変更
 
 ---
@@ -447,7 +467,10 @@ Human Visual Audit をGitHub Pages上で行うため、`draft` / `pending-human`
 - [ ] Style Audit passed
 - [ ] legend と layer が一致
 - [ ] Desktop Visual Audit passed
+- [ ] Tablet / Touch Visual Audit passed
 - [ ] Mobile Visual Audit passed
+- [ ] 主要地点を初期表示で識別できる
+- [ ] tap / click で補足情報へ到達できる
 - [ ] zoom別確認 passed
 - [ ] 不確実性の表現を確認
 - [ ] 本文との整合性を確認

@@ -116,12 +116,16 @@ for (const [year, glossary] of glossaries) {
 }
 
 const glossaryComponent = exists('src/components/Glossary.tsx') ? read('src/components/Glossary.tsx') : ''
+const linkedTextComponent = exists('src/components/LinkedText.tsx') ? read('src/components/LinkedText.tsx') : ''
 const app = exists('src/App.tsx') ? read('src/App.tsx') : ''
 
 if (!glossaryComponent.includes("id={'term-' + item.id}")) {
   errors.push('src/components/Glossary.tsx: glossary anchor convention term-<id> is missing')
 }
-if (!app.includes('/terms/')) {
+if (!linkedTextComponent.includes("'/terms/' + termId")) {
+  errors.push('src/components/LinkedText.tsx: glossary href convention is missing')
+}
+if (!app.includes('terms') || !app.includes('termExists') || !app.includes('activeTermId')) {
   errors.push('src/App.tsx: glossary term route support is missing')
 }
 

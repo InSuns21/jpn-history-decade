@@ -6,7 +6,7 @@ export const bakumatsuEarlyContact1853Map: HistoricalMapDefinition = {
   historicalQuestion: '外国艦隊への対応が、なぜ一港の問題ではなく全国政治の問題になったのか。',
   readingNote:
     '地点は史料に記された歴史地名を現在の地理上へ概略配置したもので、艦船の正確な投錨位置や1850年代の海岸線を再現するものではない。背景地図・海岸線は現代のOpenStreetMapであり、歴史境界を示さない。',
-  status: 'draft',
+  status: 'published',
   period: { startYear: 1853, endYear: 1854 },
   initialView: {
     center: [136.7, 36.4],
@@ -154,11 +154,12 @@ export const bakumatsuEarlyContact1853Map: HistoricalMapDefinition = {
   auditState: {
     dataAudit: 'passed',
     styleAudit: 'passed',
-    visualAudit: 'pending-human',
+    visualAudit: 'passed',
     notes: [
       '歴史地名と年代はJH06の公的資料群で照合した。',
       '座標は概略位置として扱い、geometryConfidence=approximate とした。',
-      'Desktop / Mobile / zoom別のHuman Visual Audit完了後にpublishedへ変更する。',
+      'Human Visual Auditで単漢字カテゴリ記号のみでは地点識別が弱いと判明し、地点名ラベルを常時表示する形へ修正した。',
+      'Tablet / Touchでpopupが開きにくい問題を修正し、2026-09-26にタブレット実機で地点ラベル・popup操作を確認した。',
     ],
   },
 }

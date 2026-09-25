@@ -53,16 +53,23 @@ export interface MapLayerDefinition {
 export interface MapLegendItem {
   value: string
   label: string
+  marker: string
+  color: string
 }
 
 export interface HistoricalMapDefinition {
   id: string
   title: string
   historicalQuestion: string
+  readingNote?: string
   status: 'draft' | 'published'
   period: {
     startYear: number
     endYear: number
+  }
+  initialView: {
+    center: [number, number]
+    zoom: number
   }
   datasets: HistoricalMapDataset[]
   layers: MapLayerDefinition[]

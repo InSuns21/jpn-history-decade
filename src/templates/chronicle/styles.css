@@ -127,6 +127,7 @@ a { color: inherit; }
 
 .decade-layout { display: grid; grid-template-columns: 230px minmax(0,1fr); gap: 54px; padding-top: 54px; padding-bottom: 100px; }
 .decade-sidebar { position: sticky; top: 105px; align-self: start; }
+.decade-sidebar, .decade-article { min-width: 0; }
 .decade-sidebar .timeline-nav { grid-template-columns: repeat(2,1fr); }
 .decade-sidebar .timeline-nav__item { min-height: 65px; padding: 10px; border-bottom: 1px solid var(--line); }
 .decade-sidebar .timeline-nav__item span { font-size: 1rem; }

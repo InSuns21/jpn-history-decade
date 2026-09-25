@@ -11,7 +11,7 @@ function isNonEmptyString(value: unknown): value is string {
 
 function yearFromTemporal(value?: string) {
   if (!value) return undefined
-  const match = value.match(/^(\\d{4})/)
+  const match = value.match(/^(\d{4})/)
   return match ? Number(match[1]) : undefined
 }
 

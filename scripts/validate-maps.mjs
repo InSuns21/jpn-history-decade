@@ -25,6 +25,7 @@ const base = {
   historicalQuestion: '監査条件が機能するか',
   status: 'draft',
   period: { startYear: 1850, endYear: 1854 },
+  initialView: { center: [139.7, 35.7], zoom: 5 },
   datasets: [
     {
       id: 'points',
@@ -38,18 +39,18 @@ const base = {
         transformations: [],
       },
       allowedGeometryTypes: ['Point'],
-      requiredProperties: ['category'],
+      requiredProperties: ['category', 'marker'],
       features: [
         {
           id: 'feature-1',
           geometry: { type: 'Point', coordinates: [139.7, 35.7] },
-          properties: { category: 'port' },
+          properties: { category: 'port', marker: '港' },
         },
       ],
     },
   ],
   layers: [{ id: 'ports', datasetId: 'points', categories: ['port'] }],
-  legend: [{ value: 'port', label: '港' }],
+  legend: [{ value: 'port', label: '港', marker: '港', color: '#37624f' }],
   auditState: {
     dataAudit: 'passed',
     styleAudit: 'passed',
@@ -78,15 +79,23 @@ const badFeatures = structuredClone(base)
 badFeatures.datasets[0].features.push({
   id: 'feature-1',
   geometry: { type: 'Point', coordinates: [999, 35.7] },
-  properties: { category: 'port' },
+  properties: { category: 'port', marker: '港' },
 })
 const featureErrors = validateHistoricalMapDefinition(badFeatures)
 assertIncludes(featureErrors, 'duplicate feature id', 'duplicate feature id')
 assertIncludes(featureErrors, 'longitude is out of range', 'coordinate range')
 
+const badView = structuredClone(base)
+badView.initialView.center = [181, 35.7]
+assertIncludes(validateHistoricalMapDefinition(badView), 'longitude is out of range', 'initial view')
+
 const badStyle = structuredClone(base)
 badStyle.layers[0].categories = ['fort']
 assertIncludes(validateHistoricalMapDefinition(badStyle), 'category is missing from legend', 'legend')
+
+const badLegend = structuredClone(base)
+badLegend.legend[0].marker = ''
+assertIncludes(validateHistoricalMapDefinition(badLegend), 'legend marker is required', 'marker cue')
 
 console.log(
   'Map audit validation passed: ' +

@@ -1,8 +1,13 @@
 import { validateMapData } from './audit/validateData.ts'
 import { validateMapStyle } from './audit/validateStyle.ts'
+import { bakumatsuEarlyContact1853Map } from './definitions/bakumatsuEarlyContact1853.ts'
 import type { HistoricalMapDefinition } from './schema.ts'
 
-export const mapDefinitions: HistoricalMapDefinition[] = []
+export const mapDefinitions: HistoricalMapDefinition[] = [bakumatsuEarlyContact1853Map]
+
+export function findMapDefinition(id: string) {
+  return mapDefinitions.find((definition) => definition.id === id)
+}
 
 export function validateHistoricalMapDefinition(definition: HistoricalMapDefinition) {
   const errors = [...validateMapData(definition), ...validateMapStyle(definition)]

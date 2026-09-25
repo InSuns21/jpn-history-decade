@@ -92,6 +92,11 @@ export function validateMapData(definition: HistoricalMapDefinition) {
     errors.push(definition.id + ': map period startYear must be <= endYear')
   }
 
+  validateCoordinateTree(definition.initialView.center, definition.id + '.initialView.center', errors)
+  if (!Number.isFinite(definition.initialView.zoom) || definition.initialView.zoom < 0 || definition.initialView.zoom > 22) {
+    errors.push(definition.id + ': initialView.zoom must be between 0 and 22')
+  }
+
   for (const dataset of definition.datasets) {
     const path = definition.id + '/' + dataset.id
     errors.push(...validateProvenance(dataset.provenance, definition.status, path + '.provenance'))

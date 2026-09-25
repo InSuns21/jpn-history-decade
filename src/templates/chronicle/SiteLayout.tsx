@@ -1,10 +1,8 @@
-import type { ReactNode } from 'react'
+import type { SiteLayoutProps } from '../types'
 
-interface SiteShellProps {
-  children: ReactNode
-}
+export function SiteLayout({ children, periods }: SiteLayoutProps) {
+  const firstPeriod = periods[0]
 
-export function SiteShell({ children }: SiteShellProps) {
   return (
     <div className="site-shell">
       <header className="site-header">
@@ -18,7 +16,7 @@ export function SiteShell({ children }: SiteShellProps) {
           </a>
           <nav className="site-nav" aria-label="主要ナビゲーション">
             <a href="#/">トップ</a>
-            <a href="#/decade/1800">1800年代</a>
+            {firstPeriod && <a href={'#/period/' + firstPeriod.routeKey}>{firstPeriod.navLabel}</a>}
           </nav>
         </div>
       </header>

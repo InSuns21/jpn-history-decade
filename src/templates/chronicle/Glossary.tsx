@@ -1,4 +1,4 @@
-import type { GlossaryTerm } from '../types/history'
+import type { GlossaryTerm } from '../../content-model/types'
 
 interface GlossaryProps {
   terms: GlossaryTerm[]

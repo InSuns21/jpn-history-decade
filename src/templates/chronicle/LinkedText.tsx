@@ -2,12 +2,12 @@ import { Fragment, type ReactNode } from 'react'
 
 interface LinkedTextProps {
   text: string
-  year: number
+  routeKey: string
 }
 
 const TERM_LINK = /\[\[term:([a-z0-9-]+)\|([^\]]+)\]\]/g
 
-export function LinkedText({ text, year }: LinkedTextProps) {
+export function LinkedText({ text, routeKey }: LinkedTextProps) {
   const nodes: ReactNode[] = []
   let cursor = 0
   let match: RegExpExecArray | null
@@ -21,7 +21,7 @@ export function LinkedText({ text, year }: LinkedTextProps) {
     nodes.push(
       <a
         className="glossary-link"
-        href={'#/decade/' + year + '/terms/' + termId}
+        href={'#/period/' + routeKey + '/terms/' + termId}
         key={termId + '-' + start}
       >
         {label}

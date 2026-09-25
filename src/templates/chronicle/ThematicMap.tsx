@@ -71,7 +71,7 @@ export function ThematicMap({ mapId }: { mapId: string }) {
         lineOverlay = document.createElementNS(svgNamespace, 'svg')
         lineOverlay.classList.add('historical-map-lines')
         lineOverlay.setAttribute('aria-hidden', 'true')
-        containerRef.current.appendChild(lineOverlay)
+        map.getCanvasContainer().appendChild(lineOverlay)
 
         const paths = lineFeatures.flatMap((feature) => {
           const legend = definition.legend.find((item) => item.value === feature.category)
@@ -111,8 +111,8 @@ export function ThematicMap({ mapId }: { mapId: string }) {
         renderLineOverlay = () => {
           if (!lineOverlay || !containerRef.current) return
 
-          const width = containerRef.current.clientWidth
-          const height = containerRef.current.clientHeight
+          const width = map.getCanvas().clientWidth
+          const height = map.getCanvas().clientHeight
           lineOverlay.setAttribute('width', String(width))
           lineOverlay.setAttribute('height', String(height))
           lineOverlay.setAttribute('viewBox', `0 0 ${width} ${height}`)

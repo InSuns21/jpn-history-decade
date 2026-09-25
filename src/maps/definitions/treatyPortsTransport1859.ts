@@ -1,4 +1,4 @@
-import codhRoads from '../data/geojson/a2-codh-roads.geojson'
+import codhRoadsRaw from '../data/geojson/a2-codh-roads.geojson?raw'
 import type { HistoricalMapDefinition, HistoricalMapFeature } from '../schema.ts'
 
 type CodhRoadFeature = {
@@ -15,7 +15,9 @@ type CodhRoadFeature = {
   }
 }
 
-const codhFeatures = (codhRoads.features as CodhRoadFeature[]).map(
+const codhRoads = JSON.parse(codhRoadsRaw) as { features: CodhRoadFeature[] }
+
+const codhFeatures = codhRoads.features.map(
   (feature): HistoricalMapFeature => ({
     id: feature.id,
     geometry: {

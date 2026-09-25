@@ -923,8 +923,11 @@ JH05の初回公開版では地図を実装しない。
 - JH06本文・出典・年代差分・共通用語参照を実装した。
 - A1は浦賀沖・久里浜・長崎・品川台場・横浜村・下田・箱館を概略点として登録し、MapLibre描画まで接続した。
 - 地点は公的資料に記された歴史地名を現在の代表点へ概略配置したもので、艦船の正確な投錨位置や1850年代の海岸線は復元しない。現代OpenStreetMapを背景に使うことも読者向け注記へ明示する。
-- Data Audit / Style Audit は実装・出典・カテゴリ・座標範囲を確認済み。Human Visual Audit は実画面のDesktop / Mobile / zoom別確認が必要なため `pending-human` とする。
-- Human Visual Audit をGitHub Pages上で行えるよう、A1は `draft` のまま通常ページへ表示し、地図上部に「監査中です」を明示する。監査完了後に `published` へ変更する。
+- Data Audit / Style Audit は実装・出典・カテゴリ・座標範囲を確認済み。
+- Human Visual Audit では、初期の単漢字カテゴリ記号だけでは地点を識別しにくいことが判明したため、地点名ラベルを常時表示し、カテゴリ記号は補助表示へ変更した。
+- Tablet / Touch では desktop click と同じ実装だけでは popup が安定して開かないことが確認されたため、MapLibre popup を各markerへ紐づけ、touch入力を明示的に扱うよう修正した。
+- 2026-09-26、タブレット実機で地点ラベルと popup の操作確認が完了し、Human Visual Audit を passed、A1を `published` とした。
+- このフィードバックを `MAP_AUDIT_STANDARD.md` へ反映し、今後の地図では地点識別・popup・Tablet / Touch を共通監査項目とする。
 
 ---
 
@@ -1147,6 +1150,7 @@ MapLibreと特に相性がよい。
 実際の表示を、
 
 - desktop
+- tablet / touch
 - mobile
 - initial zoom
 - zoom in
@@ -1159,7 +1163,8 @@ MapLibreと特に相性がよい。
 特に、
 
 - ラベル重なり
-- popup
+- 地点ラベルの識別性
+- popup の click / tap 操作
 - 凡例
 - visual hierarchy
 - 背景地図の強さ
@@ -1301,7 +1306,7 @@ plan_done/ へ移動
 - [ ] 地図の Data Audit が passed
 - [ ] 地図の Style Audit が passed
 - [ ] 地図の Human Visual Audit が passed
-- [ ] 地図を desktop / mobile / zoom別に確認した
+- [ ] 地図を desktop / tablet-touch / mobile / zoom別に確認した
 - [ ] template変更で原稿修正が不要
 - [ ] desktop / mobileを確認
 - [ ] content compiler validation green

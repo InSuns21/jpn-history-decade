@@ -164,11 +164,11 @@ export const treatyPortsTransport1859Map: HistoricalMapDefinition = {
           properties: {
             category: 'transport-hub',
             marker: '結',
-            label: '大里・小倉方面',
+            label: '大里',
             labelPlacement: 'right',
             year: '近世',
             detail:
-              'CODHの長崎街道R900は大里を起点として長崎へ至る。九州北部と本州方面を結ぶ交通圏の結節点として表示する。',
+              'CODHの長崎街道R900の北側起点。関門海峡に面し、小倉方面・本州方面へ接続する交通圏の結節点として表示する。',
           },
         },
       ],

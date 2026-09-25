@@ -1,0 +1,49 @@
+{
+  "period": "1850",
+  "termRefs": [
+    {
+      "id": "bakuhan-taisei",
+      "core": true
+    },
+    {
+      "id": "shinsui-kyuyo-rei",
+      "core": false
+    },
+    {
+      "id": "betsudan-fusetsugaki",
+      "core": true
+    },
+    {
+      "id": "perry",
+      "core": true
+    },
+    {
+      "id": "abe-masahiro",
+      "core": true
+    },
+    {
+      "id": "uraga-bugyosho",
+      "core": true
+    },
+    {
+      "id": "kaibo",
+      "core": true
+    },
+    {
+      "id": "shinagawa-daiba",
+      "core": true
+    },
+    {
+      "id": "putyatin",
+      "core": true
+    },
+    {
+      "id": "nichibei-washin-joyaku",
+      "core": true
+    },
+    {
+      "id": "kaikoku",
+      "core": true
+    }
+  ]
+}

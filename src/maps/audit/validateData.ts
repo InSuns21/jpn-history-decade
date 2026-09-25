@@ -11,7 +11,7 @@ function isNonEmptyString(value: unknown): value is string {
 
 function yearFromTemporal(value?: string) {
   if (!value) return undefined
-  const match = value.match(/^(\d{4})/)
+  const match = value.match(/^(\\d{4})/)
   return match ? Number(match[1]) : undefined
 }
 
@@ -90,6 +90,11 @@ export function validateMapData(definition: HistoricalMapDefinition) {
 
   if (definition.period.startYear > definition.period.endYear) {
     errors.push(definition.id + ': map period startYear must be <= endYear')
+  }
+
+  validateCoordinateTree(definition.initialView.center, definition.id + '.initialView.center', errors)
+  if (!Number.isFinite(definition.initialView.zoom) || definition.initialView.zoom < 0 || definition.initialView.zoom > 22) {
+    errors.push(definition.id + ': initialView.zoom must be between 0 and 22')
   }
 
   for (const dataset of definition.datasets) {

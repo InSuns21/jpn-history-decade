@@ -471,14 +471,20 @@ body {
   line-height: 1.9;
 }
 
-.glossary-essay-point {
+.glossary-connections {
   margin-top: 10px !important;
   padding: 12px 14px;
   background: var(--paper-deep);
 }
 
-.glossary-essay-point strong {
+.glossary-connections strong,
+.glossary-period-note strong {
   font-family: var(--font-ui);
+}
+
+.glossary-period-note {
+  margin-top: 10px !important;
+  color: var(--muted);
 }
 
 @media (max-width: 640px) {

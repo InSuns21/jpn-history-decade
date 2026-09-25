@@ -9,10 +9,9 @@
     "compile:content": "node --experimental-strip-types scripts/compile-content.mjs",
     "typecheck": "tsc -b --pretty false",
     "lint": "eslint .",
-    "validate:links": "node scripts/validate-content-links.mjs",
     "validate:maps": "node --experimental-strip-types scripts/validate-maps.mjs",
     "validate:instructions": "node scripts/validate-instruction-length.mjs",
-    "check": "npm run validate:instructions && npm run compile:content && npm run validate:links && npm run validate:maps && npm run lint && npm run typecheck && vite build",
+    "check": "npm run validate:instructions && npm run compile:content && npm run validate:maps && npm run lint && npm run typecheck && vite build",
     "preview": "vite preview"
   },
   "dependencies": {

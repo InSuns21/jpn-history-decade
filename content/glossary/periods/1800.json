@@ -1,0 +1,65 @@
+{
+  "period": "1800",
+  "termRefs": [
+    {
+      "id": "bakuhan-taisei",
+      "core": true
+    },
+    {
+      "id": "kansei-reform",
+      "core": true
+    },
+    {
+      "id": "mura-uke-sei",
+      "core": true
+    },
+    {
+      "id": "kokudaka-sei",
+      "core": true
+    },
+    {
+      "id": "kurayashiki",
+      "core": true
+    },
+    {
+      "id": "santo",
+      "core": true
+    },
+    {
+      "id": "gokaido",
+      "core": true
+    },
+    {
+      "id": "kaisen",
+      "core": true
+    },
+    {
+      "id": "four-gates",
+      "core": true
+    },
+    {
+      "id": "ezochi",
+      "core": true
+    },
+    {
+      "id": "rezanov",
+      "core": true
+    },
+    {
+      "id": "phaeton-incident",
+      "core": true
+    },
+    {
+      "id": "rangaku",
+      "core": true
+    },
+    {
+      "id": "terakoya",
+      "core": true
+    },
+    {
+      "id": "hanko",
+      "core": true
+    }
+  ]
+}

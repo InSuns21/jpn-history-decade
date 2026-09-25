@@ -11,11 +11,11 @@ export function Glossary({ terms, activeTermId }: GlossaryProps) {
       <div className="section-heading">
         <span>用</span>
         <div>
-          <h2>論述対策の重要用語</h2>
+          <h2>この時代を読むための用語</h2>
         </div>
       </div>
       <p className="glossary-intro">
-        国公立大学の論述で、制度や因果関係を説明するときに使える重要語をまとめています。用語だけでなく、何と結びつけて書くかも確認します。
+        本文に登場する重要な制度・人物・概念を、定義だけでなく他の制度や社会の変化とのつながりまで整理します。
       </p>
       <dl className="glossary-list">
         {terms.map((item) => (
@@ -30,9 +30,15 @@ export function Glossary({ terms, activeTermId }: GlossaryProps) {
             </dt>
             <dd>
               <p>{item.definition}</p>
-              <p className="glossary-essay-point">
-                <strong>論述では：</strong>
-                {item.essayPoint}
+              {item.periodNote && (
+                <p className="glossary-period-note">
+                  <strong>この時代では：</strong>
+                  {item.periodNote}
+                </p>
+              )}
+              <p className="glossary-connections">
+                <strong>つながり：</strong>
+                {item.connections}
               </p>
             </dd>
           </div>

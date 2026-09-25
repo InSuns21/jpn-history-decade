@@ -103,7 +103,7 @@ export function PeriodTemplate({
             ))}
             <a href="#change">前の時代からの変化</a>
             <a href="#assumptions">当時の前提と次の論点</a>
-            <a href="#glossary">論述対策の重要用語</a>
+            <a href="#glossary">この時代を読むための用語</a>
             {data.sources.length > 0 && <a href="#sources">史料・参考文献</a>}
           </nav>
         </aside>

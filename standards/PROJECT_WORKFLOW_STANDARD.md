@@ -40,7 +40,7 @@ build前に段階的に以下を検査可能にする。
 - ID重複
 - 年代順・前後参照
 - source ID
-- glossary ID / link
+- global glossary ID / period reference / link
 - map ID
 - 地図 provenance / temporalCoverage / geometryConfidence / source / license
 - 内部リンク先
@@ -54,10 +54,13 @@ build前に段階的に以下を検査可能にする。
 少なくとも、
 - Project instruction length validation
 - content / glossary / internal-link validation
+- map validation
 - ESLint
 - TypeScript typecheck
 - Vite production build
 を含める。
+
+コンテンツ検証は、同じ全ファイルを複数スクリプトで重複走査しない。共通辞書などの共有データは一度インデックス化し、各原稿を一度ずつ処理する構成を基本とする。CIでは同一branch / PRの古い実行をキャンセルし、編集回数の増加でActionsが滞留しにくいようにする。
 
 GitHub上で変更した場合はActionsを確認する。公開変更はPages deployも確認する。失敗中に完了扱いしない。
 

@@ -176,17 +176,7 @@ a { color: inherit; }
 .sources-section > p { margin-left: 56px; color: var(--muted); line-height: 1.8; }
 
 .thematic-map { margin: 32px 0; }
-.thematic-map__canvas { position: relative; height: 520px; border: 1px solid var(--line); overflow: hidden; }
-.historical-map-lines {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  display: block;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-.historical-map-marker { z-index: 2; }
+.thematic-map__canvas { height: 520px; border: 1px solid var(--line); }
 .thematic-map figcaption { display: flex; flex-direction: column; gap: 5px; padding-top: 10px; font-size: .75rem; }
 .thematic-map figcaption span { color: var(--muted); }
 

@@ -48,9 +48,6 @@ export function ThematicMap({ mapId }: { mapId: string }) {
     const markers: maplibregl.Marker[] = []
     let activePopup: maplibregl.Popup | null = null
 
-    let lineOverlay: SVGSVGElement | null = null
-    let renderLineOverlay: (() => void) | null = null
-
     map.once('load', () => {
       const lineFeatures = definition.datasets.flatMap((dataset) =>
         dataset.features
@@ -60,77 +57,62 @@ export function ThematicMap({ mapId }: { mapId: string }) {
               Array.isArray(feature.geometry.coordinates),
           )
           .map((feature) => ({
+            type: 'Feature' as const,
             id: feature.id,
-            category: String(feature.properties.category ?? ''),
-            coordinates: feature.geometry.coordinates as [number, number][],
+            properties: feature.properties,
+            geometry: {
+              type: 'LineString' as const,
+              coordinates: feature.geometry.coordinates as [number, number][],
+            },
           })),
       )
 
-      if (lineFeatures.length > 0 && containerRef.current) {
-        const svgNamespace = 'http://www.w3.org/2000/svg'
-        lineOverlay = document.createElementNS(svgNamespace, 'svg')
-        lineOverlay.classList.add('historical-map-lines')
-        lineOverlay.setAttribute('aria-hidden', 'true')
-        map.getCanvasContainer().appendChild(lineOverlay)
-
-        const paths = lineFeatures.flatMap((feature) => {
-          const legend = definition.legend.find((item) => item.value === feature.category)
-          if (!legend) return []
-
-          const basePath = document.createElementNS(svgNamespace, 'path')
-          basePath.dataset.featureId = feature.id
-          basePath.dataset.category = feature.category
-          basePath.setAttribute('fill', 'none')
-          basePath.setAttribute('stroke', legend.color)
-          basePath.setAttribute('stroke-width', feature.category === 'port-link' ? '5' : '4.5')
-          basePath.setAttribute('stroke-opacity', '0.56')
-          basePath.setAttribute('stroke-linecap', 'round')
-          basePath.setAttribute('stroke-linejoin', 'round')
-
-          const dashPath = document.createElementNS(svgNamespace, 'path')
-          dashPath.dataset.featureId = feature.id
-          dashPath.dataset.category = feature.category
-          dashPath.setAttribute('fill', 'none')
-          dashPath.setAttribute('stroke', legend.color)
-          dashPath.setAttribute('stroke-width', feature.category === 'port-link' ? '3.2' : '2.8')
-          dashPath.setAttribute('stroke-opacity', '1')
-          dashPath.setAttribute('stroke-linecap', 'round')
-          dashPath.setAttribute('stroke-linejoin', 'round')
-          dashPath.setAttribute(
-            'stroke-dasharray',
-            feature.category === 'port-link' ? '5 5' : '9 6',
-          )
-
-          lineOverlay?.append(basePath, dashPath)
-          return [
-            { path: basePath, coordinates: feature.coordinates },
-            { path: dashPath, coordinates: feature.coordinates },
-          ]
+      if (lineFeatures.length > 0) {
+        const sourceId = `historical-lines-${definition.id}`
+        map.addSource(sourceId, {
+          type: 'geojson',
+          data: {
+            type: 'FeatureCollection',
+            features: lineFeatures,
+          },
         })
 
-        renderLineOverlay = () => {
-          if (!lineOverlay || !containerRef.current) return
+        for (const item of definition.legend.filter((legendItem) => legendItem.kind === 'line')) {
+          const basePaint = {
+            'line-color': item.color,
+            'line-width': item.value === 'port-link' ? 5 : 4.5,
+            'line-opacity': 0.42,
+          } as const
 
-          const width = map.getCanvas().clientWidth
-          const height = map.getCanvas().clientHeight
-          lineOverlay.setAttribute('width', String(width))
-          lineOverlay.setAttribute('height', String(height))
-          lineOverlay.setAttribute('viewBox', `0 0 ${width} ${height}`)
+          map.addLayer({
+            id: `historical-line-base-${definition.id}-${item.value}`,
+            type: 'line',
+            source: sourceId,
+            filter: ['==', ['get', 'category'], item.value],
+            layout: {
+              'line-cap': 'round',
+              'line-join': 'round',
+            },
+            paint: basePaint,
+          })
 
-          for (const item of paths) {
-            const d = item.coordinates
-              .map(([longitude, latitude], index) => {
-                const point = map.project([longitude, latitude])
-                return `${index === 0 ? 'M' : 'L'} ${point.x.toFixed(1)} ${point.y.toFixed(1)}`
-              })
-              .join(' ')
-            item.path.setAttribute('d', d)
-          }
+          map.addLayer({
+            id: `historical-line-dash-${definition.id}-${item.value}`,
+            type: 'line',
+            source: sourceId,
+            filter: ['==', ['get', 'category'], item.value],
+            layout: {
+              'line-cap': 'round',
+              'line-join': 'round',
+            },
+            paint: {
+              'line-color': item.color,
+              'line-width': item.value === 'port-link' ? 3.2 : 2.8,
+              'line-opacity': 1,
+              'line-dasharray': item.value === 'port-link' ? [1.2, 1.2] : [2.2, 1.6],
+            },
+          })
         }
-
-        renderLineOverlay()
-        map.on('move', renderLineOverlay)
-        map.on('resize', renderLineOverlay)
       }
 
       for (const dataset of definition.datasets) {
@@ -227,11 +209,6 @@ export function ThematicMap({ mapId }: { mapId: string }) {
     return () => {
       activePopup?.remove()
       for (const marker of markers) marker.remove()
-      if (renderLineOverlay) {
-        map.off('move', renderLineOverlay)
-        map.off('resize', renderLineOverlay)
-      }
-      lineOverlay?.remove()
       map.remove()
     }
   }, [definition])

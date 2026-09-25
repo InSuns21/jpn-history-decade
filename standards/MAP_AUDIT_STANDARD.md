@@ -220,6 +220,16 @@ derived data は transformation history を必須とする。
 
 ライセンス不明の外部データをリポジトリへ直接取り込まない。
 
+## 5.6 GeoJSON / vector runtime
+
+MapLibre の GeoJSON / vector source は raster 背景とは別の実行経路を通るため、背景地図が表示されることだけで正常動作と判定しない。
+
+- production build で GeoJSON / vector feature が実際に描画されることを確認する
+- MapLibre v6 を Vite で利用する場合は、公式手順に従って worker URL を bundler 経由で解決する
+- raster 背景 + DOM marker だけが表示され、GeoJSON / vector layer だけ欠落する場合は worker 起動失敗を優先的に疑う
+- worker 設定、MapLibre major version、bundler 設定を変更した場合は Style Audit / Human Visual Audit をやり直す
+- 主題データを renderer 固有の SVG / DOM 座標だけに閉じ込めず、GeoJSON 等の再利用可能な地理データを正本として維持する
+
 ---
 
 # 6. Data Audit — 人間が確認する項目

@@ -5,12 +5,6 @@ interface DecadePageProps {
   data: DecadePageData
 }
 
-const statusLabel = {
-  draft: '初期ドラフト',
-  review: '監査中',
-  published: '公開版',
-} as const
-
 export function DecadePage({ data }: DecadePageProps) {
   return (
     <>
@@ -22,12 +16,11 @@ export function DecadePage({ data }: DecadePageProps) {
           <div className="decade-hero__meta">
             <span>{data.eraLabel}</span>
             <span>{data.period}</span>
-            <span>{statusLabel[data.status]}</span>
           </div>
           <h1>{data.title}</h1>
           <p className="decade-hero__summary">{data.summary}</p>
           <div className="framing-question">
-            <span>この年代の問い</span>
+            <span>この時代を考える問い</span>
             <strong>{data.framingQuestion}</strong>
           </div>
         </div>
@@ -37,26 +30,24 @@ export function DecadePage({ data }: DecadePageProps) {
         <aside className="decade-sidebar">
           <TimelineNav activeYear={data.year} />
           <nav className="toc" aria-label="このページの目次">
-            <strong>このページ</strong>
-            <a href="#snapshot">社会のスナップショット</a>
+            <strong>目次</strong>
+            <a href="#snapshot">この時代の概観</a>
             {data.sections.map((section) => (
               <a key={section.id} href={`#${section.id}`}>
                 {section.title.split(' — ')[0]}
               </a>
             ))}
-            <a href="#change">前時代からの変化</a>
-            <a href="#assumptions">当時の常識</a>
-            <a href="#sources">史料・出典方針</a>
+            <a href="#change">前の時代からの変化</a>
+            <a href="#assumptions">当時の前提と次の論点</a>
           </nav>
         </aside>
 
         <article className="decade-article">
           <section id="snapshot" className="content-section">
             <div className="section-heading">
-              <span>01</span>
+              <span>1</span>
               <div>
-                <p>STATE SNAPSHOT</p>
-                <h2>社会のスナップショット</h2>
+                <h2>この時代の概観</h2>
               </div>
             </div>
             <div className="snapshot-grid">
@@ -73,9 +64,8 @@ export function DecadePage({ data }: DecadePageProps) {
           {data.sections.map((section, index) => (
             <section id={section.id} className="content-section prose-section" key={section.id}>
               <div className="section-heading">
-                <span>{String(index + 2).padStart(2, '0')}</span>
+                <span>{index + 2}</span>
                 <div>
-                  <p>THEME</p>
                   <h2>{section.title}</h2>
                 </div>
               </div>
@@ -87,7 +77,7 @@ export function DecadePage({ data }: DecadePageProps) {
               </ul>
               {section.questions && (
                 <div className="question-box">
-                  <strong>本文で検証する問い</strong>
+                  <strong>考えてみる</strong>
                   <ul>
                     {section.questions.map((question) => (
                       <li key={question}>{question}</li>
@@ -100,9 +90,8 @@ export function DecadePage({ data }: DecadePageProps) {
 
           <section id="change" className="content-section">
             <div className="section-heading">
-              <span>{String(data.sections.length + 2).padStart(2, '0')}</span>
+              <span>{data.sections.length + 2}</span>
               <div>
-                <p>CHANGE</p>
                 <h2>前の時代から何が変わったか</h2>
               </div>
             </div>
@@ -110,10 +99,10 @@ export function DecadePage({ data }: DecadePageProps) {
               <table className="change-table">
                 <thead>
                   <tr>
-                    <th>観測軸</th>
+                    <th>項目</th>
                     <th>18世紀末まで</th>
                     <th>1800年代</th>
-                    <th>見る意味</th>
+                    <th>歴史的な意味</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -135,8 +124,7 @@ export function DecadePage({ data }: DecadePageProps) {
               <div className="section-heading compact">
                 <span>A</span>
                 <div>
-                  <p>CONTEMPORARY VIEW</p>
-                  <h2>当時の常識</h2>
+                  <h2>当時の前提</h2>
                 </div>
               </div>
               <ul className="plain-list">
@@ -149,7 +137,6 @@ export function DecadePage({ data }: DecadePageProps) {
               <div className="section-heading compact">
                 <span>B</span>
                 <div>
-                  <p>NEXT ISSUES</p>
                   <h2>次の時代への論点</h2>
                 </div>
               </div>
@@ -159,32 +146,6 @@ export function DecadePage({ data }: DecadePageProps) {
                 ))}
               </ul>
             </div>
-          </section>
-
-          {data.mapCandidate && (
-            <aside className="map-policy-card">
-              <span>MAPLIBRE / MAP CANDIDATE</span>
-              <h2>{data.mapCandidate.title}</h2>
-              <p>{data.mapCandidate.purpose}</p>
-            </aside>
-          )}
-
-          <section id="sources" className="content-section sources-section">
-            <div className="section-heading compact">
-              <span>S</span>
-              <div>
-                <p>SOURCES</p>
-                <h2>史料・出典</h2>
-              </div>
-            </div>
-            <p>
-              現在はページ構造を固めるための初期ドラフト。本文を拡張するときは、記述と同時に出典を追加する。
-            </p>
-            <ul className="plain-list">
-              {data.sourceNotes.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
           </section>
         </article>
       </div>

@@ -30,8 +30,9 @@ export interface GlossaryTerm {
   term: string
   category: string
   definition: string
-  essayPoint: string
-  requiredForEssay?: boolean
+  connections: string
+  core: boolean
+  periodNote?: string
 }
 
 export interface SourceDefinition {

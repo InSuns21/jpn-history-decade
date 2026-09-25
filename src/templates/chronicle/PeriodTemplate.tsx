@@ -67,7 +67,7 @@ export function PeriodTemplate({
   }, [activeTermId, data.routeKey])
 
   const sourceIds = data.sources.map((source) => source.id)
-  const publishedMapIds = data.maps.filter((mapId) => findMapDefinition(mapId)?.status === 'published')
+  const visibleMapIds = data.maps.filter((mapId) => Boolean(findMapDefinition(mapId)))
 
   return (
     <>
@@ -99,7 +99,7 @@ export function PeriodTemplate({
           <nav className="toc" aria-label="このページの目次">
             <strong>目次</strong>
             <a href="#snapshot">この時代の概観</a>
-            {publishedMapIds.length > 0 && <a href="#maps">地図で見る</a>}
+            {visibleMapIds.length > 0 && <a href="#maps">地図で見る</a>}
             {data.sections.map((section) => (
               <a key={section.id} href={'#' + section.id}>
                 {section.title.split(' — ')[0]}
@@ -129,13 +129,13 @@ export function PeriodTemplate({
             </div>
           </section>
 
-          {publishedMapIds.length > 0 && (
+          {visibleMapIds.length > 0 && (
             <section id="maps" className="content-section">
               <div className="section-heading">
                 <span>地</span>
                 <div><h2>地図で見る</h2></div>
               </div>
-              {publishedMapIds.map((mapId) => (
+              {visibleMapIds.map((mapId) => (
                 <ThematicMap key={mapId} mapId={mapId} />
               ))}
             </section>

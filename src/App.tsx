@@ -7,7 +7,7 @@ import { NotFoundPage } from './pages/NotFoundPage'
 
 function normalizeHash(hash: string) {
   const route = hash.replace(/^#/, '') || '/'
-  return route.startsWith('/') ? route : `/${route}`
+  return route.startsWith('/') ? route : '/' + route
 }
 
 function useHashRoute() {
@@ -19,16 +19,12 @@ function useHashRoute() {
     return () => window.removeEventListener('hashchange', onHashChange)
   }, [])
 
-  useEffect(() => {
-    window.scrollTo({ top: 0 })
-  }, [route])
-
   return route
 }
 
 export function App() {
   const route = useHashRoute()
-  const match = route.match(/^\/decade\/(\d{4})$/)
+  const match = route.match(/^\/decade\/(\d{4})(?:\/terms\/([a-z0-9-]+))?$/)
 
   let content = <NotFoundPage />
 
@@ -36,8 +32,13 @@ export function App() {
     content = <HomePage />
   } else if (match) {
     const year = Number(match[1])
+    const termId = match[2]
     const decade = decades.find((item) => item.year === year)
-    if (decade) content = <DecadePage data={decade} />
+    const termExists = !termId || decade?.glossary.some((item) => item.id === termId)
+
+    if (decade && termExists) {
+      content = <DecadePage data={decade} activeTermId={termId} />
+    }
   }
 
   return <SiteShell>{content}</SiteShell>

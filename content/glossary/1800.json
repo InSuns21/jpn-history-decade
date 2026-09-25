@@ -1,0 +1,95 @@
+{
+  "period": "1800",
+  "title": "1800年代の重要用語",
+  "audience": "国公立大学の日本史論述対策",
+  "terms": [
+    {
+      "id": "bakuhan-taisei",
+      "term": "幕藩体制",
+      "category": "政治",
+      "definition": "江戸幕府と諸藩がそれぞれの支配領域を統治し、幕府が大名統制や対外関係などを通じて全国的秩序を維持した政治・社会の仕組み。",
+      "essayPoint": "幕府による一元的な直接支配ではなく、幕府・藩・村町など複数の統治単位の組合せとして説明する。",
+      "requiredForEssay": true
+    },
+    {
+      "id": "kokudaka-sei",
+      "term": "石高制",
+      "category": "政治・経済",
+      "definition": "土地の生産力を米の収穫量に換算した石高を基準に、領地・年貢・大名の格式などを把握する仕組み。",
+      "essayPoint": "貨幣経済の発達と対立する制度としてだけでなく、市場経済と併存していた点まで書けるようにする。",
+      "requiredForEssay": true
+    },
+    {
+      "id": "kanei-reform",
+      "term": "寛政の改革",
+      "category": "政治",
+      "definition": "松平定信が老中として進めた幕政改革。倹約、農村復興、学問統制などを通じて幕府財政と社会秩序の立て直しを図った。",
+      "essayPoint": "1800年代初頭は改革そのものではなく、改革後の制度・政策がどのように引き継がれたかを見る。",
+      "requiredForEssay": true
+    },
+    {
+      "id": "kurayashiki",
+      "term": "蔵屋敷",
+      "category": "経済",
+      "definition": "諸藩が大坂などの都市に置き、年貢米や特産物の保管・販売、資金調達などを行った施設。",
+      "essayPoint": "藩財政と都市市場が結びつく具体例として使うと、石高制と貨幣経済の接続を説明しやすい。",
+      "requiredForEssay": true
+    },
+    {
+      "id": "gokaido",
+      "term": "五街道",
+      "category": "交通",
+      "definition": "江戸を起点に整備された東海道・中山道・甲州街道・日光街道・奥州街道の主要交通路。",
+      "essayPoint": "参勤交代、宿場、物流、情報伝達を結びつけて、幕府支配と全国的な交通網の関係を説明する。",
+      "requiredForEssay": true
+    },
+    {
+      "id": "kaisen",
+      "term": "廻船",
+      "category": "交通・経済",
+      "definition": "沿岸航路などで大量の物資を運んだ商船。江戸・大坂や各地の港を結ぶ広域流通を支えた。",
+      "essayPoint": "陸上交通だけでなく海運が商品流通と都市経済を支えたことを示す語として使う。",
+      "requiredForEssay": true
+    },
+    {
+      "id": "rangaku",
+      "term": "蘭学",
+      "category": "学問・文化",
+      "definition": "オランダ語を通じてヨーロッパの医学・自然科学などを学んだ学問。",
+      "essayPoint": "江戸時代の対外関係が完全な情報遮断ではなかったことを、長崎を通じた知識流入と結びつけて説明する。",
+      "requiredForEssay": true
+    },
+    {
+      "id": "terakoya",
+      "term": "寺子屋",
+      "category": "教育",
+      "definition": "庶民の子どもなどに読み書きや算術を教えた民間の教育施設。",
+      "essayPoint": "近世社会の教育普及を説明する際、藩校など武士教育と区別しつつ地域差にも注意する。",
+      "requiredForEssay": true
+    },
+    {
+      "id": "hanko",
+      "term": "藩校",
+      "category": "教育",
+      "definition": "諸藩が主に藩士の教育を目的として設けた学校。",
+      "essayPoint": "藩ごとの人材育成と学問の広がりを説明する語として用い、寺子屋と役割を混同しない。",
+      "requiredForEssay": true
+    },
+    {
+      "id": "ezochi",
+      "term": "蝦夷地",
+      "category": "外交・地域",
+      "definition": "近世に北海道を中心とする北方地域を指した呼称。松前藩や幕府の支配、アイヌ社会、ロシアとの接触が重なった地域。",
+      "essayPoint": "北方問題を単なる外交史にせず、地域支配・交易・安全保障が交差する場として説明する。",
+      "requiredForEssay": true
+    },
+    {
+      "id": "rezanov",
+      "term": "レザノフ",
+      "category": "外交",
+      "definition": "ロシア使節。1804年に長崎へ来航して通商を求めたが、幕府はこれを認めなかった。",
+      "essayPoint": "幕末の開国から逆算せず、19世紀初頭の北方・対露問題の一環として位置づける。",
+      "requiredForEssay": true
+    }
+  ]
+}

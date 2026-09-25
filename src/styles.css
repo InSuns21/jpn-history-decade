@@ -393,3 +393,101 @@ body {
 .site-footer {
   font-family: var(--font-ui);
 }
+
+
+/* Entrance-exam glossary */
+.glossary-link {
+  color: #315d50;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: .18em;
+  text-decoration-thickness: 1px;
+}
+
+.glossary-link:hover,
+.glossary-link:focus-visible {
+  color: var(--red);
+  text-decoration-style: solid;
+}
+
+.glossary-section {
+  scroll-margin-top: 96px;
+}
+
+.glossary-intro {
+  max-width: 800px;
+  margin: 0 0 28px 56px;
+  line-height: 2;
+}
+
+.glossary-list {
+  margin: 0 0 0 56px;
+}
+
+.glossary-item {
+  scroll-margin-top: 100px;
+  display: grid;
+  grid-template-columns: minmax(150px, .35fr) minmax(0, 1fr);
+  gap: 24px;
+  padding: 24px 0;
+  border-top: 1px solid var(--line);
+}
+
+.glossary-item:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.glossary-item.is-active {
+  margin-inline: -16px;
+  padding-inline: 16px;
+  background: #edf1ec;
+  border-left: 4px solid var(--green);
+}
+
+.glossary-item dt {
+  font-family: var(--font-ui);
+  font-weight: 700;
+}
+
+.glossary-item dt span,
+.glossary-item dt small {
+  display: block;
+}
+
+.glossary-item dt small {
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: .72rem;
+  font-weight: 500;
+}
+
+.glossary-item dd {
+  margin: 0;
+}
+
+.glossary-item dd p {
+  margin: 0;
+  line-height: 1.9;
+}
+
+.glossary-essay-point {
+  margin-top: 10px !important;
+  padding: 12px 14px;
+  background: var(--paper-deep);
+}
+
+.glossary-essay-point strong {
+  font-family: var(--font-ui);
+}
+
+@media (max-width: 640px) {
+  .glossary-intro,
+  .glossary-list {
+    margin-left: 0;
+  }
+
+  .glossary-item {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}

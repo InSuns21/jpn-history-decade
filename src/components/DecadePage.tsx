@@ -1,11 +1,25 @@
+import { useEffect } from 'react'
 import type { DecadePageData } from '../types/history'
+import { Glossary } from './Glossary'
+import { LinkedText } from './LinkedText'
 import { TimelineNav } from './TimelineNav'
 
 interface DecadePageProps {
   data: DecadePageData
+  activeTermId?: string
 }
 
-export function DecadePage({ data }: DecadePageProps) {
+export function DecadePage({ data, activeTermId }: DecadePageProps) {
+  useEffect(() => {
+    if (activeTermId) {
+      requestAnimationFrame(() => {
+        document.getElementById('term-' + activeTermId)?.scrollIntoView({ block: 'start' })
+      })
+      return
+    }
+    window.scrollTo({ top: 0 })
+  }, [activeTermId, data.year])
+
   return (
     <>
       <section className="decade-hero">
@@ -18,10 +32,14 @@ export function DecadePage({ data }: DecadePageProps) {
             <span>{data.period}</span>
           </div>
           <h1>{data.title}</h1>
-          <p className="decade-hero__summary">{data.summary}</p>
+          <p className="decade-hero__summary">
+            <LinkedText text={data.summary} year={data.year} />
+          </p>
           <div className="framing-question">
             <span>この時代を考える問い</span>
-            <strong>{data.framingQuestion}</strong>
+            <strong>
+              <LinkedText text={data.framingQuestion} year={data.year} />
+            </strong>
           </div>
         </div>
       </section>
@@ -33,12 +51,13 @@ export function DecadePage({ data }: DecadePageProps) {
             <strong>目次</strong>
             <a href="#snapshot">この時代の概観</a>
             {data.sections.map((section) => (
-              <a key={section.id} href={`#${section.id}`}>
+              <a key={section.id} href={'#' + section.id}>
                 {section.title.split(' — ')[0]}
               </a>
             ))}
             <a href="#change">前の時代からの変化</a>
             <a href="#assumptions">当時の前提と次の論点</a>
+            <a href="#glossary">論述対策の重要用語</a>
           </nav>
         </aside>
 
@@ -54,8 +73,14 @@ export function DecadePage({ data }: DecadePageProps) {
               {data.snapshot.map((item) => (
                 <div className="snapshot-card" key={item.label}>
                   <span>{item.label}</span>
-                  <strong>{item.value}</strong>
-                  {item.note && <p>{item.note}</p>}
+                  <strong>
+                    <LinkedText text={item.value} year={data.year} />
+                  </strong>
+                  {item.note && (
+                    <p>
+                      <LinkedText text={item.note} year={data.year} />
+                    </p>
+                  )}
                 </div>
               ))}
             </div>
@@ -66,13 +91,19 @@ export function DecadePage({ data }: DecadePageProps) {
               <div className="section-heading">
                 <span>{index + 2}</span>
                 <div>
-                  <h2>{section.title}</h2>
+                  <h2>
+                    <LinkedText text={section.title} year={data.year} />
+                  </h2>
                 </div>
               </div>
-              <p className="section-lead">{section.lead}</p>
+              <p className="section-lead">
+                <LinkedText text={section.lead} year={data.year} />
+              </p>
               <ul className="point-list">
                 {section.points.map((point) => (
-                  <li key={point}>{point}</li>
+                  <li key={point}>
+                    <LinkedText text={point} year={data.year} />
+                  </li>
                 ))}
               </ul>
               {section.questions && (
@@ -80,7 +111,9 @@ export function DecadePage({ data }: DecadePageProps) {
                   <strong>考えてみる</strong>
                   <ul>
                     {section.questions.map((question) => (
-                      <li key={question}>{question}</li>
+                      <li key={question}>
+                        <LinkedText text={question} year={data.year} />
+                      </li>
                     ))}
                   </ul>
                 </div>
@@ -109,9 +142,9 @@ export function DecadePage({ data }: DecadePageProps) {
                   {data.changes.map((item) => (
                     <tr key={item.label}>
                       <th>{item.label}</th>
-                      <td>{item.before}</td>
-                      <td>{item.current}</td>
-                      <td>{item.significance}</td>
+                      <td><LinkedText text={item.before} year={data.year} /></td>
+                      <td><LinkedText text={item.current} year={data.year} /></td>
+                      <td><LinkedText text={item.significance} year={data.year} /></td>
                     </tr>
                   ))}
                 </tbody>
@@ -129,7 +162,7 @@ export function DecadePage({ data }: DecadePageProps) {
               </div>
               <ul className="plain-list">
                 {data.contemporaryAssumptions.map((item) => (
-                  <li key={item}>{item}</li>
+                  <li key={item}><LinkedText text={item} year={data.year} /></li>
                 ))}
               </ul>
             </div>
@@ -142,11 +175,13 @@ export function DecadePage({ data }: DecadePageProps) {
               </div>
               <ul className="plain-list">
                 {data.nextIssues.map((item) => (
-                  <li key={item}>{item}</li>
+                  <li key={item}><LinkedText text={item} year={data.year} /></li>
                 ))}
               </ul>
             </div>
           </section>
+
+          <Glossary terms={data.glossary} activeTermId={activeTermId} />
         </article>
       </div>
     </>

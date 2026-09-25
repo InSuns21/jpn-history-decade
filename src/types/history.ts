@@ -21,6 +21,15 @@ export interface ChangeItem {
   significance: string
 }
 
+export interface GlossaryTerm {
+  id: string
+  term: string
+  category: string
+  definition: string
+  essayPoint: string
+  requiredForEssay?: boolean
+}
+
 export interface DecadePageData {
   year: number
   period: string
@@ -34,6 +43,7 @@ export interface DecadePageData {
   changes: ChangeItem[]
   contemporaryAssumptions: string[]
   nextIssues: string[]
+  glossary: GlossaryTerm[]
   sourceNotes: string[]
   mapCandidate?: {
     title: string

@@ -170,6 +170,8 @@ src/
 - 年代順チェック
 - 前後期間参照チェック
 - source ID 整合性確認
+- glossary term ID 整合性確認
+- glossary internal link 検証
 - map ID 整合性確認
 - HTML / AST / structured blocks への変換
 - テンプレートから利用できる共通モデル生成
@@ -611,7 +613,69 @@ Human Visual Audit
 
 ---
 
-## JH00-F Historical map audit infrastructure
+## JH00-F Glossary / internal-link infrastructure
+
+国公立大学の論述対策として、各年代に重要用語集を持たせる。
+
+想定：
+
+```text
+content/
+├── glossary/
+│   ├── 1800.json
+│   ├── 1810.json
+│   └── ...
+└── periods/
+    ├── 1800.md
+    └── ...
+```
+
+用語は最低限、
+
+- id
+- term
+- category
+- definition
+- essayPoint
+- requiredForEssay
+
+を持つ。
+
+本文からは明示リンク記法、
+
+```text
+[[term:<id>|表示語]]
+```
+
+で参照する。
+
+### CI validation
+
+CIで最低限、
+
+- glossary ID 重複
+- 不正ID
+- 空の定義
+- 存在しない用語への本文リンク
+- 対応年代の用語集欠落
+- requiredForEssay の重要語が本文から一度もリンクされていない
+- glossary route / anchor 規約が失われていない
+
+を検出する。
+
+Markdown化後は同じ検査を `content/periods/*.md` に適用する。
+
+### 完了条件
+
+- 1800年代で本文→用語集リンクが実際に動く
+- 存在しない用語IDでCIが失敗する
+- 必須用語が未使用ならCIが失敗する
+- 用語集は公開面に編集情報を出さない
+- 用語説明は一問一答ではなく論述上の接続先まで示す
+
+---
+
+## JH00-G Historical map audit infrastructure
 
 地図を追加する前に、監査可能な地図データ構造を作る。
 
@@ -1183,6 +1247,9 @@ plan_done/ へ移動
 - [ ] 次期間への構造的論点がある
 - [ ] 重要な史実・日付・数値を確認した
 - [ ] 主要記述に出典がある
+- [ ] その年代の論述対策用語集がある
+- [ ] 必須用語が本文からリンクされている
+- [ ] glossary internal-link validation green
 - [ ] 後知恵・単純因果・地域差を監査した
 - [ ] 地図が必要か判断した
 - [ ] 地図がある場合、出典・時点・凡例がある
@@ -1208,14 +1275,16 @@ plan_done/ へ移動
 4. 全年代原稿がMarkdown/frontmatterを正本とする
 5. テンプレートを一箇所の切替で差し替えられる
 6. 原稿にReact/CSS依存がない
-7. 高優先度地図を実装、または見送り理由を記録
-8. 実装した地図について Data / Style / Visual Audit を完了
-9. 地図データの provenance と不確実性を追跡可能にする
-10. S01〜S04を実装、または統合判断を記録
-11. 全体監査完了
-12. CI green
-13. Pages deploy green
-14. Status を `completed` に更新
+7. 各年代に論述対策用語集があり、本文から重要語へリンクできる
+8. 用語リンクの存在・利用・参照先をCIで検証できる
+9. 高優先度地図を実装、または見送り理由を記録
+10. 実装した地図について Data / Style / Visual Audit を完了
+11. 地図データの provenance と不確実性を追跡可能にする
+12. S01〜S04を実装、または統合判断を記録
+13. 全体監査完了
+14. CI green
+15. Pages deploy green
+16. Status を `completed` に更新
 
 完了後、このファイルを
 

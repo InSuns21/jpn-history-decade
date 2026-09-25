@@ -1,12 +1,46 @@
-import type { HistoricalMapDefinition } from '../schema.ts'
+import codhRoads from '../data/geojson/a2-codh-roads.json' with { type: 'json' }
+import type { HistoricalMapDefinition, HistoricalMapFeature } from '../schema.ts'
+
+type CodhRoadFeature = {
+  id: string
+  properties: {
+    routeId: string
+    category: string
+    label: string
+    detail: string
+  }
+  geometry: {
+    type: 'LineString'
+    coordinates: number[][]
+  }
+}
+
+const codhFeatures = (codhRoads.features as CodhRoadFeature[]).map(
+  (feature): HistoricalMapFeature => ({
+    id: feature.id,
+    geometry: {
+      type: 'LineString',
+      coordinates: feature.geometry.coordinates,
+    },
+    properties: {
+      category: feature.properties.category,
+      label: feature.properties.label,
+      detail: feature.properties.detail,
+      routeId: feature.properties.routeId,
+    },
+  }),
+)
+
+const codhRoadFeatures = (routeIds: string[]) =>
+  codhFeatures.filter((feature) => routeIds.includes(String(feature.properties.routeId)))
 
 export const treatyPortsTransport1859Map: HistoricalMapDefinition = {
   id: 'treaty-ports-transport-1859',
-  title: '1859年の開港場と既存国内交通軸（模式図）',
+  title: '1859年の開港場と国内交通ネットワーク',
   historicalQuestion:
     '開港場は、どのように既存の国内交通網へ接続され、外国貿易の影響を国内へ伝える結節点になったのか。',
   readingNote:
-    '1859年に本格的な対外貿易が始まった横浜・長崎・箱館と、開港以前から存在した主要交通軸の関係を示す模式図。街道・海運線は史料で確認できる起終点・主要経由地を概略的に結んだもので、当時の道路・航路の正確な線形や海岸線を復元しない。背景地図・海岸線は現代のOpenStreetMapであり、歴史境界を示さない。',
+    '1859年に本格的な対外貿易が始まった横浜・長崎・箱館と、開港以前から存在した主要交通網の関係を示す。東海道・京街道・長崎街道はCODH「江戸主要街道データセット」v4の歴史GIS形状を使用する。横浜道は横浜市の現地案内で確認できる経由地点を代表点として結ぶ概略線であり、敷地単位の正確な旧道線形ではない。西廻り海運・北前船は一本の固定航路を仮定せず、代表的な寄港地を点で示す。背景地図・海岸線は現代のOpenStreetMapであり、歴史境界を示さない。',
   status: 'draft',
   period: { startYear: 1859, endYear: 1859 },
   initialView: {
@@ -22,19 +56,17 @@ export const treatyPortsTransport1859Map: HistoricalMapDefinition = {
         institution: 'jpn-history-decade',
         sourceType: 'derived',
         license:
-          'Site-authored approximate coordinates; no third-party geometry copied. Source texts remain subject to each institution\'s terms.',
+          'Site-authored approximate coordinates; no third-party point geometry copied. Source texts remain subject to each institution\'s terms.',
         derivedFromSourceIds: [
           'archives-five-treaties',
           'yokohama-port-history',
-          'mlit-tokaido-history',
-          'nagasaki-kaido-history',
           'hakodate-kitamae-history',
         ],
         temporalCoverage: {
           from: '1859',
           to: '1859',
           basis: 'instant',
-          note: '1859年に実際に本格的な対外貿易が始まった横浜・長崎・箱館と、接続関係を説明するための主要結節点を対象とする。',
+          note: '1859年に実際に本格的な対外貿易が始まった横浜・長崎・箱館と、接続関係を説明する主要結節点を対象とする。',
         },
         spatialCoverage: '江戸・大坂・九州北部・箱館を含む日本列島主要地点',
         geometryConfidence: 'approximate',
@@ -59,7 +91,7 @@ export const treatyPortsTransport1859Map: HistoricalMapDefinition = {
             labelPlacement: 'bottom',
             year: 1859,
             detail:
-              '条約上は神奈川開港とされたが、幕府は東海道の神奈川宿を避け、横浜村に開港場を整備した。',
+              '条約上は神奈川開港とされたが、幕府は横浜村側に開港場を整備した。',
           },
         },
         {
@@ -85,7 +117,7 @@ export const treatyPortsTransport1859Map: HistoricalMapDefinition = {
             labelPlacement: 'right',
             year: 1859,
             detail:
-              '北前船交易で栄えた港湾都市で、1859年に横浜・長崎と並ぶ国際貿易港として開港した。',
+              '国内海運へ接続していた港湾都市で、1859年に横浜・長崎と並ぶ国際貿易港として開港した。',
           },
         },
         {
@@ -97,7 +129,7 @@ export const treatyPortsTransport1859Map: HistoricalMapDefinition = {
             label: '江戸・日本橋',
             labelPlacement: 'top',
             year: '近世',
-            detail: '五街道の起点。東海道を通じて神奈川宿方面と結ばれていた。',
+            detail: '五街道の起点。東海道を通じて京都方面へ結ばれていた。',
           },
         },
         {
@@ -110,7 +142,7 @@ export const treatyPortsTransport1859Map: HistoricalMapDefinition = {
             labelPlacement: 'top',
             year: '1859',
             detail:
-              '東海道の宿場。開港場はここではなく横浜に置かれ、横浜道が短期間で整備されて両者を接続した。',
+              '東海道の宿場。横浜道は神奈川宿そのものから直線的に伸びたのではなく、芝生村付近で東海道から分岐して開港場へ向かった。',
           },
         },
         {
@@ -123,212 +155,217 @@ export const treatyPortsTransport1859Map: HistoricalMapDefinition = {
             labelPlacement: 'bottom',
             year: '近世',
             detail:
-              '東海道・京街道方面と西廻り海運が接続する大市場。北前船航路の主要な起終点でもあった。',
+              '京街道方面と海運が接続する大市場。北前船・西廻り海運の上方側の結節点だった。',
           },
         },
         {
           id: 'kokura-hub',
-          geometry: { type: 'Point', coordinates: [130.883, 33.883] },
+          geometry: { type: 'Point', coordinates: [130.9415, 33.9195] },
           properties: {
             category: 'transport-hub',
             marker: '結',
-            label: '小倉',
+            label: '大里',
             labelPlacement: 'right',
             year: '近世',
             detail:
-              '長崎街道の起終点の一つ。長崎と九州北部・本州方面を結ぶ交通結節点だった。',
+              'CODHの長崎街道R900の北側起点。関門海峡に面し、小倉方面・本州方面へ接続する交通圏の結節点として表示する。',
           },
         },
       ],
     },
     {
-      id: 'tokaido-schematic',
+      id: 'codh-tokaido-kyokaido',
       provenance: {
-        sourceId: 'a2-tokaido-derived',
-        title: '近世東海道の主要経由地を結ぶ模式線',
-        institution: 'jpn-history-decade',
-        url: 'https://www.mlit.go.jp/road/michi-re/3-3.htm',
-        sourceType: 'derived',
-        license:
-          'Site-authored schematic geometry based on public historical descriptions; no source map geometry copied.',
-        derivedFromSourceIds: ['mlit-tokaido-history', 'yokohama-port-history'],
+        sourceId: 'codh-edo-road-v4-r001-r600',
+        title: '江戸主要街道データセット v4 — R001 東海道 / R600 京街道',
+        institution: 'ROIS-DS 人文学オープンデータ共同利用センター（CODH）',
+        url: 'https://codh.rois.ac.jp/historical-gis/edo-road/',
+        sourceType: 'research',
+        license: 'CC BY 4.0; doi:10.20676/00000452',
         temporalCoverage: {
           from: '1601',
           to: '1867',
           basis: 'range',
-          note: '近世東海道の交通軸としての存続期間を概括し、1859年時点の接続関係説明に用いる。',
+          note: '江戸期の主要街道データを、1859年時点の国内交通軸の把握に用いる。',
         },
-        spatialCoverage: '江戸・日本橋から京都・大坂方面',
-        geometryConfidence: 'schematic',
+        spatialCoverage: '江戸から京都・大坂方面',
+        geometryConfidence: 'derived',
         transformations: [
-          '国土交通省が示す東海道の起終点と主要宿場方向を確認した。',
-          '横浜市資料により神奈川宿と1859年開港場の位置関係を確認した。',
-          '実際の街道線形をトレースせず、主要地点を少数の折れ線で結んだ。',
+          'CODH v4 GeoPackageからR001とR600を抽出した。',
+          'FionaでEPSG:4326へ座標変換した。',
+          '幾何の単純化・手描き補間は行っていない。',
         ],
         notes:
-          '線は交通軸の接続関係のみを示す。道幅、宿間距離、渡河地点、旧道の正確な位置を表さない。',
+          '元データは旧版地形図、天保国絵図、伊能図、各地の歴史の道調査報告書などを参照してCODHが構築した歴史GISデータ。',
+      },
+      allowedGeometryTypes: ['LineString'],
+      requiredProperties: ['category', 'label', 'detail', 'routeId'],
+      features: codhRoadFeatures(['R001', 'R600']),
+    },
+    {
+      id: 'codh-nagasaki-kaido',
+      provenance: {
+        sourceId: 'codh-edo-road-v4-r900',
+        title: '江戸主要街道データセット v4 — R900 長崎街道',
+        institution: 'ROIS-DS 人文学オープンデータ共同利用センター（CODH）',
+        url: 'https://codh.rois.ac.jp/historical-gis/edo-road/',
+        sourceType: 'research',
+        license: 'CC BY 4.0; doi:10.20676/00000452',
+        temporalCoverage: {
+          from: '1700',
+          to: '1867',
+          basis: 'approximate',
+          note: '江戸期の長崎街道の地理形状を、1859年時点の国内交通軸の把握に用いる。',
+        },
+        spatialCoverage: '大里から長崎までの九州北部',
+        geometryConfidence: 'derived',
+        transformations: [
+          'CODH v4 GeoPackageからR900を抽出した。',
+          'FionaでEPSG:4326へ座標変換した。',
+          '幾何の単純化・手描き補間は行っていない。',
+        ],
+        notes:
+          'CODHは福岡県・佐賀県・長崎県各教育委員会の「歴史の道」調査報告等を参照している。',
+      },
+      allowedGeometryTypes: ['LineString'],
+      requiredProperties: ['category', 'label', 'detail', 'routeId'],
+      features: codhRoadFeatures(['R900']),
+    },
+    {
+      id: 'yokohama-road-1859',
+      provenance: {
+        sourceId: 'yokohama-road-waypoints-1859',
+        title: '横浜道 — 横浜市西区歴史街道案内サインに基づく経由地点の概略線',
+        institution: '横浜市西区 / jpn-history-decade',
+        url: 'https://www.city.yokohama.lg.jp/nishi/shokai/kanko/courses/rekishikaido04.html',
+        sourceType: 'derived',
+        license:
+          'Site-authored schematic geometry from publicly described route waypoints; no municipal map geometry copied.',
+        derivedFromSourceIds: ['yokohama-port-history'],
+        temporalCoverage: {
+          from: '1859',
+          to: '1859',
+          basis: 'instant',
+          note: '開港場と東海道を接続するため1859年に整備された横浜道。',
+        },
+        spatialCoverage: '芝生村・浅間下付近から横浜開港場',
+        geometryConfidence: 'schematic',
+        transformations: [
+          '横浜市の案内サイン一覧にある浅間下、新田間橋、平沼、戸部、野毛坂方面などの通過順を確認した。',
+          '現地の代表地点を概略座標化し、通過順にLineString化した。',
+          '旧道の道路幅・敷地境界・1859年当時の細かな曲線は復元していない。',
+        ],
+        notes:
+          '神奈川宿と横浜を単純な直線で結ばず、芝生村付近の東海道分岐から野毛を経て開港場へ至る経路構造を示す。',
       },
       allowedGeometryTypes: ['LineString'],
       requiredProperties: ['category', 'label', 'detail'],
       features: [
-        {
-          id: 'tokaido-axis',
-          geometry: {
-            type: 'LineString',
-            coordinates: [
-              [139.7745, 35.6837],
-              [139.63, 35.474],
-              [139.16, 35.255],
-              [138.92, 35.12],
-              [138.38, 34.98],
-              [137.73, 34.71],
-              [136.91, 35.18],
-              [136.62, 34.97],
-              [135.96, 35.02],
-              [135.77, 35.01],
-              [135.502, 34.693],
-            ],
-          },
-          properties: {
-            category: 'road-axis',
-            label: '東海道・京街道（模式）',
-            detail:
-              '江戸・日本橋と京都・大坂方面を結ぶ近世の主要陸上交通軸。線形は模式化している。',
-          },
-        },
         {
           id: 'yokohama-road-link',
           geometry: {
             type: 'LineString',
             coordinates: [
-              [139.63, 35.474],
-              [139.61, 35.455],
+              [139.6123, 35.4660],
+              [139.6151, 35.4633],
+              [139.61827, 35.46196],
+              [139.62172, 35.45922],
+              [139.6243, 35.4546],
+              [139.62688, 35.44860],
+              [139.63114, 35.44694],
+              [139.63417, 35.44539],
               [139.645, 35.447],
             ],
           },
           properties: {
             category: 'port-link',
-            label: '横浜道（模式）',
+            label: '横浜道（経由地点模式）',
             detail:
-              '1859年、東海道側から新しい横浜開港場へ接続するため短期間で整備された道路。',
+              '芝生村付近で東海道から分岐し、新田間・平沼・戸部・野毛方面を経て横浜開港場へ至る接続路。線は案内サイン等から確認できる経由順を示す概略で、正確な旧道中心線ではない。',
           },
         },
       ],
     },
     {
-      id: 'nagasaki-kaido-schematic',
+      id: 'western-shipping-ports',
       provenance: {
-        sourceId: 'a2-nagasaki-kaido-derived',
-        title: '長崎街道の主要経由地を結ぶ模式線',
-        institution: 'jpn-history-decade',
-        url: 'https://www.city.nagasaki.lg.jp/uploaded/attachment/9736.pdf',
+        sourceId: 'kitamaebune-representative-ports',
+        title: '西廻り海運・北前船の代表的寄港地',
+        institution: '文化庁 日本遺産 / jpn-history-decade',
+        url: 'https://www.japan-heritage.bunka.go.jp/ja/stories/story039/',
         sourceType: 'derived',
         license:
-          'Site-authored schematic geometry based on Nagasaki City historical description; no source map geometry copied.',
-        derivedFromSourceIds: ['nagasaki-kaido-history'],
-        temporalCoverage: {
-          from: '1700',
-          to: '1867',
-          basis: 'approximate',
-          note: '18世紀以降の主要ルートとして長崎―諫早―大村―彼杵―佐賀―小倉の接続を示す。',
-        },
-        spatialCoverage: '長崎から小倉までの九州北部',
-        geometryConfidence: 'schematic',
-        transformations: [
-          '長崎市資料に記された主要ルートと起終点を抽出した。',
-          '主要都市・宿場の現在位置を代表点として概略配置した。',
-          '旧道の細かな線形を復元せず、接続順のみを折れ線で表現した。',
-        ],
-        notes:
-          '時期により複数ルートが存在するため、18世紀以降の主要ルートを模式化した。',
-      },
-      allowedGeometryTypes: ['LineString'],
-      requiredProperties: ['category', 'label', 'detail'],
-      features: [
-        {
-          id: 'nagasaki-kaido-axis',
-          geometry: {
-            type: 'LineString',
-            coordinates: [
-              [129.87, 32.75],
-              [130.05, 32.84],
-              [129.95, 32.9],
-              [129.92, 33.03],
-              [130.0, 33.13],
-              [130.02, 33.19],
-              [130.3, 33.25],
-              [130.51, 33.38],
-              [130.52, 33.5],
-              [130.69, 33.65],
-              [130.883, 33.883],
-            ],
-          },
-          properties: {
-            category: 'road-axis',
-            label: '長崎街道（模式）',
-            detail:
-              '長崎と小倉を結ぶ主要脇街道。海外情報・貿易品、人員の移動にも利用された。',
-          },
-        },
-      ],
-    },
-    {
-      id: 'western-shipping-schematic',
-      provenance: {
-        sourceId: 'a2-western-shipping-derived',
-        title: '大坂と北海道を結ぶ西廻り海運・北前船の模式線',
-        institution: 'jpn-history-decade',
-        url: 'https://www.city.osaka.lg.jp/sumiyoshi/page/0000449936.html',
-        sourceType: 'derived',
-        license:
-          'Site-authored schematic geometry based on official descriptions of west-coast shipping; no source map geometry copied.',
+          'Site-authored approximate point locations. Historical interpretation is based on the Agency for Cultural Affairs Japan Heritage description; no route geometry copied.',
         derivedFromSourceIds: ['osaka-kitamae-history', 'hakodate-kitamae-history'],
         temporalCoverage: {
           from: '1700',
           to: '1867',
           basis: 'approximate',
-          note: '江戸時代に大阪・西日本と北海道方面を結んだ西廻り海運・北前船の交通軸を概括する。',
+          note: '江戸期に日本海・瀬戸内海沿岸の多数の寄港地を介して北日本と上方を結んだ海運圏を示す。',
         },
-        spatialCoverage: '大坂から瀬戸内海・日本海沿岸を経て道南まで',
-        geometryConfidence: 'schematic',
+        spatialCoverage: '日本海沿岸・道南の代表的寄港地',
+        geometryConfidence: 'approximate',
         transformations: [
-          '大阪市・函館市資料から大坂と北海道・箱館を結ぶ海運の存在を確認した。',
-          '代表的な沿岸方向を示すため、瀬戸内海・関門海峡・日本海沿岸を少数点で概略配置した。',
-          '特定船の航海経路、寄港順、季節航路を復元していない。',
+          '文化庁日本遺産が説明する西廻り航路・北前船の多数の寄港地という性格を採用した。',
+          '一本の固定航路を作らず、代表的な港町を現在地の概略点として配置した。',
+          '港域・船着場・個別船の寄港順・季節航路は復元していない。',
         ],
         notes:
-          '一本の固定航路を示す線ではなく、複数の寄港地を結んだ海運圏の方向を示す模式線。',
+          '北前船を一本の航路線として描くと史料以上の精密さを生むため、代表寄港地の点群として表現する。',
       },
-      allowedGeometryTypes: ['LineString'],
-      requiredProperties: ['category', 'label', 'detail'],
+      allowedGeometryTypes: ['Point'],
+      requiredProperties: ['category', 'marker', 'label', 'labelPlacement', 'year', 'detail'],
       features: [
         {
-          id: 'kitamae-western-axis',
-          geometry: {
-            type: 'LineString',
-            coordinates: [
-              [135.502, 34.693],
-              [134.69, 34.35],
-              [133.93, 34.35],
-              [132.45, 34.36],
-              [131.0, 34.05],
-              [131.2, 35.2],
-              [132.75, 35.45],
-              [134.23, 35.55],
-              [135.75, 35.65],
-              [136.75, 37.0],
-              [138.2, 38.2],
-              [139.85, 39.0],
-              [140.1, 40.3],
-              [139.9, 41.87],
-              [140.72, 41.77],
-            ],
-          },
+          id: 'kitamae-tsuruga',
+          geometry: { type: 'Point', coordinates: [136.0694, 35.6620] },
           properties: {
-            category: 'sea-axis',
-            label: '西廻り海運・北前船（模式）',
+            category: 'shipping-port',
+            marker: '航',
+            label: '敦賀',
+            labelPlacement: 'right',
+            year: '近世',
             detail:
-              '大坂と北海道方面を瀬戸内海・日本海沿岸経由で結んだ海運圏。箱館は開港以前から国内海運へ接続していた。',
+              '日本海側と上方を結ぶ海運圏の代表的な港町。ここでは北前船ネットワークを示す代表点として配置する。',
+          },
+        },
+        {
+          id: 'kitamae-niigata',
+          geometry: { type: 'Point', coordinates: [139.05, 37.93] },
+          properties: {
+            category: 'shipping-port',
+            marker: '航',
+            label: '新潟',
+            labelPlacement: 'right',
+            year: '近世',
+            detail:
+              '日本海沿岸の代表的な港町。点は歴史的港域の厳密な範囲ではなく、海運ネットワークを読むための概略位置。',
+          },
+        },
+        {
+          id: 'kitamae-sakata',
+          geometry: { type: 'Point', coordinates: [139.8189, 38.9311] },
+          properties: {
+            category: 'shipping-port',
+            marker: '航',
+            label: '酒田',
+            labelPlacement: 'right',
+            year: '近世',
+            detail:
+              '最上川河口の港町として北前船・西廻り海運に接続した代表的な結節点。',
+          },
+        },
+        {
+          id: 'kitamae-matsumae',
+          geometry: { type: 'Point', coordinates: [140.0917, 41.4206] },
+          properties: {
+            category: 'shipping-port',
+            marker: '航',
+            label: '松前',
+            labelPlacement: 'left',
+            year: '近世',
+            detail:
+              '道南の代表的な港町。箱館とともに北日本側の海運ネットワークを理解する補助点として示す。',
           },
         },
       ],
@@ -342,41 +379,48 @@ export const treatyPortsTransport1859Map: HistoricalMapDefinition = {
       categories: ['open-port', 'transport-hub'],
     },
     {
-      id: 'tokaido-lines',
-      datasetId: 'tokaido-schematic',
-      categoryProperty: 'category',
-      categories: ['road-axis', 'port-link'],
-    },
-    {
-      id: 'nagasaki-kaido-line',
-      datasetId: 'nagasaki-kaido-schematic',
+      id: 'codh-tokaido-kyokaido-lines',
+      datasetId: 'codh-tokaido-kyokaido',
       categoryProperty: 'category',
       categories: ['road-axis'],
     },
     {
-      id: 'western-shipping-line',
-      datasetId: 'western-shipping-schematic',
+      id: 'codh-nagasaki-kaido-line',
+      datasetId: 'codh-nagasaki-kaido',
       categoryProperty: 'category',
-      categories: ['sea-axis'],
+      categories: ['road-axis'],
+    },
+    {
+      id: 'yokohama-road-line',
+      datasetId: 'yokohama-road-1859',
+      categoryProperty: 'category',
+      categories: ['port-link'],
+    },
+    {
+      id: 'western-shipping-ports-layer',
+      datasetId: 'western-shipping-ports',
+      categoryProperty: 'category',
+      categories: ['shipping-port'],
     },
   ],
   legend: [
     { value: 'open-port', label: '1859年の開港場', marker: '港', color: '#7d3d34' },
     { value: 'transport-hub', label: '主要交通結節点', marker: '結', color: '#465b4e' },
-    { value: 'road-axis', label: '主要街道（模式）', marker: '道', color: '#80623c', kind: 'line' },
-    { value: 'port-link', label: '開港場への接続路（模式）', marker: '接', color: '#9a594d', kind: 'line' },
-    { value: 'sea-axis', label: '西廻り海運（模式）', marker: '航', color: '#3e667a', kind: 'line' },
+    { value: 'road-axis', label: '主要街道（歴史GIS）', marker: '道', color: '#80623c', kind: 'line' },
+    { value: 'port-link', label: '横浜道（経由地点模式）', marker: '接', color: '#9a594d', kind: 'line' },
+    { value: 'shipping-port', label: '西廻り海運・北前船の代表寄港地', marker: '航', color: '#3e667a' },
   ],
   auditState: {
     dataAudit: 'passed',
     styleAudit: 'passed',
     visualAudit: 'pending-human',
     notes: [
-      '1859年の実開港場は横浜・長崎・箱館として表示し、条約上の後年開港予定地とは区別した。',
-      '東海道・長崎街道・西廻り海運は公的資料で存在・接続関係を確認し、正確な旧道・航路線形を復元せず geometryConfidence=schematic とした。',
-      '横浜は東海道上の神奈川宿と同一視せず、1859年に整備された横浜道を別線で表現した。',
-      'Style Auditでは点と線を形状でも区別し、すべての模式線を破線として確定的な精密線形に見せない。',
-      'Human Visual AuditはGitHub Pages上でdesktop / tablet-touch / mobile / zoom別に確認する。',
+      '2026-09-26のHuman Visual Auditで、旧A2の自作模式線は陸路が過度に直線的で、海運線には陸地横断があり、模式図としても地理的妥当性が不足すると判定した。',
+      '東海道R001・京街道R600・長崎街道R900はCODH「江戸主要街道データセット」v4のGeoPackageからGeoJSONへ抽出し、手描き線を廃止した。',
+      'CODH由来の3街道は幾何を単純化せずEPSG:4326へ変換し、出典・CC BY 4.0・DOIを記録した。',
+      '横浜道は神奈川宿と開港場の直線接続を廃止し、横浜市の案内サインに基づく芝生村付近の分岐、新田間・平沼・戸部・野毛方面の経由順を概略線にした。',
+      '西廻り海運・北前船は一本の固定航路ではなく多数の寄港地を介する海運圏として扱い、陸地を横切る自作LineStringを廃止して代表寄港地の点群へ変更した。',
+      'Data Audit / Style Auditは新データ構成で再実施しpassed。Human Visual AuditはGitHub Pages上でdesktop / tablet-touch / mobile / zoom別に再確認する。',
     ],
   },
 }

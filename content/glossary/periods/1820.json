@@ -1,0 +1,57 @@
+{
+  "period": "1820",
+  "termRefs": [
+    {
+      "id": "bakuhan-taisei",
+      "core": true
+    },
+    {
+      "id": "mura-uke-sei",
+      "core": true
+    },
+    {
+      "id": "kokudaka-sei",
+      "core": true
+    },
+    {
+      "id": "kurayashiki",
+      "core": true
+    },
+    {
+      "id": "gokaido",
+      "core": true
+    },
+    {
+      "id": "kaisen",
+      "core": true
+    },
+    {
+      "id": "four-gates",
+      "core": true
+    },
+    {
+      "id": "rangaku",
+      "core": true
+    },
+    {
+      "id": "kasei-culture",
+      "core": true
+    },
+    {
+      "id": "zaigo-shonin",
+      "core": true
+    },
+    {
+      "id": "kabu-nakama",
+      "core": true
+    },
+    {
+      "id": "ikokusen-uchiharai-rei",
+      "core": true
+    },
+    {
+      "id": "siebold-incident",
+      "core": true
+    }
+  ]
+}

@@ -12,69 +12,68 @@ export function ThematicMap({ mapId }: { mapId: string }) {
   useEffect(() => {
     if (!containerRef.current || !definition) return
 
-    const map = new maplibregl.Map({
-      container: containerRef.current,
-      center: definition.initialView.center,
-      zoom: definition.initialView.zoom,
-      minZoom: 3,
-      maxZoom: 13,
-      dragRotate: false,
-      pitchWithRotate: false,
-      attributionControl: false,
-      style: {
-        version: 8,
-        sources: {
-          osm: {
-            type: 'raster',
-            tiles: ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
-            tileSize: 256,
-            attribution: '© OpenStreetMap contributors',
-          },
+    const style: maplibregl.StyleSpecification = {
+      version: 8,
+      sources: {
+        osm: {
+          type: 'raster',
+          tiles: ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
+          tileSize: 256,
+          attribution: '© OpenStreetMap contributors',
         },
-        layers: [
-          {
-            id: 'modern-basemap',
-            type: 'raster',
-            source: 'osm',
-            paint: { 'raster-opacity': 0.48, 'raster-saturation': -0.55 },
-          },
-        ],
       },
-    })
+      layers: [
+        {
+          id: 'modern-basemap',
+          type: 'raster',
+          source: 'osm',
+          paint: { 'raster-opacity': 0.48, 'raster-saturation': -0.55 },
+        },
+      ],
+    }
 
-    map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right')
-    map.addControl(new maplibregl.AttributionControl({ compact: true }), 'bottom-right')
+    for (const dataset of definition.datasets) {
+      for (const feature of dataset.features) {
+        if (feature.geometry.type !== 'LineString' || !Array.isArray(feature.geometry.coordinates)) continue
 
-    const markers: maplibregl.Marker[] = []
-    let activePopup: maplibregl.Popup | null = null
+        const category = String(feature.properties.category ?? '')
+        const legend = definition.legend.find((item) => item.value === category)
+        if (!legend) continue
 
-    map.once('load', () => {
-      for (const dataset of definition.datasets) {
-        for (const feature of dataset.features) {
-          if (feature.geometry.type !== 'LineString' || !Array.isArray(feature.geometry.coordinates)) continue
+        const sourceId = `historical-line-source-${definition.id}-${feature.id}`
+        const baseLayerId = `historical-line-base-${definition.id}-${feature.id}`
+        const dashLayerId = `historical-line-dash-${definition.id}-${feature.id}`
+        const coordinates = feature.geometry.coordinates as [number, number][]
 
-          const category = String(feature.properties.category ?? '')
-          const legend = definition.legend.find((item) => item.value === category)
-          if (!legend) continue
-
-          const sourceId = `historical-line-source-${definition.id}-${feature.id}`
-          const layerId = `historical-line-layer-${definition.id}-${feature.id}`
-          const coordinates = feature.geometry.coordinates as [number, number][]
-
-          map.addSource(sourceId, {
-            type: 'geojson',
-            data: {
-              type: 'Feature',
-              properties: feature.properties,
-              geometry: {
-                type: 'LineString',
-                coordinates,
-              },
+        style.sources[sourceId] = {
+          type: 'geojson',
+          data: {
+            type: 'Feature',
+            properties: feature.properties,
+            geometry: {
+              type: 'LineString',
+              coordinates,
             },
-          })
+          },
+        }
 
-          map.addLayer({
-            id: layerId,
+        style.layers.push(
+          {
+            id: baseLayerId,
+            type: 'line',
+            source: sourceId,
+            layout: {
+              'line-cap': 'round',
+              'line-join': 'round',
+            },
+            paint: {
+              'line-color': legend.color,
+              'line-width': category === 'port-link' ? 5.2 : 4.8,
+              'line-opacity': 0.34,
+            },
+          },
+          {
+            id: dashLayerId,
             type: 'line',
             source: sourceId,
             layout: {
@@ -84,13 +83,33 @@ export function ThematicMap({ mapId }: { mapId: string }) {
             paint: {
               'line-color': legend.color,
               'line-width': category === 'port-link' ? 3.4 : 3,
-              'line-opacity': 0.88,
+              'line-opacity': 0.96,
               'line-dasharray': category === 'port-link' ? [1.2, 1.2] : [2.2, 1.6],
             },
-          })
-        }
+          },
+        )
       }
+    }
 
+    const map = new maplibregl.Map({
+      container: containerRef.current,
+      center: definition.initialView.center,
+      zoom: definition.initialView.zoom,
+      minZoom: 3,
+      maxZoom: 13,
+      dragRotate: false,
+      pitchWithRotate: false,
+      attributionControl: false,
+      style,
+    })
+
+    map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right')
+    map.addControl(new maplibregl.AttributionControl({ compact: true }), 'bottom-right')
+
+    const markers: maplibregl.Marker[] = []
+    let activePopup: maplibregl.Popup | null = null
+
+    map.once('load', () => {
       for (const dataset of definition.datasets) {
         for (const feature of dataset.features) {
           if (feature.geometry.type !== 'Point' || !Array.isArray(feature.geometry.coordinates)) continue

@@ -547,3 +547,45 @@ body {
     margin-left: 0;
   }
 }
+
+
+/* Source references */
+.source-ref {
+  margin-left: .12em;
+  font-family: var(--font-sans);
+  font-size: .68em;
+  line-height: 0;
+  vertical-align: super;
+}
+
+.source-ref a {
+  color: var(--green);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.source-ref a:hover,
+.source-ref a:focus-visible,
+.source-list a:hover,
+.source-list a:focus-visible {
+  text-decoration: underline;
+}
+
+.source-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.source-list li {
+  display: grid;
+  grid-template-columns: 2.5rem minmax(0, 1fr);
+  gap: .5rem;
+  scroll-margin-top: 5rem;
+}
+
+.source-number {
+  color: var(--muted);
+  font-family: var(--font-sans);
+  font-size: .8rem;
+  font-weight: 800;
+}

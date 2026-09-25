@@ -213,6 +213,13 @@ function parseMarkdownSections(body, file) {
   flushCurrent()
 
   if (sections.length === 0) pushError(file, 'Markdown body must contain at least one ## section with {#id}')
+
+  const sectionIds = new Set()
+  for (const section of sections) {
+    if (sectionIds.has(section.id)) pushError(file, 'duplicate section id: ' + section.id)
+    sectionIds.add(section.id)
+  }
+
   return sections
 }
 
@@ -343,16 +350,21 @@ function validateSources(frontmatter, rawSource, file, status) {
   }
 
   const sourceRefPattern = /\[@([a-z0-9-]+)\]/g
+  const referencedIds = new Set()
   let match
   let referenceCount = 0
   while ((match = sourceRefPattern.exec(rawSource)) !== null) {
     referenceCount += 1
+    referencedIds.add(match[1])
     if (!ids.has(match[1])) pushError(file, 'source reference has no matching source: ' + match[1])
   }
 
   if (status === 'published') {
     if (sources.length === 0) pushError(file, 'published period must define at least one source')
     if (referenceCount === 0) pushError(file, 'published period must cite at least one source with [@source-id]')
+    for (const id of ids) {
+      if (!referencedIds.has(id)) pushError(file, 'published period defines unused source: ' + id)
+    }
   }
 
   return sources
@@ -435,8 +447,27 @@ for (let index = 0; index < periods.length; index += 1) {
   ids.add(period.id)
   routeKeys.add(period.routeKey)
 
-  if (index > 0 && periods[index - 1].endYear >= period.startYear) {
-    pushError('content/periods', 'periods overlap: ' + periods[index - 1].routeKey + ' and ' + period.routeKey)
+  if (period.currentPeriodLabel !== period.periodLabel) {
+    pushError(
+      'content/periods',
+      period.routeKey + ' currentPeriodLabel must match periodLabel (' + period.periodLabel + ')',
+    )
+  }
+
+  if (index > 0) {
+    const previous = periods[index - 1]
+    if (previous.endYear >= period.startYear) {
+      pushError('content/periods', 'periods overlap: ' + previous.routeKey + ' and ' + period.routeKey)
+    }
+    if (period.previousPeriodLabel !== previous.periodLabel) {
+      pushError(
+        'content/periods',
+        period.routeKey +
+          ' previousPeriodLabel must match previous periodLabel (' +
+          previous.periodLabel +
+          ')',
+      )
+    }
   }
 }
 

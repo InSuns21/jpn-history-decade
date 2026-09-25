@@ -213,7 +213,7 @@ function loadGlossary(routeKey, file) {
   }
 }
 
-function validateSources(frontmatter, rawSource, file) {
+function validateSources(frontmatter, rawSource, file, status) {
   const sources = frontmatter.sources ?? []
   if (!Array.isArray(sources)) {
     pushError(file, 'sources must be an array')
@@ -239,8 +239,15 @@ function validateSources(frontmatter, rawSource, file) {
 
   const sourceRefPattern = /\[@([a-z0-9-]+)\]/g
   let match
+  let referenceCount = 0
   while ((match = sourceRefPattern.exec(rawSource)) !== null) {
+    referenceCount += 1
     if (!ids.has(match[1])) pushError(file, 'source reference has no matching source: ' + match[1])
+  }
+
+  if (status === 'published') {
+    if (sources.length === 0) pushError(file, 'published period must define at least one source')
+    if (referenceCount === 0) pushError(file, 'published period must cite at least one source with [@source-id]')
   }
 
   return sources
@@ -271,7 +278,7 @@ function compilePeriod(filePath) {
   for (const mapId of maps) {
     if (!knownMapIds.has(mapId)) pushError(relative, 'map reference has no matching definition: ' + mapId)
   }
-  const sources = validateSources(frontmatter, source, relative)
+  const sources = validateSources(frontmatter, source, relative, status)
   const sections = parseMarkdownSections(parsed.body, relative)
   const glossary = loadGlossary(routeKey, relative)
 

@@ -923,8 +923,8 @@ JH05の初回公開版では地図を実装しない。
 - JH06本文・出典・年代差分・共通用語参照を実装した。
 - A1は浦賀沖・久里浜・長崎・品川台場・横浜村・下田・箱館を概略点として登録し、MapLibre描画まで接続した。
 - 地点は公的資料に記された歴史地名を現在の代表点へ概略配置したもので、艦船の正確な投錨位置や1850年代の海岸線は復元しない。現代OpenStreetMapを背景に使うことも読者向け注記へ明示する。
-- Data Audit / Style Audit は実装・出典・カテゴリ・座標範囲を確認済み。Human Visual Audit は実画面のDesktop / Mobile / zoom別確認が必要なため `pending-human` とし、A1自体は `draft` のまま公開ゲートで非表示にする。
-- A1を `published` に変更するのはHuman Visual Auditを実施してからとする。
+- Data Audit / Style Audit は実装・出典・カテゴリ・座標範囲を確認済み。Human Visual Audit は実画面のDesktop / Mobile / zoom別確認が必要なため `pending-human` とする。
+- Human Visual Audit をGitHub Pages上で行えるよう、A1は `draft` のまま通常ページへ表示し、地図上部に「監査中です」を明示する。監査完了後に `published` へ変更する。
 
 ---
 

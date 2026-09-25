@@ -372,13 +372,15 @@ interface MapAuditState {
 }
 ```
 
-公開条件：
+完成扱いの条件：
 
 ```text
 dataAudit   = passed
 styleAudit  = passed
 visualAudit = passed
 ```
+
+Human Visual Audit をGitHub Pages上で行うため、`draft` / `pending-human` の地図も通常ページに表示してよい。その場合は地図の直前に **「監査中です」** と読者向けに明示し、監査結果によって修正される可能性を表示する。監査中表示は完成・監査済みを意味しない。
 
 重要な修正後は該当 audit を再度 pending に戻す。
 
@@ -415,9 +417,9 @@ visualAudit = passed
 
 # 12. 公開ページでのデータ品質表示
 
-内部の audit status 自体は公開しない。
+通常、内部の詳細な audit status は公開しない。ただし Human Visual Audit のため公開面に出している未完了地図は、**「監査中です」** と明示する。
 
-ただし読者の理解に必要な以下は公開する。
+また、読者の理解に必要な以下は公開する。
 
 - 対象年・期間
 - 出典

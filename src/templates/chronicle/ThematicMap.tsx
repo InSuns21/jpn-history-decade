@@ -8,7 +8,7 @@ export function ThematicMap({ mapId }: { mapId: string }) {
   const definition = useMemo(() => findMapDefinition(mapId), [mapId])
 
   useEffect(() => {
-    if (!containerRef.current || !definition || definition.status !== 'published') return
+    if (!containerRef.current || !definition) return
 
     const map = new maplibregl.Map({
       container: containerRef.current,
@@ -110,10 +110,19 @@ export function ThematicMap({ mapId }: { mapId: string }) {
     }
   }, [definition])
 
-  if (!definition || definition.status !== 'published') return null
+  if (!definition) return null
+
+  const underAudit =
+    definition.status !== 'published' || definition.auditState.visualAudit !== 'passed'
 
   return (
     <figure className="thematic-map">
+      {underAudit && (
+        <div className="thematic-map__audit-notice" role="status">
+          <strong>監査中です</strong>
+          <span>地図のデータ・表現・操作性を確認中です。内容は監査により修正される場合があります。</span>
+        </div>
+      )}
       <div
         ref={containerRef}
         className="thematic-map__canvas"

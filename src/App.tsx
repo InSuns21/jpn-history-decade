@@ -1,9 +1,6 @@
 import { useEffect, useState } from 'react'
-import { DecadePage } from './components/DecadePage'
-import { SiteShell } from './components/SiteShell'
-import { decades } from './data/decades'
-import { HomePage } from './pages/HomePage'
-import { NotFoundPage } from './pages/NotFoundPage'
+import { findPeriod, getPeriodNeighbors, periods } from './content-model/registry'
+import { activeTemplate } from './templates'
 
 function normalizeHash(hash: string) {
   const route = hash.replace(/^#/, '') || '/'
@@ -24,22 +21,32 @@ function useHashRoute() {
 
 export function App() {
   const route = useHashRoute()
-  const match = route.match(/^\/decade\/(\d{4})(?:\/terms\/([a-z0-9-]+))?$/)
+  const match = route.match(/^\/(?:period|decade)\/([a-z0-9-]+)(?:\/terms\/([a-z0-9-]+))?$/)
+  const { SiteLayout, HomeTemplate, PeriodTemplate, NotFoundTemplate } = activeTemplate
 
-  let content = <NotFoundPage />
+  let content = <NotFoundTemplate />
 
   if (route === '/') {
-    content = <HomePage />
+    content = <HomeTemplate periods={periods} />
   } else if (match) {
-    const year = Number(match[1])
+    const routeKey = match[1]
     const termId = match[2]
-    const decade = decades.find((item) => item.year === year)
-    const termExists = !termId || decade?.glossary.some((item) => item.id === termId)
+    const period = findPeriod(routeKey)
+    const termExists = !termId || period?.glossary.some((item) => item.id === termId)
 
-    if (decade && termExists) {
-      content = <DecadePage data={decade} activeTermId={termId} />
+    if (period && termExists) {
+      const neighbors = getPeriodNeighbors(routeKey)
+      content = (
+        <PeriodTemplate
+          data={period}
+          periods={periods}
+          previous={neighbors.previous}
+          next={neighbors.next}
+          activeTermId={termId}
+        />
+      )
     }
   }
 
-  return <SiteShell>{content}</SiteShell>
+  return <SiteLayout periods={periods}>{content}</SiteLayout>
 }

@@ -64,7 +64,7 @@ npm run dev
 npm run check
 ```
 
-`check` は内部リンク・用語リンク検証、ESLint、TypeScript の型チェック、Vite の本番ビルドを順番に実行します。
+`check` はSYSTEM_PROMPT文字数、内部リンク・用語リンク、ESLint、TypeScript型チェック、Vite本番ビルドを順番に検証します。
 
 用語リンクは `[[term:<id>|表示語]]` を使い、存在しない参照先や、論述対策上の必須語が本文から一度も利用されていない状態をCIで検出します。
 
@@ -82,11 +82,13 @@ Vite の `base` は `./` とし、project site・カスタムドメインのど�
 
 ## ワークスペース用システムプロンプト
 
-このリポジトリでAIに調査・執筆・実装を任せる場合の共通ルール：
+AI向けの常時ルールは [SYSTEM_PROMPT.md](SYSTEM_PROMPT.md) に置き、**8,000文字以内**をCIで強制します。詳細規約は分離しています。
 
-- [SYSTEM_PROMPT.md](SYSTEM_PROMPT.md)
+- [執筆・出典・用語集・内部リンク](standards/CONTENT_AUTHORING_STANDARD.md)
+- [地図監査](standards/MAP_AUDIT_STANDARD.md)
+- [実装・CI・plan運用](standards/PROJECT_WORKFLOW_STANDARD.md)
 
-歴史記述の原則、出典確認、年代ページ構造、MapLibre の利用基準、実装・CI運用までまとめています。
+詳細ルールをSYSTEM_PROMPTへ重複記載せず、該当standardを参照する運用です。
 
 ## 企画書
 

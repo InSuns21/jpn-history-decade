@@ -447,11 +447,43 @@ src/maps/
 - period
 - historical question
 - source
+- sourceType
+- temporalCoverage
+- geometryConfidence
+- license
+- transformations
 - initial view
 - layers
 - legend
+- audit state
 
 を持たせる。
+
+詳細な監査基準は [../standards/MAP_AUDIT_STANDARD.md](../standards/MAP_AUDIT_STANDARD.md) に従う。
+
+地図は、
+
+```text
+史料・データ
+  ↓
+provenance metadata
+  ↓
+加工・変換
+  ↓
+Data Audit
+  ↓
+MapLibre style
+  ↓
+Style Audit
+  ↓
+実画面
+  ↓
+Human Visual Audit
+  ↓
+公開
+```
+
+の順で扱う。
 
 テンプレート側は map ID を受け取り、MapLibreをどの見た目で配置するかだけを決める。
 
@@ -576,6 +608,58 @@ src/maps/
 運用をリポジトリ規約へ追加する。
 
 詳細は本計画末尾参照。
+
+---
+
+## JH00-F Historical map audit infrastructure
+
+地図を追加する前に、監査可能な地図データ構造を作る。
+
+想定：
+
+```text
+src/maps/
+├── registry.ts
+├── schema.ts
+├── audit/
+│   ├── validateData.ts
+│   ├── validateStyle.ts
+│   └── auditTypes.ts
+├── definitions/
+└── data/
+
+standards/
+└── MAP_AUDIT_STANDARD.md
+```
+
+最低限実装するもの：
+
+- map definition schema
+- provenance schema
+- temporalCoverage
+- geometryConfidence
+- source / license metadata
+- transformation history
+- audit state
+- feature ID validation
+- geometry / coordinate validation
+- map period と data period の整合性検査
+- legend と style category の整合性検査
+- published map に対する audit state 検査
+
+Human Visual Audit はCIで自動合格させない。
+
+地図ごとに、人間が確認すべき状態を `pending-human` として保持できるようにする。
+
+### 完了条件
+
+- provenance 不足の地図定義が validation error になる
+- temporalCoverage 不明のデータを published map へ使用できない
+- geometryConfidence が必須
+- source / license の欠落を検出できる
+- invalid coordinate / duplicate feature ID を検出できる
+- legend / layer category の基本的不整合を検出できる
+- Human Visual Audit が未完了の地図は published 扱いにならない
 
 ---
 
@@ -914,7 +998,74 @@ MapLibreと特に相性がよい。
 
 ---
 
-# 21. MapLibre 優先順位
+# 21. MapLibre 監査・品質保証
+
+すべての地図について、以下の3監査を行う。
+
+## Data Audit
+
+- 出典
+- 基準時点
+- 空間範囲
+- geometry confidence
+- 加工履歴
+- feature ID
+- 座標異常
+- 属性欠落
+- source / license
+
+を確認する。
+
+機械検査可能な項目は content / map validation に組み込み、CIで落とす。
+
+代表地点・代表境界については、人間によるサンプル照合も行う。
+
+## Style Audit
+
+- 色
+- 線種
+- symbol
+- label
+- filter
+- zoom condition
+- legend
+
+がデータの意味と一致しているか確認する。
+
+色弱配慮、推定境界と確定境界の区別、凡例同期を含む。
+
+## Visual Audit
+
+実際の表示を、
+
+- desktop
+- mobile
+- initial zoom
+- zoom in
+- zoom out
+
+で確認する。
+
+自動判定が難しいため、Human Review Checklist を残す。
+
+特に、
+
+- ラベル重なり
+- popup
+- 凡例
+- visual hierarchy
+- 背景地図の強さ
+- 誤解を招く色・面積・線幅
+- 不確実性の見え方
+- 現代境界との混同
+
+を確認する。
+
+**Visual Audit が未実施なら地図の実装フェーズを完了扱いにしない。**
+
+---
+
+# 22. MapLibre 優先順位
 
 | 優先度 | 地図 | 判断 |
 |---|---|---|
@@ -934,7 +1085,7 @@ MapLibreと特に相性がよい。
 
 ---
 
-# 22. 各年代の執筆パス
+# 23. 各年代の執筆パス
 
 ## Pass 1 — Structure
 
@@ -974,7 +1125,7 @@ status = draft
 
 ---
 
-# 23. 実装順序
+# 24. 実装順序
 
 ```text
 JH00 Markdown compiler / template architecture
@@ -1016,7 +1167,7 @@ plan_done/ へ移動
 
 ---
 
-# 24. 共通 Definition of Done
+# 25. 共通 Definition of Done
 
 各 JH ページは次を満たしたとき完了。
 
@@ -1035,6 +1186,11 @@ plan_done/ へ移動
 - [ ] 後知恵・単純因果・地域差を監査した
 - [ ] 地図が必要か判断した
 - [ ] 地図がある場合、出典・時点・凡例がある
+- [ ] 地図の provenance / temporalCoverage / geometryConfidence がある
+- [ ] 地図の Data Audit が passed
+- [ ] 地図の Style Audit が passed
+- [ ] 地図の Human Visual Audit が passed
+- [ ] 地図を desktop / mobile / zoom別に確認した
 - [ ] template変更で原稿修正が不要
 - [ ] desktop / mobileを確認
 - [ ] content compiler validation green
@@ -1044,7 +1200,7 @@ plan_done/ へ移動
 
 ---
 
-# 25. 本計画の完了条件
+# 26. 本計画の完了条件
 
 1. JH00〜JH11完了
 2. 1800〜1873を連続して読める
@@ -1053,11 +1209,13 @@ plan_done/ へ移動
 5. テンプレートを一箇所の切替で差し替えられる
 6. 原稿にReact/CSS依存がない
 7. 高優先度地図を実装、または見送り理由を記録
-8. S01〜S04を実装、または統合判断を記録
-9. 全体監査完了
-10. CI green
-11. Pages deploy green
-12. Status を `completed` に更新
+8. 実装した地図について Data / Style / Visual Audit を完了
+9. 地図データの provenance と不確実性を追跡可能にする
+10. S01〜S04を実装、または統合判断を記録
+11. 全体監査完了
+12. CI green
+13. Pages deploy green
+14. Status を `completed` に更新
 
 完了後、このファイルを
 
@@ -1077,7 +1235,7 @@ plan_done/MEIJI_OPENING_IMPLEMENTATION_PLAN.md
 
 ---
 
-# 26. plan / plan_done 運用
+# 27. plan / plan_done 運用
 
 ## plan/
 
@@ -1101,7 +1259,7 @@ plan_done/MEIJI_OPENING_IMPLEMENTATION_PLAN.md
 
 ---
 
-# 27. 次フェーズ候補
+# 28. 次フェーズ候補
 
 本計画には含めない。
 

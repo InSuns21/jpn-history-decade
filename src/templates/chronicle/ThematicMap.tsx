@@ -51,6 +51,48 @@ export function ThematicMap({ mapId }: { mapId: string }) {
     map.once('load', () => {
       for (const dataset of definition.datasets) {
         for (const feature of dataset.features) {
+          if (feature.geometry.type !== 'LineString' || !Array.isArray(feature.geometry.coordinates)) continue
+
+          const category = String(feature.properties.category ?? '')
+          const legend = definition.legend.find((item) => item.value === category)
+          if (!legend) continue
+
+          const sourceId = `historical-line-source-${definition.id}-${feature.id}`
+          const layerId = `historical-line-layer-${definition.id}-${feature.id}`
+          const coordinates = feature.geometry.coordinates as [number, number][]
+
+          map.addSource(sourceId, {
+            type: 'geojson',
+            data: {
+              type: 'Feature',
+              properties: feature.properties,
+              geometry: {
+                type: 'LineString',
+                coordinates,
+              },
+            },
+          })
+
+          map.addLayer({
+            id: layerId,
+            type: 'line',
+            source: sourceId,
+            layout: {
+              'line-cap': 'round',
+              'line-join': 'round',
+            },
+            paint: {
+              'line-color': legend.color,
+              'line-width': category === 'port-link' ? 3.4 : 3,
+              'line-opacity': 0.88,
+              'line-dasharray': category === 'port-link' ? [1.2, 1.2] : [2.2, 1.6],
+            },
+          })
+        }
+      }
+
+      for (const dataset of definition.datasets) {
+        for (const feature of dataset.features) {
           if (feature.geometry.type !== 'Point' || !Array.isArray(feature.geometry.coordinates)) continue
 
           const [longitude, latitude] = feature.geometry.coordinates
@@ -169,7 +211,12 @@ export function ThematicMap({ mapId }: { mapId: string }) {
       <div className="thematic-map__legend" aria-label="凡例">
         {definition.legend.map((item) => (
           <span key={item.value}>
-            <i style={{ '--legend-color': item.color } as CSSProperties}>{item.marker}</i>
+            <i
+              className={item.kind === 'line' ? 'is-line' : undefined}
+              style={{ '--legend-color': item.color } as CSSProperties}
+            >
+              {item.kind === 'line' ? '' : item.marker}
+            </i>
             {item.label}
           </span>
         ))}

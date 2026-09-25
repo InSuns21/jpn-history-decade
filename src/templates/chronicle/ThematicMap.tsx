@@ -3,6 +3,8 @@ import * as maplibregl from 'maplibre-gl'
 import 'maplibre-gl/dist/maplibre-gl.css'
 import { findMapDefinition } from '../../maps/registry'
 
+const labelPlacements = new Set(['right', 'left', 'top', 'bottom'])
+
 export function ThematicMap({ mapId }: { mapId: string }) {
   const containerRef = useRef<HTMLDivElement>(null)
   const definition = useMemo(() => findMapDefinition(mapId), [mapId])
@@ -44,7 +46,7 @@ export function ThematicMap({ mapId }: { mapId: string }) {
     map.addControl(new maplibregl.AttributionControl({ compact: true }), 'bottom-right')
 
     const markers: maplibregl.Marker[] = []
-    const popups: maplibregl.Popup[] = []
+    let activePopup: maplibregl.Popup | null = null
 
     map.once('load', () => {
       for (const dataset of definition.datasets) {
@@ -61,16 +63,30 @@ export function ThematicMap({ mapId }: { mapId: string }) {
           const label = String(feature.properties.label ?? '')
           const year = String(feature.properties.year ?? '')
           const detail = String(feature.properties.detail ?? '')
+          const requestedPlacement = String(feature.properties.labelPlacement ?? 'right')
+          const labelPlacement = labelPlacements.has(requestedPlacement) ? requestedPlacement : 'right'
 
           const markerButton = document.createElement('button')
           markerButton.type = 'button'
-          markerButton.className = 'historical-map-marker'
-          markerButton.textContent = legend.marker
+          markerButton.className = `historical-map-marker historical-map-marker--${labelPlacement}`
           markerButton.style.setProperty('--marker-color', legend.color)
-          markerButton.setAttribute('aria-label', [label, year, legend.label].filter(Boolean).join('・'))
+          markerButton.setAttribute(
+            'aria-label',
+            [label, year, legend.label, detail].filter(Boolean).join('・'),
+          )
+
+          const markerIcon = document.createElement('span')
+          markerIcon.className = 'historical-map-marker__icon'
+          markerIcon.textContent = legend.marker
+
+          const markerLabel = document.createElement('span')
+          markerLabel.className = 'historical-map-marker__label'
+          markerLabel.textContent = label
+
+          markerButton.append(markerIcon, markerLabel)
 
           markerButton.addEventListener('click', () => {
-            for (const popup of popups) popup.remove()
+            activePopup?.remove()
 
             const popupBody = document.createElement('div')
             popupBody.className = 'historical-map-popup'
@@ -87,12 +103,15 @@ export function ThematicMap({ mapId }: { mapId: string }) {
             paragraph.textContent = detail
             popupBody.appendChild(paragraph)
 
-            const popup = new maplibregl.Popup({ offset: 22, maxWidth: '300px' })
+            activePopup = new maplibregl.Popup({
+              offset: 24,
+              maxWidth: '320px',
+              closeButton: true,
+              closeOnClick: true,
+            })
               .setLngLat([longitude, latitude])
               .setDOMContent(popupBody)
               .addTo(map)
-
-            popups.push(popup)
           })
 
           const marker = new maplibregl.Marker({ element: markerButton, anchor: 'center' })
@@ -104,7 +123,7 @@ export function ThematicMap({ mapId }: { mapId: string }) {
     })
 
     return () => {
-      for (const popup of popups) popup.remove()
+      activePopup?.remove()
       for (const marker of markers) marker.remove()
       map.remove()
     }

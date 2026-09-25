@@ -1,0 +1,57 @@
+name: Import CODH A2 roads
+
+on:
+  push:
+    branches:
+      - fix/a2-codh-road-data
+    paths:
+      - scripts/import-codh-roads.py
+      - .github/workflows/import-codh-a2-roads.yml
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    if: ${{ !contains(github.event.head_commit.message, '[codh-data]') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v6
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Install importer dependencies
+        run: python -m pip install --disable-pip-version-check fiona
+
+      - name: Download CODH Edo Major Road Dataset v4
+        run: |
+          curl --fail --location --retry 3 \
+            https://codh.rois.ac.jp/historical-gis/edo-road/geopackage.zip \
+            --output /tmp/edo-road.zip
+          mkdir -p /tmp/edo-road
+          unzip -q /tmp/edo-road.zip -d /tmp/edo-road
+          find /tmp/edo-road -maxdepth 3 -type f -print
+
+      - name: Extract R001 R600 R900 to GeoJSON
+        run: |
+          GPKG="$(find /tmp/edo-road -type f -name '*.gpkg' | head -n 1)"
+          test -n "$GPKG"
+          python scripts/import-codh-roads.py \
+            "$GPKG" \
+            src/maps/data/geojson/a2-codh-roads.geojson
+
+      - name: Commit generated GeoJSON
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/maps/data/geojson/a2-codh-roads.geojson
+          if git diff --cached --quiet; then
+            echo "No data changes."
+            exit 0
+          fi
+          git commit -m "[codh-data] Import CODH A2 road geometry"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

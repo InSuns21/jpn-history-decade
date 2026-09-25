@@ -197,7 +197,7 @@ export function PeriodTemplate({
               <ul className="plain-list">
                 {data.sources.map((source) => (
                   <li key={source.id}>
-                    {source.author && <>{source.author}「」</>}
+                    {source.author && <>{source.author}、</>}
                     <strong>{source.title}</strong>
                     {source.institution && <>（{source.institution}）</>}
                   </li>

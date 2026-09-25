@@ -17,6 +17,16 @@
 - GitHub Actions による lint / typecheck / build CI
 - `main` 更新時の GitHub Pages 自動デプロイ
 
+## コンテンツ実装方針
+
+歴史本文は、React/HTMLへ直書きせず **Markdown + frontmatter を正本**とし、build時に共通コンテンツモデルへコンパイルする構成へ移行します。表示はテンプレート層へ分離し、active template を差し替えるだけでサイト全体のデザインを変更できる構成を目標とします。
+
+- 原稿：Markdown + frontmatter
+- コンテンツcompiler：validation・出典/地図参照整合性・中間モデル生成
+- 表示：React template
+- 地図：MarkdownにはMapLibre実装を書かず map ID のみ参照
+- MDXは原稿と表示実装が混ざりやすいため初期採用しない
+
 ## コンテンツ構成
 
 - **年代史** — 各時代の社会を定点観測
@@ -69,3 +79,11 @@ Vite の `base` は `./` とし、project site・カスタムドメインのど�
 詳細な方針・ページ構成・MapLibre 主題地図方針・初期ロードマップ：
 
 - [plan/JPN_HISTORY_DECADE_PLAN.md](plan/JPN_HISTORY_DECADE_PLAN.md)
+
+
+## 実装計画の運用
+
+- 現在有効な企画・実装計画：[`plan/`](plan/)
+- 完了済み実装計画：[`plan_done/`](plan_done/)
+
+実装計画は完了条件・監査・CI・Pages deployを満たした後、Statusを `completed` に変更して `plan/` から `plan_done/` へ移動します。長期企画書は個別フェーズ完了だけでは移動しません。

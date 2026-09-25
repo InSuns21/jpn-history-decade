@@ -1,0 +1,57 @@
+{
+  "period": "1840",
+  "termRefs": [
+    {
+      "id": "bakuhan-taisei",
+      "core": true
+    },
+    {
+      "id": "mura-uke-sei",
+      "core": true
+    },
+    {
+      "id": "kabu-nakama",
+      "core": true
+    },
+    {
+      "id": "tenpo-famine",
+      "core": false
+    },
+    {
+      "id": "tenpo-reforms",
+      "core": true
+    },
+    {
+      "id": "mizuno-tadakuni",
+      "core": true
+    },
+    {
+      "id": "hitogaeshi-rei",
+      "core": true
+    },
+    {
+      "id": "agechi-rei",
+      "core": true
+    },
+    {
+      "id": "opium-war",
+      "core": true
+    },
+    {
+      "id": "ikokusen-uchiharai-rei",
+      "core": false
+    },
+    {
+      "id": "shinsui-kyuyo-rei",
+      "core": true
+    },
+    {
+      "id": "rangaku",
+      "core": false
+    },
+    {
+      "id": "betsudan-fusetsugaki",
+      "core": true
+    }
+  ]
+}

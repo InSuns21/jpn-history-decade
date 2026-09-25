@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef } from 'react'
+import { useEffect, useMemo, useRef, type CSSProperties } from 'react'
 import maplibregl from 'maplibre-gl'
 import 'maplibre-gl/dist/maplibre-gl.css'
 import { findMapDefinition } from '../../maps/registry'
@@ -18,6 +18,7 @@ export function ThematicMap({ mapId }: { mapId: string }) {
       maxZoom: 13,
       dragRotate: false,
       pitchWithRotate: false,
+      attributionControl: false,
       style: {
         version: 8,
         sources: {
@@ -122,7 +123,7 @@ export function ThematicMap({ mapId }: { mapId: string }) {
       <div className="thematic-map__legend" aria-label="凡例">
         {definition.legend.map((item) => (
           <span key={item.value}>
-            <i style={{ '--legend-color': item.color } as React.CSSProperties}>{item.marker}</i>
+            <i style={{ '--legend-color': item.color } as CSSProperties}>{item.marker}</i>
             {item.label}
           </span>
         ))}

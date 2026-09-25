@@ -11,7 +11,7 @@
 - Vite + React + TypeScript
 - GitHub Pages を前提とした静的サイト
 - Pages の直リンク問題を避ける hash ベースのルーティング
-- 年代ページを共通データスキーマから描画
+- 年代ページを Markdown + frontmatter からコンパイルし、共通コンテンツモデルで描画
 - MapLibre GL JS を依存に追加し、必要な記事だけ主題地図を差し込める構成
 - 1800年代ページの初期雛形
 - GitHub Actions による lint / typecheck / build CI
@@ -28,10 +28,10 @@
 
 ## コンテンツ実装方針
 
-歴史本文は、React/HTMLへ直書きせず **Markdown + frontmatter を正本**とし、build時に共通コンテンツモデルへコンパイルする構成へ移行します。表示はテンプレート層へ分離し、active template を差し替えるだけでサイト全体のデザインを変更できる構成を目標とします。
+歴史本文は、React/HTMLへ直書きせず **Markdown + frontmatter を正本**とし、build前に共通コンテンツモデルへコンパイルします。表示はテンプレート層へ分離し、`src/templates/index.ts` の active template を差し替えるだけでサイト全体のデザインを変更できる構成です。
 
 - 原稿：Markdown + frontmatter
-- コンテンツcompiler：validation・出典/地図参照整合性・中間モデル生成
+- コンテンツcompiler：frontmatter validation・用語/出典/地図参照整合性・中間モデル生成
 - 表示：React template
 - 地図：MarkdownにはMapLibre実装を書かず map ID のみ参照
 - MDXは原稿と表示実装が混ざりやすいため初期採用しない
@@ -64,7 +64,7 @@ npm run dev
 npm run check
 ```
 
-`check` はSYSTEM_PROMPT文字数、内部リンク・用語リンク、ESLint、TypeScript型チェック、Vite本番ビルドを順番に検証します。
+`check` はSYSTEM_PROMPT文字数、Markdownコンパイル、内部リンク・用語リンク、地図監査ガード、ESLint、TypeScript型チェック、Vite本番ビルドを順番に検証します。
 
 用語リンクは `[[term:<id>|表示語]]` を使い、存在しない参照先や、論述対策上の必須語が本文から一度も利用されていない状態をCIで検出します。
 

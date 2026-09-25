@@ -60,10 +60,11 @@ for (const file of glossaryFiles) {
   glossaries.set(year, { file, ids, terms: json.terms })
 }
 
-const sourceFiles = [
-  ...collectFiles('src/data/decades', ['.ts']),
-  ...collectFiles('content/periods', ['.md']),
-]
+const periodMarkdownFiles = collectFiles('content/periods', ['.md'])
+const sourceFiles =
+  periodMarkdownFiles.length > 0
+    ? periodMarkdownFiles
+    : collectFiles('src/data/decades', ['.ts'])
 
 const usage = new Map()
 for (const [year, glossary] of glossaries) {
@@ -100,10 +101,10 @@ for (const file of sourceFiles) {
 }
 
 for (const [year, glossary] of glossaries) {
-  const sourceTs = 'src/data/decades/' + year + '.ts'
   const sourceMd = 'content/periods/' + year + '.md'
+  const sourceTs = 'src/data/decades/' + year + '.ts'
 
-  if (!exists(sourceTs) && !exists(sourceMd)) {
+  if (periodMarkdownFiles.length > 0 ? !exists(sourceMd) : !exists(sourceTs)) {
     errors.push(glossary.file + ': no matching period source exists for ' + year)
   }
 
@@ -115,15 +116,19 @@ for (const [year, glossary] of glossaries) {
   }
 }
 
-const glossaryComponent = exists('src/components/Glossary.tsx') ? read('src/components/Glossary.tsx') : ''
-const linkedTextComponent = exists('src/components/LinkedText.tsx') ? read('src/components/LinkedText.tsx') : ''
+const glossaryComponent = exists('src/templates/chronicle/Glossary.tsx')
+  ? read('src/templates/chronicle/Glossary.tsx')
+  : ''
+const linkedTextComponent = exists('src/templates/chronicle/LinkedText.tsx')
+  ? read('src/templates/chronicle/LinkedText.tsx')
+  : ''
 const app = exists('src/App.tsx') ? read('src/App.tsx') : ''
 
 if (!glossaryComponent.includes("id={'term-' + item.id}")) {
-  errors.push('src/components/Glossary.tsx: glossary anchor convention term-<id> is missing')
+  errors.push('src/templates/chronicle/Glossary.tsx: glossary anchor convention term-<id> is missing')
 }
 if (!linkedTextComponent.includes("'/terms/' + termId")) {
-  errors.push('src/components/LinkedText.tsx: glossary href convention is missing')
+  errors.push('src/templates/chronicle/LinkedText.tsx: glossary href convention is missing')
 }
 if (!app.includes('terms') || !app.includes('termExists') || !app.includes('activeTermId')) {
   errors.push('src/App.tsx: glossary term route support is missing')

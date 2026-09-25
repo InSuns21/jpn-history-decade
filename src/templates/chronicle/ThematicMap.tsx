@@ -12,85 +12,6 @@ export function ThematicMap({ mapId }: { mapId: string }) {
   useEffect(() => {
     if (!containerRef.current || !definition) return
 
-    const style: maplibregl.StyleSpecification = {
-      version: 8,
-      sources: {
-        osm: {
-          type: 'raster',
-          tiles: ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
-          tileSize: 256,
-          attribution: '© OpenStreetMap contributors',
-        },
-      },
-      layers: [
-        {
-          id: 'modern-basemap',
-          type: 'raster',
-          source: 'osm',
-          paint: { 'raster-opacity': 0.48, 'raster-saturation': -0.55 },
-        },
-      ],
-    }
-
-    for (const dataset of definition.datasets) {
-      for (const feature of dataset.features) {
-        if (feature.geometry.type !== 'LineString' || !Array.isArray(feature.geometry.coordinates)) continue
-
-        const category = String(feature.properties.category ?? '')
-        const legend = definition.legend.find((item) => item.value === category)
-        if (!legend) continue
-
-        const sourceId = `historical-line-source-${definition.id}-${feature.id}`
-        const baseLayerId = `historical-line-base-${definition.id}-${feature.id}`
-        const dashLayerId = `historical-line-dash-${definition.id}-${feature.id}`
-        const coordinates = feature.geometry.coordinates as [number, number][]
-
-        style.sources[sourceId] = {
-          type: 'geojson',
-          data: {
-            type: 'Feature',
-            properties: feature.properties,
-            geometry: {
-              type: 'LineString',
-              coordinates,
-            },
-          },
-        }
-
-        style.layers.push(
-          {
-            id: baseLayerId,
-            type: 'line',
-            source: sourceId,
-            layout: {
-              'line-cap': 'round',
-              'line-join': 'round',
-            },
-            paint: {
-              'line-color': legend.color,
-              'line-width': category === 'port-link' ? 5.2 : 4.8,
-              'line-opacity': 0.34,
-            },
-          },
-          {
-            id: dashLayerId,
-            type: 'line',
-            source: sourceId,
-            layout: {
-              'line-cap': 'round',
-              'line-join': 'round',
-            },
-            paint: {
-              'line-color': legend.color,
-              'line-width': category === 'port-link' ? 3.4 : 3,
-              'line-opacity': 0.96,
-              'line-dasharray': category === 'port-link' ? [1.2, 1.2] : [2.2, 1.6],
-            },
-          },
-        )
-      }
-    }
-
     const map = new maplibregl.Map({
       container: containerRef.current,
       center: definition.initialView.center,
@@ -100,7 +21,25 @@ export function ThematicMap({ mapId }: { mapId: string }) {
       dragRotate: false,
       pitchWithRotate: false,
       attributionControl: false,
-      style,
+      style: {
+        version: 8,
+        sources: {
+          osm: {
+            type: 'raster',
+            tiles: ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
+            tileSize: 256,
+            attribution: '© OpenStreetMap contributors',
+          },
+        },
+        layers: [
+          {
+            id: 'modern-basemap',
+            type: 'raster',
+            source: 'osm',
+            paint: { 'raster-opacity': 0.48, 'raster-saturation': -0.55 },
+          },
+        ],
+      },
     })
 
     map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right')
@@ -110,6 +49,77 @@ export function ThematicMap({ mapId }: { mapId: string }) {
     let activePopup: maplibregl.Popup | null = null
 
     map.once('load', () => {
+      const lineFeatures = definition.datasets.flatMap((dataset) =>
+        dataset.features
+          .filter((feature) => feature.geometry.type === 'LineString' && Array.isArray(feature.geometry.coordinates))
+          .map((feature) => ({
+            type: 'Feature' as const,
+            properties: feature.properties,
+            geometry: {
+              type: 'LineString' as const,
+              coordinates: feature.geometry.coordinates as [number, number][],
+            },
+          })),
+      )
+
+      if (lineFeatures.length > 0) {
+        try {
+          const sourceId = `historical-lines-${definition.id}`
+
+          map.addSource(sourceId, {
+            type: 'geojson',
+            data: {
+              type: 'FeatureCollection',
+              features: lineFeatures,
+            },
+          })
+
+          const lineCategories = definition.legend.filter((item) => item.kind === 'line')
+
+          for (const item of lineCategories) {
+            const baseLayerId = `historical-line-base-${definition.id}-${item.value}`
+            map.addLayer({
+              id: baseLayerId,
+              type: 'line',
+              source: sourceId,
+              filter: ['==', ['get', 'category'], item.value],
+              layout: {
+                'line-cap': 'round',
+                'line-join': 'round',
+              },
+              paint: {
+                'line-color': item.color,
+                'line-width': item.value === 'port-link' ? 5 : 4.5,
+                'line-opacity': 0.56,
+              },
+            })
+
+            try {
+              map.addLayer({
+                id: `historical-line-dash-${definition.id}-${item.value}`,
+                type: 'line',
+                source: sourceId,
+                filter: ['==', ['get', 'category'], item.value],
+                layout: {
+                  'line-cap': 'butt',
+                  'line-join': 'round',
+                },
+                paint: {
+                  'line-color': item.color,
+                  'line-width': item.value === 'port-link' ? 3.2 : 2.8,
+                  'line-opacity': 1,
+                  'line-dasharray': item.value === 'port-link' ? [1.2, 1.2] : [2.2, 1.6],
+                },
+              })
+            } catch (error) {
+              console.warn('Historical map dashed line layer could not be added.', error)
+            }
+          }
+        } catch (error) {
+          console.warn('Historical map line source/layers could not be added.', error)
+        }
+      }
+
       for (const dataset of definition.datasets) {
         for (const feature of dataset.features) {
           if (feature.geometry.type !== 'Point' || !Array.isArray(feature.geometry.coordinates)) continue

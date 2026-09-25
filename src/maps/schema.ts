@@ -55,6 +55,7 @@ export interface MapLegendItem {
   label: string
   marker: string
   color: string
+  kind?: 'point' | 'line'
 }
 
 export interface HistoricalMapDefinition {

@@ -6,25 +6,68 @@ interface LinkedTextProps {
   sourceIds?: string[]
 }
 
-const INLINE_LINK = /\[\[term:([a-z0-9-]+)\|([^\]]+)\]\]|\[@([a-z0-9-]+)\]/g
-
-export function LinkedText({ text, routeKey, sourceIds = [] }: LinkedTextProps) {
+function renderInlineText(
+  text: string,
+  routeKey: string,
+  sourceIds: string[],
+  keyPrefix: string,
+  allowStrong = true,
+): ReactNode[] {
   const nodes: ReactNode[] = []
+  const inlinePattern = allowStrong
+    ? /\*\*(.+?)\*\*|\[\[term:([a-z0-9-]+)\|([^\]]+)\]\]|\[@([a-z0-9-]+)\]/g
+    : /\[\[term:([a-z0-9-]+)\|([^\]]+)\]\]|\[@([a-z0-9-]+)\]/g
+
   let cursor = 0
   let match: RegExpExecArray | null
 
-  while ((match = INLINE_LINK.exec(text)) !== null) {
-    const [raw, termId, label, sourceId] = match
+  while ((match = inlinePattern.exec(text)) !== null) {
     const start = match.index
 
     if (start > cursor) nodes.push(text.slice(cursor, start))
+
+    if (allowStrong) {
+      const [raw, strongText, termId, label, sourceId] = match
+
+      if (strongText !== undefined) {
+        nodes.push(
+          <strong key={keyPrefix + '-strong-' + start}>
+            {renderInlineText(strongText, routeKey, sourceIds, keyPrefix + '-strong-' + start, false)}
+          </strong>,
+        )
+      } else if (termId) {
+        nodes.push(
+          <a
+            className="glossary-link"
+            href={'#/period/' + routeKey + '/terms/' + termId}
+            key={keyPrefix + '-term-' + termId + '-' + start}
+          >
+            {label}
+          </a>,
+        )
+      } else if (sourceId) {
+        const sourceNumber = sourceIds.indexOf(sourceId) + 1
+        nodes.push(
+          <sup className="source-ref" key={keyPrefix + '-source-' + sourceId + '-' + start}>
+            <a href={'#source-' + sourceId} aria-label={'出典 ' + sourceNumber}>
+              [{sourceNumber}]
+            </a>
+          </sup>,
+        )
+      }
+
+      cursor = start + raw.length
+      continue
+    }
+
+    const [raw, termId, label, sourceId] = match
 
     if (termId) {
       nodes.push(
         <a
           className="glossary-link"
           href={'#/period/' + routeKey + '/terms/' + termId}
-          key={'term-' + termId + '-' + start}
+          key={keyPrefix + '-term-' + termId + '-' + start}
         >
           {label}
         </a>,
@@ -32,7 +75,7 @@ export function LinkedText({ text, routeKey, sourceIds = [] }: LinkedTextProps) 
     } else if (sourceId) {
       const sourceNumber = sourceIds.indexOf(sourceId) + 1
       nodes.push(
-        <sup className="source-ref" key={'source-' + sourceId + '-' + start}>
+        <sup className="source-ref" key={keyPrefix + '-source-' + sourceId + '-' + start}>
           <a href={'#source-' + sourceId} aria-label={'出典 ' + sourceNumber}>
             [{sourceNumber}]
           </a>
@@ -45,5 +88,9 @@ export function LinkedText({ text, routeKey, sourceIds = [] }: LinkedTextProps) 
 
   if (cursor < text.length) nodes.push(text.slice(cursor))
 
-  return <Fragment>{nodes}</Fragment>
+  return nodes
+}
+
+export function LinkedText({ text, routeKey, sourceIds = [] }: LinkedTextProps) {
+  return <Fragment>{renderInlineText(text, routeKey, sourceIds, 'inline')}</Fragment>
 }

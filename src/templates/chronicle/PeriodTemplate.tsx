@@ -8,9 +8,11 @@ import { TimelineNav } from './TimelineNav'
 function ContentBlocks({
   blocks,
   routeKey,
+  sourceIds,
 }: {
   blocks: ContentBlock[]
   routeKey: string
+  sourceIds: string[]
 }) {
   return (
     <>
@@ -18,7 +20,7 @@ function ContentBlocks({
         if (block.type === 'paragraph') {
           return (
             <p className="section-lead" key={'p-' + index}>
-              <LinkedText text={block.text} routeKey={routeKey} />
+              <LinkedText text={block.text} routeKey={routeKey} sourceIds={sourceIds} />
             </p>
           )
         }
@@ -28,7 +30,7 @@ function ContentBlocks({
             <ul className="point-list" key={'list-' + index}>
               {block.items.map((item) => (
                 <li key={item}>
-                  <LinkedText text={item} routeKey={routeKey} />
+                  <LinkedText text={item} routeKey={routeKey} sourceIds={sourceIds} />
                 </li>
               ))}
             </ul>
@@ -37,7 +39,7 @@ function ContentBlocks({
 
         return (
           <h3 className="prose-subheading" key={'heading-' + index}>
-            <LinkedText text={block.text} routeKey={routeKey} />
+            <LinkedText text={block.text} routeKey={routeKey} sourceIds={sourceIds} />
           </h3>
         )
       })}
@@ -62,6 +64,8 @@ export function PeriodTemplate({
     window.scrollTo({ top: 0 })
   }, [activeTermId, data.routeKey])
 
+  const sourceIds = data.sources.map((source) => source.id)
+
   return (
     <>
       <section className="decade-hero">
@@ -75,12 +79,12 @@ export function PeriodTemplate({
           </div>
           <h1>{data.title}</h1>
           <p className="decade-hero__summary">
-            <LinkedText text={data.summary} routeKey={data.routeKey} />
+            <LinkedText text={data.summary} routeKey={data.routeKey} sourceIds={sourceIds} />
           </p>
           <div className="framing-question">
             <span>この時代を考える問い</span>
             <strong>
-              <LinkedText text={data.framingQuestion} routeKey={data.routeKey} />
+              <LinkedText text={data.framingQuestion} routeKey={data.routeKey} sourceIds={sourceIds} />
             </strong>
           </div>
         </div>
@@ -114,8 +118,8 @@ export function PeriodTemplate({
               {data.snapshot.map((item) => (
                 <div className="snapshot-card" key={item.label}>
                   <span>{item.label}</span>
-                  <strong><LinkedText text={item.value} routeKey={data.routeKey} /></strong>
-                  {item.note && <p><LinkedText text={item.note} routeKey={data.routeKey} /></p>}
+                  <strong><LinkedText text={item.value} routeKey={data.routeKey} sourceIds={sourceIds} /></strong>
+                  {item.note && <p><LinkedText text={item.note} routeKey={data.routeKey} sourceIds={sourceIds} /></p>}
                 </div>
               ))}
             </div>
@@ -125,15 +129,15 @@ export function PeriodTemplate({
             <section id={section.id} className="content-section prose-section" key={section.id}>
               <div className="section-heading">
                 <span>{index + 2}</span>
-                <div><h2><LinkedText text={section.title} routeKey={data.routeKey} /></h2></div>
+                <div><h2><LinkedText text={section.title} routeKey={data.routeKey} sourceIds={sourceIds} /></h2></div>
               </div>
-              <ContentBlocks blocks={section.blocks} routeKey={data.routeKey} />
+              <ContentBlocks blocks={section.blocks} routeKey={data.routeKey} sourceIds={sourceIds} />
               {section.questions.length > 0 && (
                 <div className="question-box">
                   <strong>考えてみる</strong>
                   <ul>
                     {section.questions.map((question) => (
-                      <li key={question}><LinkedText text={question} routeKey={data.routeKey} /></li>
+                      <li key={question}><LinkedText text={question} routeKey={data.routeKey} sourceIds={sourceIds} /></li>
                     ))}
                   </ul>
                 </div>
@@ -144,7 +148,7 @@ export function PeriodTemplate({
           <section id="change" className="content-section">
             <div className="section-heading">
               <span>{data.sections.length + 2}</span>
-              <div><h2>前の時代から何が変わったか</h2></div>
+              <div><h2>前の時代からの変化と持続</h2></div>
             </div>
             <div className="change-table-wrap">
               <table className="change-table">
@@ -160,9 +164,9 @@ export function PeriodTemplate({
                   {data.changes.map((item) => (
                     <tr key={item.label}>
                       <th>{item.label}</th>
-                      <td><LinkedText text={item.before} routeKey={data.routeKey} /></td>
-                      <td><LinkedText text={item.current} routeKey={data.routeKey} /></td>
-                      <td><LinkedText text={item.significance} routeKey={data.routeKey} /></td>
+                      <td><LinkedText text={item.before} routeKey={data.routeKey} sourceIds={sourceIds} /></td>
+                      <td><LinkedText text={item.current} routeKey={data.routeKey} sourceIds={sourceIds} /></td>
+                      <td><LinkedText text={item.significance} routeKey={data.routeKey} sourceIds={sourceIds} /></td>
                     </tr>
                   ))}
                 </tbody>
@@ -175,7 +179,7 @@ export function PeriodTemplate({
               <div className="section-heading compact"><span>A</span><div><h2>当時の前提</h2></div></div>
               <ul className="plain-list">
                 {data.contemporaryAssumptions.map((item) => (
-                  <li key={item}><LinkedText text={item} routeKey={data.routeKey} /></li>
+                  <li key={item}><LinkedText text={item} routeKey={data.routeKey} sourceIds={sourceIds} /></li>
                 ))}
               </ul>
             </div>
@@ -183,7 +187,7 @@ export function PeriodTemplate({
               <div className="section-heading compact"><span>B</span><div><h2>次の時代への論点</h2></div></div>
               <ul className="plain-list">
                 {data.nextIssues.map((item) => (
-                  <li key={item}><LinkedText text={item} routeKey={data.routeKey} /></li>
+                  <li key={item}><LinkedText text={item} routeKey={data.routeKey} sourceIds={sourceIds} /></li>
                 ))}
               </ul>
             </div>
@@ -194,15 +198,24 @@ export function PeriodTemplate({
           {data.sources.length > 0 && (
             <section id="sources" className="content-section sources-section">
               <div className="section-heading"><span>史</span><div><h2>史料・参考文献</h2></div></div>
-              <ul className="plain-list">
-                {data.sources.map((source) => (
-                  <li key={source.id}>
-                    {source.author && <>{source.author}、</>}
-                    <strong>{source.title}</strong>
-                    {source.institution && <>（{source.institution}）</>}
+              <ol className="plain-list source-list">
+                {data.sources.map((source, index) => (
+                  <li id={'source-' + source.id} key={source.id}>
+                    <span className="source-number">[{index + 1}]</span>
+                    <span>
+                      {source.author && <>{source.author}、</>}
+                      {source.url ? (
+                        <a href={source.url} target="_blank" rel="noreferrer">
+                          <strong>{source.title}</strong>
+                        </a>
+                      ) : (
+                        <strong>{source.title}</strong>
+                      )}
+                      {source.institution && <>（{source.institution}）</>}
+                    </span>
                   </li>
                 ))}
-              </ul>
+              </ol>
             </section>
           )}
 

@@ -6,6 +6,8 @@
 
 > 歴史を「事件の列」ではなく、社会システムの状態遷移として読む。
 
+**公開サイト:** [GitHub Pages](https://insuns21.github.io/jpn-history-decade/)
+
 ## 現在の実装
 
 - Vite + React + TypeScript

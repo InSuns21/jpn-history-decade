@@ -633,6 +633,14 @@ body {
   font-weight: 800;
   line-height: 1;
 }
+.thematic-map__legend i.is-line {
+  width: 30px;
+  height: 0;
+  border: 0;
+  border-top: 3px dashed var(--legend-color);
+  border-radius: 0;
+  background: transparent;
+}
 
 .historical-map-marker {
   --marker-color: var(--green);

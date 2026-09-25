@@ -1,22 +1,45 @@
 import fs from 'node:fs'
 import path from 'node:path'
+import { performance } from 'node:perf_hooks'
 import { parse as parseYaml } from 'yaml'
 
+const startedAt = performance.now()
 const root = process.cwd()
 const periodDir = path.join(root, 'content', 'periods')
-const glossaryDir = path.join(root, 'content', 'glossary')
+const glossaryCatalogFile = path.join(root, 'content', 'glossary', 'terms.json')
+const periodGlossaryDir = path.join(root, 'content', 'glossary', 'periods')
 const outputFile = path.join(root, 'src', 'generated', 'content.generated.ts')
 const { mapDefinitions } = await import('../src/maps/registry.ts')
 const knownMapIds = new Set(mapDefinitions.map((definition) => definition.id))
 
 const errors = []
+const TERM_LINK_PATTERN = /\[\[term:([a-z0-9-]+)\|([^\]]+)\]\]/g
 
 function pushError(file, message) {
   errors.push(file + ': ' + message)
 }
 
+function relativePath(file) {
+  return path.relative(root, file).replaceAll('\\', '/')
+}
+
 function readText(file) {
   return fs.readFileSync(file, 'utf8')
+}
+
+function readJson(file, label) {
+  const relative = relativePath(file)
+  if (!fs.existsSync(file)) {
+    pushError(relative, label + ' is missing')
+    return null
+  }
+
+  try {
+    return JSON.parse(readText(file))
+  } catch (error) {
+    pushError(relative, 'invalid JSON: ' + error.message)
+    return null
+  }
 }
 
 function parseFrontmatter(source, file) {
@@ -193,24 +216,106 @@ function parseMarkdownSections(body, file) {
   return sections
 }
 
-function loadGlossary(routeKey, file) {
-  const glossaryFile = path.join(glossaryDir, routeKey + '.json')
-  if (!fs.existsSync(glossaryFile)) {
-    pushError(file, 'matching glossary is missing: content/glossary/' + routeKey + '.json')
-    return []
+function loadGlossaryCatalog() {
+  const catalog = readJson(glossaryCatalogFile, 'global glossary catalog')
+  const terms = Array.isArray(catalog?.terms) ? catalog.terms : []
+  if (terms.length === 0) {
+    pushError(relativePath(glossaryCatalogFile), 'terms must be a non-empty array')
   }
 
-  try {
-    const glossary = JSON.parse(readText(glossaryFile))
-    if (!Array.isArray(glossary.terms) || glossary.terms.length === 0) {
-      pushError(glossaryFile, 'terms must be a non-empty array')
-      return []
+  const termById = new Map()
+  for (const [index, term] of terms.entries()) {
+    if (!term || typeof term !== 'object' || Array.isArray(term)) {
+      pushError(relativePath(glossaryCatalogFile), 'terms[' + index + '] must be an object')
+      continue
     }
-    return glossary.terms
-  } catch (error) {
-    pushError(glossaryFile, 'invalid JSON: ' + error.message)
-    return []
+
+    const id = requireString(term, 'id', relativePath(glossaryCatalogFile), /^[a-z0-9-]+$/)
+    requireString(term, 'term', relativePath(glossaryCatalogFile))
+    requireString(term, 'category', relativePath(glossaryCatalogFile))
+    requireString(term, 'definition', relativePath(glossaryCatalogFile))
+    requireString(term, 'connections', relativePath(glossaryCatalogFile))
+
+    if (id && termById.has(id)) {
+      pushError(relativePath(glossaryCatalogFile), 'duplicate glossary id: ' + id)
+    } else if (id) {
+      termById.set(id, term)
+    }
   }
+
+  return termById
+}
+
+const termById = loadGlossaryCatalog()
+
+function loadPeriodGlossary(routeKey, rawSource, file) {
+  const glossaryFile = path.join(periodGlossaryDir, routeKey + '.json')
+  const relative = relativePath(glossaryFile)
+  const config = readJson(glossaryFile, 'period glossary references')
+  const refs = Array.isArray(config?.termRefs) ? config.termRefs : []
+
+  if (config?.period !== routeKey) {
+    pushError(relative, 'period must match routeKey ' + routeKey)
+  }
+  if (refs.length === 0) {
+    pushError(relative, 'termRefs must be a non-empty array')
+  }
+
+  const refById = new Map()
+  for (const [index, ref] of refs.entries()) {
+    if (!ref || typeof ref !== 'object' || Array.isArray(ref)) {
+      pushError(relative, 'termRefs[' + index + '] must be an object')
+      continue
+    }
+
+    const id = requireString(ref, 'id', relative, /^[a-z0-9-]+$/)
+    if (typeof ref.core !== 'boolean') {
+      pushError(relative, 'termRefs[' + index + '].core must be a boolean')
+    }
+    if (ref.periodNote !== undefined && (typeof ref.periodNote !== 'string' || ref.periodNote.trim() === '')) {
+      pushError(relative, 'termRefs[' + index + '].periodNote must be a non-empty string when present')
+    }
+    if (id && refById.has(id)) {
+      pushError(relative, 'duplicate term reference: ' + id)
+    }
+    if (id && !termById.has(id)) {
+      pushError(relative, 'unknown global glossary id: ' + id)
+    }
+    if (id) refById.set(id, ref)
+  }
+
+  const usage = new Map()
+  let match
+  TERM_LINK_PATTERN.lastIndex = 0
+  while ((match = TERM_LINK_PATTERN.exec(rawSource)) !== null) {
+    const [, id, label] = match
+    if (!label.trim()) pushError(file, 'glossary link "' + id + '" has an empty label')
+    if (!termById.has(id)) {
+      pushError(file, 'glossary link "' + id + '" has no target in content/glossary/terms.json')
+      continue
+    }
+    if (!refById.has(id)) {
+      pushError(file, 'glossary link "' + id + '" is not listed in ' + relative)
+      continue
+    }
+    usage.set(id, (usage.get(id) ?? 0) + 1)
+  }
+
+  const resolved = []
+  for (const ref of refs) {
+    const term = termById.get(ref.id)
+    if (!term) continue
+    if (ref.core && !usage.has(ref.id)) {
+      pushError(relative, 'core term "' + ref.id + '" is never linked from ' + file)
+    }
+    resolved.push({
+      ...term,
+      core: ref.core,
+      ...(ref.periodNote ? { periodNote: ref.periodNote } : {}),
+    })
+  }
+
+  return resolved
 }
 
 function validateSources(frontmatter, rawSource, file, status) {
@@ -254,7 +359,7 @@ function validateSources(frontmatter, rawSource, file, status) {
 }
 
 function compilePeriod(filePath) {
-  const relative = path.relative(root, filePath).replaceAll('\\', '/')
+  const relative = relativePath(filePath)
   const source = readText(filePath)
   const parsed = parseFrontmatter(source, relative)
   if (!parsed) return null
@@ -278,9 +383,10 @@ function compilePeriod(filePath) {
   for (const mapId of maps) {
     if (!knownMapIds.has(mapId)) pushError(relative, 'map reference has no matching definition: ' + mapId)
   }
+
   const sources = validateSources(frontmatter, source, relative, status)
   const sections = parseMarkdownSections(parsed.body, relative)
-  const glossary = loadGlossary(routeKey, relative)
+  const glossary = loadPeriodGlossary(routeKey, source, relative)
 
   return {
     id,
@@ -351,4 +457,14 @@ const generated =
   '\n'
 
 fs.writeFileSync(outputFile, generated)
-console.log('Compiled ' + periods.length + ' period(s) to src/generated/content.generated.ts')
+
+const elapsedMs = Math.round((performance.now() - startedAt) * 10) / 10
+console.log(
+  'Compiled ' +
+    periods.length +
+    ' period(s), ' +
+    termById.size +
+    ' global glossary term(s) in ' +
+    elapsedMs +
+    ' ms.',
+)

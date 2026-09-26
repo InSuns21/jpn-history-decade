@@ -37,8 +37,9 @@ frontmatterにはページ制御・比較可能な構造データを置き、長
 build前に段階的に以下を検査可能にする。
 
 - frontmatter必須項目
-- ID重複
+- 年代ページ・構造史・テーマ史のID / route重複
 - 年代順・前後参照
+- 横断記事から関連年代への参照
 - source ID
 - global glossary ID / period reference / link
 - map ID

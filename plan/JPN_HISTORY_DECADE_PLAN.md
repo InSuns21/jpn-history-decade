@@ -461,6 +461,10 @@ jpn-history-decade/
 
 年代史を進めながら、並行してテーマ史・構造史を追加する。
 
+1800〜1873年の最初の実装フェーズは完了済み。現在のactive implementation planは、1874〜1890年を対象とする [MEIJI_CONSTITUTIONAL_FORMATION_IMPLEMENTATION_PLAN.md](./MEIJI_CONSTITUTIONAL_FORMATION_IMPLEMENTATION_PLAN.md) とする。
+
+このフェーズでは、自由民権・士族反乱・地方制度・財政金融・内閣・憲法・選挙・帝国議会を、単純な「近代化」「民主化」の一本道ではなく、中央集権化後の国家制度が再編される過程として扱う。
+
 ---
 
 ## 12. 初期に作りたい主題地図候補

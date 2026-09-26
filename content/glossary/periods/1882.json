@@ -1,0 +1,60 @@
+{
+  "period": "1882",
+  "termRefs": [
+    {
+      "id": "jiyuto-1881",
+      "core": true,
+      "periodNote": "1882〜1884年には地方組織を広げる一方、福島事件・加波山事件などを経て中央党と地方・急進派の距離が問題となり、1884年10月に解党を決議した。"
+    },
+    {
+      "id": "rikken-kaishinto-1882",
+      "core": true
+    },
+    {
+      "id": "ito-europe-constitution-survey",
+      "core": true
+    },
+    {
+      "id": "fukushima-incident-1882",
+      "core": true
+    },
+    {
+      "id": "fukan-shihei",
+      "core": true,
+      "periodNote": "松方財政では不換紙幣整理と正貨蓄積が政策の中心となり、紙幣価値回復と兌換制度の準備が進められた。"
+    },
+    {
+      "id": "matsukata-finance",
+      "core": true
+    },
+    {
+      "id": "bank-of-japan-1882",
+      "core": true
+    },
+    {
+      "id": "convertible-banknote-ordinance-1884",
+      "core": false
+    },
+    {
+      "id": "kojo-haraisage-gaisoku",
+      "core": false,
+      "periodNote": "1880年に始まった官営工場払下げ方針は、1880年代前半の財政・産業政策見直しの中でも継続した。"
+    },
+    {
+      "id": "kabayama-incident-1884",
+      "core": false
+    },
+    {
+      "id": "chichibu-incident-1884",
+      "core": true
+    },
+    {
+      "id": "kazoku-rei-1884",
+      "core": true
+    },
+    {
+      "id": "cabinet-system-1885",
+      "core": true
+    }
+  ]
+}

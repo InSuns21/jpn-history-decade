@@ -1,0 +1,37 @@
+{
+  "page": "local-administration-participation",
+  "termRefs": [
+    {
+      "id": "haihan-chiken",
+      "core": true
+    },
+    {
+      "id": "kosekiho-1871",
+      "core": false
+    },
+    {
+      "id": "kocho",
+      "core": true
+    },
+    {
+      "id": "daiku-shoku-sei",
+      "core": true
+    },
+    {
+      "id": "sanshinpo-1878",
+      "core": true
+    },
+    {
+      "id": "fukenkai",
+      "core": true
+    },
+    {
+      "id": "shi-cho-son-sei-1888",
+      "core": true
+    },
+    {
+      "id": "fuken-sei-gun-sei-1890",
+      "core": true
+    }
+  ]
+}

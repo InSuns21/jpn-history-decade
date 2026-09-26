@@ -206,9 +206,9 @@ previous.endYear + 1 === current.startYear
 
 ## 優先地図 A5
 
-**Status: implemented / pending Human Visual Audit (2026-09-27)**
+**Status: completed (2026-09-27)**
 
-佐賀城・秋月・萩・熊本城・田原坂・延岡の和田越・鹿児島城山を代表地点としてPointで実装した。佐賀市・朝倉市・萩市・熊本市関係資料・延岡市・鹿児島市等の公的資料で主要地点を照合し、Data Audit / Style Auditをpassedとした。統一的に監査可能な進軍路geometryが得られないためLineStringは作成しない。GitHub Pages上でdesktop / tablet-touch / mobileのHuman Visual Auditを行うまでmap statusはdraft / pending-humanとする。
+佐賀城・秋月・萩・熊本城・田原坂・延岡の和田越・鹿児島城山を代表地点としてPointで実装した。佐賀市・朝倉市・萩市・熊本市関係資料・延岡市・鹿児島市等の公的資料で主要地点を照合し、Data Audit / Style Auditをpassedとした。統一的に監査可能な進軍路geometryが得られないためLineStringは作成しない。GitHub Pages上でdesktop / tablet-touch / mobileのHuman Visual Auditを実施しpassed。map statusをpublishedへ更新した。
 
 **士族反乱と西南戦争の空間展開**
 

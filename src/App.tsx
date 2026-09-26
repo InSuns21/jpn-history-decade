@@ -1,5 +1,12 @@
 import { useEffect, useState } from 'react'
-import { findPeriod, getPeriodNeighbors, periods } from './content-model/registry'
+import {
+  crosscutting,
+  findCrosscutting,
+  findPeriod,
+  getPeriodNeighbors,
+  getRelatedCrosscutting,
+  periods,
+} from './content-model/registry'
 import { activeTemplate } from './templates'
 
 function normalizeHash(hash: string) {
@@ -21,16 +28,23 @@ function useHashRoute() {
 
 export function App() {
   const route = useHashRoute()
-  const match = route.match(/^\/(?:period|decade)\/([a-z0-9-]+)(?:\/terms\/([a-z0-9-]+))?$/)
-  const { SiteLayout, HomeTemplate, PeriodTemplate, NotFoundTemplate } = activeTemplate
+  const periodMatch = route.match(/^\/(?:period|decade)\/([a-z0-9-]+)(?:\/terms\/([a-z0-9-]+))?$/)
+  const crosscuttingMatch = route.match(/^\/(structure|theme)\/([a-z0-9-]+)(?:\/terms\/([a-z0-9-]+))?$/)
+  const {
+    SiteLayout,
+    HomeTemplate,
+    PeriodTemplate,
+    CrosscuttingTemplate,
+    NotFoundTemplate,
+  } = activeTemplate
 
   let content = <NotFoundTemplate />
 
   if (route === '/') {
-    content = <HomeTemplate periods={periods} />
-  } else if (match) {
-    const routeKey = match[1]
-    const termId = match[2]
+    content = <HomeTemplate periods={periods} crosscutting={crosscutting} />
+  } else if (periodMatch) {
+    const routeKey = periodMatch[1]
+    const termId = periodMatch[2]
     const period = findPeriod(routeKey)
     const termExists = !termId || period?.glossary.some((item) => item.id === termId)
 
@@ -42,11 +56,26 @@ export function App() {
           periods={periods}
           previous={neighbors.previous}
           next={neighbors.next}
+          relatedCrosscutting={getRelatedCrosscutting(routeKey)}
           activeTermId={termId}
         />
       )
     }
+  } else if (crosscuttingMatch) {
+    const kind = crosscuttingMatch[1] as 'structure' | 'theme'
+    const routeKey = crosscuttingMatch[2]
+    const termId = crosscuttingMatch[3]
+    const page = findCrosscutting(kind, routeKey)
+    const termExists = !termId || page?.glossary.some((item) => item.id === termId)
+
+    if (page && termExists) {
+      content = <CrosscuttingTemplate data={page} periods={periods} activeTermId={termId} />
+    }
   }
 
-  return <SiteLayout periods={periods}>{content}</SiteLayout>
+  return (
+    <SiteLayout periods={periods} crosscutting={crosscutting}>
+      {content}
+    </SiteLayout>
+  )
 }

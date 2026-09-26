@@ -68,6 +68,25 @@ export interface PeriodPageData {
   maps: string[]
 }
 
+export type CrosscuttingKind = 'structure' | 'theme'
+
+export interface CrosscuttingPageData {
+  id: string
+  routeKey: string
+  kind: CrosscuttingKind
+  periodLabel: string
+  status: ContentStatus
+  title: string
+  summary: string
+  framingQuestion: string
+  relatedPeriods: string[]
+  sections: HistoricalSection[]
+  glossary: GlossaryTerm[]
+  sources: SourceDefinition[]
+  maps: string[]
+}
+
 export interface CompiledSiteContent {
   periods: PeriodPageData[]
+  crosscutting: CrosscuttingPageData[]
 }

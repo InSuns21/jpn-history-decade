@@ -1,0 +1,45 @@
+{
+  "page": "foreign-gateways",
+  "termRefs": [
+    {
+      "id": "four-gates",
+      "core": true
+    },
+    {
+      "id": "rangaku",
+      "core": false
+    },
+    {
+      "id": "betsudan-fusetsugaki",
+      "core": false
+    },
+    {
+      "id": "ikokusen-uchiharai-rei",
+      "core": true
+    },
+    {
+      "id": "shinsui-kyuyo-rei",
+      "core": true
+    },
+    {
+      "id": "perry",
+      "core": false
+    },
+    {
+      "id": "nichibei-washin-joyaku",
+      "core": true
+    },
+    {
+      "id": "nichibei-shuko-tsusho-joyaku",
+      "core": true
+    },
+    {
+      "id": "kaikojo",
+      "core": true
+    },
+    {
+      "id": "gaikoku-bugyo",
+      "core": true
+    }
+  ]
+}

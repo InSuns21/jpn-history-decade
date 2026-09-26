@@ -54,6 +54,7 @@ export function PeriodTemplate({
   periods,
   previous,
   next,
+  relatedCrosscutting,
   activeTermId,
 }: PeriodTemplateProps) {
   useEffect(() => {
@@ -107,6 +108,7 @@ export function PeriodTemplate({
             ))}
             <a href="#change">前の時代からの変化</a>
             <a href="#assumptions">当時の前提と次の論点</a>
+            {relatedCrosscutting.length > 0 && <a href="#related-crosscutting">横断して読む</a>}
             <a href="#glossary">この時代を読むための用語</a>
             {data.sources.length > 0 && <a href="#sources">史料・参考文献</a>}
           </nav>
@@ -208,6 +210,24 @@ export function PeriodTemplate({
               </ul>
             </div>
           </section>
+
+          {relatedCrosscutting.length > 0 && (
+            <section id="related-crosscutting" className="content-section">
+              <div className="section-heading">
+                <span>横</span>
+                <div><h2>横断して読む</h2></div>
+              </div>
+              <div className="crosscutting-grid crosscutting-grid--compact">
+                {relatedCrosscutting.map((page) => (
+                  <a href={'#/' + page.kind + '/' + page.routeKey} key={page.id}>
+                    <small>{page.kind === 'structure' ? '構造史' : 'テーマ史'}・{page.periodLabel}</small>
+                    <strong>{page.title}</strong>
+                    <span>{page.framingQuestion}</span>
+                  </a>
+                ))}
+              </div>
+            </section>
+          )}
 
           <Glossary terms={data.glossary} activeTermId={activeTermId} />
 

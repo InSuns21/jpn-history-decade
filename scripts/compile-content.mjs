@@ -6,8 +6,11 @@ import { parse as parseYaml } from 'yaml'
 const startedAt = performance.now()
 const root = process.cwd()
 const periodDir = path.join(root, 'content', 'periods')
+const structureDir = path.join(root, 'content', 'structures')
+const themeDir = path.join(root, 'content', 'themes')
 const glossaryCatalogFile = path.join(root, 'content', 'glossary', 'terms.json')
 const periodGlossaryDir = path.join(root, 'content', 'glossary', 'periods')
+const crosscuttingGlossaryDir = path.join(root, 'content', 'glossary', 'crosscutting')
 const outputFile = path.join(root, 'src', 'generated', 'content.generated.ts')
 const { mapDefinitions } = await import('../src/maps/registry.ts')
 const knownMapIds = new Set(mapDefinitions.map((definition) => definition.id))
@@ -325,6 +328,76 @@ function loadPeriodGlossary(routeKey, rawSource, file) {
   return resolved
 }
 
+function loadCrosscuttingGlossary(routeKey, rawSource, file) {
+  const glossaryFile = path.join(crosscuttingGlossaryDir, routeKey + '.json')
+  const relative = relativePath(glossaryFile)
+  const config = readJson(glossaryFile, 'crosscutting glossary references')
+  const refs = Array.isArray(config?.termRefs) ? config.termRefs : []
+
+  if (config?.page !== routeKey) {
+    pushError(relative, 'page must match routeKey ' + routeKey)
+  }
+  if (refs.length === 0) {
+    pushError(relative, 'termRefs must be a non-empty array')
+  }
+
+  const refById = new Map()
+  for (const [index, ref] of refs.entries()) {
+    if (!ref || typeof ref !== 'object' || Array.isArray(ref)) {
+      pushError(relative, 'termRefs[' + index + '] must be an object')
+      continue
+    }
+
+    const id = requireString(ref, 'id', relative, /^[a-z0-9-]+$/)
+    if (typeof ref.core !== 'boolean') {
+      pushError(relative, 'termRefs[' + index + '].core must be a boolean')
+    }
+    if (ref.periodNote !== undefined && (typeof ref.periodNote !== 'string' || ref.periodNote.trim() === '')) {
+      pushError(relative, 'termRefs[' + index + '].periodNote must be a non-empty string when present')
+    }
+    if (id && refById.has(id)) {
+      pushError(relative, 'duplicate term reference: ' + id)
+    }
+    if (id && !termById.has(id)) {
+      pushError(relative, 'unknown global glossary id: ' + id)
+    }
+    if (id) refById.set(id, ref)
+  }
+
+  const usage = new Map()
+  let match
+  TERM_LINK_PATTERN.lastIndex = 0
+  while ((match = TERM_LINK_PATTERN.exec(rawSource)) !== null) {
+    const [, id, label] = match
+    if (!label.trim()) pushError(file, 'glossary link "' + id + '" has an empty label')
+    if (!termById.has(id)) {
+      pushError(file, 'glossary link "' + id + '" has no target in content/glossary/terms.json')
+      continue
+    }
+    if (!refById.has(id)) {
+      pushError(file, 'glossary link "' + id + '" is not listed in ' + relative)
+      continue
+    }
+    usage.set(id, (usage.get(id) ?? 0) + 1)
+  }
+
+  const resolved = []
+  for (const ref of refs) {
+    const term = termById.get(ref.id)
+    if (!term) continue
+    if (ref.core && !usage.has(ref.id)) {
+      pushError(relative, 'core term "' + ref.id + '" is never linked from ' + file)
+    }
+    resolved.push({
+      ...term,
+      core: ref.core,
+      ...(ref.periodNote ? { periodNote: ref.periodNote } : {}),
+    })
+  }
+
+  return resolved
+}
+
 function validateSources(frontmatter, rawSource, file, status) {
   const sources = frontmatter.sources ?? []
   if (!Array.isArray(sources)) {
@@ -425,9 +498,63 @@ function compilePeriod(filePath) {
   }
 }
 
+
+function compileCrosscutting(filePath, expectedKind) {
+  const relative = relativePath(filePath)
+  const source = readText(filePath)
+  const parsed = parseFrontmatter(source, relative)
+  if (!parsed) return null
+
+  const frontmatter = parsed.data ?? {}
+  const id = requireString(frontmatter, 'id', relative, /^s\d{2}$/)
+  const routeKey = requireString(frontmatter, 'routeKey', relative, /^[a-z0-9-]+$/)
+  const kind = requireString(frontmatter, 'kind', relative)
+
+  if (kind !== expectedKind) {
+    pushError(relative, 'kind must match directory type ' + expectedKind)
+  }
+
+  const status = requireString(frontmatter, 'status', relative)
+  if (!['draft', 'review', 'published'].includes(status)) {
+    pushError(relative, 'status must be draft, review, or published')
+  }
+
+  const relatedPeriods = requireStringArray(frontmatter, 'relatedPeriods', relative)
+  const maps = requireStringArray(frontmatter, 'maps', relative)
+  for (const mapId of maps) {
+    if (!knownMapIds.has(mapId)) {
+      pushError(relative, 'map reference has no matching definition: ' + mapId)
+    }
+  }
+
+  const sources = validateSources(frontmatter, source, relative, status)
+  const sections = parseMarkdownSections(parsed.body, relative)
+  const glossary = loadCrosscuttingGlossary(routeKey, source, relative)
+
+  return {
+    id,
+    routeKey,
+    kind,
+    periodLabel: requireString(frontmatter, 'periodLabel', relative),
+    status,
+    title: requireString(frontmatter, 'title', relative),
+    summary: requireString(frontmatter, 'summary', relative),
+    framingQuestion: requireString(frontmatter, 'framingQuestion', relative),
+    relatedPeriods,
+    sections,
+    glossary,
+    sources,
+    maps,
+  }
+}
+
 if (!fs.existsSync(periodDir)) {
   console.error('Content compilation failed: content/periods does not exist')
   process.exit(1)
+}
+
+for (const requiredDir of [structureDir, themeDir, crosscuttingGlossaryDir]) {
+  if (!fs.existsSync(requiredDir)) fs.mkdirSync(requiredDir, { recursive: true })
 }
 
 const periodFiles = fs
@@ -437,6 +564,24 @@ const periodFiles = fs
   .map((name) => path.join(periodDir, name))
 
 const periods = periodFiles.map(compilePeriod).filter(Boolean).sort((a, b) => a.startYear - b.startYear)
+
+const crosscuttingFiles = [
+  ...fs
+    .readdirSync(structureDir)
+    .filter((name) => name.endsWith('.md'))
+    .sort()
+    .map((name) => ({ file: path.join(structureDir, name), kind: 'structure' })),
+  ...fs
+    .readdirSync(themeDir)
+    .filter((name) => name.endsWith('.md'))
+    .sort()
+    .map((name) => ({ file: path.join(themeDir, name), kind: 'theme' })),
+]
+
+const crosscutting = crosscuttingFiles
+  .map(({ file, kind }) => compileCrosscutting(file, kind))
+  .filter(Boolean)
+  .sort((a, b) => a.id.localeCompare(b.id))
 
 const ids = new Set()
 const routeKeys = new Set()
@@ -473,6 +618,29 @@ for (let index = 0; index < periods.length; index += 1) {
 
 if (periods.length === 0) pushError('content/periods', 'at least one period Markdown file is required')
 
+const crosscuttingIds = new Set()
+const crosscuttingRoutes = new Set()
+for (const page of crosscutting) {
+  if (crosscuttingIds.has(page.id)) {
+    pushError('content/crosscutting', 'duplicate crosscutting id: ' + page.id)
+  }
+  const routeIdentity = page.kind + ':' + page.routeKey
+  if (crosscuttingRoutes.has(routeIdentity)) {
+    pushError('content/crosscutting', 'duplicate crosscutting route: ' + routeIdentity)
+  }
+  crosscuttingIds.add(page.id)
+  crosscuttingRoutes.add(routeIdentity)
+
+  for (const relatedPeriod of page.relatedPeriods) {
+    if (!routeKeys.has(relatedPeriod)) {
+      pushError(
+        'content/crosscutting',
+        page.id + ' references unknown related period: ' + relatedPeriod,
+      )
+    }
+  }
+}
+
 if (errors.length > 0) {
   console.error('Content compilation failed:')
   for (const error of errors) console.error('- ' + error)
@@ -484,7 +652,7 @@ fs.mkdirSync(path.dirname(outputFile), { recursive: true })
 const generated =
   "import type { CompiledSiteContent } from '../content-model/types'\n\n" +
   'export const compiledContent: CompiledSiteContent = ' +
-  JSON.stringify({ periods }, null, 2) +
+  JSON.stringify({ periods, crosscutting }, null, 2) +
   '\n'
 
 fs.writeFileSync(outputFile, generated)
@@ -494,6 +662,8 @@ console.log(
   'Compiled ' +
     periods.length +
     ' period(s), ' +
+    crosscutting.length +
+    ' crosscutting article(s), ' +
     termById.size +
     ' global glossary term(s) in ' +
     elapsedMs +

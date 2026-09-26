@@ -777,3 +777,79 @@ body {
   .historical-map-marker--top .historical-map-marker__label { bottom: 31px; }
   .historical-map-marker--bottom .historical-map-marker__label { top: 31px; }
 }
+
+
+/* Crosscutting structure/theme articles */
+.crosscutting-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.crosscutting-grid > a,
+.related-period-grid > a {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 9px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  text-decoration: none;
+}
+
+.crosscutting-grid > a:hover,
+.crosscutting-grid > a:focus-visible,
+.related-period-grid > a:hover,
+.related-period-grid > a:focus-visible {
+  border-color: var(--green);
+}
+
+.crosscutting-grid small,
+.related-period-grid small {
+  color: var(--red);
+  font-family: var(--font-ui);
+  font-size: .7rem;
+  font-weight: 700;
+}
+
+.crosscutting-grid strong,
+.related-period-grid strong {
+  font-family: var(--font-ui);
+  font-size: 1.08rem;
+  line-height: 1.5;
+}
+
+.crosscutting-grid span,
+.related-period-grid span {
+  color: var(--muted);
+  font-size: .82rem;
+  line-height: 1.7;
+}
+
+.crosscutting-grid--compact > a {
+  padding: 18px;
+}
+
+.related-period-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.crosscutting-hero h1 {
+  max-width: 900px;
+}
+
+@media (max-width: 900px) {
+  .related-period-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .crosscutting-grid,
+  .related-period-grid {
+    grid-template-columns: 1fr;
+  }
+}

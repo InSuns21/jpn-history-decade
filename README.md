@@ -13,7 +13,8 @@
 - Vite + React + TypeScript
 - GitHub Pages を前提とした静的サイト
 - Pages の直リンク問題を避ける hash ベースのルーティング
-- 年代ページを Markdown + frontmatter からコンパイルし、共通コンテンツモデルで描画
+- 年代ページと構造史・テーマ史を Markdown + frontmatter からコンパイルし、共通コンテンツモデルで描画
+- 横断記事から関連年代、年代記事から関連する横断記事へ相互に移動できる構成
 - MapLibre GL JS を依存に追加し、必要な記事だけ主題地図を差し込める構成
 - 1800年代ページの初期雛形
 - GitHub Actions による lint / typecheck / build CI
@@ -72,7 +73,7 @@ npm run check
 
 `check` はSYSTEM_PROMPT文字数、Markdownコンパイルと用語・出典リンク検証、地図監査ガード、ESLint、TypeScript型チェック、Vite本番ビルドを順番に検証します。
 
-用語定義は `content/glossary/terms.json` に一度だけ置き、各年代は `content/glossary/periods/<routeKey>.json` からID参照します。用語リンクは `[[term:<id>|表示語]]` を使い、存在しない参照先や、その年代の中核語が本文から一度も利用されていない状態を content compiler で検出します。辞書を一度だけIDインデックス化し、年代ごとの総当たり検索を避けています。
+用語定義は `content/glossary/terms.json` に一度だけ置き、各年代は `content/glossary/periods/<routeKey>.json`、構造史・テーマ史は `content/glossary/crosscutting/<routeKey>.json` からID参照します。用語リンクは `[[term:<id>|表示語]]` を使い、存在しない参照先や、その年代の中核語が本文から一度も利用されていない状態を content compiler で検出します。辞書を一度だけIDインデックス化し、年代ごとの総当たり検索を避けています。
 
 ## GitHub Pages
 

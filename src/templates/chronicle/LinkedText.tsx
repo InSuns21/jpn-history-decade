@@ -4,6 +4,7 @@ interface LinkedTextProps {
   text: string
   routeKey: string
   sourceIds?: string[]
+  pageKind?: 'period' | 'structure' | 'theme'
 }
 
 function renderInlineText(
@@ -11,6 +12,7 @@ function renderInlineText(
   routeKey: string,
   sourceIds: string[],
   keyPrefix: string,
+  pageKind: 'period' | 'structure' | 'theme',
   allowStrong = true,
 ): ReactNode[] {
   const nodes: ReactNode[] = []
@@ -32,14 +34,14 @@ function renderInlineText(
       if (strongText !== undefined) {
         nodes.push(
           <strong key={keyPrefix + '-strong-' + start}>
-            {renderInlineText(strongText, routeKey, sourceIds, keyPrefix + '-strong-' + start, false)}
+            {renderInlineText(strongText, routeKey, sourceIds, keyPrefix + '-strong-' + start, pageKind, false)}
           </strong>,
         )
       } else if (termId) {
         nodes.push(
           <a
             className="glossary-link"
-            href={'#/period/' + routeKey + '/terms/' + termId}
+            href={'#/' + pageKind + '/' + routeKey + '/terms/' + termId}
             key={keyPrefix + '-term-' + termId + '-' + start}
           >
             {label}
@@ -66,7 +68,7 @@ function renderInlineText(
       nodes.push(
         <a
           className="glossary-link"
-          href={'#/period/' + routeKey + '/terms/' + termId}
+          href={'#/' + pageKind + '/' + routeKey + '/terms/' + termId}
           key={keyPrefix + '-term-' + termId + '-' + start}
         >
           {label}
@@ -91,6 +93,15 @@ function renderInlineText(
   return nodes
 }
 
-export function LinkedText({ text, routeKey, sourceIds = [] }: LinkedTextProps) {
-  return <Fragment>{renderInlineText(text, routeKey, sourceIds, 'inline')}</Fragment>
+export function LinkedText({
+  text,
+  routeKey,
+  sourceIds = [],
+  pageKind = 'period',
+}: LinkedTextProps) {
+  return (
+    <Fragment>
+      {renderInlineText(text, routeKey, sourceIds, 'inline', pageKind)}
+    </Fragment>
+  )
 }

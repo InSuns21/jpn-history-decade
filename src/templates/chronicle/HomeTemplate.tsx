@@ -1,7 +1,7 @@
 import type { HomeTemplateProps } from '../types'
 import { TimelineNav } from './TimelineNav'
 
-export function HomeTemplate({ periods }: HomeTemplateProps) {
+export function HomeTemplate({ periods, crosscutting }: HomeTemplateProps) {
   const firstPeriod = periods[0]
 
   return (
@@ -34,9 +34,30 @@ export function HomeTemplate({ periods }: HomeTemplateProps) {
         <TimelineNav periods={periods} />
       </section>
 
+      {crosscutting.length > 0 && (
+        <section id="crosscutting" className="page-width home-section">
+          <div className="home-section__heading">
+            <p>第2章</p>
+            <h2>横断して読む</h2>
+            <span>
+              同じ制度・経済・外交の論点を複数年代にまたがって追い、何が変わり、何が残ったかを整理します。
+            </span>
+          </div>
+          <div className="crosscutting-grid">
+            {crosscutting.map((page) => (
+              <a href={'#/' + page.kind + '/' + page.routeKey} key={page.id}>
+                <small>{page.kind === 'structure' ? '構造史' : 'テーマ史'}・{page.periodLabel}</small>
+                <strong>{page.title}</strong>
+                <span>{page.framingQuestion}</span>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
+
       <section className="page-width home-section">
         <div className="home-section__heading">
-          <p>第2章</p>
+          <p>第3章</p>
           <h2>社会を形づくる主な要素</h2>
         </div>
         <div className="layer-grid">

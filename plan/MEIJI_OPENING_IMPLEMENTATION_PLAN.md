@@ -965,7 +965,7 @@ JH05の初回公開版では地図を実装しない。
 - 横浜道は横浜市西区の歴史街道案内に基づき、芝生村・浅間下付近の東海道分岐から新田間・平沼・戸部・野毛方面を経る経由順を概略線として表す。神奈川宿と開港場を単純な直線で結ばない。
 - 西廻り海運・北前船は、一本の固定航路を史料以上の精度で仮定しない。文化庁日本遺産が示す「多数の寄港地を介した海運圏」という性格に合わせ、連続LineStringを廃止し、代表寄港地の点群として表示する。
 - A2の地図データは引き続きGeoJSONを正本とし、MapLibre GeoJSON source/layerで描画する。MapLibre v6 + Viteのworker設定もproduction buildで検証する。
-- 新構成でData Audit / Style Auditを再実施する。Human Visual Auditは引き続きpending-humanとし、GitHub Pages上でdesktop / tablet-touch / mobile / zoom別に、街道形状、横浜道、寄港地、ラベル、popup、pan / zoomを再確認する。
+- 新構成でData Audit / Style Auditを再実施しpassed。2026-09-26、GitHub Pages上で再構成後の地図をHuman Visual Auditし、街道形状、横浜道、寄港地、ラベル、popup、pan / zoomを含めて表示・操作を確認した。A2を `published` とした。
 
 ---
 

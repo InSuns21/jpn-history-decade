@@ -17,7 +17,9 @@ export function SiteLayout({ children, periods, crosscutting }: SiteLayoutProps)
           <nav className="site-nav" aria-label="主要ナビゲーション">
             <a href="#/">トップ</a>
             {firstPeriod && <a href={'#/period/' + firstPeriod.routeKey}>{firstPeriod.navLabel}</a>}
-            {crosscutting.length > 0 && <a href="#/crosscutting">横断</a>}
+            {crosscutting[0] && (
+              <a href={'#/' + crosscutting[0].kind + '/' + crosscutting[0].routeKey}>横断</a>
+            )}
           </nav>
         </div>
       </header>

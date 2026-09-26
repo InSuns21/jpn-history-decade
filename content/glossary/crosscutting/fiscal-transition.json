@@ -1,0 +1,41 @@
+{
+  "page": "fiscal-transition",
+  "termRefs": [
+    {
+      "id": "kokudaka-sei",
+      "core": true
+    },
+    {
+      "id": "kurayashiki",
+      "core": true
+    },
+    {
+      "id": "zaigo-shonin",
+      "core": false
+    },
+    {
+      "id": "kabu-nakama",
+      "core": false
+    },
+    {
+      "id": "goyokin",
+      "core": true
+    },
+    {
+      "id": "kingin-hika",
+      "core": false
+    },
+    {
+      "id": "dajokan-satsu",
+      "core": true
+    },
+    {
+      "id": "shinka-jorei",
+      "core": true
+    },
+    {
+      "id": "chiso-kaisei",
+      "core": true
+    }
+  ]
+}

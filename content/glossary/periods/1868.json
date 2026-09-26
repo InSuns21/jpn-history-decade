@@ -1,0 +1,65 @@
+{
+  "period": "1868",
+  "termRefs": [
+    {
+      "id": "boshin-war",
+      "core": true
+    },
+    {
+      "id": "nishiki-no-mihata",
+      "core": false
+    },
+    {
+      "id": "gokajo-goseimon",
+      "core": true
+    },
+    {
+      "id": "seitaisho",
+      "core": true
+    },
+    {
+      "id": "dajokan",
+      "core": true
+    },
+    {
+      "id": "fu-han-ken-sanchisei",
+      "core": true
+    },
+    {
+      "id": "katsu-kaishu",
+      "core": false
+    },
+    {
+      "id": "ouuetsu-reppan-domei",
+      "core": true
+    },
+    {
+      "id": "hanseki-hokan",
+      "core": true
+    },
+    {
+      "id": "chihanji",
+      "core": true
+    },
+    {
+      "id": "status-reorganization-1869",
+      "core": false
+    },
+    {
+      "id": "dajokan-satsu",
+      "core": true
+    },
+    {
+      "id": "shinka-jorei",
+      "core": true
+    },
+    {
+      "id": "goshinpei",
+      "core": true
+    },
+    {
+      "id": "haihan-chiken",
+      "core": true
+    }
+  ]
+}

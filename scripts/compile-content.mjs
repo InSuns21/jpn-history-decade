@@ -498,6 +498,56 @@ function compilePeriod(filePath) {
   }
 }
 
+
+function compileCrosscutting(filePath, expectedKind) {
+  const relative = relativePath(filePath)
+  const source = readText(filePath)
+  const parsed = parseFrontmatter(source, relative)
+  if (!parsed) return null
+
+  const frontmatter = parsed.data ?? {}
+  const id = requireString(frontmatter, 'id', relative, /^s\d{2}$/)
+  const routeKey = requireString(frontmatter, 'routeKey', relative, /^[a-z0-9-]+$/)
+  const kind = requireString(frontmatter, 'kind', relative)
+
+  if (kind !== expectedKind) {
+    pushError(relative, 'kind must match directory type ' + expectedKind)
+  }
+
+  const status = requireString(frontmatter, 'status', relative)
+  if (!['draft', 'review', 'published'].includes(status)) {
+    pushError(relative, 'status must be draft, review, or published')
+  }
+
+  const relatedPeriods = requireStringArray(frontmatter, 'relatedPeriods', relative)
+  const maps = requireStringArray(frontmatter, 'maps', relative)
+  for (const mapId of maps) {
+    if (!knownMapIds.has(mapId)) {
+      pushError(relative, 'map reference has no matching definition: ' + mapId)
+    }
+  }
+
+  const sources = validateSources(frontmatter, source, relative, status)
+  const sections = parseMarkdownSections(parsed.body, relative)
+  const glossary = loadCrosscuttingGlossary(routeKey, source, relative)
+
+  return {
+    id,
+    routeKey,
+    kind,
+    periodLabel: requireString(frontmatter, 'periodLabel', relative),
+    status,
+    title: requireString(frontmatter, 'title', relative),
+    summary: requireString(frontmatter, 'summary', relative),
+    framingQuestion: requireString(frontmatter, 'framingQuestion', relative),
+    relatedPeriods,
+    sections,
+    glossary,
+    sources,
+    maps,
+  }
+}
+
 if (!fs.existsSync(periodDir)) {
   console.error('Content compilation failed: content/periods does not exist')
   process.exit(1)

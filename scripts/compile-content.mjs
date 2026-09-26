@@ -553,6 +553,10 @@ if (!fs.existsSync(periodDir)) {
   process.exit(1)
 }
 
+for (const requiredDir of [structureDir, themeDir, crosscuttingGlossaryDir]) {
+  if (!fs.existsSync(requiredDir)) fs.mkdirSync(requiredDir, { recursive: true })
+}
+
 const periodFiles = fs
   .readdirSync(periodDir)
   .filter((name) => name.endsWith('.md'))
@@ -560,6 +564,24 @@ const periodFiles = fs
   .map((name) => path.join(periodDir, name))
 
 const periods = periodFiles.map(compilePeriod).filter(Boolean).sort((a, b) => a.startYear - b.startYear)
+
+const crosscuttingFiles = [
+  ...fs
+    .readdirSync(structureDir)
+    .filter((name) => name.endsWith('.md'))
+    .sort()
+    .map((name) => ({ file: path.join(structureDir, name), kind: 'structure' })),
+  ...fs
+    .readdirSync(themeDir)
+    .filter((name) => name.endsWith('.md'))
+    .sort()
+    .map((name) => ({ file: path.join(themeDir, name), kind: 'theme' })),
+]
+
+const crosscutting = crosscuttingFiles
+  .map(({ file, kind }) => compileCrosscutting(file, kind))
+  .filter(Boolean)
+  .sort((a, b) => a.id.localeCompare(b.id))
 
 const ids = new Set()
 const routeKeys = new Set()
@@ -596,6 +618,29 @@ for (let index = 0; index < periods.length; index += 1) {
 
 if (periods.length === 0) pushError('content/periods', 'at least one period Markdown file is required')
 
+const crosscuttingIds = new Set()
+const crosscuttingRoutes = new Set()
+for (const page of crosscutting) {
+  if (crosscuttingIds.has(page.id)) {
+    pushError('content/crosscutting', 'duplicate crosscutting id: ' + page.id)
+  }
+  const routeIdentity = page.kind + ':' + page.routeKey
+  if (crosscuttingRoutes.has(routeIdentity)) {
+    pushError('content/crosscutting', 'duplicate crosscutting route: ' + routeIdentity)
+  }
+  crosscuttingIds.add(page.id)
+  crosscuttingRoutes.add(routeIdentity)
+
+  for (const relatedPeriod of page.relatedPeriods) {
+    if (!routeKeys.has(relatedPeriod)) {
+      pushError(
+        'content/crosscutting',
+        page.id + ' references unknown related period: ' + relatedPeriod,
+      )
+    }
+  }
+}
+
 if (errors.length > 0) {
   console.error('Content compilation failed:')
   for (const error of errors) console.error('- ' + error)
@@ -607,7 +652,7 @@ fs.mkdirSync(path.dirname(outputFile), { recursive: true })
 const generated =
   "import type { CompiledSiteContent } from '../content-model/types'\n\n" +
   'export const compiledContent: CompiledSiteContent = ' +
-  JSON.stringify({ periods }, null, 2) +
+  JSON.stringify({ periods, crosscutting }, null, 2) +
   '\n'
 
 fs.writeFileSync(outputFile, generated)
@@ -617,6 +662,8 @@ console.log(
   'Compiled ' +
     periods.length +
     ' period(s), ' +
+    crosscutting.length +
+    ' crosscutting article(s), ' +
     termById.size +
     ' global glossary term(s) in ' +
     elapsedMs +

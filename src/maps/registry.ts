@@ -3,12 +3,14 @@ import { validateMapStyle } from './audit/validateStyle.ts'
 import { bakumatsuEarlyContact1853Map } from './definitions/bakumatsuEarlyContact1853.ts'
 import { treatyPortsTransport1859Map } from './definitions/treatyPortsTransport1859.ts'
 import { boshinWar1868Map } from './definitions/boshinWar1868.ts'
+import { shizokuRebellionsSeinan1874Map } from './definitions/shizokuRebellionsSeinan1874.ts'
 import type { HistoricalMapDefinition } from './schema.ts'
 
 export const mapDefinitions: HistoricalMapDefinition[] = [
   bakumatsuEarlyContact1853Map,
   treatyPortsTransport1859Map,
   boshinWar1868Map,
+  shizokuRebellionsSeinan1874Map,
 ]
 
 export function findMapDefinition(id: string) {

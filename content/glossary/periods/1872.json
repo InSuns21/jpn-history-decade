@@ -1,0 +1,37 @@
+{
+  "period": "1872",
+  "termRefs": [
+    {
+      "id": "kosekiho-1871",
+      "core": true
+    },
+    {
+      "id": "jinshin-koseki",
+      "core": true
+    },
+    {
+      "id": "gakusei",
+      "core": true
+    },
+    {
+      "id": "chiken",
+      "core": true
+    },
+    {
+      "id": "choheirei",
+      "core": true
+    },
+    {
+      "id": "daininryo",
+      "core": false
+    },
+    {
+      "id": "chiso-kaisei",
+      "core": true
+    },
+    {
+      "id": "taiyoreki",
+      "core": false
+    }
+  ]
+}

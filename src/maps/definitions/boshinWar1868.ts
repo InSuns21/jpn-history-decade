@@ -7,7 +7,7 @@ export const boshinWar1868Map: HistoricalMapDefinition = {
     '新政府の軍事的・政治的支配は、京都周辺の政変からどのように東国・東北・箱館へ広がったのか。',
   readingNote:
     '主要局面の位置関係を読むための概略点地図であり、部隊の進軍路・戦線・支配境界を再現しない。各点は戦闘・政権移管・降伏などの代表地点を現在の地理上へ概略配置したもの。背景地図・海岸線は現代のOpenStreetMapで、1868–1869年の行政境界や海岸線を示さない。',
-  status: 'draft',
+  status: 'published',
   period: { startYear: 1868, endYear: 1869 },
   initialView: {
     center: [138.7, 37.5],
@@ -135,12 +135,12 @@ export const boshinWar1868Map: HistoricalMapDefinition = {
   auditState: {
     dataAudit: 'passed',
     styleAudit: 'passed',
-    visualAudit: 'pending-human',
+    visualAudit: 'passed',
     notes: [
       '主要局面の歴史地名・時期は国立公文書館、国立国会図書館、長岡市、福島県、函館市の資料で照合した。',
       '戦線・進軍路を史料以上の精度で描かないためLineStringを使用せず、代表地点の点群だけで空間展開を示す。',
       '座標は代表地点の概略位置でgeometryConfidence=approximateとした。',
-      'Data Audit / Style Auditは実装時にpassed。Human Visual AuditはGitHub Pages上のdesktop / tablet-touch / mobile / zoom別確認待ち。',
+      'Data Audit / Style Auditは実装時にpassed。2026-09-26、GitHub Pages上の実画面についてHuman Visual Auditで表示・ラベル・popup・pan / zoomを確認しpassedとした。',
     ],
   },
 }

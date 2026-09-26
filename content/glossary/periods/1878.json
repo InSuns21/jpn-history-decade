@@ -1,0 +1,57 @@
+{
+  "period": "1878",
+  "termRefs": [
+    {
+      "id": "sanshinpo-1878",
+      "core": true
+    },
+    {
+      "id": "fukenkai",
+      "core": true
+    },
+    {
+      "id": "jiyu-minken-undo",
+      "core": true
+    },
+    {
+      "id": "aikokusha",
+      "core": false
+    },
+    {
+      "id": "kokkai-kisei-domei",
+      "core": true
+    },
+    {
+      "id": "shukai-jorei",
+      "core": true
+    },
+    {
+      "id": "ryukyu-shobun",
+      "core": true
+    },
+    {
+      "id": "kyoikurei-1879",
+      "core": true
+    },
+    {
+      "id": "kojo-haraisage-gaisoku",
+      "core": false
+    },
+    {
+      "id": "fukan-shihei",
+      "core": true
+    },
+    {
+      "id": "meiji-14-seihen",
+      "core": true
+    },
+    {
+      "id": "kokkai-kaisetsu-chokuyu",
+      "core": true
+    },
+    {
+      "id": "jiyuto-1881",
+      "core": true
+    }
+  ]
+}

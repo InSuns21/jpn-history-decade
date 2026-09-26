@@ -1,0 +1,57 @@
+{
+  "period": "1865",
+  "termRefs": [
+    {
+      "id": "first-choshu-expedition",
+      "core": false
+    },
+    {
+      "id": "second-choshu-expedition",
+      "core": true
+    },
+    {
+      "id": "tokugawa-iemochi",
+      "core": true
+    },
+    {
+      "id": "satsuma-choshu-alliance",
+      "core": true
+    },
+    {
+      "id": "tokugawa-yoshinobu",
+      "core": true
+    },
+    {
+      "id": "goyokin",
+      "core": true
+    },
+    {
+      "id": "yokosuka-seitetsujo",
+      "core": true
+    },
+    {
+      "id": "kogi-seitai-ron",
+      "core": true
+    },
+    {
+      "id": "yamauchi-yodo",
+      "core": true
+    },
+    {
+      "id": "goto-shojiro",
+      "core": true
+    },
+    {
+      "id": "taisei-hokan",
+      "core": true
+    },
+    {
+      "id": "osei-fukko-daigorei",
+      "core": true
+    },
+    {
+      "id": "jikan-nochi",
+      "core": true
+    }
+  ]
+}

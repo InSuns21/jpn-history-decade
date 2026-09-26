@@ -1,0 +1,61 @@
+{
+  "page": "centralization",
+  "termRefs": [
+    {
+      "id": "taisei-hokan",
+      "core": false
+    },
+    {
+      "id": "boshin-war",
+      "core": true
+    },
+    {
+      "id": "seitaisho",
+      "core": true
+    },
+    {
+      "id": "dajokan",
+      "core": true
+    },
+    {
+      "id": "fu-han-ken-sanchisei",
+      "core": true
+    },
+    {
+      "id": "hanseki-hokan",
+      "core": true
+    },
+    {
+      "id": "chihanji",
+      "core": true
+    },
+    {
+      "id": "goshinpei",
+      "core": false
+    },
+    {
+      "id": "haihan-chiken",
+      "core": true
+    },
+    {
+      "id": "kosekiho-1871",
+      "core": true
+    },
+    {
+      "id": "jinshin-koseki",
+      "core": true
+    },
+    {
+      "id": "gakusei",
+      "core": true
+    },
+    {
+      "id": "choheirei",
+      "core": true
+    },
+    {
+      "id": "chiso-kaisei",
+      "core": true
+    }
+  ]
+}

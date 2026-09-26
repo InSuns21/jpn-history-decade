@@ -41,7 +41,7 @@ export const treatyPortsTransport1859Map: HistoricalMapDefinition = {
     '開港場は、どのように既存の国内交通網へ接続され、外国貿易の影響を国内へ伝える結節点になったのか。',
   readingNote:
     '1859年に本格的な対外貿易が始まった横浜・長崎・箱館と、開港以前から存在した主要交通網の関係を示す。東海道・京街道・長崎街道はCODH「江戸主要街道データセット」v4の歴史GIS形状を使用する。横浜道は横浜市の現地案内で確認できる経由地点を代表点として結ぶ概略線であり、敷地単位の正確な旧道線形ではない。西廻り海運・北前船は一本の固定航路を仮定せず、代表的な寄港地を点で示す。背景地図・海岸線は現代のOpenStreetMapであり、歴史境界を示さない。',
-  status: 'draft',
+  status: 'published',
   period: { startYear: 1859, endYear: 1859 },
   initialView: {
     center: [136.9, 36.3],
@@ -413,14 +413,14 @@ export const treatyPortsTransport1859Map: HistoricalMapDefinition = {
   auditState: {
     dataAudit: 'passed',
     styleAudit: 'passed',
-    visualAudit: 'pending-human',
+    visualAudit: 'passed',
     notes: [
       '2026-09-26のHuman Visual Auditで、旧A2の自作模式線は陸路が過度に直線的で、海運線には陸地横断があり、模式図としても地理的妥当性が不足すると判定した。',
       '東海道R001・京街道R600・長崎街道R900はCODH「江戸主要街道データセット」v4のGeoPackageからGeoJSONへ抽出し、手描き線を廃止した。',
       'CODH由来の3街道は幾何を単純化せずEPSG:4326へ変換し、出典・CC BY 4.0・DOIを記録した。',
       '横浜道は神奈川宿と開港場の直線接続を廃止し、横浜市の案内サインに基づく芝生村付近の分岐、新田間・平沼・戸部・野毛方面の経由順を概略線にした。',
       '西廻り海運・北前船は一本の固定航路ではなく多数の寄港地を介する海運圏として扱い、陸地を横切る自作LineStringを廃止して代表寄港地の点群へ変更した。',
-      'Data Audit / Style Auditは新データ構成で再実施しpassed。Human Visual AuditはGitHub Pages上でdesktop / tablet-touch / mobile / zoom別に再確認する。',
+      'Data Audit / Style Auditは新データ構成で再実施しpassed。2026-09-26、GitHub Pages上の再構成後地図についてHuman Visual Auditの確認が完了し、街道形状・横浜道・寄港地・ラベル・操作性を含めてOKとの確認を得た。',
     ],
   },
 }

@@ -1,0 +1,72 @@
+{
+  "period": "1874",
+  "termRefs": [
+    {
+      "id": "minsen-giin-kenpakusho",
+      "core": true
+    },
+    {
+      "id": "saga-rebellion",
+      "core": false
+    },
+    {
+      "id": "taiwan-expedition-1874",
+      "core": false
+    },
+    {
+      "id": "rikken-seitai-shosho",
+      "core": true
+    },
+    {
+      "id": "genroin-1875",
+      "core": false
+    },
+    {
+      "id": "daishinin-1875",
+      "core": false
+    },
+    {
+      "id": "status-reorganization-1869",
+      "core": true,
+      "periodNote": "華族・士族・平民という法的身分区分は残る一方、士族に結びついた軍事・給与・帯刀の特権は縮小していった。"
+    },
+    {
+      "id": "haitorei",
+      "core": true
+    },
+    {
+      "id": "chitsuroku-shobun",
+      "core": true
+    },
+    {
+      "id": "shinpuren-rebellion",
+      "core": false
+    },
+    {
+      "id": "akizuki-rebellion",
+      "core": false
+    },
+    {
+      "id": "hagi-rebellion",
+      "core": false
+    },
+    {
+      "id": "seinan-war",
+      "core": true
+    },
+    {
+      "id": "choheirei",
+      "core": true,
+      "periodNote": "1877年の西南戦争では、徴兵制を基盤とする政府軍が大規模な内戦へ投入され、制度の軍事的実効性が試された。"
+    },
+    {
+      "id": "chiso-kaisei",
+      "core": true,
+      "periodNote": "地租改正の実施が進む一方、1877年には税率が地価3%から2.5%へ引き下げられた。"
+    },
+    {
+      "id": "japan-korea-treaty-1876",
+      "core": false
+    }
+  ]
+}

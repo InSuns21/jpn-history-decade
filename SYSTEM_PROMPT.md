@@ -10,7 +10,7 @@
 
 1. `README.md`
 2. `plan/JPN_HISTORY_DECADE_PLAN.md` — サイト全体の思想・年代粒度・構成
-3. `plan/MEIJI_OPENING_IMPLEMENTATION_PLAN.md` — 現在の実装範囲・アーキテクチャ・完了条件
+3. `plan/` 配下の現在の実装計画（存在する場合）— 現在の実装範囲・アーキテクチャ・完了条件。完了済み計画は `plan_done/` を参照
 4. `standards/CONTENT_AUTHORING_STANDARD.md` — 歴史記述・出典・重要用語・公開文面
 5. `standards/MAP_AUDIT_STANDARD.md` — 地図データ・スタイル・ヴィジュアル監査
 6. `standards/PROJECT_WORKFLOW_STANDARD.md` — Markdown/Template分離・CI・plan運用

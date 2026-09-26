@@ -1,9 +1,9 @@
 # 1800年から明治初頭まで — 実装計画
 
-- **Status:** active
+- **Status:** completed
 - **Scope:** 1800年ごろ〜1873年ごろ
 - **Primary goal:** 1800年から明治国家形成の入口までを、社会構造の状態遷移として連続して読める状態にする
-- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](./JPN_HISTORY_DECADE_PLAN.md)
+- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](../plan/JPN_HISTORY_DECADE_PLAN.md)
 - **Workspace rules:** [../SYSTEM_PROMPT.md](../SYSTEM_PROMPT.md)
 
 ---
@@ -1387,7 +1387,7 @@ plan_done/ へ移動
 - **暦:** 幕末の旧暦・グレゴリオ暦併記を横断確認した。大塩平八郎の乱だけ旧暦表示が暗黙だったため、天保8年2月19日を「旧暦」と明示する修正を行った。
 - **地図:** A1「幕末初期の来航地点・港・海防」、A2「条約港と国内交通」、A3「戊辰戦争の空間展開」はいずれもpublishedかつ Data / Style / Human Visual Audit = passed。A4「廃藩置県前後」は監査可能な全国境界データ不足を理由に見送り済みで、現代境界による代用はしていない。
 - **公開UI:** Period / Crosscutting templateはstatus・TODO・CI・企画情報を描画せず、史料・用語・地図・関連年代・横断記事の読者向け導線だけを公開する構成を確認した。
-- **最終ゲート:** この監査修正をmainへ反映後、CIとPages deployがgreenであることを確認してからStatusをcompletedへ変更し、本計画をplan_doneへ移す。
+- **最終ゲート:** 全体監査修正をmainへ反映した commit `1a25271f7910a5c2992b8e16a172abed7fc13c0c` で CI（run 36246365142）と Pages deploy（run 36246365146）がともに success。Statusをcompletedへ変更し、本計画をplan_doneへ移す条件を満たした。
 
 ---
 
@@ -1395,35 +1395,35 @@ plan_done/ へ移動
 
 各 JH ページは次を満たしたとき完了。
 
-- [ ] Markdown原稿から生成される
-- [ ] React/CSSを原稿へ埋め込んでいない
-- [ ] 対象ページがルーティングされる
-- [ ] snapshot がある
-- [ ] 中心問いがある
-- [ ] 必要な政治・経済・社会・外交等の節がある
-- [ ] 前期間との差分がある
-- [ ] 変わらなかったものも確認している
-- [ ] 当時の常識がある
-- [ ] 次期間への構造的論点がある
-- [ ] 重要な史実・日付・数値を確認した
-- [ ] 主要記述に出典がある
-- [ ] その年代で参照する重要用語がある
-- [ ] core用語が本文からリンクされている
-- [ ] 共通用語辞書・年代参照・本文リンク validation green
-- [ ] 後知恵・単純因果・地域差を監査した
-- [ ] 地図が必要か判断した
-- [ ] 地図がある場合、出典・時点・凡例がある
-- [ ] 地図の provenance / temporalCoverage / geometryConfidence がある
-- [ ] 地図の Data Audit が passed
-- [ ] 地図の Style Audit が passed
-- [ ] 地図の Human Visual Audit が passed
-- [ ] 地図を desktop / tablet-touch / mobile / zoom別に確認した
-- [ ] template変更で原稿修正が不要
-- [ ] desktop / mobileを確認
-- [ ] content compiler validation green
-- [ ] `npm run check` green
-- [ ] GitHub Actions CI green
-- [ ] GitHub Pages deploy green
+- [x] Markdown原稿から生成される
+- [x] React/CSSを原稿へ埋め込んでいない
+- [x] 対象ページがルーティングされる
+- [x] snapshot がある
+- [x] 中心問いがある
+- [x] 必要な政治・経済・社会・外交等の節がある
+- [x] 前期間との差分がある
+- [x] 変わらなかったものも確認している
+- [x] 当時の常識がある
+- [x] 次期間への構造的論点がある
+- [x] 重要な史実・日付・数値を確認した
+- [x] 主要記述に出典がある
+- [x] その年代で参照する重要用語がある
+- [x] core用語が本文からリンクされている
+- [x] 共通用語辞書・年代参照・本文リンク validation green
+- [x] 後知恵・単純因果・地域差を監査した
+- [x] 地図が必要か判断した
+- [x] 地図がある場合、出典・時点・凡例がある
+- [x] 地図の provenance / temporalCoverage / geometryConfidence がある
+- [x] 地図の Data Audit が passed
+- [x] 地図の Style Audit が passed
+- [x] 地図の Human Visual Audit が passed
+- [x] 地図を desktop / tablet-touch / mobile / zoom別に確認した
+- [x] template変更で原稿修正が不要
+- [x] desktop / mobileを確認
+- [x] content compiler validation green
+- [x] `npm run check` green
+- [x] GitHub Actions CI green
+- [x] GitHub Pages deploy green
 
 ---
 

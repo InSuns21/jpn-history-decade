@@ -16,8 +16,8 @@
 - 年代ページと構造史・テーマ史を Markdown + frontmatter からコンパイルし、共通コンテンツモデルで描画
 - 横断記事から関連年代、年代記事から関連する横断記事へ相互に移動できる構成
 - MapLibre GL JS を依存に追加し、必要な記事だけ主題地図を差し込める構成
-- 1800–1890年を公開品質で実装済み（年代史15ページ＋横断記事5本）
-- 現在のactive phaseは1874–1890年の自由民権・士族反乱・地方制度・財政金融・憲法／議会形成（1874–1890全体監査まで完了、次は1800–1890接続監査）
+- 1800–1890年を公開品質で実装済み（年代史15ページ＋横断記事5本、1800–1890接続監査まで完了）
+- 1874–1890年の実装フェーズは完了し、実装計画を `plan_done/` へ移動済み。次のactive implementation phaseは未作成
 - GitHub Actions による lint / typecheck / build CI
 - `main` 更新時の GitHub Pages 自動デプロイ
 
@@ -103,7 +103,7 @@ AI向けの常時ルールは [SYSTEM_PROMPT.md](SYSTEM_PROMPT.md) に置き、*
 詳細な方針・ページ構成・MapLibre 主題地図方針・初期ロードマップ：
 
 - [plan/JPN_HISTORY_DECADE_PLAN.md](plan/JPN_HISTORY_DECADE_PLAN.md)
-- [plan/MEIJI_CONSTITUTIONAL_FORMATION_IMPLEMENTATION_PLAN.md](plan/MEIJI_CONSTITUTIONAL_FORMATION_IMPLEMENTATION_PLAN.md) — 1874–1890 active implementation plan
+- 完了済み実装計画は [`plan_done/`](plan_done/) に保存
 
 
 ## 実装計画の運用

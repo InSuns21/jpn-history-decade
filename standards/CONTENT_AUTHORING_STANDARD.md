@@ -48,7 +48,9 @@ Wikipedia等は入口には使えても重要主張の最終根拠にしない�
 
 用語の定義は年代ごとに複製せず、`content/glossary/terms.json` の全体辞書で一意に管理する。各用語は最低限 `id`, `term`, `category`, `definition`, `connections` を持つ。`connections` には、その語を他の制度・社会構造・出来事とどう結びつけて理解するかを書く。
 
-各年代は `content/glossary/periods/<routeKey>.json` で用語IDを参照する。年代側は最低限 `id`, `core` を持ち、その年代に固有の補足が必要な場合だけ `periodNote` を持たせる。`core: true` は入試上の必須度ではなく、その年代を理解するうえで本文から明示リンクすべき中核語を表す。
+各年代は `content/glossary/periods/<routeKey>.json` で用語IDを参照する。年代側は最低限 `id`, `core` を持ち、その年代に固有の補足が必要な場合だけ `periodNote` を持たせる。
+
+構造史・テーマ史などの横断記事は `content/glossary/crosscutting/<routeKey>.json` で同じ全体辞書を参照する。横断記事でも用語定義を複製せず、本文から `[[term:<id>|表示語]]` で記事内の用語欄へリンクする。`core: true` は入試上の必須度ではなく、その年代を理解するうえで本文から明示リンクすべき中核語を表す。
 
 本文からの明示リンク記法：
 

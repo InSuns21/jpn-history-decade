@@ -7,7 +7,7 @@ export const shizokuRebellionsSeinan1874Map: HistoricalMapDefinition = {
     '政府への武力的な異議申し立てはどの地域で起こり、西南戦争では戦場がどのように九州内を移ったのか。',
   readingNote:
     '代表地点の位置関係を読むための概略点地図であり、反乱勢力の支配範囲・進軍路・戦線を再現しない。各点は公的資料で確認できる事件・戦闘の代表地点を、現在の地理上の目印へ概略配置したもの。背景地図・海岸線・道路は現代のOpenStreetMapで、1874–1877年の行政境界や交通網を示さない。',
-  status: 'draft',
+  status: 'published',
   period: { startYear: 1874, endYear: 1877 },
   initialView: {
     center: [131.15, 33.0],
@@ -158,13 +158,13 @@ export const shizokuRebellionsSeinan1874Map: HistoricalMapDefinition = {
   auditState: {
     dataAudit: 'passed',
     styleAudit: 'passed',
-    visualAudit: 'pending-human',
+    visualAudit: 'passed',
     notes: [
       '佐賀城は佐賀市資料、秋月は朝倉市、萩は萩市、熊本城・田原坂は熊本市関係資料、和田越は延岡市、城山は鹿児島市の公的資料で代表地点を照合した。',
       '統一的に監査可能な進軍路geometryが得られないためLineStringを作らず、代表地点のPointのみを使用した。',
       '座標は現存する史跡・城下・戦跡の現在位置をもとにした概略代表点で、geometryConfidence=approximateとした。',
       'カテゴリは事件の重要度ではなく、1874/1876年の士族反乱、西南戦争、熊本での時期重複を区別するために用いる。',
-      'Data Audit / Style Auditは実装時にpassed。Human Visual AuditはGitHub Pages上のdesktop / tablet-touch / mobile確認待ち。',
+      'Data Audit / Style Auditは実装時にpassed。2026-09-27、GitHub Pages上のdesktop / tablet-touch / mobile確認についてユーザーHuman Visual Auditでpassed。',
     ],
   },
 }

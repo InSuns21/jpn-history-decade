@@ -1,0 +1,21 @@
+{
+  "period": "1886",
+  "termRefs": [
+    {"id":"cabinet-system-1885","core":true,"periodNote":"1889年の内閣官制で憲法体制に合わせて再整理され、1890年の議会開設後も議会多数派に直接依存しない政府として運用が始まった。"},
+    {"id":"gakko-rei-1886","core":true},
+    {"id":"treaty-revision-1880s","core":true},
+    {"id":"sandai-jiken-kenpaku","core":true},
+    {"id":"hoan-jorei-1887","core":true},
+    {"id":"sumitsuin-1888","core":true},
+    {"id":"shi-cho-son-sei-1888","core":true},
+    {"id":"meiji-constitution-1889","core":true},
+    {"id":"shugiin-senkyohou-1889","core":true},
+    {"id":"kizokuin","core":true},
+    {"id":"saibansho-koseiho-1890","core":false},
+    {"id":"tokaido-line-1889","core":false},
+    {"id":"fuken-sei-gun-sei-1890","core":true},
+    {"id":"kyoiku-chokugo-1890","core":true},
+    {"id":"first-shugiin-election-1890","core":true},
+    {"id":"teikoku-gikai","core":true}
+  ]
+}

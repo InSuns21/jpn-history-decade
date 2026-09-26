@@ -1,0 +1,77 @@
+{
+  "period": "1860",
+  "termRefs": [
+    {
+      "id": "ii-naosuke",
+      "core": false
+    },
+    {
+      "id": "ansei-no-taigoku",
+      "core": false
+    },
+    {
+      "id": "sakuradamon-gai-no-hen",
+      "core": true
+    },
+    {
+      "id": "kobu-gattai",
+      "core": true
+    },
+    {
+      "id": "kazunomiya-koka",
+      "core": true
+    },
+    {
+      "id": "shimazu-hisamitsu",
+      "core": true
+    },
+    {
+      "id": "bunkyu-reforms",
+      "core": true
+    },
+    {
+      "id": "tokugawa-yoshinobu",
+      "core": true
+    },
+    {
+      "id": "matsudaira-yoshinaga",
+      "core": true
+    },
+    {
+      "id": "sonno-joi",
+      "core": true
+    },
+    {
+      "id": "namamugi-incident",
+      "core": true
+    },
+    {
+      "id": "satsuei-war",
+      "core": true
+    },
+    {
+      "id": "choshu-foreign-ship-bombardment",
+      "core": true
+    },
+    {
+      "id": "hachigatsu-juhachinichi-seihen",
+      "core": true
+    },
+    {
+      "id": "ikedaya-incident",
+      "core": false
+    },
+    {
+      "id": "kinmon-no-hen",
+      "core": true
+    },
+    {
+      "id": "shimonoseki-war",
+      "core": true
+    },
+    {
+      "id": "first-choshu-expedition",
+      "core": true
+    }
+  ]
+}

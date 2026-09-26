@@ -1,6 +1,6 @@
 import type { SiteLayoutProps } from '../types'
 
-export function SiteLayout({ children, periods }: SiteLayoutProps) {
+export function SiteLayout({ children, periods, crosscutting }: SiteLayoutProps) {
   const firstPeriod = periods[0]
 
   return (
@@ -17,6 +17,7 @@ export function SiteLayout({ children, periods }: SiteLayoutProps) {
           <nav className="site-nav" aria-label="主要ナビゲーション">
             <a href="#/">トップ</a>
             {firstPeriod && <a href={'#/period/' + firstPeriod.routeKey}>{firstPeriod.navLabel}</a>}
+            {crosscutting.length > 0 && <a href="#/crosscutting">横断</a>}
           </nav>
         </div>
       </header>

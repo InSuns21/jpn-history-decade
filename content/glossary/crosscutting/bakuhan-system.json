@@ -1,0 +1,41 @@
+{
+  "page": "bakuhan-system",
+  "termRefs": [
+    {
+      "id": "bakuhan-taisei",
+      "core": true
+    },
+    {
+      "id": "mura-uke-sei",
+      "core": true
+    },
+    {
+      "id": "kokudaka-sei",
+      "core": true
+    },
+    {
+      "id": "santo",
+      "core": false
+    },
+    {
+      "id": "kurayashiki",
+      "core": true
+    },
+    {
+      "id": "gokaido",
+      "core": false
+    },
+    {
+      "id": "kaisen",
+      "core": false
+    },
+    {
+      "id": "four-gates",
+      "core": true
+    },
+    {
+      "id": "goyokin",
+      "core": false
+    }
+  ]
+}

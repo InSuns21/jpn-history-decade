@@ -601,8 +601,24 @@ for (let index = 0; index < periods.length; index += 1) {
 
   if (index > 0) {
     const previous = periods[index - 1]
+    const expectedStartYear = previous.endYear + 1
     if (previous.endYear >= period.startYear) {
       pushError('content/periods', 'periods overlap: ' + previous.routeKey + ' and ' + period.routeKey)
+    } else if (period.startYear !== expectedStartYear) {
+      pushError(
+        'content/periods',
+        'period gap: ' +
+          previous.routeKey +
+          ' ends at ' +
+          previous.endYear +
+          ', but ' +
+          period.routeKey +
+          ' starts at ' +
+          period.startYear +
+          ' (expected ' +
+          expectedStartYear +
+          ')',
+      )
     }
     if (period.previousPeriodLabel !== previous.periodLabel) {
       pushError(

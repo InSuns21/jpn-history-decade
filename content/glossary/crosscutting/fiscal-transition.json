@@ -36,6 +36,30 @@
     {
       "id": "chiso-kaisei",
       "core": true
+    },
+    {
+      "id": "seinan-war",
+      "core": false
+    },
+    {
+      "id": "kokuritsu-ginko",
+      "core": true
+    },
+    {
+      "id": "fukan-shihei",
+      "core": true
+    },
+    {
+      "id": "matsukata-finance",
+      "core": true
+    },
+    {
+      "id": "bank-of-japan-1882",
+      "core": true
+    },
+    {
+      "id": "convertible-banknote-ordinance-1884",
+      "core": true
     }
   ]
 }

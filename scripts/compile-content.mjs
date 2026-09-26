@@ -6,8 +6,11 @@ import { parse as parseYaml } from 'yaml'
 const startedAt = performance.now()
 const root = process.cwd()
 const periodDir = path.join(root, 'content', 'periods')
+const structureDir = path.join(root, 'content', 'structures')
+const themeDir = path.join(root, 'content', 'themes')
 const glossaryCatalogFile = path.join(root, 'content', 'glossary', 'terms.json')
 const periodGlossaryDir = path.join(root, 'content', 'glossary', 'periods')
+const crosscuttingGlossaryDir = path.join(root, 'content', 'glossary', 'crosscutting')
 const outputFile = path.join(root, 'src', 'generated', 'content.generated.ts')
 const { mapDefinitions } = await import('../src/maps/registry.ts')
 const knownMapIds = new Set(mapDefinitions.map((definition) => definition.id))
@@ -263,6 +266,76 @@ function loadPeriodGlossary(routeKey, rawSource, file) {
 
   if (config?.period !== routeKey) {
     pushError(relative, 'period must match routeKey ' + routeKey)
+  }
+  if (refs.length === 0) {
+    pushError(relative, 'termRefs must be a non-empty array')
+  }
+
+  const refById = new Map()
+  for (const [index, ref] of refs.entries()) {
+    if (!ref || typeof ref !== 'object' || Array.isArray(ref)) {
+      pushError(relative, 'termRefs[' + index + '] must be an object')
+      continue
+    }
+
+    const id = requireString(ref, 'id', relative, /^[a-z0-9-]+$/)
+    if (typeof ref.core !== 'boolean') {
+      pushError(relative, 'termRefs[' + index + '].core must be a boolean')
+    }
+    if (ref.periodNote !== undefined && (typeof ref.periodNote !== 'string' || ref.periodNote.trim() === '')) {
+      pushError(relative, 'termRefs[' + index + '].periodNote must be a non-empty string when present')
+    }
+    if (id && refById.has(id)) {
+      pushError(relative, 'duplicate term reference: ' + id)
+    }
+    if (id && !termById.has(id)) {
+      pushError(relative, 'unknown global glossary id: ' + id)
+    }
+    if (id) refById.set(id, ref)
+  }
+
+  const usage = new Map()
+  let match
+  TERM_LINK_PATTERN.lastIndex = 0
+  while ((match = TERM_LINK_PATTERN.exec(rawSource)) !== null) {
+    const [, id, label] = match
+    if (!label.trim()) pushError(file, 'glossary link "' + id + '" has an empty label')
+    if (!termById.has(id)) {
+      pushError(file, 'glossary link "' + id + '" has no target in content/glossary/terms.json')
+      continue
+    }
+    if (!refById.has(id)) {
+      pushError(file, 'glossary link "' + id + '" is not listed in ' + relative)
+      continue
+    }
+    usage.set(id, (usage.get(id) ?? 0) + 1)
+  }
+
+  const resolved = []
+  for (const ref of refs) {
+    const term = termById.get(ref.id)
+    if (!term) continue
+    if (ref.core && !usage.has(ref.id)) {
+      pushError(relative, 'core term "' + ref.id + '" is never linked from ' + file)
+    }
+    resolved.push({
+      ...term,
+      core: ref.core,
+      ...(ref.periodNote ? { periodNote: ref.periodNote } : {}),
+    })
+  }
+
+  return resolved
+}
+
+function loadCrosscuttingGlossary(routeKey, rawSource, file) {
+  const glossaryFile = path.join(crosscuttingGlossaryDir, routeKey + '.json')
+  const relative = relativePath(glossaryFile)
+  const config = readJson(glossaryFile, 'crosscutting glossary references')
+  const refs = Array.isArray(config?.termRefs) ? config.termRefs : []
+
+  if (config?.page !== routeKey) {
+    pushError(relative, 'page must match routeKey ' + routeKey)
   }
   if (refs.length === 0) {
     pushError(relative, 'termRefs must be a non-empty array')

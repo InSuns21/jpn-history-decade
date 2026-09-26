@@ -604,6 +604,10 @@ JH12・JH13完了後に横断監査する。
 
 ## JH12-A 年代連続性guard
 
+**Status: completed (2026-09-27)**
+
+`scripts/compile-content.mjs` で隣接年代の `previous.endYear + 1 === current.startYear` を検査し、暗黙の年代gapをbuild前validation errorにする。既存1800–1873もこのguardを通過することをCIで確認する。
+
 content compilerへ以下を追加する。
 
 - 前ページ `endYear + 1` と次ページ `startYear` が一致すること

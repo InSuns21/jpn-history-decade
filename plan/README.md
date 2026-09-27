@@ -10,9 +10,9 @@
 
 ## 実装計画
 
-- `MEIJI_OPENING_IMPLEMENTATION_PLAN.md`
+- `MEIJI_PARLIAMENT_EMPIRE_IMPLEMENTATION_PLAN.md`
 
-明確なスコープと完了条件を持つ実装計画。
+1891〜1911年を対象とし、初期議会政治・条約改正・日清日露戦争・産業化・植民地統治・社会政策を扱うactive implementation plan。
 
 ## ライフサイクル
 

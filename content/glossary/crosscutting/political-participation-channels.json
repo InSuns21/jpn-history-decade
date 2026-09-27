@@ -1,0 +1,101 @@
+{
+  "page": "political-participation-channels",
+  "termRefs": [
+    {
+      "id": "minsen-giin-kenpakusho",
+      "core": true
+    },
+    {
+      "id": "teikoku-gikai",
+      "core": true
+    },
+    {
+      "id": "sanshinpo-1878",
+      "core": false
+    },
+    {
+      "id": "fukenkai",
+      "core": false
+    },
+    {
+      "id": "jiyu-minken-undo",
+      "core": true
+    },
+    {
+      "id": "kokkai-kisei-domei",
+      "core": true
+    },
+    {
+      "id": "shukai-jorei",
+      "core": true
+    },
+    {
+      "id": "kokkai-kaisetsu-chokuyu",
+      "core": true
+    },
+    {
+      "id": "jiyuto-1881",
+      "core": true
+    },
+    {
+      "id": "rikken-kaishinto-1882",
+      "core": true
+    },
+    {
+      "id": "sandai-jiken-kenpaku",
+      "core": false
+    },
+    {
+      "id": "hoan-jorei-1887",
+      "core": true
+    },
+    {
+      "id": "meiji-constitution-1889",
+      "core": true
+    },
+    {
+      "id": "shugiin-senkyohou-1889",
+      "core": true
+    },
+    {
+      "id": "first-shugiin-election-1890",
+      "core": true
+    },
+    {
+      "id": "initial-diet-politics",
+      "core": true
+    },
+    {
+      "id": "election-interference-1892",
+      "core": true
+    },
+    {
+      "id": "wakyo-chokucho-1893",
+      "core": false
+    },
+    {
+      "id": "kenseito-1898",
+      "core": true
+    },
+    {
+      "id": "first-okuma-cabinet-1898",
+      "core": false
+    },
+    {
+      "id": "rikken-seiyukai-1900",
+      "core": true
+    },
+    {
+      "id": "chian-keisatsu-ho-1900",
+      "core": true
+    },
+    {
+      "id": "social-democratic-party-1901",
+      "core": false
+    },
+    {
+      "id": "keien-era",
+      "core": true
+    }
+  ]
+}

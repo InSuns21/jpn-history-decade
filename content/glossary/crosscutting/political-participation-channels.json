@@ -156,6 +156,14 @@
     {
       "id": "saito-cabinet-1932",
       "core": true
+    },
+    {
+      "id": "okada-cabinet-1934",
+      "core": false
+    },
+    {
+      "id": "general-election-1936",
+      "core": true
     }
   ]
 }

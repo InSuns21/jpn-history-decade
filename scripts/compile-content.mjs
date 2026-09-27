@@ -2,6 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { performance } from 'node:perf_hooks'
 import { parse as parseYaml } from 'yaml'
+import { classifyContinuity, normalizePeriodRange } from './period-range.mjs'
 
 const startedAt = performance.now()
 const root = process.cwd()
@@ -503,6 +504,21 @@ function compilePeriod(filePath) {
 
   if (startYear > endYear) pushError(relative, 'startYear must be <= endYear')
 
+  let startDate = String(startYear).padStart(4, '0') + '-01-01'
+  let endDate = String(endYear).padStart(4, '0') + '-12-31'
+  try {
+    const normalizedRange = normalizePeriodRange({
+      startYear,
+      endYear,
+      startDate: frontmatter.startDate,
+      endDate: frontmatter.endDate,
+    })
+    startDate = normalizedRange.startDate
+    endDate = normalizedRange.endDate
+  } catch (error) {
+    pushError(relative, error.message)
+  }
+
   const status = requireString(frontmatter, 'status', relative)
   if (!['draft', 'review', 'published'].includes(status)) pushError(relative, 'status must be draft, review, or published')
 
@@ -525,6 +541,8 @@ function compilePeriod(filePath) {
     routeKey,
     startYear,
     endYear,
+    startDate,
+    endDate,
     navLabel: requireString(frontmatter, 'navLabel', relative),
     periodLabel: requireString(frontmatter, 'periodLabel', relative),
     previousPeriodLabel: requireString(frontmatter, 'previousPeriodLabel', relative),
@@ -611,7 +629,10 @@ const periodFiles = fs
   .sort()
   .map((name) => path.join(periodDir, name))
 
-const periods = periodFiles.map(compilePeriod).filter(Boolean).sort((a, b) => a.startYear - b.startYear)
+const periods = periodFiles
+  .map(compilePeriod)
+  .filter(Boolean)
+  .sort((a, b) => a.startDate.localeCompare(b.startDate) || a.routeKey.localeCompare(b.routeKey))
 
 const crosscuttingFiles = [
   ...fs
@@ -649,22 +670,32 @@ for (let index = 0; index < periods.length; index += 1) {
 
   if (index > 0) {
     const previous = periods[index - 1]
-    const expectedStartYear = previous.endYear + 1
-    if (previous.endYear >= period.startYear) {
-      pushError('content/periods', 'periods overlap: ' + previous.routeKey + ' and ' + period.routeKey)
-    } else if (period.startYear !== expectedStartYear) {
+    const continuity = classifyContinuity(previous.endDate, period.startDate)
+    if (continuity.kind === 'overlap') {
+      pushError(
+        'content/periods',
+        'periods overlap: ' +
+          previous.routeKey +
+          ' ends at ' +
+          previous.endDate +
+          ', but ' +
+          period.routeKey +
+          ' starts at ' +
+          period.startDate,
+      )
+    } else if (continuity.kind === 'gap') {
       pushError(
         'content/periods',
         'period gap: ' +
           previous.routeKey +
           ' ends at ' +
-          previous.endYear +
+          previous.endDate +
           ', but ' +
           period.routeKey +
           ' starts at ' +
-          period.startYear +
+          period.startDate +
           ' (expected ' +
-          expectedStartYear +
+          continuity.expectedStartDate +
           ')',
       )
     }

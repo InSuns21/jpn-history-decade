@@ -1,0 +1,57 @@
+{
+  "page": "external-rule-institutions",
+  "termRefs": [
+    {
+      "id": "shimonoseki-treaty-1895",
+      "core": true
+    },
+    {
+      "id": "taiwan-governor-general-1895",
+      "core": true
+    },
+    {
+      "id": "rokusan-ho-1896",
+      "core": true
+    },
+    {
+      "id": "second-japan-korea-agreement-1905",
+      "core": true
+    },
+    {
+      "id": "korea-residency-general-1906",
+      "core": true
+    },
+    {
+      "id": "japan-korea-agreement-1907",
+      "core": true
+    },
+    {
+      "id": "korean-righteous-army",
+      "core": false
+    },
+    {
+      "id": "korea-annexation-1910",
+      "core": true
+    },
+    {
+      "id": "government-general-korea-1910",
+      "core": true
+    },
+    {
+      "id": "portsmouth-treaty-1905",
+      "core": false
+    },
+    {
+      "id": "kwantung-leased-territory-1905",
+      "core": true
+    },
+    {
+      "id": "kwantung-governor-general-1906",
+      "core": true
+    },
+    {
+      "id": "south-manchuria-railway-1906",
+      "core": true
+    }
+  ]
+}

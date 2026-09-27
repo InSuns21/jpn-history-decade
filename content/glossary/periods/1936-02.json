@@ -1,0 +1,14 @@
+{
+  "period": "1936-02",
+  "termRefs": [
+    {"id":"february-26-incident-1936","core":true},
+    {"id":"okada-cabinet-1934","core":true},
+    {"id":"army-ministry","core":true},
+    {"id":"army-general-staff","core":true},
+    {"id":"martial-law-tokyo-1936","core":true},
+    {"id":"takahashi-finance-1932","core":false,"periodNote":"高橋是清の殺害後、財政抑制の政策課題が個人から次の蔵相・内閣へ引き継がれる転換点として扱う。"},
+    {"id":"general-election-1936","core":false,"periodNote":"事件6日前の総選挙で選挙・議会回路が作動していた状態と、事件後の内閣形成を接続して読む。"},
+    {"id":"kodoha-1930s","core":false},
+    {"id":"toseiha-1930s","core":false}
+  ]
+}

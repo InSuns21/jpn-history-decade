@@ -160,7 +160,7 @@ JH26公開前に、JH25のnextIssuesで残した金本位制、昭和恐慌、�
 
 # 6. JH28 — 1932年1月1日〜9月14日
 
-**Status: implemented / CI pending (2026-09-27)**
+**Status: completed / CI passed (2026-09-27)**
 
 ### 実装結果
 
@@ -242,7 +242,7 @@ S02「石高制・貨幣経済・財政」とS10「産業社会の負担と保�
 
 ## A16 満州事変 1931年9–12月の軍事行動
 
-**Status: implemented / CI pending (2026-09-27)**
+**Status: completed / CI passed (2026-09-27)**
 
 ### 判定・実装結果
 

@@ -496,3 +496,29 @@ Human Visual Audit をGitHub Pages上で行うため、`draft` / `pending-human`
 - [ ] 本文との整合性を確認
 - [ ] CI green
 - [ ] Pages deploy green
+
+
+---
+
+# 14. 公開記事内での地図配置
+
+地図の配置順も読解上の意味を持つ。地図を機械的に「概観の直後」へ集めず、**その地図が説明する本文の直後または直近**へ置く。
+
+- 年代全体を俯瞰する地図だけは、概観直後の「地図で見る」に置いてよい
+- 特定年・特定テーマの地図は、対応する本文節の直後へ配置する
+- 時系列記事では、後年の地図を前の出来事より先に表示しない
+- 地図の historicalQuestion と直前本文の問いが自然につながることを確認する
+- 複数地図を一か所へ集約することで、本文との対応関係が不明になる場合は分散配置する
+
+年代Markdownでは、概観直後へ置く地図は `maps`、本文節の直後へ置く地図は `mapPlacements` で指定する。
+
+```yaml
+maps: []
+mapPlacements:
+  - mapId: "urban-population-1920"
+    afterSectionId: "census-panic"
+```
+
+`afterSectionId` は本文の `## ... {#section-id}` と一致させ、content compiler で存在確認する。
+
+Human Visual Auditでは地図単体だけでなく、**前後の本文を含めた記事内の配置順が読者にとって自然か**も確認する。

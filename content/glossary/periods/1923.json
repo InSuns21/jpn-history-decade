@@ -1,0 +1,15 @@
+{
+  "period": "1923",
+  "termRefs": [
+    {"id":"great-kanto-earthquake-1923","core":true},
+    {"id":"kanto-earthquake-violence-1923","core":true},
+    {"id":"imperial-capital-reconstruction-1923","core":true},
+    {"id":"toranomon-incident-1923","core":false},
+    {"id":"second-constitutional-protection-movement","core":true},
+    {"id":"kato-takaaki-cabinet-1924","core":false},
+    {"id":"universal-manhood-suffrage-movement","core":false,"periodNote":"1919〜1922年の運動が1925年法成立へどう接続したかを追う。"},
+    {"id":"universal-manhood-suffrage-law-1925","core":true},
+    {"id":"chian-keisatsu-ho-1900","core":false,"periodNote":"治安維持法との対象・規制方法の差を比較する。"},
+    {"id":"peace-preservation-law-1925","core":true}
+  ]
+}

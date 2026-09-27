@@ -52,6 +52,18 @@
     {
       "id": "south-manchuria-railway-1906",
       "core": true
+    },
+    {
+      "id": "march-first-movement-1919",
+      "core": true
+    },
+    {
+      "id": "korea-cultural-rule-1919",
+      "core": true
+    },
+    {
+      "id": "kwantung-agency-1919",
+      "core": true
     }
   ]
 }

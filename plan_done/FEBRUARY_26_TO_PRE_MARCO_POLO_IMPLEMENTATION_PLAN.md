@@ -1,11 +1,11 @@
 # 1936年2月26日から1937年7月6日まで — 二・二六事件から盧溝橋事件前夜 実装計画
 
-- **Status:** active
-- **Progress:** JH33「1936-02-26〜03-08」✅ → A19 ✅ → JH34「1936-03-09〜1937-01-22」✅ → JH35「1937-01-23〜06-03」✅ → JH36「1937-06-04〜07-06」✅ → 横断記事publication gate ✅ → S02・S05延長 ✅。次はphase-end audit necessity judgment。
+- **Status:** completed
+- **Progress:** JH33「1936-02-26〜03-08」✅ → A19 ✅ → JH34「1936-03-09〜1937-01-22」✅ → JH35「1937-01-23〜06-03」✅ → JH36「1937-06-04〜07-06」✅ → 横断記事publication gate ✅ → S02・S05延長 ✅ → phase-end audit necessity judgment ✅（独立監査不要）→ CI #261 ✅ → Pages #127 ✅ → archived。
 - **Created:** 2026-09-28
 - **Scope:** 1936-02-26〜1937-07-06
 - **Primary goal:** 二・二六事件の武力行動と鎮圧が、陸軍内部・内閣形成・宮中・議会・財政・対外政策の接続をどう変えたかを追い、広田内閣、軍部大臣現役武官制の復活、1937年の宇垣組閣失敗・林内閣・総選挙・第1次近衛内閣を、1937年7月7日以後の全面的な戦争拡大から逆算せずに読む
-- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](./JPN_HISTORY_DECADE_PLAN.md)
+- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](../plan/JPN_HISTORY_DECADE_PLAN.md)
 - **Previous phase:** [POST_TANGGU_PRE_FEBRUARY_26_IMPLEMENTATION_PLAN.md](../plan_done/POST_TANGGU_PRE_FEBRUARY_26_IMPLEMENTATION_PLAN.md)
 - **Workspace rules:** [../SYSTEM_PROMPT.md](../SYSTEM_PROMPT.md)
 
@@ -478,6 +478,27 @@ S05はすでに、男子普通選挙が作動していても、衆議院多数�
 
 ---
 
+## Phase-end audit necessity judgment
+
+**Status: completed / no independent audit required / 2026-09-28**
+
+独立監査は実施しない。
+
+このフェーズで計画時に想定した横断上の注意点は、すでに次の実装工程で確認済みである。
+
+- 二・二六事件前後の制度接続はJH32→JH33、JH33→JH34の隣接確認で処理済み
+- 「軍部大臣現役武官制＝軍が首相を任命する制度」という誤読はJH34・JH35とS05延長で分離済み
+- 1937年総選挙が作動する一方、首相選定・陸相確保が別回路である点はJH35とS05の長期比較で処理済み
+- 高橋是清死後を即座の無制限財政としない点はJH34とS02延長で処理済み
+- 1937年7月7日以後の戦争拡大からJH36を逆算しない点はJH36の終点設定と本文で処理済み
+- 華北の法的制度類型についてはpublication gateでS09延長不要と判定済み
+- 家計・農村・企業への新しい負担転嫁は材料不足としてS10延長不要と判定済み
+
+したがって、複数年代・横断記事をまとめて再度見なければ判定できない新しい矛盾・重複・目的論化・役割混同の仮説は残っていない。`PROJECT_WORKFLOW_STANDARD.md` の基準に従い、「フェーズ末だから」という理由だけの全体監査は追加しない。
+
+完了時点の品質ゲートは main push **CI #261 success / GitHub Pages #127 success**。
+
+---
 # 13. 実装順
 
 ```text
@@ -516,17 +537,17 @@ A18の華北境界問題は、新しいデータがない限り再監査しな�
 
 ## 各年代ページ
 
-- [ ] 中学校教科書レベルを前提に、高校日本史級の初出語へ足場説明を置く
-- [ ] 事件名だけでなく、権限・命令・制度が何をするものか説明する
-- [ ] 本文は成立した状態・変化・因果を肯定文で先に示す
-- [ ] 同時代の情報・選択肢と後世の結果を分ける
-- [ ] 宮中・内閣・陸軍省・参謀本部・現地軍・海軍・政党を一枚岩にしない
-- [ ] 中国側主体を背景化しない
-- [ ] 1937年7月以後の戦争を必然化しない
-- [ ] 直前ページとの接続確認をpublished前に完了
-- [ ] 用語辞書・period glossary refsを更新
-- [ ] 出典を本文主張へ接続
-- [ ] 必要な地図だけ監査を通す
+- [x] 中学校教科書レベルを前提に、高校日本史級の初出語へ足場説明を置く
+- [x] 事件名だけでなく、権限・命令・制度が何をするものか説明する
+- [x] 本文は成立した状態・変化・因果を肯定文で先に示す
+- [x] 同時代の情報・選択肢と後世の結果を分ける
+- [x] 宮中・内閣・陸軍省・参謀本部・現地軍・海軍・政党を一枚岩にしない
+- [x] 中国側主体を背景化しない
+- [x] 1937年7月以後の戦争を必然化しない
+- [x] 直前ページとの接続確認をpublished前に完了
+- [x] 用語辞書・period glossary refsを更新
+- [x] 出典を本文主張へ接続
+- [x] 必要な地図だけ監査を通す
 
 ## フェーズ
 
@@ -534,11 +555,11 @@ A18の華北境界問題は、新しいデータがない限り再監査しな�
 - [x] A19必要性・データ品質判定完了
 - [x] 横断記事publication gate完了
 - [x] S02・S05を1937年7月6日まで延長
-- [ ] 具体的な横断問題が残る場合だけ独立監査を実施
-- [ ] `npm run check` / GitHub Actions green
-- [ ] GitHub Pages deploy green
-- [ ] Status: completed
-- [ ] `plan_done/` へ移動
+- [x] phase-end audit necessity judgment完了。具体的な横断仮説が残らないため独立監査不要
+- [x] `npm run check` / GitHub Actions green（main CI #261 success）
+- [x] GitHub Pages deploy green（#127 success）
+- [x] Status: completed
+- [x] `plan_done/` へ移動
 
 ---
 

@@ -461,9 +461,9 @@ jpn-history-decade/
 
 年代史を進めながら、並行してテーマ史・構造史を追加する。
 
-1800〜1890年は公開品質化と接続監査まで完了済み。現在のactive implementation planは、1891〜1911年を対象とする [MEIJI_PARLIAMENT_EMPIRE_IMPLEMENTATION_PLAN.md](./MEIJI_PARLIAMENT_EMPIRE_IMPLEMENTATION_PLAN.md) とする。
+1800〜1911年は公開品質化と接続監査まで完了済み。1891〜1911年の実装計画は `plan_done/` へ移動済みで、現在のactive implementation planは1912〜1925年を対象とする [TAISHO_MASS_POLITICS_IMPLEMENTATION_PLAN.md](./TAISHO_MASS_POLITICS_IMPLEMENTATION_PLAN.md) とする。
 
-このフェーズでは、1890年に作動を始めた立憲体制を出発点に、初期議会政治、政党再編、条約改正、日清・日露戦争、金本位制、産業化、植民地統治、労働・社会問題を、単純な「近代化」や「帝国化」の一本道ではなく、国家と社会の複数の制度が相互作用する過程として扱う。
+このフェーズでは、大正政変、第一次世界大戦、戦時経済、米騒動、原敬内閣、三・一運動、ワシントン体制、関東大震災、普通選挙法、治安維持法を、単純な「大正デモクラシー」や「自由化」の一本道として扱わない。政党政治・社会運動・労働・都市化・植民地統治・国際秩序・治安政策が相互に組み替わる過程として扱う。
 
 ---
 

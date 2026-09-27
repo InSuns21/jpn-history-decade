@@ -28,6 +28,8 @@
 
 Visual Audit は完全自動化が難しいため、機械判定できない項目は **human review required** として残す。
 
+ただし、**既にHuman Visual Audit済みの地図と同一の表示コンポーネント・点記号・凡例・interactionを再利用し、変更点が点featureの位置・ラベル・属性値だけであるpoint-only地図**は、個別のHuman Visual Auditを省略できる。この例外では Data Audit と Style Audit は省略せず、再利用元の地図IDと同一パターンである理由を `auditState.notes` に残す。線・polygon、新しい表示ロジック、凡例仕様変更、popup/interaction変更、レイアウト変更を含む場合は例外対象外とする。
+
 特に interactive map は、viewport 幅だけでなく入力方式も監査対象とする。Desktop の mouse 操作が成功しても、Tablet / Touch で同じ操作が成立するとは限らないため、少なくとも代表的な touch 環境を独立に確認する。
 
 ---
@@ -406,6 +408,7 @@ interface MapAuditState {
     | 'pending-human'
     | 'passed'
     | 'failed'
+    | 'not-required-reused-pattern'
 
   notes?: string[]
 }
@@ -417,6 +420,8 @@ interface MapAuditState {
 dataAudit   = passed
 styleAudit  = passed
 visualAudit = passed
+  または、8章の再利用パターン例外を満たす場合のみ
+visualAudit = not-required-reused-pattern
 ```
 
 Human Visual Audit をGitHub Pages上で行うため、`draft` / `pending-human` の地図も通常ページに表示してよい。その場合は地図の直前に **「監査中です」** と読者向けに明示し、監査結果によって修正される可能性を表示する。監査中表示は完成・監査済みを意味しない。
@@ -486,12 +491,13 @@ Human Visual Audit をGitHub Pages上で行うため、`draft` / `pending-human`
 - [ ] 代表featureの人手サンプル照合済み
 - [ ] Style Audit passed
 - [ ] legend と layer が一致
-- [ ] Desktop Visual Audit passed
-- [ ] Tablet / Touch Visual Audit passed
-- [ ] Mobile Visual Audit passed
+- [ ] Desktop Visual Audit passed（再利用パターン例外では省略可）
+- [ ] Tablet / Touch Visual Audit passed（再利用パターン例外では省略可）
+- [ ] Mobile Visual Audit passed（再利用パターン例外では省略可）
 - [ ] 主要地点を初期表示で識別できる
 - [ ] tap / click で補足情報へ到達できる
-- [ ] zoom別確認 passed
+- [ ] zoom別確認 passed（再利用パターン例外では省略可）
+- [ ] 再利用パターン例外を使う場合、再利用元地図ID・同一UI/interactionであること・point-onlyであることを notes に記録
 - [ ] 不確実性の表現を確認
 - [ ] 本文との整合性を確認
 - [ ] CI green

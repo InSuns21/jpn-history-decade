@@ -1,0 +1,17 @@
+{
+  "period": "1896",
+  "termRefs": [
+    {"id":"shimonoseki-treaty-1895","core":false,"periodNote":"賠償金と台湾割譲が1896年以後の財政・金融・植民地統治の出発条件となった。"},
+    {"id":"anglo-japanese-treaty-1894","core":false,"periodNote":"1894年に調印された条約が1899年7月17日に実施され、調印と施行を分けて理解する必要がある。"},
+    {"id":"nisshin-sengo-keiei","core":true},
+    {"id":"rokusan-ho-1896","core":true},
+    {"id":"gold-standard-1897","core":true},
+    {"id":"labor-union-kiseikai-1897","core":true},
+    {"id":"kenseito-1898","core":true},
+    {"id":"first-okuma-cabinet-1898","core":true},
+    {"id":"revised-treaties-1899","core":true},
+    {"id":"rikken-seiyukai-1900","core":true},
+    {"id":"chian-keisatsu-ho-1900","core":true},
+    {"id":"boxer-rebellion-1900","core":true}
+  ]
+}

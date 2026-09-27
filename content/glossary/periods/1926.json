@@ -1,24 +1,88 @@
 {
   "period": "1926",
   "termRefs": [
-    {"id":"earthquake-bills-1923","core":true},
-    {"id":"showa-financial-panic-1927","core":true},
-    {"id":"bank-of-taiwan-1899","core":true},
-    {"id":"suzuki-shoten","core":false},
-    {"id":"sumitsuin-1888","core":false,"periodNote":"金融恐慌時の緊急勅令案をめぐり、内閣とは別の審議回路として確認する。"},
-    {"id":"tanaka-giichi-cabinet-1927","core":true},
-    {"id":"rikken-seiyukai-1900","core":false},
-    {"id":"rikken-minseito-1927","core":true},
-    {"id":"universal-manhood-suffrage-law-1925","core":false,"periodNote":"1925年成立と1928年の初回実施を区別する。"},
-    {"id":"first-universal-election-1928","core":true},
-    {"id":"proletarian-parties-1920s","core":true},
-    {"id":"march-fifteenth-incident-1928","core":true},
-    {"id":"peace-preservation-law-1925","core":false},
-    {"id":"peace-preservation-law-amendment-1928","core":true},
-    {"id":"northern-expedition-china","core":true},
-    {"id":"shandong-expeditions-1927-1928","core":true},
-    {"id":"jinan-incident-1928","core":true},
-    {"id":"kwantung-army-1919","core":true},
-    {"id":"zhang-zuolin-assassination-1928","core":true}
+    {
+      "id": "earthquake-bills-1923",
+      "core": true
+    },
+    {
+      "id": "postwar-panic-1920",
+      "core": false,
+      "periodNote": "戦後恐慌から残った企業・銀行整理が1927年金融恐慌へどう接続したかを追う。"
+    },
+    {
+      "id": "showa-financial-panic-1927",
+      "core": true
+    },
+    {
+      "id": "bank-of-taiwan-1899",
+      "core": true
+    },
+    {
+      "id": "suzuki-shoten",
+      "core": false
+    },
+    {
+      "id": "sumitsuin-1888",
+      "core": false,
+      "periodNote": "金融恐慌時の緊急勅令案をめぐり、内閣とは別の審議回路として確認する。"
+    },
+    {
+      "id": "tanaka-giichi-cabinet-1927",
+      "core": true
+    },
+    {
+      "id": "rikken-seiyukai-1900",
+      "core": false
+    },
+    {
+      "id": "rikken-minseito-1927",
+      "core": true
+    },
+    {
+      "id": "universal-manhood-suffrage-law-1925",
+      "core": false,
+      "periodNote": "1925年成立と1928年の初回実施を区別する。"
+    },
+    {
+      "id": "first-universal-election-1928",
+      "core": true
+    },
+    {
+      "id": "proletarian-parties-1920s",
+      "core": true
+    },
+    {
+      "id": "march-fifteenth-incident-1928",
+      "core": true
+    },
+    {
+      "id": "peace-preservation-law-1925",
+      "core": false
+    },
+    {
+      "id": "peace-preservation-law-amendment-1928",
+      "core": true
+    },
+    {
+      "id": "northern-expedition-china",
+      "core": true
+    },
+    {
+      "id": "shandong-expeditions-1927-1928",
+      "core": true
+    },
+    {
+      "id": "jinan-incident-1928",
+      "core": true
+    },
+    {
+      "id": "kwantung-army-1919",
+      "core": true
+    },
+    {
+      "id": "zhang-zuolin-assassination-1928",
+      "core": true
+    }
   ]
 }

@@ -624,11 +624,11 @@ plan_done/
 - [x] A14 / A15を実装またはno-map理由まで記録
 - [x] A14 Data / Style Audit passed。Human Visual Auditは再利用point-only例外を適用
 - [x] フェーズ末独立監査は不要判定（具体的な未解決の横断問題なし）
-- [ ] `npm run check` green
+- [x] `npm run check` green
 - [x] GitHub Actions green
 - [x] GitHub Pages deploy green
-- [ ] Statusをcompletedへ変更
-- [ ] `plan_done/`へ移動
+- [x] Statusをcompletedへ変更
+- [x] `plan_done/`へ移動
 
 ---
 
@@ -654,3 +654,5 @@ plan_done/
 - 1937年日中戦争へ至る局面
 
 次フェーズ切り出し時には、1931–1936を一括するのではなく、**満州事変以後の変化速度に応じて年・半年・重要局面単位を採用できるかを先に判定する。**
+
+後続のactive planは [`MANCHURIAN_INCIDENT_TRANSITION_IMPLEMENTATION_PLAN.md`](../plan/MANCHURIAN_INCIDENT_TRANSITION_IMPLEMENTATION_PLAN.md) とし、日付範囲対応を先に実装してから1931年以後を局面単位で進める。

@@ -1,0 +1,22 @@
+{
+  "period": "1934-07",
+  "termRefs": [
+    {"id":"okada-cabinet-1934","core":true},
+    {"id":"rikken-seiyukai-1900","core":false},
+    {"id":"rikken-minseito-1927","core":false},
+    {"id":"takahashi-finance-1932","core":true,"periodNote":"岡田内閣発足時は藤井真信蔵相で、1934年11月27日に高橋が復帰した後の財政運営を扱う。"},
+    {"id":"boj-government-bond-underwriting-1932","core":false},
+    {"id":"washington-naval-treaty-1922","core":true},
+    {"id":"london-naval-treaty-1930","core":false},
+    {"id":"washington-naval-treaty-denunciation-1934","core":true},
+    {"id":"military-academy-incident-1934","core":true},
+    {"id":"kodoha-1930s","core":false},
+    {"id":"toseiha-1930s","core":false},
+    {"id":"emperor-organ-theory","core":true},
+    {"id":"emperor-organ-theory-dispute-1935","core":true},
+    {"id":"first-kokutai-meicho-statement-1935","core":true},
+    {"id":"tanggu-truce-1933","core":false},
+    {"id":"umezu-he-yingqin-1935","core":true},
+    {"id":"doihara-qin-dechun-1935","core":false}
+  ]
+}

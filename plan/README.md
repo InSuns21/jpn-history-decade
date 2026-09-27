@@ -10,9 +10,9 @@
 
 ## 実装計画
 
-- `TAISHO_MASS_POLITICS_IMPLEMENTATION_PLAN.md`
+現在activeな個別実装計画はない。
 
-1912〜1925年を対象とし、大正政変、第一次世界大戦、戦時経済、米騒動、原敬内閣、植民地統治、ワシントン体制、関東大震災、普通選挙法・治安維持法までを扱うactive implementation plan。
+1912〜1925年の実装計画は完了し、`plan_done/TAISHO_MASS_POLITICS_IMPLEMENTATION_PLAN.md` へ移動済み。次は長期企画書から1926年以後の実装フェーズを切り出す。
 
 ## ライフサイクル
 

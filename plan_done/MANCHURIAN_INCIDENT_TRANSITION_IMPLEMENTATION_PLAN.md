@@ -1,8 +1,10 @@
 # 1931年から1933年5月まで — 満州事変と政治・財政の状態遷移 実装計画
 
-- **Status:** active
+- **Status:** completed
 - **Created:** 2026-09-27
 - **Scope:** 1931-01-01〜1933-05-31
+- **Completed:** 2026-09-28
+- **Final verification:** GitHub Actions CI run #233 success / GitHub Pages run #113 success
 - **Primary goal:** 世界恐慌下の政策制約、満州事変で顕在化した政府・陸軍中央・関東軍の意思決定差、政党内閣の終焉、満洲国承認、国際連盟との対立、金輸出再禁止と高橋財政を、後の全面戦争から逆算せず局面ごとの選択可能性として読む
 - **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](./JPN_HISTORY_DECADE_PLAN.md)
 - **Previous phase:** [EARLY_SHOWA_PARTY_FINANCE_IMPLEMENTATION_PLAN.md](../plan_done/EARLY_SHOWA_PARTY_FINANCE_IMPLEMENTATION_PLAN.md)
@@ -395,16 +397,16 @@ plan_done/
 
 ## 各年代ページ
 
-- [ ] 中学校教科書レベルを前提に、高校日本史級の初出語へ足場説明を置く
-- [ ] 本文はまず成立した状態・変化・因果を肯定文で示す
-- [ ] 同時代の情報・選択肢と後世の結果を分ける
-- [ ] 日本政府・陸軍中央・関東軍・外務省を一枚岩にしない
-- [ ] 中国側主体を背景化しない
-- [ ] 戦争への一本道として後知恵で説明しない
-- [ ] 直前ページとの接続確認をpublished前に完了
-- [ ] 用語辞書・period glossary refsを更新
-- [ ] 出典を本文の主張へ接続
-- [ ] 必要な地図だけ監査を通す
+- [x] 中学校教科書レベルを前提に、高校日本史級の初出語へ足場説明を置く
+- [x] 本文はまず成立した状態・変化・因果を肯定文で示す
+- [x] 同時代の情報・選択肢と後世の結果を分ける
+- [x] 日本政府・陸軍中央・関東軍・外務省を一枚岩にしない
+- [x] 中国側主体を背景化しない
+- [x] 戦争への一本道として後知恵で説明しない
+- [x] 直前ページとの接続確認をpublished前に完了
+- [x] 用語辞書・period glossary refsを更新
+- [x] 出典を本文の主張へ接続
+- [x] 必要な地図だけ監査を通す
 
 ## フェーズ
 
@@ -412,10 +414,10 @@ plan_done/
 - [x] 横断記事publication gate完了
 - [x] 地図A16/A17の必要性・データ品質判定完了
 - [x] 具体的な横断問題が残らないため独立監査不要と判定
-- [ ] `npm run check` / GitHub Actions green
-- [ ] GitHub Pages deploy green
-- [ ] Status: completed
-- [ ] `plan_done/` へ移動
+- [x] `npm run check` / GitHub Actions green（main push CI run #233）
+- [x] GitHub Pages deploy green（main push Pages run #113）
+- [x] Status: completed
+- [x] `plan_done/` へ移動
 
 ---
 

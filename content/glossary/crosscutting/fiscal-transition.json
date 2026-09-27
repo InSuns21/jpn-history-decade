@@ -92,6 +92,34 @@
     {
       "id": "russo-japanese-postwar-finance",
       "core": true
+    },
+    {
+      "id": "wwi-wartime-boom",
+      "core": true
+    },
+    {
+      "id": "postwar-panic-1920",
+      "core": true
+    },
+    {
+      "id": "earthquake-bills-1923",
+      "core": true
+    },
+    {
+      "id": "showa-financial-panic-1927",
+      "core": true
+    },
+    {
+      "id": "inoue-finance-1929",
+      "core": true
+    },
+    {
+      "id": "gold-embargo-lifting-1930",
+      "core": true
+    },
+    {
+      "id": "world-depression-1929",
+      "core": true
     }
   ]
 }

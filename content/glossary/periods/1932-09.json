@@ -1,0 +1,20 @@
+{
+  "period": "1932-09",
+  "termRefs": [
+    {"id":"manchukuo-establishment-1932","core":false,"periodNote":"3月の成立から、9月15日の日本政府による正式承認へ接続する。"},
+    {"id":"japan-manchukuo-protocol-1932","core":true},
+    {"id":"lytton-commission-1932","core":false},
+    {"id":"lytton-report-1932","core":true},
+    {"id":"league-of-nations-1920","core":true},
+    {"id":"league-assembly-report-1933","core":true},
+    {"id":"matsuoka-yosuke-league-1933","core":true},
+    {"id":"league-withdrawal-notice-1933","core":true},
+    {"id":"rehe-operation-1933","core":true},
+    {"id":"tanggu-truce-1933","core":true},
+    {"id":"saito-cabinet-1932","core":false},
+    {"id":"takahashi-finance-1932","core":true},
+    {"id":"boj-government-bond-underwriting-1932","core":true},
+    {"id":"foreign-exchange-control-law-1933","core":false},
+    {"id":"managed-currency-transition-1932","core":false}
+  ]
+}

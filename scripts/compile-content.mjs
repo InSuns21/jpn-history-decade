@@ -120,6 +120,52 @@ function requireObjectArray(object, field, file, requiredFields) {
   return value
 }
 
+function validateMapPlacements(frontmatter, sections, maps, file) {
+  const value = frontmatter?.mapPlacements ?? []
+  if (!Array.isArray(value)) {
+    pushError(file, 'mapPlacements must be an array when present')
+    return []
+  }
+
+  const sectionIds = new Set(sections.map((section) => section.id))
+  const seenMapIds = new Set(maps)
+  const placements = []
+
+  value.forEach((item, index) => {
+    if (!item || typeof item !== 'object' || Array.isArray(item)) {
+      pushError(file, 'mapPlacements[' + index + '] must be an object')
+      return
+    }
+
+    const mapId =
+      typeof item.mapId === 'string' && item.mapId.trim() !== '' ? item.mapId.trim() : ''
+    const afterSectionId =
+      typeof item.afterSectionId === 'string' && item.afterSectionId.trim() !== ''
+        ? item.afterSectionId.trim()
+        : ''
+
+    if (!mapId) pushError(file, 'mapPlacements[' + index + '].mapId must be a non-empty string')
+    if (!afterSectionId) {
+      pushError(file, 'mapPlacements[' + index + '].afterSectionId must be a non-empty string')
+    }
+
+    if (mapId && !knownMapIds.has(mapId)) {
+      pushError(file, 'map placement has no matching definition: ' + mapId)
+    }
+    if (afterSectionId && !sectionIds.has(afterSectionId)) {
+      pushError(file, 'map placement references unknown section: ' + afterSectionId)
+    }
+    if (mapId && seenMapIds.has(mapId)) {
+      pushError(file, 'map is referenced more than once: ' + mapId)
+    }
+    if (mapId) seenMapIds.add(mapId)
+
+    if (mapId && afterSectionId) placements.push({ mapId, afterSectionId })
+  })
+
+  return placements
+}
+
 function parseMarkdownSections(body, file) {
   const lines = body.split(/\r?\n/)
   const sections = []
@@ -471,6 +517,7 @@ function compilePeriod(filePath) {
 
   const sources = validateSources(frontmatter, source, relative, status)
   const sections = parseMarkdownSections(parsed.body, relative)
+  const mapPlacements = validateMapPlacements(frontmatter, sections, maps, relative)
   const glossary = loadPeriodGlossary(routeKey, source, relative)
 
   return {
@@ -495,6 +542,7 @@ function compilePeriod(filePath) {
     glossary,
     sources,
     maps,
+    mapPlacements,
   }
 }
 

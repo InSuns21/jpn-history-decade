@@ -4,6 +4,7 @@ import { bakumatsuEarlyContact1853Map } from './definitions/bakumatsuEarlyContac
 import { treatyPortsTransport1859Map } from './definitions/treatyPortsTransport1859.ts'
 import { boshinWar1868Map } from './definitions/boshinWar1868.ts'
 import { shizokuRebellionsSeinan1874Map } from './definitions/shizokuRebellionsSeinan1874.ts'
+import { urbanPopulation1920Map } from './definitions/urbanPopulation1920.ts'
 import type { HistoricalMapDefinition } from './schema.ts'
 
 export const mapDefinitions: HistoricalMapDefinition[] = [
@@ -11,6 +12,7 @@ export const mapDefinitions: HistoricalMapDefinition[] = [
   treatyPortsTransport1859Map,
   boshinWar1868Map,
   shizokuRebellionsSeinan1874Map,
+  urbanPopulation1920Map,
 ]
 
 export function findMapDefinition(id: string) {

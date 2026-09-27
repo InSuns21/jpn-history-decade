@@ -107,11 +107,11 @@ sources:
     title: "日治時期臺灣市街「町」名之探討—以臺灣總督府檔案相關資料為範圍"
     institution: "國史館臺灣文獻館"
     url: "https://www.th.gov.tw/Epaper_Content/236/5354/"
-  - id: "taiwan-local-council-study"
-    type: "research"
-    title: "論臺灣省行政長官公署「軍事佔領體制」與其問題"
+  - id: "taiwan-local-councils-1920"
+    type: "official"
+    title: "陳中和糖業傳奇"
     institution: "國史館臺灣文獻館"
-    url: "https://ws.th.gov.tw/002/TH/tjpdf20241015/var/www/html/new_site/05publish/03publishquery/02journal/tj/401060201.pdf"
+    url: "https://www.th.gov.tw/Epaper_Content/238/7038/"
   - id: "jacar-kwantung-reform-1919"
     type: "official"
     title: "関東都督府"
@@ -266,7 +266,7 @@ maps: []
 
 台湾でも1920年に地方制度が大きく改編された。國史館臺灣文獻館の資料によれば、それまでの地方区分が再編され、州・郡、市・街庄を組み合わせる行政体系が整えられた。台湾の「市」もこの改編によって制度上の行政単位として現れた。[@taiwan-local-system-1920]
 
-ただし、朝鮮の1920年地方制度改編と同じ仕組みではない。國史館臺灣文獻館掲載の研究は、1920年制度下の地方協議会について、議長を地方長官が務め、議員も上級地方長官による任命で、選挙制ではなかったと整理している。[@taiwan-local-council-study]
+ただし、朝鮮の1920年地方制度改編と同じ仕組みではない。國史館臺灣文獻館掲載の研究は、1920年制度下の地方協議会について、議長を地方長官が務め、議員も上級地方長官による任命で、選挙制ではなかったと整理している。[@taiwan-local-councils-1920]
 
 したがって「1920年前後に朝鮮と台湾で地方制度が改正された」という同時性だけから、同じ自治制度が導入されたと考えることはできない。朝鮮では限定された地域の諮問機関に選挙制が導入されたのに対し、台湾の地方協議会は任命制を基本とした。
 

@@ -28,6 +28,8 @@
 
 JH26実装前に **JH26-A「subannual period range」** を行う。
 
+**Status: completed / CI passed (2026-09-27)**
+
 ## 2.1 frontmatter
 
 既存の `startYear / endYear` は互換性のため残し、任意の次フィールドを追加する。
@@ -54,6 +56,16 @@ endDate: "1931-09-17"
 - glossaryのperiod参照はrouteKey単位のまま維持
 
 これにより「半年区切りをしたいから連続性CIを弱める」のではなく、**連続性CIそのものを日付粒度へ上げる**。
+
+### JH26-A 実装結果
+
+- `startDate / endDate` を `PeriodPageData` へ追加した
+- 未指定の既存年代は `startYear-01-01 / endYear-12-31` へ内部正規化し、1800–1930のMarkdownは変更していない
+- `startDate / endDate` の実在日付、`startYear / endYear` との年一致、範囲の前後関係を検証する
+- period sortと隣接gap / overlap判定を日付単位へ変更した
+- `1931` と `1931-09` のような同一年routeを既存route規則のまま利用できる
+- 年単位互換、同一年連続、うるう日、gap、overlap、無効日付をfixtureで検証し `npm run check` に組み込んだ
+- CIで既存1800–1930のcompile / lint / typecheck / buildがgreenであることを確認した
 
 ---
 
@@ -299,11 +311,11 @@ plan_done/
 
 ## JH26-A
 
-- [ ] startDate / endDateを追加し、既存ページを無変更で正規化できる
-- [ ] 日付単位のgap / overlap validationがある
-- [ ] 同一年の複数periodを正しくsort / navできる
-- [ ] glossary / relatedPeriods / routeが新routeKeyでも通る
-- [ ] 既存1800–1930が回帰しない
+- [x] startDate / endDateを追加し、既存ページを無変更で正規化できる
+- [x] 日付単位のgap / overlap validationがある
+- [x] 同一年の複数periodを正しくsort / navできる
+- [x] glossary / relatedPeriods / routeが新routeKeyでも通る
+- [x] 既存1800–1930が回帰しない
 
 ## 各年代ページ
 

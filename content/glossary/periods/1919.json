@@ -1,0 +1,19 @@
+{
+  "period": "1919",
+  "termRefs": [
+    {"id":"world-war-i","core":false,"periodNote":"戦時環境から講和・戦後秩序へ移る前提として参照する。"},
+    {"id":"hara-cabinet-1918","core":true,"periodNote":"1918年成立後の選挙制度・積極政策・政党運営と1921年暗殺までを追う。"},
+    {"id":"march-first-movement-1919","core":true},
+    {"id":"korea-cultural-rule-1919","core":true},
+    {"id":"paris-peace-conference-1919","core":true},
+    {"id":"league-of-nations-1920","core":false},
+    {"id":"may-fourth-movement-1919","core":true},
+    {"id":"universal-manhood-suffrage-movement","core":true},
+    {"id":"first-census-1920","core":false},
+    {"id":"postwar-panic-1920","core":true},
+    {"id":"washington-conference-1921-1922","core":true},
+    {"id":"four-power-treaty-1921","core":false},
+    {"id":"nine-power-treaty-1922","core":false},
+    {"id":"washington-naval-treaty-1922","core":false}
+  ]
+}

@@ -557,7 +557,7 @@ JH20・JH21完成時点で再評価した。青島・山東半島、赤道以北
 
 ## A12 1920年人口・都市化
 
-**Status: implemented / pending Human Visual Audit (2026-09-27)**
+**Status: published / all map audits passed (2026-09-27)**
 
 1920年国勢調査は、全国の市町村人口を同一時点・同一調査制度で比較できるため、地図化のデータ基盤としてこのフェーズでは最も強い。e-Statでは大正9年国勢調査の市町村別「世帯数及人員」表を確認でき、市・区の人口規模自体は公的統計として固定できる。
 
@@ -588,12 +588,13 @@ Style Audit：
 - Style Audit passed
 
 Human Visual Audit：
-- **pending-human**
-- GitHub Pages上で「監査中です」と表示して確認可能にする
-- 特に東京／横浜、京阪神、広島／呉、札幌／小樽のラベル衝突をdesktop / tablet-touch / mobileで確認する
-- marker / label tapでpopupが開くことをtablet-touchで確認する
+- **passed（2026-09-27）**
+- GitHub Pages上の実表示を確認し、地図自体の見た目を承認
+- 監査後の指摘として、地図がページ概観直後へ固定表示されると1920年地図が1919年本文より先に出て読解順が不自然になることを確認
+- テンプレートを改善し、A12は「1920年 — 初の国勢調査と戦後恐慌」節の直後へ配置
+- 今後は全体俯瞰図以外、関連する本文節の直後へ `mapPlacements` で配置する
 
-Human Visual Audit通過前は map status を draft のままとし、地図完成扱いにはしない。
+Data / Style / Human Visual Audit の3層をすべて通過したため map status は published。
 
 ## A13 関東大震災
 
@@ -765,8 +766,8 @@ plan_done/
 - [ ] 関東大震災の流言・暴力・治安・復興を検証
 - [ ] 普通選挙法 / 治安維持法を単純な対概念にしていない
 - [ ] 横断コンテンツ必要性監査 completed
-- [ ] A10〜A13を実装 / 見送り理由まで記録
-- [ ] 実装した地図の全監査 passed
+- [x] A10〜A13を実装 / 見送り理由まで記録
+- [x] 実装した地図の全監査 passed
 - [ ] 1912–1925全体監査 completed
 - [ ] 1800–1925接続監査 completed
 - [ ] `npm run check` green

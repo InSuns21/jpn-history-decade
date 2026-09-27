@@ -16,10 +16,10 @@
 - 年代ページと構造史・テーマ史を Markdown + frontmatter からコンパイルし、共通コンテンツモデルで描画
 - 横断記事から関連年代、年代記事から関連する横断記事へ相互に移動できる構成
 - MapLibre GL JS を依存に追加し、必要な記事だけ主題地図を差し込める構成
-- 1800–1911年を公開品質で実装済み（年代史19ページ＋横断記事6本）
+- 1800–1911年を公開品質で実装済み（年代史19ページ＋横断記事7本）
 - 1800–1890接続監査、1891–1895の中間監査E、1896–1911の中間監査F、A7/A8/A9地図必要性・データ品質判定、1891–1911横断コンテンツ必要性監査まで完了
 - 1874–1890年の実装フェーズは完了し、実装計画を `plan_done/` へ移動済み
-- 1891–1911年を対象とするactive implementation plan `plan/MEIJI_PARLIAMENT_EMPIRE_IMPLEMENTATION_PLAN.md` を進行中。S05「政治参加の回路」とS02財政金融史の1911年延長まで実装済みで、次工程は植民地統治の制度差比較
+- 1891–1911年を対象とするactive implementation plan `plan/MEIJI_PARLIAMENT_EMPIRE_IMPLEMENTATION_PLAN.md` を進行中。S05「政治参加の回路」、S02財政金融史の1911年延長、S09「対外支配の制度差」まで実装済みで、次工程は1891–1911全体監査
 - GitHub Actions による lint / typecheck / build CI
 - `main` 更新時の GitHub Pages 自動デプロイ
 

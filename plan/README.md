@@ -10,9 +10,9 @@
 
 ## 実装計画
 
-- `MEIJI_PARLIAMENT_EMPIRE_IMPLEMENTATION_PLAN.md`
+- `TAISHO_MASS_POLITICS_IMPLEMENTATION_PLAN.md`
 
-1891〜1911年を対象とし、初期議会政治・条約改正・日清日露戦争・産業化・植民地統治・社会政策を扱うactive implementation plan。
+1912〜1925年を対象とし、大正政変、第一次世界大戦、戦時経済、米騒動、原敬内閣、植民地統治、ワシントン体制、関東大震災、普通選挙法・治安維持法までを扱うactive implementation plan。
 
 ## ライフサイクル
 

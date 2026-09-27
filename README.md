@@ -25,7 +25,7 @@
 - 公開本文の前提知識を中学校の歴史教科書レベルへ変更し、1800–1925年の年代23ページ＋横断8記事と用語辞書236語を遡及監査済み。内容の到達点は維持したまま、高校日本史で詳しく扱う制度・人物・事件・金融用語に初出時の足場説明を追加
 - 1931–1933年5月フェーズは main push CI run #233 / GitHub Pages run #113 とも success を確認して完了。A17は制度・時系列の理解に地図が寄与しないためno-map、横断記事S02/S05/S09/S10も1933年まで延長済み
 - 1933年6月〜1936年2月25日フェーズは main push CI run #244 / GitHub Pages run #119 とも success を確認して完了。A18はno-map、S02・S05・S09・S10は1936年2月25日まで延長済み
-- 現在のactive implementation planは `plan/FEBRUARY_26_TO_PRE_MARCO_POLO_IMPLEMENTATION_PLAN.md`。JH33「1936-02-26〜03-08」→A19「二・二六事件の東京政治・軍事空間」→JH34「1936-03-09〜1937-01-22」→JH35「1937-01-23〜06-03」→JH36「1937-06-04〜07-06」まで実装済み。次は横断記事publication gate
+- 現在のactive implementation planは `plan/FEBRUARY_26_TO_PRE_MARCO_POLO_IMPLEMENTATION_PLAN.md`。JH33〜JH36とA19まで実装済み。横断記事publication gateも完了し、S02「石高制・貨幣経済・財政」とS05「政治参加の回路」のみ延長対象、S09・S10・新規「軍部大臣・統帥・内閣形成」は今回は見送り。次はS02・S05の1937年7月6日までの延長
 - GitHub Actions による lint / typecheck / build CI
 - `main` 更新時の GitHub Pages 自動デプロイ
 

@@ -1,19 +1,58 @@
 {
   "period": "1936-03",
   "termRefs": [
-    {"id":"hirota-cabinet-1936","core":true},
-    {"id":"february-26-incident-1936","core":false},
-    {"id":"kodoha-1930s","core":false},
-    {"id":"toseiha-1930s","core":false},
-    {"id":"army-general-staff","core":false},
-    {"id":"military-ministers-active-duty-system","core":true,"periodNote":"1936年5月18日の復活と、現役大・中将に候補資格を限定することが内閣形成へ与える制約を扱う。"},
-    {"id":"baba-finance-1936","core":true},
-    {"id":"national-policy-standards-1936","core":true},
-    {"id":"washington-naval-treaty-denunciation-1934","core":false},
-    {"id":"london-naval-treaty-1930","core":false},
-    {"id":"anti-comintern-pact-1936","core":true},
-    {"id":"tripartite-pact-1940","core":false},
-    {"id":"xian-incident-1936","core":true},
-    {"id":"nanjing-national-government-1927","core":false}
+    {
+      "id": "hirota-cabinet-1936",
+      "core": true
+    },
+    {
+      "id": "february-26-incident-1936",
+      "core": false
+    },
+    {
+      "id": "kodoha-1930s",
+      "core": false
+    },
+    {
+      "id": "toseiha-1930s",
+      "core": false
+    },
+    {
+      "id": "army-general-staff",
+      "core": false
+    },
+    {
+      "id": "military-ministers-active-duty-system",
+      "core": true,
+      "periodNote": "1936年5月18日の復活と、現役大・中将に候補資格を限定することが内閣形成へ与える制約を扱う。"
+    },
+    {
+      "id": "baba-finance-1936",
+      "core": true
+    },
+    {
+      "id": "national-policy-standards-1936",
+      "core": true
+    },
+    {
+      "id": "washington-naval-treaty-denunciation-1934",
+      "core": false
+    },
+    {
+      "id": "london-naval-treaty-1930",
+      "core": false
+    },
+    {
+      "id": "anti-comintern-pact-1936",
+      "core": true
+    },
+    {
+      "id": "xian-incident-1936",
+      "core": true
+    },
+    {
+      "id": "nanjing-national-government-1927",
+      "core": false
+    }
   ]
 }

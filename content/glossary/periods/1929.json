@@ -1,0 +1,23 @@
+{
+  "period": "1929",
+  "termRefs": [
+    {"id":"zhang-zuolin-assassination-1928","core":false,"periodNote":"事件発生そのものではなく、1929年の政治責任処理と田中内閣総辞職への接続を追う。"},
+    {"id":"tanaka-giichi-cabinet-1927","core":false},
+    {"id":"hamaguchi-cabinet-1929","core":true},
+    {"id":"rikken-minseito-1927","core":false},
+    {"id":"shidehara-diplomacy-1929","core":true},
+    {"id":"japan-china-tariff-agreement-1930","core":false},
+    {"id":"inoue-finance-1929","core":true},
+    {"id":"gold-standard-1897","core":false,"periodNote":"1897年の制度成立と1930年の金本位制復帰をつなぐ基礎概念として参照する。"},
+    {"id":"world-depression-1929","core":true},
+    {"id":"gold-embargo-lifting-1930","core":true},
+    {"id":"showa-depression-1930","core":true},
+    {"id":"general-election-1930","core":true},
+    {"id":"london-naval-treaty-1930","core":true},
+    {"id":"naval-general-staff","core":true},
+    {"id":"supreme-command-controversy-1930","core":true},
+    {"id":"sumitsuin-1888","core":false,"periodNote":"ロンドン海軍軍縮条約の批准過程で内閣・議会とは別の審議回路として確認する。"},
+    {"id":"census-1930","core":true},
+    {"id":"hamaguchi-assassination-attempt-1930","core":true}
+  ]
+}

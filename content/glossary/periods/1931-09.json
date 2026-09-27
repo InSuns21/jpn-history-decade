@@ -1,0 +1,23 @@
+{
+  "period": "1931-09",
+  "termRefs": [
+    {"id":"wakatsuki-cabinet-1931","core":true,"periodNote":"9月19日の不拡大方針から12月の政権崩壊までを扱う。"},
+    {"id":"manchurian-incident-1931","core":true},
+    {"id":"liutiaohu-incident-1931","core":true},
+    {"id":"kwantung-army-1919","core":true},
+    {"id":"non-expansion-policy-1931","core":true},
+    {"id":"chosen-army-1931","core":true},
+    {"id":"shidehara-diplomacy-1929","core":true},
+    {"id":"nanjing-national-government-1927","core":true},
+    {"id":"zhang-xueliang-northeast-regime","core":false},
+    {"id":"league-of-nations-1920","core":true},
+    {"id":"cooperation-cabinet-plan-1931","core":true},
+    {"id":"rikken-minseito-1927","core":false},
+    {"id":"rikken-seiyukai-1900","core":false},
+    {"id":"inukai-cabinet-1931","core":true},
+    {"id":"gold-standard-1897","core":false},
+    {"id":"gold-export-reembargo-1931","core":true},
+    {"id":"world-depression-1929","core":false},
+    {"id":"showa-depression-1930","core":false}
+  ]
+}

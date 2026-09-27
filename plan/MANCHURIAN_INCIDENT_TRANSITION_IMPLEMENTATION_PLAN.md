@@ -84,7 +84,7 @@ endDate: "1931-09-17"
 
 # 4. JH26 — 1931年1月1日〜9月17日
 
-**Status: implemented / CI pending (2026-09-27)**
+**Status: completed / CI passed (2026-09-27)**
 
 ### 実装結果
 

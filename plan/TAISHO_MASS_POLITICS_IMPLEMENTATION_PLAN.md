@@ -252,7 +252,7 @@
 
 # 6. JH20 — 1912–1914
 
-**Status: planned**
+**Status: published**
 
 ## 中心問い
 
@@ -665,7 +665,7 @@ plan_done/
 
 # 16. フェーズ全体 Definition of Done
 
-- [ ] JH20 1912–1914 published
+- [x] JH20 1912–1914 published
 - [ ] JH19→JH20接続監査 completed
 - [ ] JH21 1915–1918 published
 - [ ] 中間監査 G completed

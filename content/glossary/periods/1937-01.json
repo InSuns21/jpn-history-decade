@@ -1,0 +1,13 @@
+{
+  "period": "1937-01",
+  "termRefs": [
+    {"id":"hirota-cabinet-1936","core":false},
+    {"id":"ugaki-cabinet-failure-1937","core":true},
+    {"id":"military-ministers-active-duty-system","core":true,"periodNote":"1937年1月の宇垣組閣失敗で、現役陸相候補を確保できないことが内閣成立の制約として具体化した。"},
+    {"id":"hayashi-cabinet-1937","core":true},
+    {"id":"general-election-1937","core":true},
+    {"id":"rikken-seiyukai-1900","core":false},
+    {"id":"rikken-minseito-1927","core":false},
+    {"id":"shakai-taishuto-1932","core":false}
+  ]
+}

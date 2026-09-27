@@ -1,0 +1,16 @@
+{
+  "period": "1933-06",
+  "termRefs": [
+    {"id":"tanggu-truce-1933","core":true,"periodNote":"前ページ末の停戦を、この期間の出発点として扱う。"},
+    {"id":"saito-cabinet-1932","core":true},
+    {"id":"rikken-seiyukai-1900","core":false},
+    {"id":"rikken-minseito-1927","core":false},
+    {"id":"takahashi-finance-1932","core":true},
+    {"id":"boj-government-bond-underwriting-1932","core":true},
+    {"id":"manchukuo-establishment-1932","core":false,"periodNote":"1932年の成立と1934年の帝制移行を区別する。"},
+    {"id":"manchukuo-empire-1934","core":true},
+    {"id":"washington-naval-treaty-1922","core":true},
+    {"id":"london-naval-treaty-1930","core":true},
+    {"id":"teijin-incident-1934","core":true}
+  ]
+}

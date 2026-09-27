@@ -1,0 +1,22 @@
+{
+  "period": "1906",
+  "termRefs": [
+    {"id":"russo-japanese-war-finance","core":false,"periodNote":"日露戦争で形成された巨額債務と外債が、戦後財政整理と国家信用維持の前提になった。"},
+    {"id":"rikken-seiyukai-1900","core":false,"periodNote":"西園寺内閣の政治基盤となり、桂内閣とも政策ごとの協力を深めた。"},
+    {"id":"taiwan-governor-general-1895","core":false,"periodNote":"台湾では総督府統治が継続し、土地・交通・林野・産業への介入が深化した。"},
+    {"id":"rokusan-ho-1896","core":false,"periodNote":"本土の府県とは異なる台湾の植民地法制を理解する前提として継続する。"},
+    {"id":"russo-japanese-postwar-finance","core":true},
+    {"id":"keien-era","core":true},
+    {"id":"railway-nationalization-1906","core":true},
+    {"id":"south-manchuria-railway-1906","core":true},
+    {"id":"korea-residency-general-1906","core":true},
+    {"id":"japan-korea-agreement-1907","core":true},
+    {"id":"korean-righteous-army","core":true},
+    {"id":"red-flag-incident-1908","core":false},
+    {"id":"high-treason-incident-1910","core":true},
+    {"id":"korea-annexation-1910","core":true},
+    {"id":"government-general-korea-1910","core":true},
+    {"id":"tariff-autonomy-1911","core":true},
+    {"id":"factory-act-1911","core":true}
+  ]
+}

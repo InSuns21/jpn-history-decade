@@ -1,0 +1,22 @@
+{
+  "period": "1935-08",
+  "termRefs": [
+    {"id":"okada-cabinet-1934","core":true},
+    {"id":"aizawa-incident-1935","core":true},
+    {"id":"military-academy-incident-1934","core":false},
+    {"id":"kodoha-1930s","core":false},
+    {"id":"toseiha-1930s","core":false},
+    {"id":"emperor-organ-theory","core":false},
+    {"id":"emperor-organ-theory-dispute-1935","core":true},
+    {"id":"first-kokutai-meicho-statement-1935","core":false},
+    {"id":"second-kokutai-meicho-statement-1935","core":true},
+    {"id":"east-hebei-autonomous-regime-1935","core":true},
+    {"id":"hebei-chahar-political-council-1935","core":true},
+    {"id":"washington-naval-treaty-denunciation-1934","core":false},
+    {"id":"london-naval-conference-withdrawal-1936","core":true},
+    {"id":"takahashi-finance-1932","core":true,"periodNote":"恐慌脱出のための拡張局面ではなく、1936年度予算での歳出・公債抑制と軍事費要求の調整を扱う。"},
+    {"id":"boj-government-bond-underwriting-1932","core":false},
+    {"id":"universal-manhood-suffrage-law-1925","core":false},
+    {"id":"general-election-1936","core":true}
+  ]
+}

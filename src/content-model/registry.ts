@@ -2,7 +2,8 @@ import { compiledContent } from '../generated/content.generated'
 import type { CrosscuttingPageData, PeriodPageData } from './types'
 
 export const periods: PeriodPageData[] = [...compiledContent.periods].sort(
-  (left, right) => left.startYear - right.startYear,
+  (left, right) =>
+    left.startDate.localeCompare(right.startDate) || left.routeKey.localeCompare(right.routeKey),
 )
 
 export const crosscutting: CrosscuttingPageData[] = [...compiledContent.crosscutting].sort(

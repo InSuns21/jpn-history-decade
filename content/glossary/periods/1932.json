@@ -1,0 +1,21 @@
+{
+  "period": "1932",
+  "termRefs": [
+    {"id":"manchurian-incident-1931","core":true,"periodNote":"1931年の軍事的既成事実が1932年の国家形成・国際調査へどう接続したかを追う。"},
+    {"id":"inukai-cabinet-1931","core":true},
+    {"id":"first-shanghai-incident-1932","core":true},
+    {"id":"manchukuo-establishment-1932","core":true},
+    {"id":"kwantung-army-1919","core":false},
+    {"id":"league-of-nations-1920","core":false},
+    {"id":"lytton-commission-1932","core":true},
+    {"id":"blood-league-incident-1932","core":true},
+    {"id":"may-fifteenth-incident-1932","core":true},
+    {"id":"saito-cabinet-1932","core":true},
+    {"id":"rikken-seiyukai-1900","core":false},
+    {"id":"rikken-minseito-1927","core":false},
+    {"id":"gold-export-reembargo-1931","core":false},
+    {"id":"managed-currency-transition-1932","core":true},
+    {"id":"takahashi-finance-1932","core":true},
+    {"id":"showa-depression-1930","core":false}
+  ]
+}

@@ -10,9 +10,11 @@
 
 ## 実装計画
 
-現在activeな個別実装計画はない。
+- `EARLY_SHOWA_PARTY_FINANCE_IMPLEMENTATION_PLAN.md`
 
-1912〜1925年の実装計画は完了し、`plan_done/TAISHO_MASS_POLITICS_IMPLEMENTATION_PLAN.md` へ移動済み。次は長期企画書から1926年以後の実装フェーズを切り出す。
+1926〜1930年を対象とし、金融恐慌、最初の男子普通選挙、治安維持法改正、山東・満洲をめぐる政策、浜口内閣、世界恐慌、金輸出解禁、ロンドン海軍軍縮条約までを扱うactive implementation plan。
+
+1931年はこの計画へ含めず、満州事変以後の変化速度に応じて次フェーズで高解像度化を検討する。
 
 ## ライフサイクル
 

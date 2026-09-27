@@ -121,7 +121,7 @@ JH26公開前に、JH25のnextIssuesで残した金本位制、昭和恐慌、�
 
 # 5. JH27 — 1931年9月18日〜12月31日
 
-**Status: implemented / CI pending (2026-09-27)**
+**Status: completed / CI passed (2026-09-27)**
 
 ### 実装結果
 

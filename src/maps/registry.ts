@@ -6,6 +6,7 @@ import { boshinWar1868Map } from './definitions/boshinWar1868.ts'
 import { shizokuRebellionsSeinan1874Map } from './definitions/shizokuRebellionsSeinan1874.ts'
 import { urbanPopulation1920Map } from './definitions/urbanPopulation1920.ts'
 import { urbanPopulation1930Map } from './definitions/urbanPopulation1930.ts'
+import { manchurianIncident1931Map } from './definitions/manchurianIncident1931.ts'
 import type { HistoricalMapDefinition } from './schema.ts'
 
 export const mapDefinitions: HistoricalMapDefinition[] = [
@@ -15,6 +16,7 @@ export const mapDefinitions: HistoricalMapDefinition[] = [
   shizokuRebellionsSeinan1874Map,
   urbanPopulation1920Map,
   urbanPopulation1930Map,
+  manchurianIncident1931Map,
 ]
 
 export function findMapDefinition(id: string) {

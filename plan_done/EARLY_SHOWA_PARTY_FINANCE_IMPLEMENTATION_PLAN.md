@@ -1,11 +1,12 @@
 # 1926年から1930年まで — 実装計画
 
-- **Status:** active
+- **Status:** completed
 - **Created:** 2026-09-27
+- **Completed:** 2026-09-27
 - **Scope:** 1926年〜1930年
 - **Primary goal:** 1925年に制度化された男子普通選挙と治安維持法が実際の政治参加・統制の中でどう作動し、金融恐慌・中国情勢・世界恐慌・金本位制復帰・海軍軍縮をめぐる選択が、政党内閣・軍・官僚・枢密院・企業・家計・植民地統治の関係をどう組み替えたかを、1931年以後の戦争から逆算せずに読む
-- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](./JPN_HISTORY_DECADE_PLAN.md)
-- **Previous phase:** [TAISHO_MASS_POLITICS_IMPLEMENTATION_PLAN.md](../plan_done/TAISHO_MASS_POLITICS_IMPLEMENTATION_PLAN.md)
+- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](../plan/JPN_HISTORY_DECADE_PLAN.md)
+- **Previous phase:** [TAISHO_MASS_POLITICS_IMPLEMENTATION_PLAN.md](./TAISHO_MASS_POLITICS_IMPLEMENTATION_PLAN.md)
 - **Workspace rules:** [../SYSTEM_PROMPT.md](../SYSTEM_PROMPT.md)
 
 ---
@@ -604,7 +605,7 @@ plan_done/
 - [ ] 地図要否を判断
 - [ ] 地図がある場合 Data / Style Audit passed。Human Visual Auditは原則passed、または地図監査標準の再利用point-only例外を満たす
 - [ ] desktop / tablet-touch / mobile確認（再利用point-only例外では再確認省略可）
-- [ ] `npm run check` green
+- [x] `npm run check` / CI green
 
 ---
 
@@ -623,11 +624,11 @@ plan_done/
 - [x] A14 / A15を実装またはno-map理由まで記録
 - [x] A14 Data / Style Audit passed。Human Visual Auditは再利用point-only例外を適用
 - [x] フェーズ末独立監査は不要判定（具体的な未解決の横断問題なし）
-- [ ] `npm run check` green
-- [ ] GitHub Actions green
-- [ ] GitHub Pages deploy green
-- [ ] Statusをcompletedへ変更
-- [ ] `plan_done/`へ移動
+- [x] `npm run check` green
+- [x] GitHub Actions green
+- [x] GitHub Pages deploy green
+- [x] Statusをcompletedへ変更
+- [x] `plan_done/`へ移動
 
 ---
 
@@ -653,3 +654,5 @@ plan_done/
 - 1937年日中戦争へ至る局面
 
 次フェーズ切り出し時には、1931–1936を一括するのではなく、**満州事変以後の変化速度に応じて年・半年・重要局面単位を採用できるかを先に判定する。**
+
+後続のactive planは [`MANCHURIAN_INCIDENT_TRANSITION_IMPLEMENTATION_PLAN.md`](../plan/MANCHURIAN_INCIDENT_TRANSITION_IMPLEMENTATION_PLAN.md) とし、日付範囲対応を先に実装してから1931年以後を局面単位で進める。

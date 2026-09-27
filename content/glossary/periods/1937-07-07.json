@@ -1,0 +1,11 @@
+{
+  "period": "1937-07-07",
+  "termRefs": [
+    {"id":"lugou-bridge-incident-1937","core":true},
+    {"id":"china-garrison-army","core":true},
+    {"id":"chinese-29th-army","core":true},
+    {"id":"hebei-chahar-political-council-1935","core":false},
+    {"id":"nanjing-national-government-1927","core":false},
+    {"id":"first-konoe-cabinet-1937","core":false}
+  ]
+}

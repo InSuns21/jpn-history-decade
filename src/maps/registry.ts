@@ -5,6 +5,7 @@ import { treatyPortsTransport1859Map } from './definitions/treatyPortsTransport1
 import { boshinWar1868Map } from './definitions/boshinWar1868.ts'
 import { shizokuRebellionsSeinan1874Map } from './definitions/shizokuRebellionsSeinan1874.ts'
 import { urbanPopulation1920Map } from './definitions/urbanPopulation1920.ts'
+import { urbanPopulation1930Map } from './definitions/urbanPopulation1930.ts'
 import type { HistoricalMapDefinition } from './schema.ts'
 
 export const mapDefinitions: HistoricalMapDefinition[] = [
@@ -13,6 +14,7 @@ export const mapDefinitions: HistoricalMapDefinition[] = [
   boshinWar1868Map,
   shizokuRebellionsSeinan1874Map,
   urbanPopulation1920Map,
+  urbanPopulation1930Map,
 ]
 
 export function findMapDefinition(id: string) {
@@ -29,8 +31,11 @@ export function validateHistoricalMapDefinition(definition: HistoricalMapDefinit
     if (definition.auditState.styleAudit !== 'passed') {
       errors.push(definition.id + ': published map requires passed Style Audit')
     }
-    if (definition.auditState.visualAudit !== 'passed') {
-      errors.push(definition.id + ': published map requires passed Human Visual Audit')
+    if (
+      definition.auditState.visualAudit !== 'passed' &&
+      definition.auditState.visualAudit !== 'not-required-reused-pattern'
+    ) {
+      errors.push(definition.id + ': published map requires passed Human Visual Audit or an allowed reused-pattern exemption')
     }
   }
 

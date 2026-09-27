@@ -1,0 +1,110 @@
+import type { HistoricalMapDefinition } from '../schema.ts'
+
+export const urbanPopulation1930Map: HistoricalMapDefinition = {
+  id: 'urban-population-1930',
+  title: '1930年国勢調査：人口10万人以上の市',
+  historicalQuestion:
+    '1930年には人口10万人以上の都市がどこまで全国へ広がり、1920年の都市分布から何が変わったのか。',
+  readingNote:
+    '人口は1930年国勢調査の当時の市単位。点は都市の代表位置を現在の地理上へ概略配置したもので、1930年の市域・市界を示さない。1920年との比較は各調査時点の都市規模の比較であり、同一市域の人口増減ではない。背景地図・海岸線は現代のOpenStreetMapであり、歴史境界ではない。',
+  status: 'published',
+  period: { startYear: 1930, endYear: 1930 },
+  initialView: {
+    center: [136.9, 36.6],
+    zoom: 3.8,
+  },
+  datasets: [
+    {
+      id: 'urban-population-points-1930',
+      provenance: {
+        sourceId: 'estat-census-1930',
+        title: '昭和5年（1930年）国勢調査の市別人口から作成した都市代表点',
+        institution: 'jpn-history-decade',
+        sourceType: 'derived',
+        license:
+          'Population values derived from official Statistics Bureau / e-Stat census tables. Coordinates are site-authored approximate representative points; no historical boundary geometry copied.',
+        derivedFromSourceIds: ['estat-census-1930'],
+        temporalCoverage: {
+          from: '1930-10-01',
+          to: '1930-10-01',
+          basis: 'instant',
+          note: '昭和5年国勢調査の調査時点。人口10万人以上の市を対象とする。',
+        },
+        spatialCoverage: '1930年国勢調査で人口10万人以上だった日本内地の市',
+        geometryConfidence: 'approximate',
+        transformations: [
+          '1930年国勢調査の当時市別人口から人口10万人以上の28市を抽出した。',
+          '人口規模をA12と同じ4区分（100万人以上、40万〜100万人未満、15万〜40万人未満、10万〜15万人未満）へ分類した。',
+          '歴史的市域ポリゴンは作成せず、各都市名を現在の地理上の代表点へ概略配置した。',
+        ],
+        notes:
+          '各人口値は調査時点の市域による。1920年から1930年の間の市制施行・合併・編入を組み替えていないため、面積・人口密度・同一境界での人口増減分析には使用しない。',
+      },
+      allowedGeometryTypes: ['Point'],
+      requiredProperties: [
+        'category',
+        'marker',
+        'label',
+        'labelPlacement',
+        'year',
+        'population',
+        'detail',
+      ],
+      features: [
+        { id: 'tokyo-1930', geometry: { type: 'Point', coordinates: [139.76, 35.68] }, properties: { category: 'million-plus', marker: '●', label: '東京市', labelPlacement: 'top', year: 1930, population: 2070913, detail: '人口 2,070,913人。1930年時点の東京市人口で、1932年の市域拡張前。' } },
+        { id: 'osaka-1930', geometry: { type: 'Point', coordinates: [135.50, 34.69] }, properties: { category: 'million-plus', marker: '●', label: '大阪市', labelPlacement: 'left', year: 1930, population: 2453573, detail: '人口 2,453,573人。1925年の市域拡張後の値で、1920年人口との単純な同一市域比較はできない。' } },
+        { id: 'nagoya-1930', geometry: { type: 'Point', coordinates: [136.91, 35.18] }, properties: { category: 'large', marker: '◆', label: '名古屋市', labelPlacement: 'right', year: 1930, population: 907404, detail: '人口 907,404人。' } },
+        { id: 'kobe-1930', geometry: { type: 'Point', coordinates: [135.19, 34.69] }, properties: { category: 'large', marker: '◆', label: '神戸市', labelPlacement: 'bottom', year: 1930, population: 787616, detail: '人口 787,616人。' } },
+        { id: 'kyoto-1930', geometry: { type: 'Point', coordinates: [135.76, 35.01] }, properties: { category: 'large', marker: '◆', label: '京都市', labelPlacement: 'top', year: 1930, population: 765142, detail: '人口 765,142人。' } },
+        { id: 'yokohama-1930', geometry: { type: 'Point', coordinates: [139.64, 35.45] }, properties: { category: 'large', marker: '◆', label: '横浜市', labelPlacement: 'bottom', year: 1930, population: 620306, detail: '人口 620,306人。' } },
+        { id: 'hiroshima-1930', geometry: { type: 'Point', coordinates: [132.46, 34.40] }, properties: { category: 'middle', marker: '■', label: '広島市', labelPlacement: 'right', year: 1930, population: 270417, detail: '人口 270,417人。' } },
+        { id: 'fukuoka-1930', geometry: { type: 'Point', coordinates: [130.40, 33.59] }, properties: { category: 'middle', marker: '■', label: '福岡市', labelPlacement: 'right', year: 1930, population: 228289, detail: '人口 228,289人。九州北部の行政・商業都市として人口を拡大した。' } },
+        { id: 'nagasaki-1930', geometry: { type: 'Point', coordinates: [129.87, 32.75] }, properties: { category: 'middle', marker: '■', label: '長崎市', labelPlacement: 'right', year: 1930, population: 204626, detail: '人口 204,626人。' } },
+        { id: 'hakodate-1930', geometry: { type: 'Point', coordinates: [140.73, 41.77] }, properties: { category: 'middle', marker: '■', label: '函館市', labelPlacement: 'right', year: 1930, population: 197252, detail: '人口 197,252人。北海道では札幌市を上回る人口を持った。' } },
+        { id: 'kure-1930', geometry: { type: 'Point', coordinates: [132.57, 34.25] }, properties: { category: 'middle', marker: '■', label: '呉市', labelPlacement: 'bottom', year: 1930, population: 190282, detail: '人口 190,282人。軍港・工業都市。' } },
+        { id: 'sendai-1930', geometry: { type: 'Point', coordinates: [140.87, 38.27] }, properties: { category: 'middle', marker: '■', label: '仙台市', labelPlacement: 'right', year: 1930, population: 190180, detail: '人口 190,180人。' } },
+        { id: 'sapporo-1930', geometry: { type: 'Point', coordinates: [141.35, 43.06] }, properties: { category: 'middle', marker: '■', label: '札幌市', labelPlacement: 'bottom', year: 1930, population: 168576, detail: '人口 168,576人。1920年調査時は札幌区で、1922年に札幌市となった。' } },
+        { id: 'yahata-1930', geometry: { type: 'Point', coordinates: [130.80, 33.87] }, properties: { category: 'middle', marker: '■', label: '八幡市', labelPlacement: 'left', year: 1930, population: 168217, detail: '人口 168,217人。製鉄業を核とする工業都市。' } },
+        { id: 'kumamoto-1930', geometry: { type: 'Point', coordinates: [130.71, 32.80] }, properties: { category: 'middle', marker: '■', label: '熊本市', labelPlacement: 'right', year: 1930, population: 164460, detail: '人口 164,460人。' } },
+        { id: 'kanazawa-1930', geometry: { type: 'Point', coordinates: [136.66, 36.56] }, properties: { category: 'middle', marker: '■', label: '金沢市', labelPlacement: 'right', year: 1930, population: 157311, detail: '人口 157,311人。' } },
+        { id: 'otaru-1930', geometry: { type: 'Point', coordinates: [141.00, 43.19] }, properties: { category: 'hundred-thousand', marker: '○', label: '小樽市', labelPlacement: 'left', year: 1930, population: 144887, detail: '人口 144,887人。北海道の港湾・商業都市。' } },
+        { id: 'okayama-1930', geometry: { type: 'Point', coordinates: [133.92, 34.66] }, properties: { category: 'hundred-thousand', marker: '○', label: '岡山市', labelPlacement: 'top', year: 1930, population: 139222, detail: '人口 139,222人。' } },
+        { id: 'kagoshima-1930', geometry: { type: 'Point', coordinates: [130.56, 31.60] }, properties: { category: 'hundred-thousand', marker: '○', label: '鹿児島市', labelPlacement: 'right', year: 1930, population: 137236, detail: '人口 137,236人。' } },
+        { id: 'shizuoka-1930', geometry: { type: 'Point', coordinates: [138.38, 34.98] }, properties: { category: 'hundred-thousand', marker: '○', label: '静岡市', labelPlacement: 'right', year: 1930, population: 136481, detail: '人口 136,481人。' } },
+        { id: 'sasebo-1930', geometry: { type: 'Point', coordinates: [129.72, 33.16] }, properties: { category: 'hundred-thousand', marker: '○', label: '佐世保市', labelPlacement: 'left', year: 1930, population: 133174, detail: '人口 133,174人。軍港を持つ都市。' } },
+        { id: 'niigata-1930', geometry: { type: 'Point', coordinates: [139.04, 37.92] }, properties: { category: 'hundred-thousand', marker: '○', label: '新潟市', labelPlacement: 'right', year: 1930, population: 125108, detail: '人口 125,108人。日本海側の港湾都市。' } },
+        { id: 'sakai-1930', geometry: { type: 'Point', coordinates: [135.48, 34.57] }, properties: { category: 'hundred-thousand', marker: '○', label: '堺市', labelPlacement: 'bottom', year: 1930, population: 120348, detail: '人口 120,348人。大阪市に近接する都市。' } },
+        { id: 'wakayama-1930', geometry: { type: 'Point', coordinates: [135.17, 34.23] }, properties: { category: 'hundred-thousand', marker: '○', label: '和歌山市', labelPlacement: 'left', year: 1930, population: 117444, detail: '人口 117,444人。' } },
+        { id: 'yokosuka-1930', geometry: { type: 'Point', coordinates: [139.67, 35.28] }, properties: { category: 'hundred-thousand', marker: '○', label: '横須賀市', labelPlacement: 'right', year: 1930, population: 110301, detail: '人口 110,301人。軍港を持つ都市。' } },
+        { id: 'hamamatsu-1930', geometry: { type: 'Point', coordinates: [137.73, 34.71] }, properties: { category: 'hundred-thousand', marker: '○', label: '浜松市', labelPlacement: 'right', year: 1930, population: 109478, detail: '人口 109,478人。' } },
+        { id: 'moji-1930', geometry: { type: 'Point', coordinates: [130.96, 33.95] }, properties: { category: 'hundred-thousand', marker: '○', label: '門司市', labelPlacement: 'right', year: 1930, population: 108130, detail: '人口 108,130人。関門海峡の港湾都市で、現在は北九州市門司区の一部。' } },
+        { id: 'kawasaki-1930', geometry: { type: 'Point', coordinates: [139.70, 35.53] }, properties: { category: 'hundred-thousand', marker: '○', label: '川崎市', labelPlacement: 'top', year: 1930, population: 104351, detail: '人口 104,351人。京浜工業地帯の発展と結びついて人口を増やした。' } },
+      ],
+    },
+  ],
+  layers: [
+    {
+      id: 'urban-population-points-1930',
+      datasetId: 'urban-population-points-1930',
+      categoryProperty: 'category',
+      categories: ['million-plus', 'large', 'middle', 'hundred-thousand'],
+    },
+  ],
+  legend: [
+    { value: 'million-plus', label: '100万人以上', marker: '●', color: '#5f4030' },
+    { value: 'large', label: '40万〜100万人未満', marker: '◆', color: '#365d70' },
+    { value: 'middle', label: '15万〜40万人未満', marker: '■', color: '#69602e' },
+    { value: 'hundred-thousand', label: '10万〜15万人未満', marker: '○', color: '#55624b' },
+  ],
+  auditState: {
+    dataAudit: 'passed',
+    styleAudit: 'passed',
+    visualAudit: 'not-required-reused-pattern',
+    notes: [
+      '人口値は1930年国勢調査の当時市単位を使用し、現代自治体へ組替えていない。',
+      '歴史的市域境界を使用せず、代表点のみを概略配置したため geometryConfidence=approximate とした。',
+      'A12（1920年人口地図）と同一の点記号・人口階級・凡例・表示コンポーネントを再利用する。',
+      '点のみのデータで、既にHuman Visual Audit済みのA12と同一表示パターンを再利用するため、規約の再利用パターン例外により個別Human Visual Auditを省略した。',
+    ],
+  },
+}

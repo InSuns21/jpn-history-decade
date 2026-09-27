@@ -1,11 +1,13 @@
 # 1933年6月から1936年2月25日まで — 塘沽停戦後から二・二六事件前夜 実装計画
 
-- **Status:** active
-- **Progress:** JH30「1933-06-01〜1934-07-07」・JH31「1934-07-08〜1935-08-11」・JH32「1935-08-12〜1936-02-25」実装済み。A18はno-map判定済み。横断記事publication gateを実施し、S02・S05・S09・S10を1936年2月25日まで延長。新規横断記事は作らず、フェーズ末の独立監査も具体的な監査仮説が残らないため不要判定。次はCI / Pages確認とフェーズ完了処理。
+- **Status:** completed
+- **Progress:** completed。JH30〜JH32、A18 no-map判定、横断記事publication gate、S02・S05・S09・S10の1936年2月25日までの延長を完了。独立監査は具体的な未解決仮説がないため不要判定。
 - **Created:** 2026-09-28
+- **Completed:** 2026-09-28
+- **Final verification:** GitHub Actions CI run #244 success / GitHub Pages run #119 success
 - **Scope:** 1933-06-01〜1936-02-25
 - **Primary goal:** 塘沽停戦後の相対的な軍事安定のもとで、斎藤・岡田内閣、景気回復後の高橋財政、海軍軍縮体制の解体、天皇機関説問題、華北をめぐる軍・外交圧力、陸軍内部の派閥対立、普通選挙と政党政治がどのように同時進行したかを、二・二六事件から逆算せずに読む
-- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](./JPN_HISTORY_DECADE_PLAN.md)
+- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](../plan/JPN_HISTORY_DECADE_PLAN.md)
 - **Previous phase:** [MANCHURIAN_INCIDENT_TRANSITION_IMPLEMENTATION_PLAN.md](../plan_done/MANCHURIAN_INCIDENT_TRANSITION_IMPLEMENTATION_PLAN.md)
 - **Workspace rules:** [../SYSTEM_PROMPT.md](../SYSTEM_PROMPT.md)
 
@@ -310,16 +312,16 @@ plan_done/
 
 ## 各年代ページ
 
-- [ ] 中学校教科書レベルを前提に、高校日本史級の初出語へ足場説明を置く
-- [ ] 本文は成立した状態・変化・因果を肯定文で先に示す
-- [ ] 同時代の情報・選択肢と後世の結果を分ける
-- [ ] 政府・陸軍省・参謀本部・各軍・海軍・政党を一枚岩にしない
-- [ ] 中国側主体を背景化しない
-- [ ] 二・二六事件を必然化しない
-- [ ] 直前ページとの接続確認をpublished前に完了
-- [ ] 用語辞書・period glossary refsを更新
-- [ ] 出典を本文主張へ接続
-- [ ] 必要な地図だけ監査を通す
+- [x] 中学校教科書レベルを前提に、高校日本史級の初出語へ足場説明を置く
+- [x] 本文は成立した状態・変化・因果を肯定文で先に示す
+- [x] 同時代の情報・選択肢と後世の結果を分ける
+- [x] 政府・陸軍省・参謀本部・各軍・海軍・政党を一枚岩にしない
+- [x] 中国側主体を背景化しない
+- [x] 二・二六事件を必然化しない
+- [x] 直前ページとの接続確認をpublished前に完了
+- [x] 用語辞書・period glossary refsを更新
+- [x] 出典を本文主張へ接続
+- [x] 必要な地図だけ監査を通す
 
 ## フェーズ
 
@@ -327,10 +329,10 @@ plan_done/
 - [x] A18必要性・データ品質判定完了
 - [x] 横断記事publication gate完了
 - [x] 具体的な横断問題が残らないため独立監査不要と判定
-- [ ] `npm run check` / GitHub Actions green
-- [ ] GitHub Pages deploy green
-- [ ] Status: completed
-- [ ] `plan_done/` へ移動
+- [x] `npm run check` / GitHub Actions green（main push CI run #244）
+- [x] GitHub Pages deploy green（main push Pages run #119）
+- [x] Status: completed
+- [x] `plan_done/` へ移動
 
 ---
 

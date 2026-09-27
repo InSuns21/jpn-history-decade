@@ -1,6 +1,6 @@
 # 1891年から1911年まで — 実装計画
 
-- **Status:** active
+- **Status:** completed (2026-09-27)
 - **Created:** 2026-09-27
 - **Scope:** 1891年〜1911年
 - **Primary goal:** 1890年に作動を始めた立憲体制が、議会・政党・官僚・軍・財政・外交の相互作用のなかでどのように運用され、日清・日露戦争、産業化、植民地統治、社会問題を通じて国家と社会の構造がどう変化したかを、単純な「近代化」や「帝国化」の一本道にせず連続して読む
@@ -852,11 +852,11 @@ Overall Audit 1891–1911
  ↓
 1800–1911 connection audit ✅
  ↓
-CI / Pages
+CI / Pages ✅
  ↓
-Status: completed
+Status: completed ✅
  ↓
-plan_done/
+plan_done/ ✅
 ```
 
 地図は年代ページの前提にしない。地図データ調査が本文を止める場合は、本文を先行し、地図は独立判定する。
@@ -908,14 +908,26 @@ plan_done/
 - [x] 工場法の1911成立 / 1916施行を区別
 - [x] 横断コンテンツ必要性監査 completed
 - [x] 地図候補は実装 / 見送り理由を記録
-- [ ] 実装した地図の全監査 passed
+- [x] 実装した地図の全監査 passed（このフェーズではA7/A8/A9をno-map判定。既存published地図はCIのMap Audit gateを通過）
 - [x] 1891–1911全体監査 completed
 - [x] 1800–1911接続監査 completed
-- [ ] `npm run check` green
-- [ ] GitHub Actions green
-- [ ] GitHub Pages deploy green
-- [ ] Statusをcompletedへ変更
-- [ ] `plan_done/`へ移動
+- [x] `npm run check` green
+- [x] GitHub Actions green
+- [x] GitHub Pages deploy green
+- [x] Statusをcompletedへ変更
+- [x] `plan_done/`へ移動
+
+---
+
+# 19B. 完了確認
+
+**Status: completed (2026-09-27)**
+
+1800–1911接続監査のPRをmainへマージ後、GitHub ActionsのCIで content validation / glossary・source・internal link validation / Map Audit gate / lint / typecheck / build が成功した。続くGitHub Pages workflowも build / deploy ともに成功した。
+
+このフェーズで新規公開した地図はない。A7・A8・A9はいずれもデータ品質と歴史的意味の精度を優先して no-map と判定し、既存のpublished地図はMap Audit gateを通過している。
+
+以上により、この実装計画のDefinition of Doneを満たした。
 
 ---
 

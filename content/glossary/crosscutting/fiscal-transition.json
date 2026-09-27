@@ -60,6 +60,38 @@
     {
       "id": "convertible-banknote-ordinance-1884",
       "core": true
+    },
+    {
+      "id": "gold-standard-1897",
+      "core": true
+    },
+    {
+      "id": "russo-japanese-war-finance",
+      "core": true
+    },
+    {
+      "id": "sino-japanese-war-1894-1895",
+      "core": false
+    },
+    {
+      "id": "shimonoseki-treaty-1895",
+      "core": false
+    },
+    {
+      "id": "nisshin-sengo-keiei",
+      "core": true
+    },
+    {
+      "id": "russo-japanese-war-1904-1905",
+      "core": false
+    },
+    {
+      "id": "portsmouth-treaty-1905",
+      "core": false
+    },
+    {
+      "id": "russo-japanese-postwar-finance",
+      "core": true
     }
   ]
 }

@@ -19,7 +19,7 @@
 - 1800–1911年を公開品質で実装済み（年代史19ページ＋横断記事6本）
 - 1800–1890接続監査、1891–1895の中間監査E、1896–1911の中間監査F、A7/A8/A9地図必要性・データ品質判定、1891–1911横断コンテンツ必要性監査まで完了
 - 1874–1890年の実装フェーズは完了し、実装計画を `plan_done/` へ移動済み
-- 1891–1911年を対象とするactive implementation plan `plan/MEIJI_PARLIAMENT_EMPIRE_IMPLEMENTATION_PLAN.md` を進行中。S05「政治参加の回路」まで実装済みで、次工程はS02財政金融史の1911年延長
+- 1891–1911年を対象とするactive implementation plan `plan/MEIJI_PARLIAMENT_EMPIRE_IMPLEMENTATION_PLAN.md` を進行中。S05「政治参加の回路」とS02財政金融史の1911年延長まで実装済みで、次工程は植民地統治の制度差比較
 - GitHub Actions による lint / typecheck / build CI
 - `main` 更新時の GitHub Pages 自動デプロイ
 

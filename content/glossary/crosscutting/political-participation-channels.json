@@ -164,6 +164,26 @@
     {
       "id": "general-election-1936",
       "core": true
+    },
+    {
+      "id": "military-ministers-active-duty-system",
+      "core": true
+    },
+    {
+      "id": "ugaki-cabinet-failure-1937",
+      "core": true
+    },
+    {
+      "id": "hayashi-cabinet-1937",
+      "core": false
+    },
+    {
+      "id": "general-election-1937",
+      "core": true
+    },
+    {
+      "id": "first-konoe-cabinet-1937",
+      "core": false
     }
   ]
 }

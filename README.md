@@ -24,7 +24,7 @@
 - 1800–1925年の本文構造・留保表現を31記事（年代23＋横断8）で遡及監査済み。否定形の注意から段落を始める傾向を改め、「何が何を変え、何を可能・困難にしたか」を先に示す執筆基準を追加し、既存本文も改稿済み
 - 公開本文の前提知識を中学校の歴史教科書レベルへ変更し、1800–1925年の年代23ページ＋横断8記事と用語辞書236語を遡及監査済み。内容の到達点は維持したまま、高校日本史で詳しく扱う制度・人物・事件・金融用語に初出時の足場説明を追加
 - 1931–1933年5月フェーズは main push CI run #233 / GitHub Pages run #113 とも success を確認して完了。A17は制度・時系列の理解に地図が寄与しないためno-map、横断記事S02/S05/S09/S10も1933年まで延長済み
-- 現在のactive implementation planは `plan/POST_TANGGU_PRE_FEBRUARY_26_IMPLEMENTATION_PLAN.md`。JH30「1933年6月1日〜1934年7月7日」・JH31「1934年7月8日〜1935年8月11日」・JH32「1935年8月12日〜1936年2月25日」は実装済み。次はA18「1935年の華北をめぐる政治・軍事空間」の地図必要性・データ品質判定。
+- 現在のactive implementation planは `plan/POST_TANGGU_PRE_FEBRUARY_26_IMPLEMENTATION_PLAN.md`。JH30「1933年6月1日〜1934年7月7日」・JH31「1934年7月8日〜1935年8月11日」・JH32「1935年8月12日〜1936年2月25日」は実装済み。A18「1935年の華北をめぐる政治・軍事空間」は、同一時点・法的地位別の再利用可能geometry不足とpoint-onlyの説明力不足からno-map判定。次は横断記事publication gate。
 - GitHub Actions による lint / typecheck / build CI
 - `main` 更新時の GitHub Pages 自動デプロイ
 

@@ -1,0 +1,22 @@
+{
+  "period": "1931",
+  "termRefs": [
+    {"id":"hamaguchi-cabinet-1929","core":false,"periodNote":"1931年4月の総辞職までを前ページから引き継ぐ。"},
+    {"id":"wakatsuki-cabinet-1931","core":true},
+    {"id":"rikken-minseito-1927","core":false},
+    {"id":"shidehara-diplomacy-1929","core":true},
+    {"id":"inoue-finance-1929","core":true},
+    {"id":"gold-standard-1897","core":true,"periodNote":"1930年の金輸出解禁後、1931年9月17日時点でも維持されていた国際通貨上の制約として参照する。"},
+    {"id":"gold-embargo-lifting-1930","core":false},
+    {"id":"world-depression-1929","core":true},
+    {"id":"showa-depression-1930","core":true},
+    {"id":"kwantung-leased-territory-1905","core":true},
+    {"id":"south-manchuria-railway-1906","core":true},
+    {"id":"kwantung-agency-1919","core":false},
+    {"id":"kwantung-army-1919","core":true},
+    {"id":"takumusho-1929","core":false},
+    {"id":"zhang-xueliang-northeast-regime","core":true},
+    {"id":"nanjing-national-government-1927","core":true},
+    {"id":"nakamura-captain-incident-1931","core":true}
+  ]
+}

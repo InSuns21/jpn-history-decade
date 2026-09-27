@@ -144,6 +144,18 @@
     {
       "id": "general-election-1930",
       "core": true
+    },
+    {
+      "id": "inukai-cabinet-1931",
+      "core": true
+    },
+    {
+      "id": "may-fifteenth-incident-1932",
+      "core": true
+    },
+    {
+      "id": "saito-cabinet-1932",
+      "core": true
     }
   ]
 }

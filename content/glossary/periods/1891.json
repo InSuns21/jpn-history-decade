@@ -1,0 +1,17 @@
+{
+  "period": "1891",
+  "termRefs": [
+    {"id":"meiji-constitution-1889","core":false,"periodNote":"憲法施行後、予算・解散・司法・戦争という具体的局面で条文上の権限が実際に運用され始めた。"},
+    {"id":"teikoku-gikai","core":true,"periodNote":"初期議会では予算対立だけでなく、議員の分裂、解散、選挙、政府との妥協を通じて政治慣行が形成された。"},
+    {"id":"initial-diet-politics","core":true},
+    {"id":"ootsu-incident-1891","core":false},
+    {"id":"election-interference-1892","core":true},
+    {"id":"wakyo-chokucho-1893","core":true},
+    {"id":"anglo-japanese-treaty-1894","core":true},
+    {"id":"kabo-peasant-war-1894","core":true},
+    {"id":"sino-japanese-war-1894-1895","core":true},
+    {"id":"shimonoseki-treaty-1895","core":true},
+    {"id":"triple-intervention-1895","core":true},
+    {"id":"taiwan-governor-general-1895","core":true}
+  ]
+}

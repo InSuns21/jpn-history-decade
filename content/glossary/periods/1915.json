@@ -1,0 +1,12 @@
+{
+  "period": "1915",
+  "termRefs": [
+    {"id":"world-war-i","core":false,"periodNote":"1914年の参戦から、1915年以後の外交・経済・社会への波及を追う前提として参照する。"},
+    {"id":"twenty-one-demands-1915","core":true},
+    {"id":"wwi-wartime-boom","core":true},
+    {"id":"factory-act-1911","core":true,"periodNote":"1911年公布と1916年施行を区別し、施行時点の適用範囲と限界を確認する。"},
+    {"id":"siberian-intervention-1918","core":true},
+    {"id":"rice-riots-1918","core":true},
+    {"id":"hara-cabinet-1918","core":true}
+  ]
+}

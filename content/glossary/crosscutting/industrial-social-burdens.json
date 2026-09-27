@@ -1,0 +1,45 @@
+{
+  "page": "industrial-social-burdens",
+  "termRefs": [
+    {
+      "id": "labor-union-kiseikai-1897",
+      "core": true
+    },
+    {
+      "id": "chian-keisatsu-ho-1900",
+      "core": true
+    },
+    {
+      "id": "yahata-steel-works-1901",
+      "core": false
+    },
+    {
+      "id": "ashio-copper-pollution",
+      "core": true
+    },
+    {
+      "id": "factory-act-1911",
+      "core": true
+    },
+    {
+      "id": "wwi-wartime-boom",
+      "core": true
+    },
+    {
+      "id": "rice-riots-1918",
+      "core": true
+    },
+    {
+      "id": "postwar-panic-1920",
+      "core": true
+    },
+    {
+      "id": "first-census-1920",
+      "core": false
+    },
+    {
+      "id": "imperial-capital-reconstruction-1923",
+      "core": false
+    }
+  ]
+}

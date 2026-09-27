@@ -11,7 +11,7 @@ export const urbanPopulation1920Map: HistoricalMapDefinition = {
   period: { startYear: 1920, endYear: 1920 },
   initialView: {
     center: [136.9, 36.6],
-    zoom: 4.25,
+    zoom: 3.8,
   },
   datasets: [
     {
@@ -58,7 +58,7 @@ export const urbanPopulation1920Map: HistoricalMapDefinition = {
             category: 'million-plus',
             marker: '●',
             label: '東京市',
-            labelPlacement: 'right',
+            labelPlacement: 'top',
             year: 1920,
             population: 2173162,
             detail: '人口 2,173,162人。1920年時点の東京市人口で、後年の市域拡張前の値。',

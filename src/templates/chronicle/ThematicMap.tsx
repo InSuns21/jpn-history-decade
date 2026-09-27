@@ -216,7 +216,9 @@ export function ThematicMap({ mapId }: { mapId: string }) {
   if (!definition) return null
 
   const underAudit =
-    definition.status !== 'published' || definition.auditState.visualAudit !== 'passed'
+    definition.status !== 'published' ||
+    (definition.auditState.visualAudit !== 'passed' &&
+      definition.auditState.visualAudit !== 'not-required-reused-pattern')
 
   return (
     <figure className="thematic-map">

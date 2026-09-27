@@ -68,6 +68,22 @@
     {
       "id": "takumusho-1929",
       "core": true
+    },
+    {
+      "id": "kwantung-army-1919",
+      "core": true
+    },
+    {
+      "id": "manchukuo-establishment-1932",
+      "core": true
+    },
+    {
+      "id": "japan-manchukuo-protocol-1932",
+      "core": true
+    },
+    {
+      "id": "lytton-report-1932",
+      "core": true
     }
   ]
 }

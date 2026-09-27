@@ -68,6 +68,22 @@
     {
       "id": "census-1930",
       "core": true
+    },
+    {
+      "id": "gold-export-reembargo-1931",
+      "core": true
+    },
+    {
+      "id": "managed-currency-transition-1932",
+      "core": true
+    },
+    {
+      "id": "takahashi-finance-1932",
+      "core": true
+    },
+    {
+      "id": "boj-government-bond-underwriting-1932",
+      "core": true
     }
   ]
 }

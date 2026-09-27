@@ -54,6 +54,8 @@ export interface PeriodPageData {
   routeKey: string
   startYear: number
   endYear: number
+  startDate: string
+  endDate: string
   navLabel: string
   periodLabel: string
   previousPeriodLabel: string

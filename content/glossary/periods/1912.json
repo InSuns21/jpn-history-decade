@@ -1,0 +1,11 @@
+{
+  "period": "1912",
+  "termRefs": [
+    {"id":"keien-era","core":false,"periodNote":"明治末の政党・官僚・軍・元老などの調整が、大正政変で大きく揺らぐ前提として参照する。"},
+    {"id":"military-ministers-active-duty-system","core":true},
+    {"id":"taisho-political-crisis-1912-1913","core":true},
+    {"id":"first-constitutional-protection-movement","core":true},
+    {"id":"siemens-scandal-1914","core":true},
+    {"id":"world-war-i","core":true}
+  ]
+}

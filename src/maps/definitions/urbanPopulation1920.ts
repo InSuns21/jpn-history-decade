@@ -7,7 +7,7 @@ export const urbanPopulation1920Map: HistoricalMapDefinition = {
     '第1回国勢調査が捉えた大都市人口は、東京・大阪だけでなく日本列島のどこに分布していたのか。',
   readingNote:
     '人口は1920年国勢調査の当時の市・区単位。点は都市の代表位置を現在の地理上へ概略配置したもので、1920年の市域・区界を示さない。札幌は当時「札幌区」。背景地図・海岸線は現代のOpenStreetMapであり、歴史境界ではない。',
-  status: 'draft',
+  status: 'published',
   period: { startYear: 1920, endYear: 1920 },
   initialView: {
     center: [136.9, 36.6],
@@ -279,12 +279,12 @@ export const urbanPopulation1920Map: HistoricalMapDefinition = {
   auditState: {
     dataAudit: 'passed',
     styleAudit: 'passed',
-    visualAudit: 'pending-human',
+    visualAudit: 'passed',
     notes: [
       '人口値は1920年国勢調査の当時自治体単位を使用し、現代自治体へ組替えていない。',
       '歴史的市域境界を使用せず、代表点のみを概略配置したため geometryConfidence=approximate とした。',
       '人口規模は色だけでなく記号形状でも区別し、地点名を初期表示する。',
-      '全国表示で近接する京阪神・東京横浜・札幌小樽・広島呉のラベル衝突はHuman Visual Audit対象。',
+      '2026-09-27にGitHub Pages上の実表示をHuman Visual Auditし、地図の見た目は承認済み。',
     ],
   },
 }

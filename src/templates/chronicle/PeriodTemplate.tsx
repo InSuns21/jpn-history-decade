@@ -69,6 +69,13 @@ export function PeriodTemplate({
 
   const sourceIds = data.sources.map((source) => source.id)
   const visibleMapIds = data.maps.filter((mapId) => Boolean(findMapDefinition(mapId)))
+  const mapsBySection = new Map<string, string[]>()
+  for (const placement of data.mapPlacements) {
+    if (!findMapDefinition(placement.mapId)) continue
+    const mapIds = mapsBySection.get(placement.afterSectionId) ?? []
+    mapIds.push(placement.mapId)
+    mapsBySection.set(placement.afterSectionId, mapIds)
+  }
 
   return (
     <>
@@ -150,6 +157,9 @@ export function PeriodTemplate({
                 <div><h2><LinkedText text={section.title} routeKey={data.routeKey} sourceIds={sourceIds} /></h2></div>
               </div>
               <ContentBlocks blocks={section.blocks} routeKey={data.routeKey} sourceIds={sourceIds} />
+              {(mapsBySection.get(section.id) ?? []).map((mapId) => (
+                <ThematicMap key={mapId} mapId={mapId} />
+              ))}
               {section.questions.length > 0 && (
                 <div className="question-box">
                   <strong>考えてみる</strong>

@@ -44,6 +44,11 @@ export interface SourceDefinition {
   url?: string
 }
 
+export interface MapPlacement {
+  mapId: string
+  afterSectionId: string
+}
+
 export interface PeriodPageData {
   id: string
   routeKey: string
@@ -66,6 +71,7 @@ export interface PeriodPageData {
   glossary: GlossaryTerm[]
   sources: SourceDefinition[]
   maps: string[]
+  mapPlacements: MapPlacement[]
 }
 
 export type CrosscuttingKind = 'structure' | 'theme'

@@ -69,6 +69,7 @@ export interface PeriodPageData {
   sections: HistoricalSection[]
   changes: ChangeItem[]
   contemporaryAssumptions: string[]
+  interpretiveCautions: string[]
   nextIssues: string[]
   glossary: GlossaryTerm[]
   sources: SourceDefinition[]

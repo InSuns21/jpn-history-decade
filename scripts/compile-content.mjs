@@ -525,6 +525,7 @@ function compilePeriod(filePath) {
   const snapshot = requireObjectArray(frontmatter, 'snapshot', relative, ['label', 'value'])
   const changes = requireObjectArray(frontmatter, 'changes', relative, ['label', 'before', 'current', 'significance'])
   const contemporaryAssumptions = requireStringArray(frontmatter, 'contemporaryAssumptions', relative)
+  const interpretiveCautions = requireStringArray(frontmatter, 'interpretiveCautions', relative)
   const nextIssues = requireStringArray(frontmatter, 'nextIssues', relative)
   const maps = requireStringArray(frontmatter, 'maps', relative)
   for (const mapId of maps) {
@@ -556,6 +557,7 @@ function compilePeriod(filePath) {
     sections,
     changes,
     contemporaryAssumptions,
+    interpretiveCautions,
     nextIssues,
     glossary,
     sources,

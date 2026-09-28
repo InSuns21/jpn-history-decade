@@ -19,12 +19,14 @@ export interface PeriodTemplateProps {
   next?: PeriodPageData
   relatedCrosscutting: CrosscuttingPageData[]
   activeTermId?: string
+  activeSectionId?: string
 }
 
 export interface CrosscuttingTemplateProps {
   data: CrosscuttingPageData
   periods: PeriodPageData[]
   activeTermId?: string
+  activeSectionId?: string
 }
 
 export interface TemplateDefinition {

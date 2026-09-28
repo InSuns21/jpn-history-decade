@@ -476,7 +476,7 @@ jpn-history-decade/
 
 1912〜1925年フェーズでは、大正政変、第一次世界大戦、戦時経済、米騒動、原敬内閣、三・一運動、ワシントン体制、関東大震災、普通選挙法、治安維持法を、単純な「大正デモクラシー」や「自由化」の一本道として扱わず、政党政治・社会運動・労働・都市化・植民地統治・国際秩序・治安政策が相互に組み替わる過程として実装した。
 
-1936年2月26日〜1937年7月6日フェーズは完了し、[FEBRUARY_26_TO_PRE_MARCO_POLO_IMPLEMENTATION_PLAN.md](../plan_done/FEBRUARY_26_TO_PRE_MARCO_POLO_IMPLEMENTATION_PLAN.md) へ移動済み。現在のactive implementation planは、1937年7月7日〜8月12日を対象とする [LUGOU_BRIDGE_TO_PRE_SHANGHAI_IMPLEMENTATION_PLAN.md](./LUGOU_BRIDGE_TO_PRE_SHANGHAI_IMPLEMENTATION_PLAN.md) とする。盧溝橋事件の局地衝突、現地停戦、不拡大方針と増援決定の併存、7月末の北平・天津方面の大規模作戦を分けて追い、8月13日の上海戦開始は次フェーズへ送る。
+1936年2月26日〜1937年7月6日フェーズは完了し、[FEBRUARY_26_TO_PRE_MARCO_POLO_IMPLEMENTATION_PLAN.md](../plan_done/FEBRUARY_26_TO_PRE_MARCO_POLO_IMPLEMENTATION_PLAN.md) へ移動済み。1937年7月7日〜8月12日フェーズも完了し、[LUGOU_BRIDGE_TO_PRE_SHANGHAI_IMPLEMENTATION_PLAN.md](../plan_done/LUGOU_BRIDGE_TO_PRE_SHANGHAI_IMPLEMENTATION_PLAN.md) へ移動済み。次は8月13日の上海戦開始以後について、華北と華中の並行戦線、陸軍・海軍・政府・外交の意思決定、戦時財政・動員の変化をどこで区切るかを確認して新しい実装フェーズを切り出す。
 
 1931年以後も、すべてを月別・日別にするのではない。高解像度化は、同じ年の中で制度状態・軍事的既成事実・外交上の選択肢が変わる場合に限定する。二・二六事件のように境界前後で統治・軍事・政権形成の状態が大きく変わる事件は、前日までと事件当日以後を分けて実装する。
 

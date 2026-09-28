@@ -25,7 +25,7 @@
 - 公開本文の前提知識を中学校の歴史教科書レベルへ変更し、1800–1925年の年代23ページ＋横断8記事と用語辞書236語を遡及監査済み。内容の到達点は維持したまま、高校日本史で詳しく扱う制度・人物・事件・金融用語に初出時の足場説明を追加
 - 1931–1933年5月フェーズは main push CI run #233 / GitHub Pages run #113 とも success を確認して完了。A17は制度・時系列の理解に地図が寄与しないためno-map、横断記事S02/S05/S09/S10も1933年まで延長済み
 - 1933年6月〜1936年2月25日フェーズは main push CI run #244 / GitHub Pages run #119 とも success を確認して完了。A18はno-map、S02・S05・S09・S10は1936年2月25日まで延長済み
-- 1937年7月7日〜8月12日フェーズはJH37→A20→JH38→JH39→Crosscutting publication gate→S02/S05/S10延長まで完了・archived。phase-end audit necessity judgmentでは独立監査不要と判定し、main CI / Pages successを確認済み。次は1937年8月13日以後の実装フェーズ切り出し
+- 1937年7月7日〜8月12日フェーズはJH37→A20→JH38→JH39→Crosscutting publication gate→S02/S05/S10延長まで完了・archived。次のactive implementation planは `plan/SHANGHAI_WAR_TO_FALL_IMPLEMENTATION_PLAN.md`。1937年8月13日〜11月12日をJH40〜JH43で、上海戦開始→戦時制度化→長期戦対応→上海占領の状態遷移として実装する。次はJH40「1937-08-13〜08-15」
 - GitHub Actions による lint / typecheck / build CI
 - `main` 更新時の GitHub Pages 自動デプロイ
 

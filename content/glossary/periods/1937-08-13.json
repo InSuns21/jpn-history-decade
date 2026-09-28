@@ -1,0 +1,49 @@
+{
+  "period": "1937-08-13",
+  "termRefs": [
+    {
+      "id": "oyama-incident-1937",
+      "core": false
+    },
+    {
+      "id": "funatsu-mediation-1937",
+      "core": false
+    },
+    {
+      "id": "first-shanghai-incident-1932",
+      "core": false
+    },
+    {
+      "id": "second-shanghai-incident-1937",
+      "core": true
+    },
+    {
+      "id": "shanghai-special-naval-landing-force",
+      "core": true
+    },
+    {
+      "id": "china-garrison-army",
+      "core": false
+    },
+    {
+      "id": "nanjing-national-government-1927",
+      "core": true
+    },
+    {
+      "id": "shanghai-international-settlement",
+      "core": true
+    },
+    {
+      "id": "shanghai-french-concession",
+      "core": true
+    },
+    {
+      "id": "first-konoe-cabinet-1937",
+      "core": true
+    },
+    {
+      "id": "shanghai-expeditionary-army-1937",
+      "core": true
+    }
+  ]
+}

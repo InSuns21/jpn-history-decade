@@ -1,0 +1,37 @@
+{
+  "period": "1937-10-26",
+  "termRefs": [
+    {
+      "id": "second-shanghai-incident-1937",
+      "core": true
+    },
+    {
+      "id": "japanese-tenth-army-1937",
+      "core": true
+    },
+    {
+      "id": "hangzhou-bay-landing-1937",
+      "core": true
+    },
+    {
+      "id": "shanghai-expeditionary-army-1937",
+      "core": false
+    },
+    {
+      "id": "nanjing-national-government-1927",
+      "core": true
+    },
+    {
+      "id": "trautmann-mediation-1937",
+      "core": true
+    },
+    {
+      "id": "shanghai-international-settlement",
+      "core": false
+    },
+    {
+      "id": "shanghai-french-concession",
+      "core": false
+    }
+  ]
+}

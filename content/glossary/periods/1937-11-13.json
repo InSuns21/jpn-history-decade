@@ -1,0 +1,41 @@
+{
+  "period": "1937-11-13",
+  "termRefs": [
+    {
+      "id": "central-china-area-army-1937",
+      "core": true
+    },
+    {
+      "id": "japanese-tenth-army-1937",
+      "core": true
+    },
+    {
+      "id": "shanghai-expeditionary-army-1937",
+      "core": true
+    },
+    {
+      "id": "advance-limit-line-1937",
+      "core": true
+    },
+    {
+      "id": "imperial-general-headquarters-1937",
+      "core": true
+    },
+    {
+      "id": "imperial-headquarters-government-liaison-conference-1937",
+      "core": false
+    },
+    {
+      "id": "nanjing-national-government-1927",
+      "core": true
+    },
+    {
+      "id": "nanjing-safety-zone-1937",
+      "core": true
+    },
+    {
+      "id": "trautmann-mediation-1937",
+      "core": false
+    }
+  ]
+}

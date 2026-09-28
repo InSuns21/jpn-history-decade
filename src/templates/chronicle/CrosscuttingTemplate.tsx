@@ -69,6 +69,7 @@ export function CrosscuttingTemplate({
   data,
   periods,
   activeTermId,
+  activeSectionId,
 }: CrosscuttingTemplateProps) {
   useEffect(() => {
     if (activeTermId) {
@@ -77,10 +78,18 @@ export function CrosscuttingTemplate({
       })
       return
     }
+    if (activeSectionId) {
+      requestAnimationFrame(() => {
+        document.getElementById(activeSectionId)?.scrollIntoView({ block: 'start' })
+      })
+      return
+    }
     window.scrollTo({ top: 0 })
-  }, [activeTermId, data.routeKey])
+  }, [activeTermId, activeSectionId, data.routeKey])
 
   const sourceIds = data.sources.map((source) => source.id)
+  const sectionHref = (sectionId: string) =>
+    '#/' + data.kind + '/' + data.routeKey + '?section=' + encodeURIComponent(sectionId)
   const relatedPeriods = data.relatedPeriods
     .map((routeKey) => periods.find((period) => period.routeKey === routeKey))
     .filter((period) => period !== undefined)
@@ -125,15 +134,15 @@ export function CrosscuttingTemplate({
         <aside className="decade-sidebar">
           <nav className="toc" aria-label="このページの目次">
             <strong>{kindLabel}</strong>
-            {visibleMapIds.length > 0 && <a href="#maps">地図で見る</a>}
+            {visibleMapIds.length > 0 && <a href={sectionHref('maps')}>地図で見る</a>}
             {data.sections.map((section) => (
-              <a key={section.id} href={'#' + section.id}>
+              <a key={section.id} href={sectionHref(section.id)}>
                 {section.title.split(' — ')[0]}
               </a>
             ))}
-            <a href="#related-periods">関連する年代</a>
-            <a href="#glossary">このテーマを読むための用語</a>
-            {data.sources.length > 0 && <a href="#sources">史料・参考文献</a>}
+            <a href={sectionHref('related-periods')}>関連する年代</a>
+            <a href={sectionHref('glossary')}>このテーマを読むための用語</a>
+            {data.sources.length > 0 && <a href={sectionHref('sources')}>史料・参考文献</a>}
           </nav>
         </aside>
 

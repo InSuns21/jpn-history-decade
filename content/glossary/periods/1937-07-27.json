@@ -1,0 +1,14 @@
+{
+  "period": "1937-07-27",
+  "termRefs": [
+    {"id":"north-china-dispatch-policy-1937","core":false},
+    {"id":"china-garrison-army","core":false},
+    {"id":"nanjing-national-government-1927","core":true},
+    {"id":"east-hebei-autonomous-regime-1935","core":false},
+    {"id":"tongzhou-incident-1937","core":true},
+    {"id":"north-china-incident-1937","core":true},
+    {"id":"funatsu-mediation-1937","core":true},
+    {"id":"oyama-incident-1937","core":true},
+    {"id":"first-shanghai-incident-1932","core":false}
+  ]
+}

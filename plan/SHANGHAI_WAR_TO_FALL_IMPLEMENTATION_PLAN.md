@@ -1,7 +1,7 @@
 # 1937年8月13日から11月12日まで — 上海戦開始から上海占領まで 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH40 ✅ → 次は A21「1937年8月の上海都市政治・軍事空間」map necessity / data-quality judgment
+- **Progress:** phase cut ✅ → JH40 ✅ → A21 ✅（map必要・租界polygon＋軍事地点pointの混合表現）→ 次は JH41「1937-08-16〜09-10」
 - **Created:** 2026-09-28
 - **Scope:** 1937-08-13〜1937-11-12
 - **Primary goal:** 上海での日中両軍交戦開始が、華北とは別の軍種・都市・国際環境を持つ戦場を生み、日本政府の対中方針、陸海軍の作戦、戦時財政・資金統制、中国側の中央軍運用・国共協力・対外外交をどう変えたかを追う。上海占領を戦争終結と同一視せず、11月13日以後の南京進攻へ結果から逆算しない
@@ -86,37 +86,99 @@ JH40は翌13日の交戦開始から始める。したがって「大山事件�
 
 # 4. A21 — 1937年8月の上海都市政治・軍事空間
 
-## map necessity
+**Status: completed / 2026-09-28**
 
-**候補: high / JH40実装時にData Auditを行って最終判定する。**
+## map necessity 判定
 
-上海戦初期は、
+**採用 / high。**
 
-- 上海共同租界
-- フランス租界
-- 中国側市街
-- 虹口・閘北・江湾などの主要地区
-- 黄浦江・呉淞口
-- 日本海軍陸戦隊拠点
-- 中国側部隊の主要展開区域
+上海戦初期では、上海共同租界、フランス租界、中国側市街、虹口・閘北・江湾、黄浦江・呉淞口、日本海軍陸戦隊拠点、中国側主要展開地域の近接そのものが、軍事行動と第三国外交を理解するための条件になる。
 
-の近接が、戦闘と第三国外交を理解するための中心条件になる。
+単純な「上海」という一点では、
 
-単純な「上海という一点」では、国際都市内部で軍事行動と租界中立・外国権益が接触する構造を説明できない。
+- なぜ日本海軍陸戦隊の拠点と中国側部隊が都市内部で近接したか
+- なぜ租界への戦闘波及が第三国外交の問題になったか
+- なぜ華北とは異なる軍種・統治空間を持つ戦場だったか
 
-## Data Audit方針
+を説明できないため、本文だけより地図の寄与が大きい。
 
-国立国会図書館には1937年8月製版の1:20,000「二万分一上海市街圖」が存在する。これを都市地形・街路・地名の同時代基準資料候補とする。
+## Data Audit 判定
 
-ただし、
+**pass。ただし、精密な戦線復元ではなく「租界polygon＋軍事・地理地点point」の混合表現に限定する。**
 
-- 同時代地図があることと、租界境界・部隊線のGIS geometryが自動的に確定することは別
-- スキャン画像から境界を目視でなぞる場合は transformation / georeference / geometryConfidence を記録する
-- 史料で境界・部隊位置を確認できない場合、精密polygonを作らずpoint / approximate areaへ落とす
-- 現代上海行政界・道路網を1937年境界として代用しない
-- 戦闘前線を根拠のない連続LineStringとして描かない
+### 1. 上海共同租界
 
-polygon / lineを使う場合はpoint-only visual-audit省略規則の対象外とし、Human Visual Auditを必須とする。
+Virtual Shanghai の Resource ID 224「Police districts in the International Settlement (1928-1934 and 1935-1945)」は、1935〜1945年の共同租界警察区13区を shapefile で提供している。
+
+- source: https://www.virtualshanghai.net/Data/Tables?ID=224
+- license: CC BY 4.0
+- temporal coverage: 1935–1945
+- 利用方針: 1935–45年警察区polygonを dissolve / union して共同租界の外周を導出する
+- geometryConfidence: derived
+- 個々の警察区を1937年の軍事境界として扱わず、共同租界の統治空間を示すためだけに用いる
+
+### 2. フランス租界
+
+Virtual Shanghai の Resource ID 223「Census districts in the French Concession (1937)」は、1937年人口調査に用いられた270 census block のvector mapを shapefile で提供している。
+
+- source: https://www.virtualshanghai.net/Data/Tables?ID=223
+- license: CC0 1.0
+- temporal coverage: 1937
+- 利用方針: census block polygonを dissolve / union して1937年フランス租界の外周を導出する
+- geometryConfidence: derived
+- 人口調査区内部の細分はA21の中心論点ではないため表示しない
+
+### 3. 同時代都市地形・地名
+
+国立国会図書館は大日本帝国陸地測量部「二万分一上海市街圖」を所蔵している。
+
+- source: https://ndlsearch.ndl.go.jp/books/R100000002-I000008307139
+- publication: 1937.8
+- scale: 1:20,000
+- 利用方針: 虹口・閘北・江湾・黄浦江・呉淞口などの同時代地名・位置関係の照合に使う
+- スキャンを無根拠にトレースして道路・行政界・戦線geometryを生成しない
+
+### 4. 1937年8月の兵力配置
+
+Virtual Shanghai eAtlas ID 274「Initial position of Japanese and Chinese troops in August 1937」は、1937年8月初期の日中両軍配置と共同租界・フランス租界の位置関係を1:20,000で示している。
+
+- source: https://www.virtualshanghai.net/Maps/eAtlas?ID=274
+- author: Christian Henriot
+- cartographer: Nicolas Bozon
+- 利用方針: 軍事地点の大まかな地区配置を研究上のクロスチェックに使う
+- eAtlas画像の線・面をトレースして再配布可能geometryへ変換しない
+- 中国軍防御線・部隊線は連続LineStringとして実装しない
+
+### 5. 中国側市街
+
+Virtual Shanghai 自身が、1937年の中国側Municipalityについては対応するcensus survey mapが現存しないと説明している。そのため、
+
+- 「中国側市街」全体を精密polygonで塗らない
+- 南市・閘北・江湾など本文理解に必要な地区は representative / approximate point として扱う
+- 現代上海行政界を1937年の境界として代用しない
+
+## 実装時のgeometry方針
+
+A21を実装する場合は次に限定する。
+
+| 対象 | geometry | confidence |
+|---|---|---|
+| 上海共同租界 | 1935–45 police district polygonsをunionしたPolygon / MultiPolygon | derived |
+| 上海フランス租界 | 1937 census block polygonsをunionしたPolygon / MultiPolygon | derived |
+| 海軍特別陸戦隊司令部・虹口・閘北・江湾・呉淞口など | representative Point | approximate |
+| 中国側部隊 | 部隊線を描かず、史料で地区まで確認できる場合だけapproximate Point / area | approximate |
+| 中国側市街全体 | **描かない** | — |
+| 戦闘前線・進軍路 | **描かない** | — |
+
+polygonを含むため、point-only再利用規則は使わない。実装した場合はData Audit / Style Auditに加え、Desktop / Tablet / Mobileを含むHuman Visual Auditを必須とする。
+
+## 判定結果
+
+**A21は地図あり。データ品質は限定条件つきで実装可能。**
+
+核心は「精密な上海戦線図」を作ることではなく、**共同租界・フランス租界という外国統治空間と、日中両軍の主要地点がどれほど近接していたかを可視化すること**に置く。
+
+ライセンスが明示されたHistorical GISを利用できる租界境界と、概略精度しか保証できない軍事地点を同じ精度に偽装しない。これにより、A21を空間理解に有効な地図として採用しつつ、史料以上の精密さを避ける。
 
 ---
 

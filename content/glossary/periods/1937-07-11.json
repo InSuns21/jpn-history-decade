@@ -1,0 +1,16 @@
+{
+  "period": "1937-07-11",
+  "termRefs": [
+    {"id":"lugou-bridge-incident-1937","core":false},
+    {"id":"lugou-local-ceasefire-1937","core":true},
+    {"id":"north-china-dispatch-policy-1937","core":true},
+    {"id":"china-garrison-army","core":true},
+    {"id":"kwantung-army-1919","core":false},
+    {"id":"chosen-army-1931","core":false},
+    {"id":"army-ministry","core":false},
+    {"id":"army-general-staff","core":false},
+    {"id":"chinese-29th-army","core":true},
+    {"id":"hebei-chahar-political-council-1935","core":false},
+    {"id":"nanjing-national-government-1927","core":false}
+  ]
+}

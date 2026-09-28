@@ -56,6 +56,7 @@ export function PeriodTemplate({
   next,
   relatedCrosscutting,
   activeTermId,
+  activeSectionId,
 }: PeriodTemplateProps) {
   useEffect(() => {
     if (activeTermId) {
@@ -64,10 +65,18 @@ export function PeriodTemplate({
       })
       return
     }
+    if (activeSectionId) {
+      requestAnimationFrame(() => {
+        document.getElementById(activeSectionId)?.scrollIntoView({ block: 'start' })
+      })
+      return
+    }
     window.scrollTo({ top: 0 })
-  }, [activeTermId, data.routeKey])
+  }, [activeTermId, activeSectionId, data.routeKey])
 
   const sourceIds = data.sources.map((source) => source.id)
+  const sectionHref = (sectionId: string) =>
+    '#/period/' + data.routeKey + '?section=' + encodeURIComponent(sectionId)
   const visibleMapIds = data.maps.filter((mapId) => Boolean(findMapDefinition(mapId)))
   const mapsBySection = new Map<string, string[]>()
   for (const placement of data.mapPlacements) {
@@ -106,18 +115,19 @@ export function PeriodTemplate({
           <TimelineNav periods={periods} activeRouteKey={data.routeKey} />
           <nav className="toc" aria-label="このページの目次">
             <strong>目次</strong>
-            <a href="#snapshot">この時代の概観</a>
-            {visibleMapIds.length > 0 && <a href="#maps">地図で見る</a>}
+            <a href={sectionHref('snapshot')}>この時代の概観</a>
+            {visibleMapIds.length > 0 && <a href={sectionHref('maps')}>地図で見る</a>}
             {data.sections.map((section) => (
-              <a key={section.id} href={'#' + section.id}>
+              <a key={section.id} href={sectionHref(section.id)}>
                 {section.title.split(' — ')[0]}
               </a>
             ))}
-            <a href="#change">前の時代からの変化</a>
-            <a href="#assumptions">当時の前提と次の論点</a>\n            {data.interpretiveCautions.length > 0 && <a href="#cautions">読み方の留保</a>}
-            {relatedCrosscutting.length > 0 && <a href="#related-crosscutting">横断して読む</a>}
-            <a href="#glossary">この時代を読むための用語</a>
-            {data.sources.length > 0 && <a href="#sources">史料・参考文献</a>}
+            <a href={sectionHref('change')}>前の時代からの変化</a>
+            <a href={sectionHref('assumptions')}>当時の前提と次の論点</a>
+            {data.interpretiveCautions.length > 0 && <a href={sectionHref('cautions')}>読み方の留保</a>}
+            {relatedCrosscutting.length > 0 && <a href={sectionHref('related-crosscutting')}>横断して読む</a>}
+            <a href={sectionHref('glossary')}>この時代を読むための用語</a>
+            {data.sources.length > 0 && <a href={sectionHref('sources')}>史料・参考文献</a>}
           </nav>
         </aside>
 

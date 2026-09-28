@@ -17,6 +17,6 @@ README には概要だけを置き、フェーズ進捗・監査結果・地図�
 - 公開本文の前提知識を中学校の歴史教科書レベルへ変更し、1800–1925年の年代23ページ＋横断8記事と用語辞書236語を遡及監査済み。内容の到達点は維持したまま、高校日本史で詳しく扱う制度・人物・事件・金融用語に初出時の足場説明を追加
 - 1931–1933年5月フェーズは main push CI run #233 / GitHub Pages run #113 とも success を確認して完了。A17は制度・時系列の理解に地図が寄与しないためno-map、横断記事S02/S05/S09/S10も1933年まで延長済み
 - 1933年6月〜1936年2月25日フェーズは main push CI run #244 / GitHub Pages run #119 とも success を確認して完了。A18はno-map、S02・S05・S09・S10は1936年2月25日まで延長済み
-- 1937年7月7日〜8月12日フェーズはJH37→A20→JH38→JH39→Crosscutting publication gate→S02/S05/S10延長まで完了・archived。次のactive implementation planは `plan/SHANGHAI_WAR_TO_FALL_IMPLEMENTATION_PLAN.md`。1937年8月13日〜11月12日はJH40「1937-08-13〜08-15」・JH41「1937-08-16〜09-10」・JH42「1937-09-11〜10-25」・JH43「1937-10-26〜11-12」を実装済み。A21「1937年8月の上海都市政治・軍事空間」はmap必要と判定し、租界polygon＋approximate pointへ精度を分離。A22「上海・杭州湾の作戦空間」もmap必要と判定し、1937年同時代地域図と防衛研究所資料を根拠にpoint中心表現ならData Auditをpass。Crosscutting publication gateではS02を臨時軍事費特別会計、S05を作戦判断と第72回帝国議会の立法回路、S10を資金・外貨・物資の優先配分まで11月12日へ延長した。S09は安定した新統治制度の比較軸がないため延長せず、新規「戦時動員体制」もJH41の再編集になるため見送った。phase-end audit necessity judgmentは独立監査不要。次はCI / Pages確認
+- 1937年8月13日〜11月12日フェーズはJH40→A21→JH41→JH42→JH43→A22→Crosscutting publication gate→S02/S05/S10延長→phase-end audit necessity judgmentまで完了し、`plan_done/SHANGHAI_WAR_TO_FALL_IMPLEMENTATION_PLAN.md` へarchive済み。S09は安定した新統治制度の比較軸がないため延長せず、新規「戦時動員体制」もJH41の再編集になるため見送った。main push CI run #324 / GitHub Pages run #146 はともに success。現在active implementation planはなく、次は1937年11月13日以後の実装フェーズ切り出し
 - GitHub Actions による lint / typecheck / build CI
 - `main` 更新時の GitHub Pages 自動デプロイ

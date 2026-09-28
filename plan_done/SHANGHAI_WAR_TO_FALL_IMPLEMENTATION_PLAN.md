@@ -1,7 +1,7 @@
 # 1937年8月13日から11月12日まで — 上海戦開始から上海占領まで 実装計画
 
-- **Status:** active
-- **Progress:** phase cut ✅ → JH40 ✅ → A21 ✅（map必要・租界polygon＋軍事地点pointの混合表現）→ JH41 ✅ → JH42 ✅ → JH43 ✅ → A22 ✅（map必要・同時代地域図＋作戦史料、point中心・route線なし）→ Crosscutting publication gate ✅ → S02・S05・S10延長 ✅ → phase-end audit necessity judgment ✅（独立監査不要）→ 次は CI / Pages
+- **Status:** completed
+- **Progress:** phase cut ✅ → JH40 ✅ → A21 ✅（map必要・租界polygon＋軍事地点pointの混合表現）→ JH41 ✅ → JH42 ✅ → JH43 ✅ → A22 ✅（map必要・同時代地域図＋作戦史料、point中心・route線なし）→ Crosscutting publication gate ✅ → S02・S05・S10延長 ✅ → phase-end audit necessity judgment ✅（独立監査不要）→ CI ✅ / Pages ✅。フェーズ完了。
 - **Created:** 2026-09-28
 - **Scope:** 1937-08-13〜1937-11-12
 - **Primary goal:** 上海での日中両軍交戦開始が、華北とは別の軍種・都市・国際環境を持つ戦場を生み、日本政府の対中方針、陸海軍の作戦、戦時財政・資金統制、中国側の中央軍運用・国共協力・対外外交をどう変えたかを追う。上海占領を戦争終結と同一視せず、11月13日以後の南京進攻へ結果から逆算しない
@@ -528,10 +528,10 @@ plan_done/
 - [x] 横断記事publication gate完了
 - [x] 通過した横断記事だけ実装
 - [x] phase-end audit necessity judgment完了（具体的な未解決仮説なしのため独立監査不要）
-- [ ] `npm run check` / GitHub Actions green
-- [ ] GitHub Pages deploy green
-- [ ] Status: completed
-- [ ] `plan_done/` へ移動
+- [x] `npm run check` / GitHub Actions green（main push CI run #324 success）
+- [x] GitHub Pages deploy green（run #146 success）
+- [x] Status: completed
+- [x] `plan_done/` へ移動
 
 ---
 

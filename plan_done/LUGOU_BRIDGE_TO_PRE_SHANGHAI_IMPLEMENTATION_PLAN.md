@@ -1,11 +1,11 @@
 # 1937年7月7日から8月12日まで — 盧溝橋事件から上海戦前夜 実装計画
 
-- **Status:** active
-- **Progress:** JH37「1937-07-07〜07-10」✅ → A20 ✅（map必要・point-only判定）→ JH38「1937-07-11〜07-26」✅ → JH39「1937-07-27〜08-12」✅ → Crosscutting publication gate ✅ → S02・S05・S10延長 ✅ → phase-end audit necessity judgment ✅（独立監査不要）。次はCI / Pages確認。
+- **Status:** completed
+- **Progress:** JH37「1937-07-07〜07-10」✅ → A20 ✅（map必要・point-only判定）→ JH38「1937-07-11〜07-26」✅ → JH39「1937-07-27〜08-12」✅ → Crosscutting publication gate ✅ → S02・S05・S10延長 ✅ → phase-end audit necessity judgment ✅（独立監査不要）→ CI ✅ / Pages ✅。フェーズ完了。
 - **Created:** 2026-09-28
 - **Scope:** 1937-07-07〜1937-08-12
 - **Primary goal:** 盧溝橋付近の局地衝突が、現地停戦・中央政府の不拡大方針・派兵準備・華北での大規模作戦へどう変化したかを、日本政府・陸軍中央・中国駐屯軍・南京国民政府・冀察政務委員会・第29軍などの判断を分けて追い、8月13日の上海戦開始から逆算せずに説明する
-- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](./JPN_HISTORY_DECADE_PLAN.md)
+- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](../plan/JPN_HISTORY_DECADE_PLAN.md)
 - **Previous phase:** [FEBRUARY_26_TO_PRE_MARCO_POLO_IMPLEMENTATION_PLAN.md](../plan_done/FEBRUARY_26_TO_PRE_MARCO_POLO_IMPLEMENTATION_PLAN.md)
 - **Workspace rules:** [../SYSTEM_PROMPT.md](../SYSTEM_PROMPT.md)
 
@@ -397,17 +397,17 @@ plan_done/
 
 ## 各年代ページ
 
-- [ ] 中学校教科書レベルを前提に、軍事・外交用語へ初出説明を置く
-- [ ] 第一発の主体など論争的事項を未確認で断定しない
-- [ ] 現地軍・軍中央・政府・外交当局を分ける
-- [ ] 中国側の南京政府・冀察・第29軍・共産党などを分ける
-- [ ] 不拡大方針と派兵・増援を同一意思として単純化しない
-- [ ] 7月7日から8月13日への一本道を作らない
-- [ ] 本文は状態・変化・因果を肯定文で先に示す
-- [ ] 直前ページとの接続確認をpublished前に完了
-- [ ] 用語辞書・period glossary refsを更新
-- [ ] 出典を本文主張へ接続
-- [ ] 必要な地図だけ監査を通す
+- [x] 中学校教科書レベルを前提に、軍事・外交用語へ初出説明を置く
+- [x] 第一発の主体など論争的事項を未確認で断定しない
+- [x] 現地軍・軍中央・政府・外交当局を分ける
+- [x] 中国側の南京政府・冀察・第29軍・共産党などを分ける
+- [x] 不拡大方針と派兵・増援を同一意思として単純化しない
+- [x] 7月7日から8月13日への一本道を作らない
+- [x] 本文は状態・変化・因果を肯定文で先に示す
+- [x] 直前ページとの接続確認をpublished前に完了
+- [x] 用語辞書・period glossary refsを更新
+- [x] 出典を本文主張へ接続
+- [x] 必要な地図だけ監査を通す
 
 ## フェーズ
 
@@ -416,10 +416,10 @@ plan_done/
 - [x] 横断記事publication gate完了
 - [x] 通過した横断記事だけ実装
 - [x] phase-end audit necessity judgment完了（具体的な未解決仮説なしのため独立監査不要）
-- [ ] `npm run check` / GitHub Actions green
-- [ ] GitHub Pages deploy green
-- [ ] Status: completed
-- [ ] `plan_done/` へ移動
+- [x] `npm run check` / GitHub Actions green
+- [x] GitHub Pages deploy green
+- [x] Status: completed
+- [x] `plan_done/` へ移動
 
 ---
 

@@ -1,7 +1,6 @@
 {
-  "periodId": "jh41",
-  "routeKey": "1937-08-16",
-  "terms": [
+  "period": "1937-08-16",
+  "termRefs": [
     {
       "id": "second-shanghai-incident-1937",
       "core": true

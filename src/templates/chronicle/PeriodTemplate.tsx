@@ -114,7 +114,7 @@ export function PeriodTemplate({
               </a>
             ))}
             <a href="#change">前の時代からの変化</a>
-            <a href="#assumptions">当時の前提と次の論点</a>
+            <a href="#assumptions">当時の前提と次の論点</a>\n            {data.interpretiveCautions.length > 0 && <a href="#cautions">読み方の留保</a>}
             {relatedCrosscutting.length > 0 && <a href="#related-crosscutting">横断して読む</a>}
             <a href="#glossary">この時代を読むための用語</a>
             {data.sources.length > 0 && <a href="#sources">史料・参考文献</a>}
@@ -220,6 +220,17 @@ export function PeriodTemplate({
               </ul>
             </div>
           </section>
+
+          {data.interpretiveCautions.length > 0 && (
+            <section id="cautions" className="content-section">
+              <div className="section-heading compact"><span>留</span><div><h2>読み方の留保</h2></div></div>
+              <ul className="plain-list">
+                {data.interpretiveCautions.map((item) => (
+                  <li key={item}><LinkedText text={item} routeKey={data.routeKey} sourceIds={sourceIds} /></li>
+                ))}
+              </ul>
+            </section>
+          )}
 
           {relatedCrosscutting.length > 0 && (
             <section id="related-crosscutting" className="content-section">

@@ -1,0 +1,69 @@
+{
+  "period": "1937-09-11",
+  "termRefs": [
+    {
+      "id": "second-shanghai-incident-1937",
+      "core": true
+    },
+    {
+      "id": "temporary-military-expenses-special-account-1937",
+      "core": false
+    },
+    {
+      "id": "temporary-funds-adjustment-law-1937",
+      "core": false
+    },
+    {
+      "id": "second-united-front-1937",
+      "core": true
+    },
+    {
+      "id": "xian-incident-1936",
+      "core": false
+    },
+    {
+      "id": "nanjing-national-government-1927",
+      "core": false
+    },
+    {
+      "id": "league-of-nations-1920",
+      "core": true
+    },
+    {
+      "id": "nine-power-treaty-1922",
+      "core": true
+    },
+    {
+      "id": "league-assembly-china-report-1937",
+      "core": true
+    },
+    {
+      "id": "shanghai-international-settlement",
+      "core": false
+    },
+    {
+      "id": "shanghai-french-concession",
+      "core": false
+    },
+    {
+      "id": "sino-soviet-non-aggression-pact-1937",
+      "core": false
+    },
+    {
+      "id": "china-area-fleet-1937",
+      "core": true
+    },
+    {
+      "id": "shanghai-special-naval-landing-force",
+      "core": false
+    },
+    {
+      "id": "planning-agency-1937",
+      "core": false
+    },
+    {
+      "id": "planning-board-1937",
+      "core": true
+    }
+  ]
+}

@@ -51,7 +51,10 @@ function renderInlineText(
         const sourceNumber = sourceIds.indexOf(sourceId) + 1
         nodes.push(
           <sup className="source-ref" key={keyPrefix + '-source-' + sourceId + '-' + start}>
-            <a href={'#source-' + sourceId} aria-label={'出典 ' + sourceNumber}>
+            <a
+              href={'#/' + pageKind + '/' + routeKey + '?section=' + encodeURIComponent('source-' + sourceId)}
+              aria-label={'出典 ' + sourceNumber}
+            >
               [{sourceNumber}]
             </a>
           </sup>,
@@ -78,7 +81,10 @@ function renderInlineText(
       const sourceNumber = sourceIds.indexOf(sourceId) + 1
       nodes.push(
         <sup className="source-ref" key={keyPrefix + '-source-' + sourceId + '-' + start}>
-          <a href={'#source-' + sourceId} aria-label={'出典 ' + sourceNumber}>
+          <a
+              href={'#/' + pageKind + '/' + routeKey + '?section=' + encodeURIComponent('source-' + sourceId)}
+              aria-label={'出典 ' + sourceNumber}
+            >
             [{sourceNumber}]
           </a>
         </sup>,

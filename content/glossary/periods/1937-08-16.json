@@ -1,0 +1,58 @@
+{
+  "periodId": "jh41",
+  "routeKey": "1937-08-16",
+  "terms": [
+    {
+      "id": "second-shanghai-incident-1937",
+      "core": true
+    },
+    {
+      "id": "shanghai-expeditionary-army-1937",
+      "core": true
+    },
+    {
+      "id": "shanghai-special-naval-landing-force",
+      "core": false
+    },
+    {
+      "id": "first-konoe-cabinet-1937",
+      "core": false
+    },
+    {
+      "id": "military-industry-mobilization-law",
+      "core": true
+    },
+    {
+      "id": "sino-soviet-non-aggression-pact-1937",
+      "core": true
+    },
+    {
+      "id": "north-china-incident-1937",
+      "core": false
+    },
+    {
+      "id": "sino-japanese-incident-government-name-1937",
+      "core": true
+    },
+    {
+      "id": "teikoku-gikai",
+      "core": true
+    },
+    {
+      "id": "temporary-military-expenses-special-account-1937",
+      "core": true
+    },
+    {
+      "id": "temporary-funds-adjustment-law-1937",
+      "core": true
+    },
+    {
+      "id": "foreign-exchange-control-law-1933",
+      "core": true
+    },
+    {
+      "id": "temporary-import-export-measures-law-1937",
+      "core": true
+    }
+  ]
+}

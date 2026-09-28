@@ -184,6 +184,14 @@
     {
       "id": "first-konoe-cabinet-1937",
       "core": false
+    },
+    {
+      "id": "temporary-military-expenses-special-account-1937",
+      "core": true
+    },
+    {
+      "id": "temporary-funds-adjustment-law-1937",
+      "core": true
     }
   ]
 }

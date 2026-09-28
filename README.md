@@ -25,7 +25,7 @@
 - 公開本文の前提知識を中学校の歴史教科書レベルへ変更し、1800–1925年の年代23ページ＋横断8記事と用語辞書236語を遡及監査済み。内容の到達点は維持したまま、高校日本史で詳しく扱う制度・人物・事件・金融用語に初出時の足場説明を追加
 - 1931–1933年5月フェーズは main push CI run #233 / GitHub Pages run #113 とも success を確認して完了。A17は制度・時系列の理解に地図が寄与しないためno-map、横断記事S02/S05/S09/S10も1933年まで延長済み
 - 1933年6月〜1936年2月25日フェーズは main push CI run #244 / GitHub Pages run #119 とも success を確認して完了。A18はno-map、S02・S05・S09・S10は1936年2月25日まで延長済み
-- 1937年7月7日〜8月12日フェーズはJH37→A20→JH38→JH39→Crosscutting publication gate→S02/S05/S10延長まで完了・archived。次のactive implementation planは `plan/SHANGHAI_WAR_TO_FALL_IMPLEMENTATION_PLAN.md`。1937年8月13日〜11月12日をJH40〜JH43で、上海戦開始→戦時制度化→長期戦対応→上海占領の状態遷移として実装する。JH40「1937-08-13〜08-15」・JH41「1937-08-16〜09-10」・JH42「1937-09-11〜10-25」・JH43「1937-10-26〜11-12」は実装済み。A21「1937年8月の上海都市政治・軍事空間」はmap必要と判定し、共同租界は1935–45警察区GIS（CC BY 4.0）、フランス租界は1937 census block GIS（CC0）から外周polygonを導出し、軍事地点はapproximate pointに限定する方針でData Auditをpass。中国側市街の精密polygonや戦闘前線LineStringは作らない。次はA22「上海・杭州湾の作戦空間」の地図必要性・データ品質判定
+- 1937年7月7日〜8月12日フェーズはJH37→A20→JH38→JH39→Crosscutting publication gate→S02/S05/S10延長まで完了・archived。次のactive implementation planは `plan/SHANGHAI_WAR_TO_FALL_IMPLEMENTATION_PLAN.md`。1937年8月13日〜11月12日をJH40〜JH43で、上海戦開始→戦時制度化→長期戦対応→上海占領の状態遷移として実装する。JH40「1937-08-13〜08-15」・JH41「1937-08-16〜09-10」・JH42「1937-09-11〜10-25」・JH43「1937-10-26〜11-12」は実装済み。A21「1937年8月の上海都市政治・軍事空間」はmap必要と判定し、租界polygon＋approximate pointへ精度を分離。A22「上海・杭州湾の作戦空間」もmap必要と判定し、1937年同時代地域図と防衛研究所資料を根拠に、上海・松江・金山衛付近・蘇州・嘉興などのpoint中心表現ならData Auditをpass。進軍路・退却路・前線LineStringは作らず、現代背景地図の海岸線も1937年海岸線として扱わない。次はCrosscutting publication gate
 - GitHub Actions による lint / typecheck / build CI
 - `main` 更新時の GitHub Pages 自動デプロイ
 

@@ -114,7 +114,7 @@ export function PeriodTemplate({
               </a>
             ))}
             <a href="#change">前の時代からの変化</a>
-            <a href="#assumptions">当時の前提と次の論点</a>
+            <a href="#assumptions">読み方の留保と次の論点</a>
             {relatedCrosscutting.length > 0 && <a href="#related-crosscutting">横断して読む</a>}
             <a href="#glossary">この時代を読むための用語</a>
             {data.sources.length > 0 && <a href="#sources">史料・参考文献</a>}
@@ -204,7 +204,7 @@ export function PeriodTemplate({
 
           <section id="assumptions" className="content-section two-column-section">
             <div>
-              <div className="section-heading compact"><span>A</span><div><h2>当時の前提</h2></div></div>
+              <div className="section-heading compact"><span>A</span><div><h2>読み方の留保</h2></div></div>
               <ul className="plain-list">
                 {data.contemporaryAssumptions.map((item) => (
                   <li key={item}><LinkedText text={item} routeKey={data.routeKey} sourceIds={sourceIds} /></li>

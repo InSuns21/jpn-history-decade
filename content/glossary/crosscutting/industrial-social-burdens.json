@@ -84,6 +84,22 @@
     {
       "id": "boj-government-bond-underwriting-1932",
       "core": true
+    },
+    {
+      "id": "temporary-funds-adjustment-law-1937",
+      "core": true
+    },
+    {
+      "id": "foreign-exchange-control-law-1933",
+      "core": false
+    },
+    {
+      "id": "temporary-import-export-measures-law-1937",
+      "core": true
+    },
+    {
+      "id": "military-industry-mobilization-law",
+      "core": true
     }
   ]
 }

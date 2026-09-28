@@ -14,20 +14,31 @@ function normalizeHash(hash: string) {
   return route.startsWith('/') ? route : '/' + route
 }
 
+function parseHashRoute(hash: string) {
+  const normalized = normalizeHash(hash)
+  const queryIndex = normalized.indexOf('?')
+  const pathname = queryIndex >= 0 ? normalized.slice(0, queryIndex) : normalized
+  const params = new URLSearchParams(queryIndex >= 0 ? normalized.slice(queryIndex + 1) : '')
+  return {
+    pathname,
+    sectionId: params.get('section') ?? undefined,
+  }
+}
+
 function useHashRoute() {
-  const [route, setRoute] = useState(() => normalizeHash(window.location.hash))
+  const [hash, setHash] = useState(() => window.location.hash)
 
   useEffect(() => {
-    const onHashChange = () => setRoute(normalizeHash(window.location.hash))
+    const onHashChange = () => setHash(window.location.hash)
     window.addEventListener('hashchange', onHashChange)
     return () => window.removeEventListener('hashchange', onHashChange)
   }, [])
 
-  return route
+  return parseHashRoute(hash)
 }
 
 export function App() {
-  const route = useHashRoute()
+  const { pathname: route, sectionId } = useHashRoute()
   const periodMatch = route.match(/^\/(?:period|decade)\/([a-z0-9-]+)(?:\/terms\/([a-z0-9-]+))?$/)
   const crosscuttingMatch = route.match(/^\/(structure|theme)\/([a-z0-9-]+)(?:\/terms\/([a-z0-9-]+))?$/)
   const {
@@ -58,6 +69,7 @@ export function App() {
           next={neighbors.next}
           relatedCrosscutting={getRelatedCrosscutting(routeKey)}
           activeTermId={termId}
+          activeSectionId={sectionId}
         />
       )
     }
@@ -69,7 +81,7 @@ export function App() {
     const termExists = !termId || page?.glossary.some((item) => item.id === termId)
 
     if (page && termExists) {
-      content = <CrosscuttingTemplate data={page} periods={periods} activeTermId={termId} />
+      content = <CrosscuttingTemplate data={page} periods={periods} activeTermId={termId} activeSectionId={sectionId} />
     }
   }
 

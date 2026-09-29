@@ -18,6 +18,10 @@
       "core": true
     },
     {
+      "id": "imperial-general-headquarters-1937",
+      "core": false
+    },
+    {
       "id": "trautmann-mediation-1937",
       "core": true
     },

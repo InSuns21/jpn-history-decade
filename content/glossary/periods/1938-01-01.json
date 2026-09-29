@@ -1,0 +1,33 @@
+{
+  "period": "1938-01-01",
+  "termRefs": [
+    {
+      "id": "first-konoe-statement-1938",
+      "core": true
+    },
+    {
+      "id": "shina-jihen-shori-konpon-hoshin-1938",
+      "core": true
+    },
+    {
+      "id": "gozen-kaigi",
+      "core": true
+    },
+    {
+      "id": "imperial-headquarters-government-liaison-conference-1937",
+      "core": true
+    },
+    {
+      "id": "trautmann-mediation-1937",
+      "core": true
+    },
+    {
+      "id": "nanjing-national-government-1927",
+      "core": true
+    },
+    {
+      "id": "first-konoe-cabinet-1937",
+      "core": false
+    }
+  ]
+}

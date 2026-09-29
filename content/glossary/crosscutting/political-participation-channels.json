@@ -204,6 +204,14 @@
     {
       "id": "first-konoe-statement-1938",
       "core": true
+    },
+    {
+      "id": "national-general-mobilization-law-1938",
+      "core": true
+    },
+    {
+      "id": "delegated-legislation",
+      "core": false
     }
   ]
 }

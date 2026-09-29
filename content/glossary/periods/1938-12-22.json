@@ -1,0 +1,13 @@
+{
+  "period": "1938-12-22",
+  "termRefs": [
+    {"id":"third-konoe-statement-1938","core":true},
+    {"id":"east-asia-new-order-1938","core":true},
+    {"id":"yan-telegram-1938","core":true},
+    {"id":"wang-jingwei-operation-1938","core":true},
+    {"id":"second-konoe-statement-1938","core":false},
+    {"id":"first-konoe-cabinet-1937","core":false},
+    {"id":"anti-comintern-pact-1936","core":false},
+    {"id":"koa-in-1938","core":false}
+  ]
+}

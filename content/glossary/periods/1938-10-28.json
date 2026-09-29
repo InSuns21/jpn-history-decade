@@ -1,0 +1,13 @@
+{
+  "period": "1938-10-28",
+  "termRefs": [
+    {"id":"second-konoe-statement-1938","core":true},
+    {"id":"east-asia-new-order-1938","core":true},
+    {"id":"koa-in-1938","core":true},
+    {"id":"wang-jingwei-operation-1938","core":true},
+    {"id":"anti-comintern-pact-1936","core":false},
+    {"id":"five-ministers-conference-1938","core":false},
+    {"id":"first-konoe-statement-1938","core":false},
+    {"id":"league-cooperation-termination-1938","core":false}
+  ]
+}

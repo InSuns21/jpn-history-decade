@@ -1,0 +1,29 @@
+{
+  "period": "1937-12-14",
+  "termRefs": [
+    {
+      "id": "nanjing-incident-1937",
+      "core": true
+    },
+    {
+      "id": "nanjing-safety-zone-1937",
+      "core": true
+    },
+    {
+      "id": "central-china-area-army-1937",
+      "core": false
+    },
+    {
+      "id": "nanjing-national-government-1927",
+      "core": true
+    },
+    {
+      "id": "panay-incident-1937",
+      "core": true
+    },
+    {
+      "id": "trautmann-mediation-1937",
+      "core": true
+    }
+  ]
+}

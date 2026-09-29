@@ -1,0 +1,45 @@
+{
+  "period": "1938-01-17",
+  "termRefs": [
+    {
+      "id": "first-konoe-statement-1938",
+      "core": true
+    },
+    {
+      "id": "chinese-provisional-government-1937",
+      "core": true
+    },
+    {
+      "id": "national-general-mobilization-law-1938",
+      "core": true
+    },
+    {
+      "id": "front-non-expansion-policy-1938",
+      "core": true
+    },
+    {
+      "id": "planning-board-1937",
+      "core": true
+    },
+    {
+      "id": "teikoku-gikai",
+      "core": true
+    },
+    {
+      "id": "temporary-funds-adjustment-law-1937",
+      "core": false
+    },
+    {
+      "id": "temporary-import-export-measures-law-1937",
+      "core": false
+    },
+    {
+      "id": "military-industry-mobilization-law",
+      "core": false
+    },
+    {
+      "id": "imperial-general-headquarters-1937",
+      "core": false
+    }
+  ]
+}

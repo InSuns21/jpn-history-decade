@@ -1,0 +1,13 @@
+{
+  "period": "1938-09-30",
+  "termRefs": [
+    {"id":"guangdong-campaign-1938","core":true},
+    {"id":"wuhan-campaign-1938","core":true},
+    {"id":"wuhan-three-towns-1938","core":true},
+    {"id":"league-cooperation-termination-1938","core":true},
+    {"id":"ugaki-kazushige","core":false},
+    {"id":"five-ministers-conference-1938","core":false},
+    {"id":"china-regime-internal-guidance-1938","core":false},
+    {"id":"anti-comintern-pact-1936","core":false}
+  ]
+}

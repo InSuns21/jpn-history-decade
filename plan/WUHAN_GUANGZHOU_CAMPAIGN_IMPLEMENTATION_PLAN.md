@@ -290,7 +290,8 @@ Muscolino『The Ecology of War in China』には、
 
 - service: https://gis.sinica.edu.tw/ccts/
 - 1938 map: https://gis.sinica.edu.tw/showwmts/index.php?l=China_Map_1938&s=ccts
-- 利用方針: 1938年前後の黄河・主要都市・交通軸の位置関係をcontrol sourceとして確認
+- 利用方針: 1938年前後の主要都市・交通軸の位置関係をcontrol sourceとして確認
+- 「1938年」という年次だけでは6月9日の決壊前後どちらの河道状態を反映するか確定できないため、決壊前黄河の正本にはしない
 - WMTS rasterを本リポジトリへ複製しない
 - 公開ページ上で再配布条件が十分明確でないため、精密なvector転写の正本にはしない
 
@@ -299,7 +300,7 @@ Library of Congress所蔵の1931年中国全図は、Geography and Map Division�
 - source: https://www.loc.gov/item/2016587371/
 - publication: 1931
 - rights: free to use and reuse; credit Library of Congress, Geography and Map Division
-- 利用方針: 黄河、鄭州・開封・徐州、主要交通軸の広域関係を再利用条件の明確な別資料としてクロスチェック
+- 利用方針: 決壊前と確定できる黄河の大きな流路、鄭州・開封・徐州、主要交通軸の広域関係を再利用条件の明確な別資料としてクロスチェック
 - pictorial/general mapであるため、この一枚から河道中心線を精密復元しない
 
 #### 4. 交通軸

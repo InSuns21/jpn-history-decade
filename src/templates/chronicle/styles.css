@@ -92,11 +92,16 @@ a { color: inherit; }
 
 .timeline-nav { display: grid; grid-template-columns: repeat(6,minmax(0,1fr)); border: 1px solid var(--line); background: var(--paper); }
 .timeline-nav__item {
-  min-height: 94px; display: flex; flex-direction: column; justify-content: space-between;
+  min-width: 0; min-height: 94px; display: flex; flex-direction: column; justify-content: space-between;
   padding: 17px; border-right: 1px solid var(--line); color: var(--ink); text-decoration: none;
 }
 .timeline-nav__item:last-child { border-right: 0; }
-.timeline-nav__item span { font: 800 1.45rem ui-monospace, "SFMono-Regular", Consolas, monospace; }
+.timeline-nav__item span {
+  display: block;
+  min-width: 0;
+  font: 800 1.45rem/1.2 ui-monospace, "SFMono-Regular", Consolas, monospace;
+  overflow-wrap: anywhere;
+}
 .timeline-nav__item small { color: var(--muted); font-size: .67rem; }
 .timeline-nav__item.is-active, .timeline-nav a.timeline-nav__item:hover { background: var(--green); color: #fff; }
 .timeline-nav__item.is-active small, .timeline-nav a.timeline-nav__item:hover small { color: #dce5dd; }

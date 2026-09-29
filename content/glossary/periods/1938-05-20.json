@@ -1,0 +1,13 @@
+{
+  "period": "1938-05-20",
+  "termRefs": [
+    {"id":"five-ministers-conference-1938","core":true},
+    {"id":"ugaki-kazushige","core":true},
+    {"id":"yellow-river-breach-1938","core":true},
+    {"id":"first-konoe-statement-1938","core":false},
+    {"id":"national-general-mobilization-law-1938","core":false},
+    {"id":"xuzhou-campaign-1938","core":false},
+    {"id":"imperial-general-headquarters-1937","core":false},
+    {"id":"longhai-railway","core":false}
+  ]
+}

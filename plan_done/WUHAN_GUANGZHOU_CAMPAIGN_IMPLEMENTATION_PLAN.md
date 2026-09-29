@@ -1,11 +1,11 @@
 # 1938年5月20日から10月27日まで — 徐州後の再編から広東・武漢占領まで 実装計画
 
-- **Status:** active
-- **Progress:** phase cut ✅ → JH51 ✅ → A26 ✅ → JH52 ✅ → JH53 ✅ → JH54 ✅ → A27 ✅ → Crosscutting publication gate ✅ → S05/S09/S10延長 ✅ → phase-end audit necessity judgment ✅ → 次は CI / Pages
+- **Status:** completed
+- **Progress:** phase cut ✅ → JH51 ✅ → A26 ✅ → JH52 ✅ → JH53 ✅ → JH54 ✅ → A27 ✅ → Crosscutting publication gate ✅ → S05/S09/S10延長 ✅ → phase-end audit necessity judgment ✅（独立監査不要）→ CI #440 ✅ → Pages #196 ✅ → completed
 - **Created:** 2026-09-29
 - **Scope:** 1938-05-20〜1938-10-27
 - **Primary goal:** 徐州占領後の日本が、そのまま一本道で武漢・広東攻略へ進んだと書かず、近衛内閣改造、五相会議、宇垣外相期の和平方針再検討、黄河決壊、武漢攻略作戦、張鼓峰事件、国家総動員法の具体化、広東・武漢攻略が並行するなかで、軍事占領を拡大しても政治的な戦争終結には至らなかった過程を状態遷移として説明する
-- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](JPN_HISTORY_DECADE_PLAN.md)
+- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](../plan/JPN_HISTORY_DECADE_PLAN.md)
 - **Previous phase:** [TOTAL_MOBILIZATION_TO_XUZHOU_IMPLEMENTATION_PLAN.md](../plan_done/TOTAL_MOBILIZATION_TO_XUZHOU_IMPLEMENTATION_PLAN.md)
 - **Workspace rules:** [../SYSTEM_PROMPT.md](../SYSTEM_PROMPT.md)
 
@@ -787,10 +787,10 @@ A26をJH51直後に判定するのは、黄河決壊の空間説明がJH51〜JH5
 - [x] 横断記事publication gate完了
 - [x] 通過した横断記事だけ実装
 - [x] phase-end audit necessity judgment完了
-- [ ] `npm run check` / GitHub Actions green
-- [ ] GitHub Pages deploy green
-- [ ] Status: completed
-- [ ] `plan_done/` へ移動
+- [x] `npm run check` / GitHub Actions green（main push CI #440 success）
+- [x] GitHub Pages deploy green（run #196 success）
+- [x] Status: completed
+- [x] `plan_done/` へ移動
 
 ---
 

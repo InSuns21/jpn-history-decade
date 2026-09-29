@@ -108,6 +108,10 @@
     {
       "id": "delegated-legislation",
       "core": false
+    },
+    {
+      "id": "school-graduates-employment-restriction-1938",
+      "core": true
     }
   ]
 }

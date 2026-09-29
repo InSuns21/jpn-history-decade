@@ -5,7 +5,7 @@ kind: "structure"
 periodLabel: "1895–1938年1月16日"
 status: "published"
 title: "対外支配の制度差"
-summary: "1895〜1936年2月25日に日本が台湾・朝鮮・中国東北部などで行使した権限や影響には、台湾・朝鮮の総督府統治、[[term:kwantung-leased-territory-1905|関東州]]の租借地、[[term:south-manchuria-railway-1906|南満洲鉄道]]の会社権益、[[term:manchukuo-establishment-1932|満洲国]]の国家形式など、法的根拠と統治主体の異なる制度が併存した。さらに1935年の華北では、[[term:east-hebei-autonomous-regime-1935|冀東の自治機構]]と[[term:hebei-chahar-political-council-1935|冀察政務委員会]]の法的位置も異なった。主権・行政権・軍事的圧力・外交的影響を分けて読む必要がある。"
+summary: "1895〜1938年1月16日に日本が台湾・朝鮮・中国東北部などで行使した権限や影響には、台湾・朝鮮の総督府統治、[[term:kwantung-leased-territory-1905|関東州]]の租借地、[[term:south-manchuria-railway-1906|南満洲鉄道]]の会社権益、[[term:manchukuo-establishment-1932|満洲国]]の国家形式など、法的根拠と統治主体の異なる制度が併存した。1935年の華北では冀東・冀察という異なる政治機構が並び、1937年12月には日本軍占領下の華北で[[term:chinese-provisional-government-1937|中華民国臨時政府]]が成立した。領有・租借・会社権益・国家形式・占領地政治機構を分け、主権・行政権・軍事的圧力・外交的影響を比較する必要がある。"
 framingQuestion: "台湾・朝鮮・関東州・南満洲鉄道・満洲国、1935年の華北諸機構、1937年末の中華民国臨時政府では、主権・統治主体・参加回路・軍事的関与はどう違い、日本側の権限はどの制度を通じて現地社会へ及んだのか。"
 relatedPeriods:
   - "1891"

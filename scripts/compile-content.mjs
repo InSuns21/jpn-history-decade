@@ -200,6 +200,10 @@ function parseMarkdownSections(body, file) {
   for (const rawLine of lines) {
     const line = rawLine.trim()
 
+    if (/^<!--\s*claim-caution-lint:\s*allow\s+reason="[^"]+"\s*-->$/.test(line)) {
+      continue
+    }
+
     const sectionMatch = line.match(/^##\s+(.+?)\s+\{#([a-z0-9-]+)\}\s*$/)
     if (sectionMatch) {
       flushCurrent()

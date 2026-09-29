@@ -5,7 +5,7 @@ kind: "structure"
 periodLabel: "1871–1890"
 status: "published"
 title: "地方行政と政治参加"
-summary: "1871年の[[term:haihan-chiken|廃藩置県]]で地方長の任命権を中央政府へ集めても、地方行政がただちに中央官僚だけで動くようになったわけではない。[[term:kocho|戸長]]や町村の実務を使いながら、[[term:daiku-shoku-sei|大区小区制]]、1878年の[[term:sanshinpo-1878|三新法]]、1888年の[[term:shi-cho-son-sei-1888|市制・町村制]]、1890年の[[term:fuken-sei-gun-sei-1890|府県制・郡制]]へと制度は組み替えられた。重要なのは、中央集権と地方参加を反対語にせず、各段階で誰が長を選び、誰が予算を議決し、誰が監督したのかを分けて見ることである。"
+summary: "1871年の[[term:haihan-chiken|廃藩置県]]で地方長の任命権は中央政府へ集まり、地方行政の実務には[[term:kocho|戸長]]や町村の組織が組み込まれた。[[term:daiku-shoku-sei|大区小区制]]、1878年の[[term:sanshinpo-1878|三新法]]、1888年の[[term:shi-cho-son-sei-1888|市制・町村制]]、1890年の[[term:fuken-sei-gun-sei-1890|府県制・郡制]]へと制度は組み替えられた。重要なのは、中央集権と地方参加を反対語にせず、各段階で誰が長を選び、誰が予算を議決し、誰が監督したのかを分けて見ることである。"
 framingQuestion: "1871〜1890年の地方制度は、中央政府の統制を強めながら、なぜ地方の議決・選挙の回路も同時に作ったのか。"
 relatedPeriods:
   - "1868"

@@ -104,6 +104,10 @@
     {
       "id": "chinese-reformed-government-1938",
       "core": true
+    },
+    {
+      "id": "china-regime-internal-guidance-1938",
+      "core": true
     }
   ]
 }

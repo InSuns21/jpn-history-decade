@@ -212,6 +212,18 @@
     {
       "id": "delegated-legislation",
       "core": false
+    },
+    {
+      "id": "five-ministers-conference-1938",
+      "core": true
+    },
+    {
+      "id": "ugaki-kazushige",
+      "core": false
+    },
+    {
+      "id": "anti-comintern-pact-1936",
+      "core": false
     }
   ]
 }

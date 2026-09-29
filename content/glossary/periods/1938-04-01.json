@@ -1,0 +1,13 @@
+{
+  "period": "1938-04-01",
+  "termRefs": [
+    {"id":"national-general-mobilization-law-1938","core":true},
+    {"id":"xuzhou-campaign-1938","core":true},
+    {"id":"front-non-expansion-policy-1938","core":true},
+    {"id":"jinpu-railway","core":true},
+    {"id":"longhai-railway","core":true},
+    {"id":"taiierzhuang-battle-1938","core":false},
+    {"id":"imperial-general-headquarters-1937","core":false},
+    {"id":"national-mobilization-council-1938","core":false}
+  ]
+}

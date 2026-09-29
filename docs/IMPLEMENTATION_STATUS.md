@@ -8,7 +8,7 @@ README には概要だけを置き、フェーズ進捗・監査結果・地図�
 - 年代ページと構造史・テーマ史を Markdown + frontmatter からコンパイルし、共通コンテンツモデルで描画
 - 横断記事から関連年代、年代記事から関連する横断記事へ相互に移動できる構成
 - MapLibre GL JS を依存に追加し、必要な記事だけ主題地図を差し込める構成
-- 1800–1938年5月19日を公開品質で実装済み（年代史50ページ＋横断記事8本）
+- 1800–1938年6月17日を公開品質で実装済み（年代史51ページ＋横断記事8本）
 - 1926–1930フェーズはJH24「1926–1928」・JH25「1929–1930」まで実装済み。A14「1930年人口・都市化」も1930年国勢調査の人口10万人以上28市を代表点で実装し、1920年A12と同じ人口階級・凡例・操作パターンを再利用。Data / Style Auditはpassed、point-only再利用規則により個別Human Visual Auditは省略した。A15「山東・満洲の政治／軍事空間」は法的地位と時点を揃えたgeometry不足のためno-map判定
 - 長期接続監査やフェーズ末の「全体監査」は定型工程にしない。各年代の隣接接続確認を基本とし、複数年代・横断記事を同時に見ないと検出できない具体的な問題が残る場合だけ独立監査を追加する
 - 1937年7月7日〜8月12日のCrosscutting publication gateでは、S02「石高制・貨幣経済・財政」・S05「政治参加の回路」・S10「産業社会の負担と保護」を8月12日まで延長。S02は実戦の戦費調達、S05は軍事判断と議会の予算・課税審議の接続、S10は税・公債・借入による負担配分を扱う。S09「対外支配の制度差」は、この期間に新しい統治機構・法的地位が成立する比較軸がないため延長せず、新規横断記事も年代記事の再編集になるため見送った
@@ -20,6 +20,6 @@ README には概要だけを置き、フェーズ進捗・監査結果・地図�
 - 1937年8月13日〜11月12日フェーズはJH40→A21→JH41→JH42→JH43→A22→Crosscutting publication gate→S02/S05/S10延長→phase-end audit necessity judgmentまで完了し、`plan_done/SHANGHAI_WAR_TO_FALL_IMPLEMENTATION_PLAN.md` へarchive済み。S09は安定した新統治制度の比較軸がないため延長せず、新規「戦時動員体制」もJH41の再編集になるため見送った。main push CI run #324 / GitHub Pages run #146 はともに success
 - 1937年11月13日〜1938年1月16日フェーズはJH44→A23→JH45→JH46→A24→JH47→Crosscutting publication gate→S05/S09延長まで完了。phase-end audit necessity judgmentでは、JH44〜JH45の南京進攻の一本道化、JH46の加害事実と人数推計の混同、JH47とS05の和平判断説明の重複、JH46とS09の占領実務／政治機構の混同を候補として確認したが、現行本文で役割分離済みのため独立監査不要と判定した。main push CI run #405 / GitHub Pages run #181 はともに success。計画は `plan_done/NANKING_ADVANCE_TO_KONOE_STATEMENT_IMPLEMENTATION_PLAN.md` へarchive済み
 - 1938年1月17日〜5月19日フェーズはJH48→JH49→JH50→A25→Crosscutting publication gate→S05/S09/S10延長→phase-end audit necessity judgmentまで完了。gateではS05を「議会立法→政府命令」の権限配分、S09を華北／華中の占領地政治機構差、S10を人的・物的資源の横断的統制という既存比較軸で延長した。S02は新たな会計・徴税・公債制度の比較軸がなく見送り、新規「戦時動員体制」もS05/S10と年代記事の重複になるため見送った。独立監査は具体的な未解決仮説が残らないため不要と判定。main push CI run #422 / GitHub Pages run #187 はともに success。計画は `plan_done/TOTAL_MOBILIZATION_TO_XUZHOU_IMPLEMENTATION_PLAN.md` へarchive済み。次フェーズは `plan/WUHAN_GUANGZHOU_CAMPAIGN_IMPLEMENTATION_PLAN.md` として1938年5月20日〜10月27日に切り出し済み
-- 1938年5月20日〜10月27日フェーズをactive planとして切り出し済み。JH51「1938-05-20〜06-17」→JH52「1938-06-18〜07-26」→JH53「1938-07-27〜09-29」→JH54「1938-09-30〜10-27」を予定し、A26「黄河決壊と河南・武漢前面の水系・交通空間」・A27「武漢・広東攻略と対外補給の広域空間」はmap necessity / data-quality judgmentを行う。10月29日の有田外相就任・11月3日の第二次近衛声明は次フェーズへ送り、次工程はJH51実装
+- 1938年5月20日〜10月27日フェーズはJH51「1938-05-20〜06-17」まで実装済み。JH51では徐州占領後の未解決問題を受け、5月26日の近衛内閣改造、6月3日の陸相交代、6月10日の五相会議、宇垣外相・石射東亜局長による対中方針再検討、黄河決壊による作戦・社会環境の変化を実装し、JH50→JH51の隣接接続も確認した。次工程はA26「黄河決壊と河南・武漢前面の水系・交通空間」のmap necessity / data-quality judgment
 - GitHub Actions による lint / typecheck / build CI
 - `main` 更新時の GitHub Pages 自動デプロイ

@@ -1,7 +1,7 @@
 # 1938年5月20日から10月27日まで — 徐州後の再編から広東・武漢占領まで 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH51 ✅ → A26 ✅（採用・浸水域polygonなし／地点＋交通軸＋水系・洪水方向の模式線まで） → JH52 ✅ → JH53 ✅ → JH54 ✅ → 次は A27「武漢・広東攻略と対外補給の広域空間」map necessity / data-quality judgment
+- **Progress:** phase cut ✅ → JH51 ✅ → A26 ✅（採用・浸水域polygonなし／地点＋交通軸＋水系・洪水方向の模式線まで） → JH52 ✅ → JH53 ✅ → JH54 ✅ → A27 ✅（採用・代表地点＋歴史交通軸＋代替補給方向の模式corridorまで） → 次は Crosscutting publication gate
 - **Created:** 2026-09-29
 - **Scope:** 1938-05-20〜1938-10-27
 - **Primary goal:** 徐州占領後の日本が、そのまま一本道で武漢・広東攻略へ進んだと書かず、近衛内閣改造、五相会議、宇垣外相期の和平方針再検討、黄河決壊、武漢攻略作戦、張鼓峰事件、国家総動員法の具体化、広東・武漢攻略が並行するなかで、軍事占領を拡大しても政治的な戦争終結には至らなかった過程を状態遷移として説明する
@@ -363,36 +363,222 @@ A26では次を描かない。
 
 ## A27 — 武漢・広東攻略と対外補給の広域空間
 
-### map necessity 候補
+**Status: completed / 2026-09-30**
 
-**中〜高。Data Audit後に採否決定。**
+### map necessity 判定
 
-JH52〜JH54では、
+**採用 / high。**
 
-- 長江沿岸の南京—安慶—九江—武漢
-- 武漢三鎮
+JH52〜JH54の本文だけでも、武漢と広東がそれぞれ重要な都市だったことは追える。ただし、このフェーズの空間上の核心は都市の重要度そのものではなく、
+
+1. 香港が1938年前半の中国向け軍需輸入の主要入口だったこと
+2. 香港・九龍から広東へ入り、1936年に全通した粤漢鉄道を通じて武漢方面へ接続できたこと
+3. 武漢が長江中流の交通・軍需・戦争指導上の結節点だったこと
+4. 日本軍が武漢・広東を相次いで攻略してこの主交通軸へ圧力を加えたこと
+5. それでも仏印・ビルマ・澳門・広州湾・北西方面など別の対外補給経路が残ったこと
+
+を同時に見る点にある。
+
+米国国務省の1938年7月5日付「Memorandum on Military Supplies Entering China」は、開戦後に中国へ輸入された軍需品の75％超が香港経由と推計し、残りの入口として仏印、ロシア領中央アジア、広州湾、澳門、ビルマなどを挙げる。また、中国の大規模作戦継続には香港経路を代替路整備まで維持することと、漢口方面の主要軍需拠点を保持することが重要だと評価している。
+
+- source: https://history.state.gov/historicaldocuments/frus1938v03/d205
+- 同内容の6月15日文書: https://history.state.gov/historicaldocuments/frus1938v03/d603
+- 利用方針: 「香港経路が主要だった」「代替経路が複数あった」という1938年時点の同時代評価に使用
+- 75％超という値は米国側推計であり、地図の線幅や面積として定量表現しない
+
+Cambridge University Press掲載の研究は、日本海軍の沿岸封鎖によって香港—広東—漢口の輸入・輸送が重要性を増し、広東が中国側の対外軍需補給の重要拠点だったことを示している。
+
+- source: https://www.cambridge.org/core/journals/urban-history/article/how-deep-is-your-love-patriotism-money-and-the-people-in-canton-in-the-early-phase-of-the-sinojapanese-war-19371938/08E1C0BD160CD5510DBF8D1F6E59F9C6
+- 利用方針: 香港—広東—漢口という補給軸の意味のクロスチェック
+
+したがってA27は採用する。目的は作戦経過を再現することではなく、**武漢攻略と広東攻略が、中国側の内陸交通・主要補給軸へ別方向から圧力を加えたことと、占領後も代替経路が残ったことを一枚で説明すること**とする。
+
+### Data Audit 判定
+
+**conditional pass。公開geometryは「代表地点＋歴史交通軸のgeneralized LineString＋代替補給方向のschematic corridor」までを上限とする。**
+
+#### 1. 香港—広東—武漢の主要交通軸
+
+粤漢鉄道は1936年に広東—武漢間が全通した。広州市政府・広州市政協の鉄道史整理では、広州から韶関、湖南を経て武昌へ至る粤漢鉄道が1936年に全線開通し、1937年には広九鉄道との連絡線が整備され、国外から香港へ入った物資を内陸へ運ぶ経路として用いられたことが確認できる。
+
+- source: https://www.gz.gov.cn/zlgz/tsgz/content/post_9077805.html
+- source: https://www.gzzx.gov.cn/xxyd/gywhyc/202607/t20260728_169718.htm
+- academic cross-check: https://bunkyo.repo.nii.ac.jp/records/2002202
+- 利用方針: 広東—武漢間の鉄道の存在・全通時期、広九鉄道との接続関係を確認
+- exact rail centerlineを現代鉄道データから流用しない
+- 公開線形は広東—韶関—衡陽—株洲—武昌など歴史資料で確認できる主要経由地を結ぶgeneralized LineStringとする
+
+香港側では広九鉄道が九龍と広東を結び、1937年の連絡線によって粤漢鉄道との接続が改善した。A27では、
+
+- 香港／九龍
 - 広東
-- 香港
-- 華南・長江方面の対外交通
+- 韶関
+- 衡陽
+- 株洲
+- 武漢（広域表示では武漢三鎮を一つのgroup pointとして扱う）
 
-を一枚で見ると、「武漢攻略」と「広東攻略」が別々の都市攻略ではなく、中国側の内陸交通・対外補給に圧力をかける作戦だったことを理解しやすい。
+を交通軸の主要waypoint候補とする。
 
-### geometry の候補上限
+#### 2. 武漢・長江・内陸継続
 
-- 南京・安慶・九江・漢口・漢陽・武昌・広東・香港：representative Point
-- 長江：historical questionに必要な範囲のgeneralized LineString
-- 当時存在した主要鉄道・補給軸：歴史資料で確認できるものだけgeneralized LineString
-- 香港—広東の位置関係：Point＋必要最低限の交通軸
+中央研究院人社中心GIS專題中心は、
 
-### 描かないもの
+- 中華民國全圖（1937）
+- 中華新形勢大地圖（1938）
+- 湖北・湖南・広東等の五万分一地形図
+- 1938年「最新武漢三鎮詳図」
 
-- 日付別前線
-- 精密な部隊進撃矢印
+をWMTSで公開している。
+
+- service: https://gis.sinica.edu.tw/ccts/
+- 1938 China map: https://gis.sinica.edu.tw/showwmts/index.php?l=China_Map_1938&s=ccts
+- Wuhan historical maps: https://gis.sinica.edu.tw/wuhan/
+- 1938 Wuhan map: https://gis.sinica.edu.tw/showwmts/index.php?l=Wuhan_25K_1938&s=wuhan
+
+これらは武漢三鎮、長江、主要都市・交通軸の位置関係を確認するcontrol sourceとして有用である。ただし公開ページから本リポジトリへの再配布・vector転写ライセンスは十分に確認できないため、
+
+- WMTS rasterを本リポジトリへ複製しない
+- 地図上の線形を精密トレースしてGeoJSON化しない
+- representative pointとgeneralized routeの照合資料としてのみ使用する
+
+方針とする。
+
+A27では武漢から重慶方面へ続く内陸側の戦争継続空間を説明するため、武漢・重慶を代表地点として表示してよい。長江は広域の位置関係を示すgeneralized river axisとして扱い、測量済み河道の精密再現を目的にしない。
+
+#### 3. 日本側の作戦図
+
+防衛研究所『戦史叢書 第89巻 支那事変陸軍作戦〈2〉』には、
+
+- 付図第三「武漢攻略作戦経過概要図」
+- 付図第四「広東攻略作戦経過概要図」
+
+がある。
+
+- source: https://www.nids.mod.go.jp/military_history_search/SoshoView?kanno=089
+- 利用方針: 武漢・広東の作戦対象地域、主要地点、作戦の広域関係のcontrol source
+- 作戦図の進撃線・部隊配置をトレースしない
+- A27では日付別戦線・師団配置・精密進撃矢印を描かない
+
+防衛研究所の研究も、1938年10月の武漢攻略と広東攻略を、中国側への軍事圧力と「経済封鎖」・補給路遮断という戦略上の文脈に置いている。
+
+- source: https://www.nids.mod.go.jp/event/proceedings/forum/pdf/2019/02_tobe.pdf
+- source: https://www.nids.mod.go.jp/publication/senshi/pdf/201103/05.pdf
+- 利用方針: 「二都市攻略が補給・経済圧力と結びついた」という作戦目的のクロスチェック
+
+#### 4. 代替対外補給経路
+
+1938年7月の米国外交文書は、香港以外にも仏印、ロシア領中央アジア、広州湾、澳門、ビルマを軍需品の入口として挙げ、仏印・雲南・広西方面では道路・鉄道の整備が進んでいたと記録している。
+
+このためA27で「広東占領＝対外補給の完全遮断」という印象を与えてはならない。
+
+ただし各経路は、
+
+- 時期によって整備状況が異なる
+- 鉄道・道路・河川・隊商路が混在する
+- 1938年10月時点の輸送量を同一精度で比較できない
+
+ため、代替補給路を精密な一本のLineStringとして描かない。
+
+公開する場合は、
+
+- 仏印方面 → 広西／雲南方面
+- ビルマ方面 → 雲南方面
+
+程度の**schematic corridor / direction**に限定する。北西のソ連方面はA27の表示範囲を過度に広げるため原則非表示とし、凡例・注記で「他にも北西経路等が存在」と補う。
+
+澳門・広州湾は、地図の可読性を損なわない場合だけ補助pointとして表示する。
+
+#### 5. Library of Congress資料
+
+Library of Congress Geography and Map Divisionのdigitized map collectionは、個別Rights Advisoryがない資料についてfree to use and reuseと案内している。A26で確認済みの1931年中国地図は、1938年以前の主要都市・大河川の広域位置関係をrights-clearなcontrol sourceとして再利用できる。
+
+ただし1931年は粤漢鉄道全通前であるため、
+
+- 1938年鉄道網の正本には使わない
+- 広域の都市・河川関係のクロスチェックに限定する
+
+方針とする。
+
+1900年前後のLOC一般図もrights-clearだが、1938年の鉄道・交通状態を示すには古すぎるためA27の主要データソースには採用しない。
+
+#### 6. 公開geometryの上限
+
+| 対象 | geometry | confidence | 用途 |
+|---|---|---|---|
+| 香港／九龍 | representative Point | derived | 1938年前半の主要対外軍需入口 |
+| 広東 | representative Point | derived | 華南港湾・交通結節、10月21日占領 |
+| 武漢 | representative / grouped Point | derived | 武漢三鎮全体を広域縮尺で示す |
+| 南京・九江 | representative Point | derived | 長江沿岸の作戦・交通文脈 |
+| 重慶 | representative Point | derived | 国民政府の内陸後方基盤 |
+| 韶関・衡陽・株洲 | waypoint Point | derived / approximate | 粤漢鉄道generalized routeの形状制約 |
+| 香港／九龍—広東 | generalized LineString | derived | 広九鉄道・連絡交通 |
+| 広東—武漢 | generalized LineString | derived | 1936年全通の粤漢鉄道 |
+| 南京—九江—武漢—重慶 | generalized river axis | approximate | 長江中流〜内陸の位置関係 |
+| 仏印→広西／雲南 | schematic corridor | schematic | 代替対外補給方向 |
+| ビルマ→雲南 | schematic corridor | schematic | 代替対外補給方向 |
+
+**公開しないgeometry:**
+
+- 日本軍・中国軍の日付別前線
 - 師団・軍団配置polygon
-- 「海外からの全補給量」を地図だけで表す定量表現
-- 現代行政界を1938年の政治境界として使うpolygon
+- 精密な上陸地点・進撃矢印
+- 「75％」を線幅・面積へ変換した補給量表現
+- 研究図・戦史叢書付図の目視トレース
+- 現代行政界を1938年境界として用いるpolygon
+- 現代の粤漢／京広鉄道線形を1938年線形として無注記利用すること
+- 仏印・ビルマ等の補給路を、史料以上の精度で一本の確定routeとして描くこと
 
-A27は「作戦経過図」ではなく、**武漢と広東がなぜ目標になったかを交通・補給地理で説明する地図**としてのみ採用する。
+### 採用判断
+
+**A27は採用する。Data Auditはconditional pass。**
+
+本文だけでは、
+
+- 香港が主な軍需入口であること
+- 広東が香港と内陸交通を接続すること
+- 粤漢鉄道が広東と武漢を結ぶこと
+- 武漢からさらに内陸へ戦争継続空間が続くこと
+- 広東占領後も別の海外補給経路が残ること
+
+を同時に保持しにくい。
+
+A27はこの関係を一枚で比較できるため、JH54の「広東・武漢を占領しても戦争が終わらない」理由の理解を改善する。
+
+ただし、この地図は**作戦経過図ではなく交通・補給構造図**とする。軍事作戦そのものを矢印で再現するより、主要都市・歴史交通軸・代替補給方向を区別して表示する。
+
+LineStringとschematic corridorを含むためpoint-only再利用例外は使わない。実装する場合は通常どおり Data / Style / Human Visual Audit を行う。
+
+Style Auditでは最低限、
+
+- 鉄道
+- 河川・水運軸
+- 代替補給schematic corridor
+
+を別の線種で表現すること
+- schematic corridorを実在する一本の道路・鉄道と誤読させないこと
+- 香港経路の重要性を強調しても「唯一の経路」と読めない凡例・注記を置くこと
+- 武漢は広域縮尺では三鎮groupとして表示し、必要ならpopupで漢口・漢陽・武昌を説明すること
+
+を必須とする。
+
+### A27判定で使用した主要資料
+
+- U.S. Department of State, *Foreign Relations of the United States, 1938, The Far East, Volume III*, “Memorandum on Military Supplies Entering China”, July 5, 1938  
+  https://history.state.gov/historicaldocuments/frus1938v03/d205
+- U.S. Department of State, June 15, 1938 memorandum on munitions traffic  
+  https://history.state.gov/historicaldocuments/frus1938v03/d603
+- Toby Lincoln, “How deep is your love? Patriotism, money and the people in Canton in the early phase of the Sino-Japanese War, 1937–1938”, *Urban History*  
+  https://www.cambridge.org/core/journals/urban-history/article/how-deep-is-your-love-patriotism-money-and-the-people-in-canton-in-the-early-phase-of-the-sinojapanese-war-19371938/08E1C0BD160CD5510DBF8D1F6E59F9C6
+- 大野絢也「粤漢鉄道の全線開通（1936年9月）と華中・華南交通網の変容」  
+  https://bunkyo.repo.nii.ac.jp/records/2002202
+- 中央研究院人社中心GIS專題中心 CCTS / 武漢百年歷史地圖  
+  https://gis.sinica.edu.tw/ccts/  
+  https://gis.sinica.edu.tw/wuhan/
+- 防衛研究所『戦史叢書 第89巻 支那事変陸軍作戦〈2〉昭和十四年九月まで』  
+  https://www.nids.mod.go.jp/military_history_search/SoshoView?kanno=089
+- 戸部良一「日中戦争の拡大と日本陸軍 1937年7月〜1938年10月」  
+  https://www.nids.mod.go.jp/event/proceedings/forum/pdf/2019/02_tobe.pdf
+
 
 ---
 
@@ -566,7 +752,7 @@ A26をJH51直後に判定するのは、黄河決壊の空間説明がJH51〜JH5
 
 - [x] JH51–JH54 published
 - [x] A26必要性・データ品質判定完了
-- [ ] A27必要性・データ品質判定完了
+- [x] A27必要性・データ品質判定完了
 - [ ] 横断記事publication gate完了
 - [ ] 通過した横断記事だけ実装
 - [ ] phase-end audit necessity judgment完了

@@ -192,6 +192,18 @@
     {
       "id": "temporary-funds-adjustment-law-1937",
       "core": true
+    },
+    {
+      "id": "gozen-kaigi",
+      "core": true
+    },
+    {
+      "id": "imperial-headquarters-government-liaison-conference-1937",
+      "core": true
+    },
+    {
+      "id": "first-konoe-statement-1938",
+      "core": true
     }
   ]
 }

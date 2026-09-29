@@ -1,0 +1,13 @@
+{
+  "period": "1938-07-27",
+  "termRefs": [
+    {"id":"changkufeng-incident-1938","core":true},
+    {"id":"wuhan-campaign-1938","core":true},
+    {"id":"school-graduates-employment-restriction-1938","core":true},
+    {"id":"anti-comintern-pact-1936","core":true},
+    {"id":"national-general-mobilization-law-1938","core":false},
+    {"id":"five-ministers-conference-1938","core":false},
+    {"id":"ugaki-kazushige","core":false},
+    {"id":"wuhan-three-towns-1938","core":false}
+  ]
+}

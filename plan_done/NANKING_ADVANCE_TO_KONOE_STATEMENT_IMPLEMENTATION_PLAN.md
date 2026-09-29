@@ -1,11 +1,11 @@
 # 1937年11月13日から1938年1月16日まで — 南京進攻から第一次近衛声明まで 実装計画
 
-- **Status:** active
-- **Progress:** phase cut ✅ → JH44 ✅ → A23 ✅（map必要・同時代地域図でpoint照合、進撃路／交通軸LineStringなし）→ JH45 ✅ → JH46 ✅ → A24 ✅（map必要・安全区はapproximate polygon可、加害地点の大量point化なし）→ JH47 ✅ → Crosscutting publication gate ✅ → S05/S09延長 ✅ → 次は phase-end audit necessity judgment
+- **Status:** completed
+- **Progress:** phase cut ✅ → JH44 ✅ → A23 ✅ → JH45 ✅ → JH46 ✅ → A24 ✅ → JH47 ✅ → Crosscutting publication gate ✅ → S05/S09延長 ✅ → phase-end audit necessity judgment ✅（独立監査不要）→ CI ✅ → Pages ✅ → completed
 - **Created:** 2026-09-29
 - **Scope:** 1937-11-13〜1938-01-16
 - **Primary goal:** 上海占領後、日本軍の追撃・南京進攻がどのように現地軍の行動、参謀本部・大本営の統制、政府の対中方針へ接続したかを追い、南京占領を中国の降伏と同一視せず、南京での非戦闘員殺害・略奪・性暴力・捕虜処遇などの加害、第三国との危機、トラウトマン工作の継続と条件変更、1938年1月16日の第一次近衛声明までを一つの状態遷移として説明する
-- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](./JPN_HISTORY_DECADE_PLAN.md)
+- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](../plan/JPN_HISTORY_DECADE_PLAN.md)
 - **Previous phase:** [SHANGHAI_WAR_TO_FALL_IMPLEMENTATION_PLAN.md](../plan_done/SHANGHAI_WAR_TO_FALL_IMPLEMENTATION_PLAN.md)
 - **Workspace rules:** [../SYSTEM_PROMPT.md](../SYSTEM_PROMPT.md)
 
@@ -512,6 +512,27 @@ JH44〜JH47実装後に行う。
 
 ---
 
+## phase-end audit necessity judgment — 2026-09-29
+
+**独立監査は不要と判定する。**
+
+JH44〜JH47の隣接接続は各年代ページの実装時に確認済みで、Crosscutting publication gateでは年代記事と横断記事の役割重複も判定した。南京事件を含む重要フェーズであること自体を理由に、同じ確認をもう一度「全体監査」として繰り返すことはしない。
+
+今回、複数記事を同時に見ないと検出できる問題として残り得たのは、次の4点だった。
+
+- JH44〜JH45が「上海占領→南京攻略」を最初から決まっていた一本道として接続してしまうこと
+- JH46で、殺害・略奪・性暴力・捕虜処遇などの加害事実と、被害者総数の推計幅を混同すること
+- JH47とS05が、1938年1月の和平継続・打ち切りを同じ時系列説明として重複させること
+- JH46とS09が、南京占領後の加害・占領実務と、華北の中華民国臨時政府という占領地政治機構を一つの「占領統治」に畳み込むこと
+
+現行本文では、JH44が現地軍の追撃と中央の制令線、JH45が12月1日の南京攻略正式命令を分けている。JH46は同時代記録と研究を用いて加害行為を具体的に示した上で、人数推計は対象地域・期間・定義・資料の差として別に扱っている。JH47は政府・参謀本部間の和平判断を時系列で扱い、S05はその判断が議会とは別の政府／統帥調整回路で決まったことを長期比較している。S09は中華民国臨時政府を、領有・租借・会社権益・満洲国などと制度類型で比較しており、南京市内の加害記述を再要約していない。
+
+したがって、複数年代・横断記事をまとめて再監査しなければ検出できない具体的な未解決仮説は残っていない。規約どおり、理由のないフェーズ末全体監査は追加せず、CI / Pages確認と完了処理へ進む。
+
+main上では、本フェーズの本文・横断記事反映後の **CI run #405** と **Deploy GitHub Pages run #181** がともにsuccessであることを確認した。
+
+---
+
 # 10. 事前 source survey
 
 ## 外務省外交史料館
@@ -697,11 +718,11 @@ plan_done/
 - [x] A23 / A24必要性・データ品質判定完了
 - [x] 横断記事publication gate完了
 - [x] 通過した横断記事だけ実装
-- [ ] phase-end audit necessity judgment完了
-- [ ] npm run check / GitHub Actions green
-- [ ] GitHub Pages deploy green
-- [ ] Status: completed
-- [ ] plan_done/ へ移動
+- [x] phase-end audit necessity judgment完了（具体的な未解決仮説なしのため独立監査不要）
+- [x] `npm run check` / GitHub Actions green（main push CI run #405 success）
+- [x] GitHub Pages deploy green（run #181 success）
+- [x] Status: completed
+- [x] `plan_done/` へ移動
 
 ---
 

@@ -472,11 +472,11 @@ jpn-history-decade/
 
 年代史を進めながら、並行してテーマ史・構造史を追加する。
 
-1800〜1937年11月12日は公開品質化済み。1874〜1890年、1891〜1911年、1912〜1925年、1926〜1930年、1931〜1933年5月、1933年6月〜1936年2月25日、1936年2月26日〜1937年7月6日、1937年7月7日〜8月12日、1937年8月13日〜11月12日の実装計画は `plan_done/` へ移動済み。
+1800〜1938年1月16日は公開品質化済み。1874〜1890年、1891〜1911年、1912〜1925年、1926〜1930年、1931〜1933年5月、1933年6月〜1936年2月25日、1936年2月26日〜1937年7月6日、1937年7月7日〜8月12日、1937年8月13日〜11月12日、1937年11月13日〜1938年1月16日の実装計画は `plan_done/` へ移動済み。
 
 1912〜1925年フェーズでは、大正政変、第一次世界大戦、戦時経済、米騒動、原敬内閣、三・一運動、ワシントン体制、関東大震災、普通選挙法、治安維持法を、単純な「大正デモクラシー」や「自由化」の一本道として扱わず、政党政治・社会運動・労働・都市化・植民地統治・国際秩序・治安政策が相互に組み替わる過程として実装した。
 
-1936年2月26日〜1937年7月6日フェーズは完了し、[FEBRUARY_26_TO_PRE_MARCO_POLO_IMPLEMENTATION_PLAN.md](../plan_done/FEBRUARY_26_TO_PRE_MARCO_POLO_IMPLEMENTATION_PLAN.md) へ移動済み。1937年7月7日〜8月12日フェーズは [LUGOU_BRIDGE_TO_PRE_SHANGHAI_IMPLEMENTATION_PLAN.md](../plan_done/LUGOU_BRIDGE_TO_PRE_SHANGHAI_IMPLEMENTATION_PLAN.md)、1937年8月13日〜11月12日フェーズは [SHANGHAI_WAR_TO_FALL_IMPLEMENTATION_PLAN.md](../plan_done/SHANGHAI_WAR_TO_FALL_IMPLEMENTATION_PLAN.md) へ移動済み。現在のactive implementation planは、1937年11月13日〜1938年1月16日を対象とする [NANKING_ADVANCE_TO_KONOE_STATEMENT_IMPLEMENTATION_PLAN.md](./NANKING_ADVANCE_TO_KONOE_STATEMENT_IMPLEMENTATION_PLAN.md) とする。上海占領後の南京方面進撃、南京攻略命令、南京占領後の加害と第三国問題、トラウトマン工作の帰趨、第一次近衛声明を分けて追い、南京占領を中国政府の降伏や戦争終結として扱わない。
+1936年2月26日〜1937年7月6日フェーズは完了し、[FEBRUARY_26_TO_PRE_MARCO_POLO_IMPLEMENTATION_PLAN.md](../plan_done/FEBRUARY_26_TO_PRE_MARCO_POLO_IMPLEMENTATION_PLAN.md) へ移動済み。1937年7月7日〜8月12日フェーズは [LUGOU_BRIDGE_TO_PRE_SHANGHAI_IMPLEMENTATION_PLAN.md](../plan_done/LUGOU_BRIDGE_TO_PRE_SHANGHAI_IMPLEMENTATION_PLAN.md)、1937年8月13日〜11月12日フェーズは [SHANGHAI_WAR_TO_FALL_IMPLEMENTATION_PLAN.md](../plan_done/SHANGHAI_WAR_TO_FALL_IMPLEMENTATION_PLAN.md)、1937年11月13日〜1938年1月16日フェーズは [NANKING_ADVANCE_TO_KONOE_STATEMENT_IMPLEMENTATION_PLAN.md](../plan_done/NANKING_ADVANCE_TO_KONOE_STATEMENT_IMPLEMENTATION_PLAN.md) へ移動済み。現在のactive implementation planは、1938年1月17日〜5月19日を対象とする [TOTAL_MOBILIZATION_TO_XUZHOU_IMPLEMENTATION_PLAN.md](./TOTAL_MOBILIZATION_TO_XUZHOU_IMPLEMENTATION_PLAN.md) とする。第一次近衛声明後の新政権工作、国家総動員法の議会審議・公布・施行、戦面不拡大方針から徐州作戦への転換を分けて追い、和平打ち切りから軍事拡大を一本道として扱わない。
 
 1931年以後も、すべてを月別・日別にするのではない。高解像度化は、同じ年の中で制度状態・軍事的既成事実・外交上の選択肢が変わる場合に限定する。二・二六事件のように境界前後で統治・軍事・政権形成の状態が大きく変わる事件は、前日までと事件当日以後を分けて実装する。
 

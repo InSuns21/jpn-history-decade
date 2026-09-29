@@ -14,6 +14,13 @@ const RULES = [
   { id: 'not-same', pattern: /同一視しない/u, label: '同一視しない' },
   { id: 'not-same-variant', pattern: /同一視できない/u, label: '同一視できない' },
   { id: 'not-the-case', pattern: /わけではない/u, label: 'わけではない' },
+  { id: 'not-the-same', pattern: /同じではない/u, label: '同じではない' },
+  { id: 'not-the-thing', pattern: /ことではない/u, label: 'ことではない' },
+  { id: 'not-completed-that-way', pattern: /(?:した|された)のではない/u, label: '〜したのではない' },
+  { id: 'not-merely', pattern: /単なる[^。！？\n]{0,80}ではない/u, label: '単なる〜ではない' },
+  { id: 'not-only-kind', pattern: /だけの[^。！？\n]{0,80}ではない/u, label: '〜だけの〜ではない' },
+  { id: 'not-separate-things', pattern: /別々の[^。！？\n]{0,80}ではない/u, label: '別々の〜ではない' },
+  { id: 'not-one-sided-but', pattern: /一方的に[^。！？\n]{0,80}ではなく/u, label: '一方的に〜ではなく' },
   { id: 'do-not-regard', pattern: /みなさない/u, label: 'みなさない' },
   { id: 'not-explain-only', pattern: /だけ(?:で|から)説明しない/u, label: 'だけで/から説明しない' },
   {

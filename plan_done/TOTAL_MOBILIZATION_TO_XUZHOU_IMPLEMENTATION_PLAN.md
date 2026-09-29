@@ -1,11 +1,11 @@
 # 1938年1月17日から5月19日まで — 国家総動員法から徐州占領まで 実装計画
 
-- **Status:** active
-- **Progress:** phase cut ✅ → JH48 ✅ → JH49 ✅ → JH50 ✅ → A25 ✅（mapあり・鉄道2路線はapproximate LineString、作戦線なし） → Crosscutting publication gate ✅ → S05/S09/S10延長 ✅ → phase-end audit necessity judgment ✅（独立監査不要）→ 次は CI / Pages
+- **Status:** completed
+- **Progress:** phase cut ✅ → JH48 ✅ → JH49 ✅ → JH50 ✅ → A25 ✅（mapあり・鉄道2路線はapproximate LineString、作戦線なし） → Crosscutting publication gate ✅ → S05/S09/S10延長 ✅ → phase-end audit necessity judgment ✅（独立監査不要）→ CI #422 ✅ → Pages #187 ✅ → completed
 - **Created:** 2026-09-29
 - **Scope:** 1938-01-17〜1938-05-19
 - **Primary goal:** 第一次近衛声明で国民政府との公式な和平回路を閉じた後、日本がすぐ一方向に軍事拡大したと書かず、占領地の新政権工作、国内の総動員法制、陸軍中央の戦面不拡大方針と現地軍の作戦要求が並行し、最終的に徐州作戦へ進むまでを状態遷移として説明する
-- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](./JPN_HISTORY_DECADE_PLAN.md)
+- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](../plan/JPN_HISTORY_DECADE_PLAN.md)
 - **Previous phase:** [NANKING_ADVANCE_TO_KONOE_STATEMENT_IMPLEMENTATION_PLAN.md](../plan_done/NANKING_ADVANCE_TO_KONOE_STATEMENT_IMPLEMENTATION_PLAN.md)
 - **Workspace rules:** [../SYSTEM_PROMPT.md](../SYSTEM_PROMPT.md)
 
@@ -369,7 +369,9 @@ JH48〜JH50の隣接接続は各年代ページの実装時に確認済みで、
 
 実装後は、JH49が法案審議と成立の経過、S05が議会立法と政府命令の権限配分、S09が華北・華中の占領地政治機構の制度比較、S10が企業・家計へ及ぶ負担と資源配分を担当する形に分離した。S10でも5月5日は包括的な統制能力が法的に発効した段階とし、個別統制が同日に一斉発動したとは書いていない。
 
-したがって、複数年代・横断記事をまとめて再監査しなければ検出できない具体的な未解決仮説は残っていない。規約どおり、理由のないフェーズ末全体監査は追加せず、CI / Pages確認へ進む。
+したがって、複数年代・横断記事をまとめて再監査しなければ検出できない具体的な未解決仮説は残っていない。規約どおり、理由のないフェーズ末全体監査は追加しない。
+
+main上では、本フェーズの横断記事反映後の **CI run #422** と **Deploy GitHub Pages run #187** がともにsuccessであることを確認した。
 
 ---
 
@@ -492,33 +494,33 @@ plan_done/
 
 ## 各年代ページ
 
-- [ ] 中学校教科書レベルを前提に、国家総動員法・委任立法・占領地政治機構・軍中央／現地軍などへ初出説明を置く
-- [ ] 第一次近衛声明から徐州作戦を一本道として書かない
-- [ ] 政府・企画院・帝国議会・陸軍中央・現地軍の役割を分ける
-- [ ] 国家総動員法案の提出・審議・成立・公布・施行を区別する
-- [ ] 法成立の瞬間に社会全体が完全統制されたと書かない
-- [ ] 議会審議を一つの有名発言・騒動だけで説明しない
-- [ ] 中華民国臨時政府・中華民国維新政府・中国国民政府を区別する
-- [ ] 占領地の新政権成立を、中国全体の政治的決着と同一視しない
-- [ ] 戦面不拡大方針と徐州作戦実施の間にある政策変更・現地軍との調整を追う
-- [ ] 徐州占領を中国軍主力壊滅・中国政府降伏と同一視しない
-- [ ] 本文は状態・変化・因果を肯定文で先に示す
-- [ ] 直前ページとの接続確認をpublished前に完了
-- [ ] 用語辞書・period glossary refsを更新
-- [ ] 出典を本文主張へ接続
-- [ ] 必要な地図だけData / Style / Human Visual Auditを通す
+- [x] 中学校教科書レベルを前提に、国家総動員法・委任立法・占領地政治機構・軍中央／現地軍などへ初出説明を置く
+- [x] 第一次近衛声明から徐州作戦を一本道として書かない
+- [x] 政府・企画院・帝国議会・陸軍中央・現地軍の役割を分ける
+- [x] 国家総動員法案の提出・審議・成立・公布・施行を区別する
+- [x] 法成立の瞬間に社会全体が完全統制されたと書かない
+- [x] 議会審議を一つの有名発言・騒動だけで説明しない
+- [x] 中華民国臨時政府・中華民国維新政府・中国国民政府を区別する
+- [x] 占領地の新政権成立を、中国全体の政治的決着と同一視しない
+- [x] 戦面不拡大方針と徐州作戦実施の間にある政策変更・現地軍との調整を追う
+- [x] 徐州占領を中国軍主力壊滅・中国政府降伏と同一視しない
+- [x] 本文は状態・変化・因果を肯定文で先に示す
+- [x] 直前ページとの接続確認をpublished前に完了
+- [x] 用語辞書・period glossary refsを更新
+- [x] 出典を本文主張へ接続
+- [x] 必要な地図だけData / Style / Human Visual Auditを通す
 
 ## フェーズ
 
-- [ ] JH48–JH50 published
-- [ ] A25必要性・データ品質判定完了
+- [x] JH48–JH50 published
+- [x] A25必要性・データ品質判定完了
 - [x] 横断記事publication gate完了
 - [x] 通過した横断記事だけ実装
 - [x] phase-end audit necessity judgment完了（具体的な未解決仮説なしのため独立監査不要）
-- [ ] `npm run check` / GitHub Actions green
-- [ ] GitHub Pages deploy green
-- [ ] Status: completed
-- [ ] `plan_done/` へ移動
+- [x] `npm run check` / GitHub Actions green
+- [x] GitHub Pages deploy green
+- [x] Status: completed
+- [x] `plan_done/` へ移動
 
 ---
 

@@ -1,7 +1,7 @@
 # 1937年11月13日から1938年1月16日まで — 南京進攻から第一次近衛声明まで 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH44 ✅ → A23 ✅（map必要・同時代地域図でpoint照合、進撃路／交通軸LineStringなし）→ JH45 ✅ → JH46 ✅ → 次は A24「南京市街・安全区・長江の空間」map necessity / data-quality judgment
+- **Progress:** phase cut ✅ → JH44 ✅ → A23 ✅（map必要・同時代地域図でpoint照合、進撃路／交通軸LineStringなし）→ JH45 ✅ → JH46 ✅ → A24 ✅（map必要・安全区はapproximate polygon可、加害地点の大量point化なし）→ 次は JH47「1938-01-01〜01-16」
 - **Created:** 2026-09-29
 - **Scope:** 1937-11-13〜1938-01-16
 - **Primary goal:** 上海占領後、日本軍の追撃・南京進攻がどのように現地軍の行動、参謀本部・大本営の統制、政府の対中方針へ接続したかを追い、南京占領を中国の降伏と同一視せず、南京での非戦闘員殺害・略奪・性暴力・捕虜処遇などの加害、第三国との危機、トラウトマン工作の継続と条件変更、1938年1月16日の第一次近衛声明までを一つの状態遷移として説明する
@@ -299,44 +299,132 @@ JH45は12月1日の命令を境に、**中央が南京攻略そのものを正�
 
 # 7. A24 — 南京市街・安全区・長江の空間
 
-## map necessity 候補
+**Status: completed / 2026-09-29**
 
-**high。ただしData Auditを通過しない限り実装しない。**
+## map necessity 判定
 
-JH45〜JH46では、
+**採用 / high。**
 
-- 城壁都市としての南京
-- 長江と下関方面
-- 南京安全区
-- 外国大使館・大学・病院など
-- 軍事区域と民間避難区域
+JH45〜JH46では、南京を単なる「首都」という一点ではなく、城壁内外・長江沿岸・下関方面・安全区という異なる空間が重なる都市として読む必要がある。
 
-の位置関係が、南京攻略と占領下の民間人保護を理解するうえで重要になる。
+とくに安全区は、民間人保護を目的に外国人らが設定を試みた区域であり、その境界と南京市街の位置関係を示すことで、
 
-一方で、南京事件の加害地点を精密なpointとして大量配置することは、史料の場所精度・時点精度・被害類型の定義が揃わない限り行わない。
+- 安全区が南京全市ではなく城内西北寄りの一部だったこと
+- 長江・下関方面と安全区が同一空間ではないこと
+- 大学・病院・外国人施設などが安全区の運用拠点になったこと
+- 12月13日の軍事占領後も、民間人保護・捕虜／敗残兵処遇・軍紀という別の統治問題が残ったこと
 
-## Data Audit候補
+を本文だけより短く把握できる。
 
-- 国立国会図書館「南京」
-  - 1937.3
-  - 1:100,000
-  - https://ndlsearch.ndl.go.jp/books/R100000002-I000003608817
-- 国立国会図書館「秣陵關 南京市・江蘇省江寧縣」
-  - 1937.11
-  - 1:50,000
-  - https://ndlsearch.ndl.go.jp/books/R100000002-I000009207237
-- 国立国会図書館「最新上海南京近傍詳圖」南京附近分図
-  - 1937.10
-  - 1:100,000
-  - https://ndlsearch.ndl.go.jp/books/R100000002-I000011194813
-- Yale University Library Nanking Massacre Project / Nanking Safety Zone documents
-  - 1937年11月21〜22日の安全区提案、12月10日の境界関係文書、12月14日以後の国際委員会書簡
-  - https://web.library.yale.edu/divinity/nanking/bates
-  - https://adhoc.yalepages.org/Collections/Nanking/findingaid.html
-- FRUS 南京安全区関連文書
-  - https://history.state.gov/historicaldocuments/frus1937v03/d776
+したがってA24は地図化する価値が高い。
 
-Safety Zone polygonを作る場合は、**同時代文書に記載された境界を、同時代市街図上で照合できること**を必要条件とする。現代道路の座標をそのまま1937年境界として使わない。
+## Data Audit 判定
+
+**pass。ただし、公開geometryは「安全区のapproximate polygon＋1937年に照合できる代表point」を上限とする。城壁線・長江水際線・加害地点群は精密vector化しない。**
+
+### 1. 南京安全区の境界文書
+
+米国国務省FRUSの1937年11月22日電報は、安全区案の境界を当時の道路・交差点で具体的に記録している。
+
+- east: North Chung Shan Road, Hsin Chieh Kou → Shansi Road Circle
+- north: Shansi Road Circle → Sikang Road
+- west: Sikang Road → Hankow Road intersection → Shanghai Road / Han Chung Road intersection
+- south: Han Chung Road → Hsin Chieh Kou
+- source: https://history.state.gov/historicaldocuments/frus1937v03/d776
+
+これは安全区の**制度上の境界記述**として採用できる。
+
+ただし道路名の文章記述だけから現代座標へ直接変換しない。
+
+### 2. 1937年南京の歴史GIS / 同時代地図
+
+南京大学の研究者らによる「1909年、1927年、1937年南京城市歴史地名データセット」は、1937年断面について蘇甲栄編『新南京地図』1937年訂正版（主図1:20,000）を基図とし、地方志等を補って歴史地名をGIS化している。
+
+- Liu Yuxuan, Yu Bingchen, Xu Haiyang, Chen Gang, “A dataset of urban historical place names in Nanjing (1909, 1927 and 1937)”
+- DOI: 10.11922/csdata.2017.0001.zh
+- data DOI: 10.11922/sciencedb.548
+- format: ESRI Shapefile
+- time slices: 1909 / 1927 / 1937
+- source: https://www.sciengine.com/CSD/doi/10.11922/csdata.2017.0001.zh
+
+同データを可視化した1937年南京地名図はgeoreference情報を持ち、CC BY 4.0で公開されている。
+
+- source: https://zh.wikisource.org/wiki/File:%E6%B0%91%E5%9B%BD%E5%8D%97%E4%BA%AC%E5%9F%8E%E5%B8%82%E5%9C%B0%E5%90%8D%E5%9C%B0%E5%9B%BE_(1937).jpg
+- 利用方針: 1937年の地名・道路系・施設位置を照合する歴史座標参照として使う
+- modern basemapの道路中心線を境界生成の正本にしない
+
+国立国会図書館所蔵「南京」（1937年3月、1:100,000）は、南京・長江・周辺地形の広域関係をクロスチェックする。
+
+- source: https://ndlsearch.ndl.go.jp/books/R100000002-I000003608817
+- author: 参謀本部・陸地測量部
+- publication: 1937.3
+- scale: 1:100,000
+
+### 3. 12月時点の運用確認
+
+Yale University Library Nanking Massacre Project所収の1937年12月10日付「Report by Nanking Safety Zone on boundaries of Zone」は、安全区南西境界について唐生智側との合意が成立したこと、区域内の兵士を確認・退出させるためのinspectionを行うことを記録している。
+
+- NMP0139
+- source index: https://adhoc.yalepages.org/Collections/Nanking/findingaid.html
+- document: https://adhoc.yalepages.org/Media/PDFs/Nanking/NMP0139.pdf
+
+この史料は、11月22日の提案境界が単なる机上案ではなく、南京攻略直前に現地で境界・非軍事化を運用対象としていたことを確認するために使う。
+
+### 4. geometry の上限
+
+| 対象 | geometry | confidence | 用途 |
+|---|---|---|---|
+| 南京安全区 | approximate Polygon | derived / approximate | 民間避難区域の範囲 |
+| 新街口 | representative Point | research / historical GIS | 安全区南東端の基準点 |
+| 山西路広場周辺 | representative Point | research / historical GIS | 安全区北東端の基準点 |
+| 金陵大学 | representative Point | research / historical GIS | 安全区内の主要施設 |
+| 金陵女子文理学院 | representative Point | research / historical GIS | 難民収容・保護活動の主要施設 |
+| 鼓楼病院 | representative Point | research / historical GIS | 医療拠点 |
+| 下関 | representative Point | research / historical GIS | 長江沿岸・城外北西側の位置参照 |
+| 長江 | ラベル／背景参照のみ | approximate | 南京市街と河川空間の位置関係 |
+
+安全区polygonは、**FRUSの境界記述を意味の正本とし、1937年歴史GIS／同時代市街図上で道路・交差点を照合して生成するderived geometry**とする。現代道路座標をそのまま頂点列として採用しない。
+
+### 5. 描かないgeometry
+
+A24では次を描かない。
+
+- 現代南京の行政界
+- 現代道路中心線を流用した「1937年安全区の精密境界」
+- 城壁全周の精密LineString
+- 1937年当時の長江水際線を装うpolygon / LineString
+- 日付別の日本軍進入経路
+- 捕虜・敗残兵の移送経路
+- 殺害・性暴力・略奪などの個別事件を大量に並べたpoint群
+- 出典ごとに位置精度・期間・被害類型が異なる地点を一つの「南京事件分布」として統合したheatmap
+
+個別加害地点は、事件の存在を空間的に強調するほど位置・期間・分類定義の誤差が大きな意味を持つ。A24のhistoricalQuestionは被害地点の網羅的分布ではなく、**安全区・市街・長江／下関の位置関係**なので、ここでは扱わない。
+
+### 6. 実装時の audit 条件
+
+安全区polygonを含むため、point-only再利用例外は使わない。
+
+実装する場合は、
+
+1. 1937年歴史GIS／同時代地図から使用するcontrol pointを記録
+2. FRUS境界文を各polygon辺へ対応付け
+3. transformation historyをprovenanceへ記録
+4. geometryConfidenceをapproximateとする
+5. Data Audit
+6. Style Audit
+7. Desktop / touchを含むHuman Visual Audit
+
+を通す。
+
+公開注記では、背景地図が現在の位置参照であり、1937年の道路・行政界・水際線そのものではないこと、安全区polygonは同時代境界記述と1937年地理資料から復元した概略範囲であることを明示する。
+
+## 判定結果
+
+**A24は地図あり。安全区はapproximate polygonとしてデータ品質を満たせる。**
+
+FRUSが安全区境界を道路・交差点で具体的に記録し、1937年1:20,000市街図を基にした歴史GISが利用できるため、現代道路の逆投影に頼らず概略polygonを構成できる。一方、城壁・長江水際線・個別加害地点群を同じ精度でvector化する根拠は揃っていない。
+
+したがってA24は、**「安全区の概略面＋歴史地名pointを地図化する／城壁・河岸・加害地点群は精密geometryにしない」**という境界で採用する。
 
 ---
 

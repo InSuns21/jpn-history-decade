@@ -21,6 +21,7 @@ const RULES = [
   { id: 'not-only-kind', pattern: /だけの[^。！？\n]{0,80}ではない/u, label: '〜だけの〜ではない' },
   { id: 'not-separate-things', pattern: /別々の[^。！？\n]{0,80}ではない/u, label: '別々の〜ではない' },
   { id: 'not-one-sided-but', pattern: /一方的に[^。！？\n]{0,80}ではなく/u, label: '一方的に〜ではなく' },
+  { id: 'only-is-insufficient', pattern: /だけでは[^。！？\n]{0,80}(?:できな|足りな|不十分)/u, label: '〜だけでは〜できない/足りない' },
   { id: 'do-not-regard', pattern: /みなさない/u, label: 'みなさない' },
   { id: 'not-explain-only', pattern: /だけ(?:で|から)説明しない/u, label: 'だけで/から説明しない' },
   {

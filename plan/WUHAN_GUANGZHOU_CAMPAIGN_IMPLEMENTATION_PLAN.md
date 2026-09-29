@@ -1,7 +1,7 @@
 # 1938年5月20日から10月27日まで — 徐州後の再編から広東・武漢占領まで 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH51 ✅ → 次は A26「黄河決壊と河南・武漢前面の水系・交通空間」map necessity / data-quality judgment
+- **Progress:** phase cut ✅ → JH51 ✅ → A26 ✅（採用・浸水域polygonなし／地点＋交通軸＋水系・洪水方向の模式線まで） → 次は JH52「1938-06-18〜07-26」
 - **Created:** 2026-09-29
 - **Scope:** 1938-05-20〜1938-10-27
 - **Primary goal:** 徐州占領後の日本が、そのまま一本道で武漢・広東攻略へ進んだと書かず、近衛内閣改造、五相会議、宇垣外相期の和平方針再検討、黄河決壊、武漢攻略作戦、張鼓峰事件、国家総動員法の具体化、広東・武漢攻略が並行するなかで、軍事占領を拡大しても政治的な戦争終結には至らなかった過程を状態遷移として説明する
@@ -214,31 +214,149 @@ JH54は宇垣辞任を境界にし、外交上の選択肢が組み替わる一�
 
 ## A26 — 黄河決壊と河南・武漢前面の水系・交通空間
 
-### map necessity 候補
+**Status: completed / 2026-09-29**
 
-**高。Data Auditで公開geometryの上限を判定する。**
+### map necessity 判定
 
-黄河決壊は、単に「堤防を壊した」という一点の事件ではなく、
+**採用 / high。**
 
-- 黄河
-- 鄭州・開封周辺
-- 淮河水系
-- 徐州から武漢へ向かう陸上交通
-- 洪水が長期に滞留した地域
+JH51〜JH52で重要なのは、黄河決壊を「堤防を壊した一点の事件」として見るのではなく、
 
-の空間関係を理解すると、軍事目的と社会・環境被害を同じ地理上で把握しやすい。
+- 花園口が鄭州の北側にあること
+- 徐州から西へ延びる隴海鉄道が開封・鄭州方面へ続くこと
+- 鄭州で平漢鉄道が南北交通軸を形成し、武漢方面へつながること
+- 黄河の水が決壊後に河南東部へ南東方向に広がり、淮河水系へ入ったこと
+- その結果、軍事上の進撃経路と、住民・農地・集落・交通の生活空間が同時に変化したこと
 
-ただし、1938年洪水の浸水域を**現代水系や後世の概略図から推測して精密polygon化してはならない**。
+である。
 
-### Data Auditで確認すること
+この関係は文章だけより地図で把握しやすい。したがってA26は採用する。ただし、A26の目的は「浸水範囲を精密に復元すること」ではなく、**決壊地点・水系・鉄道・都市の位置関係から、なぜ洪水が作戦経路と地域社会の双方を変えたのかを説明すること**に限定する。
 
-- 決壊地点の史料確度
-- 1938年洪水域を示す研究地図・歴史GISの有無
-- 再配布条件
-- 時点差を追える河道・水系資料の有無
-- 浸水域polygonを公開できない場合、代表地点point＋主要水系lineだけでも説明価値が残るか
+### Data Audit 判定
 
-データ品質が不足する場合はno-map判定にする。見栄えのために概算洪水polygonを作らない。
+**conditional pass。浸水域polygonは不採用。公開geometryは「地点＋歴史交通軸＋1938年前の黄河概略線＋洪水の概略方向を示す模式線」までを上限とする。**
+
+#### 1. 決壊地点と初期経過
+
+Micah S. Muscolinoが執筆したDisasterHistory.orgの解説は、6月4〜6日に中牟県趙口で二度の決壊工作が失敗した後、鄭州北方の花園口で再度工事が行われ、6月9日に水が開口部から流れ出したとする。
+
+- source: https://disasterhistory.org/yellow-river-flood-1938-47
+- 花園口: historical event pointとして採用可能
+- 趙口: 初期の失敗地点として研究上確認できるが、A26の中心問いには必須ではないため原則非表示
+- exact breach geometryや堤防線を、現代道路・河川から推定して描かない
+
+Diana Laryの研究も、1938年6月の戦略的決壊地点を河南省花園口とし、日本軍の機動を制限する目的を確認している。
+
+- source: https://doi.org/10.1177/096834450100800204
+- 利用方針: 花園口という地点と軍事目的のクロスチェック
+- 論文の概略説明から決壊口幅・堤防形状をGIS化しない
+
+#### 2. 洪水域研究図は存在するが、そのまま公開polygonにはしない
+
+Muscolino『The Ecology of War in China』には、
+
+- “The Yellow River flooded area”
+- “Henan’s Yellow River flooded area”
+- “Shifts in Henan’s Yellow River flooded area”
+
+など複数の研究図が収録され、洪水域が時間とともに変化したことを確認できる。
+
+- source: https://www.cambridge.org/core/books/ecology-of-war-in-china/3FDA387C0D9694EFA8DCF0F6A4CDCAB9
+- figure list: Cambridge University Press front matter
+- DisasterHistory.orgにも “Yellow River Flooded Area, 1938–1947” が掲載されている
+
+しかし、これらの図は**1938年6月17日時点だけの固定浸水域vectorではない**。DisasterHistoryの解説も、堆積・堤防工事・追加決壊によって洪水域と河道が戦時中に変動したと説明している。
+
+さらに、DisasterHistory.orgは記事内容の著作権が各著者に残ると明示し、Cambridge University Pressの研究図について本リポジトリへ再配布可能なGISライセンスは確認できない。
+
+したがって、
+
+- 研究図の塗りを目視トレースしてpolygon化する
+- 1938–1947年の総合洪水域を「1938年6月の浸水域」として表示する
+- 後年の最大洪水域をJH51時点の確定範囲として描く
+
+ことは行わない。
+
+#### 3. 同時代・近接時期の地図
+
+中央研究院人社中心GIS專題中心の「中華文明之時空基礎架構」WMTSには、
+
+- 中華民國全圖（1937）
+- 中華新形勢大地圖（1938）
+- 河南省五萬分一地形圖
+- 湖北省五萬分一地形圖
+
+などが公開されている。
+
+- service: https://gis.sinica.edu.tw/ccts/
+- 1938 map: https://gis.sinica.edu.tw/showwmts/index.php?l=China_Map_1938&s=ccts
+- 利用方針: 1938年前後の黄河・主要都市・交通軸の位置関係をcontrol sourceとして確認
+- WMTS rasterを本リポジトリへ複製しない
+- 公開ページ上で再配布条件が十分明確でないため、精密なvector転写の正本にはしない
+
+Library of Congress所蔵の1931年中国全図は、Geography and Map Divisionのdigitized collectionとして、Rights Advisoryがない限りfree to use and reuseと明示されている。
+
+- source: https://www.loc.gov/item/2016587371/
+- publication: 1931
+- rights: free to use and reuse; credit Library of Congress, Geography and Map Division
+- 利用方針: 黄河、鄭州・開封・徐州、主要交通軸の広域関係を再利用条件の明確な別資料としてクロスチェック
+- pictorial/general mapであるため、この一枚から河道中心線を精密復元しない
+
+#### 4. 交通軸
+
+A25で確認した中央研究院MHGISの1930年代鉄道資料と歴史鉄道図を、A26でもcontrol sourceとして再利用する。
+
+A26で必要なのは、
+
+- 隴海鉄道: 徐州—開封—鄭州
+- 平漢鉄道: 鄭州—漢口方面
+
+の結節関係である。
+
+鉄道線は歴史資料で存在・主要経由地を照合したgeneralized LineStringとし、現代鉄道線形を1938年の線路として流用しない。
+
+#### 5. 公開geometryの上限
+
+| 対象 | geometry | confidence | 用途 |
+|---|---|---|---|
+| 花園口 | representative / approximate Point | derived / approximate | 1938年6月9日の主要決壊地点 |
+| 鄭州 | representative Point | derived | 黄河・隴海・平漢鉄道の位置関係 |
+| 開封 | representative Point | derived | 隴海鉄道沿線・河南東部の参照点 |
+| 徐州 | representative Point | derived | 直前フェーズとの交通上の接続 |
+| 漢口／武漢 | representative Point | derived | 平漢鉄道南端側・次作戦の位置参照 |
+| 1938年前の黄河 | generalized LineString | approximate / derived | 決壊前の河道の大きな位置関係 |
+| 隴海鉄道 | generalized LineString | approximate / derived | 徐州—開封—鄭州の東西交通軸 |
+| 平漢鉄道 | generalized LineString | approximate / derived | 鄭州—漢口方面の南北交通軸 |
+| 決壊後の洪水方向 | schematic LineString / corridor | schematic | 花園口から河南東部・淮河水系へ向かった大方向のみ |
+| 浸水域 | **描かない** | — | 1938年6月時点の再配布可能な確定polygon不足 |
+
+「決壊後の洪水方向」は河道中心線として描かず、**概略方向を示す模式表現**と明記する。Muscolinoの記述にある「河南東部の平野を南東へ流れ、淮河水系へ入った」という水系関係より細かい経路を推定しない。
+
+#### 6. 描かないgeometry
+
+A26では次を描かない。
+
+- 1938年6月17日時点の精密浸水polygon
+- 1938–1947年の累積洪水域を1938年6月の範囲として転用したpolygon
+- 後年の研究図を無許可でトレースしたpolygon / LineString
+- 決壊口の幅・堤防形状
+- 日本軍・中国軍の精密な進撃線・前線・部隊配置
+- 現代黄河・現代行政界を1938年の歴史geometryとして無注記で流用したもの
+
+### 判定結果
+
+**A26は地図あり。データ品質は、洪水域の面積を描かず「地点・交通軸・水系・洪水方向」を説明する模式地図なら公開可能と判定する。**
+
+浸水polygonを捨てても、
+
+1. 花園口が鄭州の北にある
+2. 隴海鉄道が徐州から開封・鄭州へ延びる
+3. 鄭州から平漢鉄道が武漢方面へ南下する
+4. 決壊水が南東へ流れて淮河水系へ入る
+
+という四つの空間関係を一枚で示せるため、本文理解への寄与は残る。
+
+実装する場合はLineStringとschematic corridorを含むためpoint-only再利用例外は使わず、Data / Style / Human Visual Auditを通常どおり行う。特に「洪水の概略方向」が実測河道・確定浸水境界に見えない線種・凡例・注記を必須とする。
 
 ---
 
@@ -446,7 +564,7 @@ A26をJH51直後に判定するのは、黄河決壊の空間説明がJH51〜JH5
 ## フェーズ
 
 - [ ] JH51–JH54 published
-- [ ] A26必要性・データ品質判定完了
+- [x] A26必要性・データ品質判定完了
 - [ ] A27必要性・データ品質判定完了
 - [ ] 横断記事publication gate完了
 - [ ] 通過した横断記事だけ実装

@@ -1,0 +1,49 @@
+{
+  "period": "1937-12-01",
+  "termRefs": [
+    {
+      "id": "nanjing-campaign-1937",
+      "core": true
+    },
+    {
+      "id": "imperial-general-headquarters-1937",
+      "core": true
+    },
+    {
+      "id": "central-china-area-army-1937",
+      "core": true
+    },
+    {
+      "id": "shanghai-expeditionary-army-1937",
+      "core": false
+    },
+    {
+      "id": "japanese-tenth-army-1937",
+      "core": false
+    },
+    {
+      "id": "advance-limit-line-1937",
+      "core": false
+    },
+    {
+      "id": "tang-shengzhi",
+      "core": true
+    },
+    {
+      "id": "nanjing-safety-zone-1937",
+      "core": true
+    },
+    {
+      "id": "panay-incident-1937",
+      "core": true
+    },
+    {
+      "id": "nanjing-national-government-1927",
+      "core": true
+    },
+    {
+      "id": "trautmann-mediation-1937",
+      "core": false
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "period": "1938-02-24",
+  "termRefs": [
+    {
+      "id": "national-general-mobilization-law-1938",
+      "core": true
+    },
+    {
+      "id": "delegated-legislation",
+      "core": true
+    },
+    {
+      "id": "national-mobilization-council-1938",
+      "core": true
+    },
+    {
+      "id": "teikoku-gikai",
+      "core": true
+    },
+    {
+      "id": "chinese-reformed-government-1938",
+      "core": true
+    },
+    {
+      "id": "chinese-provisional-government-1937",
+      "core": true
+    },
+    {
+      "id": "front-non-expansion-policy-1938",
+      "core": false
+    }
+  ]
+}

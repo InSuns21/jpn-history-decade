@@ -5,7 +5,7 @@
 - **Created:** 2026-09-29
 - **Scope:** 1937-11-13〜1938-01-16
 - **Primary goal:** 上海占領後、日本軍の追撃・南京進攻がどのように現地軍の行動、参謀本部・大本営の統制、政府の対中方針へ接続したかを追い、南京占領を中国の降伏と同一視せず、南京での非戦闘員殺害・略奪・性暴力・捕虜処遇などの加害、第三国との危機、トラウトマン工作の継続と条件変更、1938年1月16日の第一次近衛声明までを一つの状態遷移として説明する
-- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](./JPN_HISTORY_DECADE_PLAN.md)
+- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](../plan/JPN_HISTORY_DECADE_PLAN.md)
 - **Previous phase:** [SHANGHAI_WAR_TO_FALL_IMPLEMENTATION_PLAN.md](../plan_done/SHANGHAI_WAR_TO_FALL_IMPLEMENTATION_PLAN.md)
 - **Workspace rules:** [../SYSTEM_PROMPT.md](../SYSTEM_PROMPT.md)
 

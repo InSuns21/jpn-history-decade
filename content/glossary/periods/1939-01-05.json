@@ -1,0 +1,14 @@
+{
+  "period": "1939-01-05",
+  "termRefs": [
+    {"id":"hiranuma-cabinet-1939","core":true},
+    {"id":"national-occupational-ability-declaration-1939","core":true},
+    {"id":"production-capacity-expansion-plan-1939","core":true},
+    {"id":"national-general-mobilization-law-1938","core":true},
+    {"id":"five-ministers-conference-1938","core":false},
+    {"id":"anti-comintern-pact-1936","core":false},
+    {"id":"school-graduates-employment-restriction-1938","core":false},
+    {"id":"wang-jingwei-operation-1938","core":false},
+    {"id":"koa-in-1938","core":false}
+  ]
+}

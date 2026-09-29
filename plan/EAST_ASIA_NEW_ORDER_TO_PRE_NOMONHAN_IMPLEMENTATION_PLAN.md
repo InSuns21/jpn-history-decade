@@ -1,7 +1,7 @@
 # 1938年10月28日から1939年5月10日まで — 「東亜新秩序」からノモンハン前夜まで 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH55 ✅ → JH56 ✅ → next JH57
+- **Progress:** phase cut ✅ → JH55 ✅ → JH56 ✅ → JH57 ✅ → next JH58
 - **Created:** 2026-09-30
 - **Scope:** 1938-10-28〜1939-05-10
 - **Primary goal:** 広東・武漢占領後も日中戦争が終結しないなか、日本政府が「東亜新秩序」・対中政治工作・占領地統治機構・国内総動員・対独伊関係・華南／華中での軍事圧力を組み合わせて長期戦へ移る過程を、後の汪兆銘政権や三国同盟を既定路線として先取りせずに説明する
@@ -364,7 +364,7 @@ JH55 1938-10-28〜12-21
 - [x] Crosscutting publication gateを計画
 - [x] JH55 published
 - [x] JH56 published
-- [ ] JH57 published
+- [x] JH57 published
 - [ ] JH58 published
 - [ ] A28 judgment completed
 - [ ] passing crosscutting extensions implemented
@@ -376,4 +376,4 @@ JH55 1938-10-28〜12-21
 - [ ] Status = completed
 - [ ] plan_done/へ移動
 
-次の実装は **JH57「1939-01-05〜02-09」**。
+次の実装は **JH58「1939-02-10〜05-10」**。

@@ -1,0 +1,13 @@
+{
+  "period": "1938-06-18",
+  "termRefs": [
+    {"id":"wuhan-campaign-1938","core":true},
+    {"id":"wuhan-three-towns-1938","core":true},
+    {"id":"china-regime-internal-guidance-1938","core":true},
+    {"id":"ugaki-kazushige","core":false},
+    {"id":"five-ministers-conference-1938","core":false},
+    {"id":"yellow-river-breach-1938","core":false},
+    {"id":"chinese-reformed-government-1938","core":false},
+    {"id":"first-konoe-statement-1938","core":false}
+  ]
+}

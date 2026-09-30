@@ -1,0 +1,13 @@
+{
+  "period": "1939-07-26",
+  "termRefs": [
+    {"id":"us-japan-commerce-navigation-treaty-termination-1939","core":true},
+    {"id":"nomonhan-incident-1939","core":true},
+    {"id":"company-profit-dividend-financing-order-1939","core":false},
+    {"id":"national-requisition-order-1939","core":false},
+    {"id":"national-general-mobilization-law-1938","core":false},
+    {"id":"hiranuma-cabinet-1939","core":false},
+    {"id":"kwantung-army-1919","core":false},
+    {"id":"imperial-general-headquarters-1937","core":false}
+  ]
+}

@@ -1,7 +1,7 @@
 # 1939年5月11日から9月15日まで — ノモンハン事件と国際環境急変 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH59 ✅ → A29 ✅ → JH60 ✅ → A30 ✅ no-map → 次は JH61「1939-07-26〜08-22」
+- **Progress:** phase cut ✅ → JH59 ✅ → A29 ✅ → JH60 ✅ → A30 ✅ no-map → JH61 ✅ → 次は A29「ノモンハン時点別地図」公開map実装再判定
 - **Created:** 2026-09-30
 - **Scope:** 1939-05-11〜1939-09-15
 - **Primary goal:** 中国での長期戦を継続する日本に、ノモンハンでの対ソ武力衝突、天津租界をめぐる対英対立、米国による日米通商航海条約廃棄通告、独ソ不可侵条約と欧州戦争開始が相次いで加わり、軍事・外交・国内動員の制約が短期間で組み替わる過程を、1941年の日米開戦や「北進／南進」の後世的な二択へ直結させずに説明する
@@ -696,7 +696,7 @@ JH59〜JH62の隣接接続確認、A29/A30のmap audit、Crosscutting publicatio
 - [x] A29 judgment completed（map necessity=high / Data Audit=conditional pass。公開map実装はJH60/JH61後に時点別統合を再判定）
 - [x] JH60 published
 - [x] A30 judgment completed（no-map。1939年法域polygonの時点・ライセンス・変換手順を揃えられないため公開しない）
-- [ ] JH61 published
+- [x] JH61 published
 - [ ] JH62 published
 - [ ] 各年代で直前年代との接続確認完了
 - [ ] Crosscutting publication gate completed

@@ -1,7 +1,7 @@
 # 1939年5月11日から9月15日まで — ノモンハン事件と国際環境急変 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH59 ✅ → A29 ✅ → JH60 ✅ → 次は A30「天津租界封鎖と占領下華北の法域空間」map necessity / data-quality judgment
+- **Progress:** phase cut ✅ → JH59 ✅ → A29 ✅ → JH60 ✅ → A30 ✅ no-map → 次は JH61「1939-07-26〜08-22」
 - **Created:** 2026-09-30
 - **Scope:** 1939-05-11〜1939-09-15
 - **Primary goal:** 中国での長期戦を継続する日本に、ノモンハンでの対ソ武力衝突、天津租界をめぐる対英対立、米国による日米通商航海条約廃棄通告、独ソ不可侵条約と欧州戦争開始が相次いで加わり、軍事・外交・国内動員の制約が短期間で組み替わる過程を、1941年の日米開戦や「北進／南進」の後世的な二択へ直結させずに説明する
@@ -312,28 +312,175 @@ JH60は天津封鎖によって対英対立が可視化され、同時に国内�
 
 # 6. A30 — 天津租界封鎖と占領下華北の法域空間
 
-**Status: planned / map necessity・data-quality judgment を JH60 実装後に実施**
+**Status: completed / 2026-10-01 / no-map**
 
-## map necessity 候補
+## map necessity 判定
 
-**中。採否は歴史境界geometryの品質で決める。**
+**理解上の必要性は中。ただし公開MapLibre地図は no-map。**
 
-天津問題では、「日本軍が占領下の都市全体を単一の法域として自由に扱えた」のではなく、英・仏租界という外国権益空間が残り、その境界で通行・警察・通貨・政治犯引渡しをめぐる摩擦が起きたことが重要である。
+JH60の天津封鎖で重要なのは、天津市街が単一の法域ではなく、
 
-アジア歴史資料センターは1939年6月14日の英・仏租界封鎖と、その直前の外務省・北支那方面軍の資料を紹介している。
+- 日本軍が支配する中国側市街
+- イギリス租界
+- フランス租界
+- 日本租界
+- イタリア租界
+
+など複数の行政・警察・法的権益空間から構成されていたことである。6月14日の封鎖は、この法域差が都市内部の通行・治安・容疑者引渡し・通貨・物資移動を外交問題へ変える条件になった。
+
+アジア歴史資料センターは、1939年6月14日に日本軍が天津の英・仏租界を武力封鎖したこと、6月13日に英側が特別審判案を提示したこと、外務省条約局と北支那方面軍が法的・軍事的対応を検討していたことを確認できる。
 
 - source: https://www.jacar.go.jp/exhibition/shuhou/nenpyo/nenpyo19390614.html
-- 候補用途: 封鎖対象、法域差、軍事占領と租界権益の関係
-- 注意: 正確な1939年租界境界polygonを信頼できる史料から作れない場合は no-map とする
+- 利用方針: 封鎖対象、事件の法的争点、外務省／現地軍の検討主体を確認
+- 注意: このページ自体は1939年の租界境界polygonをGIS化できる精度の地図資料ではない
 
-## Data Audit で必ず確認すること
+一方、1939年刊行の Oriental Book Store の天津市街図には、Japanese / French / British / Italian Concession と Special Areas が区分表示されており、**1939年時点に複数租界が並存していたことと、その都市内配置を視覚的に確認できる**。
 
-- 現代天津市境界・行政区を1939年の租界境界へ流用しない
-- 英租界・仏租界・日本租界その他の歴史的法域を混同しない
-- 封鎖線を「日本が租界内部を占領した境界」として描かない
-- 正確な封鎖検問所が確認できない場合は無理にpoint化しない
-- 歴史地図からpolygonをトレースする場合は出典・基準年・変換手順を残す
-- geometryが弱い場合は代表地点＋模式的な法域関係図へ落とすか、地図自体を採用しない
+- source: https://www.geographicus.com/P/AntiqueMap/tientsin-orientalbookstore-1939
+- map title: *Map of Tientsin. City, Special Areas, Concessions, with Administrative, Business, and Social places and Revised Street Directory.*
+- date: 1939
+- scale: 1:20,000
+- 利用方針: 1939年時点の租界配置の存在確認・目視照合
+- 注意: 高精細デジタルデータは商用提供で、再配布・vector化に必要なライセンス条件を本プロジェクトで確認できないため、リポジトリへ取り込まない
+
+Library of Congressには1942年の各租界境界図が公開されている。
+
+- source: https://www.loc.gov/item/2003626668/
+- title: *Plan of Italian concession Tientsin, Plan of Japanese concession Tientsin, Plan of British concession Tientsin, Plan of French concession Tientsin, and Plan first special district Tientsin*
+- date: 1942
+- 利用方針: 各租界が別法域として図示されることの参考
+- 注意: 1941年以後の占領状況を含む可能性があり、1939年6月14日の境界正本として使用しない
+
+British Libraryには1924年の天津地図、OldMapsOnline経由では1935年版の所在が確認できる。
+
+- source: https://searcharchives.bl.uk/catalog/040-003312112
+- source: https://www.oldmapsonline.org/en/maps/9c79d095-4d23-58a3-a9c7-f61a2e3d759c
+- 利用方針: 租界配置・河川・鉄道・市街構造の補助照合
+- 注意: 1924 / 1935 と1939年6月では基準時点が一致しない
+
+以上から、A30は「地図があると理解しやすい」テーマではあるが、**1939年6月14日時点の租界境界polygonを、時点・ライセンス・変換手順まで揃えて公開できるデータ品質には到達していない**。
+
+## Data Audit 判定
+
+**failed for publication / no-map。**
+
+### 1. polygonが核心であり、point-onlyでは代替できない
+
+A30の歴史的問いは「天津に複数の法域が並存し、その境界が封鎖・警察・通行・外交の問題になったこと」である。
+
+英租界、仏租界、日本租界などを単なる代表点で置くと、
+
+- どの空間が接していたか
+- 封鎖が租界の外周で行われたこと
+- 市街の中に異なる行政・警察権限が並存したこと
+
+を表現できない。
+
+したがって、「地点だけなら安全だからpoint-onlyで出す」という縮退は、地図の中心命題を失うため採用しない。
+
+### 2. 1939年polygonの正本候補はあるが、公開利用条件が不足する
+
+1939年 Oriental Book Store 地図は時点面では最も有力だが、現在確認できる高精細デジタル画像は商用スキャンとして提供されている。
+
+MAP_AUDIT_STANDARDでは、
+
+- provenance
+- transformation history
+- license
+- 再配布可能性
+
+を公開データの必須条件としている。
+
+ライセンス不明の画像をダウンロードしてgeoreferenceし、租界境界をvector traceすることは行わない。
+
+### 3. 公開ドメイン候補の1942年LOC図は時点が遅い
+
+Library of Congressの1942年図は境界線自体を読み取れる可能性が高いが、A30の対象時点は1939年6月である。
+
+1939年から1942年の間には、
+
+- 1941年12月以後の英米権益処理
+- 戦時占領・行政変更
+
+が介在するため、1942年図を「1939年の境界」として無注記転用することはできない。
+
+1939年図との全境界照合を行い、各線分が不変だったと確認できればderived polygon候補になり得るが、今回の工程ではそこまでの検証材料・ライセンス条件を揃えられない。
+
+### 4. 1924 / 1930 / 1933 / 1935地図も単独では基準年不足
+
+1924年 British Library地図、1930年日本刊天津市街図、1933年 concession plan、1935年 War Office系地図など、租界配置を確認できる資料は複数存在する。
+
+しかしA30の目的は「租界一般の歴史地理」ではなく、**1939年6月14日の封鎖時点の法域空間**である。
+
+古い地図を基準年差の検証なしに採用すると、「1939年にも同じだった」という未検証の連続性をpolygonとして断定することになる。
+
+### 5. 封鎖線・検問所も公開しない
+
+JACARの『写真週報』70号ではバリケードの様子を確認できるが、A30で必要な「どこに何か所の検問所があり、どの道路を封鎖したか」を網羅的に復元できる資料ではない。
+
+したがって、
+
+- 封鎖線
+- 電気柵
+- 検問所
+- バリケード
+
+を正確なLineString / Pointとして公開しない。
+
+写真から位置を推定してpoint化することも行わない。
+
+## 公開しないgeometry
+
+- 英租界・仏租界・日本租界・イタリア租界の1939年確定polygon
+- 現代天津市境界・区境を代用した租界polygon
+- 1942年LOC図をそのまま1939年境界へ転用したpolygon
+- 1924 / 1930 / 1933 / 1935図を未照合で1939年へ流用したpolygon
+- 1939年商用スキャンをライセンス確認なしでvector traceしたgeometry
+- 日本軍による「封鎖区域」を租界内部の占領地として塗るpolygon
+- 史料で位置確認できない検問所・バリケードpoint
+- 封鎖線を租界境界そのものと同一視したLineString
+
+## 採用判断
+
+**A30は no-map。**
+
+地図必要性そのものは中程度以上ある。むしろ、このテーマではpolygonがあれば本文理解をかなり改善する。
+
+しかし、現時点で品質を保証できる選択肢は、
+
+1. 時点が一致するがライセンス・高精細データ利用条件が不十分な1939年図
+2. 公開利用しやすいが時点がずれる1924 / 1942年図
+3. 代表点だけで法域差の核心を失うpoint-only地図
+
+に限られる。
+
+**誤った精密さのある地図を出すより、JH60本文で法域差を説明する方が正確である。**
+
+将来、1939年図について再利用可能な高精細原資料を公的機関・図書館から取得でき、利用条件を確認できた場合はA30を再検討してよい。その場合は、
+
+- 1939年図のgeoreference
+- 河川・鉄道・主要道路を基準点にした位置合わせ
+- 英／仏／日／伊租界polygonのトレース
+- 1942年LOC図や1920〜30年代地図との境界照合
+- transformation historyの記録
+- Data / Style / Human Visual Audit
+
+を新規地図実装の必須工程とする。
+
+## A30判定で使用した主要資料
+
+- アジア歴史資料センター「1939年6月14日 天津英・仏租界封鎖」
+  https://www.jacar.go.jp/exhibition/shuhou/nenpyo/nenpyo19390614.html
+- U.S. Department of State, *FRUS 1939, The Far East, Volume IV*
+  https://history.state.gov/historicaldocuments/frus1939v04/ch1subch3
+- Oriental Book Store, *Map of Tientsin* (1939) — Geographicus catalog record
+  https://www.geographicus.com/P/AntiqueMap/tientsin-orientalbookstore-1939
+- Library of Congress, *Plan of Italian concession Tientsin...* (1942)
+  https://www.loc.gov/item/2003626668/
+- British Library, *Map of Tientsin and surrounding country* (1924)
+  https://searcharchives.bl.uk/catalog/040-003312112
+- OldMapsOnline / British Library, *Tientsin [Plan of]* (1935)
+  https://www.oldmapsonline.org/en/maps/9c79d095-4d23-58a3-a9c7-f61a2e3d759c
 
 ---
 
@@ -548,7 +695,7 @@ JH59〜JH62の隣接接続確認、A29/A30のmap audit、Crosscutting publicatio
 - [x] JH59 published
 - [x] A29 judgment completed（map necessity=high / Data Audit=conditional pass。公開map実装はJH60/JH61後に時点別統合を再判定）
 - [x] JH60 published
-- [ ] A30 judgment completed。採用時は Data / Style / Visual Audit 完了
+- [x] A30 judgment completed（no-map。1939年法域polygonの時点・ライセンス・変換手順を揃えられないため公開しない）
 - [ ] JH61 published
 - [ ] JH62 published
 - [ ] 各年代で直前年代との接続確認完了

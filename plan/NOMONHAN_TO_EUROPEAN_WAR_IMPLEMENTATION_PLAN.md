@@ -1,7 +1,7 @@
 # 1939年5月11日から9月15日まで — ノモンハン事件と国際環境急変 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH59 ✅ → 次は A29「ノモンハンの国境主張・ハルハ河・戦闘空間」map necessity / data-quality judgment
+- **Progress:** phase cut ✅ → JH59 ✅ → A29 ✅ → 次は JH60「1939-06-14〜07-25」
 - **Created:** 2026-09-30
 - **Scope:** 1939-05-11〜1939-09-15
 - **Primary goal:** 中国での長期戦を継続する日本に、ノモンハンでの対ソ武力衝突、天津租界をめぐる対英対立、米国による日米通商航海条約廃棄通告、独ソ不可侵条約と欧州戦争開始が相次いで加わり、軍事・外交・国内動員の制約が短期間で組み替わる過程を、1941年の日米開戦や「北進／南進」の後世的な二択へ直結させずに説明する
@@ -90,31 +90,185 @@ JH59は、その翌日に満蒙国境で新たな武力衝突が始まり、日�
 
 # 4. A29 — ノモンハンの国境主張・ハルハ河・戦闘空間
 
-**Status: planned / map necessity・data-quality judgment を JH59 実装後に実施**
+**Status: completed / 2026-09-30**
 
-## map necessity 候補
+## map necessity 判定
 
-**高い。**
+**採用 / high。**
 
-ノモンハン事件では、国境線の認識差、ハルハ河、ノモンハン周辺の地形、兵站距離が事件の理解そのものに関わる。地点名だけの本文では、「どの線を国境とみなし、どの河川・草原を越えて戦闘が展開したか」が把握しにくい。
+JH59の中心因果は、単に「満蒙国境で戦闘が起きた」ことではなく、**日満側とソ蒙側が異なる国境認識を持つ空間で、ハルハ河東岸への移動・増援・戦闘が反復されたこと**にある。本文だけでは、
 
-防衛研究所が公開する『戦史叢書 第027巻 関東軍〈1〉対ソ戦・ノモンハン事件』には、ノモンハン付近地形概要図、7月上旬・7月下旬・8月下旬の戦闘経過要図などが含まれる。
+1. ハルハ河が南北方向の大きな地形基準になっていること
+2. ノモンハン・ブルド・オボーがハルハ河東岸側に位置すること
+3. 日満側がハルハ河を国境と認識していたこと
+4. ソ蒙側がハルハ河より東側を国境と認識していたこと
+5. したがって双方の「越境」判断が同じ一本の線を前提としていなかったこと
+
+を同時に保持しにくい。
+
+防衛研究所『ブリーフィング・メモ』2017年9月号は、日満軍がハルハ河を、ソ蒙軍がハルハ河東方約20kmを国境線と認識していたと整理し、戦場をハルハ河東岸のノモンハン・ブルド・オボー一帯とする。
+
+- source: https://www.nids.mod.go.jp/publication/briefing/pdf/2017/201709.pdf
+- 利用方針: 双方の国境認識差、ハルハ河東岸という戦場位置、広域兵站の基礎確認
+- 注意: 研究本文の「約20km」をそのまま一定幅の平行線へ変換しない
+
+一方、防衛研究所紀要第22巻第2号の別研究では、ソ蒙側の国境認識を「ハルハ河東方約13km」と記述している。
+
+- source: https://www.nids.mod.go.jp/publication/kiyo/pdf/bulletin_j22_2_10.pdf
+- 利用方針: 国境認識の概略距離について研究上の表現差があることを確認
+- 注意: 「13km / 20km」のどちらかを精密なhistorical boundaryとして採用しない
+
+防衛研究所『戦史叢書 第027巻 関東軍〈1〉対ソ戦・ノモンハン事件』は、別冊付図として「ノモンハン付近地形概要図」を収録し、さらに7月・8月の戦闘経過図を別々の時点図として収録している。
 
 - source: https://www.nids.mod.go.jp/military_history_search/SoshoView?kanno=027
-- 候補用途: 地形、主要地点、作戦段階の確認
-- 注意: 戦史叢書の作戦図をそのまま現代GIS上の精密geometryとみなさず、公開地図に転記する場合は尺度・基準点・一般化方法を記録する
+- 利用方針: 河川、主要地点、地形、戦闘空間の位置関係を史料図で照合する
+- 注意: 付図を測量精度のGISデータとみなしたり、作戦矢印・部隊線を無断トレースしたりしない
 
-## Data Audit で必ず確認すること
+アジア歴史資料センターも、1939年6月14日付『週報』第139号に当時の関連地図があることを紹介している。
 
-- 1939年時点の「国境」を単一の確定線として描かない
-- 満洲国／日本側の主張線とモンゴル人民共和国／ソ連側の主張・認識を、史料上区別できる場合だけ別レイヤーにする
-- 現代のモンゴル・中国国境を1939年の歴史境界として流用しない
-- ハルハ河など自然地形を現代データで補助する場合は、歴史主題geometryとの役割を分ける
-- 部隊位置・進撃線は、日付が確認できるものだけを時点付きで表示する
-- 損害規模を記号サイズや面積に直接変換する場合は、双方で定義が揃う数値のみ使う
-- exact front line を復元できない場合は schematic / approximate と明示する
+- source: https://www.jacar.go.jp/exhibition/shuhou/nenpyo/nenpyo19390512.html
+- 利用方針: 同時代の日本側広報で、事件がどのような空間として提示されたかを補助確認
+- 注意: 『週報』は政府広報資料であり、国境線の中立的な確定資料として扱わない
 
-A29は「戦闘の再現」より、**国境争点・地形・兵站距離がなぜ局地衝突を大規模戦へ拡張し得たか**を示す地図を優先する。
+したがってA29は採用する。目的は戦闘経過を細密に再現することではなく、**「双方が異なる国境を見ていた場所で、ハルハ河とノモンハン周辺の地形が軍事行動の基準になった」ことを空間的に理解させること**とする。
+
+## Data Audit 判定
+
+**conditional pass。公開geometryは「自然地形＋代表地点＋不確実性を明示したschematic boundary / disputed zone」までを上限とする。**
+
+### 1. ハルハ河
+
+ハルハ河は地図理解の背骨になるため表示する。
+
+実装時には、現代の河川データを使う場合でも「自然地形の現在位置を歴史空間の参照として使う」レイヤーに限定する。1939年の河道中心線を測量復元したものとは表示しない。
+
+公開上限:
+
+- generalized LineString
+- geometryConfidence: derived / approximate
+- 用途: 日満側の国境認識の基準となった河川、東岸／西岸の位置関係
+
+微細な蛇行を戦術判断の根拠として読む用途には使わない。
+
+### 2. ノモンハン・ブルド・オボー等の主要地点
+
+戦史叢書付図など複数資料で確認できる主要地点は representative / approximate Point として候補にする。
+
+優先候補:
+
+- ノモンハン・ブルド・オボー
+- ハルハ河
+- ホルステン河との合流・近接方向
+- タムスク方面
+
+地点名の異表記・翻字差があるため、現代POI検索で得た一点を無批判に「1939年の正確な地点」としない。出典図上の相対位置と照合し、必要なら approximate とする。
+
+### 3. 双方の国境認識
+
+**精密な2本のhistorical boundary LineStringは公開しない。**
+
+理由:
+
+- 防衛研究所の研究でも、ソ蒙側の国境認識について「東方約20km」「東方約13km」という記述差がある
+- 「河から何km東」という文章だけでは線形・屈曲・基準点を復元できない
+- 現代中国・モンゴル国境は1939年当時の双方の認識線をそのまま表すものではない
+
+公開候補は次のどちらかに限定する。
+
+1. **schematic disputed zone**
+   - ハルハ河東岸の係争地域を半透明帯で示す
+   - exact boundaryではなく「双方の国境認識が重なった概略領域」と明記
+2. **schematic boundary reference**
+   - 日満側: ハルハ河を「日満側が国境と認識した自然地形」として注記
+   - ソ蒙側: 東方側に「ソ蒙側が国境と認識した概略方向」を破線で示す
+   - 線は測量境界ではなく説明用概略線と凡例で明記
+
+A29では1の disputed zone を優先する。1本の破線でも利用者は確定境界と読みやすいため、史料精度が十分でない段階では「帯」のほうが不確実性を正しく伝えられる。
+
+### 4. 戦闘・部隊geometry
+
+JH59に対応するA29では、7〜8月の包囲・進撃線を先取りしない。
+
+公開候補:
+
+- 5月11〜12日の衝突地域: approximate Point / small schematic area
+- 5月下旬の戦闘地域: approximate Point / small schematic area
+
+公開しない:
+
+- 第23師団・ソ連軍のexact front line
+- 日付の揃っていない部隊配置線
+- 7月1〜5日、7月23日、8月13日、8月下旬の戦史叢書付図をJH59へ先取りした進撃矢印
+- 戦史叢書付図のvector trace
+
+後続JH60/JH61で戦闘段階を地図に追加する場合は、同じA29を時点別layerとして拡張するかを改めて判定する。
+
+### 5. 兵站距離
+
+防衛研究所研究は、ソ連側の兵站についてノモンハン・ブルド・オボーからシベリア鉄道ボルジャ駅まで約650kmとしている。
+
+これは戦場が孤立した一点ではなく、長距離輸送を必要とする作戦空間だったことを理解する重要な情報である。ただし、JH59の局地地図へボルジャまで含めると縮尺が崩れる。
+
+したがって、
+
+- 主地図: ノモンハン・ハルハ河周辺
+- 必要なら別の広域inset: ボルジャ方面など兵站方向
+
+という役割分離を候補とする。A29の初回実装でinsetを必須にはしない。
+
+### 6. 公開geometryの上限
+
+| 対象 | geometry | confidence | 用途 |
+|---|---|---|---|
+| ハルハ河 | generalized LineString | derived / approximate | 日満側国境認識の自然地形基準、戦場の東西関係 |
+| ノモンハン・ブルド・オボー | representative / approximate Point | approximate | 事件名の基準地点・主戦場参照 |
+| ホルステン河方面 | generalized natural-feature reference | approximate | 戦場地形の補助 |
+| 5月11〜12日衝突地域 | approximate Point / schematic area | approximate / schematic | 第一次事件の発端 |
+| 5月下旬戦闘地域 | approximate Point / schematic area | approximate / schematic | 戦闘拡大の位置 |
+| 満蒙国境係争帯 | schematic Polygon / corridor | schematic | 双方の国境認識が重なる概略空間 |
+| ソ蒙側国境認識の方向 | annotation onlyを第一候補 | schematic | 河川より東側に別の境界認識があったことの説明 |
+
+**公開しないgeometry:**
+
+- 現代中国・モンゴル国境を1939年の歴史国境として表示すること
+- 「河から13km / 20km」を機械的にbufferして作った確定国境
+- 満洲国／モンゴル人民共和国の領域polygonを現代行政境界から生成すること
+- 5月時点で未発生の7〜8月進撃線・包囲矢印
+- 戦史叢書付図・同時代広報地図の無断vector trace
+- exact front line / exact unit position を史料精度以上に描くこと
+- 損害数を面積・線幅へ定量変換すること
+
+## 採用判断
+
+**A29は採用する。Data Auditはconditional pass。**
+
+地図の中心命題は、**ハルハ河を国境とみる日満側と、河川より東側に国境をみるソ蒙側の認識差があり、その重複空間で軍事行動が拡大した**ことである。
+
+Data Audit上、双方の国境認識を精密な線として公開するだけのgeometry品質はない。一方で、自然地形、代表地点、schematic disputed zoneを使えば、精度を偽装せずJH59の理解を大きく改善できる。
+
+したがって公開地図を実装する場合は、
+
+- ハルハ河: generalized natural-feature line
+- ノモンハン・ブルド・オボー等: representative / approximate point
+- 係争空間: schematic disputed zone
+- 5月の戦闘: approximate point / area
+
+の4種を上限とする。
+
+LineString / Polygon / schematic areaを含むため、point-only再利用によるHuman Visual Audit省略規則は使わない。実装時は通常どおり Data / Style / Human Visual Audit を行う。
+
+**この工程ではmap necessity / data-quality judgmentまでを完了し、新規公開map実装は行わない。** 後続JH60/JH61で7〜8月の戦闘段階が追加された時点で、A29を時点別地図として一括実装するほうが重複を避けられるためである。
+
+## A29判定で使用した主要資料
+
+- 防衛省防衛研究所『戦史叢書 第027巻 関東軍〈1〉対ソ戦・ノモンハン事件』
+  https://www.nids.mod.go.jp/military_history_search/SoshoView?kanno=027
+- 防衛省防衛研究所『ブリーフィング・メモ』2017年9月号「ノモンハン事件におけるソ連の軍事と外交」
+  https://www.nids.mod.go.jp/publication/briefing/pdf/2017/201709.pdf
+- 防衛省防衛研究所『防衛研究所紀要』第22巻第2号「ソ連軍指導部の対日認識について」
+  https://www.nids.mod.go.jp/publication/kiyo/pdf/bulletin_j22_2_10.pdf
+- アジア歴史資料センター「1939年5月12日 ノモンハン事件」
+  https://www.jacar.go.jp/exhibition/shuhou/nenpyo/nenpyo19390512.html
 
 ---
 
@@ -392,7 +546,7 @@ JH59〜JH62の隣接接続確認、A29/A30のmap audit、Crosscutting publicatio
 - [x] Crosscutting publication gate の候補比較軸を定義
 - [x] phase-end auditを定型化せず、監査要否判定と具体的仮説を定義
 - [x] JH59 published
-- [ ] A29 judgment completed。採用時は Data / Style / Visual Audit 完了
+- [x] A29 judgment completed（map necessity=high / Data Audit=conditional pass。公開map実装はJH60/JH61後に時点別統合を再判定）
 - [ ] JH60 published
 - [ ] A30 judgment completed。採用時は Data / Style / Visual Audit 完了
 - [ ] JH61 published

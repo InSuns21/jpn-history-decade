@@ -1,7 +1,7 @@
 # 1938年10月28日から1939年5月10日まで — 「東亜新秩序」からノモンハン前夜まで 実装計画
 
-- **Status:** active
-- **Progress:** phase cut ✅ → JH55 ✅ → JH56 ✅ → JH57 ✅ → JH58 ✅ → A28 ✅ → Crosscutting publication gate ✅（S05・S09・S10延長、S02・新規記事は見送り） → next phase-end audit necessity judgment
+- **Status:** completed
+- **Progress:** phase cut ✅ → JH55 ✅ → JH56 ✅ → JH57 ✅ → JH58 ✅ → A28 ✅ → Crosscutting publication gate ✅ → phase-end audit necessity judgment ✅（独立監査不要） → CI / Pages ✅ → completed
 - **Created:** 2026-09-30
 - **Scope:** 1938-10-28〜1939-05-10
 - **Primary goal:** 広東・武漢占領後も日中戦争が終結しないなか、日本政府が「東亜新秩序」・対中政治工作・占領地統治機構・国内総動員・対独伊関係・華南／華中での軍事圧力を組み合わせて長期戦へ移る過程を、後の汪兆銘政権や三国同盟を既定路線として先取りせずに説明する
@@ -425,6 +425,25 @@ JH55〜JH58とA28判定後、既存横断記事を次の比較軸で延長でき
 
 ---
 
+## Phase-end audit necessity judgment — 2026-09-30
+
+**判定: 独立監査不要。**
+
+現行規約が要求する「複数年代・横断記事を同時に見ないと検出できない具体的な監査仮説」が、このフェーズのpublication gate完了後には残っていない。
+
+- JH54→JH55、JH55→JH56、JH56→JH57、JH57→JH58の隣接接続は各年代の実装時に確認済みで、同じ境界をフェーズ末に再監査する理由はない。
+- 「東亜新秩序」・第三次近衛声明・五相会議・対独伊交渉における政府内主体の役割差は、S05延長で「公開声明／政府内調整／在外大使の交渉」を分けて比較した。
+- 興亜院・華北／華中連絡部・海南島の政務処理機構の役割差は、S09延長で比較し、占領地統治を一つの制度へ潰す重複・主体混同を処理した。
+- 国民職業能力申告令・生産力拡充・雇入れ／就業／技能者養成は、S10延長で人的資源統制の段階差として整理し、後の国民徴用令を先取りしない構成にした。
+- S02は新しい財政制度転換がないため延長せず、新規横断記事も年代記事・S05・S09の再編集になるため作らなかった。横断記事の役割重複はpublication gateで判定済みである。
+- A28はmap necessity / data-quality judgmentまでで、公開geometry上限と禁止表現を確定した。今回のフェーズ末に新しい公開地図実装を追加していないため、別途Human Visual Auditを伴う横断監査対象は生じていない。
+
+5月11日以後のノモンハン事件、7月の国民徴用令、汪兆銘を中心とする新中央政府構想の進展は、5月10日時点で残る**次フェーズの未解決論点**であり、このフェーズ内部の矛盾ではない。
+
+したがって、独立監査を追加せずCI / Pages / 完了処理へ進む。
+
+---
+
 # 9. 主要史料・参考文献候補
 
 ## 外務省外交史料館
@@ -502,10 +521,10 @@ JH55 1938-10-28〜12-21
 → A28「海南島占領と華南・仏印方面の対外交通空間」map necessity / data-quality judgment
 → Crosscutting publication gate
 → passing extension / new article のみ実装
-→ phase-end audit necessity judgment
-→ CI / Pages
-→ Status: completed
-→ plan_done/
+→ phase-end audit necessity judgment ✅（独立監査不要）
+→ CI / Pages ✅
+→ Status: completed ✅
+→ plan_done/ ✅
 
 各年代ページを published にする前に直前年代との接続確認を完了する。同じ境界を後から独立監査として繰り返さない。
 
@@ -525,12 +544,12 @@ JH55 1938-10-28〜12-21
 - [x] JH58 published
 - [x] A28 judgment completed
 - [x] passing crosscutting extensions implemented
-- [ ] phase-end audit necessity judgment completed
-- [ ] npm run check green
-- [ ] PR CI green
-- [ ] main CI green
-- [ ] Pages deploy green
-- [ ] Status = completed
-- [ ] plan_done/へ移動
+- [x] phase-end audit necessity judgment completed
+- [x] npm run check green
+- [x] PR CI green
+- [x] main CI green
+- [x] Pages deploy green
+- [x] Status = completed
+- [x] plan_done/へ移動
 
-次の工程は **Crosscutting publication gate**。
+このフェーズは完了。次は **1939年5月11日以後の実装フェーズ切り出し**。

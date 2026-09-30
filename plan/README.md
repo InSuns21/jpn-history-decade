@@ -10,13 +10,11 @@
 
 ## 実装計画
 
-- `EAST_ASIA_NEW_ORDER_TO_PRE_NOMONHAN_IMPLEMENTATION_PLAN.md`
+現在、`plan/` 配下にactiveな個別実装計画はない。
 
-1938年10月28日〜1939年5月10日を対象とし、広東・武漢占領後の第二次・第三次近衛声明、興亜院、汪兆銘工作、平沼内閣、国家総動員法にもとづく人的・生産力統制、海南島・南昌での作戦、対独伊協定交渉を追うactive implementation plan。
+直前の1938年10月28日〜1939年5月10日フェーズは [EAST_ASIA_NEW_ORDER_TO_PRE_NOMONHAN_IMPLEMENTATION_PLAN.md](../plan_done/EAST_ASIA_NEW_ORDER_TO_PRE_NOMONHAN_IMPLEMENTATION_PLAN.md) として完了・archive済み。
 
-終点はノモンハン事件が始まる前日の1939年5月10日。JH55〜JH58は実装済みで、次は A28「海南島占領と華南・仏印方面の対外交通空間」のmap necessity / data-quality judgment。
-
-年未満への細分化は定型化せず、内閣・外交・軍事・国内動員・外部制約の状態が実際に変わる境界に限る。
+次の個別計画は、1939年5月11日のノモンハン事件開始以後について、内閣・外交・軍事・国内動員・外部制約の状態が実際に変わる境界を確認して切り出す。年未満への細分化は定型化しない。
 
 ## ライフサイクル
 

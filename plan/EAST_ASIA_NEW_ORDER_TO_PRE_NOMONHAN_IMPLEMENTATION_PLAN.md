@@ -1,7 +1,7 @@
 # 1938年10月28日から1939年5月10日まで — 「東亜新秩序」からノモンハン前夜まで 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH55 ✅ → JH56 ✅ → JH57 ✅ → JH58 ✅ → next A28
+- **Progress:** phase cut ✅ → JH55 ✅ → JH56 ✅ → JH57 ✅ → JH58 ✅ → A28 ✅（採用・代表地点＋仏印—雲南鉄道＋広西方面schematic corridorまで） → next Crosscutting publication gate
 - **Created:** 2026-09-30
 - **Scope:** 1938-10-28〜1939-05-10
 - **Primary goal:** 広東・武漢占領後も日中戦争が終結しないなか、日本政府が「東亜新秩序」・対中政治工作・占領地統治機構・国内総動員・対独伊関係・華南／華中での軍事圧力を組み合わせて長期戦へ移る過程を、後の汪兆銘政権や三国同盟を既定路線として先取りせずに説明する
@@ -192,30 +192,177 @@ JH58は、海南島占領を契機に華南の軍事・海上空間へ圧力を�
 
 ## A28 — 海南島占領と華南・仏印方面の対外交通空間
 
-### map necessity / data-quality judgment を行う理由
+**Status: completed / 2026-09-30**
 
-JH58で重要なのは、海南島占領を単なる「島の占領」としてではなく、
+### map necessity 判定
 
-- 広東・香港
-- 海南島北部／南部
-- 仏印沿岸
-- 広西・雲南へ続く交通方向
-- 南シナ海の海上交通
+**採用 / high。**
 
-の位置関係から読むことである。
+JH58で空間的に重要なのは、海南島が単独で軍事拠点になったことだけではない。次の位置関係を同時に見ることで、海南島占領が1939年初頭の対中戦争と対仏印関係にどのような圧力を加えうる位置取りだったかを理解しやすくなる。
 
-A27で扱った香港—広東—武漢の交通構造を南西へ延長できる可能性があるため、A28は新規地図実装を前提にせず、まず map necessity / data-quality judgment を行う。
+1. 香港・広東が華南沿岸の主要な交通結節であること
+2. 海南島が香港と仏印沿岸の間、トンキン湾・南シナ海に面する位置にあること
+3. 仏印側では海防（Haiphong）からハノイを経て雲南へ入る鉄道が中国側の外部交通路として機能していたこと
+4. 1939年2月時点には海防からランソン方面を経て広西へ入る自動車輸送も報告されていたこと
+5. 海南島占領後も、仏印・雲南・ビルマなど複数の対外補給経路が存在し、日本側が一度の占領で中国の外部交通を一括遮断したわけではないこと
 
-### Data Auditで確認すること
+1939年2月10日付の米国外交文書でグルー駐日大使は、海南島を海空軍基地化した場合、香港から仏印南端までの沿岸交通や南シナ海の交通へ大きな影響を与えうると報告した。これは同時代の米国外交官による評価であり、日本側の確定済み長期戦略そのものとしては扱わない。
 
-- 1939年2月の上陸・占領地点をどの精度まで公開できるか
-- 海口・三亜など代表地点のhistorical position
-- 仏印・広西・雲南方面への交通路を、当時の整備状態以上に精密化しないこと
-- 海南島占領を後の北部仏印進駐・南方作戦の「必然的第一歩」として地図化しないこと
-- 戦史付図の進撃線・部隊配置を無断トレースしないこと
-- 現代国境・現代道路を1939年の軍事／物流経路として無注記利用しないこと
+- source: https://history.state.gov/historicaldocuments/frus1939v03/d95
+- 利用方針: 海南島の地理的位置と、華南沿岸・仏印方面の交通に対する同時代の戦略評価を確認
+- 「南進政策の第一歩」という後世的な一本道の矢印へ変換しない
 
-A28が採用された場合は LineString / corridor を含む可能性が高いため、point-only Human Visual Audit省略規則は原則使わない。
+同年2月8日の米国外交文書は、仏印—雲南鉄道が中国への貨物輸送路として稼働し、輸送力増強が検討されていたことを報告する。2月18日の文書は、海防からランソン方面を経て広西へ入る自動車輸送を報告している。
+
+- source: https://history.state.gov/historicaldocuments/frus1939v03/d709
+- source: https://history.state.gov/historicaldocuments/frus1939v03/d710
+- 利用方針: 仏印から中国へ入る交通が単一路線ではなく、鉄道と自動車輸送を含む複数経路だったことを確認
+- 輸送量の数値は同時代報告の推計・報告値であり、地図の線幅へ定量変換しない
+
+したがってA28は採用する。目的は海南島攻略の戦闘経過を再現することではなく、**広東・香港・海南島・仏印・雲南／広西方面を一枚に置き、海南島占領が既存の対外交通網に対してどの位置から圧力を加えうるようになったかを示すこと**とする。
+
+### Data Audit 判定
+
+**conditional pass。公開geometryは「代表地点＋確認可能な歴史鉄道のgeneralized LineString＋道路輸送のschematic corridor」までを上限とする。**
+
+#### 1. 海南島側の代表地点
+
+アジア歴史資料センターのグロッサリーは、海南島北部の海口に海軍の軍政機関が置かれたこと、南部では海軍が三亜などを占領し根拠地隊を置いたことを確認できる。
+
+- source: https://jacar.go.jp/exhibition/glossary/term2/0050-0060-0040-0020-0010.html
+- source: https://www.jacar.go.jp/exhibition/glossary/term2/0050-0060-0040-0020.html
+- 利用方針: 海口・三亜を「島北部／南部の代表的な占領・軍政拠点」として表示する
+- 2月10日の正確な上陸浜・上陸部隊の進撃線をこれらの資料だけから復元しない
+- 海南島全域を2月10日時点で均質に掌握済みと見せるoccupation polygonは作らない
+
+A28では海口・三亜を representative Point として使い、海南島そのものの輪郭は背景地図上の地理参照にとどめる。現代海岸線を1939年の確定歴史geometryとして独立主題化しない。
+
+#### 2. 仏印—雲南鉄道
+
+1939年2月8日の米国外交文書は、Indo-China–Yunnan Railway が中国向けの外部輸送路として稼働していたことを明示する。
+
+A28では、歴史鉄道の存在と主要経由方向を示すため、
+
+- 海防
+- ハノイ
+- ラオカイ方面
+- 昆明（当時のYunnanfu）
+
+を主要waypointとする generalized LineString を候補とする。
+
+exact rail centerlineを現代鉄道データから流用しない。公開線形は歴史資料で確認できる主要都市・国境通過方向を結ぶ概略線に限定し、測量済みの1939年線路中心線のように見せない。
+
+#### 3. 仏印—広西方面の自動車輸送
+
+1939年2月18日の米国外交文書は、軍需品が海防からランソンへ自動車で運ばれ、そこから広西へ入る経路を報告する。
+
+この経路は鉄道のような固定線形として扱わない。道路状態・経由地・利用状況は時期によって変動しうるため、
+
+- 海防
+- ランソン
+- 広西方面
+
+という方向関係だけを示す **schematic corridor** とする。
+
+広西側の終点を史料以上に固定しない。現代高速道路や現在の国境道路を1939年の輸送路としてそのまま使わない。
+
+#### 4. 香港・広東との接続
+
+A27で確認した香港／九龍—広東の交通・補給構造は、A28の北東側の文脈として再利用できる。
+
+ただしA28の中心は1938年10月の広東攻略を再説明することではなく、**海南島と仏印方面を加えたことで、華南沿岸から南西方向へ空間的な論点が広がったこと**にある。
+
+A27で定義した代表地点・generalized routeを再利用する場合も、
+
+- 1938年10月時点のA27
+- 1939年2〜5月時点のA28
+
+の基準時点を凡例・注記で区別する。
+
+#### 5. 海南島占領と「遮断」の表現上限
+
+2月10日付FRUSは海南島の占領が仏印方面の交通へ大きな影響を与えうると評価するが、これは「即時に仏印経由の補給を遮断した」という事実と同じではない。
+
+2月8日・18日のFRUSは、仏印—雲南鉄道や仏印—広西方面の輸送が現に存在していたことを示す。したがって地図では、
+
+- 海南島から仏印へ「遮断線」を引く
+- 海南島占領後に仏印ルートが消滅したように描く
+- 海南島から南方へ1940〜41年の進駐・作戦方向を先取りする
+
+ことを行わない。
+
+海南島は**交通路に近い軍事拠点の位置**として示し、実際の輸送路は別レイヤーで示す。
+
+#### 6. 公開geometryの上限
+
+| 対象 | geometry | confidence | 用途 |
+|---|---|---|---|
+| 香港／九龍 | representative Point | derived | A27から継続する華南沿岸の参照点 |
+| 広東 | representative Point | derived | 華南沿岸・内陸交通の参照点 |
+| 海口 | representative Point | derived | 海南島北部の占領・軍政拠点 |
+| 三亜 | representative Point | derived | 海南島南部の海軍拠点 |
+| 海防 | representative Point | derived | 仏印側の主要港・外部輸送入口 |
+| ハノイ | representative Point | derived | 仏印内陸交通の結節 |
+| ラオカイ方面 | representative / approximate Point | approximate | 雲南鉄道の国境通過方向 |
+| 昆明（Yunnanfu） | representative Point | derived | 仏印—雲南鉄道の中国側主要到達点 |
+| ランソン | representative Point | derived | 広西方面自動車輸送の仏印側主要経由点 |
+| 海防—ハノイ—ラオカイ—昆明 | generalized LineString | derived / approximate | 仏印—雲南鉄道の広域位置関係 |
+| 海防—ランソン—広西方面 | schematic corridor | schematic | 1939年2月に報告された自動車輸送方向 |
+| 香港／九龍—広東 | generalized LineString | derived | A27から再利用する華南沿岸側の接続 |
+
+**公開しないgeometry:**
+
+- 海南島全域を単色で塗る「2月10日時点の完全占領域」polygon
+- 正確な上陸浜・部隊配置・日付別進撃線
+- 海空軍の行動半径・制海権・制空権を示す円やpolygon
+- 海南島から仏印へ引く「遮断済み」線
+- 1940年北部仏印進駐・1941年南方作戦へ向かう先取り矢印
+- 現代道路・現代鉄道のexact geometryを1939年路線として無注記使用すること
+- 現代国境を1939年の政治境界として主題化するpolygon
+- 戦史付図・研究図の進撃線や交通線を無断トレースしたvector
+
+### 採用判断
+
+**A28は採用する。Data Auditはconditional pass。**
+
+本文だけでは、海南島が「香港と仏印の間にある」という説明と、仏印から中国へ入る鉄道・自動車輸送の実体を同時に保持しにくい。A28では、海南島そのものを大きく塗るより、
+
+- 海口・三亜
+- 香港・広東
+- 海防・ハノイ・昆明
+- ランソンから広西方面
+
+を交通ノードと方向として分けて示す方が、JH58の主張を正確に支えられる。
+
+地図の中心命題は、**海南島占領によって日本側が華南沿岸・仏印方面の対外交通に近い軍事的位置を得た一方、中国側の外部交通路はなお複数残っていた**ことである。
+
+LineStringとschematic corridorを含むため、point-only再利用によるHuman Visual Audit省略規則は使わない。実装時は通常どおり Data / Style / Human Visual Audit を行う。
+
+Style Auditでは最低限、
+
+- 占領・軍政拠点のpoint
+- 対外交通ノードのpoint
+- 確認可能な歴史鉄道のgeneralized LineString
+- 道路輸送方向のschematic corridor
+
+を別の記号・線種で表現する。
+
+schematic corridorは破線などで「方向」であることを明示し、実在する一本の道路中心線と誤読させない。海南島から仏印への圧力は位置関係と本文で説明し、攻撃半径や遮断線として可視化しない。
+
+### A28判定で使用した主要資料
+
+- U.S. Department of State, *Foreign Relations of the United States, Diplomatic Papers, 1939, The Far East, Volume III*, Grew to the Secretary of State, February 10, 1939  
+  https://history.state.gov/historicaldocuments/frus1939v03/d95
+- U.S. Department of State, Bullitt to the Secretary of State, February 11, 1939  
+  https://history.state.gov/historicaldocuments/frus1939v03/d97
+- U.S. Department of State, Peck to the Secretary of State, February 8, 1939  
+  https://history.state.gov/historicaldocuments/frus1939v03/d709
+- U.S. Department of State, Peck to the Secretary of State, February 18, 1939  
+  https://history.state.gov/historicaldocuments/frus1939v03/d710
+- アジア歴史資料センター「海南（島）海軍特務部」  
+  https://jacar.go.jp/exhibition/glossary/term2/0050-0060-0040-0020-0010.html
+- アジア歴史資料センター「海南海軍警備府」  
+  https://www.jacar.go.jp/exhibition/glossary/term2/0050-0060-0040-0020.html
 
 ---
 
@@ -366,7 +513,7 @@ JH55 1938-10-28〜12-21
 - [x] JH56 published
 - [x] JH57 published
 - [x] JH58 published
-- [ ] A28 judgment completed
+- [x] A28 judgment completed
 - [ ] passing crosscutting extensions implemented
 - [ ] phase-end audit necessity judgment completed
 - [ ] npm run check green
@@ -376,4 +523,4 @@ JH55 1938-10-28〜12-21
 - [ ] Status = completed
 - [ ] plan_done/へ移動
 
-次の工程は **A28「海南島占領と華南・仏印方面の対外交通空間」map necessity / data-quality judgment**。
+次の工程は **Crosscutting publication gate**。

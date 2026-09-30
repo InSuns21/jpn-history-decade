@@ -1,0 +1,15 @@
+{
+  "period": "1939-06-14",
+  "termRefs": [
+    {"id":"tientsin-blockade-1939","core":true},
+    {"id":"national-requisition-order-1939","core":true},
+    {"id":"craigie-arita-formula-1939","core":true},
+    {"id":"nomonhan-incident-1939","core":true},
+    {"id":"national-general-mobilization-law-1938","core":false},
+    {"id":"national-occupational-ability-declaration-1939","core":false},
+    {"id":"employee-hiring-restriction-order-1939","core":false},
+    {"id":"kwantung-army-1919","core":false},
+    {"id":"imperial-general-headquarters-1937","core":false},
+    {"id":"hiranuma-cabinet-1939","core":false}
+  ]
+}

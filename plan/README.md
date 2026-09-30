@@ -14,7 +14,7 @@
 
 - [NOMONHAN_TO_EUROPEAN_WAR_IMPLEMENTATION_PLAN.md](./NOMONHAN_TO_EUROPEAN_WAR_IMPLEMENTATION_PLAN.md)
   - Scope: 1939-05-11〜1939-09-15
-  - Progress: phase cut ✅ → JH59 ✅ → A29 ✅ → 次は JH60「1939-06-14〜07-25」
+  - Progress: phase cut ✅ → JH59 ✅ → A29 ✅ → JH60 ✅ → 次は A30「天津租界封鎖と占領下華北の法域空間」map necessity / data-quality judgment
 
 直前の1938年10月28日〜1939年5月10日フェーズは [EAST_ASIA_NEW_ORDER_TO_PRE_NOMONHAN_IMPLEMENTATION_PLAN.md](../plan_done/EAST_ASIA_NEW_ORDER_TO_PRE_NOMONHAN_IMPLEMENTATION_PLAN.md) として完了・archive済み。
 

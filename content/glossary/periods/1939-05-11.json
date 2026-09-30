@@ -1,15 +1,41 @@
 {
   "period": "1939-05-11",
   "termRefs": [
-    {"id":"nomonhan-incident-1939","core":true},
-    {"id":"manchuria-soviet-border-guideline-1939","core":true},
-    {"id":"kwantung-army-1919","core":true},
-    {"id":"mongolian-peoples-republic-1924","core":true},
-    {"id":"manchukuo-establishment-1932","core":false},
-    {"id":"imperial-general-headquarters-1937","core":false},
-    {"id":"changkufeng-incident-1938","core":false},
-    {"id":"hiranuma-cabinet-1939","core":false},
-    {"id":"wang-jingwei-operation-1938","core":false},
-    {"id":"national-general-mobilization-law-1938","core":false}
+    {
+      "id": "nomonhan-incident-1939",
+      "core": true
+    },
+    {
+      "id": "manchuria-soviet-border-guideline-1939",
+      "core": true
+    },
+    {
+      "id": "kwantung-army-1919",
+      "core": true
+    },
+    {
+      "id": "mongolian-peoples-republic-1924",
+      "core": true
+    },
+    {
+      "id": "manchukuo-establishment-1932",
+      "core": false
+    },
+    {
+      "id": "imperial-general-headquarters-1937",
+      "core": false
+    },
+    {
+      "id": "changkufeng-incident-1938",
+      "core": false
+    },
+    {
+      "id": "hiranuma-cabinet-1939",
+      "core": false
+    },
+    {
+      "id": "national-general-mobilization-law-1938",
+      "core": false
+    }
   ]
 }

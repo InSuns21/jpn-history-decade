@@ -1,7 +1,7 @@
 # 1938年10月28日から1939年5月10日まで — 「東亜新秩序」からノモンハン前夜まで 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH55 ✅ → JH56 ✅ → JH57 ✅ → next JH58
+- **Progress:** phase cut ✅ → JH55 ✅ → JH56 ✅ → JH57 ✅ → JH58 ✅ → next A28
 - **Created:** 2026-09-30
 - **Scope:** 1938-10-28〜1939-05-10
 - **Primary goal:** 広東・武漢占領後も日中戦争が終結しないなか、日本政府が「東亜新秩序」・対中政治工作・占領地統治機構・国内総動員・対独伊関係・華南／華中での軍事圧力を組み合わせて長期戦へ移る過程を、後の汪兆銘政権や三国同盟を既定路線として先取りせずに説明する
@@ -162,7 +162,7 @@ JH57は平沼内閣がその対中政策・占領地政策・総動員・対独�
   - 汪兆銘工作と軍事作戦が並行していたこと
   - 一つの作戦結果を中国側の抗戦能力全体の消滅へ一般化しない
 - 3月17日の生産力拡充委員会
-- 3月30日の工業就業規制・従業員雇入制限令など
+- 3月31日の工場就業時間制限令・従業者雇入制限令など
   - 労働力配分への行政介入が具体化すること
 - 3月〜4月の対独伊協定交渉
   - 大島・白鳥両大使と政府方針の差
@@ -365,7 +365,7 @@ JH55 1938-10-28〜12-21
 - [x] JH55 published
 - [x] JH56 published
 - [x] JH57 published
-- [ ] JH58 published
+- [x] JH58 published
 - [ ] A28 judgment completed
 - [ ] passing crosscutting extensions implemented
 - [ ] phase-end audit necessity judgment completed
@@ -376,4 +376,4 @@ JH55 1938-10-28〜12-21
 - [ ] Status = completed
 - [ ] plan_done/へ移動
 
-次の実装は **JH58「1939-02-10〜05-10」**。
+次の工程は **A28「海南島占領と華南・仏印方面の対外交通空間」map necessity / data-quality judgment**。

@@ -2,11 +2,11 @@
 id: "s10"
 routeKey: "industrial-social-burdens"
 kind: "structure"
-periodLabel: "1890年代–1938年8月24日"
+periodLabel: "1890年代–1939年5月10日"
 status: "published"
 title: "産業社会の負担と保護"
-summary: "1890年代後半から1938年8月24日まで、日本の産業化は生産能力と雇用を拡大する一方、長時間労働、環境被害、物価変動、失業、都市生活の脆弱性を生んだ。1937年には資金・外貨・輸入物資・生産能力へ国家が優先順位をつける制度が広がり、1938年の[[term:national-general-mobilization-law-1938|国家総動員法]]は人的・物的資源を横断して統制できる基本枠を置いた。8月の[[term:school-graduates-employment-restriction-1938|学校卒業者使用制限令]]は、その枠が対象学校・学科の新卒者の採用人数を行政が調整する具体的な労務統制へ移る一例となった。"
-framingQuestion: "産業化と恐慌のなかで利益・失業・価格・債務・生活上の負担は誰に配分され、1937〜1938年の戦時統制は、税・公債だけでなく資金・物資・生産・労務の用途と採用人数を誰が決めるかという問題へ、企業と個人の選択条件をどう広げたのか。"
+summary: "1890年代後半から1939年5月10日まで、日本の産業化は生産能力と雇用を拡大する一方、長時間労働、環境被害、物価変動、失業、都市生活の脆弱性を生んだ。1937年以後は資金・外貨・輸入物資・生産能力へ国家が優先順位をつける制度が広がり、[[term:national-general-mobilization-law-1938|国家総動員法]]は人的・物的資源を横断して統制できる基本枠を置いた。1938年の新卒者採用人数の認可から、1939年には職業能力の申告、重要産業での雇入れ・就業時間、技能者養成まで行政介入が広がり、負担配分の問題は「いくら払うか」だけでなく「どこで働き、誰を雇い、どの技能を育てるか」に及んだ。"
+framingQuestion: "産業化と恐慌のなかで利益・失業・価格・債務・生活上の負担は誰に配分され、1937〜1939年の戦時統制は、税・公債、資金・物資の配分から、採用人数、職業能力の把握、雇入れ、就業時間、技能者養成へ企業と個人の選択条件をどう広げたのか。"
 relatedPeriods:
   - "1896"
   - "1901"
@@ -31,6 +31,8 @@ relatedPeriods:
   - "1938-04-01"
   - "1938-05-20"
   - "1938-07-27"
+  - "1939-01-05"
+  - "1939-02-10"
 sources:
   - id: "stat-factory-1899"
     type: "official"
@@ -192,6 +194,41 @@ sources:
     title: "学校卒業者使用制限令 昭和13年8月24日勅令第599号"
     institution: "国立国会図書館 日本法令索引"
     url: "https://hourei.ndl.go.jp/simple/detail?current=-1&lawId=0000028017"
+  - id: "jacar-wartime-system-timeline-1939"
+    type: "official"
+    title: "公文書に見る戦時と戦後 年表"
+    institution: "アジア歴史資料センター"
+    url: "https://www.jacar.go.jp/exhibition/glossary/tochikiko-henten/table/history.html"
+  - id: "archives-national-occupational-ability-declaration-1939"
+    type: "primary"
+    title: "国民職業能力申告令・御署名原本・昭和十四年・勅令第五号"
+    institution: "国立公文書館デジタルアーカイブ"
+    url: "https://www.digital.archives.go.jp/DAS/meta/Detail_F0000000000000036621"
+  - id: "ndl-production-capacity-expansion-plan-1939"
+    type: "primary"
+    title: "生産力拡充計画要綱"
+    institution: "国立国会図書館 リサーチ・ナビ"
+    url: "https://ndlsearch.ndl.go.jp/rnavi/db/cabinet/s14_15/bib00186"
+  - id: "ndl-employee-hiring-restriction-1939"
+    type: "official"
+    title: "従業者雇入制限令 昭和14年3月31日勅令第126号"
+    institution: "国立国会図書館 日本法令索引"
+    url: "https://hourei.ndl.go.jp/simple/detail?current=-1&lawId=0000028534"
+  - id: "ndl-factory-hours-restriction-1939"
+    type: "official"
+    title: "工場就業時間制限令 昭和14年3月31日勅令第127号"
+    institution: "国立国会図書館 日本法令索引"
+    url: "https://hourei.ndl.go.jp/simple/detail?current=-1&lawId=0000028525"
+  - id: "ndl-school-skills-training-1939"
+    type: "official"
+    title: "学校技能者養成令 昭和14年3月31日勅令第130号"
+    institution: "国立国会図書館 日本法令索引"
+    url: "https://hourei.ndl.go.jp/simple/detail?current=-1&lawId=0000028521"
+  - id: "ndl-factory-skills-training-1939"
+    type: "official"
+    title: "工場事業場技能者養成令 昭和14年3月31日勅令第131号"
+    institution: "国立国会図書館 日本法令索引"
+    url: "https://hourei.ndl.go.jp/simple/detail?current=-1&lawId=0000028526"
 maps: []
 ---
 
@@ -470,9 +507,23 @@ S10の比較軸では、負担の形がもう一段変わった。税・公債�
 
 この段階を、後の国民徴用や学徒勤労動員と同じ制度として扱わない。1938年8月時点で確認できるのは、指定学校・学科の卒業者を対象とする採用人数の認可制であり、対象・強制力・運用範囲は後続制度と区別して追う必要がある。
 
-## 1938年8月24日時点で残った問い {#remaining-questions}
+## 1939年1月〜5月10日 — 採用人数の認可から、技能の把握・雇入れ・就業・養成へ {#labor-allocation-1939}
 
-1938年8月24日までに、国家は工場労働、金融危機、都市基盤、景気へ介入する能力に加えて、戦費を調達し、民間の資金・外貨・輸出入・軍需生産へ優先順位をつける制度を広げた。7〜8月の臨時増税・公債・借入は「誰が現在と将来の費用を負担するか」を変え、9月の統制法制は「限られた資源を誰が何に使えるか」まで政策対象へ広げた。
+1938年8月の[[term:school-graduates-employment-restriction-1938|学校卒業者使用制限令]]は、指定学校・学科の新卒者について、企業が採用できる人数を行政の認可対象にした。1939年に入ると、人的資源統制は採用時点だけでなく、すでに社会にいる労働者の技能把握と、重要産業での雇入れ・就業・技能形成へ広がった。
+
+1月7日に公布された[[term:national-occupational-ability-declaration-1939|国民職業能力申告令]]は、国家総動員法第21条にもとづき、指定職業の経験や資格を持つ一定範囲の男子に職業能力を申告させる仕組みを設けた。行政は「何人雇うか」だけでなく、**どこにどの技能を持つ人がいるか**を把握する情報基盤を持つようになった。[@archives-national-occupational-ability-declaration-1939][@jacar-wartime-system-timeline-1939]
+
+1月17日の[[term:production-capacity-expansion-plan-1939|生産力拡充計画要綱]]は、国防産業・基礎産業の生産能力を数年単位で増やす方針を置き、資源・輸送・労力・技術・資金を一つの計画問題として扱った。現在ある物資をどこへ回すかだけでなく、将来どの産業へ設備・労働力・技能を蓄積するかまで行政計画の対象になった。[@ndl-production-capacity-expansion-plan-1939]
+
+3月31日には[[term:employee-hiring-restriction-order-1939|従業者雇入制限令]]、工場就業時間制限令、学校技能者養成令、工場事業場技能者養成令などが公布された。これらは同じ対象・同じ強制力を持つ一制度ではないが、重要産業の人材確保を、雇入れ、就業時間、技能者の養成という複数の入口から調整する制度群だった。[@ndl-employee-hiring-restriction-1939][@ndl-factory-hours-restriction-1939][@ndl-school-skills-training-1939][@ndl-factory-skills-training-1939]
+
+S10の比較軸では、負担の形がさらに広がった。税・公債は所得や将来負担を動かし、資金・物資統制は企業が使える資源を動かした。1938〜1939年の労務統制は、**企業が誰をどれだけ採用できるか、労働者の技能がどのように把握されるか、重要産業での労働時間や技能供給をどう整えるか**へ国家の調整範囲を広げた。
+
+これは1939年7月の国民徴用令による徴用と同じ制度段階ではない。5月10日時点では、職業能力の把握、雇入れ制限、就業時間、技能者養成などの個別制度を通じて、人的資源を重要産業へ寄せる仕組みが段階的に具体化していた。
+
+## 1939年5月10日時点で残った問い {#remaining-questions}
+
+1939年5月10日までに、国家は工場労働、金融危機、都市基盤、景気へ介入する能力に加えて、戦費を調達し、民間の資金・外貨・輸出入・軍需生産へ優先順位をつける制度を広げた。7〜8月の臨時増税・公債・借入は「誰が現在と将来の費用を負担するか」を変え、9月の統制法制は「限られた資源を誰が何に使えるか」まで政策対象へ広げた。
 
 一方、負担は形を変えて残った。
 
@@ -485,4 +536,4 @@ S10の比較軸では、負担の形がもう一段変わった。税・公債�
 - 円安や為替管理が、輸出産業・輸入費用・家計・企業へ異なる影響をどう配分するか
 - 都市化が続くなか、住宅・衛生・交通・失業救済の費用を自治体と国家がどう分担するか
 
-次の段階では、[[term:national-general-mobilization-law-1938|国家総動員法]]の各条文を根拠とする命令が、学校卒業者以外の労働力、物資配給、価格、金融、家計へどの順序で及ぶかが問題になる。1938年8月24日時点では、**人・物・生産・輸送・金融を横断する基本法に加え、指定学校・学科の新卒者の採用人数を認可制にする具体的な労務統制まで実施段階へ入った**ことを確認できる。
+次の段階では、[[term:national-general-mobilization-law-1938|国家総動員法]]の各条文を根拠とする命令が、労働力の配置、物資配給、価格、金融、家計へどの順序で及ぶかが問題になる。1939年5月10日時点では、**人・物・生産・輸送・金融を横断する基本法の下で、新卒者の採用人数、既存労働力の技能把握、重要産業での雇入れ・就業・技能者養成まで個別統制が具体化した**。その次に、これらの把握・調整制度が7月の国民徴用令のような直接的な労務配置へどう接続するかを確認する必要がある。

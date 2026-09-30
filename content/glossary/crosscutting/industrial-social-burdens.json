@@ -112,6 +112,18 @@
     {
       "id": "school-graduates-employment-restriction-1938",
       "core": true
+    },
+    {
+      "id": "national-occupational-ability-declaration-1939",
+      "core": true
+    },
+    {
+      "id": "production-capacity-expansion-plan-1939",
+      "core": true
+    },
+    {
+      "id": "employee-hiring-restriction-order-1939",
+      "core": true
     }
   ]
 }

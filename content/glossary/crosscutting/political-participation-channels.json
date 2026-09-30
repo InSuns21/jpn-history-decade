@@ -224,6 +224,18 @@
     {
       "id": "anti-comintern-pact-1936",
       "core": false
+    },
+    {
+      "id": "second-konoe-statement-1938",
+      "core": true
+    },
+    {
+      "id": "third-konoe-statement-1938",
+      "core": true
+    },
+    {
+      "id": "hiranuma-cabinet-1939",
+      "core": false
     }
   ]
 }

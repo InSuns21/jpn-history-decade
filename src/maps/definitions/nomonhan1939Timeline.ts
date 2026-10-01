@@ -291,12 +291,6 @@ export const nomonhan1939TimelineMap: HistoricalMapDefinition = {
       ],
     },
     {
-      id: 'nomonhan-phase-areas',
-      datasetId: 'nomonhan-phase-areas',
-      categoryProperty: 'category',
-      categories: ['battle-area'],
-    },
-    {
       id: 'nomonhan-phase-points',
       provenance: {
         sourceId: 'a29-nomonhan-phase-points',
@@ -406,6 +400,12 @@ export const nomonhan1939TimelineMap: HistoricalMapDefinition = {
       datasetId: 'nomonhan-reference-points',
       categoryProperty: 'category',
       categories: ['reference-place'],
+    },
+    {
+      id: 'nomonhan-phase-areas',
+      datasetId: 'nomonhan-phase-areas',
+      categoryProperty: 'category',
+      categories: ['battle-area'],
     },
     {
       id: 'nomonhan-phase-points',

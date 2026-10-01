@@ -953,3 +953,63 @@ html[data-text-size='xlarge'] {
   }
 }
 
+
+
+/* Historical map temporal controls and schematic areas */
+.thematic-map__time-control {
+  margin-bottom: 12px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  font-family: var(--font-ui);
+}
+.thematic-map__time-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.thematic-map__time-buttons button {
+  min-height: 42px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink);
+  font: 700 .76rem/1.3 var(--font-ui);
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.thematic-map__time-buttons button:hover,
+.thematic-map__time-buttons button:focus-visible {
+  border-color: var(--green);
+}
+.thematic-map__time-buttons button.is-active {
+  border-color: var(--green);
+  background: var(--green);
+  color: #fff;
+}
+.thematic-map__time-description {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: .76rem;
+  line-height: 1.65;
+}
+.thematic-map__legend i.is-line.is-solid {
+  border-top-style: solid;
+}
+.thematic-map__legend i.is-area {
+  width: 26px;
+  height: 18px;
+  border: 2px dashed var(--legend-color);
+  border-radius: 2px;
+  background: color-mix(in srgb, var(--legend-color) 18%, transparent);
+}
+
+@media (max-width: 640px) {
+  .thematic-map__time-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .thematic-map__time-buttons button {
+    min-height: 46px;
+  }
+}

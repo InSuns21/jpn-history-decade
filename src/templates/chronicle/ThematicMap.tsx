@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, type CSSProperties } from 'react'
+import { useEffect, useMemo, useRef, useState, type CSSProperties } from 'react'
 import * as maplibregl from 'maplibre-gl'
 import 'maplibre-gl/dist/maplibre-gl.css'
 import { findMapDefinition } from '../../maps/registry'
@@ -8,9 +8,23 @@ const labelPlacements = new Set(['right', 'left', 'top', 'bottom'])
 export function ThematicMap({ mapId }: { mapId: string }) {
   const containerRef = useRef<HTMLDivElement>(null)
   const definition = useMemo(() => findMapDefinition(mapId), [mapId])
+  const [selectedTimeSlice, setSelectedTimeSlice] = useState<string | null>(null)
+  const activeTimeSlice = selectedTimeSlice ?? definition?.timeSlices?.[0]?.id ?? null
+  const activeTimeSliceDefinition = definition?.timeSlices?.find((item) => item.id === activeTimeSlice)
 
   useEffect(() => {
     if (!containerRef.current || !definition) return
+
+    const isVisibleAtTime = (properties: Record<string, string | number | boolean | null>) => {
+      const featureTimeSlice = properties.timeSlice
+      return (
+        !definition.timeSlices?.length ||
+        featureTimeSlice === undefined ||
+        featureTimeSlice === null ||
+        featureTimeSlice === '' ||
+        featureTimeSlice === activeTimeSlice
+      )
+    }
 
     const map = new maplibregl.Map({
       container: containerRef.current,
@@ -49,12 +63,65 @@ export function ThematicMap({ mapId }: { mapId: string }) {
     let activePopup: maplibregl.Popup | null = null
 
     map.once('load', () => {
+      const polygonFeatures = definition.datasets.flatMap((dataset) =>
+        dataset.features
+          .filter(
+            (feature) =>
+              feature.geometry.type === 'Polygon' &&
+              Array.isArray(feature.geometry.coordinates) &&
+              isVisibleAtTime(feature.properties),
+          )
+          .map((feature) => ({
+            type: 'Feature' as const,
+            id: feature.id,
+            properties: feature.properties,
+            geometry: {
+              type: 'Polygon' as const,
+              coordinates: feature.geometry.coordinates as [number, number][][],
+            },
+          })),
+      )
+
+      if (polygonFeatures.length > 0) {
+        const sourceId = `historical-areas-${definition.id}`
+        map.addSource(sourceId, {
+          type: 'geojson',
+          data: { type: 'FeatureCollection', features: polygonFeatures },
+        })
+
+        for (const item of definition.legend.filter((legendItem) => legendItem.kind === 'area')) {
+          map.addLayer({
+            id: `historical-area-fill-${definition.id}-${item.value}`,
+            type: 'fill',
+            source: sourceId,
+            filter: ['==', ['get', 'category'], item.value],
+            paint: {
+              'fill-color': item.color,
+              'fill-opacity': 0.16,
+            },
+          })
+          map.addLayer({
+            id: `historical-area-outline-${definition.id}-${item.value}`,
+            type: 'line',
+            source: sourceId,
+            filter: ['==', ['get', 'category'], item.value],
+            paint: {
+              'line-color': item.color,
+              'line-width': 2,
+              'line-opacity': 0.78,
+              'line-dasharray': [2, 1.5],
+            },
+          })
+        }
+      }
+
       const lineFeatures = definition.datasets.flatMap((dataset) =>
         dataset.features
           .filter(
             (feature) =>
               feature.geometry.type === 'LineString' &&
-              Array.isArray(feature.geometry.coordinates),
+              Array.isArray(feature.geometry.coordinates) &&
+              isVisibleAtTime(feature.properties),
           )
           .map((feature) => ({
             type: 'Feature' as const,
@@ -78,6 +145,25 @@ export function ThematicMap({ mapId }: { mapId: string }) {
         })
 
         for (const item of definition.legend.filter((legendItem) => legendItem.kind === 'line')) {
+          if (item.lineStyle === 'solid') {
+            map.addLayer({
+              id: `historical-line-solid-${definition.id}-${item.value}`,
+              type: 'line',
+              source: sourceId,
+              filter: ['==', ['get', 'category'], item.value],
+              layout: {
+                'line-cap': 'round',
+                'line-join': 'round',
+              },
+              paint: {
+                'line-color': item.color,
+                'line-width': 4,
+                'line-opacity': 0.9,
+              },
+            })
+            continue
+          }
+
           const basePaint = {
             'line-color': item.color,
             'line-width': item.value === 'port-link' ? 5 : 4.5,
@@ -117,7 +203,11 @@ export function ThematicMap({ mapId }: { mapId: string }) {
 
       for (const dataset of definition.datasets) {
         for (const feature of dataset.features) {
-          if (feature.geometry.type !== 'Point' || !Array.isArray(feature.geometry.coordinates)) continue
+          if (
+            feature.geometry.type !== 'Point' ||
+            !Array.isArray(feature.geometry.coordinates) ||
+            !isVisibleAtTime(feature.properties)
+          ) continue
 
           const [longitude, latitude] = feature.geometry.coordinates
           if (typeof longitude !== 'number' || typeof latitude !== 'number') continue
@@ -211,7 +301,7 @@ export function ThematicMap({ mapId }: { mapId: string }) {
       for (const marker of markers) marker.remove()
       map.remove()
     }
-  }, [definition])
+  }, [definition, activeTimeSlice])
 
   if (!definition) return null
 
@@ -228,6 +318,26 @@ export function ThematicMap({ mapId }: { mapId: string }) {
           <span>地図のデータ・表現・操作性を確認中です。内容は監査により修正される場合があります。</span>
         </div>
       )}
+      {definition.timeSlices?.length ? (
+        <div className="thematic-map__time-control" aria-label="地図の時点">
+          <div className="thematic-map__time-buttons">
+            {definition.timeSlices.map((item) => (
+              <button
+                key={item.id}
+                type="button"
+                className={item.id === activeTimeSlice ? 'is-active' : undefined}
+                aria-pressed={item.id === activeTimeSlice}
+                onClick={() => setSelectedTimeSlice(item.id)}
+              >
+                {item.label}
+              </button>
+            ))}
+          </div>
+          {activeTimeSliceDefinition && (
+            <p className="thematic-map__time-description">{activeTimeSliceDefinition.description}</p>
+          )}
+        </div>
+      ) : null}
       <div
         ref={containerRef}
         className="thematic-map__canvas"
@@ -238,10 +348,16 @@ export function ThematicMap({ mapId }: { mapId: string }) {
         {definition.legend.map((item) => (
           <span key={item.value}>
             <i
-              className={item.kind === 'line' ? 'is-line' : undefined}
+              className={
+                item.kind === 'line'
+                  ? `is-line ${item.lineStyle === 'solid' ? 'is-solid' : ''}`
+                  : item.kind === 'area'
+                    ? 'is-area'
+                    : undefined
+              }
               style={{ '--legend-color': item.color } as CSSProperties}
             >
-              {item.kind === 'line' ? '' : item.marker}
+              {item.kind === 'line' || item.kind === 'area' ? '' : item.marker}
             </i>
             {item.label}
           </span>

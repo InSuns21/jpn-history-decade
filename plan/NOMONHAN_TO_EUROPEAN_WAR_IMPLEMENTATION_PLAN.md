@@ -1,7 +1,7 @@
 # 1939年5月11日から9月15日まで — ノモンハン事件と国際環境急変 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH59 ✅ → A29 ✅ → JH60 ✅ → A30 ✅ no-map → JH61 ✅ → A29時点別再判定 ✅ → JH62 ✅ → A29公開map実装 ✅（Human Visual Audit待ち）
+- **Progress:** phase cut ✅ → JH59 ✅ → A29 ✅ → JH60 ✅ → A30 ✅ no-map → JH61 ✅ → A29時点別再判定 ✅ → JH62 ✅ → A29公開map実装・Human Visual Audit ✅ → 次は Crosscutting publication gate
 - **Created:** 2026-09-30
 - **Scope:** 1939-05-11〜1939-09-15
 - **Primary goal:** 中国での長期戦を継続する日本に、ノモンハンでの対ソ武力衝突、天津租界をめぐる対英対立、米国による日米通商航海条約廃棄通告、独ソ不可侵条約と欧州戦争開始が相次いで加わり、軍事・外交・国内動員の制約が短期間で組み替わる過程を、1941年の日米開戦や「北進／南進」の後世的な二択へ直結させずに説明する
@@ -730,7 +730,7 @@ JH59〜JH62の隣接接続確認、A29/A30のmap audit、Crosscutting publicatio
 - [x] JH61 published
 - [x] A29 JH60/JH61後の時点別再判定 completed（map necessity=high / Data Audit=conditional passを維持。8月下旬図がJH61終点を越えるため公開map実装はJH62後に統合）
 - [x] JH62 published
-- [ ] A29 public map implemented / Data・Style・Human Visual Audit completed（実装済み、Human Visual Audit待ち）
+- [x] A29 public map implemented / Data・Style・Human Visual Audit completed
 - [x] 各年代で直前年代との接続確認完了
 - [ ] Crosscutting publication gate completed
 - [ ] phase-end audit necessity judgment completed

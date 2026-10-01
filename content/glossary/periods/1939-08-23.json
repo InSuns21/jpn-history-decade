@@ -1,0 +1,13 @@
+{
+  "period": "1939-08-23",
+  "termRefs": [
+    {"id":"german-soviet-non-aggression-pact-1939","core":true},
+    {"id":"abe-cabinet-1939","core":true},
+    {"id":"nomonhan-incident-1939","core":true},
+    {"id":"anti-comintern-pact-1936","core":false},
+    {"id":"hiranuma-cabinet-1939","core":false},
+    {"id":"imperial-general-headquarters-1937","core":false},
+    {"id":"national-requisition-order-1939","core":false},
+    {"id":"us-japan-commerce-navigation-treaty-termination-1939","core":false}
+  ]
+}

@@ -55,7 +55,14 @@ export interface MapLegendItem {
   label: string
   marker: string
   color: string
-  kind?: 'point' | 'line'
+  kind?: 'point' | 'line' | 'area'
+  lineStyle?: 'solid' | 'dashed'
+}
+
+export interface MapTimeSliceDefinition {
+  id: string
+  label: string
+  description: string
 }
 
 export interface HistoricalMapDefinition {
@@ -72,6 +79,7 @@ export interface HistoricalMapDefinition {
     center: [number, number]
     zoom: number
   }
+  timeSlices?: MapTimeSliceDefinition[]
   datasets: HistoricalMapDataset[]
   layers: MapLayerDefinition[]
   legend: MapLegendItem[]

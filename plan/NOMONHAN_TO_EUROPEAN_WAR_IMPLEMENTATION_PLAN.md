@@ -1,7 +1,7 @@
 # 1939年5月11日から9月15日まで — ノモンハン事件と国際環境急変 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH59 ✅ → A29 ✅ → JH60 ✅ → A30 ✅ no-map → JH61 ✅ → 次は A29「ノモンハン時点別地図」公開map実装再判定
+- **Progress:** phase cut ✅ → JH59 ✅ → A29 ✅ → JH60 ✅ → A30 ✅ no-map → JH61 ✅ → A29時点別再判定 ✅（公開map実装はJH62後） → 次は JH62「1939-08-23〜09-15」
 - **Created:** 2026-09-30
 - **Scope:** 1939-05-11〜1939-09-15
 - **Primary goal:** 中国での長期戦を継続する日本に、ノモンハンでの対ソ武力衝突、天津租界をめぐる対英対立、米国による日米通商航海条約廃棄通告、独ソ不可侵条約と欧州戦争開始が相次いで加わり、軍事・外交・国内動員の制約が短期間で組み替わる過程を、1941年の日米開戦や「北進／南進」の後世的な二択へ直結させずに説明する
@@ -258,6 +258,35 @@ Data Audit上、双方の国境認識を精密な線として公開するだけ�
 LineString / Polygon / schematic areaを含むため、point-only再利用によるHuman Visual Audit省略規則は使わない。実装時は通常どおり Data / Style / Human Visual Audit を行う。
 
 **この工程ではmap necessity / data-quality judgmentまでを完了し、新規公開map実装は行わない。** 後続JH60/JH61で7〜8月の戦闘段階が追加された時点で、A29を時点別地図として一括実装するほうが重複を避けられるためである。
+
+## JH60 / JH61後の時点別地図再判定 — 2026-10-01
+
+**再判定結果: map necessity=high / Data Audit=conditional passを維持する。ただし公開map実装はJH62後へ送る。**
+
+JH60とJH61の実装により、A29で保留していた7〜8月の戦闘段階を本文側から確認できるようになった。防衛研究所『戦史叢書 第027巻』の別冊付図も、少なくとも次のように時点を分けている。
+
+- 付図第三: 第二十三師団両岸攻撃経過要図（7月1〜5日）
+- 付図第四: 第二十三師団攻撃展開要図（7月23日払暁）
+- 付図第五: 彼我態勢要図（8月13日）
+- 付図第六: 八月下旬における戦闘経過要図
+
+これにより、5月の発端だけでなく、7月の日本軍攻勢、7月下旬〜8月中旬の持久戦、8月20日以後のソ連・モンゴル軍攻勢を**同じ空間の時点差**として示す価値は高いと再確認した。
+
+一方、JH61の終点は8月22日である。戦史叢書の「八月下旬」図はJH61の範囲を越え、JH62で扱う作戦停止・停戦へ続く軍事情勢まで含む。ここで8月下旬のgeometryを先取りすると記事の時間順を崩し、逆に8月20〜22日の数日だけで時系列地図を止めると、直後に構成変更が必要になる。
+
+したがって、**JH61後の再判定工程では地図実装へ着手せず、JH62公開後に5月〜9月15日の最終的な時点構成を確定して一括実装する。** これはA29を不要とする延期ではなく、同一地図を短期間に作り直すことと、後続時点の先取りを避けるための実装順変更である。
+
+### JH62後の実装上限
+
+JH62後も、初回Data Auditで定めた精度上限を緩めない。
+
+- 基底: ハルハ河generalized LineString、主要地点のrepresentative / approximate Point、schematic disputed zone
+- 5月: 国境認識差と初期衝突をapproximate point / areaで示す
+- 7月: 7月1〜5日・7月23日の作戦段階を、史料図の矢印や部隊線をトレースせず、必要最小限のapproximate area / representative pointとして一般化する
+- 8月以後: 8月13日の態勢と8月20日以後の攻勢、9月3日の作戦停止、9月15日の停戦を、JH62本文との時間順を守って扱う
+- exact front line、exact unit position、史料図のvector trace、13km / 20km記述から機械生成した確定境界は引き続き公開しない
+
+時点切替UIを導入する場合も、各時点のgeometry精度が十分に異なることを隠さず、凡例・注記でapproximate / schematicを読者が識別できる設計にする。Polygonまたは新しい時点切替表示を実装する場合は既存point-only地図のVisual Audit再利用例外を使わず、Data / Style / Human Visual Auditを通常どおり行う。
 
 ## A29判定で使用した主要資料
 
@@ -676,12 +705,14 @@ JH59〜JH62の隣接接続確認、A29/A30のmap audit、Crosscutting publicatio
 3. **JH60**「1939-06-14〜07-25」
 4. **A30**「天津租界封鎖と占領下華北の法域空間」map necessity / data-quality judgment
 5. **JH61**「1939-07-26〜08-22」
-6. **JH62**「1939-08-23〜09-15」
-7. **Crosscutting publication gate**
-8. **phase-end audit necessity judgment**
-9. **npm run check**
-10. GitHub Actions CI / Pages deploy 確認
-11. Statusをcompletedへ変更し、`plan_done/`へarchive
+6. **A29時点別再判定** — JH60/JH61の7〜8月情報を反映して公開map実装時期・時点構成を再判定
+7. **JH62**「1939-08-23〜09-15」
+8. **A29公開map実装** — JH62までの時点構成を統合し、Data / Style / Human Visual Auditを実施
+9. **Crosscutting publication gate**
+10. **phase-end audit necessity judgment**
+11. **npm run check**
+12. GitHub Actions CI / Pages deploy 確認
+13. Statusをcompletedへ変更し、`plan_done/`へarchive
 
 ---
 
@@ -697,7 +728,9 @@ JH59〜JH62の隣接接続確認、A29/A30のmap audit、Crosscutting publicatio
 - [x] JH60 published
 - [x] A30 judgment completed（no-map。1939年法域polygonの時点・ライセンス・変換手順を揃えられないため公開しない）
 - [x] JH61 published
+- [x] A29 JH60/JH61後の時点別再判定 completed（map necessity=high / Data Audit=conditional passを維持。8月下旬図がJH61終点を越えるため公開map実装はJH62後に統合）
 - [ ] JH62 published
+- [ ] A29 public map implemented / Data・Style・Human Visual Audit completed
 - [ ] 各年代で直前年代との接続確認完了
 - [ ] Crosscutting publication gate completed
 - [ ] phase-end audit necessity judgment completed

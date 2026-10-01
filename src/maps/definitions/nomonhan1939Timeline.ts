@@ -7,7 +7,7 @@ export const nomonhan1939TimelineMap: HistoricalMapDefinition = {
     'ハルハ河を国境とみる日満側と、河川より東側に国境をみるソ蒙側の認識差がある空間で、戦闘の中心は5月から9月までどう変化したのか。',
   readingNote:
     '時点ボタンで事件の段階を切り替える概略地図。ハルハ河は現在の地理と研究史料を参照して一般化した自然地形の説明線、係争帯は双方の国境認識が重なった東岸側の概略空間を示す模式面で、幅・境界線は縮尺どおりではない。戦線・進撃路・部隊配置は描かない。ノモンハン地点と各戦闘段階の点も代表位置であり、1939年の正確な部隊座標を復元したものではない。背景地図・道路・国境は現代のOpenStreetMapで、1939年の歴史境界ではない。',
-  status: 'draft',
+  status: 'published',
   period: { startYear: 1939, endYear: 1939 },
   initialView: {
     center: [118.64, 47.74],
@@ -443,14 +443,14 @@ export const nomonhan1939TimelineMap: HistoricalMapDefinition = {
   auditState: {
     dataAudit: 'passed',
     styleAudit: 'passed',
-    visualAudit: 'pending-human',
+    visualAudit: 'passed',
     notes: [
       'A29のmap necessityはhigh。国境認識差とハルハ河東岸という空間条件を本文だけより明確に示せる。',
       'Data Auditは公開geometry上限を維持し、ハルハ河一般化線・代表地点・schematic disputed zone・時点別schematic battle area / representative pointに限定した。',
       'ソ蒙側国境認識の「東方約13km / 約20km」という研究上の記述差から精密境界線を生成せず、係争面の幅は縮尺値として使えない模式表現とした。',
       '戦史叢書付図第二〜第六で地形・時点区分を照合したが、付図の河道・作戦矢印・戦線・部隊配置をvector traceしていない。',
       '時点切替で、5月は限定的な初期衝突域、7月は両岸へ広がる大規模戦闘域、8月は大規模攻勢下の主戦場域、9月は戦闘域非表示＋停戦状態へ切り替わる。面積差は定量的な戦場面積を意味しない。',
-      'Polygonと時点切替UIを含むためpoint-only再利用例外は適用せず、今回の戦闘域差修正後にGitHub Pages上でDesktop / Tablet・Touch / Mobile / zoom別Human Visual Auditを行う。',
+      'Polygonと時点切替UIを含むためpoint-only再利用例外は適用しなかった。公開版の時点差（5月→7月→8月→9月）をユーザー確認し、戦闘域の変化が判別できることをHuman Visual Auditでpassedとした。',
     ],
   },
 }

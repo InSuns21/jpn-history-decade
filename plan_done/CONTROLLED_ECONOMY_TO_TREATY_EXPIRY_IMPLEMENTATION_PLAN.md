@@ -1,12 +1,12 @@
 # 1939年9月16日から1940年1月26日まで — 統制経済の深化と日米通商航海条約失効 実装計画
 
-- **Status:** active
-- **Progress:** phase cut ✅ → JH63 ✅ → JH64 ✅ → JH65 ✅ → map necessity review ✅ no-map → Crosscutting publication gate ✅ → S10 extension ✅ → phase-end audit necessity judgment ✅ no-audit → 次は npm run check
+- **Status:** completed
+- **Progress:** phase cut ✅ → JH63 ✅ → JH64 ✅ → JH65 ✅ → map necessity review ✅ no-map → Crosscutting publication gate ✅ → S10 extension ✅ → phase-end audit necessity judgment ✅ no-audit → npm run check ✅ → CI ✅ → Pages ✅ → completed / archived
 - **Created:** 2026-10-02
 - **Scope:** 1939-09-16〜1940-01-26
 - **Primary goal:** ノモンハン停戦後も中国での戦争と欧州戦争への不介入方針を抱える日本で、国家総動員法にもとづく統制が価格・賃金・企業給与・電力・物資・米へ広がり、阿部内閣から米内内閣への交代を経て日米通商航海条約が実際に失効するまでを、「統制強化→対米戦争」という一本道にせず、国内経済・内閣・対中戦争・対米関係の別々の状態遷移として説明する
-- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](./JPN_HISTORY_DECADE_PLAN.md)
-- **Previous phase:** [NOMONHAN_TO_EUROPEAN_WAR_IMPLEMENTATION_PLAN.md](../plan_done/NOMONHAN_TO_EUROPEAN_WAR_IMPLEMENTATION_PLAN.md)
+- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](../plan/JPN_HISTORY_DECADE_PLAN.md)
+- **Previous phase:** [NOMONHAN_TO_EUROPEAN_WAR_IMPLEMENTATION_PLAN.md](./NOMONHAN_TO_EUROPEAN_WAR_IMPLEMENTATION_PLAN.md)
 - **Workspace rules:** [../SYSTEM_PROMPT.md](../SYSTEM_PROMPT.md)
 
 ---
@@ -335,10 +335,10 @@ passing extensionは **S10のみ** とする。次工程でS10を1940年1月26�
 5. **Crosscutting publication gate ✅** — S10のみpassing。S05 / S09 / S02 / 新規横断記事は延長・追加しない
 6. **passing extensionのみ実装 ✅** — S10を1940年1月26日まで延長し、価格・賃金・給与・電力・小作料・総動員物資を「日常の選択条件への統制」という比較軸へ追加
 7. **phase-end audit necessity judgment ✅ no-audit** — 候補6仮説を確認し、既存本文・S10の役割分離で解消済みと判定
-8. **npm run check** — 次工程
-9. GitHub Actions CI / Pages deploy確認
-10. Statusをcompletedへ変更し、plan_done/へarchive
-11. 次フェーズを切り出す
+8. **npm run check ✅** — PR CI #507 / main CI #508 で success
+9. **GitHub Actions CI / Pages deploy ✅** — main CI #508 / Pages #226 success
+10. **Status = completed / plan_done archive ✅**
+11. **次フェーズ切り出し ✅** — `plan/POST_TREATY_TO_PRE_NANJING_GOVERNMENT_IMPLEMENTATION_PLAN.md`
 
 各年代ページをpublishedにする前に直前年代との接続確認を完了し、公開直後に同じ境界の接続監査を繰り返さない。
 
@@ -358,11 +358,11 @@ passing extensionは **S10のみ** とする。次工程でS10を1940年1月26�
 - [x] Crosscutting publication gate completed（S10のみpassing）
 - [x] passing crosscutting extensions implemented（S10を1940-01-26まで延長）
 - [x] phase-end audit necessity judgment completed（独立監査不要）
-- [ ] npm run check green
-- [ ] GitHub Actions CI green
-- [ ] GitHub Pages deploy green
-- [ ] Status = completed
-- [ ] plan_done/へ移動
+- [x] npm run check green
+- [x] GitHub Actions CI green（main CI #508）
+- [x] GitHub Pages deploy green（#226）
+- [x] Status = completed
+- [x] plan_done/へ移動
 
 ---
 
@@ -379,3 +379,10 @@ passing extensionは **S10のみ** とする。次工程でS10を1940年1月26�
 - 汪兆銘新中央政府の準備を、1940年3月30日の政権成立を既定の結果として記述しない
 - 制度が全国適用であることだけを理由に、意味の薄い日本列島一色塗りの地図を作らない
 - フェーズ末に理由のない全体監査を追加しない
+## Completion record — 2026-10-02
+
+- PR #166 を squash mergeし、main commit `c7db1c260de13e5c4f1991b8ed55fd80eaaac83e` へ反映。
+- PR CI #507、main CI #508、GitHub Pages #226 はすべて success。
+- 追加の独立phase-end auditは不要と確定し、1939-09-16〜1940-01-26フェーズをcompletedとする。
+- 次フェーズは1940-01-27〜1940-03-29として切り出し、3月30日の南京国民政府成立を次の制度状態の開始点として別フェーズへ送る。
+

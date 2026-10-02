@@ -591,6 +591,13 @@ function compileCrosscutting(filePath, expectedKind) {
     pushError(relative, 'status must be draft, review, or published')
   }
 
+  const presentation = frontmatter.presentation
+  if (presentation !== undefined && presentation !== 'source') {
+    pushError(relative, 'presentation must be source when present')
+  }
+  const documentUrl = presentation === 'source' ? requireString(frontmatter, 'documentUrl', relative) : undefined
+  const documentTitle = presentation === 'source' ? requireString(frontmatter, 'documentTitle', relative) : undefined
+
   const relatedPeriods = requireStringArray(frontmatter, 'relatedPeriods', relative)
   const maps = requireStringArray(frontmatter, 'maps', relative)
   for (const mapId of maps) {
@@ -607,6 +614,7 @@ function compileCrosscutting(filePath, expectedKind) {
     id,
     routeKey,
     kind,
+    ...(presentation ? { presentation, documentUrl, documentTitle } : {}),
     periodLabel: requireString(frontmatter, 'periodLabel', relative),
     status,
     title: requireString(frontmatter, 'title', relative),

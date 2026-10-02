@@ -2320,3 +2320,29 @@ button:focus-visible {
     white-space: nowrap;
   }
 }
+
+
+/* Home title lockup and late-prewar hero framing */
+.home-hero h1 {
+  font-size: clamp(2.8rem, 5.2vw, 4.8rem);
+  white-space: nowrap;
+}
+
+.home-hero h1 span {
+  white-space: nowrap;
+}
+
+.historical-figure--hero .historical-figure__image-link {
+  background: #e9e6de;
+}
+
+.historical-figure--hero img {
+  object-fit: contain;
+  background: #e9e6de;
+}
+
+@media (max-width: 640px) {
+  .home-hero h1 {
+    font-size: clamp(2.45rem, 12vw, 3.6rem);
+  }
+}

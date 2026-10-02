@@ -10,9 +10,9 @@ export function HomeTemplate({ periods, crosscutting }: HomeTemplateProps) {
         <div className="page-width home-hero__grid">
           <div>
             <p className="eyebrow">日本史・1800年以降</p>
-            <h1>1800年から始める日本史</h1>
+            <h1>近現代史24</h1>
             <p className="home-hero__lead">
-              1800年から現代までの日本史を、政治を軸に、経済・社会・外交・技術・文化・地理を結びつけながら年代ごとにたどります。
+              1800年から始める日本史。政治を軸に、経済・社会・外交・技術・文化・地理を結びつけながら、1800年から現代までを年代ごとにたどります。
             </p>
             {firstPeriod && (
               <div className="hero-actions">

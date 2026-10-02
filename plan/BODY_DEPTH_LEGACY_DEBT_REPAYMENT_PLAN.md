@@ -27,7 +27,7 @@ Created: 2026-10-03
 | 02A | 1850–1868 | 5 | completed |
 | 02B | 1872–1886 | 5 | completed |
 | 03 | 1912–1923 | 3 | completed |
-| 04A | 1931–1933 | 5 | in_progress |
+| 04A | 1931–1933 | 5 | completed |
 | 04B | 1934–1936 | 4 | pending |
 | 05 | 1937 | 12 | pending |
 | 06 | 1938 | 10 | pending |
@@ -136,8 +136,8 @@ Created: 2026-10-03
 - [x] 各ページを4,500字以上または理由付き正式例外へ移行
 - [x] 監査済み5ページを baseline から削除
 - [x] 1926–30→1931→1931-09→1932→1932-09→1933-06→1934-07 の接続に矛盾を作らない
-- [ ] GitHub Actions green
-- [ ] Pages deploy green
+- [x] GitHub Actions green
+- [x] Pages deploy green
 
 ## 全体 Definition of Done
 

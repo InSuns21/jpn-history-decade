@@ -83,6 +83,9 @@ export interface CrosscuttingPageData {
   id: string
   routeKey: string
   kind: CrosscuttingKind
+  presentation?: 'source'
+  documentUrl?: string
+  documentTitle?: string
   periodLabel: string
   status: ContentStatus
   title: string

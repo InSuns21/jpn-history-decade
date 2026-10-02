@@ -2030,3 +2030,51 @@ button:focus-visible {
     animation-iteration-count: 1 !important;
   }
 }
+
+
+/* Period-page historical figures */
+.button.is-disabled {
+  opacity: .48;
+  cursor: not-allowed;
+  pointer-events: none;
+  border-color: var(--line);
+  color: var(--muted);
+  background: rgba(255, 253, 248, .55);
+}
+
+.period-figures-section {
+  padding-bottom: 58px;
+}
+
+.period-figure-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 16px;
+  max-width: 820px;
+}
+
+.historical-figure--period {
+  box-shadow: none;
+}
+
+.historical-figure--period .historical-figure__image-link {
+  background:
+    linear-gradient(135deg, rgba(238, 233, 223, .65), rgba(255, 253, 248, .9));
+}
+
+.historical-figure--period img {
+  max-height: 560px;
+  object-fit: contain;
+  background: var(--paper-deep);
+}
+
+@media (max-width: 640px) {
+  .period-figure-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .historical-figure--period img {
+    max-height: none;
+  }
+}

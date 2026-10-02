@@ -1,7 +1,7 @@
 # 1940年1月27日から3月29日まで — 無条約状態の定着・総動員統制・議会批判 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH66 ✅ → 反軍演説・史料読解ページ ✅ → JH67 ✅ → map necessity review ✅ no-map → Crosscutting publication gate ✅ → S05 / S10 extension ✅ → phase-end audit necessity judgment ✅ no-audit → 次は npm run check
+- **Progress:** phase cut ✅ → JH66 ✅ → 反軍演説・史料読解ページ ✅ → JH67 ✅ → map necessity review ✅ no-map → Crosscutting publication gate ✅ → S05 / S10 extension ✅ → phase-end audit necessity judgment ✅ no-audit → npm run check ✅ → 次は GitHub Actions CI / Pages deploy確認
 - **Created:** 2026-10-02
 - **Scope:** 1940-01-27〜1940-03-29
 - **Primary goal:** 日米通商航海条約失効後の無条約状態が直ちに全面禁輸や開戦へ転化しなかったこと、総動員統制が工場・土地・海運・米糠流通へ拡張したこと、斎藤隆夫の反軍演説から除名までに議会内の戦争処理批判とその制度的限界が表面化したことを、1940年3月30日の南京国民政府成立を先取りせず説明する
@@ -264,8 +264,8 @@ JH66ではこの問いが実際に次段階へ進んだ。
 4. **Crosscutting publication gate ✅** — S05 / S10 passing、S09 / S02 hold、新規横断記事なし
 5. **S05 / S10 extension ✅** — S05は代表質問→速記録削除→懲罰→除名という院内制裁回路、S10は工場・土地・海運という資産・能力の利用権への統制拡張として1940年3月29日まで延長
 6. **phase-end audit necessity judgment ✅ no-audit** — 候補6仮説を確認し、既存本文・史料ページ・S05/S10の役割分離で解消済みと判定
-7. **npm run check** — 次工程
-8. GitHub Actions CI / Pages deploy確認
+7. **npm run check ✅** — PR #173 のCIで同一コマンドを実行しgreen
+8. GitHub Actions CI / Pages deploy確認 — 次工程
 9. Status = completed / plan_done archive
 10. 次フェーズ切り出し（1940-03-30〜）
 
@@ -287,7 +287,7 @@ JH66ではこの問いが実際に次段階へ進んだ。
 - [x] Crosscutting publication gate completed（S05 / S10 passing）
 - [x] passing crosscutting extensions implemented
 - [x] phase-end audit necessity judgment completed（独立監査不要）
-- [ ] npm run check green
+- [x] npm run check green
 - [ ] GitHub Actions CI green
 - [ ] GitHub Pages deploy green
 - [ ] Status = completed

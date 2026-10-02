@@ -1,7 +1,7 @@
 # 1940年3月30日から7月21日まで — 南京国民政府成立・欧州戦局急変・新体制運動・米内内閣崩壊 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH68 ✅ → A31 ✅ no-map → JH69 ✅ → JH70 ✅ → Crosscutting publication gate ✅ → S05 / S09 / S10 extensions ✅ → phase-end audit necessity judgment ✅ no-audit → 次は npm run check
+- **Progress:** phase cut ✅ → JH68 ✅ → A31 ✅ no-map → JH69 ✅ → JH70 ✅ → Crosscutting publication gate ✅ → S05 / S09 / S10 extensions ✅ → phase-end audit necessity judgment ✅ no-audit → npm run check ✅ → PR CI ✅ → 次は main CI / Pages
 - **Created:** 2026-10-02
 - **Scope:** 1940-03-30〜1940-07-21
 - **Primary goal:** 汪兆銘を首班とする南京国民政府の成立を日本政府による正式承認と分け、欧州戦局の急変が日本の南方政策・援蒋ルート遮断・国内政治へ与えた新しい制約を、直ちに「南進決定→対英米戦争」へ圧縮せず追う。同時に、近衛文麿の新体制運動と政党解党の開始、米内内閣総辞職までを制度状態の変化として説明し、7月22日の第2次近衛内閣成立とその後の基本国策要綱は次フェーズへ送る
@@ -377,8 +377,8 @@ JH68〜JH70実装後、年代記事とは異なる比較軸が増えた場合だ
 - [x] Crosscutting publication gate completed（S05 / S09 / S10 extend、S02 hold、新規記事なし）
 - [x] passing crosscutting extensions implemented（S05 / S09 / S10）
 - [x] phase-end audit necessity judgment completed（no-audit）
-- [ ] npm run check green
-- [ ] GitHub Actions CI green
+- [x] npm run check green（PR CI #569）
+- [x] GitHub Actions PR CI green（#569）
 - [ ] GitHub Pages deploy green
 - [ ] Status = completed
 - [ ] plan_done/へ移動

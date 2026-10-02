@@ -1,7 +1,7 @@
 # 1939年9月16日から1940年1月26日まで — 統制経済の深化と日米通商航海条約失効 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH63 ✅ → JH64 ✅ → JH65 ✅ → map necessity review ✅ no-map → Crosscutting publication gate ✅ → 次は S10 extension
+- **Progress:** phase cut ✅ → JH63 ✅ → JH64 ✅ → JH65 ✅ → map necessity review ✅ no-map → Crosscutting publication gate ✅ → S10 extension ✅ → 次は phase-end audit necessity judgment
 - **Created:** 2026-10-02
 - **Scope:** 1939-09-16〜1940-01-26
 - **Primary goal:** ノモンハン停戦後も中国での戦争と欧州戦争への不介入方針を抱える日本で、国家総動員法にもとづく統制が価格・賃金・企業給与・電力・物資・米へ広がり、阿部内閣から米内内閣への交代を経て日米通商航海条約が実際に失効するまでを、「統制強化→対米戦争」という一本道にせず、国内経済・内閣・対中戦争・対米関係の別々の状態遷移として説明する
@@ -320,8 +320,8 @@ passing extensionは **S10のみ** とする。次工程でS10を1940年1月26�
 3. **JH65**「1940-01-01〜01-26」
 4. **map necessity review ✅ no-map** — 実装後も空間理解は中心ではなく、新規Axx地図は追加しない
 5. **Crosscutting publication gate ✅** — S10のみpassing。S05 / S09 / S02 / 新規横断記事は延長・追加しない
-6. **passing extensionのみ実装** — 次はS10を1940年1月26日まで延長
-7. **phase-end audit necessity judgment**
+6. **passing extensionのみ実装 ✅** — S10を1940年1月26日まで延長し、価格・賃金・給与・電力・小作料・総動員物資を「日常の選択条件への統制」という比較軸へ追加
+7. **phase-end audit necessity judgment** — 次工程
 8. **npm run check**
 9. GitHub Actions CI / Pages deploy確認
 10. Statusをcompletedへ変更し、plan_done/へarchive
@@ -343,7 +343,7 @@ passing extensionは **S10のみ** とする。次工程でS10を1940年1月26�
 - [x] JH65 published / JH64との隣接接続確認完了
 - [x] map necessity review completed（no-map）
 - [x] Crosscutting publication gate completed（S10のみpassing）
-- [ ] passing crosscutting extensions implemented
+- [x] passing crosscutting extensions implemented（S10を1940-01-26まで延長）
 - [ ] phase-end audit necessity judgment completed
 - [ ] npm run check green
 - [ ] GitHub Actions CI green

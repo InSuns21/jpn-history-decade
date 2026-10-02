@@ -14,7 +14,7 @@
 
 - [CONTROLLED_ECONOMY_TO_TREATY_EXPIRY_IMPLEMENTATION_PLAN.md](./CONTROLLED_ECONOMY_TO_TREATY_EXPIRY_IMPLEMENTATION_PLAN.md)
   - Scope: 1939-09-16〜1940-01-26
-  - Progress: phase cut ✅ → JH63 ✅ → JH64 ✅ → JH65 ✅ → map necessity review ✅ no-map → Crosscutting publication gate ✅ → 次は S10 extension
+  - Progress: phase cut ✅ → JH63 ✅ → JH64 ✅ → JH65 ✅ → map necessity review ✅ no-map → Crosscutting publication gate ✅ → S10 extension ✅ → 次は phase-end audit necessity judgment
 
 直前の1939年5月11日〜9月15日フェーズは [NOMONHAN_TO_EUROPEAN_WAR_IMPLEMENTATION_PLAN.md](../plan_done/NOMONHAN_TO_EUROPEAN_WAR_IMPLEMENTATION_PLAN.md) として完了・archive済み。
 

@@ -12,6 +12,19 @@ function commonsFigure(
   }
 }
 
+function commonsDocumentFigure(
+  fileName: string,
+  meta: Omit<HistoricalFigureDefinition, 'imageUrl' | 'sourceUrl'>,
+): HistoricalFigureDefinition {
+  const encoded = encodeURIComponent(fileName)
+  return {
+    ...meta,
+    imageUrl:
+      'https://commons.wikimedia.org/wiki/Special:Redirect/file/' + encoded + '?page=1&width=1600',
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:' + encoded,
+  }
+}
+
 export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[]> = {
   '1800': [
     commonsFigure('Ukie Edo nihonbashi odawarachō sakana ichi no su LCCN2008660149.jpg', {
@@ -576,12 +589,158 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
       license: 'Public Domain',
     }),
   ],
-  '1940-06-29': [
+
+  '1939-01-05': [
+    commonsFigure('Kiichirō Hiranuma Cabinet 19390105.jpg', {
+      alt: '1939年1月5日に成立した平沼騏一郎内閣の閣僚集合写真',
+      title: '平沼騏一郎内閣',
+      dateLabel: '1939年1月5日',
+      credit: '撮影者不詳／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1939-02-10': [
+    commonsFigure('Maizuru 1st SNLF, Hainan 1939.jpg', {
+      alt: '1939年、海南島攻略を前に訓示を受ける舞鶴第一海軍特別陸戦隊の兵士',
+      title: '海南島攻略前の舞鶴第一特別陸戦隊',
+      dateLabel: '1939年',
+      credit: '日本海軍／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1939-05-11': [
+    commonsFigure('Japanese soldiers battling with the united army of USSR and Mongolia in the Nomonhan Incident - 1939.png', {
+      alt: '1939年、ノモンハン事件でソ連・モンゴル軍と交戦する日本軍兵士を撮影した写真',
+      title: 'ノモンハン事件',
+      dateLabel: '1939年',
+      credit: '撮影者不詳／毎日新聞社資料・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1939-06-14': [
+    commonsFigure('Tientsin. 1939 Japanese blockade.jpg', {
+      alt: '1939年6月、日本軍が天津の英仏租界周囲に設けた有刺鉄線の内側にいる英軍兵士',
+      title: '天津英仏租界の封鎖',
+      dateLabel: '1939年6月',
+      credit: 'Tientsin press photo／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+    commonsFigure('Battles of Khalkhin Gol-Anti Aircraft Cannons-JapaneseArmy-1939-06-30.png', {
+      alt: '1939年6月30日、ノモンハン事件で対空砲を配置する日本軍部隊を撮影した写真',
+      title: 'ノモンハンの日本軍対空陣地',
+      dateLabel: '1939年6月30日',
+      credit: '撮影者不詳／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1939-07-26': [
+    commonsFigure('Secretary of State Hull arrives at White House for final conference on neutrality message. Washington, D.C., July 14. Secretary of State Cordell Hull entering a side door of the White House LCCN2016875949.jpg', {
+      alt: '1939年7月、ホワイトハウスへ入る米国務長官コーデル・ハルを撮影した写真',
+      title: '米国務長官コーデル・ハル',
+      dateLabel: '1939年7月14日',
+      credit: 'Harris & Ewing／Library of Congress・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+    commonsFigure('Khalkhin Gol Captured Japanese soldiers 1939.jpg', {
+      alt: '1939年8月、ノモンハン事件で捕虜となった日本軍兵士を撮影した写真',
+      title: 'ノモンハンで捕虜となった日本軍兵士',
+      dateLabel: '1939年8月',
+      credit: 'Viktor Temin／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1939-08-23': [
+    commonsFigure('Nobuyuki Abe Cabinet 19390830.jpg', {
+      alt: '1939年8月30日に成立した阿部信行内閣の閣僚集合写真',
+      title: '阿部信行内閣',
+      dateLabel: '1939年8月30日',
+      credit: '撮影者不詳／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1939-09-16': [
+    commonsFigure('Negotiation-CeaseFire-2-Battles of Khalkhin Gol-1939-09-20.png', {
+      alt: '1939年9月20日、ノモンハン事件の停戦後に行われた現地交渉を撮影した写真',
+      title: 'ノモンハン停戦後の現地交渉',
+      dateLabel: '1939年9月20日',
+      credit: '撮影者不詳／毎日新聞社資料・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1939-10-18': [
+    commonsDocumentFigure('NDL1267879 価格等統制令・軍需工場事業場検査令解説.pdf', {
+      alt: '1939年の価格等統制令・軍需工場事業場検査令の解説書表紙',
+      title: '『価格等統制令・軍需工場事業場検査令解説』',
+      dateLabel: '1939年',
+      credit: '大阪銀行協会／国立国会図書館・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1940-01-01': [
     commonsFigure('Mitsumasa Yonai Cabinet 19400116.jpg', {
-      alt: '1940年1月16日の米内光政内閣の閣僚集合写真',
-      title: '米内内閣',
+      alt: '1940年1月16日に成立した米内光政内閣の閣僚集合写真',
+      title: '米内光政内閣',
       dateLabel: '1940年1月16日',
       credit: '『新生日本外交百年史』／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1940-01-27': [
+    commonsFigure('Saito Takao 1937.jpg', {
+      alt: '1937年の衆議院要覧に掲載された斎藤隆夫の肖像写真',
+      title: '斎藤隆夫',
+      dateLabel: '1937年',
+      credit: '衆議院事務局『衆議院要覧』／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+    commonsFigure('Prime Minister Mitsumasa Yonai cropped.jpg', {
+      alt: '1940年前半の米内光政首相を撮影した肖像写真',
+      title: '米内光政首相',
+      dateLabel: '1940年前半',
+      credit: '撮影者不詳／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1940-03-07': [
+    commonsFigure('Expulsion of Takao Saito.JPG', {
+      alt: '1940年、斎藤隆夫の衆議院議員除名をめぐる場面を撮影した写真',
+      title: '斎藤隆夫の除名',
+      dateLabel: '1940年',
+      credit: '撮影者不詳／毎日新聞社資料・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1940-03-30': [
+    commonsFigure('Establishment of Wang Jingwei Regime.jpg', {
+      alt: '1940年3月30日、南京で国民政府の還都を宣言する汪兆銘を撮影した写真',
+      title: '南京国民政府の成立',
+      dateLabel: '1940年3月30日',
+      credit: '撮影者不詳／中国第二歴史档案館・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1940-05-10': [
+    commonsFigure('Fumimaro Konoe 6.jpg', {
+      alt: '1939年4月に撮影された近衛文麿の肖像写真',
+      title: '近衛文麿',
+      dateLabel: '1939年4月',
+      credit: 'F. L. Hamilton／内閣情報部『写真週報』・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1940-06-29': [
+    commonsDocumentFigure("NDL11919132 Def. Doc. No. 54- The international situation and Japan's position - Address of the Foreign Minister, Mr. Hachiro ARITA, delivered over the air on June 29, 1940.pdf", {
+      alt: '1940年6月29日に放送された有田八郎外相「国際情勢ト帝国ノ立場」の英訳文書表紙',
+      title: '有田外相「国際情勢ト帝国ノ立場」',
+      dateLabel: '1940年6月29日',
+      credit: '外務省関係文書／国立国会図書館・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+    commonsFigure('Prime Minister Mitsumasa Yonai cropped.jpg', {
+      alt: '1940年前半の米内光政首相を撮影した肖像写真',
+      title: '退陣へ向かう米内光政内閣',
+      dateLabel: '1940年前半',
+      credit: '撮影者不詳／Wikimedia Commons',
       license: 'Public Domain',
     }),
   ],

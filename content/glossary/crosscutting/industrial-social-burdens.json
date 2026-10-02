@@ -132,6 +132,30 @@
     {
       "id": "company-profit-dividend-financing-order-1939",
       "core": false
+    },
+    {
+      "id": "price-control-order-1939",
+      "core": true
+    },
+    {
+      "id": "temporary-wage-measures-order-1939",
+      "core": true
+    },
+    {
+      "id": "company-staff-salary-temporary-measures-order-1939",
+      "core": false
+    },
+    {
+      "id": "electric-power-adjustment-order-1939",
+      "core": true
+    },
+    {
+      "id": "tenant-rent-control-order-1939",
+      "core": true
+    },
+    {
+      "id": "mobilization-material-use-requisition-order-1939",
+      "core": true
     }
   ]
 }

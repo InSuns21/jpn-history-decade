@@ -13,6 +13,72 @@ function commonsFigure(
 }
 
 export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[]> = {
+  '1800': [
+    commonsFigure('Ukie Edo nihonbashi odawarachō sakana ichi no su LCCN2008660149.jpg', {
+      alt: '江戸日本橋の小田原町魚市場と往来を描いた18世紀末の浮世絵',
+      title: '日本橋の魚市場',
+      dateLabel: '1796年',
+      credit: '歌川豊春／米国議会図書館・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1810': [
+    commonsFigure('Map of Karafuto and the Amur estuary by Mamiya Rinzo (1810)／間宮林蔵『黒竜江中州并天度』（文化7年）.jpg', {
+      alt: '間宮林蔵が樺太とアムール河口を描いた1810年の地図',
+      title: '間宮林蔵の樺太・アムール河口図',
+      dateLabel: '1810年',
+      credit: '間宮林蔵／北海道大学北方資料データベース・Wikimedia Commons',
+      license: 'CC0',
+    }),
+    commonsFigure('Capture of Russians and Vasily Golovnin by Tokugawa c1811 Part 7.png', {
+      alt: '1811年のゴローニン事件で、ロシア人一行が捕らえられ箱館へ送られる様子を描いた絵巻',
+      title: 'ゴローニン事件を描いた絵巻',
+      dateLabel: '1811年ごろ',
+      credit: '作者不詳／早稲田大学図書館・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1820': [
+    commonsFigure('Kawahara Nagasaki.jpg', {
+      alt: '1820年ごろ、長崎港と出島周辺を描いた川原慶賀の絵',
+      title: '長崎港と出島',
+      dateLabel: '1820年ごろ',
+      credit: '川原慶賀／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+    commonsFigure('VonSiebold1826.jpg', {
+      alt: '1826年に日本で描かれたフィリップ・フランツ・フォン・シーボルトの肖像',
+      title: 'シーボルト',
+      dateLabel: '1826年',
+      credit: '作者不詳／国立国会図書館・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1830': [
+    commonsFigure('天保の大飢饉.jpg', {
+      alt: '天保の飢饉で御救小屋に収容され救済を受ける人々を描いた渡辺崋山の図',
+      title: '天保の飢饉と御救小屋',
+      dateLabel: '1838年',
+      credit: '渡辺崋山／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+    commonsFigure('MorrisonShip.jpg', {
+      alt: '1837年に日本へ来航したモリソン号を描いた絵',
+      title: 'モリソン号',
+      dateLabel: '19世紀',
+      credit: '作者不詳／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1840': [
+    commonsFigure('Opium War.jpg', {
+      alt: '1840年、イギリスと清のアヘン戦争を風刺したフランスの挿絵',
+      title: 'アヘン戦争を描いた風刺画',
+      dateLabel: '1840年',
+      credit: 'J. J. Grandville／Le Charivari・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
   '1850': [
     homeFigures[1],
   ],

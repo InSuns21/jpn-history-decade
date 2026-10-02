@@ -381,7 +381,7 @@ sources:
     title: "「昭和、その動乱の時代―議会政治の危機から再生へ―」特別展"
     institution: "衆議院"
     url: "https://www.shugiin.go.jp/internet/itdb_annai.nsf/html/statics/kensei/kensei-tokubetsuH24.htm"
-maps: []  - id: "ndl-konoe-new-party-1940"
+  - id: "ndl-konoe-new-party-1940"
     type: "official"
     title: "4-11 近衛新党"
     institution: "国立国会図書館 史料にみる日本の近代"
@@ -402,6 +402,7 @@ maps: []  - id: "ndl-konoe-new-party-1940"
     institution: "アジア歴史資料センター"
     url: "https://www.jacar.go.jp/learning/term.html?uid=Y50C300078"
 
+maps: []
 ---
 
 ## 政治参加を「参加できたか」だけで測らない {#comparison-axes}

@@ -30,7 +30,7 @@ Created: 2026-10-03
 | 04A | 1931–1933 | 5 | completed |
 | 04B | 1934–1936 | 4 | completed |
 | 05A | 1937-01〜07-26 | 4 | in_progress |
-| 05B | 1937-07-27〜09-? | 4 | pending |
+| 05B | 1937-07-27〜10-25 | 4 | pending |
 | 05C | 1937-10〜12 | 4 | pending |
 | 06 | 1938 | 10 | pending |
 | 07 | 1939 | 8 | pending |

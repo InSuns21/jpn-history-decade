@@ -1,11 +1,11 @@
 # 1939年5月11日から9月15日まで — ノモンハン事件と国際環境急変 実装計画
 
-- **Status:** active
-- **Progress:** phase cut ✅ → JH59 ✅ → A29 ✅ → JH60 ✅ → A30 ✅ no-map → JH61 ✅ → A29時点別再判定 ✅ → JH62 ✅ → A29公開map実装・Human Visual Audit ✅ → Crosscutting publication gate ✅ → phase-end audit necessity judgment ✅（独立監査不要） → 次は final CI / phase completion
+- **Status:** completed
+- **Progress:** phase cut ✅ → JH59 ✅ → A29 ✅ → JH60 ✅ → A30 ✅ no-map → JH61 ✅ → A29時点別再判定 ✅ → JH62 ✅ → A29公開map実装・Human Visual Audit ✅ → Crosscutting publication gate ✅ → phase-end audit necessity judgment ✅（独立監査不要） → CI #492 ✅ → Pages #219 ✅ → completed
 - **Created:** 2026-09-30
 - **Scope:** 1939-05-11〜1939-09-15
 - **Primary goal:** 中国での長期戦を継続する日本に、ノモンハンでの対ソ武力衝突、天津租界をめぐる対英対立、米国による日米通商航海条約廃棄通告、独ソ不可侵条約と欧州戦争開始が相次いで加わり、軍事・外交・国内動員の制約が短期間で組み替わる過程を、1941年の日米開戦や「北進／南進」の後世的な二択へ直結させずに説明する
-- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](./JPN_HISTORY_DECADE_PLAN.md)
+- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](../plan/JPN_HISTORY_DECADE_PLAN.md)
 - **Previous phase:** [EAST_ASIA_NEW_ORDER_TO_PRE_NOMONHAN_IMPLEMENTATION_PLAN.md](../plan_done/EAST_ASIA_NEW_ORDER_TO_PRE_NOMONHAN_IMPLEMENTATION_PLAN.md)
 - **Workspace rules:** [../SYSTEM_PROMPT.md](../SYSTEM_PROMPT.md)
 
@@ -754,9 +754,13 @@ JH59〜JH62の隣接接続確認、A29/A30のmap audit、Crosscutting publicatio
 - [x] 各年代で直前年代との接続確認完了
 - [x] Crosscutting publication gate completed
 - [x] phase-end audit necessity judgment completed（独立監査不要）
-- [ ] `npm run check` green
-- [ ] GitHub Actions CI green
-- [ ] GitHub Pages deploy green
-- [ ] Status = completed
-- [ ] `plan_done/NOMONHAN_TO_EUROPEAN_WAR_IMPLEMENTATION_PLAN.md` へarchive
-- [ ] `docs/IMPLEMENTATION_STATUS.md` と `plan/README.md` を次フェーズへ更新
+- [x] `npm run check` green（main CI #492 の `Validate content, lint, typecheck, and build` success）
+- [x] GitHub Actions CI green（main push CI #492 success）
+- [x] GitHub Pages deploy green（Pages #219 success）
+- [x] Status = completed
+- [x] `plan_done/NOMONHAN_TO_EUROPEAN_WAR_IMPLEMENTATION_PLAN.md` へarchive
+- [x] `docs/IMPLEMENTATION_STATUS.md` と `plan/README.md` を次フェーズへ更新
+
+---
+
+このフェーズは完了。次は **1939年9月16日〜1940年1月26日** を `CONTROLLED_ECONOMY_TO_TREATY_EXPIRY_IMPLEMENTATION_PLAN.md` で扱う。

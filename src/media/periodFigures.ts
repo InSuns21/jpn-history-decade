@@ -362,6 +362,122 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
       license: 'Public Domain',
     }),
   ],
+
+  '1937-01': [
+    commonsFigure('Senjūrō Hayashi Cabinet 19370202.jpg', {
+      alt: '1937年2月2日に成立した林銑十郎内閣の閣僚集合写真',
+      title: '林銑十郎内閣',
+      dateLabel: '1937年2月2日',
+      credit: '撮影者不詳／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1937-06': [
+    commonsFigure('Fumimaro Konoe Cabinet 19370604.jpg', {
+      alt: '1937年6月に成立した第一次近衛文麿内閣の閣僚集合写真',
+      title: '第一次近衛内閣',
+      dateLabel: '1937年6月',
+      credit: '撮影者不詳／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1937-07-07': [
+    commonsFigure('Japanese China Garrison Army 1937 Jul.jpg', {
+      alt: '1937年7月上旬の中国駐屯軍の兵力配置を示した図',
+      title: '盧溝橋事件直前の中国駐屯軍配置',
+      dateLabel: '1937年7月上旬',
+      credit: 'みや東亞／戦史叢書『支那事変陸軍作戦1』を基に作図・Wikimedia Commons',
+      license: 'CC BY 3.0',
+    }),
+  ],
+  '1937-07-11': [
+    commonsFigure('Army 29 Fighting 1937.jpg', {
+      alt: '1937年、華北で行動する中国第29軍の兵士を撮影した写真',
+      title: '中国第29軍',
+      dateLabel: '1937年',
+      credit: '撮影者不詳／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1937-07-27': [
+    commonsFigure('Street battle in Tianjin - July 1937.png', {
+      alt: '1937年7月、天津市内で行われた戦闘を撮影した写真',
+      title: '天津市街の戦闘',
+      dateLabel: '1937年7月',
+      credit: '撮影者不詳／『未公開写真に見る日中戦争』・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1937-08-13': [
+    commonsFigure('Japanese Special Naval Landing Forces in Battle of Shanghai 1937.jpg', {
+      alt: '1937年8月、上海の市街地で前進準備をする日本海軍特別陸戦隊を撮影した写真',
+      title: '上海の海軍特別陸戦隊',
+      dateLabel: '1937年8月',
+      credit: '海軍省・撮影者不詳／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1937-08-16': [
+    commonsFigure('Citizens of Shanghai fleeing into Shanghai International Settlement - Battle of Shanghai (1937).png', {
+      alt: '1937年9月、戦闘を避けて上海共同租界へ移動する市民を撮影した写真',
+      title: '上海共同租界へ避難する市民',
+      dateLabel: '1937年9月',
+      credit: '撮影者不詳／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1937-09-11': [
+    commonsFigure('Japanese naval infantry near Sanyili, Shanghai.jpg', {
+      alt: '1937年10月6日、上海閘北の三義里付近で戦闘する日本海軍陸戦隊を撮影した写真',
+      title: '長期化する上海市街戦',
+      dateLabel: '1937年10月6日',
+      credit: '河村好雄／満洲日日新聞社・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1937-10-26': [
+    commonsFigure('Japanese soldiers landing in Hangzhou Bay 1937.jpg', {
+      alt: '1937年11月、杭州湾へ上陸する日本軍兵士を撮影した写真',
+      title: '杭州湾上陸',
+      dateLabel: '1937年11月',
+      credit: '撮影者不詳／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1937-11-13': [
+    commonsFigure('Japanese landing at Baimaokou, November 1937.png', {
+      alt: '1937年11月、上海北方の白茆口へ上陸する日本陸軍第16師団を撮影した写真',
+      title: '白茆口へ上陸する第16師団',
+      dateLabel: '1937年11月',
+      credit: '朝日新聞・撮影者不詳／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1937-12-01': [
+    commonsFigure('Nanjinggatebattle.jpg', {
+      alt: '1937年12月12日、南京城壁の門を攻撃する日本軍兵士と九四式軽装甲車を撮影した写真',
+      title: '南京城壁への攻撃',
+      dateLabel: '1937年12月12日',
+      credit: '撮影者不詳／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+    commonsFigure('USS Panay (PR-5) sinking in the Yangtze River on 12 December 1937 (NH 50805).jpg', {
+      alt: '1937年12月12日、日本海軍機の攻撃を受けて長江で沈没する米海軍砲艦パネー号',
+      title: 'パネー号事件',
+      dateLabel: '1937年12月12日',
+      credit: 'U.S. Navy／Naval History and Heritage Command・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1937-12-14': [
+    commonsFigure('Nanking Safety Zone street.PNG', {
+      alt: '1937年12月27日、南京安全区内の通りを行き交う人々を撮影した写真',
+      title: '南京安全区の通り',
+      dateLabel: '1937年12月27日',
+      credit: '『アサヒグラフ』掲載写真／朝日新聞・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
   '1940-06-29': [
     commonsFigure('Mitsumasa Yonai Cabinet 19400116.jpg', {
       alt: '1940年1月16日の米内光政内閣の閣僚集合写真',

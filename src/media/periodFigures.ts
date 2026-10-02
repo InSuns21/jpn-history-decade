@@ -14,13 +14,13 @@ function commonsFigure(
 
 function commonsDocumentFigure(
   fileName: string,
+  previewUrl: string,
   meta: Omit<HistoricalFigureDefinition, 'imageUrl' | 'sourceUrl'>,
 ): HistoricalFigureDefinition {
   const encoded = encodeURIComponent(fileName)
   return {
     ...meta,
-    imageUrl:
-      'https://commons.wikimedia.org/wiki/Special:Redirect/file/' + encoded + '?page=1&width=1600',
+    imageUrl: previewUrl,
     sourceUrl: 'https://commons.wikimedia.org/wiki/File:' + encoded,
   }
 }
@@ -668,13 +668,17 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     }),
   ],
   '1939-10-18': [
-    commonsDocumentFigure('NDL1267879 価格等統制令・軍需工場事業場検査令解説.pdf', {
+    commonsDocumentFigure(
+      'NDL1267879 価格等統制令・軍需工場事業場検査令解説.pdf',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/NDL1267879_%E4%BE%A1%E6%A0%BC%E7%AD%89%E7%B5%B1%E5%88%B6%E4%BB%A4%E3%83%BB%E8%BB%8D%E9%9C%80%E5%B7%A5%E5%A0%B4%E4%BA%8B%E6%A5%AD%E5%A0%B4%E6%A4%9C%E6%9F%BB%E4%BB%A4%E8%A7%A3%E8%AA%AC.pdf/page1-1280px-NDL1267879_%E4%BE%A1%E6%A0%BC%E7%AD%89%E7%B5%B1%E5%88%B6%E4%BB%A4%E3%83%BB%E8%BB%8D%E9%9C%80%E5%B7%A5%E5%A0%B4%E4%BA%8B%E6%A5%AD%E5%A0%B4%E6%A4%9C%E6%9F%BB%E4%BB%A4%E8%A7%A3%E8%AA%AC.pdf.jpg',
+      {
       alt: '1939年の価格等統制令・軍需工場事業場検査令の解説書表紙',
       title: '『価格等統制令・軍需工場事業場検査令解説』',
       dateLabel: '1939年',
       credit: '大阪銀行協会／国立国会図書館・Wikimedia Commons',
       license: 'Public Domain',
-    }),
+      },
+    ),
   ],
   '1940-01-01': [
     commonsFigure('Mitsumasa Yonai Cabinet 19400116.jpg', {
@@ -729,13 +733,17 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     }),
   ],
   '1940-06-29': [
-    commonsDocumentFigure("NDL11919132 Def. Doc. No. 54- The international situation and Japan's position - Address of the Foreign Minister, Mr. Hachiro ARITA, delivered over the air on June 29, 1940.pdf", {
+    commonsDocumentFigure(
+      "NDL11919132 Def. Doc. No. 54- The international situation and Japan's position - Address of the Foreign Minister, Mr. Hachiro ARITA, delivered over the air on June 29, 1940.pdf",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/NDL11919132_Def._Doc._No._54-_The_international_situation_and_Japan%27s_position_-_Address_of_the_Foreign_Minister%2C_Mr._Hachiro_ARITA%2C_delivered_over_the_air_on_June_29%2C_1940.pdf/page1-960px-thumbnail.pdf.jpg",
+      {
       alt: '1940年6月29日に放送された有田八郎外相「国際情勢ト帝国ノ立場」の英訳文書表紙',
       title: '有田外相「国際情勢ト帝国ノ立場」',
       dateLabel: '1940年6月29日',
       credit: '外務省関係文書／国立国会図書館・Wikimedia Commons',
       license: 'Public Domain',
-    }),
+      },
+    ),
     commonsFigure('Prime Minister Mitsumasa Yonai cropped.jpg', {
       alt: '1940年前半の米内光政首相を撮影した肖像写真',
       title: '退陣へ向かう米内光政内閣',

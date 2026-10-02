@@ -119,8 +119,101 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
       license: 'CC0',
     }),
   ],
+  '1896': [
+    commonsFigure('Governmental Yawata Iron & Steel Works.JPG', {
+      alt: '1900年ごろの官営八幡製鉄所を撮影した写真',
+      title: '官営八幡製鉄所',
+      dateLabel: '1900年',
+      credit: '撮影者不詳／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1901': [
+    commonsFigure('Japanese Infantry Preparing the Attack during the Siege of Port Arther.jpg', {
+      alt: '1904年、旅順攻囲戦で攻撃準備をする日本軍歩兵を撮影した写真',
+      title: '旅順攻囲戦の日本軍歩兵',
+      dateLabel: '1904年',
+      credit: 'P. F. Collier & Son／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1906': [
+    commonsFigure('Headquarters of South Manchuria Railway, Dalian (NYPL Hades-2359312-4043668).jpg', {
+      alt: '1907年、大連に置かれた南満洲鉄道株式会社本社の建物を撮影した写真',
+      title: '大連の南満洲鉄道本社',
+      dateLabel: '1907年',
+      credit: 'New York Public Library／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
   '1912': [
     homeFigures[2],
+  ],
+  '1915': [
+    commonsFigure('Burning of the Okayama Seimai, 1918 rice riots.jpg', {
+      alt: '1918年の米騒動で岡山精米会社が焼ける様子を撮影した写真',
+      title: '1918年の米騒動',
+      dateLabel: '1918年',
+      credit: '撮影者不詳／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1919': [
+    commonsFigure('Sixty-Years-of-the-Meiji-and-Taisho-Eras-in-Photographs-1.jpg', {
+      alt: '1920年、市川房枝、奥むめお、平塚らいてうら女性運動家を撮影した集合写真',
+      title: '女性の政治参加を求める運動',
+      dateLabel: '1920年7月18日',
+      credit: '撮影者不詳／毎日新聞社資料・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+    commonsFigure('1920 Empire of Japan Census.jpg', {
+      alt: '1920年の第1回国勢調査を記念して発行された記念切手',
+      title: '第1回国勢調査記念切手',
+      dateLabel: '1920年',
+      credit: '日本政府／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1923': [
+    commonsFigure('Ejiri Station Great Kanto earthquake of 1923.jpg', {
+      alt: '1923年の関東大震災後、江尻駅で列車を待つ避難者を撮影した写真',
+      title: '震災後の避難者',
+      dateLabel: '1923年',
+      credit: '内務省社会局『大正震災志写真帖』／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1926': [
+    commonsFigure('Bank run during the Showa Financial Crisis.JPG', {
+      alt: '1927年3月、昭和金融恐慌時の銀行取り付け騒ぎを撮影した写真',
+      title: '昭和金融恐慌の取り付け騒ぎ',
+      dateLabel: '1927年3月23日',
+      credit: '撮影者不詳／毎日新聞社資料・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+    commonsFigure('1928 Japanese General Election Poster.JPG', {
+      alt: '1928年、最初の男子普通選挙となった第16回衆議院議員総選挙の大阪府ポスター',
+      title: '第16回衆議院議員総選挙ポスター',
+      dateLabel: '1928年',
+      credit: '大阪府／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1929': [
+    commonsFigure('Japanese delegate Wakatsuki at the signing ceremony of the London Naval Treaty.jpg', {
+      alt: '1930年4月22日、ロンドン海軍軍縮条約の署名式で署名する若槻礼次郎ら日本代表団',
+      title: 'ロンドン海軍軍縮条約の署名',
+      dateLabel: '1930年4月22日',
+      credit: 'Agence Meurisse／Bibliothèque nationale de France・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+    commonsFigure('Hamaguchi Osachi Assassination 14 Nov 1930.png', {
+      alt: '1930年11月14日、東京駅で銃撃され、ホームから運ばれる浜口雄幸首相を撮影した写真',
+      title: '東京駅で銃撃された浜口雄幸',
+      dateLabel: '1930年11月14日',
+      credit: '撮影者不詳／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
   ],
   '1931-09': [
     commonsFigure('Japanese soldiers near Mukden, October 1931.jpg', {

@@ -1,0 +1,10 @@
+{
+  "period": "1940-03-30",
+  "termRefs": [
+    {"id":"nanjing-national-government-1940","core":true},
+    {"id":"wang-jingwei-operation-1938","core":true},
+    {"id":"coal-distribution-control-law-1940","core":true},
+    {"id":"yonai-cabinet-1940","core":true},
+    {"id":"us-japan-commerce-navigation-treaty-expiry-1940","core":false}
+  ]
+}

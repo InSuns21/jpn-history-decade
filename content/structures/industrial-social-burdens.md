@@ -292,12 +292,13 @@ sources:
     title: "官報 第3929号 1940年2月13日"
     institution: "国立国会図書館デジタルコレクション"
     url: "https://dl.ndl.go.jp/pid/2960425"
-maps: []  - id: "ndl-coal-distribution-control-law-1940"
+  - id: "ndl-coal-distribution-control-law-1940"
     type: "official"
     title: "石炭及コークス配給統制法 昭和15年4月8日法律第104号"
     institution: "国立国会図書館 日本法令索引"
     url: "https://hourei.ndl.go.jp/simple/detail?current=-1&lawId=0000030065"
 
+maps: []
 ---
 
 ## 「産業化した」を、生産額だけで測らない {#comparison-axes}

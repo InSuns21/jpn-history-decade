@@ -46,7 +46,7 @@ export function HomeTemplate({ periods, crosscutting }: HomeTemplateProps) {
           <div className="crosscutting-grid">
             {crosscutting.map((page) => (
               <a href={'#/' + page.kind + '/' + page.routeKey} key={page.id}>
-                <small>{page.kind === 'structure' ? '構造史' : 'テーマ史'}・{page.periodLabel}</small>
+                <small>{page.presentation === 'source' ? '史料' : page.kind === 'structure' ? '構造史' : 'テーマ史'}・{page.periodLabel}</small>
                 <strong>{page.title}</strong>
                 <span>{page.framingQuestion}</span>
               </a>

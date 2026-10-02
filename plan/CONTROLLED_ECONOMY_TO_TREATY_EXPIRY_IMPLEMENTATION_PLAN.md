@@ -1,7 +1,7 @@
 # 1939年9月16日から1940年1月26日まで — 統制経済の深化と日米通商航海条約失効 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH63 ✅ → JH64 ✅ → JH65 ✅ → map necessity review ✅ no-map → Crosscutting publication gate ✅ → S10 extension ✅ → 次は phase-end audit necessity judgment
+- **Progress:** phase cut ✅ → JH63 ✅ → JH64 ✅ → JH65 ✅ → map necessity review ✅ no-map → Crosscutting publication gate ✅ → S10 extension ✅ → phase-end audit necessity judgment ✅ no-audit → 次は npm run check
 - **Created:** 2026-10-02
 - **Scope:** 1939-09-16〜1940-01-26
 - **Primary goal:** ノモンハン停戦後も中国での戦争と欧州戦争への不介入方針を抱える日本で、国家総動員法にもとづく統制が価格・賃金・企業給与・電力・物資・米へ広がり、阿部内閣から米内内閣への交代を経て日米通商航海条約が実際に失効するまでを、「統制強化→対米戦争」という一本道にせず、国内経済・内閣・対中戦争・対米関係の別々の状態遷移として説明する
@@ -262,6 +262,19 @@ passing extensionは **S10のみ** とする。次工程でS10を1940年1月26�
 
 各年代の隣接確認、Crosscutting publication gate、content validationで解消済みなら独立監査不要と判定する。
 
+## Judgment result — 2026-10-02
+
+**独立phase-end auditは不要**と判定する。
+
+- **「10月20日に国民生活が完全統制された」一本道化:** JH64は、法令が置いた基準・許認可・命令の枠組みと、実際の市場価格・所得・供給への効果を分離している。品目・業種・地域・例外による運用差も `interpretiveCautions` に集約されており、追加の横断監査仮説は残らない。
+- **9月18日基準日の逆算:** JH63は9月18日を翌10月の法令が採用した基準日として扱い、JH64も「9月18日基準・10月18日公布・10月20日施行」を分離している。隣接2ページを通して時系列上の混同は解消済み。
+- **条約失効→禁輸・開戦の圧縮:** JH65は、1月26日の条約失効後も最恵国待遇・在留・通商上の取扱いを国内法・行政措置で継続する実務を本文で示し、全面禁輸・資産凍結・石油禁輸・開戦を1940〜41年の別の政策判断として明示的に分離している。
+- **阿部→米内の全面政策反転:** JH65は、米内内閣が中国戦争・総動員統制・条約失効問題を引き継いだことを本文の主線に置いており、政権交代と政策断絶を同一視していない。
+- **汪兆銘新中央政府成立の先取り:** JH64・JH65はいずれも「樹立準備」として扱い、1940年3月30日の成立は次フェーズへ送っている。
+- **S10とJH64の役割重複:** JH64は法令の成立・対象・施行時期を年代順に説明し、S10は「資源配分の統制」から「価格・賃金・物資利用という取引条件の統制」へ負担配分の仕組みが変わったことを長期比較軸として整理している。単なる法令列の再掲にはなっていない。
+
+以上は各年代の隣接確認とCrosscutting publication gateで既に処理済みであり、複数ページをまとめて再監査しなければ判定できない未解決仮説は残っていない。現行規約どおり、追加の独立全体監査は置かず通常のCI / Pages / 完了処理へ進む。
+
 ---
 
 # 9. 史実確認の主要ソース
@@ -321,8 +334,8 @@ passing extensionは **S10のみ** とする。次工程でS10を1940年1月26�
 4. **map necessity review ✅ no-map** — 実装後も空間理解は中心ではなく、新規Axx地図は追加しない
 5. **Crosscutting publication gate ✅** — S10のみpassing。S05 / S09 / S02 / 新規横断記事は延長・追加しない
 6. **passing extensionのみ実装 ✅** — S10を1940年1月26日まで延長し、価格・賃金・給与・電力・小作料・総動員物資を「日常の選択条件への統制」という比較軸へ追加
-7. **phase-end audit necessity judgment** — 次工程
-8. **npm run check**
+7. **phase-end audit necessity judgment ✅ no-audit** — 候補6仮説を確認し、既存本文・S10の役割分離で解消済みと判定
+8. **npm run check** — 次工程
 9. GitHub Actions CI / Pages deploy確認
 10. Statusをcompletedへ変更し、plan_done/へarchive
 11. 次フェーズを切り出す
@@ -344,7 +357,7 @@ passing extensionは **S10のみ** とする。次工程でS10を1940年1月26�
 - [x] map necessity review completed（no-map）
 - [x] Crosscutting publication gate completed（S10のみpassing）
 - [x] passing crosscutting extensions implemented（S10を1940-01-26まで延長）
-- [ ] phase-end audit necessity judgment completed
+- [x] phase-end audit necessity judgment completed（独立監査不要）
 - [ ] npm run check green
 - [ ] GitHub Actions CI green
 - [ ] GitHub Pages deploy green

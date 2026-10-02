@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
 import type { SiteLayoutProps } from '../types'
 
-type TextSize = 'standard' | 'large' | 'xlarge'
+type TextSize = 'small' | 'standard' | 'large' | 'xlarge'
 
 const TEXT_SIZE_STORAGE_KEY = 'jpn-history-text-size'
 const TEXT_SIZE_OPTIONS = [
+  { value: 'small', label: '小' },
   { value: 'standard', label: '標準' },
   { value: 'large', label: '大' },
   { value: 'xlarge', label: '特大' },

@@ -1,7 +1,7 @@
 # 1939年9月16日から1940年1月26日まで — 統制経済の深化と日米通商航海条約失効 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH63 ✅ → JH64 ✅ → 次は JH65「1940-01-01〜01-26」
+- **Progress:** phase cut ✅ → JH63 ✅ → JH64 ✅ → JH65 ✅ → 次は map necessity review
 - **Created:** 2026-10-02
 - **Scope:** 1939-09-16〜1940-01-26
 - **Primary goal:** ノモンハン停戦後も中国での戦争と欧州戦争への不介入方針を抱える日本で、国家総動員法にもとづく統制が価格・賃金・企業給与・電力・物資・米へ広がり、阿部内閣から米内内閣への交代を経て日米通商航海条約が実際に失効するまでを、「統制強化→対米戦争」という一本道にせず、国内経済・内閣・対中戦争・対米関係の別々の状態遷移として説明する
@@ -319,7 +319,7 @@ JH63〜JH65を実装した後、既存横断記事へ新しい比較軸が加わ
 - [x] phase-end auditを定型化せず、具体的な監査仮説を定義
 - [x] JH63 published / JH62との隣接接続確認完了
 - [x] JH64 published / JH63との隣接接続確認完了
-- [ ] JH65 published / JH64との隣接接続確認完了
+- [x] JH65 published / JH64との隣接接続確認完了
 - [ ] map necessity review completed
 - [ ] Crosscutting publication gate completed
 - [ ] passing crosscutting extensions implemented

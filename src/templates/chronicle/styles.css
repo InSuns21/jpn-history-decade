@@ -1013,3 +1013,34 @@ html[data-text-size='xlarge'] {
     min-height: 46px;
   }
 }
+
+
+.source-document-section {
+  scroll-margin-top: 6rem;
+}
+
+.source-document-actions {
+  margin: 0 0 1rem;
+}
+
+.source-document-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-sans);
+  font-weight: 700;
+}
+
+.source-document-frame {
+  width: 100%;
+  min-height: 72vh;
+  border: 1px solid var(--line);
+  border-radius: 0.35rem;
+  background: #fff;
+}
+
+@media (max-width: 720px) {
+  .source-document-frame {
+    min-height: 64vh;
+  }
+}

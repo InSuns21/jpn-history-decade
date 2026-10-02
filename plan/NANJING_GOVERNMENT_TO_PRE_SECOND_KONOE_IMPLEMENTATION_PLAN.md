@@ -1,7 +1,7 @@
 # 1940年3月30日から7月21日まで — 南京国民政府成立・欧州戦局急変・新体制運動・米内内閣崩壊 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH68 ✅ → A31 ✅ no-map → JH69 ✅ → 次は JH70「1940-06-29〜07-21」
+- **Progress:** phase cut ✅ → JH68 ✅ → A31 ✅ no-map → JH69 ✅ → JH70 ✅ → 次は Crosscutting publication gate
 - **Created:** 2026-10-02
 - **Scope:** 1940-03-30〜1940-07-21
 - **Primary goal:** 汪兆銘を首班とする南京国民政府の成立を日本政府による正式承認と分け、欧州戦局の急変が日本の南方政策・援蒋ルート遮断・国内政治へ与えた新しい制約を、直ちに「南進決定→対英米戦争」へ圧縮せず追う。同時に、近衛文麿の新体制運動と政党解党の開始、米内内閣総辞職までを制度状態の変化として説明し、7月22日の第2次近衛内閣成立とその後の基本国策要綱は次フェーズへ送る
@@ -350,7 +350,7 @@ JH68〜JH70実装後、年代記事とは異なる比較軸が増えた場合だ
 - [x] JH68 published / JH67との隣接接続確認完了
 - [x] A31 map necessity / data-quality judgment completed（no-map）
 - [x] JH69 published / JH68との隣接接続確認完了
-- [ ] JH70 published / JH69との隣接接続確認完了
+- [x] JH70 published / JH69との隣接接続確認完了
 - [ ] map実装が必要な場合はData / Style / Human Visual Audit完了
 - [ ] Crosscutting publication gate completed
 - [ ] passing crosscutting extensions implemented

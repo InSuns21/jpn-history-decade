@@ -55,6 +55,7 @@ build前に段階的に以下を検査可能にする。
 少なくとも、
 - Project instruction length validation
 - content / glossary / internal-link validation
+- published period body-depth audit（実質本文4,500字未満は理由付き例外必須。導入時の既存短文ページだけは縮小専用baselineで移行管理）
 - map validation
 - ESLint
 - TypeScript typecheck

@@ -124,6 +124,14 @@
     {
       "id": "employee-hiring-restriction-order-1939",
       "core": true
+    },
+    {
+      "id": "national-requisition-order-1939",
+      "core": true
+    },
+    {
+      "id": "company-profit-dividend-financing-order-1939",
+      "core": false
     }
   ]
 }

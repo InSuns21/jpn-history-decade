@@ -1,0 +1,12 @@
+{
+  "period": "1939-09-16",
+  "termRefs": [
+    {"id":"national-general-mobilization-law-1938","core":true},
+    {"id":"national-mobilization-administration-coordination-1939","core":true},
+    {"id":"abe-cabinet-1939","core":true},
+    {"id":"nomonhan-incident-1939","core":false},
+    {"id":"national-requisition-order-1939","core":false},
+    {"id":"company-profit-dividend-financing-order-1939","core":false},
+    {"id":"us-japan-commerce-navigation-treaty-termination-1939","core":false}
+  ]
+}

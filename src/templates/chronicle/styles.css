@@ -860,16 +860,20 @@ body {
 }
 
 /* Reader text-size preference */
-html[data-text-size='standard'] {
+html[data-text-size='small'] {
   font-size: 100%;
 }
 
-html[data-text-size='large'] {
+html[data-text-size='standard'] {
   font-size: 112.5%;
 }
 
-html[data-text-size='xlarge'] {
+html[data-text-size='large'] {
   font-size: 125%;
+}
+
+html[data-text-size='xlarge'] {
+  font-size: 137.5%;
 }
 
 .site-header__actions {
@@ -1541,7 +1545,7 @@ button:focus-visible {
 }
 
 .decade-hero__summary {
-  max-width: 48rem;
+  max-width: 100%;
   margin-top: 22px;
   color: #444139;
   font-family: var(--font-body);

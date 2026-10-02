@@ -478,6 +478,104 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
       license: 'Public Domain',
     }),
   ],
+
+  '1938-01-01': [
+    commonsFigure('Fumimaro Konoe.jpg', {
+      alt: '1938年、第一次近衛内閣期の近衛文麿首相を撮影した肖像写真',
+      title: '近衛文麿',
+      dateLabel: '1938年',
+      credit: '内閣情報部『写真週報』／国立国会図書館・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1938-01-17': [
+    commonsFigure('Approval of National Mobilization Law.jpg', {
+      alt: '1938年、国家総動員法の成立を報じる新聞紙面',
+      title: '国家総動員法を報じる新聞',
+      dateLabel: '1938年',
+      credit: '撮影者不詳／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1938-02-24': [
+    commonsFigure('Liang Hongzhi.jpg', {
+      alt: '1938年3月に南京で成立した中華民国維新政府の行政院長となった梁鴻志の肖像写真',
+      title: '梁鴻志',
+      dateLabel: '1941年以前',
+      credit: '『最新支那要人伝』／朝日新聞社・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1938-04-01': [
+    commonsFigure('Terauchi Hisaichi and Shunroku Hata in Xuzhou, 1938.jpg', {
+      alt: '1938年、徐州占領後の寺内寿一と畑俊六を撮影した写真',
+      title: '徐州占領後の寺内寿一と畑俊六',
+      dateLabel: '1938年',
+      credit: '撮影者不詳／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1938-05-20': [
+    commonsFigure('1938 Yellow River flood.jpg', {
+      alt: '1938年6月の黄河堤防決壊後、洪水となった地域を撮影した写真',
+      title: '黄河決壊による洪水',
+      dateLabel: '1938年',
+      credit: '撮影者不詳／『中華民国史画』・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1938-06-18': [
+    commonsFigure("The Japanese 11th Army's assault on Wuhan, 1938.png", {
+      alt: '1938年の武漢作戦で日本陸軍第11軍の進攻方向を示した作戦図',
+      title: '武漢攻略作戦の進攻図',
+      dateLabel: '1938年',
+      credit: 'Headquarters, USAFFE and Eighth U.S. Army／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1938-07-27': [
+    commonsFigure('Battle of Lake Khasan-Japanese soldiers defending Zaozarnaya Hill.jpg', {
+      alt: '1938年の張鼓峰事件で丘陵陣地に展開する日本軍兵士を撮影した写真',
+      title: '張鼓峰事件',
+      dateLabel: '1938年',
+      credit: '赤石澤邦彦『張鼓峰』掲載写真／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1938-09-30': [
+    commonsFigure('1938年被日军飞机炸中的广州二中.jpg', {
+      alt: '1938年、日本軍の空襲を受けた広州市立第二中学校の被害を撮影した写真',
+      title: '空襲を受けた広州の学校',
+      dateLabel: '1938年',
+      credit: '撮影者不詳／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+    commonsFigure('Wuhan 1938-10-25.jpg', {
+      alt: '1938年10月25日、武漢へ入る日本軍部隊を撮影した写真',
+      title: '武漢への日本軍進入',
+      dateLabel: '1938年10月25日',
+      credit: '撮影者不詳／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1938-10-28': [
+    commonsFigure('Hachirō Arita 3.jpg', {
+      alt: '1937年ごろの有田八郎を撮影した肖像写真',
+      title: '有田八郎',
+      dateLabel: '1937年ごろ',
+      credit: '撮影者不詳／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1938-12-22': [
+    commonsFigure('Portrait of Wang Jingwei (sm997hy4294).jpg', {
+      alt: '1937年2月の汪兆銘を撮影した肖像写真',
+      title: '汪兆銘',
+      dateLabel: '1937年2月',
+      credit: '撮影者不詳／Stanford University East Asia Library・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
   '1940-06-29': [
     commonsFigure('Mitsumasa Yonai Cabinet 19400116.jpg', {
       alt: '1940年1月16日の米内光政内閣の閣僚集合写真',

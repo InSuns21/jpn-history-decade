@@ -1,12 +1,13 @@
 # 1940年3月30日から7月21日まで — 南京国民政府成立・欧州戦局急変・新体制運動・米内内閣崩壊 実装計画
 
-- **Status:** active
-- **Progress:** phase cut ✅ → JH68 ✅ → A31 ✅ no-map → JH69 ✅ → JH70 ✅ → Crosscutting publication gate ✅ → S05 / S09 / S10 extensions ✅ → phase-end audit necessity judgment ✅ no-audit → npm run check ✅ → CI ✅ → Pages ✅ → 次は phase completion / plan_done archive
+- **Status:** completed
+- **Progress:** phase cut ✅ → JH68 ✅ → A31 ✅ no-map → JH69 ✅ → JH70 ✅ → Crosscutting publication gate ✅ → S05 / S09 / S10 extensions ✅ → phase-end audit necessity judgment ✅ no-audit → npm run check ✅ → CI ✅ → Pages ✅ → completed / archived ✅
 - **Created:** 2026-10-02
+- **Archived:** 2026-10-03
 - **Scope:** 1940-03-30〜1940-07-21
 - **Primary goal:** 汪兆銘を首班とする南京国民政府の成立を日本政府による正式承認と分け、欧州戦局の急変が日本の南方政策・援蒋ルート遮断・国内政治へ与えた新しい制約を、直ちに「南進決定→対英米戦争」へ圧縮せず追う。同時に、近衛文麿の新体制運動と政党解党の開始、米内内閣総辞職までを制度状態の変化として説明し、7月22日の第2次近衛内閣成立とその後の基本国策要綱は次フェーズへ送る
-- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](./JPN_HISTORY_DECADE_PLAN.md)
-- **Previous phase:** [POST_TREATY_TO_PRE_NANJING_GOVERNMENT_IMPLEMENTATION_PLAN.md](../plan_done/POST_TREATY_TO_PRE_NANJING_GOVERNMENT_IMPLEMENTATION_PLAN.md)
+- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](../plan/JPN_HISTORY_DECADE_PLAN.md)
+- **Previous phase:** [POST_TREATY_TO_PRE_NANJING_GOVERNMENT_IMPLEMENTATION_PLAN.md](./POST_TREATY_TO_PRE_NANJING_GOVERNMENT_IMPLEMENTATION_PLAN.md)
 - **Workspace rules:** [../SYSTEM_PROMPT.md](../SYSTEM_PROMPT.md)
 
 ---
@@ -378,10 +379,9 @@ JH68〜JH70実装後、年代記事とは異なる比較軸が増えた場合だ
 - [x] passing crosscutting extensions implemented（S05 / S09 / S10）
 - [x] phase-end audit necessity judgment completed（no-audit）
 - [x] npm run check green（PR CI #569）
-- [x] GitHub Actions CI green（PR #570 / main #572）
-- [x] GitHub Pages deploy green（#254）
-- [ ] Status = completed
-- [ ] plan_done/へ移動
+- [x] GitHub Actions CI green（main #574）
+- [x] Status = completed
+- [x] plan_done/へ移動
 
 ---
 

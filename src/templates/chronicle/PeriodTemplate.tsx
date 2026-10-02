@@ -77,6 +77,19 @@ export function PeriodTemplate({
   }, [activeTermId, activeSectionId, data.routeKey])
 
   const sourceIds = data.sources.map((source) => source.id)
+  const activePeriodIndex = periods.findIndex((period) => period.routeKey === data.routeKey)
+  const sidebarWindowSize = 5
+  const sidebarStart =
+    activePeriodIndex < 0
+      ? 0
+      : Math.max(
+          0,
+          Math.min(
+            activePeriodIndex - Math.floor(sidebarWindowSize / 2),
+            Math.max(0, periods.length - sidebarWindowSize),
+          ),
+        )
+  const sidebarPeriods = periods.slice(sidebarStart, sidebarStart + sidebarWindowSize)
   const sectionHref = (sectionId: string) =>
     '#/period/' + data.routeKey + '?section=' + encodeURIComponent(sectionId)
   const visibleMapIds = data.maps.filter((mapId) => Boolean(findMapDefinition(mapId)))
@@ -92,7 +105,7 @@ export function PeriodTemplate({
   return (
     <>
       <section className="decade-hero">
-        <div className="page-width">
+        <div className="page-width decade-hero__inner">
           <a className="back-link" href="#/">
             ← 年代一覧
           </a>
@@ -115,7 +128,10 @@ export function PeriodTemplate({
 
       <div className="page-width decade-layout">
         <aside className="decade-sidebar">
-          <TimelineNav periods={periods} activeRouteKey={data.routeKey} />
+          <TimelineNav periods={sidebarPeriods} activeRouteKey={data.routeKey} />
+          <a className="sidebar-period-index-link" href="#/">
+            全年代を見る
+          </a>
           <nav className="toc" aria-label="このページの目次">
             <strong>目次</strong>
             {periodFigures.length > 0 && <a href={sectionHref('figures')}>図版で見る</a>}
@@ -308,26 +324,29 @@ export function PeriodTemplate({
             </section>
           )}
 
-          <nav className="period-navigation" aria-label="前後の時代">
-            <div>
-              {previous && (
-                <a href={'#/period/' + previous.routeKey}>
-                  <small>← 前の時代</small>
-                  <strong>{previous.periodLabel}</strong>
-                </a>
-              )}
-            </div>
-            <div>
-              {next && (
-                <a href={'#/period/' + next.routeKey}>
-                  <small>次の時代 →</small>
-                  <strong>{next.periodLabel}</strong>
-                </a>
-              )}
-            </div>
-          </nav>
         </article>
       </div>
+
+      <nav className="period-navigation-dock" aria-label="前後の時代">
+        <div className="page-width period-navigation-dock__inner">
+          <div>
+            {previous && (
+              <a href={'#/period/' + previous.routeKey} title={previous.periodLabel}>
+                <small>← 前の時代</small>
+                <strong>{previous.navLabel}</strong>
+              </a>
+            )}
+          </div>
+          <div>
+            {next && (
+              <a href={'#/period/' + next.routeKey} title={next.periodLabel}>
+                <small>次の時代 →</small>
+                <strong>{next.navLabel}</strong>
+              </a>
+            )}
+          </div>
+        </div>
+      </nav>
     </>
   )
 }

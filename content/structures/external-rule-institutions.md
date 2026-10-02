@@ -229,12 +229,13 @@ sources:
     title: "日中戦争と日本外交 IV 汪兆銘工作"
     institution: "外務省外交史料館"
     url: "https://www.mofa.go.jp/mofaj/annai/honsho/shiryo/nitchu_nihon/04.html"
-maps: []  - id: "ndl-republic-of-china-research-guide"
+  - id: "ndl-republic-of-china-research-guide"
     type: "official"
     title: "旧中華民国（1912-1949）"
     institution: "国立国会図書館 リサーチ・ナビ"
     url: "https://ndlsearch.ndl.go.jp/rnavi/politics/China2"
 
+maps: []
 ---
 
 ## まず「支配した」を分解する {#comparison-axes}

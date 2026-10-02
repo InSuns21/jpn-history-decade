@@ -11,13 +11,13 @@ export interface HistoricalFigureDefinition {
 export const homeFigures: HistoricalFigureDefinition[] = [
   {
     imageUrl:
-      'https://commons.wikimedia.org/wiki/Special:Redirect/file/Print%2C_Nihon_Bridge%2C_Morning_View%2C_Nihonbashi%2C_in_The_Fifty-Three_Stations_of_the_Tokaido_Road_%28Tokaido_Gojusan_Tsugi-no_Uchi%29%2C_ca._1834_%28CH_18608813%29.jpg?width=1600',
+      'https://commons.wikimedia.org/wiki/Special:Redirect/file/Fumimaro_Konoe_Cabinet_19410718.jpg?width=1600',
     sourceUrl:
-      'https://commons.wikimedia.org/wiki/File:Print,_Nihon_Bridge,_Morning_View,_Nihonbashi,_in_The_Fifty-Three_Stations_of_the_Tokaido_Road_(Tokaido_Gojusan_Tsugi-no_Uchi),_ca._1834_(CH_18608813).jpg',
-    alt: '日本橋を渡る大名行列と、橋のたもとの商人や往来を描いた歌川広重の浮世絵',
-    title: '東海道五十三次・日本橋 朝之景',
-    dateLabel: '1834年ごろ',
-    credit: '歌川広重／Cooper Hewitt, Smithsonian Design Museum',
+      'https://commons.wikimedia.org/wiki/File:Fumimaro_Konoe_Cabinet_19410718.jpg',
+    alt: '1941年7月18日に成立した第三次近衛文麿内閣の閣僚集合写真',
+    title: '第三次近衛内閣',
+    dateLabel: '1941年7月18日',
+    credit: '産経新聞社／Wikimedia Commons',
     license: 'Public Domain',
   },
   {

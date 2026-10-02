@@ -42,10 +42,10 @@ export function SiteLayout({ children, periods, crosscutting }: SiteLayoutProps)
       <header className="site-header">
         <div className="site-header__inner">
           <a className="brand" href="#/" aria-label="トップへ戻る">
-            <span className="brand__year">1800</span>
+            <span className="brand__year">24</span>
             <span>
-              <strong>1800年から始める日本史</strong>
-              <small>年代ごとに見る社会のしくみと変化</small>
+              <strong>近現代史24</strong>
+              <small>1800年から始める日本史</small>
             </span>
           </a>
           <div className="site-header__actions">
@@ -76,8 +76,8 @@ export function SiteLayout({ children, periods, crosscutting }: SiteLayoutProps)
       <main>{children}</main>
       <footer className="site-footer">
         <div>
-          <strong>1800年から始める日本史</strong>
-          <p>政治・経済・社会・外交・文化・地理を年代ごとにたどる日本史サイト。</p>
+          <strong>近現代史24</strong>
+          <p>1800年から始める日本史。政治・経済・社会・外交・文化・地理を年代ごとにたどります。</p>
         </div>
       </footer>
     </div>

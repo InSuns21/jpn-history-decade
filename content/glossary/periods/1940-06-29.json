@@ -1,0 +1,11 @@
+{
+  "period": "1940-06-29",
+  "termRefs": [
+    {"id":"arita-international-situation-speech-1940","core":true},
+    {"id":"konoe-new-order-movement-1940","core":true},
+    {"id":"political-party-dissolutions-1940","core":true},
+    {"id":"military-ministers-active-duty-system","core":true},
+    {"id":"yonai-cabinet-1940","core":true},
+    {"id":"shakai-taishuto-1932","core":false}
+  ]
+}

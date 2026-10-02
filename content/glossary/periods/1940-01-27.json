@@ -1,0 +1,15 @@
+{
+  "period": "1940-01-27",
+  "termRefs": [
+    {"id":"saito-takao-anti-military-speech-1940","core":true},
+    {"id":"factory-business-premises-use-requisition-order-1939","core":true},
+    {"id":"land-structures-management-use-requisition-order-1939","core":true},
+    {"id":"shipping-control-order-1940","core":true},
+    {"id":"land-transport-control-order-1940","core":false},
+    {"id":"rice-bran-distribution-control-regulation-1940","core":false},
+    {"id":"yonai-cabinet-1940","core":false},
+    {"id":"us-japan-commerce-navigation-treaty-expiry-1940","core":false},
+    {"id":"national-general-mobilization-law-1938","core":false},
+    {"id":"wang-jingwei-operation-1938","core":false}
+  ]
+}

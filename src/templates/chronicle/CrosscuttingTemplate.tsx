@@ -94,7 +94,7 @@ export function CrosscuttingTemplate({
     .map((routeKey) => periods.find((period) => period.routeKey === routeKey))
     .filter((period) => period !== undefined)
   const visibleMapIds = data.maps.filter((mapId) => Boolean(findMapDefinition(mapId)))
-  const kindLabel = data.kind === 'structure' ? '構造史' : 'テーマ史'
+  const kindLabel = data.presentation === 'source' ? '史料' : data.kind === 'structure' ? '構造史' : 'テーマ史'
 
   return (
     <>
@@ -135,6 +135,9 @@ export function CrosscuttingTemplate({
           <nav className="toc" aria-label="このページの目次">
             <strong>{kindLabel}</strong>
             {visibleMapIds.length > 0 && <a href={sectionHref('maps')}>地図で見る</a>}
+            {data.presentation === 'source' && data.documentUrl && (
+              <a href={sectionHref('full-text')}>全文</a>
+            )}
             {data.sections.map((section) => (
               <a key={section.id} href={sectionHref(section.id)}>
                 {section.title.split(' — ')[0]}
@@ -147,6 +150,29 @@ export function CrosscuttingTemplate({
         </aside>
 
         <article className="decade-article">
+          {data.presentation === 'source' && data.documentUrl && (
+            <section id="full-text" className="content-section source-document-section">
+              <div className="section-heading">
+                <span>全</span>
+                <div><h2>全文</h2></div>
+              </div>
+              <p className="section-lead">
+                削除部分を含む全文校訂資料を、原資料への導線を保ったまま表示します。
+                ブラウザ内で表示できない場合は、下のリンクから原資料を開いてください。
+              </p>
+              <div className="source-document-actions">
+                <a href={data.documentUrl} target="_blank" rel="noreferrer">
+                  {data.documentTitle ?? '全文資料を開く'} ↗
+                </a>
+              </div>
+              <iframe
+                className="source-document-frame"
+                src={data.documentUrl}
+                title={data.documentTitle ?? data.title}
+              />
+            </section>
+          )}
+
           {visibleMapIds.length > 0 && (
             <section id="maps" className="content-section">
               <div className="section-heading">

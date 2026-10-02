@@ -1,8 +1,10 @@
 import { useEffect } from 'react'
 import type { ContentBlock } from '../../content-model/types'
+import { periodFiguresByRouteKey } from '../../media/periodFigures'
 import type { PeriodTemplateProps } from '../types'
 import { findMapDefinition } from '../../maps/registry'
 import { Glossary } from './Glossary'
+import { HistoricalFigure } from './HistoricalFigure'
 import { LinkedText } from './LinkedText'
 import { TimelineNav } from './TimelineNav'
 import { ThematicMap } from './ThematicMap'
@@ -78,6 +80,7 @@ export function PeriodTemplate({
   const sectionHref = (sectionId: string) =>
     '#/period/' + data.routeKey + '?section=' + encodeURIComponent(sectionId)
   const visibleMapIds = data.maps.filter((mapId) => Boolean(findMapDefinition(mapId)))
+  const periodFigures = periodFiguresByRouteKey[data.routeKey] ?? []
   const mapsBySection = new Map<string, string[]>()
   for (const placement of data.mapPlacements) {
     if (!findMapDefinition(placement.mapId)) continue
@@ -115,6 +118,7 @@ export function PeriodTemplate({
           <TimelineNav periods={periods} activeRouteKey={data.routeKey} />
           <nav className="toc" aria-label="このページの目次">
             <strong>目次</strong>
+            {periodFigures.length > 0 && <a href={sectionHref('figures')}>図版で見る</a>}
             <a href={sectionHref('snapshot')}>この時代の概観</a>
             {visibleMapIds.length > 0 && <a href={sectionHref('maps')}>地図で見る</a>}
             {data.sections.map((section) => (
@@ -132,6 +136,24 @@ export function PeriodTemplate({
         </aside>
 
         <article className="decade-article">
+          {periodFigures.length > 0 && (
+            <section id="figures" className="content-section period-figures-section">
+              <div className="section-heading">
+                <span>図</span>
+                <div><h2>図版で見る</h2></div>
+              </div>
+              <div className="period-figure-grid">
+                {periodFigures.map((figure) => (
+                  <HistoricalFigure
+                    key={figure.sourceUrl}
+                    {...figure}
+                    className="historical-figure--period"
+                  />
+                ))}
+              </div>
+            </section>
+          )}
+
           <section id="snapshot" className="content-section">
             <div className="section-heading">
               <span>1</span>

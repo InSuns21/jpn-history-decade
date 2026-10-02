@@ -30,9 +30,9 @@ export function HomeTemplate({ periods, crosscutting }: HomeTemplateProps) {
                 <a className="button button--primary" href={'#/period/' + firstPeriod.routeKey}>
                   {firstPeriod.currentPeriodLabel}から読む
                 </a>
-                <a className="button button--secondary" href="#crosscutting">
-                  横断テーマを見る
-                </a>
+                <span className="button button--secondary is-disabled" aria-disabled="true">
+                  横断テーマを見る（準備中）
+                </span>
               </div>
             )}
           </div>

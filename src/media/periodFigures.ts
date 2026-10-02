@@ -751,5 +751,14 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
       credit: '撮影者不詳／Wikimedia Commons',
       license: 'Public Domain',
     }),
+  ],  '1940-07-22': [
+    commonsFigure('Fumimaro Konoe Cabinet 19400722.jpg', {
+      alt: '1940年7月、第2次近衛文麿内閣の初閣議後に首相官邸で撮影された閣僚集合写真',
+      title: '第2次近衛文麿内閣',
+      dateLabel: '1940年7月',
+      credit: '毎日新聞／アジア歴史資料センター・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
   ],
+
 }

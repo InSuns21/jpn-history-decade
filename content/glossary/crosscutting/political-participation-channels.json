@@ -264,6 +264,14 @@
     {
       "id": "saito-takao-expulsion-1940",
       "core": true
+    },
+    {
+      "id": "konoe-new-order-movement-1940",
+      "core": true
+    },
+    {
+      "id": "political-party-dissolutions-1940",
+      "core": true
     }
   ]
 }

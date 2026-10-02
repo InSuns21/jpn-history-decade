@@ -1,7 +1,7 @@
 # 1940年3月30日から7月21日まで — 南京国民政府成立・欧州戦局急変・新体制運動・米内内閣崩壊 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH68 ✅ → A31 ✅ no-map → JH69 ✅ → JH70 ✅ → 次は Crosscutting publication gate
+- **Progress:** phase cut ✅ → JH68 ✅ → A31 ✅ no-map → JH69 ✅ → JH70 ✅ → Crosscutting publication gate ✅ → S05 / S09 / S10 extensions ✅ → phase-end audit necessity judgment ✅ no-audit → npm run check ✅ → PR CI ✅ → 次は main CI / Pages
 - **Created:** 2026-10-02
 - **Scope:** 1940-03-30〜1940-07-21
 - **Primary goal:** 汪兆銘を首班とする南京国民政府の成立を日本政府による正式承認と分け、欧州戦局の急変が日本の南方政策・援蒋ルート遮断・国内政治へ与えた新しい制約を、直ちに「南進決定→対英米戦争」へ圧縮せず追う。同時に、近衛文麿の新体制運動と政党解党の開始、米内内閣総辞職までを制度状態の変化として説明し、7月22日の第2次近衛内閣成立とその後の基本国策要綱は次フェーズへ送る
@@ -205,6 +205,15 @@ JH70は、**外相の南方政策表明、政党秩序の解体開始、内閣�
 
 JH68〜JH70実装後、年代記事とは異なる比較軸が増えた場合だけ延長する。
 
+## 判定結果 — S05 / S09 / S10 extend、S02 hold、新規記事なし
+
+- **S05「政治参加の回路」:** extend。斎藤除名後も残る議会制度に対して、近衛新体制運動と7月の政党解党開始は「政党という中間組織が解体へ入る」という新しい比較軸を加える。さらに米内内閣総辞職は、軍部大臣現役武官制のもとで陸相人事が内閣存続へ作用する別回路を示す。
+- **S09「対外支配の制度差」:** extend。南京国民政府の成立後も、華北政務委員会、日本軍の占領権力、重慶国民政府の実効支配、日本による外交承認は別々の制度・時点に残る。「政府形式・地域行政・軍事権限・実効支配・外交承認」を分ける比較軸が増えた。
+- **S10「産業社会の負担と保護」:** extend。2月までの工場・土地・海運の利用権統制に、4月の石炭配給統制法・米穀強制出荷措置による基礎燃料・食料の供給確保が重なり、「資産を誰が使うか」から「基礎物資を供給経路へどう出し、どこへ回すか」へ比較軸が広がった。
+- **S02「石高制・貨幣経済・財政」:** hold。新しい租税・公債・通貨・会計制度の転換は確認できず、既存の財政比較軸を延長する必要性は低い。
+- **新規横断記事:** 追加しない。「南進論」「新体制」を新規記事にするとJH69/JH70とS05/S09の再編集になり、独立した長期比較軸を作りにくい。
+
+
 ## S09「対外支配の制度差」
 
 有力候補。
@@ -264,6 +273,19 @@ JH68〜JH70実装後、年代記事とは異なる比較軸が増えた場合だ
 ---
 
 # 9. phase-end audit necessity judgment
+
+## 判定結果 — no-audit
+
+候補仮説をJH68〜JH70と延長後のS05 / S09 / S10で確認した。
+
+- 南京国民政府の成立、日本による正式承認、重慶国民政府との戦争継続はJH68とS09で別の制度段階として整理済み。
+- 欧州のドイツ軍優勢は、蘭印・仏印をめぐる交渉条件の変化としてJH69/JH70で扱い、南方武力進出・対英米戦争の決定へ一本道化していない。
+- 仏印援蒋ルートの輸送停止・監視はJH69で扱い、1940年9月の北部仏印進駐と時点を分離している。
+- 新体制運動は6月の運動開始、7月の段階的な政党解党、大政翼賛会成立前という順序をJH69/JH70/S05で保持している。
+- 米内内閣総辞職は、外交・新体制をめぐる対立、畑陸相辞任、軍部大臣現役武官制のもとでの後任人事という複数条件をJH70/S05で整理している。
+- S05は政治参加・政府形成の回路、S09は対外支配の権限層、S10は社会的負担・供給統制を比較し、年代記事の段落再編集にはしていない。
+
+各年代の隣接確認、Crosscutting publication gate、横断記事の役割分離で候補仮説を処理できており、独立した横断監査で追加検証すべき具体的仮説は残っていない。**独立phase-end auditは実施しない。**
 
 独立監査は定型化しない。
 
@@ -351,12 +373,12 @@ JH68〜JH70実装後、年代記事とは異なる比較軸が増えた場合だ
 - [x] A31 map necessity / data-quality judgment completed（no-map）
 - [x] JH69 published / JH68との隣接接続確認完了
 - [x] JH70 published / JH69との隣接接続確認完了
-- [ ] map実装が必要な場合はData / Style / Human Visual Audit完了
-- [ ] Crosscutting publication gate completed
-- [ ] passing crosscutting extensions implemented
-- [ ] phase-end audit necessity judgment completed
-- [ ] npm run check green
-- [ ] GitHub Actions CI green
+- [x] A31=no-mapのため map実装・Data / Style / Human Visual Audit は不要
+- [x] Crosscutting publication gate completed（S05 / S09 / S10 extend、S02 hold、新規記事なし）
+- [x] passing crosscutting extensions implemented（S05 / S09 / S10）
+- [x] phase-end audit necessity judgment completed（no-audit）
+- [x] npm run check green（PR CI #569）
+- [x] GitHub Actions PR CI green（#569）
 - [ ] GitHub Pages deploy green
 - [ ] Status = completed
 - [ ] plan_done/へ移動

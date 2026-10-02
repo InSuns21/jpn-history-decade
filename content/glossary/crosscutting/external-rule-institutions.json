@@ -120,6 +120,10 @@
     {
       "id": "hainan-occupation-1939",
       "core": true
+    },
+    {
+      "id": "nanjing-national-government-1940",
+      "core": true
     }
   ]
 }

@@ -172,6 +172,10 @@
     {
       "id": "rice-bran-distribution-control-regulation-1940",
       "core": false
+    },
+    {
+      "id": "coal-distribution-control-law-1940",
+      "core": true
     }
   ]
 }

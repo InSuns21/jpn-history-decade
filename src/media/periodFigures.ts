@@ -215,12 +215,84 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
       license: 'Public Domain',
     }),
   ],
+  '1931': [
+    commonsFigure('Reijiro Wakatsuki 01.jpg', {
+      alt: '1931年9月に掲載された第二次若槻礼次郎内閣期の若槻礼次郎首相の肖像写真',
+      title: '若槻礼次郎',
+      dateLabel: '1931年9月',
+      credit: '撮影者不詳／『歴史写真』・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
   '1931-09': [
     commonsFigure('Japanese soldiers near Mukden, October 1931.jpg', {
       alt: '1931年10月、奉天付近で行動する日本軍兵士を撮影した写真',
       title: '奉天付近の日本軍',
       dateLabel: '1931年10月',
       credit: 'Agence de presse Meurisse／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1932': [
+    commonsFigure('May 15 Incident.jpg', {
+      alt: '1932年の五・一五事件と犬養毅首相襲撃を報じた新聞紙面',
+      title: '五・一五事件を伝える新聞',
+      dateLabel: '1932年5月',
+      credit: '大阪朝日新聞／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1932-09': [
+    commonsFigure('Japan withdrawal from League of Nations 1933 Tokyo Asahi Shimbun.png', {
+      alt: '1933年2月、日本の国際連盟脱退をめぐる情勢を報じた東京朝日新聞の紙面',
+      title: '国際連盟脱退を報じる新聞',
+      dateLabel: '1933年2月25日',
+      credit: '東京朝日新聞／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1933-06': [
+    commonsFigure('First Imperial Rescript with the seal of Puyi that announced the founding of the new state (Manchukuo).jpg', {
+      alt: '1934年3月1日、満洲国の帝制移行後に溥儀の印が押された詔書',
+      title: '満洲国・康徳帝の詔書',
+      dateLabel: '1934年3月1日',
+      credit: '満洲国政府／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1934-07': [
+    commonsFigure('Minobe Tatsukichi 1935.JPG', {
+      alt: '1935年、貴族院での美濃部達吉を撮影した写真',
+      title: '美濃部達吉',
+      dateLabel: '1935年',
+      credit: '撮影者不詳／『アサヒグラフ』・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1935-08': [
+    commonsFigure('Saburo Aizawa.JPG', {
+      alt: '1935年の相沢事件で永田鉄山軍務局長を殺害した相沢三郎中佐の肖像写真',
+      title: '相沢三郎',
+      dateLabel: '1945年以前',
+      credit: '撮影者不詳／毎日新聞社資料・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1936-02': [
+    commonsFigure('Outbreak of the February 26th Incident.jpg', {
+      alt: '1936年2月26日、二・二六事件で山王下の幸楽を占拠した反乱部隊を撮影した写真',
+      title: '二・二六事件の反乱部隊',
+      dateLabel: '1936年2月26日',
+      credit: '影山光洋／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1936-03': [
+    commonsFigure('Anti-Comintern Pact signing 1936.jpg', {
+      alt: '1936年11月25日、ベルリンで日独防共協定に署名するドイツ側代表と日本側関係者',
+      title: '日独防共協定の署名',
+      dateLabel: '1936年11月25日',
+      credit: '撮影者不詳／Wikimedia Commons',
       license: 'Public Domain',
     }),
   ],

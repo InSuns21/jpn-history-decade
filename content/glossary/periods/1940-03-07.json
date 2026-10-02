@@ -1,0 +1,9 @@
+{
+  "period": "1940-03-07",
+  "termRefs": [
+    {"id":"saito-takao-expulsion-1940","core":true},
+    {"id":"saito-takao-anti-military-speech-1940","core":true},
+    {"id":"yonai-cabinet-1940","core":true},
+    {"id":"wang-jingwei-operation-1938","core":true}
+  ]
+}

@@ -29,7 +29,7 @@ Created: 2026-10-03
 | 03 | 1912–1923 | 3 | completed |
 | 04A | 1931–1933 | 5 | completed |
 | 04B | 1934–1936 | 4 | completed |
-| 05A | 1937-01〜07-26 | 4 | in_progress |
+| 05A | 1937-01〜07-26 | 4 | completed |
 | 05B | 1937-07-27〜10-25 | 4 | pending |
 | 05C | 1937-10〜12 | 4 | pending |
 | 06 | 1938 | 10 | pending |
@@ -178,8 +178,8 @@ Created: 2026-10-03
 - [x] 各ページを4,500字以上または理由付き正式例外へ移行
 - [x] 監査済み4ページを baseline から削除
 - [x] 1936-03→1937-01→1937-06→1937-07-07→1937-07-11→1937-07-27 の接続に矛盾を作らない
-- [ ] GitHub Actions green
-- [ ] Pages deploy green
+- [x] GitHub Actions green
+- [x] Pages deploy green
 
 ## 全体 Definition of Done
 

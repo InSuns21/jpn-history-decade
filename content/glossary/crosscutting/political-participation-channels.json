@@ -236,6 +236,26 @@
     {
       "id": "hiranuma-cabinet-1939",
       "core": false
+    },
+    {
+      "id": "nomonhan-incident-1939",
+      "core": true
+    },
+    {
+      "id": "kwantung-army-1919",
+      "core": false
+    },
+    {
+      "id": "imperial-general-headquarters-1937",
+      "core": true
+    },
+    {
+      "id": "german-soviet-non-aggression-pact-1939",
+      "core": false
+    },
+    {
+      "id": "abe-cabinet-1939",
+      "core": false
     }
   ]
 }

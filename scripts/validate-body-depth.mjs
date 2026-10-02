@@ -3,6 +3,9 @@ import path from 'node:path'
 
 const root = process.cwd()
 const periodsDir = path.join(root, 'content', 'periods')
+const baselinePath = path.join(root, 'standards', 'body-depth-baseline.json')
+const baseline = JSON.parse(fs.readFileSync(baselinePath, 'utf8'))
+const strict = process.argv.includes('--strict')
 const MIN_BODY_CHARS = 4500
 const REASON_MIN_CHARS = 30
 const COVERAGE_MIN_CHARS = 40
@@ -89,12 +92,14 @@ function genericException(text) {
 
 const failures = []
 const reports = []
+const seenPublishedFiles = new Set()
 
 for (const filePath of listMarkdownFiles(periodsDir).sort()) {
   const file = relative(filePath)
   const source = fs.readFileSync(filePath, 'utf8')
   const { frontmatter, body } = splitFrontmatter(source, file)
   if (getStatus(frontmatter) !== 'published') continue
+  seenPublishedFiles.add(file)
 
   const chars = substantiveCharCount(body)
   const marker = body.match(MARKER)
@@ -107,6 +112,8 @@ for (const filePath of listMarkdownFiles(periodsDir).sort()) {
     )
   }
 
+  const baselineChars = baseline[file]
+
   if (chars >= MIN_BODY_CHARS) {
     if (marker) {
       failures.push(
@@ -118,21 +125,43 @@ for (const filePath of listMarkdownFiles(periodsDir).sort()) {
           '). Remove the exception marker.',
       )
     }
+    if (baselineChars !== undefined) {
+      failures.push(
+        file +
+          ': body-depth baseline entry is stale because the page now reaches ' +
+          chars +
+          ' characters. Remove the legacy baseline entry.',
+      )
+    }
     reports.push({ file, chars, status: 'pass' })
     continue
   }
 
   if (!marker) {
+    if (!strict && baselineChars === chars) {
+      reports.push({ file, chars, status: 'legacy-baseline' })
+      continue
+    }
     failures.push(
       file +
         ': substantive body length is ' +
         chars +
         ' characters; published period pages below ' +
         MIN_BODY_CHARS +
-        ' require a body-depth audit exception.',
+        ' require a reasoned body-depth audit exception.' +
+        (baselineChars !== undefined
+          ? ' Legacy baseline was ' + baselineChars + ' characters and no longer matches.'
+          : ''),
     )
     reports.push({ file, chars, status: 'missing-exception' })
     continue
+  }
+
+  if (baselineChars !== undefined) {
+    failures.push(
+      file +
+        ': page now has a reasoned body-depth exception; remove its legacy baseline entry so the migration debt can only shrink.',
+    )
   }
 
   const reason = marker[1].trim()
@@ -159,6 +188,23 @@ for (const filePath of listMarkdownFiles(periodsDir).sort()) {
   reports.push({ file, chars, status: 'exception' })
 }
 
+for (const file of Object.keys(baseline)) {
+  if (!seenPublishedFiles.has(file)) {
+    failures.push(file + ': legacy body-depth baseline entry points to a missing or non-published page.')
+  }
+}
+
+if (strict) {
+  for (const report of reports) {
+    if (report.status === 'legacy-baseline') {
+      failures.push(
+        report.file +
+          ': strict body-depth audit rejects legacy baseline debt; expand the body or add a reasoned exception.',
+      )
+    }
+  }
+}
+
 if (failures.length > 0) {
   console.error('Body-depth audit failed:')
   for (const failure of failures) console.error('- ' + failure)
@@ -173,12 +219,15 @@ if (failures.length > 0) {
 }
 
 const exceptions = reports.filter((item) => item.status === 'exception')
+const legacy = reports.filter((item) => item.status === 'legacy-baseline')
 console.log(
   'Body-depth audit passed for ' +
     reports.length +
     ' published period page(s); ' +
     exceptions.length +
-    ' reasoned exception(s), minimum ' +
+    ' reasoned exception(s), ' +
+    legacy.length +
+    ' legacy page(s) awaiting one-time audit, minimum ' +
     MIN_BODY_CHARS +
     ' substantive characters.',
 )

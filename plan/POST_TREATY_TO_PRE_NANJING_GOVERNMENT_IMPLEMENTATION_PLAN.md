@@ -1,7 +1,7 @@
 # 1940年1月27日から3月29日まで — 無条約状態の定着・総動員統制・議会批判 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH66 ✅ → 反軍演説・史料読解ページ ✅ → JH67 ✅ → map necessity review ✅ no-map → Crosscutting publication gate ✅ → S05 / S10 extension ✅ → 次は phase-end audit necessity judgment
+- **Progress:** phase cut ✅ → JH66 ✅ → 反軍演説・史料読解ページ ✅ → JH67 ✅ → map necessity review ✅ no-map → Crosscutting publication gate ✅ → S05 / S10 extension ✅ → phase-end audit necessity judgment ✅ no-audit → 次は npm run check
 - **Created:** 2026-10-02
 - **Scope:** 1940-01-27〜1940-03-29
 - **Primary goal:** 日米通商航海条約失効後の無条約状態が直ちに全面禁輸や開戦へ転化しなかったこと、総動員統制が工場・土地・海運・米糠流通へ拡張したこと、斎藤隆夫の反軍演説から除名までに議会内の戦争処理批判とその制度的限界が表面化したことを、1940年3月30日の南京国民政府成立を先取りせず説明する
@@ -199,6 +199,19 @@ JH66ではこの問いが実際に次段階へ進んだ。
 
 各年代の隣接確認とpublication gateで解消済みなら独立監査不要とする。
 
+## Judgment result — 2026-10-02
+
+**独立phase-end auditは不要**と判定する。
+
+- **無条約状態＝日米関係改善の読み替え:** JH66は、条約失効後も通商・外交の実務が続いたことを「共通条約を欠いたまま各国の国内法・行政措置へ依存する状態」として記述している。通商継続を関係改善や安定の証拠として扱っておらず、後の輸出規制・資産凍結・石油禁輸・開戦も別の政策判断として分離済みである。
+- **2月1日統制令群の過剰一般化:** JH66は工場・事業場・土地・工作物の使用・管理・収用を「必要時に行政命令の対象にできる法的手段」と説明し、全国の工場・土地が一斉に接収された状態とは分離している。陸運統制令の公布と後年施行も分けており、追加監査を要する対象・時点混同は残っていない。
+- **斎藤除名＝議会機能停止の一本道化:** JH66/JH67は代表質問、速記録削除、懲罰委員会、秘密会、除名を別の制度段階として追い、政党・帝国議会が制度上存続したこと、各政党内の異論と大量棄権があったことも本文へ置いている。制度の存続と批判的議員を保護する政治的余地を分けて説明できている。
+- **反軍演説の後知恵化:** 史料読解ページは「反軍」という通称を現代的な反戦・平和主義へ置き換えず、斎藤の国家競争観、戦争目的・終結条件、汪兆銘新政府の統治能力、国民負担、内閣責任という演説内部の論理を一次史料に沿って分解している。後の政党解消・大政翼賛会・太平洋戦争を演説の意味へ逆算していない。
+- **南京国民政府成立の先取り:** JH66/JH67とも3月29日までは「樹立準備」「成立直前」とし、3月30日の成立を次フェーズの制度境界としている。JH67は成立と日本政府の正式承認も別時点として明示している。
+- **S05/S10と年代記事の役割重複:** JH66/JH67は1940年2〜3月の出来事と制度手続を時系列で説明する。一方S05は「参加・批判の入口」と「議院内部の制裁権限」、S10は「取引条件の統制」から「設備・土地・輸送力の利用権統制」への長期比較へ変換している。年代記事の再編集にはなっていない。
+
+以上は隣接年代確認、史料ページの役割分離、Crosscutting publication gateで既に処理済みであり、複数ページをまとめて再監査しなければ判定できない未解決仮説は残っていない。現行規約どおり、追加の独立全体監査は置かず通常のCI / Pages / 完了処理へ進む。
+
 ---
 
 # 8. 史実確認の主要ソース
@@ -250,8 +263,8 @@ JH66ではこの問いが実際に次段階へ進んだ。
 3. **map necessity review ✅ no-map** — 新規地図を追加しない
 4. **Crosscutting publication gate ✅** — S05 / S10 passing、S09 / S02 hold、新規横断記事なし
 5. **S05 / S10 extension ✅** — S05は代表質問→速記録削除→懲罰→除名という院内制裁回路、S10は工場・土地・海運という資産・能力の利用権への統制拡張として1940年3月29日まで延長
-6. **phase-end audit necessity judgment**
-7. **npm run check**
+6. **phase-end audit necessity judgment ✅ no-audit** — 候補6仮説を確認し、既存本文・史料ページ・S05/S10の役割分離で解消済みと判定
+7. **npm run check** — 次工程
 8. GitHub Actions CI / Pages deploy確認
 9. Status = completed / plan_done archive
 10. 次フェーズ切り出し（1940-03-30〜）
@@ -273,7 +286,7 @@ JH66ではこの問いが実際に次段階へ進んだ。
 - [x] map necessity review completed（no-map）
 - [x] Crosscutting publication gate completed（S05 / S10 passing）
 - [x] passing crosscutting extensions implemented
-- [ ] phase-end audit necessity judgment completed
+- [x] phase-end audit necessity judgment completed（独立監査不要）
 - [ ] npm run check green
 - [ ] GitHub Actions CI green
 - [ ] GitHub Pages deploy green

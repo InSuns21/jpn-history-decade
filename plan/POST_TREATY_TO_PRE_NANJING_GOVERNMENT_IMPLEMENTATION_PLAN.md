@@ -1,7 +1,7 @@
 # 1940年1月27日から3月29日まで — 無条約状態の定着・総動員統制・議会批判 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH66 ✅ → 反軍演説・史料読解ページ ✅ → 次は JH67「1940-03-07〜03-29」
+- **Progress:** phase cut ✅ → JH66 ✅ → 反軍演説・史料読解ページ ✅ → JH67 ✅ → 次は map necessity review
 - **Created:** 2026-10-02
 - **Scope:** 1940-01-27〜1940-03-29
 - **Primary goal:** 日米通商航海条約失効後の無条約状態が直ちに全面禁輸や開戦へ転化しなかったこと、総動員統制が工場・土地・海運・米糠流通へ拡張したこと、斎藤隆夫の反軍演説から除名までに議会内の戦争処理批判とその制度的限界が表面化したことを、1940年3月30日の南京国民政府成立を先取りせず説明する
@@ -271,7 +271,7 @@ JH67は、**議会内批判が実際に除名処分へ至った後の政治状�
 - [x] phase-end audit候補仮説を定義
 - [x] JH66 published / JH65との隣接接続確認完了
 - [x] 斎藤隆夫「反軍演説」の全文・補足を独立した史料読解ページとして公開
-- [ ] JH67 published / JH66との隣接接続確認完了
+- [x] JH67 published / JH66との隣接接続確認完了
 - [ ] map necessity review completed
 - [ ] Crosscutting publication gate completed
 - [ ] passing crosscutting extensions implemented

@@ -31,6 +31,8 @@
 - 平明な教科書調で叙述
 - 編集ステータス、TODO、未実装候補、企画書、変更履歴など制作側の情報は公開しない
 - 公開面は歴史本文、表・図・地図、史料・出典、ナビゲーションを中心とする
+- 歴史理解を助ける図版は Public Domain / CC0 / CC BY を中心に、出典・権利状態を確認して掲載する
+- デザイン品質は「上質な教科書・歴史資料集」を軸に、派手さではなくタイポグラフィ、余白、情報階層、レスポンシブ、アクセシビリティの完成度で高水準を目指す
 
 ## コンテンツ実装方針
 
@@ -91,6 +93,7 @@ Vite の `base` は `./` とし、project site・カスタムドメインのど�
 AI向けの常時ルールは [SYSTEM_PROMPT.md](SYSTEM_PROMPT.md) に置き、**8,000文字以内**をCIで強制します。詳細規約は分離しています。
 
 - [執筆・出典・用語集・内部リンク](standards/CONTENT_AUTHORING_STANDARD.md)
+- [歴史図版の権利・出典・表示](standards/IMAGE_ASSET_STANDARD.md)
 - [地図監査](standards/MAP_AUDIT_STANDARD.md)
 - [実装・CI・plan運用](standards/PROJECT_WORKFLOW_STANDARD.md)
 

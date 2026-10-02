@@ -256,6 +256,14 @@
     {
       "id": "abe-cabinet-1939",
       "core": false
+    },
+    {
+      "id": "saito-takao-anti-military-speech-1940",
+      "core": true
+    },
+    {
+      "id": "saito-takao-expulsion-1940",
+      "core": true
     }
   ]
 }

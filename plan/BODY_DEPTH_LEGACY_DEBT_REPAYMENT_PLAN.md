@@ -357,7 +357,7 @@ Created: 2026-10-03
 
 - [x] baseline 63件をすべて個別監査済みにする
 - [x] `standards/body-depth-baseline.json` を空にする、または移行措置自体を削除する
-- [ ] `npm run validate:body-depth:strict` green
-- [ ] `npm run check` green
+- [x] `npm run validate:body-depth:strict` green
+- [x] `npm run check` green
 - [x] Pages deploy green
 - [ ] 本計画を completed とし `plan_done/` へ移動

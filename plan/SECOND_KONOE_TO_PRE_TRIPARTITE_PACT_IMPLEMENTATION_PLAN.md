@@ -1,7 +1,7 @@
 # 1940年7月22日から9月26日まで — 第2次近衛内閣・基本国策・北部仏印進駐 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH71 ✅ → JH72 ✅ → 次は JH73「1940-08-31〜09-26」
+- **Progress:** phase cut ✅ → JH71 ✅ → JH72 ✅ → JH73 ✅ → 次は A32 map necessity / data-quality judgment
 - **Created:** 2026-10-03
 - **Scope:** 1940-07-22〜1940-09-26
 - **Primary goal:** 第2次近衛内閣成立後、7月26〜27日の国策決定によって南方・対独伊・中国戦争を一つの政策枠へ組み込み始めた過程を、実際の外交・軍事行動と分けて追う。8月の政党解党、米国の輸出管理強化、松岡＝アンリ協定を経て、9月22日の西原＝マルタン協定と23日以後の北部仏印進駐へ至るまでを扱い、9月27日の日独伊三国同盟は次フェーズの開始点へ送る。
@@ -344,7 +344,7 @@ JH71〜JH73実装後、年代記事とは異なる長期比較軸が増えた場
 - [x] phase-end audit候補仮説を定義
 - [x] JH71 published / JH70との隣接接続確認完了
 - [x] JH72 published / JH71との隣接接続確認完了
-- [ ] JH73 published / JH72との隣接接続確認完了
+- [x] JH73 published / JH72との隣接接続確認完了
 - [ ] A32 map necessity / data-quality judgment completed
 - [ ] map実装が必要な場合はData / Style / Human Visual Audit完了
 - [ ] Crosscutting publication gate completed

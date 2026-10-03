@@ -1,0 +1,13 @@
+{
+  "period": "1941-01-22",
+  "termRefs": [
+    {"id":"thai-french-indochina-border-conflict-1940-1941","core":true},
+    {"id":"japan-thai-french-indochina-mediation-1941","core":true},
+    {"id":"shugiin-term-extension-law-1941","core":true},
+    {"id":"japan-netherlands-east-indies-talks-1940","core":false},
+    {"id":"japan-french-indochina-economic-talks-1940","core":false},
+    {"id":"teikoku-gikai","core":false},
+    {"id":"national-general-mobilization-law-1938","core":false},
+    {"id":"second-konoe-cabinet-1940","core":false}
+  ]
+}

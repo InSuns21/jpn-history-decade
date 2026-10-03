@@ -1,7 +1,7 @@
 # 1940年7月22日から9月26日まで — 第2次近衛内閣・基本国策・北部仏印進駐 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH71 ✅ → JH72 ✅ → JH73 ✅ → A32 ✅ adopted / high → A32 map implementation ✅ → Data Audit ✅ → Style Audit ✅ → Human Visual Audit pending → Crosscutting publication gate ✅ → S05 / S09 extension ✅ → S10 / S02 hold → 次は phase-end audit necessity judgment
+- **Progress:** phase cut ✅ → JH71 ✅ → JH72 ✅ → JH73 ✅ → A32 ✅ adopted / high → A32 map implementation ✅ → Data Audit ✅ → Style Audit ✅ → Human Visual Audit ✅ → Crosscutting publication gate ✅ → S05 / S09 extension ✅ → S10 / S02 hold → phase-end audit necessity judgment ✅ no-audit → 次は npm run check / CI / Pages
 - **Created:** 2026-10-03
 - **Scope:** 1940-07-22〜1940-09-26
 - **Primary goal:** 第2次近衛内閣成立後、7月26〜27日の国策決定によって南方・対独伊・中国戦争を一つの政策枠へ組み込み始めた過程を、実際の外交・軍事行動と分けて追う。8月の政党解党、米国の輸出管理強化、松岡＝アンリ協定を経て、9月22日の西原＝マルタン協定と23日以後の北部仏印進駐へ至るまでを扱い、9月27日の日独伊三国同盟は次フェーズの開始点へ送る。
@@ -215,10 +215,10 @@ Polygonの大きさ・外周は実測戦場面積を意味しない。LineString
   - 戦闘方面は半透明の概略面
   - 主要地点は地名ラベル付きpoint
   - 背景の現代OSMを1940年境界・道路網として扱わない旨をreading noteへ明記
-- **Human Visual Audit:** pending
-  - LineString / Polygonを含むためpoint-only再利用例外は適用しない
-  - Pages上でDesktop / Tablet・Touch / Mobile / zoom / ラベル重なり / 凡例 / popupを人間確認してから `published` へ上げる
-  - それまではmap definitionを `draft` / `pending-human` とし、公開面に「監査中です」を表示する。
+- **Human Visual Audit:** passed
+  - LineString / Polygonを含むためpoint-only再利用例外は適用せず、人間確認を実施
+  - 2026-10-03、Pages上の表示をDesktop / Tablet・Touch / Mobile / zoom / ラベル / 凡例 / popup / 不確実性表現の観点で確認し、OK判定
+  - map definitionを `published` / `passed` へ更新し、「監査中です」表示を解除
 ---
 
 # 7. Crosscutting publication gate
@@ -325,20 +325,20 @@ JH71〜JH73実装後に、年代記事とは異なる長期比較軸が増えた
 
 # 9. phase-end audit necessity judgment
 
-独立監査は定型化しない。
+## 判定結果 — independent audit not required
 
-候補仮説:
+候補仮説をJH71〜JH73、Crosscutting publication gate、S05 / S09延長内容に照らして確認した。今回の仮説はすべて、各ページの実装・隣接接続確認・横断publication gateで既に具体的に処理されており、複数ページをまとめて再監査しなければ検出できない未解決問題は残っていない。したがって独立したphase-end auditは実施しない。
 
-- 基本国策要綱・時局処理要綱＝9月の仏印進駐を具体的に確定済み、と圧縮していないか
-- 米国7月輸出管理＝1941年の全面石油禁輸、と同一視していないか
-- 政党解党完了＝大政翼賛会成立、と時点を圧縮していないか
-- 松岡＝アンリ協定＝西原＝マルタン協定＝北部仏印進駐、と制度段階を一つにしていないか
-- 「平和進駐」の公式枠と、実際に発生した国境戦闘・海防爆撃を混同していないか
-- 日蘭会商を、すでに蘭印武力占領が決定した交渉として書いていないか
-- 9月26日の米屑鉄規制発表を、同日即時の全面停止として扱っていないか
-- S05/S09/S02が年代記事の再編集になっていないか
+- **基本国策要綱・時局処理要綱 → 北部仏印進駐の一本道化:** JH71で国策文書を方針枠として扱い、JH72の政府間協定、JH73の現地軍事協定・実行段階と分離済み。
+- **1940年7月の米輸出管理 → 1941年全面石油禁輸の同一視:** JH71 / JH72で許可制・航空ガソリン制限の対象と運用を区別し、後段階を先取りしない構成になっている。
+- **政党解党 → 大政翼賛会成立の時点圧縮:** JH72とS05で、議会・議員が残る一方、既成政党解体後に新全国組織がまだ成立していない移行期を明示した。
+- **松岡＝アンリ協定 → 西原＝マルタン協定 → 進駐の制度混同:** JH72 / JH73 / S09で政府間外交、現地軍事協定、実際の軍事行動を別段階として整理した。
+- **「平和進駐」 → 無戦闘という誤読:** JH73で公式・日本側報告上の「平和的進駐」と、国境戦闘・海防爆撃の実際を併記し、主体と史料系統を分けた。
+- **日蘭会商 → 蘭印占領決定の先取り:** JH72 / JH73で石油等の供給を外交・通商交渉で増やそうとする段階として扱った。
+- **9月26日米屑鉄規制 → 同日即時全面停止:** JH73で公表日と10月中旬の実施時期を分けた。
+- **S05 / S09 / S02の年代記事再編集化:** Crosscutting publication gateでS05は「媒介組織」、S09は「重層的権限配置」という長期比較軸が成立するため延長し、S02 / S10は新しい比較軸が不足するためholdとした。
 
-各年代の隣接確認、Crosscutting publication gate、通常validationで解消済みなら独立監査不要とする。
+`PROJECT_WORKFLOW_STANDARD.md` 5.2の条件に照らし、「念のため」の重複監査は追加しない。
 
 ---
 
@@ -422,10 +422,10 @@ JH71〜JH73実装後に、年代記事とは異なる長期比較軸が増えた
 - [x] JH72 published / JH71との隣接接続確認完了
 - [x] JH73 published / JH72との隣接接続確認完了
 - [x] A32 map necessity / data-quality judgment completed — adopted / high
-- [ ] map実装が必要な場合はData / Style / Human Visual Audit完了 — implementation / Data / Style ✅、Human Visual Audit pending
+- [x] map実装が必要な場合はData / Style / Human Visual Audit完了
 - [x] Crosscutting publication gate completed
 - [x] passing crosscutting extensions implemented — S05 / S09 extension、S10 / S02 hold
-- [ ] phase-end audit necessity judgment completed
+- [x] phase-end audit necessity judgment completed — independent audit not required
 - [ ] npm run check green
 - [ ] GitHub Actions CI green
 - [ ] GitHub Pages deploy green

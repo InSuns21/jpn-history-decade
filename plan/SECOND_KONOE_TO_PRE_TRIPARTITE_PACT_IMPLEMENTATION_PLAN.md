@@ -1,7 +1,7 @@
 # 1940年7月22日から9月26日まで — 第2次近衛内閣・基本国策・北部仏印進駐 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH71 ✅ → JH72 ✅ → JH73 ✅ → A32 ✅ adopted / high → 次は A32 map implementation / audit
+- **Progress:** phase cut ✅ → JH71 ✅ → JH72 ✅ → JH73 ✅ → A32 ✅ adopted / high → A32 map implementation ✅ → Data Audit ✅ → Style Audit ✅ → Human Visual Audit pending
 - **Created:** 2026-10-03
 - **Scope:** 1940-07-22〜1940-09-26
 - **Primary goal:** 第2次近衛内閣成立後、7月26〜27日の国策決定によって南方・対独伊・中国戦争を一つの政策枠へ組み込み始めた過程を、実際の外交・軍事行動と分けて追う。8月の政党解党、米国の輸出管理強化、松岡＝アンリ協定を経て、9月22日の西原＝マルタン協定と23日以後の北部仏印進駐へ至るまでを扱い、9月27日の日独伊三国同盟は次フェーズの開始点へ送る。
@@ -192,11 +192,33 @@ Polygonの大きさ・外周は実測戦場面積を意味しない。LineString
 
 ### 実装方針
 
-- map ID候補: `northern-indochina-advance-1940`
+- map ID: `northern-indochina-advance-1940`
 - 初期表示は北部仏印から雲南南部を収める。
-- point + schematic LineString + small approximate Polygon の構成を許可する。
+- point + schematic LineString + small approximate Polygon の構成とした。
 - 戦闘域Polygonは「戦闘があった方面」を読むための補助面に限定し、前線・勢力圏として描かない。
-- 実装後は Data / Style / Human Visual Audit を行う。
+- JH73の「9月25日〜26日 — ランソン降伏と海防周辺の戦闘が報告された」節直後へ配置する。
+
+### 実装・監査結果
+
+- **Map implementation:** completed
+  - 海防・河内・ラオカイ・昆明を主要交通点として配置
+  - 諒山方面を国境戦闘の代表地点として配置
+  - 海防―河内―ラオカイ―雲南方面を waypoint-derived schematic LineString で表示
+  - 諒山方面・海防周辺を schematic Polygon で表示
+- **Data Audit:** passed
+  - JACARの北部仏印進駐資料で9月23日以後の多数の戦闘と9月26日朝の海防爆撃を確認
+  - FRUS 9月22日電報で海防への部隊到着予定と広西国境方面からの進入圧力を確認
+  - FRUS 3月8日電報で海防から雲南方面へつながる鉄道・道路交通が中国の対外交通として機能していたことを確認
+  - exact route / front / occupation boundary は主張せず、approximate / schematic geometryへ縮退
+- **Style Audit:** passed
+  - 援蒋輸送回廊は破線
+  - 戦闘方面は半透明の概略面
+  - 主要地点は地名ラベル付きpoint
+  - 背景の現代OSMを1940年境界・道路網として扱わない旨をreading noteへ明記
+- **Human Visual Audit:** pending
+  - LineString / Polygonを含むためpoint-only再利用例外は適用しない
+  - Pages上でDesktop / Tablet・Touch / Mobile / zoom / ラベル重なり / 凡例 / popupを人間確認してから `published` へ上げる
+  - それまではmap definitionを `draft` / `pending-human` とし、公開面に「監査中です」を表示する。
 ---
 
 # 7. Crosscutting publication gate
@@ -374,7 +396,7 @@ JH71〜JH73実装後、年代記事とは異なる長期比較軸が増えた場
 - [x] JH72 published / JH71との隣接接続確認完了
 - [x] JH73 published / JH72との隣接接続確認完了
 - [x] A32 map necessity / data-quality judgment completed — adopted / high
-- [ ] map実装が必要な場合はData / Style / Human Visual Audit完了
+- [ ] map実装が必要な場合はData / Style / Human Visual Audit完了 — implementation / Data / Style ✅、Human Visual Audit pending
 - [ ] Crosscutting publication gate completed
 - [ ] passing crosscutting extensions implemented
 - [ ] phase-end audit necessity judgment completed

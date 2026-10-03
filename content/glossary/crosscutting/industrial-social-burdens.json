@@ -176,6 +176,10 @@
     {
       "id": "coal-distribution-control-law-1940",
       "core": true
+    },
+    {
+      "id": "dainihon-sangyo-hokokukai-1940",
+      "core": true
     }
   ]
 }

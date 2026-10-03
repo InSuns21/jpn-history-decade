@@ -272,6 +272,10 @@
     {
       "id": "political-party-dissolutions-1940",
       "core": true
+    },
+    {
+      "id": "taisei-yokusankai-1940",
+      "core": true
     }
   ]
 }

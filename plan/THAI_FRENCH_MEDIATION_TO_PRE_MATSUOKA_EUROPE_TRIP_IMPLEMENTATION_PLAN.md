@@ -1,7 +1,7 @@
 # 1941年1月22日から3月11日まで — 泰仏印国境紛争調停・議員任期延長・総動員法改正 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → 次は JH80「1941-01-22〜01-31」
+- **Progress:** phase cut ✅ → JH80 ✅ → JH81 ✅ → JH82 ✅ → 次は A35 map necessity / data-quality judgment
 - **Created:** 2026-10-04
 - **Scope:** 1941-01-22〜1941-03-11
 - **Primary goal:** 1月21日に日蘭会商が停滞へ入った直後から、タイ・仏領インドシナ国境紛争への日本の調停が停戦・東京会議・調停条項へ進み、国内では衆議院議員任期延長と国家総動員法改正によって政治参加と総動員の制度状態が変化し、対米関係では野村吉三郎大使の着任から秘密会談の回路が生まれるまでを追う。3月11日の泰仏印調停条項仮調印を終点とし、3月12日の松岡洋右外相訪欧出発は次フェーズへ送る。
@@ -322,12 +322,12 @@ JH80〜JH82実装後に判定する。
 - [x] A35をmap necessity / data-quality judgmentとして設定
 - [x] Crosscutting publication gate候補を定義
 - [x] phase-end audit候補仮説を定義
-- [ ] JH80 published / JH79との隣接接続確認完了
-- [ ] JH80 図版採用または理由付きno-image判定完了
-- [ ] JH81 published / JH80との隣接接続確認完了
-- [ ] JH81 図版採用または理由付きno-image判定完了
-- [ ] JH82 published / JH81との隣接接続確認完了
-- [ ] JH82 図版採用または理由付きno-image判定完了
+- [x] JH80 published / JH79との隣接接続確認完了
+- [x] JH80 図版採用または理由付きno-image判定完了
+- [x] JH81 published / JH80との隣接接続確認完了
+- [x] JH81 図版採用または理由付きno-image判定完了
+- [x] JH82 published / JH81との隣接接続確認完了
+- [x] JH82 図版採用または理由付きno-image判定完了
 - [ ] A35 map necessity / data-quality judgment completed
 - [ ] A35採用時のData / Style / Human Visual Audit完了、またはno-map理由記録
 - [ ] Crosscutting publication gate completed

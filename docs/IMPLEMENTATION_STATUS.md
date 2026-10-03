@@ -80,3 +80,5 @@ README には概要だけを置き、フェーズ進捗・監査結果・地図�
 
 - 1940年7月22日〜9月26日フェーズはJH71→JH72→JH73→A32採用・地図実装→Data / Style / Human Visual Audit→Crosscutting publication gate→S05/S09延長→phase-end audit necessity judgment no-audit→npm run check→CI→Pagesまで完了。A32「北部仏印進駐・援蒋ルート・主要交通点」はapproximate / schematic LineString・Polygonを含む公開地図としてHuman Visual Audit passed。計画を `plan_done/SECOND_KONOE_TO_PRE_TRIPARTITE_PACT_IMPLEMENTATION_PLAN.md` へarchiveした。
 - 次フェーズを `plan/TRIPARTITE_PACT_TO_NANJING_RECOGNITION_IMPLEMENTATION_PLAN.md` として1940年9月27日〜11月30日に切り出した。JH74「1940-09-27〜10-11」→JH75「1940-10-12〜10-21」→JH76「1940-10-22〜11-30」→A33 map necessity / data-quality judgmentの構成。三国同盟、大政翼賛会発足、米鉄鋼屑規制の実施強化、日蘭会商の小林代表帰国、11月13日の支那事変処理要綱、11月30日の日華基本条約・日満華共同宣言と南京政府正式承認を扱う。現在地は phase cut ✅ → 次はJH74。
+
+- JH74「1940-09-27〜10-11」を実装。9月27日の日独伊三国同盟を、7月以来の対独伊政治的結束が正式な条約関係へ移る状態遷移として扱い、第三条の攻撃認定・援助方法に三国協議と各国判断の余地が残ることを枢密院審査資料で確認した。9月19日御前会議の説明・質疑から、対米抑止の意図と、英米通商悪化時の石油・長期戦能力への懸念を同じ政策問題として整理。日蘭会商は外務省資料に基づき三国同盟締結後の蘭側硬化を反映しつつ、10月11日時点では会商継続中として16日の共同コミュニケ・21日の小林代表帰国を次ページへ送った。国内では政党解体後も帝国議会が存続し、8月28日以後の新体制準備会が全国組織案を審議している「政党解体後・大政翼賛会発足前」の移行状態を扱った。実質本文5,041字でbody-depth strict閾値を満たし、JH73との隣接接続確認完了。次はJH75「1940-10-12〜10-21」。

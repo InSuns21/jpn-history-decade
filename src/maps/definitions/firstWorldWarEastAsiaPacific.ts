@@ -1,0 +1,97 @@
+import type { HistoricalMapDefinition } from '../schema.ts'
+
+export const firstWorldWarEastAsiaPacificMap: HistoricalMapDefinition = {
+  id: 'ww1-east-asia-pacific-1914-1918',
+  title: '第一次世界大戦期の東アジア・太平洋とシベリア（模式）',
+  historicalQuestion:
+    '欧州で始まった第一次世界大戦は、日本の軍事・外交行動を山東・南洋群島・東部シベリアという離れた空間へどのように広げたのか。',
+  readingNote:
+    '島嶼・都市は代表点、シベリア出兵は東部シベリアの主要接続方向を示す模式線である。南洋群島の点は占領対象となった広大な島嶼群全体の境界を表さず、シベリアの線も部隊配置・占領域・鉄道路線中心線を表さない。背景地図・国境は現代のOpenStreetMapである。',
+  status:'draft',
+  period:{startYear:1914,endYear:1918},
+  initialView:{center:[137.0,30.0],zoom:2.4},
+  timeSlices:[
+    {id:'1918-siberia',label:'1918年',description:'シベリア出兵。ウラジオストクから東部シベリア内陸へ軍事行動が広がる段階。'},
+    {id:'1914-pacific',label:'1914年',description:'対独参戦後、青島・山東と赤道以北の旧ドイツ領南洋群島へ軍事行動が広がる段階。'},
+  ],
+  datasets:[
+    {
+      id:'a10-points',
+      provenance:{
+        sourceId:'a10-official-points',
+        title:'第一次世界大戦期の青島・南洋群島・シベリア出兵関係史料',
+        institution:'外務省外交史料館・アジア歴史資料センター・国立国会図書館',
+        url:'https://www.mofa.go.jp/mofaj/annai/honsho/shiryo/archives/t3-3.html',
+        sourceType:'derived',
+        license:'Site-authored representative coordinates based on official historical descriptions; no historical boundary geometry is copied.',
+        derivedFromSourceIds:['archives-germany-war-1914','jacar-south-seas-timeline','mofa-taisho3-vol3','ndl-siberian-intervention'],
+        temporalCoverage:{from:'1914-08-23',to:'1918-12-31',basis:'range'},
+        spatialCoverage:'山東半島・ミクロネシア・ロシア沿海州から東部シベリア',
+        geometryConfidence:'approximate',
+        transformations:[
+          '公式史料で青島・南洋群島占領と1918年シベリア出兵を確認した。',
+          '青島、サイパン、トラック、パラオ、ヤルート、ウラジオストク、ハバロフスクを現在の同名地域付近の代表座標へ配置した。',
+          '島嶼群境界、占領域、部隊配置は復元していない。',
+        ],
+        notes:'広域展開の距離感と方向を読むための代表点。',
+      },
+      allowedGeometryTypes:['Point'],
+      requiredProperties:['category','marker','label','labelPlacement','year','detail','timeSlice'],
+      features:[
+        {id:'a10-vladivostok',geometry:{type:'Point',coordinates:[131.88,43.12]},properties:{category:'siberia-node',marker:'露',label:'ウラジオストク',labelPlacement:'right',year:'1918',detail:'連合国のシベリア出兵における主要な極東港湾拠点。',timeSlice:'1918-siberia'}},
+        {id:'a10-khabarovsk',geometry:{type:'Point',coordinates:[135.07,48.48]},properties:{category:'siberia-node',marker:'露',label:'ハバロフスク',labelPlacement:'right',year:'1918',detail:'東部シベリア内陸側の主要都市。出兵範囲が港湾だけに限られなかったことを示す代表点。',timeSlice:'1918-siberia'}},
+        {id:'a10-qingdao',geometry:{type:'Point',coordinates:[120.38,36.07]},properties:{category:'shandong-node',marker:'青',label:'青島',labelPlacement:'right',year:'1914',detail:'ドイツ租借地・軍事拠点を日本軍が攻略した山東側の主要地点。',timeSlice:'1914-pacific'}},
+        {id:'a10-saipan',geometry:{type:'Point',coordinates:[145.75,15.18]},properties:{category:'south-seas-node',marker:'島',label:'サイパン',labelPlacement:'right',year:'1914',detail:'赤道以北の旧ドイツ領南洋群島の広がりを示す代表島。',timeSlice:'1914-pacific'}},
+        {id:'a10-truk',geometry:{type:'Point',coordinates:[151.84,7.44]},properties:{category:'south-seas-node',marker:'島',label:'トラック諸島',labelPlacement:'right',year:'1914',detail:'南洋群島中部の代表地点。',timeSlice:'1914-pacific'}},
+        {id:'a10-palau',geometry:{type:'Point',coordinates:[134.48,7.34]},properties:{category:'south-seas-node',marker:'島',label:'パラオ',labelPlacement:'left',year:'1914',detail:'南洋群島西部の代表地点。',timeSlice:'1914-pacific'}},
+        {id:'a10-jaluit',geometry:{type:'Point',coordinates:[169.64,5.91]},properties:{category:'south-seas-node',marker:'島',label:'ヤルート',labelPlacement:'left',year:'1914',detail:'南洋群島東部の代表地点。',timeSlice:'1914-pacific'}},
+      ],
+    },
+    {
+      id:'a10-siberia-axis',
+      provenance:{
+        sourceId:'a10-siberia-axis-schematic',
+        title:'1918年シベリア出兵の東部シベリア接続（模式）',
+        institution:'jpn-history-decade',
+        url:'https://www.ndl.go.jp/modern/cha3/description05.html',
+        sourceType:'derived',
+        license:'Site-authored schematic LineString connecting representative eastern Siberian nodes; no military route geometry is copied.',
+        derivedFromSourceIds:['ndl-siberian-intervention','mofa-siberia-1918'],
+        temporalCoverage:{from:'1918-08-01',to:'1918-12-31',basis:'range'},
+        spatialCoverage:'ウラジオストクからハバロフスク方面',
+        geometryConfidence:'schematic',
+        transformations:[
+          '公式史料で東部シベリアへの派兵を確認した。',
+          '港湾拠点と内陸側主要都市を結ぶ説明用の模式線を作成した。',
+          'シベリア鉄道中心線、部隊別進軍路、占領域は再現していない。',
+        ],
+        notes:'日本軍の全展開範囲を示す線ではなく、港から内陸へ軍事行動が及んだ方向の説明線。',
+      },
+      allowedGeometryTypes:['LineString'],
+      requiredProperties:['category','label','detail','timeSlice'],
+      features:[
+        {id:'a10-vlad-khab-axis',geometry:{type:'LineString',coordinates:[[131.88,43.12],[133.74,45.26],[135.07,48.48]]},properties:{category:'siberia-axis',label:'東部シベリアへの展開方向（模式）',detail:'ウラジオストクから内陸方面への広がりを示す模式線。',timeSlice:'1918-siberia'}},
+      ],
+    },
+  ],
+  layers:[
+    {id:'a10-axis',datasetId:'a10-siberia-axis',categoryProperty:'category',categories:['siberia-axis']},
+    {id:'a10-points-layer',datasetId:'a10-points',categoryProperty:'category',categories:['siberia-node','shandong-node','south-seas-node']},
+  ],
+  legend:[
+    {value:'siberia-axis',label:'東部シベリアへの展開方向（模式）',marker:'線',color:'#6b4e3d',kind:'line',lineStyle:'dashed'},
+    {value:'siberia-node',label:'シベリア出兵の主要参照地点',marker:'露',color:'#69566f'},
+    {value:'shandong-node',label:'山東の主要軍事地点',marker:'青',color:'#76513f'},
+    {value:'south-seas-node',label:'旧ドイツ領南洋群島の代表地点',marker:'島',color:'#3c6670'},
+  ],
+  auditState:{
+    dataAudit:'passed',
+    styleAudit:'passed',
+    visualAudit:'pending-human',
+    notes:[
+      'A10は旧判定で異種空間を同一精度にできないためno-mapだったが、異種レイヤーを分離し、点と模式線の意味を明示すれば広域展開を表現できると再判定した。',
+      '南洋群島を単一polygonにせず代表島点、シベリア出兵を占領域polygonにせず模式的な接続方向とした。',
+      'LineStringを含むためHuman Visual Auditは後送する。',
+    ],
+  },
+}

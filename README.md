@@ -72,7 +72,7 @@ npm run dev
 npm run check
 ```
 
-`check` はSYSTEM_PROMPT文字数、Markdownコンパイルと用語・出典リンク検証、地図監査ガード、ESLint、TypeScript型チェック、Vite本番ビルドを順番に検証します。
+`check` はSYSTEM_PROMPT文字数、Markdownコンパイルと用語・出典リンク検証、本文厚み、年代ページの図版要否判定、地図監査ガード、ESLint、TypeScript型チェック、Vite本番ビルドを順番に検証します。
 
 用語定義は `content/glossary/terms.json` に一度だけ置き、各年代は `content/glossary/periods/<routeKey>.json`、構造史・テーマ史は `content/glossary/crosscutting/<routeKey>.json` からID参照します。用語リンクは `[[term:<id>|表示語]]` を使い、存在しない参照先や、その年代の中核語が本文から一度も利用されていない状態を content compiler で検出します。辞書を一度だけIDインデックス化し、年代ごとの総当たり検索を避けています。
 

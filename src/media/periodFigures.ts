@@ -835,7 +835,7 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     commonsFigure('Matsuoka Yosuke.jpg', {
       alt: '1940年から1941年に外務大臣を務めた松岡洋右の肖像写真',
       title: '松岡洋右',
-      dateLabel: '1941年ごろ',
+      dateLabel: '戦前',
       credit: '作者不詳／国立国会図書館・Wikimedia Commons',
       license: 'Public Domain',
     }),

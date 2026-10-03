@@ -1,0 +1,17 @@
+{
+  "period": "1940-10-22",
+  "termRefs": [
+    {"id":"chongqing-peace-effort-1940","core":true},
+    {"id":"shina-jihen-shori-yoko-1940","core":true},
+    {"id":"nanjing-national-government-1940","core":true},
+    {"id":"japan-china-basic-treaty-1940","core":true},
+    {"id":"japan-manchukuo-china-joint-declaration-1940","core":true},
+    {"id":"dainihon-sangyo-hokokukai-1940","core":true},
+    {"id":"imperial-headquarters-government-liaison-consultation-1940","core":false},
+    {"id":"imperial-headquarters-government-liaison-conference-1937","core":false},
+    {"id":"japan-netherlands-east-indies-talks-1940","core":false},
+    {"id":"second-konoe-cabinet-1940","core":false},
+    {"id":"taisei-yokusankai-1940","core":false},
+    {"id":"wang-jingwei-operation-1938","core":false}
+  ]
+}

@@ -1,13 +1,14 @@
 # 過去地図監査の遡及再判定・実装計画
 
-- **Status:** active
+- **Status:** implementation-complete / archived
 - **Created:** 2026-10-03
+- **Archived:** 2026-10-03
 - **Scope:** A1〜A31 の既存 map necessity / data-quality judgment と現行 MapLibre 実装
 - **Reference baseline:** A32「北部仏印進駐・援蒋ルート・主要交通点」
 - **Primary goal:** 旧来の厳しすぎる geometry 採用基準で no-map / point-only / deferred になった地図を、現行 `MAP_AUDIT_STANDARD.md` の approximate / schematic 正式採用方針で遡及再判定し、採用となったものは地図作成・Data Audit・Style Auditまで実装する
 - **Human Visual Audit:** このplanの実行時点では意図的にスキップし、残件を `docs/MAP_HUMAN_VISUAL_AUDIT_BACKLOG.md` で追跡する
-- **Progress:** R0 inventory ✅ → R1 precision-blocked review ✅ / 4 maps implemented → R2 adopted-but-unregistered ✅ / A20〜A28 9 maps implemented → R3 point-only upgrade review ✅ / no-upgrade → R4 stable published map review ✅ → A11/A17 retain-no-map review ✅ → 次は R5 final validation
-- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](./JPN_HISTORY_DECADE_PLAN.md)
+- **Progress:** R0 inventory ✅ → R1 precision-blocked review ✅ / 4 maps implemented → R2 adopted-but-unregistered ✅ / A20〜A28 9 maps implemented → R3 point-only upgrade review ✅ / no-upgrade → R4 stable published map review ✅ → A11/A17 retain-no-map review ✅ → R5 final validation ✅ → archived
+- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](../plan/JPN_HISTORY_DECADE_PLAN.md)
 - **Map standard:** [MAP_AUDIT_STANDARD.md](../standards/MAP_AUDIT_STANDARD.md)
 
 ---
@@ -434,11 +435,11 @@ Human Visual Audit未了であることは、このplanの `implementation-compl
 - [x] Human Visual Auditが必要な地図は `draft / pending-human` に固定
 - [x] Human Visual Audit残件を `docs/MAP_HUMAN_VISUAL_AUDIT_BACKLOG.md` へ全件登録
 - [x] backlog未登録の `pending-human` 地図がない
-- [ ] `npm run check` green
-- [ ] GitHub Actions green
-- [ ] Pages deploy green（公開ページ参照を変更した場合）
-- [ ] Status = implementation-complete
-- [ ] `plan_done/` へ移動
+- [x] `npm run check` green（GitHub Actions CI #689）
+- [x] GitHub Actions green（CI #689）
+- [x] Pages deploy green（#324）
+- [x] Status = implementation-complete
+- [x] `plan_done/` へ移動
 
 ---
 
@@ -756,3 +757,32 @@ R0〜R4とA11/A17再判定により、A1〜A31の全件について現行基準�
 のいずれかに分類済み。
 
 「完璧なGeoJSONがない」という理由だけでno-mapを維持したA判定は残っていない。
+
+
+---
+
+# 19. R5 — final validation / archive（2026-10-03）
+
+## 最終整合
+
+- A1〜A31の現行基準再判定: completed
+- R1新規4地図: Data / Style passed
+- R2 A20〜A28: 9地図実装、Data / Style passed
+- R3 point-only upgrade review: no-upgrade
+- R4 stable published review: 7地図すべてkeep-existing
+- A11 / A17: precision以外の理由でremain-no-map
+- `visualAudit: pending-human`: 12地図
+- Human Visual Audit backlog: HVA-001〜HVA-012
+- backlog未登録のpending-human: 0
+- pending-human地図はすべて `status: draft`
+- A20はpoint-only再利用例外によりpublished
+
+## Quality gate
+
+- `npm run check` 相当のGitHub Actions CI: **#689 success**
+- GitHub Pages deploy: **#324 success**
+- validated commit: `baf8e30c9d6d9d48f88253f49eda1cda053b00ba`
+
+Human Visual Auditはこのplanの完了条件から明示的に除外しているため、HVA-001〜HVA-012を `docs/MAP_HUMAN_VISUAL_AUDIT_BACKLOG.md` に残した状態でimplementation-completeとする。
+
+今後のHuman Visual Audit完了時は、各地図を `visualAudit: passed`、必要に応じて `status: published` へ昇格し、backlogを更新する。このarchive済みplanへ逐次結果を書き戻さない。

@@ -17,12 +17,7 @@
   - Progress: phase cut ✅ → 次は JH74「1940-09-27〜10-11」
   - 三国同盟、大政翼賛会、米鉄鋼屑規制の実施強化、日蘭会商の小林代表帰国、南京政府正式承認までを状態遷移として追う
 
-### 並行監査・実装
-
-- [MAP_RETRO_AUDIT_AND_IMPLEMENTATION_PLAN.md](./MAP_RETRO_AUDIT_AND_IMPLEMENTATION_PLAN.md)
-  - Scope: A1〜A31の過去map judgment
-  - 現行のapproximate / schematic geometry採用基準で遡及再判定し、採用分は地図作成・Data Audit・Style Auditまで行う
-  - Human Visual Auditは実行時点では後送し、[MAP_HUMAN_VISUAL_AUDIT_BACKLOG.md](../docs/MAP_HUMAN_VISUAL_AUDIT_BACKLOG.md) で残件管理する
+遡及地図監査・実装planは [MAP_RETRO_AUDIT_AND_IMPLEMENTATION_PLAN.md](../plan_done/MAP_RETRO_AUDIT_AND_IMPLEMENTATION_PLAN.md) としてimplementation-complete / archive済み。Human Visual Auditの残件は [MAP_HUMAN_VISUAL_AUDIT_BACKLOG.md](../docs/MAP_HUMAN_VISUAL_AUDIT_BACKLOG.md) で継続管理する。
 
 ## ライフサイクル
 

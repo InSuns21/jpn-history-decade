@@ -8,17 +8,20 @@
 
 プロジェクト全体の目的・原則を定義する。個別フェーズ完了だけでは `plan_done/` へ移動しない。
 
-## 実装計画
+## 現在のactive plan
 
-現在のactive plan:
+### 本線
 
-- [CONTROLLED_ECONOMY_TO_TREATY_EXPIRY_IMPLEMENTATION_PLAN.md](./CONTROLLED_ECONOMY_TO_TREATY_EXPIRY_IMPLEMENTATION_PLAN.md)
-  - Scope: 1939-09-16〜1940-01-26
-  - Progress: phase cut ✅ → JH63 ✅ → JH64 ✅ → JH65 ✅ → map necessity review ✅ no-map → Crosscutting publication gate ✅ → S10 extension ✅ → 次は phase-end audit necessity judgment
+- [SECOND_KONOE_TO_PRE_TRIPARTITE_PACT_IMPLEMENTATION_PLAN.md](./SECOND_KONOE_TO_PRE_TRIPARTITE_PACT_IMPLEMENTATION_PLAN.md)
+  - Scope: 1940-07-22〜1940-09-26
+  - Progress: JH71 ✅ → JH72 ✅ → JH73 ✅ → A32 map necessity / data-quality judgment ✅ adopted / high → 次はA32 map実装
 
-直前の1939年5月11日〜9月15日フェーズは [NOMONHAN_TO_EUROPEAN_WAR_IMPLEMENTATION_PLAN.md](../plan_done/NOMONHAN_TO_EUROPEAN_WAR_IMPLEMENTATION_PLAN.md) として完了・archive済み。
+### 並行監査・実装
 
-現フェーズは、ノモンハン停戦後も続く中国戦争・欧州戦争不介入・国内供給制約を前提に、9月末の総動員行政統轄強化、10月の価格・賃金・電力統制、12月の物資・米穀等の統制拡張、1940年1月の阿部内閣から米内内閣への交代、1月26日の日米通商航海条約失効までを3ページで扱う。条約失効を後年の全面禁輸・石油禁輸・日米開戦と同一視せず、国内統制・内閣・対中戦争・対米関係を別々の状態遷移として追う。
+- [MAP_RETRO_AUDIT_AND_IMPLEMENTATION_PLAN.md](./MAP_RETRO_AUDIT_AND_IMPLEMENTATION_PLAN.md)
+  - Scope: A1〜A31の過去map judgment
+  - 現行のapproximate / schematic geometry採用基準で遡及再判定し、採用分は地図作成・Data Audit・Style Auditまで行う
+  - Human Visual Auditは実行時点では後送し、[MAP_HUMAN_VISUAL_AUDIT_BACKLOG.md](../docs/MAP_HUMAN_VISUAL_AUDIT_BACKLOG.md) で残件管理する
 
 ## ライフサイクル
 
@@ -27,15 +30,17 @@ plan/ で active
   ↓
 実装
   ↓
-監査・受入条件確認
+計画内の受入条件確認
   ↓
 CI green
   ↓
-Pages deploy green
+Pages deploy green（公開変更がある場合）
   ↓
-Status: completed
+Status: completed / implementation-complete
   ↓
 plan_done/ へ移動
 ```
 
 完了後、同じ計画書を `plan/` と `plan_done/` の両方へ残さない。
+
+Human Visual Auditを明示的に別工程へ後送するplanでは、地図を `draft / pending-human` のまま残し、残件を追跡可能なバックログへ登録した時点をそのplanの実装完了条件にできる。Human Visual Audit完了前の地図を監査済みpublished扱いにはしない。

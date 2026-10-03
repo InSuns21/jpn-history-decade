@@ -51,7 +51,7 @@ function ContentBlocks({
         }
 
         return (
-          <h3 className="prose-subheading" key={'heading-' + index}>
+          <h3 id={block.id} className="prose-subheading" key={'heading-' + index}>
             <LinkedText
               text={block.text}
               routeKey={routeKey}

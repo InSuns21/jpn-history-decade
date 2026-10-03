@@ -1,7 +1,7 @@
 # 1940年7月22日から9月26日まで — 第2次近衛内閣・基本国策・北部仏印進駐 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH71 ✅ → JH72 ✅ → JH73 ✅ → A32 ✅ adopted / high → A32 map implementation ✅ → Data Audit ✅ → Style Audit ✅ → Human Visual Audit pending
+- **Progress:** phase cut ✅ → JH71 ✅ → JH72 ✅ → JH73 ✅ → A32 ✅ adopted / high → A32 map implementation ✅ → Data Audit ✅ → Style Audit ✅ → Human Visual Audit pending → Crosscutting publication gate ✅ → S05 / S09 extension ✅ → S10 / S02 hold → 次は phase-end audit necessity judgment
 - **Created:** 2026-10-03
 - **Scope:** 1940-07-22〜1940-09-26
 - **Primary goal:** 第2次近衛内閣成立後、7月26〜27日の国策決定によって南方・対独伊・中国戦争を一つの政策枠へ組み込み始めた過程を、実際の外交・軍事行動と分けて追う。8月の政党解党、米国の輸出管理強化、松岡＝アンリ協定を経て、9月22日の西原＝マルタン協定と23日以後の北部仏印進駐へ至るまでを扱い、9月27日の日独伊三国同盟は次フェーズの開始点へ送る。
@@ -223,7 +223,33 @@ Polygonの大きさ・外周は実測戦場面積を意味しない。LineString
 
 # 7. Crosscutting publication gate
 
-JH71〜JH73実装後、年代記事とは異なる長期比較軸が増えた場合だけ延長する。
+## 判定結果 — S05 / S09 extension、S10 / S02 hold、新規記事なし
+
+JH71〜JH73実装後に、年代記事とは異なる長期比較軸が増えたかで判定した。
+
+- **S05「政治参加の回路」: extend**
+  - 7〜8月の既成政党解党が一巡した一方、帝国議会と議員資格は存続した。
+  - 「選挙・議会があるか」だけでなく、「要求・候補者・議員を継続的に束ねる中間組織があるか」という比較軸が独立して成立する。
+  - 9月26日時点では大政翼賛会成立前であり、政党解体後・新組織成立前の移行状態を比較できる。
+- **S09「対外支配の制度差」: extend**
+  - 北部仏印ではフランスの主権・植民地行政を残したまま、日本軍の駐留・飛行場利用など軍事的権限が重なった。
+  - 台湾・朝鮮の直接植民地統治、関東州の租借、満洲国の国家形式、中国占領地政治機構とは異なる制度類型を追加できる。
+  - 松岡＝アンリ協定、西原＝マルタン協定、実際の進駐・戦闘を分けることで、法的枠・行政・軍事的強制力の差を長期比較できる。
+- **S10「産業社会の負担と保護」: hold**
+  - 米国の輸出管理と蘭印資源交渉は企業の調達条件に影響するが、この区間では国内の企業・労働・家計に新しい統制制度が追加されたとは判定しない。
+  - 外部資源制約を年代記事から再掲するだけになるため延長しない。
+- **S02「石高制・貨幣経済・財政」: hold**
+  - 基本国策・南方経済施策は重要だが、この区間だけで税、公債、特別会計、中央銀行信用など新しい財政調達回路が成立したとは判定しない。
+  - 既存の戦時財政説明を再掲するだけになるため延長しない。
+- **新規横断記事: no**
+  - 「南進論」「資源外交」「対米経済規制」は、1941年の資産凍結・石油供給制限など複数フェーズをまたぐ比較材料が揃ってから再判定する。
+
+### 実装結果
+
+- S05を1940年9月26日まで延長し、「議会は残るが政党という媒介組織が消えた」移行状態を追加した。
+- S09を1940年9月26日まで延長し、「フランス植民地行政＋日本軍駐留」という重層的権限配置を追加した。
+- S10 / S02は変更しない。
+- 横断記事の新規追加は行わない。
 
 ## S05「政治参加の回路」
 
@@ -397,8 +423,8 @@ JH71〜JH73実装後、年代記事とは異なる長期比較軸が増えた場
 - [x] JH73 published / JH72との隣接接続確認完了
 - [x] A32 map necessity / data-quality judgment completed — adopted / high
 - [ ] map実装が必要な場合はData / Style / Human Visual Audit完了 — implementation / Data / Style ✅、Human Visual Audit pending
-- [ ] Crosscutting publication gate completed
-- [ ] passing crosscutting extensions implemented
+- [x] Crosscutting publication gate completed
+- [x] passing crosscutting extensions implemented — S05 / S09 extension、S10 / S02 hold
 - [ ] phase-end audit necessity judgment completed
 - [ ] npm run check green
 - [ ] GitHub Actions CI green

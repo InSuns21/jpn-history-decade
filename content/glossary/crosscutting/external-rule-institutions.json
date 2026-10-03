@@ -124,6 +124,18 @@
     {
       "id": "nanjing-national-government-1940",
       "core": true
+    },
+    {
+      "id": "matsuoka-henry-agreement-1940",
+      "core": true
+    },
+    {
+      "id": "nishihara-martin-agreement-1940",
+      "core": true
+    },
+    {
+      "id": "northern-french-indochina-advance-1940",
+      "core": true
     }
   ]
 }

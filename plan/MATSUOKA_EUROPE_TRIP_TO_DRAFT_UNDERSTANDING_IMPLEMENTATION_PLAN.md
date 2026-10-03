@@ -1,7 +1,7 @@
 # 1941年3月12日から4月22日まで — 松岡訪欧・日ソ中立条約・日米諒解案 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH83 ✅ → JH84 ✅ → JH85 ✅ → A36 ✅ adopted / medium・point-only → 次は Crosscutting publication gate
+- **Progress:** phase cut ✅ → JH83 ✅ → JH84 ✅ → JH85 ✅ → A36 ✅ adopted / medium・point-only → Crosscutting publication gate ✅ → S05 / S10 extension ✅ → S02 / S09 hold → 次は phase-end audit necessity judgment
 - **Created:** 2026-10-04
 - **Scope:** 1941-03-12〜1941-04-22
 - **Primary goal:** 3月12日の松岡洋右外相の訪欧出発から、ドイツ・イタリア・ソ連との外交、4月13日の日ソ中立条約、野村吉三郎・ハル国務長官間の非公式対話が4月16日の「日米諒解案」を基礎とする正式交渉への入口へ進み、4月22日に帰国した松岡がその処理をめぐって政府内調整へ加わるまでを追う。枢軸・対ソ・対米の三つの外交回路を一本の「開戦への道」に圧縮せず、それぞれの目的・制約・手続を区別する。
@@ -235,6 +235,19 @@ JH83〜JH85実装後に判定する。
 
 ---
 
+## Crosscutting 判定結果
+
+- **S05「政治参加の回路」:** extend
+  - 2月の政治活動禁止・選挙延期から、4月2日の機能刷新による行政補助・国民運動組織への再配置までを追加した。
+- **S10「産業社会の負担と保護」:** extend
+  - 3月20日の改正国家総動員法施行から、4月4日の第1四半期物資動員暫定実施計画による供給見積り・用途別配当・輸送計画へ比較軸を進めた。
+- **S02「石高制・貨幣経済・財政」:** hold
+  - 現行S02の時系列は1937年11月で止まっている。1941年4月の日銀券発行限度・外国為替管理法改正だけを飛び石で追加すると1938〜40年の財政金融統制を欠いた長期比較になるため、このフェーズでは延長しない。別途、連続した1937〜41年の橋渡しが必要。
+- **S09「対外支配の制度差」:** hold
+  - 泰仏印調停の制度状態は3月11日の仮調印から5月9日の仏タイ平和条約まで更新途上であり、このフェーズで新しい支配制度類型を追加しない。
+- **新規「日米交渉」横断記事:** no
+  - 4月16日は政府間交渉への入口。5〜11月の修正案、首脳会談構想、最終交渉までを見てから独立記事を再判定する。
+
 # 8. phase-end audit necessity judgment 候補
 
 フェーズ末に、以下が各年代の隣接確認・publication gateで解消済みかを判定する。
@@ -317,8 +330,8 @@ JH83〜JH85実装後に判定する。
 - [x] JH85 図版採用または理由付きno-image判定完了
 - [x] A36 map necessity / data-quality judgment completed
 - [x] A36採用時の必要監査完了、またはno-map理由記録
-- [ ] Crosscutting publication gate completed
-- [ ] passing crosscutting extensions implemented
+- [x] Crosscutting publication gate completed
+- [x] passing crosscutting extensions implemented
 - [ ] phase-end audit necessity judgment completed
 - [ ] npm run check green
 - [ ] GitHub Actions CI green

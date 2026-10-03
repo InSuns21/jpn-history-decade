@@ -6,6 +6,7 @@
 - **Reference baseline:** A32「北部仏印進駐・援蒋ルート・主要交通点」
 - **Primary goal:** 旧来の厳しすぎる geometry 採用基準で no-map / point-only / deferred になった地図を、現行 `MAP_AUDIT_STANDARD.md` の approximate / schematic 正式採用方針で遡及再判定し、採用となったものは地図作成・Data Audit・Style Auditまで実装する
 - **Human Visual Audit:** このplanの実行時点では意図的にスキップし、残件を `docs/MAP_HUMAN_VISUAL_AUDIT_BACKLOG.md` で追跡する
+- **Progress:** R0 inventory ✅ → R1 precision-blocked review ✅ / adopted 4 maps implemented → 次は R2 adopted-but-unregistered maps
 - **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](./JPN_HISTORY_DECADE_PLAN.md)
 - **Map standard:** [MAP_AUDIT_STANDARD.md](../standards/MAP_AUDIT_STANDARD.md)
 
@@ -422,7 +423,7 @@ Human Visual Audit未了であることは、このplanの `implementation-compl
 
 # 11. Definition of Done
 
-- [ ] A1〜A31の旧判定を全件inventory化
+- [x] A1〜A31の旧判定を全件inventory化
 - [ ] A1〜A31を現行 `MAP_AUDIT_STANDARD.md` で再判定
 - [ ] 「精密vectorがない」だけを理由にno-mapを維持した案件が残っていない
 - [ ] `adopt-and-implement` 判定の地図を実装
@@ -459,3 +460,147 @@ Human Visual Audit未了であることは、このplanの `implementation-compl
 Human Visual Auditの残件管理の正本は `docs/MAP_HUMAN_VISUAL_AUDIT_BACKLOG.md` とする。
 
 このplanへHuman Visual Audit結果を逐次書き戻す必要はない。
+
+
+---
+
+# 13. R0 — A1〜A31 inventory（2026-10-03）
+
+旧planの判定と、2026-10-03時点の `src/maps/registry.ts` 実装状態を突合した。
+
+| A | 主題 | 旧判定 | R0時点の実装状態 | 次工程 |
+|---|---|---|---|---|
+| A1 | 幕末初期の来航地点・港・海防 | adopted | published / Human passed | R4 |
+| A2 | 条約港と国内交通 | adopted | published / Human passed | R4 |
+| A3 | 戊辰戦争の空間展開 | adopted | published / Human passed | R4 |
+| A4 | 廃藩置県前後の行政構造 | no-map | none | R1 |
+| A5 | 士族反乱・西南戦争 | adopted | published / Human passed | R4 |
+| A6 | 1872〜1890鉄道 | deferred / no-map | none | R1 |
+| A7 | 日清・日露戦争 | no-map | none | R1 |
+| A8 | 1890年代〜1910年代初頭の産業・鉄道 | no-map | none | R1 |
+| A9 | 植民地統治 | no-map | none | R1 |
+| A10 | 第一次世界大戦と東アジア・太平洋 | no-map | none | R1 |
+| A11 | 米騒動 | no-map | none | retain-no-map再判定 |
+| A12 | 1920年人口・都市化 | adopted | published / Human passed | R4 |
+| A13 | 関東大震災 | no-map | none | R1 |
+| A14 | 1930年人口・都市化 | adopted | published / reused-pattern | R4 |
+| A15 | 山東・満洲政治／軍事空間 | no-map | none | R1 |
+| A16 | 満州事変 | adopted / point-only | published / reused-pattern | R3 |
+| A17 | 国際連盟・外交 | no-map | none | retain-no-map再判定 |
+| A18 | 1935年華北政治・軍事空間 | no-map | none | R1 |
+| A19 | 二・二六事件東京 | adopted / point-only | published / reused-pattern | R3 |
+| A20 | 盧溝橋事件初期 | adopted | registry未実装 | R2 |
+| A21 | 上海都市政治・軍事空間 | adopted | registry未実装 | R2 |
+| A22 | 上海・杭州湾作戦空間 | adopted | registry未実装 | R2 |
+| A23 | 上海・南京間の進攻空間 | adopted | registry未実装 | R2 |
+| A24 | 南京市街・安全区 | adopted | registry未実装 | R2 |
+| A25 | 徐州・津浦／隴海鉄道 | adopted | registry未実装 | R2 |
+| A26 | 黄河決壊・河南／武漢前面 | adopted / high | registry未実装 | R2 |
+| A27 | 武漢・広東攻略・対外補給 | adopted / high | registry未実装 | R2 |
+| A28 | 海南島・華南／仏印交通 | adopted / high | registry未実装 | R2 |
+| A29 | ノモンハン時点別地図 | adopted | published / Human passed | R4 |
+| A30 | 天津租界封鎖・法域空間 | no-map | none | R1 |
+| A31 | 南京国民政府成立後の政治機構・法域 | no-map | none | R1 |
+
+R0で、**A20〜A28は「判定済みなのにregistryへ実装されていない」実装債務**として明確化した。これはR2で処理する。
+
+---
+
+# 14. R1 — 旧no-map precision-blocked群の遡及再判定（2026-10-03）
+
+## 判定結果
+
+| A | retroDecision | necessity | 理由 |
+|---|---|---:|---|
+| A4 | remain-no-map | medium | 問いの核心が廃藩置県前後の行政構造で、飛地・藩領・短期府県再編の**採録網羅性と行政単位定義**が不足する。少数代表点へ縮退すると全国再編を代表しているように見えるため、precision緩和だけでは解決しない。 |
+| A6 | **adopt-and-implement** | high | 「正確な線路中心線」ではなく、1872年の短区間から1889年の長距離接続への変化が問い。主要都市waypointを結ぶschematic LineStringで十分。 |
+| A7 | **adopt-and-implement** | high | 日清・日露戦争の問いは日別前線ではなく、朝鮮・遼東・満洲・海峡へ広がる主要戦域の相対配置。主要戦場point + schematic campaign axisへ縮退できる。 |
+| A8 | remain-no-map | medium | 鉄道だけならA6方式で模式化できるが、A8の中心は1890〜1910年代の**産業分布と鉄道網の全国比較**。工場地点・業種・規模の同一採録基準がなく、A6と重複する鉄道線だけを作ると問いが鉄道へ偏る。 |
+| A9 | remain-no-map | medium | 植民地、保護国統治、租借地、鉄道権益は法的類型そのものが中心。境界を粗くするだけでは法的地位差を正しく示せず、point-onlyでも領域性を失う。 |
+| A10 | **adopt-and-implement** | high | 青島・南洋群島・シベリアを同一geometryへ潰す必要はない。山東point、南洋の代表島point、シベリアの模式接続線を別レイヤーにすれば広域展開を表現できる。 |
+| A13 | remain-no-map（今回） | high | 地図必要性は高いが、焼失域画像を見ていない状態で作者判断だけのpolygonを作るのは現行標準でも不可。問題はvectorでないことではなく、**geometry生成手順を再現可能に説明できるまでの原図照合不足**。暴力地点は採録基準が別問題なので混ぜない。 |
+| A15 | **adopt-and-implement** | high | 北伐北上方向と南満洲鉄道回廊を別のschematic line、済南・奉天・皇姑屯等をpointとして分離できる。関東州の法的polygonは描かない。 |
+| A18 | remain-no-map | high | 中心問いが塘沽停戦区域・冀東側統治・冀察政務委員会管轄・軍事影響の**法的／実効的な不一致**。概略polygonが制度境界の存在を偽装しやすく、point-onlyも問いを失う。 |
+| A30 | remain-no-map | high | 1939年租界図は時点面で有力だが、公開vector化に使える高精細原資料の利用条件が未確認。これはprecisionではなく**license + temporal control**の問題。 |
+| A31 | remain-no-map | medium | 南京政府・華北政務委員会・日本軍占領・重慶政府を連続面として描くと、名目的管轄・実効支配・承認を混同する。地図必要性自体も制度比較記事より低い。 |
+
+## R1実装済み
+
+### A6
+
+- oldDecision: deferred / historical route geometry provenance insufficient
+- retroDecision: adopt-and-implement
+- mapNecessity: high
+- historicalQuestion: 1872年の短区間鉄道から1889年の新橋―神戸長距離接続へ何が変わったか
+- allowedGeometry: approximate Point + waypoint-derived schematic LineString
+- geometryConfidence: approximate / schematic
+- keySources: 国立公文書館「新橋・横浜間の鉄道」「東海道線全線開通」
+- transformations: 主要都市を代表点化し、接続順だけを模式線化。歴史線路中心線はトレースしない
+- readerUncertaintyNote: 正確な線路中心線・駅構内・距離測定には使わない
+- implementation: `railway-expansion-1872-1890` / route `1886` の `justice-transport` 後
+- dataAudit: passed
+- styleAudit: passed
+- visualAudit: pending-human
+- humanBacklogId: HVA-001
+
+### A7
+
+- oldDecision: no-map
+- retroDecision: adopt-and-implement
+- mapNecessity: high
+- historicalQuestion: 日清・日露戦争の主要戦域が朝鮮・遼東・満洲・海峡へどう広がったか
+- allowedGeometry: approximate Point + schematic campaign-axis LineString
+- geometryConfidence: approximate / schematic
+- keySources: 国立公文書館の日清・日露戦争資料、JACAR日露戦争特別展
+- transformations: 主要戦場・政治中心を代表点化し、戦域の方向だけを模式線化
+- readerUncertaintyNote: 部隊進軍路・前線・占領境界ではない
+- implementation: `sino-russo-japanese-war-theaters-1894-1905` / route `1901` の `portsmouth` 後
+- dataAudit: passed
+- styleAudit: passed
+- visualAudit: pending-human
+- humanBacklogId: HVA-002
+
+### A10
+
+- oldDecision: no-map
+- retroDecision: adopt-and-implement
+- mapNecessity: high
+- historicalQuestion: 第一次世界大戦が日本の行動空間を山東・南洋・シベリアへどう広げたか
+- allowedGeometry: approximate Point + schematic LineString
+- geometryConfidence: approximate / schematic
+- keySources: 外務省『日本外交文書』大正3年第3冊、JACAR南洋群島年表、国立国会図書館シベリア出兵
+- transformations: 山東は都市point、南洋は代表島point、シベリアは港から内陸への接続方向を模式線化
+- readerUncertaintyNote: 南洋pointは領域境界、シベリア線は部隊展開全域を意味しない
+- implementation: `ww1-east-asia-pacific-1914-1918` / route `1915` の `siberia-rice` 後
+- dataAudit: passed
+- styleAudit: passed
+- visualAudit: pending-human
+- humanBacklogId: HVA-003
+
+### A15
+
+- oldDecision: no-map
+- retroDecision: adopt-and-implement
+- mapNecessity: high
+- historicalQuestion: 北伐・山東出兵・南満洲鉄道権益・張作霖爆殺事件がどの異なる空間で重なったか
+- allowedGeometry: approximate Point + two kinds of schematic LineString
+- geometryConfidence: approximate / schematic
+- keySources: 国立国会図書館「山東出兵に関する閣議決定」、防衛研究所「張作霖爆殺事件」
+- transformations: 南京―済南―北京を北伐の北上方向、大連―奉天―長春を満鉄主要回廊として別線化
+- readerUncertaintyNote: 北伐軍の実進路・満鉄中心線・関東州境界ではない
+- implementation: `shandong-manchuria-1927-1928` / route `1926` の `zhang-assassination` 後
+- dataAudit: passed
+- styleAudit: passed
+- visualAudit: pending-human
+- humanBacklogId: HVA-004
+
+## R1完了判定
+
+R1対象11件について、旧no-mapをそのまま維持せず理由を分解した。
+
+- **precisionだけが障壁だった4件（A6 / A7 / A10 / A15）は採用へ反転し、draft実装まで完了**
+- A4 / A8 / A9 / A13 / A18 / A30 / A31は、網羅性、問いとの重複、法的境界、原図変換根拠、ライセンス／時点などprecision以外の具体的理由でremain-no-map
+- 新規4地図はData / Style Audit passed
+- Human Visual Auditは計画どおり後送し、HVA-001〜004へ登録
+
+次工程は **R2「A20〜A28 adopted-but-unregistered maps」**。

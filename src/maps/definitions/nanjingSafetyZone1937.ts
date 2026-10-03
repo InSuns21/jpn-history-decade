@@ -1,0 +1,102 @@
+import type { HistoricalMapDefinition } from '../schema.ts'
+
+export const nanjingSafetyZone1937Map: HistoricalMapDefinition = {
+  id:'nanjing-safety-zone-1937',
+  title:'1937年12月の南京市街と安全区（概略）',
+  historicalQuestion:
+    '南京安全区は南京全市ではなく城内の一部に置かれ、長江・下関方面とは別の空間だったことをどう理解できるか。',
+  readingNote:
+    '安全区の面はFRUSの道路・交差点による境界記述と1937年南京歴史地理資料を参照して本サイト側で一般化した概略面で、現代道路を逆投影した精密境界ではない。長江の線は水系の位置関係を示す概略軸で、1937年の水際線ではない。個別の殺害・性暴力・略奪地点は表示しない。',
+  status:'draft',
+  period:{startYear:1937,endYear:1937},
+  initialView:{center:[118.79,32.065],zoom:10.0},
+  datasets:[
+    {
+      id:'a24-safety-zone-area',
+      provenance:{
+        sourceId:'a24-nanjing-safety-zone-schematic',
+        title:'南京安全区境界記述から作成した概略面',
+        institution:'jpn-history-decade',
+        url:'https://history.state.gov/historicaldocuments/frus1937v03/d776',
+        sourceType:'derived',
+        license:'Site-authored approximate polygon based on public-domain U.S. diplomatic boundary descriptions and historical place-name control; no modern road polygon is copied.',
+        derivedFromSourceIds:['frus-nanking-safety-zone-nov22-1937','nanjing-1937-historical-placenames'],
+        temporalCoverage:{from:'1937-11-22',to:'1937-12-31',basis:'range'},
+        spatialCoverage:'南京城内西北寄り',
+        geometryConfidence:'approximate',
+        transformations:[
+          'FRUSのNorth Chung Shan Road、Shansi Road、Sikang Road、Hankow Road、Shanghai Road、Han Chung Road等による境界記述を確認した。',
+          '1937年歴史地名資料で相対配置を照合し、法的・街路単位の精密境界ではなく説明用の一般化polygonを作成した。',
+          '現代道路中心線をそのまま境界へ転用していない。',
+        ],
+        notes:'安全区の位置・規模感を読むための概略面。面積・街区帰属判定には使わない。',
+      },
+      allowedGeometryTypes:['Polygon'],
+      requiredProperties:['category'],
+      features:[{id:'safety-zone-schematic',geometry:{type:'Polygon',coordinates:[[[118.768,32.043],[118.792,32.043],[118.797,32.061],[118.793,32.076],[118.771,32.076],[118.763,32.061],[118.768,32.043]]]},properties:{category:'safety-zone'}}],
+    },
+    {
+      id:'a24-reference-points',
+      provenance:{
+        sourceId:'a24-nanjing-reference-points',
+        title:'南京安全区・下関周辺の主要参照地点',
+        institution:'jpn-history-decade',
+        url:'https://www.sciengine.com/CSD/doi/10.11922/csdata.2017.0001.zh',
+        sourceType:'derived',
+        license:'Site-authored approximate representative coordinates informed by the published 1937 Nanjing historical place-name dataset and contemporary documents.',
+        derivedFromSourceIds:['nanjing-1937-historical-placenames','frus-nanking-safety-zone-nov22-1937'],
+        temporalCoverage:{from:'1937-11-01',to:'1937-12-31',basis:'range'},
+        spatialCoverage:'南京城内・下関',
+        geometryConfidence:'approximate',
+        transformations:[
+          '1937年市街の歴史地名と安全区関係施設の位置を照合した。',
+          '施設・地区を代表点として配置した。',
+        ],
+        notes:'施設敷地境界ではなく代表位置。',
+      },
+      allowedGeometryTypes:['Point'],
+      requiredProperties:['category','marker','label','labelPlacement','year','detail'],
+      features:[
+        {id:'nanking-university',geometry:{type:'Point',coordinates:[118.779,32.058]},properties:{category:'safety-zone-node',marker:'安',label:'金陵大学周辺',labelPlacement:'left',year:'1937-12',detail:'安全区運用に関係した大学・施設が集まる区域の代表点。'}},
+        {id:'drum-tower',geometry:{type:'Point',coordinates:[118.787,32.064]},properties:{category:'city-reference',marker:'市',label:'鼓楼付近',labelPlacement:'right',year:'1937-12',detail:'南京城内北西部の位置参照点。'}},
+        {id:'xiaguan',geometry:{type:'Point',coordinates:[118.745,32.105]},properties:{category:'river-reference',marker:'江',label:'下関方面',labelPlacement:'left',year:'1937-12',detail:'長江沿岸の港・渡河側を示す代表地域。安全区とは別の空間。'}},
+      ],
+    },
+    {
+      id:'a24-yangtze-axis',
+      provenance:{
+        sourceId:'a24-yangtze-axis-schematic',
+        title:'南京付近の長江概略軸',
+        institution:'jpn-history-decade',
+        sourceType:'derived',
+        license:'Site-authored schematic line for orientation only.',
+        derivedFromSourceIds:['nanjing-1937-historical-placenames'],
+        temporalCoverage:{from:'1937-01-01',to:'1937-12-31',basis:'range'},
+        spatialCoverage:'南京北西〜北東側',
+        geometryConfidence:'schematic',
+        transformations:['南京市街と下関の相対位置を説明するため、長江の大方向のみを簡略線で表示した。','1937年水際線・河道中心線の精密復元は行っていない。'],
+        notes:'方向参照用。河幅・河岸位置の測定不可。',
+      },
+      allowedGeometryTypes:['LineString'],
+      requiredProperties:['category','label','detail'],
+      features:[{id:'yangtze-axis',geometry:{type:'LineString',coordinates:[[118.70,32.10],[118.75,32.13],[118.82,32.15],[118.90,32.14]]},properties:{category:'river-axis',label:'長江の概略軸',detail:'南京市街北側を流れる長江の位置関係を示す概略線。'}}],
+    },
+  ],
+  layers:[
+    {id:'a24-area',datasetId:'a24-safety-zone-area',categoryProperty:'category',categories:['safety-zone']},
+    {id:'a24-river',datasetId:'a24-yangtze-axis',categoryProperty:'category',categories:['river-axis']},
+    {id:'a24-points',datasetId:'a24-reference-points',categoryProperty:'category',categories:['safety-zone-node','city-reference','river-reference']},
+  ],
+  legend:[
+    {value:'safety-zone',label:'南京安全区（概略）',marker:'域',color:'#6f6a4b',kind:'area'},
+    {value:'river-axis',label:'長江の概略軸',marker:'川',color:'#426b79',kind:'line',lineStyle:'dashed'},
+    {value:'safety-zone-node',label:'安全区内の代表地点',marker:'安',color:'#596b48'},
+    {value:'city-reference',label:'市街参照点',marker:'市',color:'#655d55'},
+    {value:'river-reference',label:'長江・下関方面',marker:'江',color:'#3e6373'},
+  ],
+  auditState:{dataAudit:'passed',styleAudit:'passed',visualAudit:'pending-human',notes:[
+    'A24はadopted/highを維持し、安全区をapproximate polygonとして実装した。',
+    '個別加害地点を分布図化せず、安全区・市街・長江／下関の位置関係だけを扱う。',
+    'polygon・LineStringを含むためHuman Visual Auditは後送する。',
+  ]},
+}

@@ -6,7 +6,7 @@
 - **Reference baseline:** A32「北部仏印進駐・援蒋ルート・主要交通点」
 - **Primary goal:** 旧来の厳しすぎる geometry 採用基準で no-map / point-only / deferred になった地図を、現行 `MAP_AUDIT_STANDARD.md` の approximate / schematic 正式採用方針で遡及再判定し、採用となったものは地図作成・Data Audit・Style Auditまで実装する
 - **Human Visual Audit:** このplanの実行時点では意図的にスキップし、残件を `docs/MAP_HUMAN_VISUAL_AUDIT_BACKLOG.md` で追跡する
-- **Progress:** R0 inventory ✅ → R1 precision-blocked review ✅ / adopted 4 maps implemented → 次は R2 adopted-but-unregistered maps
+- **Progress:** R0 inventory ✅ → R1 precision-blocked review ✅ / 4 maps implemented → R2 adopted-but-unregistered ✅ / A20〜A28 9 maps implemented → 次は R3 point-only upgrade review
 - **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](./JPN_HISTORY_DECADE_PLAN.md)
 - **Map standard:** [MAP_AUDIT_STANDARD.md](../standards/MAP_AUDIT_STANDARD.md)
 
@@ -604,3 +604,56 @@ R1対象11件について、旧no-mapをそのまま維持せず理由を分解�
 - Human Visual Auditは計画どおり後送し、HVA-001〜004へ登録
 
 次工程は **R2「A20〜A28 adopted-but-unregistered maps」**。
+
+
+---
+
+# 15. R2 — adopted-but-unregistered maps A20〜A28（2026-10-03）
+
+旧planで地図採用判定まで完了していたA20〜A28を、現行MAP_AUDIT_STANDARDで再確認し、9件すべて実装した。
+
+| A | retroDecision | 現行geometry | 実装状態 |
+|---|---|---|---|
+| A20 | keep-adopted / implement | approximate Pointのみ | published / reused-pattern |
+| A21 | keep-adopted / implement | schematic租界Polygon + approximate Point | draft / pending-human |
+| A22 | keep-adopted / upgrade | approximate Point + 上陸方面schematic Polygon | draft / pending-human |
+| A23 | keep-adopted / upgrade | approximate Point + 西進方向schematic LineString | draft / pending-human |
+| A24 | keep-adopted / implement | 安全区approximate Polygon + Point + 長江概略LineString | draft / pending-human |
+| A25 | keep-adopted / implement | Point + 津浦／隴海generalized LineString | draft / pending-human |
+| A26 | keep-adopted / implement | Point + 黄河／鉄道generalized LineString + 洪水方向schematic LineString | draft / pending-human |
+| A27 | keep-adopted / implement | Point + 主要交通軸generalized LineString + 代替補給schematic corridor | draft / pending-human |
+| A28 | keep-adopted / implement | Point + 仏印―雲南generalized LineString + 広西方面schematic corridor | draft / pending-human |
+
+## 実装配置
+
+- A20 `lugouqiao-initial-1937` → `1937-07-07` / `missing-soldier-and-wanping` 後
+- A21 `shanghai-urban-1937` → `1937-08-13` / `international-city` 後
+- A22 `hangzhou-bay-landing-1937` → `1937-10-26` / `spatial-change` 後
+- A23 `shanghai-nanjing-advance-1937` → `1937-11-13` / `control-line` 後
+- A24 `nanjing-safety-zone-1937` → `1937-12-14` / `violence-in-safety-zone` 後
+- A25 `xuzhou-rail-1938` → `1938-04-01` / `april-7-xuzhou-order` 後
+- A26 `yellow-river-flood-1938` → `1938-05-20` / `yellow-river-breach` 後
+- A27 `wuhan-guangdong-supply-1938` → `1938-09-30` / `wuhan-occupation` 後
+- A28 `hainan-supply-1939` → `1939-02-10` / `hainan` 後
+
+## 現行基準での変更点
+
+- **A20:** 旧point-only判定を維持。線・面を増やしても中心問いへの追加価値が小さいため、再利用例外でpublished。
+- **A21:** Historical GISの精密vectorをそのまま取り込む代わりに、租界の相対配置を示すschematic areaへ一般化。中国側市街・前線は非表示。
+- **A22:** 旧point-only上限から、金山衛周辺の「上陸方面」だけを小さなschematic Polygonへ拡張。進軍路は引かない。
+- **A23:** 旧point-only上限から、主要都市列を結ぶ「西進方向」schematic lineへ拡張。実進軍路・制令線・鉄道ではないことを明示。
+- **A24:** FRUS境界記述と1937年歴史地名を根拠に安全区をapproximate Polygon化。個別加害地点は表示しない。
+- **A25:** 徐州の交通結節性のみを津浦／隴海鉄道の一般化線で表現。作戦線は非表示。
+- **A26:** 浸水polygonは引き続き不採用。黄河・鉄道・洪水の大方向を別線種で表示。
+- **A27:** 作戦経過図ではなく交通・補給構造図。香港経路を主要としつつ仏印・ビルマ等の代替方向を残す。
+- **A28:** 海南島をoccupation polygonで塗らず海口・三亜pointで表示し、仏印から中国への鉄道・道路輸送方向と分離。
+
+## Audit
+
+- 全9件 Data Audit: passed
+- 全9件 Style Audit: passed
+- A20: `visualAudit: not-required-reused-pattern`
+- A21〜A28: `visualAudit: pending-human`
+- Human Visual Audit backlog: HVA-005〜HVA-012
+
+R2では「採用判定だけ残って公開実装がない」債務を解消した。次工程は **R3「既存point-only地図のupgrade必要性判定」**。

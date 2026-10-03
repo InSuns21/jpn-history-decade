@@ -14,7 +14,7 @@
 
 ## 現在の残件
 
-R1遡及実装で追加した4地図が `visualAudit: pending-human`。既存地図のうちA32は別工程でHuman Visual Audit済みとなっている。
+R1遡及実装の4地図に加え、R2実装のA21〜A28（A20を除く8地図）が `visualAudit: pending-human`。A20はpoint-only再利用例外、A32は別工程でHuman Visual Audit済み。
 
 | Backlog ID | A | Map ID | Route | Change | Geometry | Data | Style | Visual | Desktop | Tablet / Touch | Mobile | Zoom | 誤読注意点 | 実装commit | 完了commit | Status |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -22,6 +22,15 @@ R1遡及実装で追加した4地図が `visualAudit: pending-human`。既存地
 | HVA-002 | A7 | sino-russo-japanese-war-theaters-1894-1905 | /period/1901 | new | point + line | passed | passed | pending-human | 朝鮮・遼東・満洲のラベル重なり | time切替・戦場marker tap | 対馬海峡を含む広域表示 | 両戦争sliceの縮尺 | 作戦軸を部隊進軍路・前線と誤認しないこと | d307b98fac67b00df664305fd213aa62416aa615 | — | pending |
 | HVA-003 | A10 | ww1-east-asia-pacific-1914-1918 | /period/1915 | new | point + line | passed | passed | pending-human | 山東・南洋・シベリアを同一画面で読めるか | time切替・島嶼marker tap | 太平洋広域でラベルが小さすぎないか | wide-area zoom | 南洋の代表点を領域境界、シベリア線を全展開範囲と誤認しないこと | d307b98fac67b00df664305fd213aa62416aa615 | — | pending |
 | HVA-004 | A15 | shandong-manchuria-1927-1928 | /period/1926 | new | point + line | passed | passed | pending-human | 済南・北京・奉天側の意味の違う線が判別できるか | marker tap・線とpointの競合 | 華北〜南満洲の縦長表示 | initial/detail zoom | 北伐方向と満鉄回廊を同種の路線と誤認しないこと。関東州境界は非表示 | d307b98fac67b00df664305fd213aa62416aa615 | — | pending |
+
+| HVA-005 | A21 | shanghai-urban-1937 | /period/1937-08-13 | new | point + polygon | passed | passed | pending-human | 租界面と虹口・閘北・江湾ラベルの重なり | polygon上でmarker tap / panが成立するか | 市街拡大率で凡例が読めるか | initial/detail | 模式面を法的な精密租界境界と誤認しないこと | same R2 batch commit | — | pending |
+| HVA-006 | A22 | hangzhou-bay-landing-1937 | /period/1937-10-26 | new | point + polygon | passed | passed | pending-human | 上海正面と杭州湾北岸が同時に読めるか | 上陸方面polygon上のpan / marker tap | 金山衛・松江のラベル密度 | initial/detail | 上陸方面面を橋頭堡・占領境界と誤認しないこと | same R2 batch commit | — | pending |
+| HVA-007 | A23 | shanghai-nanjing-advance-1937 | /period/1937-11-13 | new | point + line | passed | passed | pending-human | 6都市のラベルと破線の可読性 | marker tap / pan | 約300kmの都市列が収まるか | initial/zoom-out | 模式線を実際の進軍路・制令線・鉄道と誤認しないこと | same R2 batch commit | — | pending |
+| HVA-008 | A24 | nanjing-safety-zone-1937 | /period/1937-12-14 | new | point + line + polygon | passed | passed | pending-human | 安全区面・下関・長江軸が判別できるか | 安全区上のmarker tap / pan | 狭い都市図で凡例が画面を圧迫しないか | initial/detail | 安全区面を街区単位の確定境界、長江線を1937年水際線と誤認しないこと | same R2 batch commit | — | pending |
+| HVA-009 | A25 | xuzhou-rail-1938 | /period/1938-04-01 | new | point + line | passed | passed | pending-human | 津浦・隴海の交点が一目で分かるか | 徐州marker tap / pan | 鉄道2線の凡例・線種識別 | initial/detail | 一般化線を1938年の測量済み線路中心線と誤認しないこと | same R2 batch commit | — | pending |
+| HVA-010 | A26 | yellow-river-flood-1938 | /period/1938-05-20 | new | point + line | passed | passed | pending-human | 河川・鉄道・洪水方向の3線種を区別できるか | 花園口marker tap / pan | 広域で洪水方向が弱すぎないか | initial/zoom-out | 洪水方向を実測河道・浸水境界・洪水先端と誤認しないこと | same R2 batch commit | — | pending |
+| HVA-011 | A27 | wuhan-guangdong-supply-1938 | /period/1938-09-30 | new | point + line | passed | passed | pending-human | 香港―広東―武漢主軸と代替方向が階層化されて見えるか | 広域marker tap / pan / pinch | ラベル過密・凡例高さ | initial/zoom-out | 代替方向を一本の確定道路、線幅を輸送量と誤認しないこと | same R2 batch commit | — | pending |
+| HVA-012 | A28 | hainan-supply-1939 | /period/1939-02-10 | new | point + line | passed | passed | pending-human | 海南島拠点と仏印輸送線の関係が読めるか | 海口・海防・諒山marker tap | 華南〜雲南の広域ラベル | initial/zoom-out | 海南島pointを島全域の即時完全占領、模式線を遮断済みrouteと誤認しないこと | same R2 batch commit | — | pending |
 
 ## 新規登録テンプレート
 

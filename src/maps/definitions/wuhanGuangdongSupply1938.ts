@@ -1,0 +1,92 @@
+import type { HistoricalMapDefinition } from '../schema.ts'
+
+export const wuhanGuangdongSupply1938Map: HistoricalMapDefinition = {
+  id:'wuhan-guangdong-supply-1938',
+  title:'1938年の香港・広東・武漢と対外補給軸（模式）',
+  historicalQuestion:
+    '香港から広東・粤漢鉄道を経て武漢へ向かう主要補給軸に、日本軍の広東・武漢攻略はどのような圧力を加え、それでもどんな代替方向が残ったのか。',
+  readingNote:
+    '鉄道・長江は主要waypointによる一般化線、仏印・ビルマ方面から雲南へ向かう線は代替補給の「方向」を示す模式線で、一本の確定道路・鉄道・輸送量を表さない。線幅は輸送量を示さない。背景地図・国境・道路は現代のOpenStreetMapである。',
+  status:'draft',
+  period:{startYear:1938,endYear:1938},
+  initialView:{center:[110.0,27.0],zoom:3.4},
+  datasets:[
+    {
+      id:'a27-points',
+      provenance:{
+        sourceId:'a27-supply-reference-points',
+        title:'香港・広東・武漢・重慶と主要交通waypoint',
+        institution:'jpn-history-decade',
+        url:'https://history.state.gov/historicaldocuments/frus1938v03/d205',
+        sourceType:'derived',
+        license:'Site-authored approximate representative coordinates from cited diplomatic, historical railway, and NIDS sources.',
+        derivedFromSourceIds:['frus1938v03-d205','frus1938v03-d603','nids-china-ops-89','yuehan-railway-history'],
+        temporalCoverage:{from:'1938-06-01',to:'1938-10-27',basis:'range'},
+        spatialCoverage:'香港・広東から武漢・重慶、および華南周辺',
+        geometryConfidence:'approximate',
+        transformations:['香港／九龍、広東、韶関、衡陽、株洲、武漢、重慶等を歴史資料で照合し代表点化した。','都市境界・駅施設は復元していない。'],
+        notes:'補給・交通の広域構造を読むための代表点。',
+      },
+      allowedGeometryTypes:['Point'],
+      requiredProperties:['category','marker','label','labelPlacement','year','detail'],
+      features:[
+        {id:'hongkong',geometry:{type:'Point',coordinates:[114.17,22.30]},properties:{category:'external-port',marker:'港',label:'香港／九龍',labelPlacement:'right',year:'1938',detail:'1938年前半の中国向け軍需輸入の主要入口の一つ。'}},
+        {id:'guangzhou',geometry:{type:'Point',coordinates:[113.26,23.13]},properties:{category:'supply-node',marker:'広',label:'広東（広州）',labelPlacement:'right',year:'1938',detail:'香港側の物資を内陸へ接続する華南の主要都市。10月21日に日本軍が占領。'}},
+        {id:'shaoguan',geometry:{type:'Point',coordinates:[113.60,24.81]},properties:{category:'rail-waypoint',marker:'鉄',label:'韶関',labelPlacement:'right',year:'1938',detail:'粤漢鉄道の主要経由地。'}},
+        {id:'hengyang',geometry:{type:'Point',coordinates:[112.57,26.90]},properties:{category:'rail-waypoint',marker:'鉄',label:'衡陽',labelPlacement:'left',year:'1938',detail:'粤漢鉄道の湖南側主要経由地。'}},
+        {id:'zhuzhou',geometry:{type:'Point',coordinates:[113.13,27.83]},properties:{category:'rail-waypoint',marker:'鉄',label:'株洲',labelPlacement:'right',year:'1938',detail:'粤漢鉄道の主要結節。'}},
+        {id:'wuhan',geometry:{type:'Point',coordinates:[114.30,30.59]},properties:{category:'supply-node',marker:'武',label:'武漢三鎮',labelPlacement:'right',year:'1938',detail:'長江中流・鉄道交通・軍需の主要結節。10月27日までに日本軍が占領。'}},
+        {id:'chongqing',geometry:{type:'Point',coordinates:[106.55,29.56]},properties:{category:'inland-node',marker:'内',label:'重慶',labelPlacement:'left',year:'1938',detail:'国民政府の内陸後方基盤。主要都市占領後も戦争継続空間が残ったことを示す。'}},
+        {id:'kunming',geometry:{type:'Point',coordinates:[102.71,25.04]},properties:{category:'inland-node',marker:'内',label:'昆明',labelPlacement:'left',year:'1938',detail:'仏印・ビルマ方面からの代替補給方向を受ける雲南側の主要都市。'}},
+      ],
+    },
+    {
+      id:'a27-lines',
+      provenance:{
+        sourceId:'a27-supply-lines-schematic',
+        title:'香港―広東―武漢主要交通軸と代替補給方向',
+        institution:'jpn-history-decade',
+        url:'https://history.state.gov/historicaldocuments/frus1938v03/d205',
+        sourceType:'derived',
+        license:'Site-authored generalized/schematic LineStrings from historical transport connections and diplomatic descriptions; no source vector or military route is copied.',
+        derivedFromSourceIds:['frus1938v03-d205','frus1938v03-d603','yuehan-railway-history','nids-china-ops-89'],
+        temporalCoverage:{from:'1938-06-01',to:'1938-10-27',basis:'range'},
+        spatialCoverage:'香港・広東・武漢・重慶と仏印／ビルマから雲南方面',
+        geometryConfidence:'schematic',
+        transformations:[
+          '広九鉄道・粤漢鉄道の存在と主要経由地、武漢から長江上流への内陸接続を確認した。',
+          '主要waypointを結ぶ一般化線とした。',
+          '仏印・ビルマ方面は外交文書が示す代替経路の方向だけを模式線化し、一本の道路・鉄道として固定しない。',
+        ],
+        notes:'線幅・長さは輸送量を表さない。',
+      },
+      allowedGeometryTypes:['LineString'],
+      requiredProperties:['category','label','detail'],
+      features:[
+        {id:'kowloon-guangzhou',geometry:{type:'LineString',coordinates:[[114.17,22.30],[113.95,22.55],[113.55,22.85],[113.26,23.13]]},properties:{category:'rail-main',label:'香港／九龍―広東（一般化）',detail:'香港側から広東へ入る主要交通接続。'}},
+        {id:'yuehan',geometry:{type:'LineString',coordinates:[[113.26,23.13],[113.60,24.81],[112.57,26.90],[113.13,27.83],[114.30,30.59]]},properties:{category:'rail-main',label:'粤漢鉄道（一般化）',detail:'広東から武漢へつながる主要南北鉄道軸。'}},
+        {id:'yangtze-inland',geometry:{type:'LineString',coordinates:[[114.30,30.59],[112.20,30.35],[110.35,30.85],[108.40,30.75],[106.55,29.56]]},properties:{category:'river-axis',label:'長江上流方向（概略）',detail:'武漢からさらに内陸・重慶方向へ戦争継続空間が続くことを示す概略軸。'}},
+        {id:'indochina-yunnan',geometry:{type:'LineString',coordinates:[[105.85,21.03],[104.5,22.0],[103.5,23.0],[102.71,25.04]]},properties:{category:'alternative-corridor',label:'仏印方面→雲南（模式）',detail:'香港以外にも仏印方面から中国南西部へ入る経路があったことを示す方向線。'}},
+        {id:'burma-yunnan',geometry:{type:'LineString',coordinates:[[98.0,22.0],[99.5,23.0],[101.0,24.0],[102.71,25.04]]},properties:{category:'alternative-corridor',label:'ビルマ方面→雲南（模式）',detail:'ビルマ方面から雲南へ入る代替補給方向を示す。'}} ,
+      ],
+    },
+  ],
+  layers:[
+    {id:'a27-lines-layer',datasetId:'a27-lines',categoryProperty:'category',categories:['rail-main','river-axis','alternative-corridor']},
+    {id:'a27-points-layer',datasetId:'a27-points',categoryProperty:'category',categories:['external-port','supply-node','rail-waypoint','inland-node']},
+  ],
+  legend:[
+    {value:'rail-main',label:'主要鉄道・接続（一般化）',marker:'鉄',color:'#5a5c55',kind:'line',lineStyle:'solid'},
+    {value:'river-axis',label:'長江上流方向（概略）',marker:'川',color:'#456f7e',kind:'line',lineStyle:'dashed'},
+    {value:'alternative-corridor',label:'代替対外補給方向（模式）',marker:'補',color:'#77664a',kind:'line',lineStyle:'dashed'},
+    {value:'external-port',label:'主要対外港',marker:'港',color:'#3f6572'},
+    {value:'supply-node',label:'主要補給・交通都市',marker:'広',color:'#7c493d'},
+    {value:'rail-waypoint',label:'鉄道waypoint',marker:'鉄',color:'#56655a'},
+    {value:'inland-node',label:'内陸側主要都市',marker:'内',color:'#6a5a42'},
+  ],
+  auditState:{dataAudit:'passed',styleAudit:'passed',visualAudit:'pending-human',notes:[
+    'A27はadopted/highを維持し、作戦経過図ではなく交通・補給構造図として実装した。',
+    '香港経路を主要としつつ、仏印・ビルマ等の代替方向を同じ地図に残して「完全遮断」を示唆しない。',
+    'LineStringを含むためHuman Visual Auditは後送する。',
+  ]},
+}

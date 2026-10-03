@@ -14,6 +14,15 @@ import { railwayExpansion1872To1890Map } from './definitions/railwayExpansion187
 import { sinoRussoJapaneseWarTheatersMap } from './definitions/sinoRussoJapaneseWarTheaters.ts'
 import { firstWorldWarEastAsiaPacificMap } from './definitions/firstWorldWarEastAsiaPacific.ts'
 import { shandongManchuria1927To1928Map } from './definitions/shandongManchuria1927To1928.ts'
+import { lugouqiaoInitial1937Map } from './definitions/lugouqiaoInitial1937.ts'
+import { shanghaiUrban1937Map } from './definitions/shanghaiUrban1937.ts'
+import { hangzhouBayLanding1937Map } from './definitions/hangzhouBayLanding1937.ts'
+import { shanghaiNanjingAdvance1937Map } from './definitions/shanghaiNanjingAdvance1937.ts'
+import { nanjingSafetyZone1937Map } from './definitions/nanjingSafetyZone1937.ts'
+import { xuzhouRail1938Map } from './definitions/xuzhouRail1938.ts'
+import { yellowRiverFlood1938Map } from './definitions/yellowRiverFlood1938.ts'
+import { wuhanGuangdongSupply1938Map } from './definitions/wuhanGuangdongSupply1938.ts'
+import { hainanSupply1939Map } from './definitions/hainanSupply1939.ts'
 import type { HistoricalMapDefinition } from './schema.ts'
 
 export const mapDefinitions: HistoricalMapDefinition[] = [
@@ -31,6 +40,15 @@ export const mapDefinitions: HistoricalMapDefinition[] = [
   sinoRussoJapaneseWarTheatersMap,
   firstWorldWarEastAsiaPacificMap,
   shandongManchuria1927To1928Map,
+  lugouqiaoInitial1937Map,
+  shanghaiUrban1937Map,
+  hangzhouBayLanding1937Map,
+  shanghaiNanjingAdvance1937Map,
+  nanjingSafetyZone1937Map,
+  xuzhouRail1938Map,
+  yellowRiverFlood1938Map,
+  wuhanGuangdongSupply1938Map,
+  hainanSupply1939Map,
 ]
 
 export function findMapDefinition(id: string) {

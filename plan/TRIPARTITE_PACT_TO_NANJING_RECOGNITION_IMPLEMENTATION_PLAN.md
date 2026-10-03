@@ -1,7 +1,7 @@
 # 1940年9月27日から11月30日まで — 三国同盟・大政翼賛会・南京政府正式承認 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → 次は JH74「1940-09-27〜10-11」
+- **Progress:** phase cut ✅ → JH74 ✅ → 次は JH75「1940-10-12〜10-21」
 - **Created:** 2026-10-03
 - **Scope:** 1940-09-27〜1940-11-30
 - **Primary goal:** 日独伊三国同盟の成立後、対米英・対蘭印関係に新しい外交制約が加わる一方、国内では大政翼賛会が発足して「政党解体後・議会存続」の移行状態に全国組織が置かれ、中国戦争では対重慶和平工作の継続と南京国民政府の正式承認が並行した過程を追う。11月30日の日華基本条約・日満華共同宣言と南京政府正式承認を終点とし、12月以後の経済新体制・大政翼賛会実践要綱・日仏印正式経済交渉は次フェーズへ送る。
@@ -298,7 +298,7 @@ A31時点の「成立したが未承認」という状態から、正式承認�
 - [x] A33をmap necessity / data-quality judgmentとして設定
 - [x] Crosscutting publication gate候補を定義
 - [x] phase-end audit候補仮説を定義
-- [ ] JH74 published / JH73との隣接接続確認完了
+- [x] JH74 published / JH73との隣接接続確認完了
 - [ ] JH75 published / JH74との隣接接続確認完了
 - [ ] JH76 published / JH75との隣接接続確認完了
 - [ ] A33 map necessity / data-quality judgment completed

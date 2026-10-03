@@ -1,0 +1,12 @@
+{
+  "period": "1940-09-27",
+  "termRefs": [
+    {"id":"tripartite-pact-1940","core":true},
+    {"id":"japan-netherlands-east-indies-talks-1940","core":true},
+    {"id":"konoe-new-order-movement-1940","core":true},
+    {"id":"political-party-dissolutions-1940","core":true},
+    {"id":"us-scrap-export-control-september-1940","core":false},
+    {"id":"second-konoe-cabinet-1940","core":false},
+    {"id":"world-situation-policy-outline-1940","core":false}
+  ]
+}

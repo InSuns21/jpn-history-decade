@@ -1,0 +1,14 @@
+{
+  "period": "1940-10-12",
+  "termRefs": [
+    {"id":"taisei-yokusankai-1940","core":true},
+    {"id":"us-scrap-export-control-september-1940","core":true},
+    {"id":"japan-netherlands-east-indies-talks-1940","core":true},
+    {"id":"tripartite-pact-1940","core":false},
+    {"id":"political-party-dissolutions-1940","core":false},
+    {"id":"konoe-new-order-movement-1940","core":false},
+    {"id":"kobayashi-dutch-indies-mission-1940","core":false},
+    {"id":"second-konoe-cabinet-1940","core":false},
+    {"id":"matsuoka-henry-agreement-1940","core":false}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "period": "1940-08-31",
+  "termRefs": [
+    {"id":"japan-netherlands-east-indies-talks-1940","core":true},
+    {"id":"nishihara-martin-agreement-1940","core":true},
+    {"id":"northern-french-indochina-advance-1940","core":true},
+    {"id":"us-scrap-export-control-september-1940","core":true},
+    {"id":"matsuoka-henry-agreement-1940","core":false},
+    {"id":"kobayashi-dutch-indies-mission-1940","core":false},
+    {"id":"netherlands-east-indies-1940","core":false},
+    {"id":"world-situation-policy-outline-1940","core":false},
+    {"id":"second-konoe-cabinet-1940","core":false}
+  ]
+}

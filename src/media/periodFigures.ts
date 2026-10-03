@@ -771,11 +771,11 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     }),
   ],
   '1940-08-31': [
-    commonsFigure('Japanese advance to Lang Son1940.jpg', {
-      alt: '1940年9月、北部仏印のランソン方面へ進む日本陸軍部隊を撮影した写真',
-      title: '北部仏印・ランソンへ進む日本軍',
-      dateLabel: '1940年9月',
-      credit: '撮影者不詳／Wikimedia Commons',
+    commonsFigure('Japanese soldiers and trucks in full disguise.jpg', {
+      alt: '1940年9月22日、鎮南関付近で擬装した兵士とトラックを伴って進軍する日本軍を撮影した写真',
+      title: '北部仏印進駐直前の日本軍',
+      dateLabel: '1940年9月22日',
+      credit: '毎日新聞社／アジア歴史資料センター・Wikimedia Commons',
       license: 'Public Domain',
     }),
   ],

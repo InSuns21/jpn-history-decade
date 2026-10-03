@@ -37,7 +37,7 @@ Created: 2026-10-03
 | 07A | 1939-01〜06 | 4 | completed |
 | 07B | 1939-07〜12 | 4 | completed |
 | 08A | 1940-01〜05 | 4 | completed |
-| 08B | 1940-05〜07 | 3 | in_progress |
+| 08B | 1940-05〜07 | 3 | completed |
 
 合計63件。
 
@@ -350,14 +350,14 @@ Created: 2026-10-03
 - [x] 同趣旨段落の重複を残さない
 - [x] 3ページを `body-depth-baseline.json` から削除し、baselineを空にする
 - [x] 1940-03-30→1940-05-10→1940-06-29→1940-07-22→次フェーズ の接続に矛盾を作らない
-- [ ] GitHub Actions green
-- [ ] Pages deploy green
+- [x] GitHub Actions green
+- [x] Pages deploy green
 
 ## 全体 Definition of Done
 
-- [ ] baseline 63件をすべて個別監査済みにする
-- [ ] `standards/body-depth-baseline.json` を空にする、または移行措置自体を削除する
+- [x] baseline 63件をすべて個別監査済みにする
+- [x] `standards/body-depth-baseline.json` を空にする、または移行措置自体を削除する
 - [ ] `npm run validate:body-depth:strict` green
 - [ ] `npm run check` green
-- [ ] Pages deploy green
+- [x] Pages deploy green
 - [ ] 本計画を completed とし `plan_done/` へ移動

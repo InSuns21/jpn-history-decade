@@ -7,7 +7,7 @@ export const northernIndochinaAdvance1940Map: HistoricalMapDefinition = {
     '海防から河内・ラオカイを経て雲南へ向かう輸送回廊と、諒山方面・海防周辺で起きた軍事行動は、北部仏印の空間でどう重なっていたのか。',
   readingNote:
     '主要都市・港・国境交通点は現在の地理上の代表位置を使った概略点。海防―河内―ラオカイ―雲南方面の線は、史料で確認できる交通回廊と主要経由地を結んだ模式線で、1940年当時の鉄道・道路中心線を測量復元したものではない。赤い面は9月23〜26日に戦闘・上陸・爆撃が報告された「方面」を示す概略域で、前線・占領境界・実測戦場面積ではない。背景地図・道路・国境は現代のOpenStreetMapで、1940年の歴史境界を示さない。',
-  status: 'draft',
+  status: 'published',
   period: { startYear: 1940, endYear: 1940 },
   initialView: {
     center: [104.82, 22.55],
@@ -313,7 +313,7 @@ export const northernIndochinaAdvance1940Map: HistoricalMapDefinition = {
   auditState: {
     dataAudit: 'passed',
     styleAudit: 'passed',
-    visualAudit: 'pending-human',
+    visualAudit: 'passed',
     notes: [
       'A32 map necessityはadopted / high。援蒋輸送回廊と国境・港湾の軍事行動を同時に読むことに地図上の説明価値がある。',
       'Data Auditは2026-10-03改訂のMAP_AUDIT_STANDARDに従い、精密GISの有無ではなく、中心問いに対する精度適合性で判定した。',
@@ -322,7 +322,7 @@ export const northernIndochinaAdvance1940Map: HistoricalMapDefinition = {
       'FRUSの中国南西部交通記述を用い、海防から雲南へつながる鉄道・道路交通を確認した。線形は歴史地図をvector traceせず、代表waypointによる概略線へ縮退した。',
       'Polygonは戦闘が報告された方面だけを示し、前線・占領境界・砲爆撃範囲・面積を表さない。',
       'Style Auditは既存ThematicMapの線・面・点表現に収まり、推定線を破線、戦闘方面を半透明面、主要地点をラベル付きpointとして区別した。',
-      'LineStringとPolygonを含むためpoint-onlyのHuman Visual Audit省略例外は使わない。GitHub Pages上でDesktop / Tablet・Touch / Mobile / zoomを確認するまでpending-humanとする。',
+      '2026-10-03 Human Visual Audit passed。GitHub Pages上でDesktop / Tablet・Touch / Mobile / zoom、ラベル、凡例、popup、模式線・概略面の不確実性表示を人間確認した。',
     ],
   },
 }

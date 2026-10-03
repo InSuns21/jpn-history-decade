@@ -821,4 +821,14 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     ),
   ],
 
+  '1940-12-14': [
+    commonsFigure('Yokusankai chuokyoryokukaigi.jpg', {
+      alt: '1940年12月16日、大政翼賛会の最初の臨時中央協力会議の開会式を撮影した写真',
+      title: '最初の臨時中央協力会議',
+      dateLabel: '1940年12月16日',
+      credit: '翼賛運動史刊行会編『翼賛国民運動史』／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+
 }

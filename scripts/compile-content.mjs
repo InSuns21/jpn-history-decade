@@ -31,6 +31,21 @@ function readText(file) {
   return fs.readFileSync(file, 'utf8')
 }
 
+function validateNoInternalAuthoringIds(source, file) {
+  const lines = source.split(/\r?\n/)
+  for (let index = 0; index < lines.length; index += 1) {
+    const matches = lines[index].match(/\bJH\d+[A-Z]?\b/g)
+    if (!matches) continue
+    pushError(
+      file,
+      'line ' +
+        (index + 1) +
+        ' contains internal authoring period ID(s) in public content: ' +
+        [...new Set(matches)].join(', '),
+    )
+  }
+}
+
 function readJson(file, label) {
   const relative = relativePath(file)
   if (!fs.existsSync(file)) {
@@ -497,6 +512,7 @@ function validateSources(frontmatter, rawSource, file, status) {
 function compilePeriod(filePath) {
   const relative = relativePath(filePath)
   const source = readText(filePath)
+  validateNoInternalAuthoringIds(source, relative)
   const parsed = parseFrontmatter(source, relative)
   if (!parsed) return null
 
@@ -574,6 +590,7 @@ function compilePeriod(filePath) {
 function compileCrosscutting(filePath, expectedKind) {
   const relative = relativePath(filePath)
   const source = readText(filePath)
+  validateNoInternalAuthoringIds(source, relative)
   const parsed = parseFrontmatter(source, relative)
   if (!parsed) return null
 

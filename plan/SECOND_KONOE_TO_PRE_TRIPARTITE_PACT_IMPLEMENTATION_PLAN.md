@@ -1,7 +1,7 @@
 # 1940年7月22日から9月26日まで — 第2次近衛内閣・基本国策・北部仏印進駐 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH71 ✅ → JH72 ✅ → JH73 ✅ → A32 ✅ adopted / high → A32 map implementation ✅ → Data Audit ✅ → Style Audit ✅ → Human Visual Audit ✅ → Crosscutting publication gate ✅ → S05 / S09 extension ✅ → S10 / S02 hold → phase-end audit necessity judgment ✅ no-audit → 次は npm run check / CI / Pages
+- **Progress:** phase cut ✅ → JH71 ✅ → JH72 ✅ → JH73 ✅ → A32 ✅ adopted / high → A32 map implementation ✅ → Data Audit ✅ → Style Audit ✅ → Human Visual Audit ✅ → Crosscutting publication gate ✅ → S05 / S09 extension ✅ → S10 / S02 hold → phase-end audit necessity judgment ✅ no-audit → npm run check ✅ → CI ✅ → Pages ✅ → 次は phase completion / `plan_done` archive
 - **Created:** 2026-10-03
 - **Scope:** 1940-07-22〜1940-09-26
 - **Primary goal:** 第2次近衛内閣成立後、7月26〜27日の国策決定によって南方・対独伊・中国戦争を一つの政策枠へ組み込み始めた過程を、実際の外交・軍事行動と分けて追う。8月の政党解党、米国の輸出管理強化、松岡＝アンリ協定を経て、9月22日の西原＝マルタン協定と23日以後の北部仏印進駐へ至るまでを扱い、9月27日の日独伊三国同盟は次フェーズの開始点へ送る。
@@ -426,9 +426,9 @@ JH71〜JH73実装後に、年代記事とは異なる長期比較軸が増えた
 - [x] Crosscutting publication gate completed
 - [x] passing crosscutting extensions implemented — S05 / S09 extension、S10 / S02 hold
 - [x] phase-end audit necessity judgment completed — independent audit not required
-- [ ] npm run check green
-- [ ] GitHub Actions CI green
-- [ ] GitHub Pages deploy green
+- [x] npm run check green
+- [x] GitHub Actions CI green
+- [x] GitHub Pages deploy green
 - [ ] Status = completed
 - [ ] plan_done/へ移動
 

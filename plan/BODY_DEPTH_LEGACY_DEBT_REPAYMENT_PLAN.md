@@ -33,7 +33,7 @@ Created: 2026-10-03
 | 05B | 1937-07-27〜10-25 | 4 | completed |
 | 05C | 1937-10〜12 | 4 | completed |
 | 06A | 1938-01〜05 | 5 | completed |
-| 06B | 1938-06〜12 | 5 | in_progress |
+| 06B | 1938-06〜12 | 5 | completed |
 | 07 | 1939 | 8 | pending |
 | 08 | 1940-01〜07 | 7 | pending |
 
@@ -265,8 +265,8 @@ Created: 2026-10-03
 - [x] 同趣旨段落の重複を残さない
 - [x] 5ページを `body-depth-baseline.json` から削除
 - [x] 1938-05-20→1938-06-18→1938-07-27→1938-09-30→1938-10-28→1938-12-22→1939-01-05 の接続に矛盾を作らない
-- [ ] GitHub Actions green
-- [ ] Pages deploy green
+- [x] GitHub Actions green
+- [x] Pages deploy green
 
 ## 全体 Definition of Done
 

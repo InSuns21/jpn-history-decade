@@ -751,12 +751,58 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
       credit: '撮影者不詳／Wikimedia Commons',
       license: 'Public Domain',
     }),
-  ],  '1940-07-22': [
+  ],
+  '1940-07-22': [
     commonsFigure('Fumimaro Konoe Cabinet 19400722.jpg', {
       alt: '1940年7月、第2次近衛文麿内閣の初閣議後に首相官邸で撮影された閣僚集合写真',
       title: '第2次近衛文麿内閣',
       dateLabel: '1940年7月',
       credit: '毎日新聞／アジア歴史資料センター・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1940-08-01': [
+    commonsFigure('Yokusankai junbikai.jpg', {
+      alt: '1940年、新体制準備委員が集まった集合写真',
+      title: '新体制準備委員',
+      dateLabel: '1940年',
+      credit: '翼賛運動史刊行会『翼賛国民運動史』／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1940-08-31': [
+    commonsFigure('Japanese advance to Lang Son1940.jpg', {
+      alt: '1940年9月、北部仏印のランソン方面へ進む日本陸軍部隊を撮影した写真',
+      title: '北部仏印・ランソンへ進む日本軍',
+      dateLabel: '1940年9月',
+      credit: '撮影者不詳／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+  '1940-09-27': [
+    commonsFigure('Unterzeichnung des Dreimächtepakts 1940.jpg', {
+      alt: '1940年9月27日、ベルリンで行われた日独伊三国同盟の調印式。来栖三郎、チアノ、ヒトラー、リッベントロップが写る',
+      title: '日独伊三国同盟の調印',
+      dateLabel: '1940年9月27日',
+      credit: 'National Digital Archives, Poland／Wikimedia Commons',
+      license: 'CC0',
+    }),
+  ],
+  '1940-10-12': [
+    commonsFigure('Organizational Chart of IRAA.jpg', {
+      alt: '大政翼賛会の中央組織と地方組織の構成を示した組織図',
+      title: '大政翼賛会の組織図',
+      dateLabel: '1940年ごろ',
+      credit: '日本政府資料／国立公文書館デジタルアーカイブ・Wikimedia Commons',
+      license: 'Public Domain Mark',
+    }),
+  ],
+  '1940-10-22': [
+    commonsFigure('TNA-0004 汪精衛和臧式毅.jpg', {
+      alt: '1940年11月30日、南京で汪兆銘と満洲国駐南京国民政府大使の臧式毅が対談する写真',
+      title: '日満華共同宣言の日の汪兆銘と臧式毅',
+      dateLabel: '1940年11月30日',
+      credit: '撮影者不詳／英国国立公文書館（CN 11/11）・Wikimedia Commons',
       license: 'Public Domain',
     }),
   ],

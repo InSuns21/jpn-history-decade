@@ -1,7 +1,7 @@
 # 1940年7月22日から9月26日まで — 第2次近衛内閣・基本国策・北部仏印進駐 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH71 ✅ → JH72 ✅ → JH73 ✅ → 次は A32 map necessity / data-quality judgment
+- **Progress:** phase cut ✅ → JH71 ✅ → JH72 ✅ → JH73 ✅ → A32 ✅ adopted / high → 次は A32 map implementation / audit
 - **Created:** 2026-10-03
 - **Scope:** 1940-07-22〜1940-09-26
 - **Primary goal:** 第2次近衛内閣成立後、7月26〜27日の国策決定によって南方・対独伊・中国戦争を一つの政策枠へ組み込み始めた過程を、実際の外交・軍事行動と分けて追う。8月の政党解党、米国の輸出管理強化、松岡＝アンリ協定を経て、9月22日の西原＝マルタン協定と23日以後の北部仏印進駐へ至るまでを扱い、9月27日の日独伊三国同盟は次フェーズの開始点へ送る。
@@ -144,31 +144,59 @@ JH73は、**外交上の合意を現地軍事協定へ落とし込む過程と�
 
 # 6. A32 — 北部仏印進駐・援蒋ルート・主要交通点 map necessity / data-quality judgment
 
-JH73実装後に判定する。自動実装しない。
+## 判定結果 — adopted / high
 
-## map necessity 候補
+**A32 は採用する。**
+
+JH73では、海防港、河内、諒山方面、中国国境、雲南方面へ伸びる援蒋輸送回廊が同時に登場する。本文だけでは「港から中国内陸へつながる輸送軸」と「国境方面・海防周辺で起きた進駐と戦闘」の位置関係を保持しにくいため、地図による理解改善が大きい。
+
+今回の中心問いは測量級の経路復元ではなく、**主要交通点の接続、進駐方向、戦闘が発生した方面の相対配置**である。したがって `MAP_AUDIT_STANDARD.md` の概算・推定・模式geometry許容基準を適用し、精密GISがないことだけを理由にLineString / Polygonを排除しない。
+
+### map necessity
+
+優先して示す。
 
 - 海防（Haiphong）港
 - 河内（Hanoi）
 - 諒山（Lang Son）方面
-- 仏印・中国国境
-- 援蒋ルートと北部仏印交通網
-- 9月23日以後の進駐・戦闘地点
+- ラオカイ（Lao Cai）方面
+- 雲南側への接続方向
+- 海防―河内―雲南方面の援蒋輸送回廊
+- 9月23〜26日の国境方面・海防周辺の戦闘／進駐域
 
-空間理解は有用だが、現代道路網・国境線を1940年の軍事経路としてそのまま使わない。
+この地図の目的は、北部仏印進駐を一本の「南下矢印」で表すことではなく、**港・行政中心・中国向け交通軸・国境戦闘地点が異なる空間にあったこと**を示すことに置く。
 
-## data-quality gate
+### data-quality gate — pass for approximate / schematic use
 
-実装する場合は、JACAR・外務省・当時の地図または信頼できる戦史資料から、少なくとも次を確認する。
+JACAR、外務省、FRUS、当時期に近い地形図・交通資料から、主要都市・港・国境交通点・援蒋ルートの存在と相対配置は確認できる。
 
-- 1940年9月時点の主要都市・港・鉄道・道路の存在と位置
-- 進駐方向や戦闘地点をどの精度で表現できるか
-- 史料が示す位置と現代座標を対応させる際の不確実性
-- generalized route / schematic corridor と exact route の区別
-- 境界polygonを使う場合の時点・法的意味
+精密な道路中心線・部隊進撃路・前線・占領境界まで復元できなくても、次のgeometryは公開可とする。
 
-公開geometry上限を監査で固定し、精密な前線・占領境界を史料以上の精度で作らない。
+| 対象 | geometry | confidence | 用途 |
+|---|---|---|---|
+| 海防・河内・諒山・ラオカイ等 | representative Point | approximate | 主要交通点・戦闘方面の位置関係 |
+| 海防―河内―ラオカイ―雲南方面 | waypoint-derived LineString | schematic | 援蒋輸送の主要回廊。正確な鉄道中心線ではない |
+| 諒山方面の国境戦闘域 | small approximate Polygon | schematic | 戦闘が発生した方面を示す。前線・占領境界ではない |
+| 海防周辺の上陸・爆撃域 | small approximate Polygon | schematic | 港湾周辺で軍事行動が発生した範囲を概略表示 |
 
+Polygonの大きさ・外周は実測戦場面積を意味しない。LineStringの長さ・曲率は正確な鉄道・道路中心線を意味しない。
+
+### 実装上の留保
+
+- 現代道路網・現代国境線を1940年の軍事経路・歴史境界として主題化しない。
+- ただし現代地形や地名を、模式geometryの地理的整合性を確認する補助参照には使ってよい。
+- 史料で経由地点・方向が確認できる場合、waypoint由来の概略線を採用してよい。
+- 「諒山方面」「海防周辺」など地域単位でしか確認できない場合、概略polygonで示してよい。
+- 精密な部隊前線・占領境界・法的国境の再現を目的にしない。
+- 地図上で `概略` / `模式` を明示し、距離・面積の測定用途に使えないことを reading note に書く。
+
+### 実装方針
+
+- map ID候補: `northern-indochina-advance-1940`
+- 初期表示は北部仏印から雲南南部を収める。
+- point + schematic LineString + small approximate Polygon の構成を許可する。
+- 戦闘域Polygonは「戦闘があった方面」を読むための補助面に限定し、前線・勢力圏として描かない。
+- 実装後は Data / Style / Human Visual Audit を行う。
 ---
 
 # 7. Crosscutting publication gate
@@ -345,7 +373,7 @@ JH71〜JH73実装後、年代記事とは異なる長期比較軸が増えた場
 - [x] JH71 published / JH70との隣接接続確認完了
 - [x] JH72 published / JH71との隣接接続確認完了
 - [x] JH73 published / JH72との隣接接続確認完了
-- [ ] A32 map necessity / data-quality judgment completed
+- [x] A32 map necessity / data-quality judgment completed — adopted / high
 - [ ] map実装が必要な場合はData / Style / Human Visual Audit完了
 - [ ] Crosscutting publication gate completed
 - [ ] passing crosscutting extensions implemented

@@ -1,0 +1,14 @@
+{
+  "period": "1941-01-01",
+  "termRefs": [
+    {"id":"yoshizawa-first-proposal-1941","core":true},
+    {"id":"matsuoka-diet-speech-january-1941","core":true},
+    {"id":"japan-netherlands-east-indies-talks-1940","core":true},
+    {"id":"japan-french-indochina-economic-talks-1940","core":false},
+    {"id":"netherlands-east-indies-1940","core":false},
+    {"id":"southern-economic-policy-outline-1940","core":false},
+    {"id":"tripartite-pact-1940","core":false},
+    {"id":"second-konoe-cabinet-1940","core":false},
+    {"id":"nanjing-national-government-1940","core":false}
+  ]
+}

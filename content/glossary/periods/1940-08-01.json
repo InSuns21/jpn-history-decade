@@ -1,0 +1,16 @@
+{
+  "period": "1940-08-01",
+  "termRefs": [
+    {"id":"political-party-dissolutions-1940","core":true},
+    {"id":"us-export-control-july-1940","core":true},
+    {"id":"basic-national-policy-outline-1940","core":true},
+    {"id":"southern-economic-policy-outline-1940","core":true},
+    {"id":"kobayashi-dutch-indies-mission-1940","core":true},
+    {"id":"matsuoka-henry-agreement-1940","core":true},
+    {"id":"second-konoe-cabinet-1940","core":false},
+    {"id":"konoe-new-order-movement-1940","core":false},
+    {"id":"world-situation-policy-outline-1940","core":false},
+    {"id":"netherlands-east-indies-1940","core":false},
+    {"id":"french-indochina-aid-route-cutoff-1940","core":false}
+  ]
+}

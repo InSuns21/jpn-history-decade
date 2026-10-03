@@ -1,0 +1,13 @@
+{
+  "period": "1941-04-23",
+  "termRefs": [
+    {"id":"us-japan-draft-understanding-1941","core":true},
+    {"id":"japan-french-indochina-economic-agreements-1941","core":true},
+    {"id":"franco-thai-peace-treaty-1941","core":true},
+    {"id":"japan-french-indochina-economic-talks-1940","core":false},
+    {"id":"matsuoka-europe-trip-1941","core":false},
+    {"id":"tripartite-pact-1940","core":false},
+    {"id":"nomura-kichisaburo-us-ambassador-1941","core":false},
+    {"id":"second-konoe-cabinet-1940","core":false}
+  ]
+}

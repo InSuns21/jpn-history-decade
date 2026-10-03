@@ -6,7 +6,7 @@
 - **Reference baseline:** A32「北部仏印進駐・援蒋ルート・主要交通点」
 - **Primary goal:** 旧来の厳しすぎる geometry 採用基準で no-map / point-only / deferred になった地図を、現行 `MAP_AUDIT_STANDARD.md` の approximate / schematic 正式採用方針で遡及再判定し、採用となったものは地図作成・Data Audit・Style Auditまで実装する
 - **Human Visual Audit:** このplanの実行時点では意図的にスキップし、残件を `docs/MAP_HUMAN_VISUAL_AUDIT_BACKLOG.md` で追跡する
-- **Progress:** R0 inventory ✅ → R1 precision-blocked review ✅ / 4 maps implemented → R2 adopted-but-unregistered ✅ / A20〜A28 9 maps implemented → R3 point-only upgrade review ✅ / no-upgrade → 次は R4 stable published map review
+- **Progress:** R0 inventory ✅ → R1 precision-blocked review ✅ / 4 maps implemented → R2 adopted-but-unregistered ✅ / A20〜A28 9 maps implemented → R3 point-only upgrade review ✅ / no-upgrade → R4 stable published map review ✅ → A11/A17 retain-no-map review ✅ → 次は R5 final validation
 - **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](./JPN_HISTORY_DECADE_PLAN.md)
 - **Map standard:** [MAP_AUDIT_STANDARD.md](../standards/MAP_AUDIT_STANDARD.md)
 
@@ -424,16 +424,16 @@ Human Visual Audit未了であることは、このplanの `implementation-compl
 # 11. Definition of Done
 
 - [x] A1〜A31の旧判定を全件inventory化
-- [ ] A1〜A31を現行 `MAP_AUDIT_STANDARD.md` で再判定
-- [ ] 「精密vectorがない」だけを理由にno-mapを維持した案件が残っていない
-- [ ] `adopt-and-implement` 判定の地図を実装
-- [ ] `upgrade-existing` 判定の地図を必要範囲で更新
-- [ ] site-authored approximate / schematic geometryにprovenanceとtransformation historyを付与
-- [ ] Data Audit passed
-- [ ] Style Audit passed
-- [ ] Human Visual Auditが必要な地図は `draft / pending-human` に固定
-- [ ] Human Visual Audit残件を `docs/MAP_HUMAN_VISUAL_AUDIT_BACKLOG.md` へ全件登録
-- [ ] backlog未登録の `pending-human` 地図がない
+- [x] A1〜A31を現行 `MAP_AUDIT_STANDARD.md` で再判定
+- [x] 「精密vectorがない」だけを理由にno-mapを維持した案件が残っていない
+- [x] `adopt-and-implement` 判定の地図を実装
+- [x] `upgrade-existing` 判定の地図を必要範囲で更新
+- [x] site-authored approximate / schematic geometryにprovenanceとtransformation historyを付与
+- [x] Data Audit passed
+- [x] Style Audit passed
+- [x] Human Visual Auditが必要な地図は `draft / pending-human` に固定
+- [x] Human Visual Audit残件を `docs/MAP_HUMAN_VISUAL_AUDIT_BACKLOG.md` へ全件登録
+- [x] backlog未登録の `pending-human` 地図がない
 - [ ] `npm run check` green
 - [ ] GitHub Actions green
 - [ ] Pages deploy green（公開ページ参照を変更した場合）
@@ -680,3 +680,79 @@ R2では「採用判定だけ残って公開実装がない」債務を解消し
 - A16のhistoricalQuestionにある「どの方向へ広がったか」は、複数の日付付きpointの相対配置で読む構成を維持する。点間を結ぶこと自体に歴史的意味を与えない。
 
 次工程は **R4「stable published mapの軽量整合確認」**。
+
+
+---
+
+# 17. R4 — stable published map軽量整合確認（2026-10-03）
+
+対象：A1 / A2 / A3 / A5 / A12 / A14 / A29。
+
+全7地図について、現行 `MAP_AUDIT_STANDARD.md` の次の項目だけを再確認した。
+
+- provenance
+- temporalCoverage
+- geometryConfidence
+- derived datasetのtransformation history
+- readingNote
+- modern basemap注記
+- auditState
+- approximate / schematic geometryが精密さを過剰主張していないか
+
+## 結果
+
+| A | map | 結果 |
+|---|---|---|
+| A1 | `bakumatsu-early-contact-1853-1854` | keep-existing |
+| A2 | `treaty-ports-transport-1859` | keep-existing |
+| A3 | `boshin-war-1868-1869` | keep-existing |
+| A5 | `shizoku-rebellions-seinan-1874-1877` | keep-existing |
+| A12 | `urban-population-1920` | keep-existing |
+| A14 | `urban-population-1930` | keep-existing |
+| A29 | `nomonhan-1939-timeline` | keep-existing |
+
+全件で Data / Style Audit はpassed。A1 / A2 / A3 / A5 / A12 / A29はHuman Visual Audit passed、A14は既監査point-only表示の再利用例外。
+
+A2 / A29のline・schematic geometryもreadingNote・provenance・geometryConfidenceで用途と精度上限が明示されており、現行標準へ合わせるための修正は不要と判定した。
+
+---
+
+# 18. A11 / A17 retain-no-map再判定（2026-10-03）
+
+R0で独立枠へ送ったA11 / A17を現行基準で再判定した。
+
+## A11 米騒動
+
+- oldDecision: no-map
+- retroDecision: **remain-no-map**
+- mapNecessity: high
+- 理由: geometry precisionではなく、**イベント採録基準・全国網羅性・欠測と不存在の区別**が未解決
+- 軍隊出動記録を使えば政府・軍の治安対応分布は作れるが、それは「米騒動の発生分布」と別主題
+- 著名地点だけをpoint化すると、全国的波及を代表しているように見える
+- approximate point / schematic areaを許容しても、欠測を埋めることはできない
+
+したがって、A11の中心問いである米騒動そのものの地域差を地図化するには、発生日・当時市町村・参加主体・行動類型・採録基準・source ID・位置精度を同じevent schemaで持つデータセットが必要。今回の遡及工程では作らない。
+
+## A17 国際連盟・外交
+
+- oldDecision: no-map
+- retroDecision: **remain-no-map**
+- mapNecessity: low
+- 理由: 中心問いは東京・ジュネーブ・南京・満洲の距離ではなく、**満洲国承認、リットン報告書、総会審議、採決、脱退通告という制度上の時系列・権限関係**
+- 都市pointや国家polygonを追加しても、承認・投票・通告手続の理解をほぼ改善しない
+- 世界地図上の加盟／非加盟塗り分けは満州事変の争点を別の問いへ変えてしまう
+
+したがってA17は、本文の時系列・主体分解が地図より適切。
+
+## 全件再評価の完了
+
+R0〜R4とA11/A17再判定により、A1〜A31の全件について現行基準で結論を持った。
+
+- 既存地図維持
+- 新規実装
+- schematic / approximateへのupgrade
+- precision以外の具体的理由によるremain-no-map
+
+のいずれかに分類済み。
+
+「完璧なGeoJSONがない」という理由だけでno-mapを維持したA判定は残っていない。

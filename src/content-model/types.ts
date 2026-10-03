@@ -9,7 +9,7 @@ export interface SnapshotItem {
 export type ContentBlock =
   | { type: 'paragraph'; text: string }
   | { type: 'list'; items: string[] }
-  | { type: 'subheading'; text: string }
+  | { type: 'subheading'; text: string; id?: string }
 
 export interface HistoricalSection {
   id: string

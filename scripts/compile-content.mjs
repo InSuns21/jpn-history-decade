@@ -239,8 +239,23 @@ function parseMarkdownSections(body, file) {
       }
       flushParagraph()
       flushList()
-      questionMode = subheadingMatch[1] === '考えてみる'
-      if (!questionMode) current.blocks.push({ type: 'subheading', text: subheadingMatch[1] })
+
+      const rawSubheading = subheadingMatch[1]
+      const anchorMatch = rawSubheading.match(/^(.+?)\s+\{#([a-z0-9-]+)\}$/)
+      if (rawSubheading.includes('{#') && !anchorMatch) {
+        pushError(file, 'subheading anchor must use trailing {#lowercase-kebab-id} syntax')
+      }
+
+      const subheadingText = anchorMatch ? anchorMatch[1] : rawSubheading
+      const subheadingId = anchorMatch?.[2]
+      questionMode = subheadingText === '考えてみる'
+      if (!questionMode) {
+        current.blocks.push({
+          type: 'subheading',
+          text: subheadingText,
+          ...(subheadingId ? { id: subheadingId } : {}),
+        })
+      }
       continue
     }
 
@@ -283,10 +298,16 @@ function parseMarkdownSections(body, file) {
 
   if (sections.length === 0) pushError(file, 'Markdown body must contain at least one ## section with {#id}')
 
-  const sectionIds = new Set()
+  const anchorIds = new Set()
   for (const section of sections) {
-    if (sectionIds.has(section.id)) pushError(file, 'duplicate section id: ' + section.id)
-    sectionIds.add(section.id)
+    if (anchorIds.has(section.id)) pushError(file, 'duplicate anchor id: ' + section.id)
+    anchorIds.add(section.id)
+
+    for (const block of section.blocks) {
+      if (block.type !== 'subheading' || !block.id) continue
+      if (anchorIds.has(block.id)) pushError(file, 'duplicate anchor id: ' + block.id)
+      anchorIds.add(block.id)
+    }
   }
 
   return sections

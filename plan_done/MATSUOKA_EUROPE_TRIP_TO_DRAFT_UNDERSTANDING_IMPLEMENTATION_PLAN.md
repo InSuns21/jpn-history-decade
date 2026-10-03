@@ -1,7 +1,7 @@
 # 1941年3月12日から4月22日まで — 松岡訪欧・日ソ中立条約・日米諒解案 実装計画
 
-- **Status:** active
-- **Progress:** phase cut ✅ → JH83 ✅ → JH84 ✅ → JH85 ✅ → A36 ✅ adopted / medium・point-only → Crosscutting publication gate ✅ → S05 / S10 extension ✅ → S02 / S09 hold → phase-end audit necessity judgment ✅ no-audit → 次は npm run check / CI
+- **Status:** completed
+- **Progress:** phase cut ✅ → JH83 ✅ → JH84 ✅ → JH85 ✅ → A36 ✅ adopted / medium・point-only → Crosscutting publication gate ✅ → S05 / S10 extension ✅ → S02 / S09 hold → phase-end audit necessity judgment ✅ no-audit → npm run check ✅ → Actions CI ✅ → Pages ✅ → completed / archived
 - **Created:** 2026-10-04
 - **Scope:** 1941-03-12〜1941-04-22
 - **Primary goal:** 3月12日の松岡洋右外相の訪欧出発から、ドイツ・イタリア・ソ連との外交、4月13日の日ソ中立条約、野村吉三郎・ハル国務長官間の非公式対話が4月16日の「日米諒解案」を基礎とする正式交渉への入口へ進み、4月22日に帰国した松岡がその処理をめぐって政府内調整へ加わるまでを追う。枢軸・対ソ・対米の三つの外交回路を一本の「開戦への道」に圧縮せず、それぞれの目的・制約・手続を区別する。
@@ -350,11 +350,11 @@ JH83〜JH85実装後に判定する。
 - [x] Crosscutting publication gate completed
 - [x] passing crosscutting extensions implemented
 - [x] phase-end audit necessity judgment completed
-- [ ] npm run check green
-- [ ] GitHub Actions CI green
-- [ ] GitHub Pages deploy green
-- [ ] Status = completed
-- [ ] plan_done/へ移動
+- [x] npm run check green
+- [x] GitHub Actions CI green
+- [x] GitHub Pages deploy green
+- [x] Status = completed
+- [x] plan_done/へ移動
 
 ---
 

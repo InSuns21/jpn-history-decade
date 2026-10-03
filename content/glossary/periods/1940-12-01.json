@@ -1,0 +1,12 @@
+{
+  "period": "1940-12-01",
+  "termRefs": [
+    {"id":"economic-new-system-outline-1940","core":true},
+    {"id":"cabinet-information-bureau-1940","core":true},
+    {"id":"dainihon-sangyo-hokokukai-1940","core":true},
+    {"id":"planning-board-1937","core":false},
+    {"id":"taisei-yokusankai-1940","core":false},
+    {"id":"national-general-mobilization-law-1938","core":false},
+    {"id":"second-konoe-cabinet-1940","core":false}
+  ]
+}

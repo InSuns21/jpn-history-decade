@@ -10,6 +10,10 @@ import { manchurianIncident1931Map } from './definitions/manchurianIncident1931.
 import { february26Tokyo1936Map } from './definitions/february26Tokyo1936.ts'
 import { nomonhan1939TimelineMap } from './definitions/nomonhan1939Timeline.ts'
 import { northernIndochinaAdvance1940Map } from './definitions/northernIndochinaAdvance1940.ts'
+import { railwayExpansion1872To1890Map } from './definitions/railwayExpansion1872To1890.ts'
+import { sinoRussoJapaneseWarTheatersMap } from './definitions/sinoRussoJapaneseWarTheaters.ts'
+import { firstWorldWarEastAsiaPacificMap } from './definitions/firstWorldWarEastAsiaPacific.ts'
+import { shandongManchuria1927To1928Map } from './definitions/shandongManchuria1927To1928.ts'
 import type { HistoricalMapDefinition } from './schema.ts'
 
 export const mapDefinitions: HistoricalMapDefinition[] = [
@@ -23,6 +27,10 @@ export const mapDefinitions: HistoricalMapDefinition[] = [
   february26Tokyo1936Map,
   nomonhan1939TimelineMap,
   northernIndochinaAdvance1940Map,
+  railwayExpansion1872To1890Map,
+  sinoRussoJapaneseWarTheatersMap,
+  firstWorldWarEastAsiaPacificMap,
+  shandongManchuria1927To1928Map,
 ]
 
 export function findMapDefinition(id: string) {

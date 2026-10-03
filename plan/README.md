@@ -12,9 +12,10 @@
 
 ### 本線
 
-- [SECOND_KONOE_TO_PRE_TRIPARTITE_PACT_IMPLEMENTATION_PLAN.md](./SECOND_KONOE_TO_PRE_TRIPARTITE_PACT_IMPLEMENTATION_PLAN.md)
-  - Scope: 1940-07-22〜1940-09-26
-  - Progress: JH71 ✅ → JH72 ✅ → JH73 ✅ → A32 map necessity / data-quality judgment ✅ adopted / high → 次はA32 map実装
+- [TRIPARTITE_PACT_TO_NANJING_RECOGNITION_IMPLEMENTATION_PLAN.md](./TRIPARTITE_PACT_TO_NANJING_RECOGNITION_IMPLEMENTATION_PLAN.md)
+  - Scope: 1940-09-27〜1940-11-30
+  - Progress: phase cut ✅ → 次は JH74「1940-09-27〜10-11」
+  - 三国同盟、大政翼賛会、米鉄鋼屑規制の実施強化、日蘭会商の小林代表帰国、南京政府正式承認までを状態遷移として追う
 
 ### 並行監査・実装
 

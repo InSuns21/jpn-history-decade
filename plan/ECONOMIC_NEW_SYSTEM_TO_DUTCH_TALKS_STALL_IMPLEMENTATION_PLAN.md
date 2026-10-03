@@ -1,7 +1,7 @@
 # 1940年12月1日から1941年1月21日まで — 経済新体制・大政翼賛会実践要綱・南方資源交渉 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH77 ✅ → JH78 ✅ → 次は JH79「1941-01-01〜01-21」
+- **Progress:** phase cut ✅ → JH77 ✅ → JH78 ✅ → JH79 ✅ → 次は A34「1940年12月〜1941年1月の南方資源交渉」map necessity / data-quality judgment
 - **Created:** 2026-10-03
 - **Scope:** 1940-12-01〜1941-01-21
 - **Primary goal:** 1940年秋に大政翼賛会・大日本産業報国会・南京政府正式承認まで進んだ状態から、12月に国内の「新体制」が経済団体・国民運動の実践方針へ具体化し、対外的には芳沢謙吉特使による日蘭会商と日仏印正式経済交渉が再始動する過程を追う。1941年1月16日の芳沢第一次提案と、21日の松岡洋右外相の議会演説後に蘭側が反発し会商が停滞へ入るところを終点とする。
@@ -264,7 +264,7 @@ S10へ延長する場合は、
 - [x] phase-end audit候補仮説を定義
 - [x] JH77 published / JH76との隣接接続確認完了
 - [x] JH78 published / JH77との隣接接続確認完了
-- [ ] JH79 published / JH78との隣接接続確認完了
+- [x] JH79 published / JH78との隣接接続確認完了
 - [ ] A34 map necessity / data-quality judgment completed
 - [ ] A34採用時のData / Style / Human Visual Audit完了、またはno-map理由記録
 - [ ] Crosscutting publication gate completed

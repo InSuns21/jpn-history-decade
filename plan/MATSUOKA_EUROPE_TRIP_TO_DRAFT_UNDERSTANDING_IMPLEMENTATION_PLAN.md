@@ -1,7 +1,7 @@
 # 1941年3月12日から4月22日まで — 松岡訪欧・日ソ中立条約・日米諒解案 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH83 ✅ → JH84 ✅ → JH85 ✅ → A36 ✅ adopted / medium・point-only → Crosscutting publication gate ✅ → S05 / S10 extension ✅ → S02 / S09 hold → 次は phase-end audit necessity judgment
+- **Progress:** phase cut ✅ → JH83 ✅ → JH84 ✅ → JH85 ✅ → A36 ✅ adopted / medium・point-only → Crosscutting publication gate ✅ → S05 / S10 extension ✅ → S02 / S09 hold → phase-end audit necessity judgment ✅ no-audit → 次は npm run check / CI
 - **Created:** 2026-10-04
 - **Scope:** 1941-03-12〜1941-04-22
 - **Primary goal:** 3月12日の松岡洋右外相の訪欧出発から、ドイツ・イタリア・ソ連との外交、4月13日の日ソ中立条約、野村吉三郎・ハル国務長官間の非公式対話が4月16日の「日米諒解案」を基礎とする正式交渉への入口へ進み、4月22日に帰国した松岡がその処理をめぐって政府内調整へ加わるまでを追う。枢軸・対ソ・対米の三つの外交回路を一本の「開戦への道」に圧縮せず、それぞれの目的・制約・手続を区別する。
@@ -265,6 +265,23 @@ JH83〜JH85実装後に判定する。
 
 具体的な未解決横断仮説が残らなければ独立監査は実施しない。
 
+## phase-end audit necessity judgment 結果
+
+**no-audit** とする。
+
+候補に挙げた論点は、JH83〜JH85の隣接接続、interpretiveCautions、A36、S05 / S10 publication gateで個別に処理できている。
+
+- 松岡訪欧は三国同盟の運用確認、四国協商構想、対ソ国交調整、欧州情勢把握という複数目的に分けた。
+- 四国協商構想と実際に成立した日ソ中立条約を制度上分離した。
+- 独ソ関係悪化を示す同時代情報と、6月22日の独ソ戦開始という後世から確定する結果を分離した。
+- 4月16日の日米諒解案を民間・非公式接触から政府間交渉へ接続する入口として扱い、正式承認済み最終案として扱っていない。
+- 4月18日の連絡懇談会は研究・帰国待ち、4月22日は帰国後の再調整として段階分離した。
+- A36は東京・ワシントン・欧州・モスクワへの情報・権限分散をpoint-onlyで示し、推定旅程線を作らなかった。
+- S05は政治参加回路、S10は法的統制権限から物資配当計画への接続という長期比較軸へ変換した。
+- S02は1937〜41年の橋渡し不足を理由にholdとし、飛び石の更新を避けた。
+
+複数年代をまとめて追加検証する具体的な未解決仮説は残っていないため、独立した追加監査を置かない。
+
 ---
 
 # 9. 主要ソース
@@ -332,7 +349,7 @@ JH83〜JH85実装後に判定する。
 - [x] A36採用時の必要監査完了、またはno-map理由記録
 - [x] Crosscutting publication gate completed
 - [x] passing crosscutting extensions implemented
-- [ ] phase-end audit necessity judgment completed
+- [x] phase-end audit necessity judgment completed
 - [ ] npm run check green
 - [ ] GitHub Actions CI green
 - [ ] GitHub Pages deploy green

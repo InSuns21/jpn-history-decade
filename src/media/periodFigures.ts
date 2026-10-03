@@ -841,4 +841,14 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     }),
   ],
 
+  '1941-01-22': [
+    commonsFigure('Plaek Phibunsongkhram Inspects Thai Troops 1941.png', {
+      alt: '1941年1月16日、仏印国境紛争の最中にタイ軍部隊を視察するプレーク・ピブーンソンクラーム首相',
+      title: '泰仏印国境紛争中のタイ軍視察',
+      dateLabel: '1941年1月16日',
+      credit: 'タイ王国陸軍／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+
 }

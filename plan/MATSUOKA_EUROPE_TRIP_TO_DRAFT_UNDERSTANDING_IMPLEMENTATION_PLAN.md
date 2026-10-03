@@ -1,7 +1,7 @@
 # 1941年3月12日から4月22日まで — 松岡訪欧・日ソ中立条約・日米諒解案 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → 次は JH83「1941-03-12〜03-31」
+- **Progress:** phase cut ✅ → JH83 ✅ → JH84 ✅ → 次は JH85「1941-04-14〜04-22」
 - **Created:** 2026-10-04
 - **Scope:** 1941-03-12〜1941-04-22
 - **Primary goal:** 3月12日の松岡洋右外相の訪欧出発から、ドイツ・イタリア・ソ連との外交、4月13日の日ソ中立条約、野村吉三郎・ハル国務長官間の非公式対話が4月16日の「日米諒解案」を基礎とする正式交渉への入口へ進み、4月22日に帰国した松岡がその処理をめぐって政府内調整へ加わるまでを追う。枢軸・対ソ・対米の三つの外交回路を一本の「開戦への道」に圧縮せず、それぞれの目的・制約・手続を区別する。
@@ -297,10 +297,10 @@ JH83〜JH85実装後に判定する。
 - [x] A36をmap necessity / data-quality judgmentとして設定
 - [x] Crosscutting publication gate候補を定義
 - [x] phase-end audit候補仮説を定義
-- [ ] JH83 published / JH82との隣接接続確認完了
-- [ ] JH83 図版採用または理由付きno-image判定完了
-- [ ] JH84 published / JH83との隣接接続確認完了
-- [ ] JH84 図版採用または理由付きno-image判定完了
+- [x] JH83 published / JH82との隣接接続確認完了
+- [x] JH83 図版採用または理由付きno-image判定完了
+- [x] JH84 published / JH83との隣接接続確認完了
+- [x] JH84 図版採用または理由付きno-image判定完了
 - [ ] JH85 published / JH84との隣接接続確認完了
 - [ ] JH85 図版採用または理由付きno-image判定完了
 - [ ] A36 map necessity / data-quality judgment completed

@@ -851,4 +851,15 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     }),
   ],
 
+
+  '1941-02-01': [
+    commonsFigure('Nomura presenting credentials to Roosevelt at White House.jpg', {
+      alt: '1941年2月14日、ルーズヴェルト大統領への信任状捧呈のためホワイトハウスへ入る野村吉三郎駐米大使',
+      title: '野村吉三郎駐米大使の信任状捧呈',
+      dateLabel: '1941年2月14日',
+      credit: '毎日新聞社／アジア歴史資料センター・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+
 }

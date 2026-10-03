@@ -6,7 +6,7 @@
 - **Reference baseline:** A32「北部仏印進駐・援蒋ルート・主要交通点」
 - **Primary goal:** 旧来の厳しすぎる geometry 採用基準で no-map / point-only / deferred になった地図を、現行 `MAP_AUDIT_STANDARD.md` の approximate / schematic 正式採用方針で遡及再判定し、採用となったものは地図作成・Data Audit・Style Auditまで実装する
 - **Human Visual Audit:** このplanの実行時点では意図的にスキップし、残件を `docs/MAP_HUMAN_VISUAL_AUDIT_BACKLOG.md` で追跡する
-- **Progress:** R0 inventory ✅ → R1 precision-blocked review ✅ / 4 maps implemented → R2 adopted-but-unregistered ✅ / A20〜A28 9 maps implemented → 次は R3 point-only upgrade review
+- **Progress:** R0 inventory ✅ → R1 precision-blocked review ✅ / 4 maps implemented → R2 adopted-but-unregistered ✅ / A20〜A28 9 maps implemented → R3 point-only upgrade review ✅ / no-upgrade → 次は R4 stable published map review
 - **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](./JPN_HISTORY_DECADE_PLAN.md)
 - **Map standard:** [MAP_AUDIT_STANDARD.md](../standards/MAP_AUDIT_STANDARD.md)
 
@@ -657,3 +657,26 @@ R1対象11件について、旧no-mapをそのまま維持せず理由を分解�
 - Human Visual Audit backlog: HVA-005〜HVA-012
 
 R2では「採用判定だけ残って公開実装がない」債務を解消した。次工程は **R3「既存point-only地図のupgrade必要性判定」**。
+
+
+---
+
+# 16. R3 — point-only upgrade review（2026-10-03）
+
+既存point-only地図について、現行のapproximate / schematic line・area採用基準で「線・面を追加すると本文理解が明確に改善するか」を再判定した。
+
+| A | map | 判定 | 理由 |
+|---|---|---|---|
+| A16 | `manchurian-incident-1931` | **keep-existing** | 4地点は一本の進軍系列ではなく、柳条湖事件、朝鮮軍越境、錦州爆撃、チチハル占領という性質の異なる出来事。時系列順に線で結ぶと実在しない単一進軍路を示唆する。複数方向線を追加しても、政府不拡大方針と現地軍・朝鮮軍の別判断という本文の制度論より情報利得が小さい。 |
+| A19 | `february-26-tokyo-1936` | **keep-existing** | 中心問いは兵営と政治・軍事中枢の近接性。移動経路・占拠範囲・警戒線は主体・時刻で変化し、模式線／面を加えると「決起部隊の一つの計画経路・確定占拠域」に見えやすい。point-onlyが問いに最も合う。 |
+| A20 | `lugouqiao-initial-1937` | **keep-existing** | 盧溝橋・宛平・豊台・北平・天津の距離関係だけで初期事件の空間理解は成立する。鉄道・道路・軍移動線を足すと、7月7〜10日の局地交渉より後の作戦展開を先取りしやすい。 |
+
+## R3結論
+
+- A16 / A19 / A20はすべてpoint-only維持。
+- 「模式線を描けるようになった」こと自体をupgrade理由にしない。
+- 3地図とも既存の `published / not-required-reused-pattern` を維持。
+- 新しいHuman Visual Audit残件は発生しない。
+- A16のhistoricalQuestionにある「どの方向へ広がったか」は、複数の日付付きpointの相対配置で読む構成を維持する。点間を結ぶこと自体に歴史的意味を与えない。
+
+次工程は **R4「stable published mapの軽量整合確認」**。

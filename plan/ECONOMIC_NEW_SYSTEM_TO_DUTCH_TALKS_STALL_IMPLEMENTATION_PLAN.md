@@ -1,7 +1,7 @@
 # 1940年12月1日から1941年1月21日まで — 経済新体制・大政翼賛会実践要綱・南方資源交渉 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH77 ✅ → JH78 ✅ → JH79 ✅ → A34 ✅ no-map → Crosscutting publication gate ✅ → S05 / S10 extension ✅ → phase-end audit necessity judgment ✅ no-audit → 次は npm run check
+- **Progress:** phase cut ✅ → JH77 ✅ → JH78 ✅ → JH79 ✅ → A34 ✅ no-map → Crosscutting publication gate ✅ → S05 / S10 extension ✅ → phase-end audit necessity judgment ✅ no-audit → npm run check ✅ → CI ✅ → Pages ✅ → 次は phase completion / `plan_done` archive
 - **Created:** 2026-10-03
 - **Scope:** 1940-12-01〜1941-01-21
 - **Primary goal:** 1940年秋に大政翼賛会・大日本産業報国会・南京政府正式承認まで進んだ状態から、12月に国内の「新体制」が経済団体・国民運動の実践方針へ具体化し、対外的には芳沢謙吉特使による日蘭会商と日仏印正式経済交渉が再始動する過程を追う。1941年1月16日の芳沢第一次提案と、21日の松岡洋右外相の議会演説後に蘭側が反発し会商が停滞へ入るところを終点とする。
@@ -331,9 +331,9 @@ JH78〜JH79では、蘭印と仏印の制度条件の違いを明示した。
 - [x] Crosscutting publication gate completed — S05 / S10 pass、S09 / S02 hold、新規記事なし
 - [x] passing crosscutting extensions implemented — S05 / S10を1941年1月21日まで延長
 - [x] phase-end audit necessity judgment completed — no-audit
-- [ ] npm run check green
-- [ ] GitHub Actions CI green
-- [ ] GitHub Pages deploy green
+- [x] npm run check green — main CI #730 / Pages #340 の双方で実行・success
+- [x] GitHub Actions CI green — main CI #730 success
+- [x] GitHub Pages deploy green — Pages #340 success
 - [ ] Status = completed
 - [ ] plan_done/へ移動
 

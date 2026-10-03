@@ -807,4 +807,18 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     }),
   ],
 
+  '1940-12-01': [
+    commonsDocumentFigure(
+      'NDL1437109 統制経済と新体制.pdf',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/NDL1437109_%E7%B5%B1%E5%88%B6%E7%B5%8C%E6%B8%88%E3%81%A8%E6%96%B0%E4%BD%93%E5%88%B6.pdf/page1-1280px-NDL1437109_%E7%B5%B1%E5%88%B6%E7%B5%8C%E6%B8%88%E3%81%A8%E6%96%B0%E4%BD%93%E5%88%B6.pdf.jpg',
+      {
+        alt: '1940年刊行の小冊子『統制経済と新体制』の表紙と標題紙を写した国立国会図書館資料',
+        title: '『統制経済と新体制』',
+        dateLabel: '1940年',
+        credit: '野崎竜七／選挙粛正中央聯盟・国立国会図書館／Wikimedia Commons',
+        license: 'Public Domain',
+      },
+    ),
+  ],
+
 }

@@ -862,4 +862,25 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     }),
   ],
 
+
+  '1941-03-12': [
+    commonsFigure('Bundesarchiv Bild 183-B01910, Berlin, Besuch japanischer Aussenminister Matsuokas.jpg', {
+      alt: '1941年3月28日、ベルリンの日本大使館でカイテル元帥、スターマーらと会話する松岡洋右外相',
+      title: 'ベルリン訪問中の松岡洋右',
+      dateLabel: '1941年3月28日',
+      credit: 'Bundesarchiv, Bild 183-B01910／Wikimedia Commons',
+      license: 'CC BY-SA 3.0 DE',
+    }),
+  ],
+
+  '1941-04-01': [
+    commonsFigure('Soviet Japanese Neutrality Pact 13 April 1941.jpg', {
+      alt: '1941年4月13日に調印された日ソ中立条約の署名・印章部分を、外務省外交史料館所蔵資料から撮影した写真',
+      title: '日ソ中立条約',
+      dateLabel: '1941年4月13日',
+      credit: 'World Imaging／外務省外交史料館・Wikimedia Commons',
+      license: 'CC BY-SA 3.0',
+    }),
+  ],
+
 }

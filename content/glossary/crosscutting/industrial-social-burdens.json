@@ -188,6 +188,10 @@
     {
       "id": "national-mobilization-law-amendment-1941",
       "core": true
+    },
+    {
+      "id": "material-mobilization-q1-plan-1941",
+      "core": true
     }
   ]
 }

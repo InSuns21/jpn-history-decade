@@ -1,6 +1,6 @@
 # Body Depth Legacy Debt Repayment Plan
 
-Status: in_progress
+Status: completed
 Created: 2026-10-03
 
 ## 目的
@@ -360,4 +360,4 @@ Created: 2026-10-03
 - [x] `npm run validate:body-depth:strict` green
 - [x] `npm run check` green
 - [x] Pages deploy green
-- [ ] 本計画を completed とし `plan_done/` へ移動
+- [x] 本計画を completed とし `plan_done/` へ移動

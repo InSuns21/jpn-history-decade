@@ -1,7 +1,7 @@
 # 1941年1月22日から3月11日まで — 泰仏印国境紛争調停・議員任期延長・総動員法改正 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH80 ✅ → JH81 ✅ → JH82 ✅ → A35 ✅ adopted / high・point-only map実装 → Crosscutting publication gate ✅ → S05 / S10 extension ✅ → S02 / S09 hold → 次は phase-end audit necessity judgment
+- **Progress:** phase cut ✅ → JH80 ✅ → JH81 ✅ → JH82 ✅ → A35 ✅ adopted / high・point-only map実装 → Crosscutting publication gate ✅ → S05 / S10 extension ✅ → S02 / S09 hold → phase-end audit necessity judgment ✅ no-audit → 次は npm run check / CI
 - **Created:** 2026-10-04
 - **Scope:** 1941-01-22〜1941-03-11
 - **Primary goal:** 1月21日に日蘭会商が停滞へ入った直後から、タイ・仏領インドシナ国境紛争への日本の調停が停戦・東京会議・調停条項へ進み、国内では衆議院議員任期延長と国家総動員法改正によって政治参加と総動員の制度状態が変化し、対米関係では野村吉三郎大使の着任から秘密会談の回路が生まれるまでを追う。3月11日の泰仏印調停条項仮調印を終点とし、3月12日の松岡洋右外相訪欧出発は次フェーズへ送る。
@@ -275,6 +275,22 @@ JH80〜JH82実装後に判定する。
 
 具体的な未解決横断仮説が残らなければ独立監査は実施しない。
 
+## phase-end audit necessity judgment 結果
+
+**no-audit** とする。
+
+候補に挙げた論点は、JH80〜JH82の隣接接続、interpretiveCautions、A35、S05 / S10 publication gateで個別に処理できている。
+
+- 1月31日停戦と3月11日仮調印、5月9日平和条約を時点分離した。
+- 日本の調停を直接統治権取得として扱わず、外交仲介・保証・影響力の層に限定した。
+- 衆議院議員任期延長は議会存続と選挙更新延期を分離し、大政翼賛会の公事結社化も別の制度回路として扱った。
+- 国家総動員法改正は2月21日成立、3月3日公布、3月20日施行を分離した。
+- 野村着任、3月8日秘密会談、4月以後の日米交渉を段階分離した。
+- A35は交渉途中案と3月11日条件をカテゴリ分離し、法的境界の疑似復元を避けた。
+- S05 / S10は年代記事の再要約ではなく、それぞれ参加回路と統制権限の長期比較軸へ変換した。
+
+複数年代を横断して新たに検証すべき具体的仮説は残っていないため、独立した追加監査を置かない。
+
 ---
 
 # 9. 主要ソース
@@ -355,11 +371,11 @@ JH80〜JH82実装後に判定する。
 - [x] JH81 図版採用または理由付きno-image判定完了
 - [x] JH82 published / JH81との隣接接続確認完了
 - [x] JH82 図版採用または理由付きno-image判定完了
-- [ ] A35 map necessity / data-quality judgment completed
-- [ ] A35採用時のData / Style / Human Visual Audit完了、またはno-map理由記録
-- [ ] Crosscutting publication gate completed
-- [ ] passing crosscutting extensions implemented
-- [ ] phase-end audit necessity judgment completed
+- [x] A35 map necessity / data-quality judgment completed
+- [x] A35採用時のData / Style / Human Visual Audit完了、またはno-map理由記録
+- [x] Crosscutting publication gate completed
+- [x] passing crosscutting extensions implemented
+- [x] phase-end audit necessity judgment completed
 - [ ] npm run check green
 - [ ] GitHub Actions CI green
 - [ ] GitHub Pages deploy green

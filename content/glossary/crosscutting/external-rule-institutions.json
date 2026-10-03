@@ -136,6 +136,14 @@
     {
       "id": "northern-french-indochina-advance-1940",
       "core": true
+    },
+    {
+      "id": "japan-china-basic-treaty-1940",
+      "core": true
+    },
+    {
+      "id": "japan-manchukuo-china-joint-declaration-1940",
+      "core": true
     }
   ]
 }

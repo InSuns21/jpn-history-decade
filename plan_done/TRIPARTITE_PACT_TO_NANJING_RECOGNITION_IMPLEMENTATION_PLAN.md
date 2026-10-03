@@ -1,7 +1,7 @@
 # 1940年9月27日から11月30日まで — 三国同盟・大政翼賛会・南京政府正式承認 実装計画
 
-- **Status:** active
-- **Progress:** phase cut ✅ → JH74 ✅ → JH75 ✅ → JH76 ✅ → A33 ✅ no-map → Crosscutting publication gate ✅ → S05 / S09 / S10 extension ✅ → phase-end audit necessity judgment ✅ no-audit → npm run check ✅ → 次は GitHub Actions CI / Pages
+- **Status:** completed
+- **Progress:** phase cut ✅ → JH74 ✅ → JH75 ✅ → JH76 ✅ → A33 ✅ no-map → Crosscutting publication gate ✅ → S05 / S09 / S10 extension ✅ → phase-end audit necessity judgment ✅ no-audit → npm run check ✅ → CI ✅ → Pages ✅ → completed / archived
 - **Created:** 2026-10-03
 - **Scope:** 1940-09-27〜1940-11-30
 - **Primary goal:** 日独伊三国同盟の成立後、対米英・対蘭印関係に新しい外交制約が加わる一方、国内では大政翼賛会が発足して「政党解体後・議会存続」の移行状態に全国組織が置かれ、中国戦争では対重慶和平工作の継続と南京国民政府の正式承認が並行した過程を追う。11月30日の日華基本条約・日満華共同宣言と南京政府正式承認を終点とし、12月以後の経済新体制・大政翼賛会実践要綱・日仏印正式経済交渉は次フェーズへ送る。
@@ -368,10 +368,10 @@ JH76は重慶国民政府の抗戦継続を明示し、S09は南京政府の政�
 - [x] passing crosscutting extensions implemented — S05 / S09 / S10を1940年11月30日まで延長、S02 hold
 - [x] phase-end audit necessity judgment completed — no-audit
 - [x] npm run check green — PR CI #708
-- [ ] GitHub Actions CI green
-- [ ] GitHub Pages deploy green
-- [ ] Status = completed
-- [ ] plan_done/へ移動
+- [x] GitHub Actions CI green — main CI #710
+- [x] GitHub Pages deploy green — Pages #333
+- [x] Status = completed
+- [x] plan_done/へ移動
 
 ---
 

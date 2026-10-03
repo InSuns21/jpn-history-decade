@@ -1,7 +1,7 @@
 # 1941年1月22日から3月11日まで — 泰仏印国境紛争調停・議員任期延長・総動員法改正 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH80 ✅ → JH81 ✅ → JH82 ✅ → 次は A35 map necessity / data-quality judgment
+- **Progress:** phase cut ✅ → JH80 ✅ → JH81 ✅ → JH82 ✅ → A35 ✅ adopted / high・point-only map実装 → 次は Crosscutting publication gate
 - **Created:** 2026-10-04
 - **Scope:** 1941-01-22〜1941-03-11
 - **Primary goal:** 1月21日に日蘭会商が停滞へ入った直後から、タイ・仏領インドシナ国境紛争への日本の調停が停戦・東京会議・調停条項へ進み、国内では衆議院議員任期延長と国家総動員法改正によって政治参加と総動員の制度状態が変化し、対米関係では野村吉三郎大使の着任から秘密会談の回路が生まれるまでを追う。3月11日の泰仏印調停条項仮調印を終点とし、3月12日の松岡洋右外相訪欧出発は次フェーズへ送る。
@@ -188,6 +188,20 @@ JH80〜JH82実装後に判定する。
 を実施する。LineString / Polygonを含む場合はpoint-only再利用例外を適用しない。
 
 no-mapの場合は「データ精度が低いから」だけでなく、地図が中心問いを改善しない具体的理由をplanへ記録する。
+
+## A35 判定結果
+
+- **necessity:** adopted / high
+- **data quality:** sufficient for approximate point map
+- **implementation:** `thai-indochina-mediation-1941`
+- **geometry:** point-only
+- **visual audit:** `not-required-reused-pattern`
+
+メコン右岸のルアンパバーン・パクセ方面と、カンボジア側のバッタンバン・シェムリアップ・コンポントムが一つの交渉で扱われた相対配置は、本文だけより地図で明瞭になるため採用する。
+
+一方、2月23日・3月4日のFRUSは交渉過程の案を含み、3月11日の報告だけから精密な最終割譲境界を復元するのは適切でない。そこでLineString / Polygonで擬似的な法的境界を作らず、現在の同名都市・方面に置いた approximate point へ縮退する。シェムリアップ・コンポントムは「交渉過程の案」として別カテゴリに分け、3月11日の確定境界と誤認させない。
+
+表示は既存ThematicMapのpoint-only UI、ラベル、popup/touch interactionをそのまま再利用するため、MAP_AUDIT_STANDARDのpoint-only再利用例外を適用する。
 
 ---
 

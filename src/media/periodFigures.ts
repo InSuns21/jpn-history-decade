@@ -841,4 +841,25 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     }),
   ],
 
+  '1941-01-22': [
+    commonsFigure('Plaek Phibunsongkhram Inspects Thai Troops 1941.png', {
+      alt: '1941年1月16日、仏印国境紛争の最中にタイ軍部隊を視察するプレーク・ピブーンソンクラーム首相',
+      title: '泰仏印国境紛争中のタイ軍視察',
+      dateLabel: '1941年1月16日',
+      credit: 'タイ王国陸軍／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+
+
+  '1941-02-01': [
+    commonsFigure('Nomura presenting credentials to Roosevelt at White House.jpg', {
+      alt: '1941年2月14日、ルーズヴェルト大統領への信任状捧呈のためホワイトハウスへ入る野村吉三郎駐米大使',
+      title: '野村吉三郎駐米大使の信任状捧呈',
+      dateLabel: '1941年2月14日',
+      credit: '毎日新聞社／アジア歴史資料センター・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+
 }

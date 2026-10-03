@@ -1,7 +1,7 @@
 # 1941年1月22日から3月11日まで — 泰仏印国境紛争調停・議員任期延長・総動員法改正 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → 次は JH80「1941-01-22〜01-31」
+- **Progress:** phase cut ✅ → JH80 ✅ → JH81 ✅ → JH82 ✅ → A35 ✅ adopted / high・point-only map実装 → Crosscutting publication gate ✅ → S05 / S10 extension ✅ → S02 / S09 hold → phase-end audit necessity judgment ✅ no-audit → 次は npm run check / CI
 - **Created:** 2026-10-04
 - **Scope:** 1941-01-22〜1941-03-11
 - **Primary goal:** 1月21日に日蘭会商が停滞へ入った直後から、タイ・仏領インドシナ国境紛争への日本の調停が停戦・東京会議・調停条項へ進み、国内では衆議院議員任期延長と国家総動員法改正によって政治参加と総動員の制度状態が変化し、対米関係では野村吉三郎大使の着任から秘密会談の回路が生まれるまでを追う。3月11日の泰仏印調停条項仮調印を終点とし、3月12日の松岡洋右外相訪欧出発は次フェーズへ送る。
@@ -189,6 +189,20 @@ JH80〜JH82実装後に判定する。
 
 no-mapの場合は「データ精度が低いから」だけでなく、地図が中心問いを改善しない具体的理由をplanへ記録する。
 
+## A35 判定結果
+
+- **necessity:** adopted / high
+- **data quality:** sufficient for approximate point map
+- **implementation:** `thai-indochina-mediation-1941`
+- **geometry:** point-only
+- **visual audit:** `not-required-reused-pattern`
+
+メコン右岸のルアンパバーン・パクセ方面と、カンボジア側のバッタンバン・シェムリアップ・コンポントムが一つの交渉で扱われた相対配置は、本文だけより地図で明瞭になるため採用する。
+
+一方、2月23日・3月4日のFRUSは交渉過程の案を含み、3月11日の報告だけから精密な最終割譲境界を復元するのは適切でない。そこでLineString / Polygonで擬似的な法的境界を作らず、現在の同名都市・方面に置いた approximate point へ縮退する。シェムリアップ・コンポントムは「交渉過程の案」として別カテゴリに分け、3月11日の確定境界と誤認させない。
+
+表示は既存ThematicMapのpoint-only UI、ラベル、popup/touch interactionをそのまま再利用するため、MAP_AUDIT_STANDARDのpoint-only再利用例外を適用する。
+
 ---
 
 # 7. Crosscutting publication gate
@@ -232,6 +246,19 @@ JH80〜JH82実装後に判定する。
 
 ---
 
+## Crosscutting 判定結果
+
+- **S05「政治参加の回路」:** extend
+  - 議会存続・衆議院議員任期一年延長・通常総選挙延期・大政翼賛会の公事結社化という制度差を追加した。
+- **S10「産業社会の負担と保護」:** extend
+  - 1938年法下の個別命令から、1941年改正による委任枠そのものの拡張へ比較軸を進めた。
+- **S02「石高制・貨幣経済・財政」:** hold
+  - このフェーズの中心史料だけでは、既存S02の資金配分・金融制度比較を更新する独立した状態遷移を十分に立てられない。関連法令を年代記事へ無理に追加しない。
+- **S09「対外支配の制度差」:** hold until May treaty
+  - 3月11日は調停条項仮調印であり、領域移転の詳細実施を含む5月9日の仏タイ平和条約前。外交的影響力の増大だけで新しい支配制度類型を追加しない。
+- **新規日米交渉横断記事:** no
+  - 3月8日は秘密対話の開始段階で、4月以後の正式交渉前。長期記事化は後段階で再判定する。
+
 # 8. phase-end audit necessity judgment 候補
 
 フェーズ末に、以下が隣接確認・publication gateで解消済みかを判定する。
@@ -247,6 +274,22 @@ JH80〜JH82実装後に判定する。
 - S05/S10/S02/S09が年代記事の再編集になっていないか
 
 具体的な未解決横断仮説が残らなければ独立監査は実施しない。
+
+## phase-end audit necessity judgment 結果
+
+**no-audit** とする。
+
+候補に挙げた論点は、JH80〜JH82の隣接接続、interpretiveCautions、A35、S05 / S10 publication gateで個別に処理できている。
+
+- 1月31日停戦と3月11日仮調印、5月9日平和条約を時点分離した。
+- 日本の調停を直接統治権取得として扱わず、外交仲介・保証・影響力の層に限定した。
+- 衆議院議員任期延長は議会存続と選挙更新延期を分離し、大政翼賛会の公事結社化も別の制度回路として扱った。
+- 国家総動員法改正は2月21日成立、3月3日公布、3月20日施行を分離した。
+- 野村着任、3月8日秘密会談、4月以後の日米交渉を段階分離した。
+- A35は交渉途中案と3月11日条件をカテゴリ分離し、法的境界の疑似復元を避けた。
+- S05 / S10は年代記事の再要約ではなく、それぞれ参加回路と統制権限の長期比較軸へ変換した。
+
+複数年代を横断して新たに検証すべき具体的仮説は残っていないため、独立した追加監査を置かない。
 
 ---
 
@@ -322,17 +365,17 @@ JH80〜JH82実装後に判定する。
 - [x] A35をmap necessity / data-quality judgmentとして設定
 - [x] Crosscutting publication gate候補を定義
 - [x] phase-end audit候補仮説を定義
-- [ ] JH80 published / JH79との隣接接続確認完了
-- [ ] JH80 図版採用または理由付きno-image判定完了
-- [ ] JH81 published / JH80との隣接接続確認完了
-- [ ] JH81 図版採用または理由付きno-image判定完了
-- [ ] JH82 published / JH81との隣接接続確認完了
-- [ ] JH82 図版採用または理由付きno-image判定完了
-- [ ] A35 map necessity / data-quality judgment completed
-- [ ] A35採用時のData / Style / Human Visual Audit完了、またはno-map理由記録
-- [ ] Crosscutting publication gate completed
-- [ ] passing crosscutting extensions implemented
-- [ ] phase-end audit necessity judgment completed
+- [x] JH80 published / JH79との隣接接続確認完了
+- [x] JH80 図版採用または理由付きno-image判定完了
+- [x] JH81 published / JH80との隣接接続確認完了
+- [x] JH81 図版採用または理由付きno-image判定完了
+- [x] JH82 published / JH81との隣接接続確認完了
+- [x] JH82 図版採用または理由付きno-image判定完了
+- [x] A35 map necessity / data-quality judgment completed
+- [x] A35採用時のData / Style / Human Visual Audit完了、またはno-map理由記録
+- [x] Crosscutting publication gate completed
+- [x] passing crosscutting extensions implemented
+- [x] phase-end audit necessity judgment completed
 - [ ] npm run check green
 - [ ] GitHub Actions CI green
 - [ ] GitHub Pages deploy green

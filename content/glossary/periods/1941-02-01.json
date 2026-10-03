@@ -1,0 +1,13 @@
+{
+  "period": "1941-02-01",
+  "termRefs": [
+    {"id":"japan-thai-french-indochina-mediation-1941","core":true},
+    {"id":"shugiin-term-extension-law-1941","core":true},
+    {"id":"taisei-yokusankai-1940","core":true},
+    {"id":"nomura-kichisaburo-us-ambassador-1941","core":true},
+    {"id":"thai-french-indochina-border-conflict-1940-1941","core":false},
+    {"id":"teikoku-gikai","core":false},
+    {"id":"national-general-mobilization-law-1938","core":false},
+    {"id":"second-konoe-cabinet-1940","core":false}
+  ]
+}

@@ -1,7 +1,7 @@
 # 1941年1月22日から3月11日まで — 泰仏印国境紛争調停・議員任期延長・総動員法改正 実装計画
 
-- **Status:** active
-- **Progress:** phase cut ✅ → JH80 ✅ → JH81 ✅ → JH82 ✅ → A35 ✅ adopted / high・point-only map実装 → Crosscutting publication gate ✅ → S05 / S10 extension ✅ → S02 / S09 hold → phase-end audit necessity judgment ✅ no-audit → 次は npm run check / CI
+- **Status:** completed
+- **Progress:** phase cut ✅ → JH80 ✅ → JH81 ✅ → JH82 ✅ → A35 ✅ adopted / high・point-only map実装 → Crosscutting publication gate ✅ → S05 / S10 extension ✅ → S02 / S09 hold → phase-end audit necessity judgment ✅ no-audit → npm run check ✅ → Actions CI ✅ → Pages ✅ → completed / archived
 - **Created:** 2026-10-04
 - **Scope:** 1941-01-22〜1941-03-11
 - **Primary goal:** 1月21日に日蘭会商が停滞へ入った直後から、タイ・仏領インドシナ国境紛争への日本の調停が停戦・東京会議・調停条項へ進み、国内では衆議院議員任期延長と国家総動員法改正によって政治参加と総動員の制度状態が変化し、対米関係では野村吉三郎大使の着任から秘密会談の回路が生まれるまでを追う。3月11日の泰仏印調停条項仮調印を終点とし、3月12日の松岡洋右外相訪欧出発は次フェーズへ送る。
@@ -376,11 +376,11 @@ JH80〜JH82実装後に判定する。
 - [x] Crosscutting publication gate completed
 - [x] passing crosscutting extensions implemented
 - [x] phase-end audit necessity judgment completed
-- [ ] npm run check green
-- [ ] GitHub Actions CI green
-- [ ] GitHub Pages deploy green
-- [ ] Status = completed
-- [ ] plan_done/へ移動
+- [x] npm run check green
+- [x] GitHub Actions CI green
+- [x] GitHub Pages deploy green
+- [x] Status = completed
+- [x] plan_done/へ移動
 
 ---
 

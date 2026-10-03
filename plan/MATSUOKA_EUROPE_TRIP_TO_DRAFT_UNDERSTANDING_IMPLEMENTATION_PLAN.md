@@ -1,7 +1,7 @@
 # 1941年3月12日から4月22日まで — 松岡訪欧・日ソ中立条約・日米諒解案 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH83 ✅ → JH84 ✅ → JH85 ✅ → 次は A36 map necessity / data-quality judgment
+- **Progress:** phase cut ✅ → JH83 ✅ → JH84 ✅ → JH85 ✅ → A36 ✅ adopted / medium・point-only → 次は Crosscutting publication gate
 - **Created:** 2026-10-04
 - **Scope:** 1941-03-12〜1941-04-22
 - **Primary goal:** 3月12日の松岡洋右外相の訪欧出発から、ドイツ・イタリア・ソ連との外交、4月13日の日ソ中立条約、野村吉三郎・ハル国務長官間の非公式対話が4月16日の「日米諒解案」を基礎とする正式交渉への入口へ進み、4月22日に帰国した松岡がその処理をめぐって政府内調整へ加わるまでを追う。枢軸・対ソ・対米の三つの外交回路を一本の「開戦への道」に圧縮せず、それぞれの目的・制約・手続を区別する。
@@ -185,6 +185,18 @@ JH83〜JH85実装後に判定する。
 
 採用する場合は、確認可能な訪問都市・日付のみをPointとして扱うことを優先する。鉄道経路・航空経路・国境通過線を史料確認なしに推定しない。point-onlyで既存ThematicMapを再利用できる場合のみHuman Visual Audit再利用例外を検討する。
 
+## A36 判定結果
+
+- **necessity:** adopted / medium
+- **data quality:** sufficient for approximate city-center points
+- **implementation:** `matsuoka-parallel-diplomacy-1941`
+- **geometry:** point-only
+- **visual audit:** `not-required-reused-pattern`
+
+松岡外相がモスクワ・ベルリン・ローマ、野村駐米大使がワシントン、政府・統帥部が東京という別々の場所で情報と権限を持ったことが、4月18日に東京が松岡帰国まで最終態度を留保した制度的背景を理解しやすくするため採用する。
+
+一方、正確な列車・航空経路は中心問いに不要で、史料確認なしのLineStringは偽の精密さを生む。都市代表点だけを用い、モスクワは往路・帰路の役割差をpopupで時系列表示する。既存point-only表示を再利用するため個別Human Visual Auditは省略する。
+
 ---
 
 # 7. Crosscutting publication gate
@@ -303,8 +315,8 @@ JH83〜JH85実装後に判定する。
 - [x] JH84 図版採用または理由付きno-image判定完了
 - [x] JH85 published / JH84との隣接接続確認完了
 - [x] JH85 図版採用または理由付きno-image判定完了
-- [ ] A36 map necessity / data-quality judgment completed
-- [ ] A36採用時の必要監査完了、またはno-map理由記録
+- [x] A36 map necessity / data-quality judgment completed
+- [x] A36採用時の必要監査完了、またはno-map理由記録
 - [ ] Crosscutting publication gate completed
 - [ ] passing crosscutting extensions implemented
 - [ ] phase-end audit necessity judgment completed

@@ -107,3 +107,5 @@ README には概要だけを置き、フェーズ進捗・監査結果・地図�
 
 - 1941年4月23日〜6月21日フェーズはJH86→JH87→JH88→JH89→A37「仏タイ平和条約の国境・日本の調停保証」採用→Data / Style / Human Visual Audit→Crosscutting publication gate→S09/S10延長→phase-end audit necessity judgment no-audit→npm run check→CI→Pagesまで完了。A37のHVA-013は2026年10月4日の実表示確認でpassedとなり、地図をdraftからpublishedへ昇格した。直近mainのCI #797 / GitHub Pages #351もsuccess。全Definition of Doneを満たし、計画を `plan_done/US_JAPAN_NEGOTIATION_TO_PRE_BARBAROSSA_IMPLEMENTATION_PLAN.md` へarchiveした。
 - 次フェーズを `plan/BARBAROSSA_TO_PRE_ASSET_FREEZE_IMPLEMENTATION_PLAN.md` として1941年6月22日〜7月24日に切り出した。JH90「1941-06-22〜06-24」→JH91「1941-06-25〜07-02」→JH92「1941-07-03〜07-17」→JH93「1941-07-18〜07-24」→A38 map necessity / data-quality judgment の構成。6月22日の米側回答・独ソ戦開始、6月25日の南部仏印進駐方針、7月2日御前会議、関特演、第2次近衛内閣総辞職、第3次近衛内閣成立、日仏印共同防衛了解を状態遷移として扱い、7月25日の米国による日本資産凍結は次フェーズへ送る。現在地は phase cut ✅ → 次はJH90。
+
+- JH90「1941-06-22〜06-24」を実装。6月22日の米側回答・オーラル・ステートメントと同日の独ソ戦開始を二重の外部変化として扱い、日米交渉・三国同盟・日ソ中立条約・南方政策を同時に再計算する1941年6月23〜24日の政策状態を整理した。JH89との隣接接続確認を完了し、図版publication gateでは1941年6月22日に独ソ国境を越えるドイツ軍のPublic Domain写真を採用。次はJH91「1941-06-25〜07-02」。

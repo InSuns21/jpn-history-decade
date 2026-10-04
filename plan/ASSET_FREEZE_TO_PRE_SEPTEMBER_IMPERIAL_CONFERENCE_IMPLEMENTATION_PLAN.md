@@ -294,6 +294,9 @@ LineStringを含むため、Data Audit / Style Auditに加えて **Human Visual 
 - 米国西海岸までLineStringを伸ばす案は不採用。太平洋全域表示では南部仏印―蘭印―日本の相対配置が読みにくくなり、さらに米国の金融統制を物理的航路と誤認させやすいため、米国の役割はreading note / provenanceで「ドル決済・輸出許可」の制度層として分離
 - 石油供給線は数量を線幅へ符号化せず、実タンカー航跡・固定航路・輸送距離として測定できない模式線と明示
 - A38のサイゴン・カムラン湾pointを再利用し、「軍事的には南方資源へ近づいたが、平時の経済アクセスは閉じた」という逆転を同一画面で比較
+- Human Visual Audit事前確認で、2点直結の模式線が陸地を貫通することと、共通rendererの `minZoom: 3` 固定が広域表示を制約することを検出。LineStringを海上waypointによる模式リンクへ修正し、`HistoricalMapDefinition.initialView.minZoom` を追加してA39は `minZoom: 1.25` とした
+- 中間waypointは史料上の航路点ではなく、陸地横断を避けるための作図点。実航路・寄港地として解釈しない
+- rendererの既定値は既存地図互換のため minZoom 3 / maxZoom 13 を維持し、広域地図だけ定義側で明示的に緩和する
 
 
 ---

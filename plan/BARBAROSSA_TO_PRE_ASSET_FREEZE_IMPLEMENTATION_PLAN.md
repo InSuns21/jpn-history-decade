@@ -1,7 +1,7 @@
 # 1941年6月22日から7月24日まで — 米側回答・独ソ戦・南部仏印進駐決定・第三次近衛内閣 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH90 ✅ → JH91 ✅ → JH92 ✅ → JH93 ✅ → A38 judgment ✅ adopted / high → A38 map implementation / Data Audit / Style Audit ✅ → Crosscutting publication gate ✅ → S09 extension ✅ → 次は phase-end audit necessity judgment
+- **Progress:** phase cut ✅ → JH90 ✅ → JH91 ✅ → JH92 ✅ → JH93 ✅ → A38 judgment ✅ adopted / high → A38 map implementation / Data Audit / Style Audit ✅ → Crosscutting publication gate ✅ → S09 extension ✅ → phase-end audit necessity judgment ✅ no-audit → 次は npm run check
 - **Created:** 2026-10-04
 - **Scope:** 1941-06-22〜1941-07-24
 - **Primary goal:** 6月22日の米側回答と独ソ戦開始という二つの同日ショックから、6月25日の南部仏印進駐方針、7月2日の御前会議、関特演、松岡外相をめぐる内閣改造問題、第2次近衛内閣総辞職と7月18日の第3次近衛内閣成立、日仏印共同防衛了解までを追う。7月25日の米国による日本資産凍結は対日経済圧力の制度状態を大きく変えるため、その直前を終点とする。
@@ -298,22 +298,19 @@ Point-onlyで実装できるため、Data Audit / Style Auditは通常どおり�
 
 ---
 
-# 9. phase-end audit necessity judgment 候補
+# 9. phase-end audit necessity judgment — ✅ no-audit
 
-- 6月22日米側回答を11月のハル・ノートや最後通牒と同一視していないか
-- 6月22日独ソ戦開始を日ソ中立条約の自動失効として書いていないか
-- 独ソ戦開始から「北進」または「南進」の一方が自動的に決まったと書いていないか
-- 6月25日・7月2日の政策決定を7月28日の南部仏印実進駐と同一視していないか
-- 7月2日国策要綱を対英米開戦決定へ短絡していないか
-- 関特演を対ソ開戦命令・開戦決定と同一視していないか
-- 日米交渉継続を妥結可能性が高かった証拠として扱っていないか
-- 第2次近衛内閣総辞職を松岡個人だけで説明していないか
-- 第3次近衛内閣の成立日を7月17日と誤記していないか（正式成立は7月18日）
-- 日仏印共同防衛了解をフランス主権の消滅・日本の領有と同一視していないか
-- 7月25日の資産凍結、7月28日の実進駐、7月29日の議定書を先取りしていないか
-- 後知恵で「真珠湾への一本道」にしていないか
+2026-10-04にJH90〜JH93、A38、S09延長を横断して監査必要性を判定し、**独立したphase-end auditは不要（no-audit）**とした。
 
-具体的な未解決横断仮説が残らなければ独立監査は実施しない。
+候補としていた論点のうち、6月22日米側回答と11月のハル・ノートの混同、独ソ戦開始と日ソ中立条約失効の混同、北進／南進の一本道化、6月25日・7月2日の政策決定と7月28日の実進駐の圧縮、7月2日国策要綱の対英米開戦決定化、関特演の対ソ開戦命令化は、JH90〜JH92で時点・制度・軍事準備の段階を分離済みである。
+
+第2次近衛内閣総辞職は松岡個人の人物論だけでなく、日米交渉・三国同盟・対ソ方針・南方政策を一つの政府方針として運用する調整問題としてJH92に実装済みで、第3次近衛内閣の正式成立日も7月18日としてJH92→JH93の境界で確認済みである。
+
+JH93では、7月21日の共同防衛了解、23日の現地細目合意、25日の米資産凍結、28日の実進駐、29日の正式議定書を別段階として扱い、フランス側の主権・植民地行政と日本軍の駐留・基地利用も分離している。A38も7月24日時点の基地要求・比較地点だけをPointで示し、実進駐後の部隊配置を混在させていない。
+
+S09延長は年代記事の再要約ではなく、北部仏印・仏タイ平和条約・南京政府などを、主権・行政・軍事アクセス・外交的調停／保障という共通軸で比較する横断記事として成立している。
+
+以上から、候補論点は各年代の隣接接続確認、Crosscutting publication gate、A38監査、S09延長の実装内で解消済みであり、**複数記事を改めて監査しなければ判定できない具体的な未解決仮説は残っていない**。PROJECT_WORKFLOW_STANDARD.md 5.2に従い、理由のない独立全体監査は追加せず、次工程を `npm run check` とする。
 
 ---
 
@@ -402,7 +399,7 @@ Point-onlyで実装できるため、Data Audit / Style Auditは通常どおり�
 - [x] A38採用時の必要監査完了、またはno-map理由記録
 - [x] Crosscutting publication gate completed
 - [x] passing crosscutting extensions implemented
-- [ ] phase-end audit necessity judgment completed
+- [x] phase-end audit necessity judgment completed
 - [ ] npm run check green
 - [ ] GitHub Actions CI green
 - [ ] GitHub Pages deploy green

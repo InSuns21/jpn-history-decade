@@ -960,4 +960,17 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
   ],
 
 
+  '1941-07-03': [
+    {
+      imageUrl: 'https://www.jacar.archives.go.jp/das/image/C01003690200',
+      sourceUrl: 'https://www.jacar.archives.go.jp/aj/meta/listPhoto?REFCODE=C01003690200',
+      alt: '独ソ開戦後の時局関係事項に「関東軍特種演習（関特演）」という秘匿名称を用いることを定めた1941年6月26日付通牒',
+      title: '「関東軍特種演習」の秘匿名称を定めた通牒',
+      dateLabel: '1941年6月26日',
+      credit: '関東軍関係文書／防衛研究所・アジア歴史資料センター',
+      license: 'Public Domain',
+    },
+  ],
+
+
 }

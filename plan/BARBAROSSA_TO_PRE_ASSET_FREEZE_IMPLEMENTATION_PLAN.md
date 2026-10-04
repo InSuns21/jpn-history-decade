@@ -1,7 +1,7 @@
 # 1941年6月22日から7月24日まで — 米側回答・独ソ戦・南部仏印進駐決定・第三次近衛内閣 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → 次は JH90「1941-06-22〜06-24」
+- **Progress:** phase cut ✅ → JH90 ✅ → 次は JH91「1941-06-25〜07-02」
 - **Created:** 2026-10-04
 - **Scope:** 1941-06-22〜1941-07-24
 - **Primary goal:** 6月22日の米側回答と独ソ戦開始という二つの同日ショックから、6月25日の南部仏印進駐方針、7月2日の御前会議、関特演、松岡外相をめぐる内閣改造問題、第2次近衛内閣総辞職と7月18日の第3次近衛内閣成立、日仏印共同防衛了解までを追う。7月25日の米国による日本資産凍結は対日経済圧力の制度状態を大きく変えるため、その直前を終点とする。
@@ -344,8 +344,8 @@ map necessityは**candidate / 未判定**とする。
 - [x] A38をmap necessity / data-quality judgmentとして設定
 - [x] Crosscutting publication gate候補を定義
 - [x] phase-end audit候補仮説を定義
-- [ ] JH90 published / JH89との隣接接続確認完了
-- [ ] JH90 図版採用または理由付きno-image判定完了
+- [x] JH90 published / JH89との隣接接続確認完了
+- [x] JH90 図版採用または理由付きno-image判定完了
 - [ ] JH91 published / JH90との隣接接続確認完了
 - [ ] JH91 図版採用または理由付きno-image判定完了
 - [ ] JH92 published / JH91との隣接接続確認完了

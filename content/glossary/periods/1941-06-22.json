@@ -1,0 +1,10 @@
+{
+  "period": "1941-06-22",
+  "termRefs": [
+    {"id":"us-response-1941-06-22","core":true},
+    {"id":"german-soviet-war-1941","core":true},
+    {"id":"soviet-japanese-neutrality-pact-1941","core":true},
+    {"id":"tripartite-pact-1940","core":false},
+    {"id":"us-counterproposal-1941-06-01","core":false}
+  ]
+}

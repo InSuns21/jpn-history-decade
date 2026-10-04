@@ -1049,15 +1049,13 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
 
 
   '1941-08-30': [
-    {
-      imageUrl: 'https://www.jacar.archives.go.jp/das/image/C12120286700',
-      sourceUrl: 'https://www.jacar.archives.go.jp/das/meta/C12120286700',
-      alt: '1941年9月5日、帝国国策遂行要領の御前会議前日に昭和天皇が近衛文麿首相、杉山元参謀総長、永野修身軍令部総長へ下問したことを記録する陸軍関係文書',
-      title: '帝国国策遂行要領をめぐる9月5日の御下問記録',
-      dateLabel: '1941年9月5日',
-      credit: '防衛省防衛研究所・アジア歴史資料センター',
+    commonsFigure('Osami Nagano.jpg', {
+      alt: '1941年9月の国策審議で軍令部総長として資源・戦力と開戦準備の時間条件を説明した永野修身の肖像',
+      title: '永野修身 軍令部総長',
+      dateLabel: '1940年ごろ',
+      credit: '撮影者不詳／U.S. Naval History and Heritage Command・Wikimedia Commons',
       license: 'Public Domain',
-    },
+    }),
   ],
 
 }

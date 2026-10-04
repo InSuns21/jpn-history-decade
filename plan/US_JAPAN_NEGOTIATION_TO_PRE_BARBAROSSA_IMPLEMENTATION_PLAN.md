@@ -217,6 +217,23 @@ JH89では、その実施が**既存の仏印協定、蘭印・タイからの�
 
 JH86〜JH89実装後に判定する。
 
+## 判定結果（2026-10-04）
+
+**adopted / high。**
+
+本文では、3月の東京調停で「どの地域が争点か」を追う段階から、5月9日の平和条約で「どの地理規則を組み合わせて国境を構成するか」へ情報状態が変わった。メコン河の主航路中央線、北緯15度、子午線、トンレサップ湖上の20km円弧という順序は、文章だけより地図で読む価値が高い。
+
+一方、1941年5月時点の条約線を精密な測量済み境界として復元できるデータ状態ではない。条約は境界画定委員会の作業を予定しており、タイ外務省の外交史は新境界の標定完了を1942年7月11日としている。このためA37では、条約本文が直接指定する地理規則を **schematic / approximate** として可視化し、現代国境・現代州境の無注記流用は行わない。
+
+A35は交渉過程のpoint-only地図として既に監査済みであり、A37は条約成立後のLineStringを含むため、同一definitionへ時点切替を追加せず別mapとした。JH86の `peace-treaty-boundary-structure` 直後へ配置し、A35との連続性は本文・popupで説明する。
+
+- Map ID: `franco-thai-peace-treaty-1941`
+- Data Audit: passed
+- Style Audit: passed
+- Human Visual Audit: pending-human（`HVA-013`）
+- 公開状態: draft / 監査中表示
+- 誤読防止: 条約規則の模式図であり、1941年5月の測量済み確定境界、日本の主権範囲、現代国境を表さない
+
 ## 地図候補
 
 - 5月9日仏タイ平和条約が定めた国境線
@@ -386,7 +403,9 @@ JH86〜JH89実装後に判定する。
 - [x] JH88 図版採用または理由付きno-image判定完了
 - [x] JH89 published / JH88との隣接接続確認完了
 - [x] JH89 図版採用または理由付きno-image判定完了
-- [ ] A37 map necessity / data-quality judgment completed
+- [x] A37 map necessity / data-quality judgment completed
+- [x] A37 map implementation / Data Audit / Style Audit completed
+- [ ] A37 Human Visual Audit completed（HVA-013）
 - [ ] A37採用時の必要監査完了、またはno-map理由記録
 - [ ] Crosscutting publication gate completed
 - [ ] passing crosscutting extensions implemented

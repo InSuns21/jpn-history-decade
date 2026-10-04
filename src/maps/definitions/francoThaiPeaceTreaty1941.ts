@@ -206,7 +206,7 @@ export const francoThaiPeaceTreaty1941Map: HistoricalMapDefinition = {
             labelPlacement: 'left',
             year: '1941',
             detail:
-              '3月の東京調停でも重要な争点となったカンボジア西部の主要地域。A35の交渉対象地域と5月の条約線をつなぐ参照点。',
+              '3月の東京調停でも重要な争点となったカンボジア西部の主要地域。交渉対象地域と5月の条約線をつなぐ参照点。',
           },
         },
         {

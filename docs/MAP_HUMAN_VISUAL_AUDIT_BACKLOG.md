@@ -32,7 +32,9 @@ R1遡及実装の4地図に加え、R2実装のA21〜A28（A20を除く8地図�
 | HVA-011 | A27 | wuhan-guangdong-supply-1938 | /period/1938-09-30 | new | point + line | passed | passed | pending-human | 香港―広東―武漢主軸と代替方向が階層化されて見えるか | 広域marker tap / pan / pinch | ラベル過密・凡例高さ | initial/zoom-out | 代替方向を一本の確定道路、線幅を輸送量と誤認しないこと | same R2 batch commit | — | pending |
 | HVA-012 | A28 | hainan-supply-1939 | /period/1939-02-10 | new | point + line | passed | passed | pending-human | 海南島拠点と仏印輸送線の関係が読めるか | 海口・海防・諒山marker tap | 華南〜雲南の広域ラベル | initial/zoom-out | 海南島pointを島全域の即時完全占領、模式線を遮断済みrouteと誤認しないこと | same R2 batch commit | — | pending |
 
-| HVA-013 | A37 | franco-thai-peace-treaty-1941 | /period/1941-04-23 | new | point + line | passed | passed | pending-human | メコン区間・15度線・子午線・湖上円弧が階層化され、模式線として読めるか | marker tap / pan / pinch、近接する湖上端点ラベルの競合 | 広域メコン区間とトンレサップ詳細の両方を追えるか | initial / Mekong corridor / Tonle Sap detail / zoom-out | 条約規則の模式線を1941年5月時点の測量済み確定境界と誤認しないこと。現代背景国境を歴史境界と読まないこと | same A37 implementation batch commit | — | pending |\n\n## 新規登録テンプレート
+| HVA-013 | A37 | franco-thai-peace-treaty-1941 | /period/1941-04-23 | new | point + line | passed | passed | pending-human | メコン区間・15度線・子午線・湖上円弧が階層化され、模式線として読めるか | marker tap / pan / pinch、近接する湖上端点ラベルの競合 | 広域メコン区間とトンレサップ詳細の両方を追えるか | initial / Mekong corridor / Tonle Sap detail / zoom-out | 条約規則の模式線を1941年5月時点の測量済み確定境界と誤認しないこと。現代背景国境を歴史境界と読まないこと | same A37 implementation batch commit | — | pending |
+
+## 新規登録テンプレート
 
 | Backlog ID | A | Map ID | Route | Change | Geometry | Data | Style | Visual | Desktop | Tablet / Touch | Mobile | Zoom | 誤読注意点 | 実装commit | 完了commit | Status |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|

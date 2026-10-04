@@ -1,13 +1,13 @@
 # 1941年7月25日から9月5日まで — 資産凍結・南部仏印実進駐・石油輸出制限・日米首脳会談構想 実装計画
 
-- **Status:** active
-- **Progress:** phase cut ✅ → JH94 ✅ → JH95 ✅ → JH96 ✅ → JH97 ✅ → A39 judgment ✅ → implementation / Data・Style Audit ✅ → Human Visual Audit ✅ → Crosscutting publication gate ✅ → S10 extension ✅ → 新規「日米交渉と経済圧力」✅ → phase-end audit judgment ✅ no-audit → 次は npm run check
+- **Status:** completed
+- **Progress:** phase cut ✅ → JH94 ✅ → JH95 ✅ → JH96 ✅ → JH97 ✅ → A39 judgment ✅ → implementation / Data・Style Audit ✅ → Human Visual Audit ✅ published → Crosscutting publication gate ✅ → S10 extension ✅ → S13「日米交渉と経済圧力」✅ → phase-end audit judgment ✅ no-audit → npm run check ✅ → CI #871 ✅ → Pages #383 ✅ → completed / archived
 - **Created:** 2026-10-04
 - **Scope:** 1941-07-25〜1941-09-05
 - **Article count:** **4年代記事（JH94〜JH97）**
 - **Primary goal:** 南部仏印進駐に対する米国の日本資産凍結から、7月28日の実進駐、7月29日の日仏印共同防衛議定書、8月1日の対日石油輸出制限強化、8月の日米首脳会談構想、9月3日の大本営政府連絡会議での「帝国国策遂行要領」決定までを追う。9月6日の御前会議による正式な重要国策決定は次フェーズへ送る。
-- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](./JPN_HISTORY_DECADE_PLAN.md)
-- **Previous phase:** [BARBAROSSA_TO_PRE_ASSET_FREEZE_IMPLEMENTATION_PLAN.md](../plan_done/BARBAROSSA_TO_PRE_ASSET_FREEZE_IMPLEMENTATION_PLAN.md)
+- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](../plan/JPN_HISTORY_DECADE_PLAN.md)
+- **Previous phase:** [BARBAROSSA_TO_PRE_ASSET_FREEZE_IMPLEMENTATION_PLAN.md](./BARBAROSSA_TO_PRE_ASSET_FREEZE_IMPLEMENTATION_PLAN.md)
 - **Workspace rules:** [../SYSTEM_PROMPT.md](../SYSTEM_PROMPT.md)
 
 ---
@@ -470,11 +470,11 @@ CONTENT_AUTHORING_STANDARDの横断記事要件に照らすと、次を満たす
 - [x] Crosscutting publication gate completed
 - [x] passing crosscutting extensions implemented
 - [x] phase-end audit necessity judgment completed
-- [ ] npm run check green
-- [ ] GitHub Actions CI green
-- [ ] GitHub Pages deploy green
-- [ ] Status = completed
-- [ ] plan_done/へ移動
+- [x] npm run check green
+- [x] GitHub Actions CI green
+- [x] GitHub Pages deploy green
+- [x] Status = completed
+- [x] plan_done/へ移動
 
 ---
 
@@ -491,3 +491,16 @@ CONTENT_AUTHORING_STANDARDの横断記事要件に照らすと、次を満たす
 - 9月6日の御前会議を本フェーズへ含めない
 - 資源制約から真珠湾攻撃へ後知恵で一直線につながない
 - フェーズ末に理由のない独立全体監査を追加しない
+
+
+---
+
+# 14. Completion record
+
+- 2026-10-05: S10「産業社会の負担と保護」を1941年9月5日まで延長。
+- 2026-10-05: S13「日米交渉と経済圧力――交渉余地はどう狭まったか」を published で追加。
+- 2026-10-05: phase-end audit necessity judgment = **no-audit**。
+- PR #277 を squash mergeし、main commit `852d4ab2d2d485dac36a7fc0a0cd9c55ef7e1635` に反映。
+- GitHub Actions CI #871 = **success**。
+- GitHub Pages #383 = **success**。
+- 全Definition of Doneを満たしたため、本計画を `plan_done/` へarchiveし、次フェーズを1941-09-06から開始する。

@@ -405,7 +405,7 @@ MapLibre の GeoJSON / vector source は raster 背景とは別の実行経路�
 
 を確認する。
 
-広域地図、とくに太平洋・東アジア全域・複数大陸を比較する地図では、renderer側の固定 `minZoom` に依存しない。地図定義ごとに必要な `minZoom` を指定し、**中心問いに必要な全域まで実際にzoom outできること**をDesktop / Tablet / Mobileで確認する。狭域地図の既定値を広域地図へ機械的に流用しない。
+広域地図、とくに太平洋・東アジア全域・複数大陸を比較する地図では、renderer側の固定 `minZoom` に依存しない。共通rendererの既定最小zoomは `min(3, initialView.zoom)` とし、少なくとも原稿側が指定した初期表示をclampしない。さらに広く引く必要がある地図は定義ごとに `minZoom` を指定し、**中心問いに必要な全域まで実際にzoom outできること**をDesktop / Tablet / Mobileで確認する。狭域地図の既定値を広域地図へ機械的に流用しない。
 
 - [ ] レイヤーが突然意味不明に消えない
 - [ ] 線幅・記号サイズが破綻しない

@@ -7,6 +7,9 @@ const PERIOD_DIR = path.join(ROOT, 'content', 'periods')
 const FIGURE_REGISTRY = path.join(ROOT, 'src', 'media', 'periodFigures.ts')
 const POLICY_FILE = path.join(ROOT, 'standards', 'image-necessity.json')
 const MIN_REASON_LENGTH = 30
+const NO_IMAGE_STREAK_THRESHOLD = 3
+const MIN_STREAK_REASON_LENGTH = 60
+const MIN_STREAK_ALTERNATIVE_LENGTH = 15
 
 function parseFrontmatter(source, fileName) {
   const match = source.match(/^---\r?\n([\s\S]*?)\r?\n---/)
@@ -23,19 +26,53 @@ function collectFigureRouteKeys(source) {
   return { keys: new Set(keys), duplicates: [...new Set(duplicates)] }
 }
 
+function collectNoImageStreaks(publishedPeriods, noImage) {
+  const streaks = []
+  let current = []
+
+  for (const period of publishedPeriods) {
+    if (Object.hasOwn(noImage, period.routeKey)) {
+      current.push(period.routeKey)
+      continue
+    }
+    if (current.length >= NO_IMAGE_STREAK_THRESHOLD) streaks.push(current)
+    current = []
+  }
+
+  if (current.length >= NO_IMAGE_STREAK_THRESHOLD) streaks.push(current)
+  return streaks
+}
+
+function streakSignature(routes) {
+  return routes.join('>')
+}
+
 const errors = []
 const periodFileNames = (await fs.readdir(PERIOD_DIR))
   .filter((name) => name.endsWith('.md'))
   .sort()
 
-const publishedRoutes = new Set()
+const publishedPeriods = []
 for (const fileName of periodFileNames) {
   const source = await fs.readFile(path.join(PERIOD_DIR, fileName), 'utf8')
   const frontmatter = parseFrontmatter(source, fileName)
-  if (frontmatter.status === 'published') {
-    publishedRoutes.add(path.basename(fileName, '.md'))
-  }
+  if (frontmatter.status !== 'published') continue
+
+  const routeKey = frontmatter.routeKey ?? path.basename(fileName, '.md')
+  const orderKey =
+    frontmatter.startDate ??
+    String(frontmatter.startYear ?? routeKey)
+
+  publishedPeriods.push({ routeKey, orderKey })
 }
+publishedPeriods.sort(
+  (a, b) => a.orderKey.localeCompare(b.orderKey) || a.routeKey.localeCompare(b.routeKey),
+)
+
+const publishedRoutes = new Set(publishedPeriods.map((period) => period.routeKey))
+const publishedRouteIndex = new Map(
+  publishedPeriods.map((period, index) => [period.routeKey, index]),
+)
 
 const figureSource = await fs.readFile(FIGURE_REGISTRY, 'utf8')
 const { keys: figureRoutes, duplicates } = collectFigureRouteKeys(figureSource)
@@ -48,6 +85,17 @@ const policy = JSON.parse(await fs.readFile(POLICY_FILE, 'utf8'))
 const noImage = policy?.noImage
 if (!noImage || typeof noImage !== 'object' || Array.isArray(noImage)) {
   errors.push('standards/image-necessity.json: "noImage" must be an object')
+}
+
+const noImageStreakAudits = policy?.noImageStreakAudits
+if (
+  !noImageStreakAudits ||
+  typeof noImageStreakAudits !== 'object' ||
+  Array.isArray(noImageStreakAudits)
+) {
+  errors.push(
+    'standards/image-necessity.json: "noImageStreakAudits" must be an object',
+  )
 }
 
 if (noImage && typeof noImage === 'object' && !Array.isArray(noImage)) {
@@ -86,6 +134,104 @@ for (const routeKey of figureRoutes) {
   }
 }
 
+const requiredStreaks =
+  noImage && typeof noImage === 'object' && !Array.isArray(noImage)
+    ? collectNoImageStreaks(publishedPeriods, noImage)
+    : []
+const requiredStreakSignatures = new Set(requiredStreaks.map(streakSignature))
+const auditSignatures = new Set()
+
+if (
+  noImageStreakAudits &&
+  typeof noImageStreakAudits === 'object' &&
+  !Array.isArray(noImageStreakAudits)
+) {
+  for (const [auditId, audit] of Object.entries(noImageStreakAudits)) {
+    const routes = audit && typeof audit === 'object' ? audit.routes : undefined
+    const reason = audit && typeof audit === 'object' ? audit.reason : undefined
+    const alternatives =
+      audit && typeof audit === 'object' ? audit.alternativesReviewed : undefined
+
+    if (!Array.isArray(routes) || routes.length < NO_IMAGE_STREAK_THRESHOLD) {
+      errors.push(
+        auditId +
+          ': no-image streak audit must list at least ' +
+          NO_IMAGE_STREAK_THRESHOLD +
+          ' routes',
+      )
+      continue
+    }
+
+    const indexes = routes.map((routeKey) => publishedRouteIndex.get(routeKey))
+    if (indexes.some((index) => index === undefined)) {
+      errors.push(auditId + ': no-image streak audit references a non-published route')
+      continue
+    }
+
+    for (let i = 1; i < indexes.length; i += 1) {
+      if (indexes[i] !== indexes[i - 1] + 1) {
+        errors.push(auditId + ': no-image streak audit routes must be consecutive published periods')
+        break
+      }
+    }
+
+    if (routes.some((routeKey) => !Object.hasOwn(noImage ?? {}, routeKey))) {
+      errors.push(auditId + ': no-image streak audit includes a route that is not currently noImage')
+    }
+
+    if (
+      typeof reason !== 'string' ||
+      reason.trim().length < MIN_STREAK_REASON_LENGTH
+    ) {
+      errors.push(
+        auditId +
+          ': no-image streak audit reason must be at least ' +
+          MIN_STREAK_REASON_LENGTH +
+          ' characters',
+      )
+    }
+
+    if (
+      !Array.isArray(alternatives) ||
+      alternatives.length < 2 ||
+      alternatives.some(
+        (item) =>
+          typeof item !== 'string' ||
+          item.trim().length < MIN_STREAK_ALTERNATIVE_LENGTH,
+      )
+    ) {
+      errors.push(
+        auditId +
+          ': no-image streak audit must record at least two concrete alternatives reviewed',
+      )
+    }
+
+    const signature = streakSignature(routes)
+    if (auditSignatures.has(signature)) {
+      errors.push(auditId + ': duplicate no-image streak audit for the same route sequence')
+    }
+    auditSignatures.add(signature)
+
+    if (!requiredStreakSignatures.has(signature)) {
+      errors.push(auditId + ': stale no-image streak audit does not match a current maximal streak')
+    }
+  }
+}
+
+for (const routes of requiredStreaks) {
+  const signature = streakSignature(routes)
+  if (!auditSignatures.has(signature)) {
+    errors.push(
+      routes[0] +
+        ' ... ' +
+        routes[routes.length - 1] +
+        ': ' +
+        routes.length +
+        ' consecutive published periods use noImage; add figures or record a noImageStreakAudits review of photographs, documents, newspapers, posters, and other historical media',
+    )
+  }
+}
+
 if (errors.length > 0) {
   console.error('Historical image validation failed:')
   for (const error of errors) console.error('- ' + error)
@@ -99,5 +245,7 @@ console.log(
     figureRoutes.size +
     ' figure decisions, ' +
     Object.keys(noImage ?? {}).length +
-    ' no-image decisions.',
+    ' no-image decisions, ' +
+    Object.keys(noImageStreakAudits ?? {}).length +
+    ' no-image streak audits.',
 )

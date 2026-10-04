@@ -947,4 +947,17 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
   ],
 
 
+  '1941-06-25': [
+    {
+      imageUrl: 'https://www.jacar.archives.go.jp/das/image/C12120207200',
+      sourceUrl: 'https://www.jacar.archives.go.jp/aj/meta/listPhoto?BID=F2012122711213103761&REFCODE=C12120207200',
+      alt: '1941年6月25日に決定された「南方施策促進ニ関スル件」の公文書画像',
+      title: '「南方施策促進ニ関スル件」',
+      dateLabel: '1941年6月25日',
+      credit: '日本政府関係文書／防衛研究所・アジア歴史資料センター',
+      license: 'Public Domain',
+    },
+  ],
+
+
 }

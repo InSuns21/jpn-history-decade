@@ -1,0 +1,12 @@
+{
+  "period": "1941-09-13",
+  "termRefs": [
+    {"id":"japan-china-basic-peace-conditions-1941-09-13","core":true},
+    {"id":"imperial-headquarters-government-liaison-conference-1937","core":true},
+    {"id":"nomura-kichisaburo-us-ambassador-1941","core":true},
+    {"id":"imperial-policy-guideline-1941-09","core":false},
+    {"id":"konoe-roosevelt-summit-proposal-1941","core":false},
+    {"id":"tripartite-pact-1940","core":false},
+    {"id":"third-konoe-cabinet-1941","core":false}
+  ]
+}

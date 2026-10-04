@@ -12,10 +12,10 @@
 
 ### 本線
 
-- [SEPTEMBER_IMPERIAL_CONFERENCE_TO_KONOE_RESIGNATION_IMPLEMENTATION_PLAN.md](./SEPTEMBER_IMPERIAL_CONFERENCE_TO_KONOE_RESIGNATION_IMPLEMENTATION_PLAN.md)
-  - Scope: 1941-09-06〜1941-10-17
-  - Progress: phase cut ✅ → JH98 ✅ → 次は JH99「1941-09-13〜09-19」
-  - 9月6日の御前会議で正式化された期限付き外交・戦争準備並行方針から、9月13〜20日の対米条件整理、9月25日の10月15日期限、10月2日の米側回答、10月12日の五相会議、10月16日の第三次近衛内閣総辞職までを追う。10月18日の東条内閣成立は次フェーズへ送る。
+- [TOJO_CABINET_TO_NOVEMBER_IMPERIAL_CONFERENCE_IMPLEMENTATION_PLAN.md](./TOJO_CABINET_TO_NOVEMBER_IMPERIAL_CONFERENCE_IMPLEMENTATION_PLAN.md)
+  - Scope: 1941-10-18〜1941-11-05
+  - Progress: phase cut ✅ → 次は JH103「1941-10-18〜10-22」
+  - 東条英機内閣成立から、9月6日国策の再検討、作戦・船舶・資源・外交見通しの再点検、11月1日の政策収束、11月5日の御前会議による新たな「帝国国策遂行要領」と対米甲案・乙案の正式決定までを追う。11月6日以後の甲案提示・来栖派遣・乙案・11月26日の米側覚書は次フェーズへ送る。
 
 遡及地図監査・実装planは [MAP_RETRO_AUDIT_AND_IMPLEMENTATION_PLAN.md](../plan_done/MAP_RETRO_AUDIT_AND_IMPLEMENTATION_PLAN.md) としてimplementation-complete / archive済み。Human Visual Auditの残件は [MAP_HUMAN_VISUAL_AUDIT_BACKLOG.md](../docs/MAP_HUMAN_VISUAL_AUDIT_BACKLOG.md) で継続管理する。
 

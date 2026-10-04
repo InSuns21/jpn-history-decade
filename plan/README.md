@@ -14,7 +14,7 @@
 
 - [SEPTEMBER_IMPERIAL_CONFERENCE_TO_KONOE_RESIGNATION_IMPLEMENTATION_PLAN.md](./SEPTEMBER_IMPERIAL_CONFERENCE_TO_KONOE_RESIGNATION_IMPLEMENTATION_PLAN.md)
   - Scope: 1941-09-06〜1941-10-17
-  - Progress: phase cut ✅ → 次は JH98「1941-09-06〜09-12」
+  - Progress: phase cut ✅ → JH98 ✅ → 次は JH99「1941-09-13〜09-19」
   - 9月6日の御前会議で正式化された期限付き外交・戦争準備並行方針から、9月13〜20日の対米条件整理、9月25日の10月15日期限、10月2日の米側回答、10月12日の五相会議、10月16日の第三次近衛内閣総辞職までを追う。10月18日の東条内閣成立は次フェーズへ送る。
 
 遡及地図監査・実装planは [MAP_RETRO_AUDIT_AND_IMPLEMENTATION_PLAN.md](../plan_done/MAP_RETRO_AUDIT_AND_IMPLEMENTATION_PLAN.md) としてimplementation-complete / archive済み。Human Visual Auditの残件は [MAP_HUMAN_VISUAL_AUDIT_BACKLOG.md](../docs/MAP_HUMAN_VISUAL_AUDIT_BACKLOG.md) で継続管理する。

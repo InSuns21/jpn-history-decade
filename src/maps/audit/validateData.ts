@@ -93,8 +93,8 @@ export function validateMapData(definition: HistoricalMapDefinition) {
   }
 
   validateCoordinateTree(definition.initialView.center, definition.id + '.initialView.center', errors)
-  const minZoom = definition.initialView.minZoom ?? 3
-  const maxZoom = definition.initialView.maxZoom ?? 13
+  const minZoom = definition.initialView.minZoom ?? Math.min(3, definition.initialView.zoom)
+  const maxZoom = definition.initialView.maxZoom ?? Math.max(13, definition.initialView.zoom)
   if (!Number.isFinite(definition.initialView.zoom) || definition.initialView.zoom < 0 || definition.initialView.zoom > 22) {
     errors.push(definition.id + ': initialView.zoom must be between 0 and 22')
   }

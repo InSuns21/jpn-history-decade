@@ -1029,4 +1029,19 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     }),
   ],
 
+
+  '1941-09-25': [
+    commonsDocumentFigure(
+      'NDL11919830 Def. Doc. No. 1400U-6- Memorandum by the Ambassador in Japan (Grew). Oct. 7, 1941 Excerpt from Foreign Relations of United States, Japan- 1931-1941 vol.II.pdf',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/NDL11919830_Def._Doc._No._1400U-6-_Memorandum_by_the_Ambassador_in_Japan_%28Grew%29._Oct._7%2C_1941_Excerpt_from_Foreign_Relations_of_United_States%2C_Japan-_1931-1941_vol.II.pdf/page1-1280px-thumbnail.pdf.jpg',
+      {
+        alt: '1941年10月7日、10月2日の米側回答と日米首脳会談の予備条件をめぐるグルー駐日米大使の覚書を収録した法廷提出資料',
+        title: '10月7日のグルー駐日米大使覚書',
+        dateLabel: '1941年10月7日（戦後の法廷提出資料）',
+        credit: 'ジョセフ・グルー関係文書／GHQ/SCAP国際検察局・国立国会図書館／Wikimedia Commons',
+        license: 'Public Domain',
+      },
+    ),
+  ],
+
 }

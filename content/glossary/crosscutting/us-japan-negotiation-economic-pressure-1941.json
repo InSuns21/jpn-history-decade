@@ -1,0 +1,41 @@
+{
+  "page": "us-japan-negotiation-economic-pressure-1941",
+  "termRefs": [
+    {
+      "id": "us-japan-draft-understanding-1941",
+      "core": true
+    },
+    {
+      "id": "nomura-kichisaburo-us-ambassador-1941",
+      "core": false
+    },
+    {
+      "id": "tripartite-pact-1940",
+      "core": false
+    },
+    {
+      "id": "southern-indochina-advance-1941",
+      "core": true
+    },
+    {
+      "id": "us-japanese-assets-freezing-1941",
+      "core": true
+    },
+    {
+      "id": "us-petroleum-export-controls-1941",
+      "core": true
+    },
+    {
+      "id": "konoe-roosevelt-summit-proposal-1941",
+      "core": true
+    },
+    {
+      "id": "konoe-message-1941-08",
+      "core": false
+    },
+    {
+      "id": "imperial-policy-guideline-1941-09",
+      "core": true
+    }
+  ]
+}

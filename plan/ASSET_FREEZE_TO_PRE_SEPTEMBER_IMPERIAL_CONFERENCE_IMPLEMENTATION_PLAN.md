@@ -1,7 +1,7 @@
 # 1941年7月25日から9月5日まで — 資産凍結・南部仏印実進駐・石油輸出制限・日米首脳会談構想 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH94 ✅ → JH95 ✅ → JH96 ✅ → JH97 ✅ → A39 judgment ✅ → implementation / Data・Style Audit ✅ → Human Visual Audit ✅ → Crosscutting publication gate ✅ → 次は S10 extension / 新規「日米交渉と経済圧力」実装
+- **Progress:** phase cut ✅ → JH94 ✅ → JH95 ✅ → JH96 ✅ → JH97 ✅ → A39 judgment ✅ → implementation / Data・Style Audit ✅ → Human Visual Audit ✅ → Crosscutting publication gate ✅ → S10 extension ✅ → 新規「日米交渉と経済圧力」✅ → phase-end audit judgment ✅ no-audit → 次は npm run check
 - **Created:** 2026-10-04
 - **Scope:** 1941-07-25〜1941-09-05
 - **Article count:** **4年代記事（JH94〜JH97）**
@@ -359,23 +359,41 @@ CONTENT_AUTHORING_STANDARDの横断記事要件に照らすと、次を満たす
 - S10と新規テーマの役割は分離する。S10は「供給回路と負担・配分」、新規テーマは「交渉条件と政策選択肢・時間」を担当する。
 - 次工程は **S10 extension + 新規テーマ実装**。両者の実装後に、phase-end audit necessity judgmentを行う。
 
+### Crosscutting implementation result（2026-10-05）
+
+- **S10「産業社会の負担と保護」延長 completed**
+  - periodLabelを1941年9月5日まで延長
+  - 7月末以後の供給制約を「取引可能性 / 決済 / 輸出許可 / 海上輸送 / 国内配当」の5関門へ分解
+  - 資産凍結を没収、石油統制を単一の即時全面停止命令として扱わず、複数制度が重なる供給制約として整理
+  - A39とは、地図=軍事的近接と経済的切断の空間比較、S10=供給網と負担・配分の制度比較として役割分離
+- **新規テーマ S13「日米交渉と経済圧力――交渉余地はどう狭まったか」published**
+  - route: `/theme/us-japan-negotiation-economic-pressure-1941`
+  - 本文約6,800字
+  - 比較軸を「要求・譲歩 / 軍事的位置 / 経済的選択肢 / 時間」の4つに固定
+  - 1941年4月の日米諒解案から9月5日までを、年代記事の出来事列ではなく交渉可能性が変化する構造として比較
+  - S10、S09、S12と中心問いが重複しないことを確認
+  - crosscutting glossaryを追加し、既存global glossary IDのみを再利用
+- source citation / term linkの整合を確認し、未定義参照なし
+
 ---
 
-# 9. phase-end audit necessity judgment 候補
+# 9. phase-end audit necessity judgment — ✅ no-audit
 
-フェーズ末に自動的な全体監査は置かない。次の具体的仮説が実装後も残る場合だけ独立監査する。
+2026-10-05にJH94〜JH97、A39、S10延長、新規S13「日米交渉と経済圧力」を横断して、独立監査が必要な具体的仮説が残るかを判定した。
 
-- 資産凍結を資産没収と同一視していないか
-- 7月25日／26日の表記差を誤記として一方へ潰していないか
-- 南部仏印実進駐を石油獲得成功と因果短絡していないか
-- 8月1日の石油輸出規制を単一命令による即時完全ゼロ取引として単純化していないか
-- 英米蘭の各措置を「ABCD包囲網」という後世的ラベルだけで同一化していないか
-- 首脳会談提案を和平成立目前として描いていないか
-- 9月3日の連絡会議決定と9月6日の御前会議決定を同一視していないか
-- 資源制約から対米開戦へ自動的に一本道化していないか
-- S10 / 新規横断記事が年代記事の再編集になっていないか
+候補としていた論点は次の実装内で解消済みである。
 
-具体的な未解決横断仮説が残らなければ **no-audit** としてCIへ進む。
+- **資産凍結=資産没収**：JH94 / S10 / S13で、資金移動・決済・取引を許可制へ置く金融統制として分離した。
+- **7月25日／26日の表記差**：JH94でホワイトハウス発表と大統領令の日付・文書段階を分離した。
+- **南部仏印実進駐=石油獲得成功**：JH94 / A39 / S10で、軍事的近接と平時経済アクセスの悪化を逆方向の変化として整理した。
+- **8月1日の一命令=全石油即時ゼロ**：JH95 / S10 / S13で、輸出許可・金融許可・決済・蘭印側措置を別関門として扱った。
+- **英米蘭の措置=一つの「ABCD包囲網」**：主体・発動日・金融／輸出／現地取引の制度差を各本文で保持した。
+- **首脳会談=和平成立目前**：JH96 / JH97 / S13で、首脳会談への関心と基本問題の事前調整を分けた。
+- **9月3日連絡会議=9月6日御前会議**：JH97で政策案決定と正式重要国策化の手続を分離し、9月6日は次フェーズへ送った。
+- **資源制約→対米開戦の一本道化**：S10は供給制約、S13は交渉可能性と政策時間を扱い、経済制約だけから開戦を自動導出していない。
+- **横断記事=年代記事の再編集**：S10は長期の供給網・負担配分、S13は要求・軍事的位置・経済圧力・時間という比較軸を持ち、年代記事の時系列とは別の中心問いで成立している。
+
+以上から、複数記事を改めて独立監査しなければ判定できない未解決仮説は残っていない。CONTENT_AUTHORING_STANDARDおよびPROJECT_WORKFLOW_STANDARD 5.2 / 5.3に従い、理由のないフェーズ末全体監査は追加せず、次工程を `npm run check` とする。
 
 ---
 
@@ -450,8 +468,8 @@ CONTENT_AUTHORING_STANDARDの横断記事要件に照らすと、次を満たす
 - [x] A39 map necessity / data-quality judgment completed
 - [x] A39採用時の必要監査完了、またはno-map理由記録
 - [x] Crosscutting publication gate completed
-- [ ] passing crosscutting extensions implemented
-- [ ] phase-end audit necessity judgment completed
+- [x] passing crosscutting extensions implemented
+- [x] phase-end audit necessity judgment completed
 - [ ] npm run check green
 - [ ] GitHub Actions CI green
 - [ ] GitHub Pages deploy green

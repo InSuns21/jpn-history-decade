@@ -1,7 +1,7 @@
 # 1941年4月23日から6月21日まで — 日米諒解案修正交渉・仏印経済協定・仏タイ平和条約・日蘭会商打切り 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH86 ✅ → JH87 ✅ → JH88 ✅ → JH89 ✅ → 次は A37 map necessity / data-quality judgment
+- **Progress:** phase cut ✅ → JH86 ✅ → JH87 ✅ → JH88 ✅ → JH89 ✅ → A37 adopted / Data+Style ✅ / Human Visual Audit pending → 次は Crosscutting publication gate
 - **Created:** 2026-10-04
 - **Scope:** 1941-04-23〜1941-06-21
 - **Primary goal:** 松岡洋右外相帰国翌日から、日米諒解案をめぐる日本政府内修正と5月12日の日本側対案提示、5月の日仏印経済協定・仏タイ平和条約、6月の米側対案、南方施策の軍事化、6月17日の日蘭会商正式打切りまでを追う。6月22日（日本時間）には米側の「六月二一日米国案」手交と独ソ戦開始という二つの大きな状態変化が重なるため、その直前を終点とする。

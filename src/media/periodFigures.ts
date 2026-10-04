@@ -973,4 +973,15 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
   ],
 
 
+  '1941-07-18': [
+    commonsFigure('Fumimaro Konoe Cabinet 19410718.jpg', {
+      alt: '1941年7月18日に成立した第3次近衛内閣の閣僚集合写真',
+      title: '第3次近衛内閣',
+      dateLabel: '1941年7月18日',
+      credit: '産経新聞社／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+
+
 }

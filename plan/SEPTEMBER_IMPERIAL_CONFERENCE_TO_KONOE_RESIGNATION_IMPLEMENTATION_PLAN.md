@@ -1,7 +1,7 @@
 # 1941年9月6日から10月17日まで — 帝国国策遂行要領・対米最終調整・10月15日期限・第三次近衛内閣総辞職 実装計画
 
-- **Status:** active
-- **Progress:** phase cut ✅ → JH98 ✅ → JH99 ✅ → JH100 ✅ → JH101 ✅ → JH102 ✅ → A40 judgment ✅ adopted / high → A40 implementation / Data・Style Audit ✅ published (point-only reused-pattern) → Crosscutting publication gate ✅ → S13 extension ✅ → phase-end audit necessity judgment ✅ no-audit → 次は npm run check
+- **Status:** completed
+- **Progress:** phase cut ✅ → JH98〜JH102 ✅ → A40 ✅ published → Crosscutting publication gate ✅ → S13 extension ✅ → phase-end audit necessity judgment ✅ no-audit → npm run check ✅ → CI ✅ → Pages ✅ → phase completed
 - **Created:** 2026-10-05
 - **Scope:** 1941-09-06〜1941-10-17
 - **Article count:** **5年代記事（JH98〜JH102）**
@@ -464,11 +464,11 @@ PROJECT_WORKFLOW_STANDARD 5.3の条件に照らし、ここで追加の独立「
 - [x] Crosscutting publication gate completed
 - [x] passing crosscutting extensions implemented
 - [x] phase-end audit necessity judgment completed
-- [ ] npm run check green
-- [ ] GitHub Actions CI green
-- [ ] GitHub Pages deploy green
-- [ ] Status = completed
-- [ ] plan_done/へ移動
+- [x] npm run check green
+- [x] GitHub Actions CI green
+- [x] GitHub Pages deploy green
+- [x] Status = completed
+- [x] plan_done/へ移動
 
 ---
 
@@ -486,3 +486,12 @@ PROJECT_WORKFLOW_STANDARD 5.3の条件に照らし、ここで追加の独立「
 - 10月18日の東条内閣成立・その後の国策再検討を本フェーズへ先取りしない
 - 11月以後に確定した南方作戦計画をA40へ逆投影しない
 - フェーズ末に理由のない独立全体監査を追加しない
+
+
+## Completion record — 2026-10-05
+
+- final content commit: `9b7afbef0c8eeb470b01e7c1a67b88e89e8b0be3`
+- `npm run check`: GitHub Actions CI run 903 passed
+- GitHub Pages deploy run 396 passed
+- S13 extension citation / glossary integrity: no missing source IDs, no missing glossary refs, no unused core terms
+- phase-end audit: no-audit

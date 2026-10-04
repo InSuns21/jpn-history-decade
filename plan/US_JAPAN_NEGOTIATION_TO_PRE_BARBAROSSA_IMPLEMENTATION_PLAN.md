@@ -1,7 +1,7 @@
 # 1941年4月23日から6月21日まで — 日米諒解案修正交渉・仏印経済協定・仏タイ平和条約・日蘭会商打切り 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH86 ✅ → JH87 ✅ → JH88 ✅ → JH89 ✅ → 次は A37 map necessity / data-quality judgment
+- **Progress:** phase cut ✅ → JH86 ✅ → JH87 ✅ → JH88 ✅ → JH89 ✅ → A37 adopted / Data+Style ✅ / Human Visual Audit pending → Crosscutting publication gate ✅ → S09/S10 extension ✅ → phase-end audit judgment ✅ no-audit → npm run check ✅ → CI ✅ → 次は merge / Pages
 - **Created:** 2026-10-04
 - **Scope:** 1941-04-23〜1941-06-21
 - **Primary goal:** 松岡洋右外相帰国翌日から、日米諒解案をめぐる日本政府内修正と5月12日の日本側対案提示、5月の日仏印経済協定・仏タイ平和条約、6月の米側対案、南方施策の軍事化、6月17日の日蘭会商正式打切りまでを追う。6月22日（日本時間）には米側の「六月二一日米国案」手交と独ソ戦開始という二つの大きな状態変化が重なるため、その直前を終点とする。
@@ -217,6 +217,23 @@ JH89では、その実施が**既存の仏印協定、蘭印・タイからの�
 
 JH86〜JH89実装後に判定する。
 
+## 判定結果（2026-10-04）
+
+**adopted / high。**
+
+本文では、3月の東京調停で「どの地域が争点か」を追う段階から、5月9日の平和条約で「どの地理規則を組み合わせて国境を構成するか」へ情報状態が変わった。メコン河の主航路中央線、北緯15度、子午線、トンレサップ湖上の20km円弧という順序は、文章だけより地図で読む価値が高い。
+
+一方、1941年5月時点の条約線を精密な測量済み境界として復元できるデータ状態ではない。条約は境界画定委員会の作業を予定しており、タイ外務省の外交史は新境界の標定完了を1942年7月11日としている。このためA37では、条約本文が直接指定する地理規則を **schematic / approximate** として可視化し、現代国境・現代州境の無注記流用は行わない。
+
+A35は交渉過程のpoint-only地図として既に監査済みであり、A37は条約成立後のLineStringを含むため、同一definitionへ時点切替を追加せず別mapとした。JH86の `peace-treaty-boundary-structure` 直後へ配置し、A35との連続性は本文・popupで説明する。
+
+- Map ID: `franco-thai-peace-treaty-1941`
+- Data Audit: passed
+- Style Audit: passed
+- Human Visual Audit: pending-human（`HVA-013`）
+- 公開状態: draft / 監査中表示
+- 誤読防止: 条約規則の模式図であり、1941年5月の測量済み確定境界、日本の主権範囲、現代国境を表さない
+
 ## 地図候補
 
 - 5月9日仏タイ平和条約が定めた国境線
@@ -245,7 +262,7 @@ JH86〜JH89実装後に判定する。
 
 # 8. Crosscutting publication gate
 
-## S09「対外支配の制度差」— high candidate
+## S09「対外支配の制度差」— ✅ pass / extended
 
 5月9日の仏タイ平和条約と同時の保障・政治的了解は、3月時点の「日本が外交調停を主導する」状態から一段進む。
 
@@ -258,7 +275,7 @@ JH86〜JH89実装後に判定する。
 
 「影響力」を領有・保護国・軍事占領と同じ色で扱わない。
 
-## S10「産業社会の負担と保護」— high candidate
+## S10「産業社会の負担と保護」— ✅ pass / extended
 
 5月15日の貿易統制令は、国家総動員法第9条の発動として対外貿易の行政統制を強める。
 
@@ -270,6 +287,13 @@ JH86〜JH89実装後に判定する。
 がどう接続するかを比較できる場合は延長する。
 
 日仏印経済協定・日蘭会商は「国外から何を調達できるか」という供給条件として接続し、外交記事の再編集にはしない。
+
+### Crosscutting gate 判定結果（2026-10-04）
+
+- **S09 pass**：1941年5月9日の仏タイ平和条約を、領有・租借・軍事駐留とは別の「主権・行政を移さず、第三国が調停・保障上の役割を制度化する」類型として追加した。タイの独立、仏印のフランス主権・植民地行政、日本の調停・保障を分離して比較する。
+- **S10 pass**：4月の物資動員計画、5月の貿易統制令、日仏印経済協定、6月17日の日蘭会商打切りを「国外調達→貿易統制→輸送→国内配当」の供給網として接続した。統制権限の強化と供給量そのものの増加を同一視しない。
+- **S02 hold / S05 hold**：このフェーズ固有の新しい比較軸が弱く、飛び石追加・年代本文再要約になるため延長しない。
+- **新規日米交渉横断記事 no / after June 22 reconsider**：6月22日の米側回答と独ソ戦開始で前提が変わるため、今フェーズだけで切り出さない。
 
 ## S02「石高制・貨幣経済・財政」— hold
 
@@ -301,6 +325,16 @@ JH86〜JH89実装後に判定する。
 - S09/S10が年代記事の再要約になっていないか
 
 具体的な未解決横断仮説が残らなければ独立監査は実施しない。
+
+---
+
+## phase-end audit necessity judgment 結果（2026-10-04）
+
+**no independent audit。**
+
+JH86〜JH89では各年代の隣接接続確認を実装時に完了しており、このフェーズで横断的に残った具体的な論点は、A37の「条約上の境界規則と後年の標定済み境界を混同しないこと」、S09の「調停・保障を主権取得と同一視しないこと」、S10の「統制強化を供給量増加と同一視しないこと」だった。前二者はA37/S09、後者はS10へ直接実装した。
+
+候補に挙げた日米交渉、日仏印経済協定、仏タイ平和条約、対南方施策要綱、日蘭会商の時点差もJH86〜JH89の本文・留保で分離済みであり、追加の独立監査を実施しても同じ確認の反復になる。したがって、Human Visual Audit HVA-013を除き、フェーズ固有の未解決横断仮説は残っていないと判断する。
 
 ---
 
@@ -386,13 +420,15 @@ JH86〜JH89実装後に判定する。
 - [x] JH88 図版採用または理由付きno-image判定完了
 - [x] JH89 published / JH88との隣接接続確認完了
 - [x] JH89 図版採用または理由付きno-image判定完了
-- [ ] A37 map necessity / data-quality judgment completed
+- [x] A37 map necessity / data-quality judgment completed
+- [x] A37 map implementation / Data Audit / Style Audit completed
+- [ ] A37 Human Visual Audit completed（HVA-013）
 - [ ] A37採用時の必要監査完了、またはno-map理由記録
-- [ ] Crosscutting publication gate completed
-- [ ] passing crosscutting extensions implemented
-- [ ] phase-end audit necessity judgment completed
-- [ ] npm run check green
-- [ ] GitHub Actions CI green
+- [x] Crosscutting publication gate completed
+- [x] passing crosscutting extensions implemented
+- [x] phase-end audit necessity judgment completed
+- [x] npm run check green
+- [x] GitHub Actions CI green
 - [ ] GitHub Pages deploy green
 - [ ] Status = completed
 - [ ] plan_done/へ移動

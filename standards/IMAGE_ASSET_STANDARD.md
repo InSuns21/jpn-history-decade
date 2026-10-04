@@ -79,6 +79,8 @@ CC BY / CC BY-SA はライセンス条件に従う帰属表示を必ず出す。
 
 可能なら、権利確認済みファイルをリポジトリまたは管理可能な安定配信先へ置く。外部配信URLを使う場合は、公共機関・博物館・Wikimedia Commonsなど継続性と出典確認性の高い提供元を優先する。
 
+Wikimedia Commons の図版を外部参照する場合は、ファイル名から解決する `Special:Redirect/file` を優先し、`upload.wikimedia.org/wikipedia/commons/thumb/` のようなCDN内部のサムネイルURLを固定値として保存しない。CDN上のサムネイルパスは再生成・配信方式変更・ファイル更新の影響を受けやすいためである。PDF・新聞・文書スキャンのプレビューも、可能な限り `Special:Redirect/file/<file>?width=<px>` による変換結果を利用し、出典導線はCommonsの `File:` ページへ残す。
+
 外部画像が読み込めなくても本文理解が破綻しない構成にする。画像は補助資料であり、本文の歴史的主張を画像だけへ委ねない。
 
 ## 6. デザイン

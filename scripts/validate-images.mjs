@@ -77,9 +77,12 @@ const publishedRouteIndex = new Map(
 const figureSource = await fs.readFile(FIGURE_REGISTRY, 'utf8')
 const { keys: figureRoutes, duplicates } = collectFigureRouteKeys(figureSource)
 
-if (figureSource.includes('https://thumb.wikimedia.org/')) {
+if (
+  figureSource.includes('https://thumb.wikimedia.org/') ||
+  figureSource.includes('https://upload.wikimedia.org/wikipedia/commons/thumb/')
+) {
   errors.push(
-    'src/media/periodFigures.ts: thumb.wikimedia.org is not the Wikimedia file host; use upload.wikimedia.org for direct preview URLs',
+    'src/media/periodFigures.ts: do not hard-code Wikimedia thumbnail CDN URLs; use Commons Special:Redirect/file with a width parameter',
   )
 }
 

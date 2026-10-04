@@ -1,7 +1,7 @@
 # 1941年6月22日から7月24日まで — 米側回答・独ソ戦・南部仏印進駐決定・第三次近衛内閣 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH90 ✅ → JH91 ✅ → JH92 ✅ → JH93 ✅ → 次は A38 map necessity / data-quality judgment
+- **Progress:** phase cut ✅ → JH90 ✅ → JH91 ✅ → JH92 ✅ → JH93 ✅ → A38 map necessity / data-quality judgment ✅ adopted / high → 次は A38 map implementation / audit
 - **Created:** 2026-10-04
 - **Scope:** 1941-06-22〜1941-07-24
 - **Primary goal:** 6月22日の米側回答と独ソ戦開始という二つの同日ショックから、6月25日の南部仏印進駐方針、7月2日の御前会議、関特演、松岡外相をめぐる内閣改造問題、第2次近衛内閣総辞職と7月18日の第3次近衛内閣成立、日仏印共同防衛了解までを追う。7月25日の米国による日本資産凍結は対日経済圧力の制度状態を大きく変えるため、その直前を終点とする。
@@ -202,25 +202,43 @@ JH92の内閣総辞職は外交方針の調整方法を変えるが、7月2日�
 
 # 7. A38 — 南部仏印進駐決定と基地・補給空間 map necessity / data-quality judgment
 
-JH90〜JH93実装後に判定する。
+## 判定結果（2026-10-04）
 
-## 候補となる空間問い
+**adopted / high。**
 
-- 北部仏印と南部仏印の距離・役割差
-- サイゴン、カムラン湾など主要港湾・基地候補
+このフェーズの本文は、南部仏印進駐を外交・軍事上の「方針」として追うだけでは、なぜ米英蘭側が北部仏印進駐より強い警戒を示したのかを十分に説明しにくい。サイゴンとカムラン湾を南部仏印の主要基地要求地点として置き、北部仏印のハノイ・海防との距離差、さらにマレー半島・蘭印・フィリピンとの相対位置を同時に示すと、**中国向け補給遮断中心だった北部仏印から、東南アジア海域・英米蘭拠点へ接近できる基地・補給空間へ重心が移る意味**を地図で説明できる。
+
+史料上の空間情報も地図化に十分である。1941年7月24日付の米国外交文書は、日本側に認められた施設としてカムラン湾の海軍基地、サイゴンの軍・海軍施設と軍用飛行場、コーチシナ・カンボジアの複数航空基地を報告している。JACARの7月24日第41回大本営政府連絡会議資料も南部仏印進駐細目を扱う。したがって「基地要求・計画段階の主要地点」という問いは一次史料・公的史料で支えられる。
+
+一方、本フェーズ終点の7月24日は実進駐前である。7月28日以後の部隊配備・占領範囲・進軍経路をこの地図へ前倒ししない。A38では**Point中心**に縮退し、基地「圏」、作戦線、占領面をLineString / Polygonで推定しない。
+
+### 採用する空間問い
+
+- 北部仏印のハノイ・海防と、南部仏印のサイゴン・カムラン湾の距離・役割差
+- サイゴン、カムラン湾など7月24日までに史料で確認できる主要基地要求地点
 - タイ湾、マレー半島、蘭印、フィリピンとの相対位置
-- 南部仏印進駐が「中国への補給遮断」だけでなく南方資源圏・英米蘭拠点への接近として認識された地理的理由
+- 南部仏印進駐が、中国への補給遮断に加えて南方資源圏・英米蘭拠点への接近として認識された地理的理由
 
-## 判定基準
+### データ品質方針
 
-map necessityは**candidate / 未判定**とする。
+- Map ID候補: `southern-indochina-bases-1941`
+- geometry: **Point only**
+- geometryConfidence: **approximate**
+- quality level: **Level C — Approximate / Schematic**
+- 代表点は現在の同名都市・港湾の概略位置を使い、1941年の施設中心点・滑走路・軍港境界を復元した座標とは扱わない
+- 背景地図の現代国境・現代行政界は1941年の支配境界ではないとreading noteで明示する
+- 「コーチシナ・カンボジアの八つの航空基地」は7月24日の米側報告で総数を確認できるが、個々の地点を一次史料で確定できない限り八点へ機械的に割り当てない
+- 7月28日以後の実進駐、部隊配置、進軍経路は次フェーズの時点情報として扱い、A38へ混在させない
+- 既存 `northern-indochina-advance-1940` と `thai-indochina-mediation-1941` のPoint表示・label・popup/touch interactionを再利用できる
 
-採用する場合も、7月25日以前は「進駐方針・交渉・基地要求」の段階であり、7月28日以後の実際の配備を前倒ししない。都市・港湾のPointを中心にし、LineStringやPolygonを採る場合は、作戦進路・占領範囲・基地圏を精密に復元できる史料があるかを別途確認する。
+### 主要データ根拠
 
-- 現代国境・現代行政界を1941年の支配境界として使わない
-- 代表点は approximate と明示できる
-- 実際の進駐後の配備と政策決定段階をlayer/timeで分けられないなら地図化しない
-- LineString / Polygonを含む場合は Data / Style / Human Visual Audit を実施する
+- JACAR「1941年7月24日 第41回大本営政府連絡会議（南部仏領インドシナ進駐細目）」
+- FRUS 1941, Far East, Vol. V, doc. 237（Hanoi, July 24, 1941）：Camranh naval base、Saigon military/naval establishments and military airport、Cochin-China and Cambodiaのair basesに関する同時代報告
+- FRUS 1941, Far East, Vol. V, doc. 235（Tokyo, July 23, 1941）：Indochina bases occupation決定との同時代認識
+- 必要に応じてJACAR 7月28日資料は**実進駐後の照合用**に限定し、7月24日時点のレイヤーへ後知恵で配備情報を流し込まない
+
+Point-onlyで実装できるため、Data Audit / Style Auditは通常どおり実施する。Human Visual Auditは、既存監査済み地図と同一のThematicMap表示・点記号・凡例・popup/touch interactionをそのまま再利用し、変更点が点featureの位置・ラベル・属性値だけに収まる場合、`MAP_AUDIT_STANDARD.md` の **not-required-reused-pattern** 例外を適用できる。新しい表示ロジック、LineString / Polygon、凡例仕様変更が必要になった場合はHuman Visual Auditを必須へ戻す。
 
 ---
 
@@ -352,7 +370,7 @@ map necessityは**candidate / 未判定**とする。
 - [x] JH92 図版採用または理由付きno-image判定完了
 - [x] JH93 published / JH92との隣接接続確認完了
 - [x] JH93 図版採用または理由付きno-image判定完了
-- [ ] A38 map necessity / data-quality judgment completed
+- [x] A38 map necessity / data-quality judgment completed
 - [ ] A38採用時の必要監査完了、またはno-map理由記録
 - [ ] Crosscutting publication gate completed
 - [ ] passing crosscutting extensions implemented

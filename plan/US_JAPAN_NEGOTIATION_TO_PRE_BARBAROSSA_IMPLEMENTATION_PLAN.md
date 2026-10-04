@@ -1,7 +1,7 @@
 # 1941年4月23日から6月21日まで — 日米諒解案修正交渉・仏印経済協定・仏タイ平和条約・日蘭会商打切り 実装計画
 
-- **Status:** active
-- **Progress:** phase cut ✅ → JH86 ✅ → JH87 ✅ → JH88 ✅ → JH89 ✅ → A37 adopted / Data+Style ✅ / Human Visual Audit pending → Crosscutting publication gate ✅ → S09/S10 extension ✅ → phase-end audit judgment ✅ no-audit → npm run check ✅ → CI ✅ → merge ✅ → Pages ✅ → 次は HVA-013 Human Visual Audit
+- **Status:** completed
+- **Progress:** phase cut ✅ → JH86 ✅ → JH87 ✅ → JH88 ✅ → JH89 ✅ → A37 adopted / Data+Style+Human Visual Audit ✅ → Crosscutting publication gate ✅ → S09/S10 extension ✅ → phase-end audit judgment ✅ no-audit → npm run check ✅ → CI ✅ → merge ✅ → Pages ✅ → completed / archived
 - **Created:** 2026-10-04
 - **Scope:** 1941-04-23〜1941-06-21
 - **Primary goal:** 松岡洋右外相帰国翌日から、日米諒解案をめぐる日本政府内修正と5月12日の日本側対案提示、5月の日仏印経済協定・仏タイ平和条約、6月の米側対案、南方施策の軍事化、6月17日の日蘭会商正式打切りまでを追う。6月22日（日本時間）には米側の「六月二一日米国案」手交と独ソ戦開始という二つの大きな状態変化が重なるため、その直前を終点とする。
@@ -230,8 +230,8 @@ A35は交渉過程のpoint-only地図として既に監査済みであり、A37�
 - Map ID: `franco-thai-peace-treaty-1941`
 - Data Audit: passed
 - Style Audit: passed
-- Human Visual Audit: pending-human（`HVA-013`）
-- 公開状態: draft / 監査中表示
+- Human Visual Audit: passed（`HVA-013`、2026-10-04）
+- 公開状態: published
 - 誤読防止: 条約規則の模式図であり、1941年5月の測量済み確定境界、日本の主権範囲、現代国境を表さない
 
 ## 地図候補
@@ -334,7 +334,7 @@ A35は交渉過程のpoint-only地図として既に監査済みであり、A37�
 
 JH86〜JH89では各年代の隣接接続確認を実装時に完了しており、このフェーズで横断的に残った具体的な論点は、A37の「条約上の境界規則と後年の標定済み境界を混同しないこと」、S09の「調停・保障を主権取得と同一視しないこと」、S10の「統制強化を供給量増加と同一視しないこと」だった。前二者はA37/S09、後者はS10へ直接実装した。
 
-候補に挙げた日米交渉、日仏印経済協定、仏タイ平和条約、対南方施策要綱、日蘭会商の時点差もJH86〜JH89の本文・留保で分離済みであり、追加の独立監査を実施しても同じ確認の反復になる。したがって、Human Visual Audit HVA-013を除き、フェーズ固有の未解決横断仮説は残っていないと判断する。
+候補に挙げた日米交渉、日仏印経済協定、仏タイ平和条約、対南方施策要綱、日蘭会商の時点差もJH86〜JH89の本文・留保で分離済みであり、追加の独立監査を実施しても同じ確認の反復になる。したがって、フェーズ固有の未解決横断仮説は残っていないと判断する。HVA-013も2026-10-04の実表示確認でpassedとなり、A37はpublishedへ昇格した。
 
 ---
 
@@ -422,16 +422,16 @@ JH86〜JH89では各年代の隣接接続確認を実装時に完了しており
 - [x] JH89 図版採用または理由付きno-image判定完了
 - [x] A37 map necessity / data-quality judgment completed
 - [x] A37 map implementation / Data Audit / Style Audit completed
-- [ ] A37 Human Visual Audit completed（HVA-013）
-- [ ] A37採用時の必要監査完了、またはno-map理由記録
+- [x] A37 Human Visual Audit completed（HVA-013）
+- [x] A37採用時の必要監査完了、またはno-map理由記録
 - [x] Crosscutting publication gate completed
 - [x] passing crosscutting extensions implemented
 - [x] phase-end audit necessity judgment completed
 - [x] npm run check green
 - [x] GitHub Actions CI green
 - [x] GitHub Pages deploy green
-- [ ] Status = completed
-- [ ] plan_done/へ移動
+- [x] Status = completed
+- [x] plan_done/へ移動
 
 ---
 

@@ -1,7 +1,7 @@
 # 1941年7月25日から9月5日まで — 資産凍結・南部仏印実進駐・石油輸出制限・日米首脳会談構想 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH94 ✅ → JH95 ✅ → JH96 ✅ → JH97 ✅ → A39 map necessity / data-quality judgment ✅ adopted / high → 次は A39 map implementation / audit
+- **Progress:** phase cut ✅ → JH94 ✅ → JH95 ✅ → JH96 ✅ → JH97 ✅ → A39 judgment ✅ adopted / high → A39 implementation / Data・Style Audit ✅ → 次は Human Visual Audit
 - **Created:** 2026-10-04
 - **Scope:** 1941-07-25〜1941-09-05
 - **Article count:** **4年代記事（JH94〜JH97）**
@@ -278,6 +278,23 @@ JH93末尾の「制裁を予測しながら進駐準備を続ける」状態か�
 - JH94 / JH95で既に採用した資産凍結・蘭印凍結・石油輸出規制史料を、地図の時点・制度説明へ再利用する
 
 LineStringを含むため、Data Audit / Style Auditに加えて **Human Visual Auditを必須**とする。実装段階では `draft / pending-human` として公開確認できる状態まで進め、模式線が実航路・侵攻作戦線・政治境界に見えないこと、A38との主題重複が起きていないことを人間確認する。
+
+### A39 map implementation / audit 結果（2026-10-04）
+
+- Map ID: `oil-supply-constraint-southward-space-1941`
+- 配置: JH95「『石油禁輸』は輸出・決済・輸送の連鎖として効いた」節の直後
+- status: **draft**
+- geometry: **Point + schematic LineString**
+- time slice: **7月28日以前 / 7月28日以後**
+- Data Audit: **passed**
+- Style Audit: **passed**
+- Human Visual Audit: **pending-human**
+- FRUS doc. 711の6月1日〜7月28日対日鉱油80,800トンと、凍結後の石油引渡し停止を供給関係の時点根拠として採用
+- FRUS doc. 290のTarakan言及を、蘭印石油供給圏の代表地点選定に使用。ただし80,800トンをタラカン単独の輸出量とは扱わない
+- 米国西海岸までLineStringを伸ばす案は不採用。太平洋全域表示では南部仏印―蘭印―日本の相対配置が読みにくくなり、さらに米国の金融統制を物理的航路と誤認させやすいため、米国の役割はreading note / provenanceで「ドル決済・輸出許可」の制度層として分離
+- 石油供給線は数量を線幅へ符号化せず、実タンカー航跡・固定航路・輸送距離として測定できない模式線と明示
+- A38のサイゴン・カムラン湾pointを再利用し、「軍事的には南方資源へ近づいたが、平時の経済アクセスは閉じた」という逆転を同一画面で比較
+
 
 ---
 

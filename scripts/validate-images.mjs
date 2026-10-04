@@ -77,6 +77,12 @@ const publishedRouteIndex = new Map(
 const figureSource = await fs.readFile(FIGURE_REGISTRY, 'utf8')
 const { keys: figureRoutes, duplicates } = collectFigureRouteKeys(figureSource)
 
+if (figureSource.includes('https://thumb.wikimedia.org/')) {
+  errors.push(
+    'src/media/periodFigures.ts: thumb.wikimedia.org is not the Wikimedia file host; use upload.wikimedia.org for direct preview URLs',
+  )
+}
+
 for (const duplicate of duplicates) {
   errors.push('duplicate figure route key: ' + duplicate)
 }

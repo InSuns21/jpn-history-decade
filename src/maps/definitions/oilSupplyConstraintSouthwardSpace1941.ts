@@ -12,6 +12,7 @@ export const oilSupplyConstraintSouthwardSpace1941Map: HistoricalMapDefinition =
   initialView: {
     center: [123.0, 17.5],
     zoom: 3.15,
+    minZoom: 1.25,
   },
   timeSlices: [
     {
@@ -57,7 +58,7 @@ export const oilSupplyConstraintSouthwardSpace1941Map: HistoricalMapDefinition =
           'FRUS 1941, Far East, Vol. IV, doc. 711から、1941年6月1日〜7月28日に蘭印から日本へ鉱油80,800トンが輸出され、7月28日の凍結規則発動後は事前支払済み一隻分などを除き石油引渡しが止まったことを確認した。',
           'FRUS 1941, Far East, Vol. IV, doc. 726から、蘭印との石油取引がドル決済へ大きく依存し、米国の凍結統制も取引停止の要因になったという米国務省の後続整理を確認した。',
           'FRUS 1941, Far East, Vol. V, doc. 290から、8月18日時点の輸出規格検討でTarakan産の特殊原油が具体的に言及されていることを確認し、蘭印石油供給圏を読む代表地点としてタラカンを採用した。',
-          'LineStringはタラカンの代表点と日本本土の代表点を結んだ説明用リンクであり、航海日誌・海図・タンカー航跡をトレースしていない。',
+          'LineStringはタラカンから日本側到着域までを海上に折った説明用リンクである。中間waypointは陸地横断を避けて供給関係を読みやすくするための作図点で、史料で確認した寄港地・航路点ではない。航海日誌・海図・タンカー航跡をトレースしていない。',
           '凍結前後を同一geometry・別timeSliceとして表し、供給関係の地理ではなく制度状態が変わったことを比較できるようにした。',
         ],
         notes:
@@ -72,7 +73,15 @@ export const oilSupplyConstraintSouthwardSpace1941Map: HistoricalMapDefinition =
             type: 'LineString',
             coordinates: [
               [117.633, 3.300],
-              [139.700, 35.500],
+              [122.000, 3.600],
+              [128.000, 5.300],
+              [128.500, 10.000],
+              [129.000, 17.000],
+              [131.000, 24.000],
+              [135.000, 30.000],
+              [140.300, 33.800],
+              [139.550, 34.850],
+              [139.720, 35.150],
             ],
           },
           properties: {
@@ -89,7 +98,15 @@ export const oilSupplyConstraintSouthwardSpace1941Map: HistoricalMapDefinition =
             type: 'LineString',
             coordinates: [
               [117.633, 3.300],
-              [139.700, 35.500],
+              [122.000, 3.600],
+              [128.000, 5.300],
+              [128.500, 10.000],
+              [129.000, 17.000],
+              [131.000, 24.000],
+              [135.000, 30.000],
+              [140.300, 33.800],
+              [139.550, 34.850],
+              [139.720, 35.150],
             ],
           },
           properties: {
@@ -132,7 +149,7 @@ export const oilSupplyConstraintSouthwardSpace1941Map: HistoricalMapDefinition =
           'A38で監査済みのサイゴン・カムラン湾代表点を再利用し、7月24日時点の基地要求地点という意味を維持した。',
           'バタヴィアは蘭印政府の凍結・輸出管理を読む行政上の参照点として現在の同名都市周辺へ代表点を置いた。',
           'タラカンはFRUS doc. 290で日本向け輸出規格の検討対象となる特殊原油が具体的に言及されるため、蘭印石油供給圏の代表地点として現在の同名島・都市周辺へ概略配置した。',
-          '日本側は個別の石油受入港を特定する地図ではないため、東京湾側に「日本本土」の代表点を置き、港湾施設の正確な位置を主張しない。',
+          '日本側は個別の石油受入港を特定する地図ではないため、東京湾口付近の海上に「日本側到着域」の代表点を置き、港湾施設の正確な位置を主張しない。',
         ],
         notes:
           '代表点の役割は制度・資源・軍事位置の相対配置を読むこと。油田範囲、基地境界、港湾施設、タンカー積出埠頭の測定には使わない。',
@@ -142,15 +159,15 @@ export const oilSupplyConstraintSouthwardSpace1941Map: HistoricalMapDefinition =
       features: [
         {
           id: 'japan-oil-demand-reference-1941',
-          geometry: { type: 'Point', coordinates: [139.700, 35.500] },
+          geometry: { type: 'Point', coordinates: [139.720, 35.150] },
           properties: {
             category: 'japan-endpoint',
             marker: '日',
-            label: '日本本土（東京湾側・代表）',
+            label: '日本側到着域（東京湾口・代表）',
             labelPlacement: 'left',
             year: '1941',
             detail:
-              '蘭印から日本への石油調達関係の日本側代表点。特定の製油所・油槽所・荷揚港を示さない。',
+              '蘭印から日本への石油調達関係の日本側代表点。東京湾口付近の海上に置いた説明用地点で、特定の製油所・油槽所・荷揚港を示さない。',
           },
         },
         {
@@ -242,7 +259,7 @@ export const oilSupplyConstraintSouthwardSpace1941Map: HistoricalMapDefinition =
     { value: 'oil-source', label: '蘭印石油供給圏の代表地点', marker: '油', color: '#6f5a3a' },
     { value: 'control-node', label: '凍結・輸出管理の行政参照点', marker: '制', color: '#435f69' },
     { value: 'southern-base', label: '南部仏印の基地要求地点', marker: '南', color: '#7d4b3a' },
-    { value: 'japan-endpoint', label: '日本側の代表点', marker: '日', color: '#4f5e70' },
+    { value: 'japan-endpoint', label: '日本側到着域の代表点', marker: '日', color: '#4f5e70' },
   ],
   auditState: {
     dataAudit: 'passed',
@@ -253,7 +270,7 @@ export const oilSupplyConstraintSouthwardSpace1941Map: HistoricalMapDefinition =
       'Data Auditでは、FRUS doc. 711の6月1日〜7月28日の蘭印対日鉱油80,800トンと凍結後の引渡し停止を供給関係の時点根拠に用いた。',
       'FRUS doc. 726は後続の米国務省整理として、蘭印石油取引がドル決済へ大きく依存し米国の凍結統制も停止要因だったことを確認するため使用した。金融制度自体を地理的な線として描いていない。',
       'FRUS doc. 290のTarakan言及を蘭印石油供給圏の代表地点選定に用いたが、80,800トンをタラカン単独の輸出量とはしていない。',
-      'LineStringはタラカン―日本本土の供給関係を示す模式線で、実タンカー航路・距離・所要時間・経由地を表さない。',
+      'LineStringはタラカン―日本側到着域の供給関係を示す海上模式リンクへ修正した。中間waypointは陸地貫通を避ける作図点で、実タンカー航路・距離・所要時間・寄港地を表さない。',
       'A38のサイゴン・カムラン湾pointを同じ意味で再利用し、軍事的接近と経済的アクセスを別のカテゴリとして比較できるようにした。',
       'Style Auditでは模式線を破線とし、凍結前後をtime sliceで切り替える。数量を線幅へ符号化せず、集計定義の違いによる量的誤読を避けた。',
       'LineStringとtime sliceを含むためHuman Visual Auditは省略せずpending-human。Desktop / Tablet・Touch / Mobile、zoom、legend、time切替、ラベル重なり、模式線が実航路・侵攻線に見えないことを実表示で確認する。',

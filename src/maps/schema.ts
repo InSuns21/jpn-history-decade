@@ -78,6 +78,8 @@ export interface HistoricalMapDefinition {
   initialView: {
     center: [number, number]
     zoom: number
+    minZoom?: number
+    maxZoom?: number
   }
   timeSlices?: MapTimeSliceDefinition[]
   datasets: HistoricalMapDataset[]

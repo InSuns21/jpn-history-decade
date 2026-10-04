@@ -93,8 +93,22 @@ export function validateMapData(definition: HistoricalMapDefinition) {
   }
 
   validateCoordinateTree(definition.initialView.center, definition.id + '.initialView.center', errors)
+  const minZoom = definition.initialView.minZoom ?? Math.min(3, definition.initialView.zoom)
+  const maxZoom = definition.initialView.maxZoom ?? Math.max(13, definition.initialView.zoom)
   if (!Number.isFinite(definition.initialView.zoom) || definition.initialView.zoom < 0 || definition.initialView.zoom > 22) {
     errors.push(definition.id + ': initialView.zoom must be between 0 and 22')
+  }
+  if (!Number.isFinite(minZoom) || minZoom < 0 || minZoom > 22) {
+    errors.push(definition.id + ': initialView.minZoom must be between 0 and 22')
+  }
+  if (!Number.isFinite(maxZoom) || maxZoom < 0 || maxZoom > 22) {
+    errors.push(definition.id + ': initialView.maxZoom must be between 0 and 22')
+  }
+  if (minZoom > maxZoom) {
+    errors.push(definition.id + ': initialView.minZoom must be <= maxZoom')
+  }
+  if (definition.initialView.zoom < minZoom || definition.initialView.zoom > maxZoom) {
+    errors.push(definition.id + ': initialView.zoom must be within minZoom/maxZoom')
   }
 
   for (const dataset of definition.datasets) {

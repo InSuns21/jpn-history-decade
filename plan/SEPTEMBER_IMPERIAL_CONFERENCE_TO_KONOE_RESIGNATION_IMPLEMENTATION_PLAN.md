@@ -1,7 +1,7 @@
 # 1941年9月6日から10月17日まで — 帝国国策遂行要領・対米最終調整・10月15日期限・第三次近衛内閣総辞職 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH98 ✅ → JH99 ✅ → JH100 ✅ → JH101 ✅ → JH102 ✅ → 次は A40 map necessity / data-quality judgment
+- **Progress:** phase cut ✅ → JH98 ✅ → JH99 ✅ → JH100 ✅ → JH101 ✅ → JH102 ✅ → A40 judgment ✅ adopted / high → A40 implementation / Data・Style Audit ✅ published (point-only reused-pattern) → 次は Crosscutting publication gate
 - **Created:** 2026-10-05
 - **Scope:** 1941-09-06〜1941-10-17
 - **Article count:** **5年代記事（JH98〜JH102）**
@@ -253,6 +253,26 @@ JH100で国内の了解案がまとまっても、それだけでは米側との
 - A38 / A39との主題重複を避け、新しく「準備対象・複数方面・輸送制約」を示せるか
 - 11月以後の完成計画を後知恵で混入せず、当時点の案・準備状態だけを表現できるか
 
+### 判定結果 — adopted / high
+
+A40は **adopted / high** とする。A38が南部仏印の基地要求、A39が南方資源空間と石油供給制約を扱ったのに対し、A40は9月6日国策後の「戦争準備」が、仏印・海南島・華南・台湾・奄美・パラオ・小笠原へ分散する準備地域と、マレー・フィリピン・蘭領東インドという複数対象方面を持つ広域準備だったことを示す。
+
+根拠として、Japanese Monograph No. 45は9月6日の御前会議決定後、南方作戦用の兵力・資材・軍需品を上記地域へ移し始めたことを記し、11月6日の正式戦闘序列示達とは段階を分けている。U.S. Army Center of Military Historyは、1941年9月までにマレー・フィリピン・蘭領東インドへの大規模攻勢計画がほぼ整っていたと整理している。
+
+11月以後の完成作戦を逆投影しないため、A40では侵攻ルート・上陸地点・作戦順序をLineString / Polygonで描かず、準備地域と対象方面を別カテゴリの模式Pointとして表示する。これにより本フェーズ時点で裏付けられる空間関係だけを可視化する。
+
+### 実装・監査結果
+
+- map ID: `southern-operation-preparation-1941`
+- 掲載先: JH101「1941-09-25〜10-11」
+- geometry: Point only
+- Data Audit: passed
+- Style Audit: passed
+- Human Visual Audit: `not-required-reused-pattern`
+- 再利用元: `southern-indochina-bases-1941` 等の既存point-only ThematicMap
+- A39で監査済みの広域zoom対応を再利用し、`initialView.minZoom` を地図別に指定
+- 最終作戦線、上陸地点、11月以後の正式戦闘序列は表示しない
+
 ### 採用時のデータ品質方針
 
 - geometry候補: Point + schematic LineString / corridor
@@ -391,18 +411,18 @@ JH100で国内の了解案がまとまっても、それだけでは米側との
 - [x] A40をmap necessity / data-quality judgment候補として設定
 - [x] Crosscutting publication gate候補を定義
 - [x] phase-end audit候補仮説を定義
-- [ ] JH98 published / JH97との隣接接続確認完了
-- [ ] JH98 図版採用または理由付きno-image判定完了
-- [ ] JH99 published / JH98との隣接接続確認完了
-- [ ] JH99 図版採用または理由付きno-image判定完了
-- [ ] JH100 published / JH99との隣接接続確認完了
-- [ ] JH100 図版採用または理由付きno-image判定完了
-- [ ] JH101 published / JH100との隣接接続確認完了
-- [ ] JH101 図版採用または理由付きno-image判定完了
-- [ ] JH102 published / JH101との隣接接続確認完了
-- [ ] JH102 図版採用または理由付きno-image判定完了
-- [ ] A40 map necessity / data-quality judgment completed
-- [ ] A40採用時の必要監査完了、またはno-map理由記録
+- [x] JH98 published / JH97との隣接接続確認完了
+- [x] JH98 図版採用または理由付きno-image判定完了
+- [x] JH99 published / JH98との隣接接続確認完了
+- [x] JH99 図版採用または理由付きno-image判定完了
+- [x] JH100 published / JH99との隣接接続確認完了
+- [x] JH100 図版採用または理由付きno-image判定完了
+- [x] JH101 published / JH100との隣接接続確認完了
+- [x] JH101 図版採用または理由付きno-image判定完了
+- [x] JH102 published / JH101との隣接接続確認完了
+- [x] JH102 図版採用または理由付きno-image判定完了
+- [x] A40 map necessity / data-quality judgment completed
+- [x] A40採用時の必要監査完了、またはno-map理由記録
 - [ ] Crosscutting publication gate completed
 - [ ] passing crosscutting extensions implemented
 - [ ] phase-end audit necessity judgment completed

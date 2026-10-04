@@ -883,4 +883,57 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     }),
   ],
 
+
+  '1941-04-14': [
+    commonsDocumentFigure(
+      'NDL10275523 Court Exh. No. 1061- Excerpt of memorandum by Secretary of State Hull dated 16 Apr. 1941 Excerpt from Exhibit No. 58.pdf',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/NDL10275523_Court_Exh._No._1061-_Excerpt_of_memorandum_by_Secretary_of_State_Hull_dated_16_Apr._1941_Excerpt_from_Exhibit_No._58.pdf/page1-1280px-NDL10275523_Court_Exh._No._1061-_Excerpt_of_memorandum_by_Secretary_of_State_Hull_dated_16_Apr._1941_Excerpt_from_Exhibit_No._58.pdf.jpg',
+      {
+        alt: '1941年4月16日の野村吉三郎大使との会談を記録したハル国務長官覚書の法廷提出用複製',
+        title: '4月16日のハル国務長官覚書',
+        dateLabel: '1941年4月16日（1946年法廷提出資料）',
+        credit: '米国務省関係文書／GHQ/SCAP国際検察局・国立国会図書館／Wikimedia Commons',
+        license: 'Public Domain',
+      },
+    ),
+  ],
+
+  '1941-04-23': [
+    commonsFigure('พิธีลงนามอนุสัญญาสันติภาพโตเกียว.jpg', {
+      alt: '1941年5月9日、東京でタイとフランス領インドシナの平和条約に署名する式典',
+      title: '仏タイ平和条約（東京条約）の調印式',
+      dateLabel: '1941年5月9日',
+      credit: '作者不詳／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+
+  '1941-05-12': [
+    commonsDocumentFigure(
+      'NDL10275542 Court Exh. No. 1070- Draft proposal handed by Japanese Ambassador NOMURA to U. S. Secretary of State on May 12, 1941 Excerpt from Exhibit No. 58.pdf',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/NDL10275542_Court_Exh._No._1070-_Draft_proposal_handed_by_Japanese_Ambassador_NOMURA_to_U._S._Secretary_of_State_on_May_12,_1941_Excerpt_from_Exhibit_No._58.pdf/page1-1280px-NDL10275542_Court_Exh._No._1070-_Draft_proposal_handed_by_Japanese_Ambassador_NOMURA_to_U._S._Secretary_of_State_on_May_12,_1941_Excerpt_from_Exhibit_No._58.pdf.jpg',
+      {
+        alt: '1941年5月12日に野村吉三郎大使がハル国務長官へ手交した日本側提案草案を収録する法廷提出資料',
+        title: '5月12日の日本側対案',
+        dateLabel: '1941年5月12日（1946年法廷提出資料）',
+        credit: '米国務省関係文書／GHQ/SCAP国際検察局・国立国会図書館／Wikimedia Commons',
+        license: 'Public Domain',
+      },
+    ),
+  ],
+
+  '1941-06-01': [
+    commonsDocumentFigure(
+      'NDL10275564 Court Exh. No. 1081- Excerpt from memorandum of Secretary of State Hull dated 2 June 1941 Excerpt from Exhibit No. 58.pdf',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/NDL10275564_Court_Exh._No._1081-_Excerpt_from_memorandum_of_Secretary_of_State_Hull_dated_2_June_1941_Excerpt_from_Exhibit_No._58.pdf/page1-1280px-NDL10275564_Court_Exh._No._1081-_Excerpt_from_memorandum_of_Secretary_of_State_Hull_dated_2_June_1941_Excerpt_from_Exhibit_No._58.pdf.jpg',
+      {
+        alt: '1941年6月2日の野村吉三郎大使との会談を記録したハル国務長官覚書の法廷提出用複製',
+        title: '6月2日のハル国務長官覚書',
+        dateLabel: '1941年6月2日（1946年法廷提出資料）',
+        credit: '米国務省関係文書／GHQ/SCAP国際検察局・国立国会図書館／Wikimedia Commons',
+        license: 'Public Domain',
+      },
+    ),
+  ],
+
 }

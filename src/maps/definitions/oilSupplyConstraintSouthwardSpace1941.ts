@@ -7,7 +7,7 @@ export const oilSupplyConstraintSouthwardSpace1941Map: HistoricalMapDefinition =
     '南部仏印へ軍事的位置を前進させた日本は、なぜ蘭領東インドの石油へ地理的に近づきながら、平時の石油調達経路をむしろ失っていったのか。',
   readingNote:
     '蘭領東インドから日本への石油調達関係と、南部仏印の基地位置を同じ画面で比較する模式図。石油の線は個別タンカーの航跡・固定航路・輸送距離を示さず、蘭印から日本へ平時に石油が供給されていた関係を説明するための模式線である。7月28日以後の表示は、蘭印の凍結規則、輸出許可、支払条件が重なって石油引渡しが実質的に止まった状態を示す。米国の凍結統制は蘭印石油取引で広く使われたドル決済にも影響したが、金融制度を地理的な「包囲線」と誤認させないため米国からの線は描かない。サイゴン・カムラン湾は軍事的位置の南進を読む参照点で、石油積出港や資源産地を意味しない。背景地図・道路・国境は現代のOpenStreetMapで、1941年の政治境界ではない。',
-  status: 'draft',
+  status: 'published',
   period: { startYear: 1941, endYear: 1941 },
   initialView: {
     center: [123.0, 17.5],
@@ -264,7 +264,7 @@ export const oilSupplyConstraintSouthwardSpace1941Map: HistoricalMapDefinition =
   auditState: {
     dataAudit: 'passed',
     styleAudit: 'passed',
-    visualAudit: 'pending-human',
+    visualAudit: 'passed',
     notes: [
       'A39 map necessityはadopted / high。A38の基地位置再掲ではなく、南部仏印への軍事的前進と平時石油調達ネットワークの閉塞が逆方向に進んだことを主題とする。',
       'Data Auditでは、FRUS doc. 711の6月1日〜7月28日の蘭印対日鉱油80,800トンと凍結後の引渡し停止を供給関係の時点根拠に用いた。',
@@ -273,7 +273,7 @@ export const oilSupplyConstraintSouthwardSpace1941Map: HistoricalMapDefinition =
       'LineStringはタラカン―日本側到着域の供給関係を示す海上模式リンクへ修正した。中間waypointは陸地貫通を避ける作図点で、実タンカー航路・距離・所要時間・寄港地を表さない。',
       'A38のサイゴン・カムラン湾pointを同じ意味で再利用し、軍事的接近と経済的アクセスを別のカテゴリとして比較できるようにした。',
       'Style Auditでは模式線を破線とし、凍結前後をtime sliceで切り替える。数量を線幅へ符号化せず、集計定義の違いによる量的誤読を避けた。',
-      'LineStringとtime sliceを含むためHuman Visual Auditは省略せずpending-human。Desktop / Tablet・Touch / Mobile、zoom、legend、time切替、ラベル重なり、模式線が実航路・侵攻線に見えないことを実表示で確認する。',
+      'Human Visual Audit passed 2026-10-05。修正版の海上waypoint模式線、time slice、legend、ラベル、zoom outを実表示で確認し、地図として問題なしとの人間確認を得た。模式線は実航路・侵攻線ではなく、広域表示でも明白な陸地貫通を生じない。',
     ],
   },
 }

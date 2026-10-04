@@ -884,16 +884,13 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
 
 
   '1941-04-14': [
-    commonsDocumentFigure(
-      'NDL10275523 Court Exh. No. 1061- Excerpt of memorandum by Secretary of State Hull dated 16 Apr. 1941 Excerpt from Exhibit No. 58.pdf',
-      {
-        alt: '1941年4月16日の野村吉三郎大使との会談を記録したハル国務長官覚書の法廷提出用複製',
-        title: '4月16日のハル国務長官覚書',
-        dateLabel: '1941年4月16日（1946年法廷提出資料）',
-        credit: '米国務省関係文書／GHQ/SCAP国際検察局・国立国会図書館／Wikimedia Commons',
-        license: 'Public Domain',
-      },
-    ),
+    commonsFigure('Nomura presenting credentials to Roosevelt at White House.jpg', {
+      alt: '1941年2月14日、ホワイトハウスでルーズヴェルト大統領へ信任状を奉呈するため訪れた野村吉三郎駐米大使',
+      title: 'ホワイトハウスを訪れる野村吉三郎',
+      dateLabel: '1941年2月14日',
+      credit: '毎日新聞／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
   ],
 
   '1941-04-23': [
@@ -907,29 +904,23 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
   ],
 
   '1941-05-12': [
-    commonsDocumentFigure(
-      'NDL10275542 Court Exh. No. 1070- Draft proposal handed by Japanese Ambassador NOMURA to U. S. Secretary of State on May 12, 1941 Excerpt from Exhibit No. 58.pdf',
-      {
-        alt: '1941年5月12日に野村吉三郎大使がハル国務長官へ手交した日本側提案草案を収録する法廷提出資料',
-        title: '5月12日の日本側対案',
-        dateLabel: '1941年5月12日（1946年法廷提出資料）',
-        credit: '米国務省関係文書／GHQ/SCAP国際検察局・国立国会図書館／Wikimedia Commons',
-        license: 'Public Domain',
-      },
-    ),
+    commonsFigure('Cordell Hull cph.3a36596.jpg', {
+      alt: '日米交渉で米国側の中心となった国務長官コーデル・ハルの肖像写真',
+      title: 'コーデル・ハル国務長官',
+      dateLabel: '1936年',
+      credit: 'Harris & Ewing／Library of Congress・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
   ],
 
   '1941-06-01': [
-    commonsDocumentFigure(
-      'NDL10275564 Court Exh. No. 1081- Excerpt from memorandum of Secretary of State Hull dated 2 June 1941 Excerpt from Exhibit No. 58.pdf',
-      {
-        alt: '1941年6月2日の野村吉三郎大使との会談を記録したハル国務長官覚書の法廷提出用複製',
-        title: '6月2日のハル国務長官覚書',
-        dateLabel: '1941年6月2日（1946年法廷提出資料）',
-        credit: '米国務省関係文書／GHQ/SCAP国際検察局・国立国会図書館／Wikimedia Commons',
-        license: 'Public Domain',
-      },
-    ),
+    commonsFigure('Kichisaburō Nomura.jpg', {
+      alt: '日米交渉で日本側大使を務めた野村吉三郎の肖像写真',
+      title: '野村吉三郎駐米大使',
+      dateLabel: '1939年以前',
+      credit: '撮影者不詳／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
   ],
 
   '1941-06-22': [

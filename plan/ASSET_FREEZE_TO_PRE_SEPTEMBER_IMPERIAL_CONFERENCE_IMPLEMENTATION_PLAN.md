@@ -296,7 +296,7 @@ LineStringを含むため、Data Audit / Style Auditに加えて **Human Visual 
 - A38のサイゴン・カムラン湾pointを再利用し、「軍事的には南方資源へ近づいたが、平時の経済アクセスは閉じた」という逆転を同一画面で比較
 - Human Visual Audit事前確認で、2点直結の模式線が陸地を貫通することと、共通rendererの `minZoom: 3` 固定が広域表示を制約することを検出。LineStringを海上waypointによる模式リンクへ修正し、`HistoricalMapDefinition.initialView.minZoom` を追加してA39は `minZoom: 1.25` とした
 - 中間waypointは史料上の航路点ではなく、陸地横断を避けるための作図点。実航路・寄港地として解釈しない
-- rendererの既定値は既存地図互換のため minZoom 3 / maxZoom 13 を維持し、広域地図だけ定義側で明示的に緩和する
+- CIで既存の広域地図2件に `initialView.zoom < 3` があることを検出。rendererの既定最小zoomを `min(3, initialView.zoom)` に変更し、定義した初期表示が固定minZoomでclampされないよう一般化。狭域地図（initial zoom >= 3）は従来どおりminZoom 3、A39はさらに `minZoom: 1.25` を明示する
 
 
 ---

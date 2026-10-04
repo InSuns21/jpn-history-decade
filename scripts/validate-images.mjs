@@ -83,6 +83,12 @@ if (figureSource.includes('https://thumb.wikimedia.org/')) {
   )
 }
 
+if (figureSource.includes('https://www.jacar.archives.go.jp/das/image/')) {
+  errors.push(
+    'src/media/periodFigures.ts: JACAR /das/image/ URLs are not stable embeddable image assets; use a stable image host for imageUrl and keep JACAR as source metadata',
+  )
+}
+
 for (const duplicate of duplicates) {
   errors.push('duplicate figure route key: ' + duplicate)
 }

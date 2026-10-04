@@ -948,28 +948,24 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
 
 
   '1941-06-25': [
-    {
-      imageUrl: 'https://www.jacar.archives.go.jp/das/image/C12120207200',
-      sourceUrl: 'https://www.jacar.archives.go.jp/aj/meta/listPhoto?BID=F2012122711213103761&REFCODE=C12120207200',
-      alt: '1941年6月25日に決定された「南方施策促進ニ関スル件」の公文書画像',
-      title: '「南方施策促進ニ関スル件」',
-      dateLabel: '1941年6月25日',
-      credit: '日本政府関係文書／防衛研究所・アジア歴史資料センター',
+    commonsFigure('Japanese troops entering Saigon in 1941.jpg', {
+      alt: '1941年、南部仏領インドシナ進駐に伴いサイゴンへ入る日本軍を撮影した写真',
+      title: 'サイゴンへ入る日本軍',
+      dateLabel: '1941年',
+      credit: '日本陸軍撮影とされる写真／Wikimedia Commons',
       license: 'Public Domain',
-    },
+    }),
   ],
 
 
   '1941-07-03': [
-    {
-      imageUrl: 'https://www.jacar.archives.go.jp/das/image/C01003690200',
-      sourceUrl: 'https://www.jacar.archives.go.jp/aj/meta/listPhoto?REFCODE=C01003690200',
-      alt: '独ソ開戦後の時局関係事項に「関東軍特種演習（関特演）」という秘匿名称を用いることを定めた1941年6月26日付通牒',
-      title: '「関東軍特種演習」の秘匿名称を定めた通牒',
-      dateLabel: '1941年6月26日',
-      credit: '関東軍関係文書／防衛研究所・アジア歴史資料センター',
+    commonsFigure('Kwantung Army Special Maneuvers1.JPG', {
+      alt: '1941年の関東軍特種演習で行動する日本軍部隊を撮影した写真',
+      title: '関東軍特種演習',
+      dateLabel: '1941年',
+      credit: '撮影者不詳／毎日新聞社刊行物由来・Wikimedia Commons',
       license: 'Public Domain',
-    },
+    }),
   ],
 
 
@@ -986,68 +982,69 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
 
 
   '1941-07-25': [
-    {
-      imageUrl: 'https://www.jacar.archives.go.jp/das/image/C04014833300',
-      sourceUrl: 'https://www.jacar.archives.go.jp/aj/meta/listPhoto?REFCODE=C04014833300',
-      alt: '1941年7月26日に野村吉三郎駐米大使から豊田貞次郎外相へ送られた、米国の対日資金凍結措置を報告する外交電報',
-      title: '米国の対日資金凍結措置を伝える外交電報',
-      dateLabel: '1941年7月26日',
-      credit: '外務省外交史料館・アジア歴史資料センター',
-      license: 'Public Domain',
-    },
-    {
-      imageUrl: 'https://www.jacar.archives.go.jp/das/image/B02032439600',
-      sourceUrl: 'https://www.jacar.archives.go.jp/aj/meta/listPhoto?REFCODE=B02032439600',
-      alt: '1941年7月29日に成立した仏領インドシナ共同防衛に関する日本国・フランス国間議定書の公文書画像',
-      title: '仏領インドシナ共同防衛に関する日仏議定書',
-      dateLabel: '1941年7月29日',
-      credit: '外務省外交史料館・アジア歴史資料センター',
-      license: 'Public Domain',
-    },
+    commonsDocumentFigure(
+      'CNTS-00125339173 朝鮮新聞 1941-07-26.pdf',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/CNTS-00125339173_%E6%9C%9D%E9%AE%AE%E6%96%B0%E8%81%9E_1941-07-26.pdf/page1-960px-CNTS-00125339173_%E6%9C%9D%E9%AE%AE%E6%96%B0%E8%81%9E_1941-07-26.pdf.jpg',
+      {
+        alt: '1941年7月26日付「朝鮮新聞」の紙面。米国の対日強硬方針と在米資金凍結を扱う記事を掲載している',
+        title: '資産凍結を報じた1941年7月26日付紙面',
+        dateLabel: '1941年7月26日',
+        credit: '朝鮮新聞社／韓国国立中央図書館・Wikimedia Commons',
+        license: 'Public Domain',
+      },
+    ),
+    commonsDocumentFigure(
+      'NDL10274630 Court Exh. No. 651- Copies of 2 letter....pdf',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/NDL10274630_Court_Exh._No._651-_Copies_of_2_letter....pdf/page1-960px-NDL10274630_Court_Exh._No._651-_Copies_of_2_letter....pdf.jpg',
+      {
+        alt: '1941年7月29日に調印された仏領インドシナ共同防衛に関する日本・フランス間議定書の条件を収録した法廷提出資料',
+        title: '仏領インドシナ共同防衛に関する日仏議定書',
+        dateLabel: '1941年7月29日（1946年法廷提出資料）',
+        credit: '日仏共同防衛議定書関係文書／GHQ/SCAP国際検察局・国立国会図書館／Wikimedia Commons',
+        license: 'Public Domain',
+      },
+    ),
   ],
 
 
   '1941-08-01': [
-    {
-      imageUrl: 'https://www.jacar.archives.go.jp/das/image/B02030716100',
-      sourceUrl: 'https://www.jacar.archives.go.jp/aj/meta/listPhoto?REFCODE=B02030716100',
-      alt: '1941年8月7日に野村吉三郎駐米大使が豊田貞次郎外相へ送った、資産凍結・石油輸出制限後の米国対日政策を報告する外交電報',
-      title: '野村大使の米国対日政策報告',
-      dateLabel: '1941年8月7日',
-      credit: '外務省外交史料館・アジア歴史資料センター',
+    commonsFigure('Kichisaburō Nomura.jpg', {
+      alt: '駐米大使として日米交渉を担った野村吉三郎の肖像写真',
+      title: '野村吉三郎',
+      dateLabel: '1939年以前（人物写真）',
+      credit: '撮影者不詳／Wikimedia Commons',
       license: 'Public Domain',
-    },
-    {
-      imageUrl: 'https://www.jacar.archives.go.jp/das/image/B04013480700',
-      sourceUrl: 'https://www.jacar.archives.go.jp/aj/meta/listPhoto?REFCODE=B04013480700',
-      alt: '1941年8月1日の大本営政府連絡会議で検討された対ソ外交交渉要領案の公文書画像',
-      title: '対「ソ」外交交渉要領案',
-      dateLabel: '1941年8月1日',
-      credit: '外務省外交史料館・アジア歴史資料センター',
+    }),
+    commonsFigure('Matsuoka signs the Soviet–Japanese Neutrality Pact-1.jpg', {
+      alt: '1941年4月13日、モスクワで日ソ中立条約に署名する松岡洋右外相。スターリン、モロトフらが立ち会う',
+      title: '日ソ中立条約の署名',
+      dateLabel: '1941年4月13日',
+      credit: 'Nikolai Vlasik／Russian Archives・Wikimedia Commons',
       license: 'Public Domain',
-    },
+    }),
   ],
 
 
   '1941-08-17': [
-    {
-      imageUrl: 'https://www.jacar.archives.go.jp/das/image/B02030716700',
-      sourceUrl: 'https://www.jacar.archives.go.jp/aj/meta/listPhoto?REFCODE=B02030716700',
-      alt: '1941年8月17日の野村吉三郎大使・ルーズヴェルト大統領会談と米側回答を報告する外交文書',
-      title: '8月17日のルーズヴェルト回答関係文書',
-      dateLabel: '1941年8月17日（米時間）',
-      credit: '外務省外交史料館・アジア歴史資料センター',
+    commonsDocumentFigure(
+      'NDL11919913 Def. Doc. No. 1400K-6- Statement handed by President Roosevelt to the Japanese Ambassador (Nomura) on Aug. 17, 1941 Excerpt from Foreign Relations of the United States, Japan- 1931-1941, vol.II.pdf',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/NDL11919913_Def._Doc._No._1400K-6-_Statement_handed_by_President_Roosevelt_to_the_Japanese_Ambassador_%28Nomura%29_on_Aug._17%2C_1941_Excerpt_from_Foreign_Relations_of_the_United_States%2C_Japan-_1931-1941%2C_vol.II.pdf/page1-1280px-thumbnail.pdf.jpg',
+      {
+        alt: '1941年8月17日にルーズヴェルト大統領から野村吉三郎大使へ手交された声明を収録する法廷提出資料',
+        title: '8月17日のルーズヴェルト回答',
+        dateLabel: '1941年8月17日（戦後の法廷提出資料）',
+        credit: '米国務省関係文書／GHQ/SCAP国際検察局・国立国会図書館／Wikimedia Commons',
+        license: 'Public Domain',
+      },
+    ),
+    commonsFigure('Konoe Fumimaro PM.jpg', {
+      alt: '1941年7月18日に撮影された第3次近衛内閣首相・近衛文麿の肖像',
+      title: '近衛文麿',
+      dateLabel: '1941年7月18日',
+      credit: '撮影者不詳／首相官邸・Wikimedia Commons',
       license: 'Public Domain',
-    },
-    {
-      imageUrl: 'https://www.jacar.archives.go.jp/das/image/B02030717400',
-      sourceUrl: 'https://www.jacar.archives.go.jp/aj/meta/listPhoto?REFCODE=B02030717400',
-      alt: '1941年8月26日に野村吉三郎大使へ送られた近衛文麿首相のルーズヴェルト大統領宛てメッセージ関係外交文書',
-      title: '近衛メッセージ関係電報',
-      dateLabel: '1941年8月26日',
-      credit: '外務省外交史料館・アジア歴史資料センター',
-      license: 'Public Domain',
-    },
+    }),
   ],
+
 
 }

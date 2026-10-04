@@ -11,6 +11,7 @@ import { february26Tokyo1936Map } from './definitions/february26Tokyo1936.ts'
 import { nomonhan1939TimelineMap } from './definitions/nomonhan1939Timeline.ts'
 import { northernIndochinaAdvance1940Map } from './definitions/northernIndochinaAdvance1940.ts'
 import { thaiIndochinaMediation1941Map } from './definitions/thaiIndochinaMediation1941.ts'
+import { francoThaiPeaceTreaty1941Map } from './definitions/francoThaiPeaceTreaty1941.ts'
 import { matsuokaParallelDiplomacy1941Map } from './definitions/matsuokaParallelDiplomacy1941.ts'
 import { railwayExpansion1872To1890Map } from './definitions/railwayExpansion1872To1890.ts'
 import { sinoRussoJapaneseWarTheatersMap } from './definitions/sinoRussoJapaneseWarTheaters.ts'
@@ -39,6 +40,7 @@ export const mapDefinitions: HistoricalMapDefinition[] = [
   nomonhan1939TimelineMap,
   northernIndochinaAdvance1940Map,
   thaiIndochinaMediation1941Map,
+  francoThaiPeaceTreaty1941Map,
   matsuokaParallelDiplomacy1941Map,
   railwayExpansion1872To1890Map,
   sinoRussoJapaneseWarTheatersMap,

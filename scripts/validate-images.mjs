@@ -132,6 +132,23 @@ for (const duplicate of duplicates) {
   errors.push('duplicate figure route key: ' + duplicate)
 }
 
+const policy = JSON.parse(await fs.readFile(POLICY_FILE, 'utf8'))
+const noImage = policy?.noImage
+if (!noImage || typeof noImage !== 'object' || Array.isArray(noImage)) {
+  errors.push('standards/image-necessity.json: "noImage" must be an object')
+}
+
+const duplicateImageAllowlist = policy?.duplicateImageAllowlist
+if (
+  !duplicateImageAllowlist ||
+  typeof duplicateImageAllowlist !== 'object' ||
+  Array.isArray(duplicateImageAllowlist)
+) {
+  errors.push(
+    'standards/image-necessity.json: "duplicateImageAllowlist" must be an object',
+  )
+}
+
 const currentDuplicateAssetIds = new Set()
 for (const [assetId, routes] of figureAssetUsages) {
   if (routes.length < 2) continue
@@ -172,23 +189,6 @@ if (
       errors.push(assetId + ': stale duplicateImageAllowlist entry; image is no longer duplicated')
     }
   }
-}
-
-const policy = JSON.parse(await fs.readFile(POLICY_FILE, 'utf8'))
-const noImage = policy?.noImage
-if (!noImage || typeof noImage !== 'object' || Array.isArray(noImage)) {
-  errors.push('standards/image-necessity.json: "noImage" must be an object')
-}
-
-const duplicateImageAllowlist = policy?.duplicateImageAllowlist
-if (
-  !duplicateImageAllowlist ||
-  typeof duplicateImageAllowlist !== 'object' ||
-  Array.isArray(duplicateImageAllowlist)
-) {
-  errors.push(
-    'standards/image-necessity.json: "duplicateImageAllowlist" must be an object',
-  )
 }
 
 const noImageStreakAudits = policy?.noImageStreakAudits

@@ -936,4 +936,15 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     ),
   ],
 
+  '1941-06-22': [
+    commonsFigure('German troops crossing the Soviet border.jpg', {
+      alt: '1941年6月22日、独ソ戦開始時にソ連国境を越えるドイツ軍部隊を撮影した写真',
+      title: '独ソ国境を越えるドイツ軍',
+      dateLabel: '1941年6月22日',
+      credit: 'Johannes Hähle／WW2 Photo Archive・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+
+
 }

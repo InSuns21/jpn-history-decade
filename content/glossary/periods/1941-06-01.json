@@ -1,0 +1,9 @@
+{
+  "period": "1941-06-01",
+  "termRefs": [
+    {"id":"us-counterproposal-1941-06-01","core":true},
+    {"id":"southern-policy-guideline-1941-06","core":true},
+    {"id":"nomura-kichisaburo-us-ambassador-1941","core":false},
+    {"id":"tripartite-pact-1940","core":false}
+  ]
+}

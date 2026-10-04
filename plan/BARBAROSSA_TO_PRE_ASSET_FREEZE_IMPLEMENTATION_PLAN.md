@@ -1,7 +1,7 @@
 # 1941年6月22日から7月24日まで — 米側回答・独ソ戦・南部仏印進駐決定・第三次近衛内閣 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH90 ✅ → JH91 ✅ → JH92 ✅ → JH93 ✅ → A38 judgment ✅ adopted / high → A38 map implementation / Data Audit / Style Audit ✅ → Crosscutting publication gate ✅ → 次は S09 extension
+- **Progress:** phase cut ✅ → JH90 ✅ → JH91 ✅ → JH92 ✅ → JH93 ✅ → A38 judgment ✅ adopted / high → A38 map implementation / Data Audit / Style Audit ✅ → Crosscutting publication gate ✅ → S09 extension ✅ → 次は phase-end audit necessity judgment
 - **Created:** 2026-10-04
 - **Scope:** 1941-06-22〜1941-07-24
 - **Primary goal:** 6月22日の米側回答と独ソ戦開始という二つの同日ショックから、6月25日の南部仏印進駐方針、7月2日の御前会議、関特演、松岡外相をめぐる内閣改造問題、第2次近衛内閣総辞職と7月18日の第3次近衛内閣成立、日仏印共同防衛了解までを追う。7月25日の米国による日本資産凍結は対日経済圧力の制度状態を大きく変えるため、その直前を終点とする。
@@ -291,7 +291,7 @@ Point-onlyで実装できるため、Data Audit / Style Auditは通常どおり�
 
 ### Crosscutting gate 判定結果（2026-10-04）
 
-- **S09 pass / extension required**：共同防衛了解によって、フランス主権・植民地行政を残したまま日本軍の駐留・基地利用を南部へ拡張する制度状態が加わった。北部仏印、仏タイ平和条約、南京政府などと比較することで、主権・行政・軍事アクセス・外交的役割の配分差を説明できる。
+- **S09 pass / extension implemented**：共同防衛了解によって、フランス主権・植民地行政を残したまま日本軍の駐留・基地利用を南部へ拡張する制度状態を追加した。北部仏印、仏タイ平和条約、南京政府などと比較し、主権・行政・軍事アクセス・外交的役割の配分差として本文へ実装済み。
 - **S10 hold / next phase**：資産凍結前では供給制約の制度状態がまだ変わっておらず、年代記事の資源説明の再要約になりやすい。7月25日以後の金融・輸出・石油制約と一体で扱う。
 - **S05 hold**：内閣交代は政策決定主体の再編だが、政治参加回路の新制度ではない。
 - **新規「日米交渉」defer**：独立記事に必要な比較軸は形成されつつあるが、資産凍結・実進駐後まで含める方が「交渉・軍事的位置・経済圧力」の構造比較として成立しやすい。
@@ -401,7 +401,7 @@ Point-onlyで実装できるため、Data Audit / Style Auditは通常どおり�
 - [x] A38 map necessity / data-quality judgment completed
 - [x] A38採用時の必要監査完了、またはno-map理由記録
 - [x] Crosscutting publication gate completed
-- [ ] passing crosscutting extensions implemented
+- [x] passing crosscutting extensions implemented
 - [ ] phase-end audit necessity judgment completed
 - [ ] npm run check green
 - [ ] GitHub Actions CI green

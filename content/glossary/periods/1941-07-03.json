@@ -1,0 +1,11 @@
+{
+  "period": "1941-07-03",
+  "termRefs": [
+    {"id":"kantokuen-1941","core":true},
+    {"id":"second-konoe-cabinet-resignation-1941","core":true},
+    {"id":"imperial-policy-guideline-1941-07-02","core":false},
+    {"id":"us-response-1941-06-22","core":false},
+    {"id":"second-konoe-cabinet-1940","core":false},
+    {"id":"imperial-headquarters-government-liaison-consultation-1940","core":false}
+  ]
+}

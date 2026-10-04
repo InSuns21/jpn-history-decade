@@ -192,6 +192,10 @@
     {
       "id": "material-mobilization-q1-plan-1941",
       "core": true
+    },
+    {
+      "id": "trade-control-order-1941",
+      "core": true
     }
   ]
 }

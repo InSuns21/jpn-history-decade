@@ -1047,4 +1047,15 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
   ],
 
 
+
+  '1941-08-30': [
+    commonsFigure('Osami Nagano.jpg', {
+      alt: '1941年9月の国策審議で軍令部総長として資源・戦力と開戦準備の時間条件を説明した永野修身の肖像',
+      title: '永野修身 軍令部総長',
+      dateLabel: '1940年ごろ',
+      credit: '撮影者不詳／U.S. Naval History and Heritage Command・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+
 }

@@ -1,7 +1,7 @@
 # 1941年7月25日から9月5日まで — 資産凍結・南部仏印実進駐・石油輸出制限・日米首脳会談構想 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH94 ✅ → JH95 ✅ → JH96 ✅ → 次は JH97「1941-08-30〜09-05」
+- **Progress:** phase cut ✅ → JH94 ✅ → JH95 ✅ → JH96 ✅ → JH97 ✅ → 次は A39 map necessity / data-quality judgment
 - **Created:** 2026-10-04
 - **Scope:** 1941-07-25〜1941-09-05
 - **Article count:** **4年代記事（JH94〜JH97）**
@@ -218,6 +218,19 @@ JH93末尾の「制裁を予測しながら進駐準備を続ける」状態か�
 - 8月末の日米交渉文書
 - 物資動員・戦争準備の同時代公文書
 
+### JH97 implementation result（2026-10-04）
+
+- status: **published**
+- JH96→JH97 adjacent connection: **passed**
+- 8月30日の第49回連絡会議で、三国同盟維持と対米交渉継続を同時に運用する豊田外相の立場を実装
+- 9月3日の第50回連絡会議を、10月上旬頃の外交判断と10月下旬の戦争準備完了目標を同じ政策時間へ接続する転換として記述
+- 「帝国国策遂行要領」の最低要求・約束可能範囲を追加し、単なる開戦期限表ではなく交渉条件表でもあることを説明
+- 東京の9月3日連絡会議決定と、ワシントンの9月3日ルーズヴェルト回答を時差のある別の政策過程として分離
+- 9月4〜5日の外交継続と、5日の天皇による近衛・陸海両総長への下問まで実装
+- 図版publication gate: **passed / 1点採用**
+  - Wikimedia Commons / U.S. Naval History and Heritage Command — 永野修身軍令部総長のPublic Domain肖像（9月3日の資源・戦力・準備時期の説明主体）
+- 9月6日の御前会議での正式決定・質疑・御製は次フェーズへ送付
+
 ---
 
 # 7. A39 — 資産凍結・石油供給制約と南方資源空間 map necessity / data-quality judgment
@@ -362,8 +375,8 @@ JH93末尾の「制裁を予測しながら進駐準備を続ける」状態か�
 - [x] JH95 図版採用または理由付きno-image判定完了
 - [x] JH96 published / JH95との隣接接続確認完了
 - [x] JH96 図版採用または理由付きno-image判定完了
-- [ ] JH97 published / JH96との隣接接続確認完了
-- [ ] JH97 図版採用または理由付きno-image判定完了
+- [x] JH97 published / JH96との隣接接続確認完了
+- [x] JH97 図版採用または理由付きno-image判定完了
 - [ ] A39 map necessity / data-quality judgment completed
 - [ ] A39採用時の必要監査完了、またはno-map理由記録
 - [ ] Crosscutting publication gate completed

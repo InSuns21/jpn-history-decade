@@ -196,6 +196,18 @@
     {
       "id": "trade-control-order-1941",
       "core": true
+    },
+    {
+      "id": "us-japanese-assets-freezing-1941",
+      "core": true
+    },
+    {
+      "id": "us-petroleum-export-controls-1941",
+      "core": true
+    },
+    {
+      "id": "imperial-policy-guideline-1941-09",
+      "core": false
     }
   ]
 }

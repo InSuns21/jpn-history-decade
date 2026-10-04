@@ -744,13 +744,6 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
       license: 'Public Domain',
       },
     ),
-    commonsFigure('Prime Minister Mitsumasa Yonai cropped.jpg', {
-      alt: '1940年前半の米内光政首相を撮影した肖像写真',
-      title: '退陣へ向かう米内光政内閣',
-      dateLabel: '1940年前半',
-      credit: '撮影者不詳／Wikimedia Commons',
-      license: 'Public Domain',
-    }),
   ],
   '1940-07-22': [
     commonsFigure('Fumimaro Konoe Cabinet 19400722.jpg', {
@@ -885,11 +878,11 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
 
 
   '1941-04-14': [
-    commonsFigure('Nomura presenting credentials to Roosevelt at White House.jpg', {
-      alt: '1941年2月14日、ホワイトハウスでルーズヴェルト大統領へ信任状を奉呈するため訪れた野村吉三郎駐米大使',
-      title: 'ホワイトハウスを訪れる野村吉三郎',
-      dateLabel: '1941年2月14日',
-      credit: '毎日新聞／Wikimedia Commons',
+    commonsFigure('President Franklin D. Roosevelt-1941.jpg', {
+      alt: '1941年3月11日、ホワイトハウスでレンドリース法案に署名するフランクリン・D・ルーズヴェルト大統領',
+      title: '1941年春のルーズヴェルト大統領',
+      dateLabel: '1941年3月11日',
+      credit: 'New York World-Telegram and the Sun／Library of Congress・Wikimedia Commons',
       license: 'Public Domain',
     }),
   ],
@@ -910,16 +903,6 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
       title: 'コーデル・ハル国務長官',
       dateLabel: '1936年',
       credit: 'Harris & Ewing／Library of Congress・Wikimedia Commons',
-      license: 'Public Domain',
-    }),
-  ],
-
-  '1941-06-01': [
-    commonsFigure('Kichisaburō Nomura.jpg', {
-      alt: '日米交渉で日本側大使を務めた野村吉三郎の肖像写真',
-      title: '野村吉三郎駐米大使',
-      dateLabel: '1939年以前',
-      credit: '撮影者不詳／Wikimedia Commons',
       license: 'Public Domain',
     }),
   ],

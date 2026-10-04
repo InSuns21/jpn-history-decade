@@ -26,6 +26,44 @@ function collectFigureRouteKeys(source) {
   return { keys: new Set(keys), duplicates: [...new Set(duplicates)] }
 }
 
+function normalizeFigureAssetId(kind, rawId) {
+  const normalized = rawId
+    .replaceAll('_', ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .normalize('NFC')
+  return kind + ':' + normalized
+}
+
+function collectFigureAssetUsages(source) {
+  const routeMatches = [...source.matchAll(/^  '([^']+)': \[/gm)]
+  const usages = new Map()
+
+  function add(assetId, routeKey) {
+    const routes = usages.get(assetId) ?? []
+    routes.push(routeKey)
+    usages.set(assetId, routes)
+  }
+
+  for (let index = 0; index < routeMatches.length; index += 1) {
+    const routeKey = routeMatches[index][1]
+    const start = routeMatches[index].index
+    const end =
+      index + 1 < routeMatches.length ? routeMatches[index + 1].index : source.length
+    const block = source.slice(start, end)
+
+    for (const match of block.matchAll(/commons(?:Document)?Figure\(\s*(['"])(.*?)\1\s*,/gs)) {
+      add(normalizeFigureAssetId('commons', match[2]), routeKey)
+    }
+
+    for (const match of block.matchAll(/homeFigures\[(\d+)\]/g)) {
+      add('homeFigures[' + match[1] + ']', routeKey)
+    }
+  }
+
+  return usages
+}
+
 function collectNoImageStreaks(publishedPeriods, noImage) {
   const streaks = []
   let current = []
@@ -76,6 +114,7 @@ const publishedRouteIndex = new Map(
 
 const figureSource = await fs.readFile(FIGURE_REGISTRY, 'utf8')
 const { keys: figureRoutes, duplicates } = collectFigureRouteKeys(figureSource)
+const figureAssetUsages = collectFigureAssetUsages(figureSource)
 
 if (figureSource.includes('https://thumb.wikimedia.org/')) {
   errors.push(
@@ -97,6 +136,59 @@ const policy = JSON.parse(await fs.readFile(POLICY_FILE, 'utf8'))
 const noImage = policy?.noImage
 if (!noImage || typeof noImage !== 'object' || Array.isArray(noImage)) {
   errors.push('standards/image-necessity.json: "noImage" must be an object')
+}
+
+const duplicateImageAllowlist = policy?.duplicateImageAllowlist
+if (
+  !duplicateImageAllowlist ||
+  typeof duplicateImageAllowlist !== 'object' ||
+  Array.isArray(duplicateImageAllowlist)
+) {
+  errors.push(
+    'standards/image-necessity.json: "duplicateImageAllowlist" must be an object',
+  )
+}
+
+const currentDuplicateAssetIds = new Set()
+for (const [assetId, routes] of figureAssetUsages) {
+  if (routes.length < 2) continue
+  currentDuplicateAssetIds.add(assetId)
+
+  const allow = duplicateImageAllowlist?.[assetId]
+  if (!allow || typeof allow !== 'object' || Array.isArray(allow)) {
+    errors.push(
+      assetId +
+        ': duplicate image asset is registered for multiple periods (' +
+        routes.join(', ') +
+        '); use a different figure or add a reasoned duplicateImageAllowlist entry',
+    )
+    continue
+  }
+
+  const allowRoutes = Array.isArray(allow.routes) ? allow.routes : []
+  const reason = allow.reason
+  const sameRoutes =
+    allowRoutes.length === routes.length &&
+    [...allowRoutes].sort().every((routeKey, index) => routeKey === [...routes].sort()[index])
+
+  if (!sameRoutes) {
+    errors.push(assetId + ': duplicateImageAllowlist routes must exactly match current usage')
+  }
+  if (typeof reason !== 'string' || reason.trim().length < 40) {
+    errors.push(assetId + ': duplicateImageAllowlist reason must be at least 40 characters')
+  }
+}
+
+if (
+  duplicateImageAllowlist &&
+  typeof duplicateImageAllowlist === 'object' &&
+  !Array.isArray(duplicateImageAllowlist)
+) {
+  for (const assetId of Object.keys(duplicateImageAllowlist)) {
+    if (!currentDuplicateAssetIds.has(assetId)) {
+      errors.push(assetId + ': stale duplicateImageAllowlist entry; image is no longer duplicated')
+    }
+  }
 }
 
 const noImageStreakAudits = policy?.noImageStreakAudits
@@ -259,5 +351,7 @@ console.log(
     Object.keys(noImage ?? {}).length +
     ' no-image decisions, ' +
     Object.keys(noImageStreakAudits ?? {}).length +
-    ' no-image streak audits.',
+    ' no-image streak audits, ' +
+    Object.keys(duplicateImageAllowlist ?? {}).length +
+    ' duplicate-image exceptions.',
 )

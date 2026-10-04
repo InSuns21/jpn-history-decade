@@ -1028,4 +1028,26 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     },
   ],
 
+
+  '1941-08-17': [
+    {
+      imageUrl: 'https://www.jacar.archives.go.jp/das/image/B02030716700',
+      sourceUrl: 'https://www.jacar.archives.go.jp/aj/meta/listPhoto?REFCODE=B02030716700',
+      alt: '1941年8月17日の野村吉三郎大使・ルーズヴェルト大統領会談と米側回答を報告する外交文書',
+      title: '8月17日のルーズヴェルト回答関係文書',
+      dateLabel: '1941年8月17日（米時間）',
+      credit: '外務省外交史料館・アジア歴史資料センター',
+      license: 'Public Domain',
+    },
+    {
+      imageUrl: 'https://www.jacar.archives.go.jp/das/image/B02030717400',
+      sourceUrl: 'https://www.jacar.archives.go.jp/aj/meta/listPhoto?REFCODE=B02030717400',
+      alt: '1941年8月26日に野村吉三郎大使へ送られた近衛文麿首相のルーズヴェルト大統領宛てメッセージ関係外交文書',
+      title: '近衛メッセージ関係電報',
+      dateLabel: '1941年8月26日',
+      credit: '外務省外交史料館・アジア歴史資料センター',
+      license: 'Public Domain',
+    },
+  ],
+
 }

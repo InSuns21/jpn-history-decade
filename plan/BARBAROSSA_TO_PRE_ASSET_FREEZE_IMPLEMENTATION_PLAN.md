@@ -1,7 +1,7 @@
 # 1941年6月22日から7月24日まで — 米側回答・独ソ戦・南部仏印進駐決定・第三次近衛内閣 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH90 ✅ → JH91 ✅ → JH92 ✅ → JH93 ✅ → A38 map necessity / data-quality judgment ✅ adopted / high → 次は A38 map implementation / audit
+- **Progress:** phase cut ✅ → JH90 ✅ → JH91 ✅ → JH92 ✅ → JH93 ✅ → A38 judgment ✅ adopted / high → A38 map implementation / Data Audit / Style Audit ✅ → 次は Crosscutting publication gate
 - **Created:** 2026-10-04
 - **Scope:** 1941-06-22〜1941-07-24
 - **Primary goal:** 6月22日の米側回答と独ソ戦開始という二つの同日ショックから、6月25日の南部仏印進駐方針、7月2日の御前会議、関特演、松岡外相をめぐる内閣改造問題、第2次近衛内閣総辞職と7月18日の第3次近衛内閣成立、日仏印共同防衛了解までを追う。7月25日の米国による日本資産凍結は対日経済圧力の制度状態を大きく変えるため、その直前を終点とする。
@@ -240,6 +240,21 @@ JH92の内閣総辞職は外交方針の調整方法を変えるが、7月2日�
 
 Point-onlyで実装できるため、Data Audit / Style Auditは通常どおり実施する。Human Visual Auditは、既存監査済み地図と同一のThematicMap表示・点記号・凡例・popup/touch interactionをそのまま再利用し、変更点が点featureの位置・ラベル・属性値だけに収まる場合、`MAP_AUDIT_STANDARD.md` の **not-required-reused-pattern** 例外を適用できる。新しい表示ロジック、LineString / Polygon、凡例仕様変更が必要になった場合はHuman Visual Auditを必須へ戻す。
 
+### A38 map implementation / audit 結果（2026-10-04）
+
+- Map ID: `southern-indochina-bases-1941`
+- 配置: JH93「外相交代だけでは米国の警戒は下がらなかった」節の直後
+- geometry: Point only
+- Data Audit: **passed**
+- Style Audit: **passed**
+- Human Visual Audit: **not-required-reused-pattern**
+- 再利用元: `thai-indochina-mediation-1941` 等の監査済みpoint-only ThematicMap
+- サイゴン・カムラン湾のみを史料で確認できる基地要求地点として表示
+- 個別所在地を確認できない「コーチシナ・カンボジアの8航空基地」は表示しない
+- ハノイ・海防・シンガポール・バタヴィア・マニラは比較用参照点として基地要求カテゴリから分離
+- 7月28日以後の実進駐・部隊配置・進軍経路は含めない
+
+
 ---
 
 # 8. Crosscutting publication gate
@@ -371,7 +386,7 @@ Point-onlyで実装できるため、Data Audit / Style Auditは通常どおり�
 - [x] JH93 published / JH92との隣接接続確認完了
 - [x] JH93 図版採用または理由付きno-image判定完了
 - [x] A38 map necessity / data-quality judgment completed
-- [ ] A38採用時の必要監査完了、またはno-map理由記録
+- [x] A38採用時の必要監査完了、またはno-map理由記録
 - [ ] Crosscutting publication gate completed
 - [ ] passing crosscutting extensions implemented
 - [ ] phase-end audit necessity judgment completed

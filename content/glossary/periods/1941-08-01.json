@@ -1,0 +1,12 @@
+{
+  "period": "1941-08-01",
+  "termRefs": [
+    {"id":"us-petroleum-export-controls-1941","core":true},
+    {"id":"konoe-roosevelt-summit-proposal-1941","core":true},
+    {"id":"us-japanese-assets-freezing-1941","core":false},
+    {"id":"southern-indochina-advance-1941","core":false},
+    {"id":"planning-board-1937","core":false},
+    {"id":"nomura-kichisaburo-us-ambassador-1941","core":false},
+    {"id":"third-konoe-cabinet-1941","core":false}
+  ]
+}

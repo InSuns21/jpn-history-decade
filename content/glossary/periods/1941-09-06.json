@@ -1,0 +1,12 @@
+{
+  "period": "1941-09-06",
+  "termRefs": [
+    {"id":"imperial-policy-guideline-1941-09","core":true},
+    {"id":"gozen-kaigi","core":true},
+    {"id":"nomura-kichisaburo-us-ambassador-1941","core":true},
+    {"id":"konoe-roosevelt-summit-proposal-1941","core":false},
+    {"id":"roosevelt-reply-konoe-1941-09-03","core":false},
+    {"id":"third-konoe-cabinet-1941","core":false},
+    {"id":"imperial-headquarters-government-liaison-conference-1937","core":false}
+  ]
+}

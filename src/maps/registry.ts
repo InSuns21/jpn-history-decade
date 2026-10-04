@@ -13,6 +13,7 @@ import { northernIndochinaAdvance1940Map } from './definitions/northernIndochina
 import { thaiIndochinaMediation1941Map } from './definitions/thaiIndochinaMediation1941.ts'
 import { francoThaiPeaceTreaty1941Map } from './definitions/francoThaiPeaceTreaty1941.ts'
 import { matsuokaParallelDiplomacy1941Map } from './definitions/matsuokaParallelDiplomacy1941.ts'
+import { southernIndochinaBases1941Map } from './definitions/southernIndochinaBases1941.ts'
 import { railwayExpansion1872To1890Map } from './definitions/railwayExpansion1872To1890.ts'
 import { sinoRussoJapaneseWarTheatersMap } from './definitions/sinoRussoJapaneseWarTheaters.ts'
 import { firstWorldWarEastAsiaPacificMap } from './definitions/firstWorldWarEastAsiaPacific.ts'
@@ -42,6 +43,7 @@ export const mapDefinitions: HistoricalMapDefinition[] = [
   thaiIndochinaMediation1941Map,
   francoThaiPeaceTreaty1941Map,
   matsuokaParallelDiplomacy1941Map,
+  southernIndochinaBases1941Map,
   railwayExpansion1872To1890Map,
   sinoRussoJapaneseWarTheatersMap,
   firstWorldWarEastAsiaPacificMap,

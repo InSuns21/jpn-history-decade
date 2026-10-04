@@ -984,4 +984,26 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
   ],
 
 
+
+  '1941-07-25': [
+    {
+      imageUrl: 'https://www.jacar.archives.go.jp/das/image/C04014833300',
+      sourceUrl: 'https://www.jacar.archives.go.jp/aj/meta/listPhoto?REFCODE=C04014833300',
+      alt: '1941年7月26日に野村吉三郎駐米大使から豊田貞次郎外相へ送られた、米国の対日資金凍結措置を報告する外交電報',
+      title: '米国の対日資金凍結措置を伝える外交電報',
+      dateLabel: '1941年7月26日',
+      credit: '外務省外交史料館・アジア歴史資料センター',
+      license: 'Public Domain',
+    },
+    {
+      imageUrl: 'https://www.jacar.archives.go.jp/das/image/B02032439600',
+      sourceUrl: 'https://www.jacar.archives.go.jp/aj/meta/listPhoto?REFCODE=B02032439600',
+      alt: '1941年7月29日に成立した仏領インドシナ共同防衛に関する日本国・フランス国間議定書の公文書画像',
+      title: '仏領インドシナ共同防衛に関する日仏議定書',
+      dateLabel: '1941年7月29日',
+      credit: '外務省外交史料館・アジア歴史資料センター',
+      license: 'Public Domain',
+    },
+  ],
+
 }

@@ -120,3 +120,5 @@ README には概要だけを置き、フェーズ進捗・監査結果・地図�
 
 - 1941年6月22日〜7月24日フェーズはJH90→JH91→JH92→JH93→A38 adopted / Data+Style Audit→Crosscutting publication gate→S09延長→phase-end audit necessity judgment no-audit→npm run check→CI→Pagesまで完了。main commit `49c4a6e7` に対するCI #827 / GitHub Pages #364 はともにsuccess。全Definition of Doneを満たし、計画を `plan_done/BARBAROSSA_TO_PRE_ASSET_FREEZE_IMPLEMENTATION_PLAN.md` へarchiveした。
 - 次フェーズを `plan/ASSET_FREEZE_TO_PRE_SEPTEMBER_IMPERIAL_CONFERENCE_IMPLEMENTATION_PLAN.md` として1941年7月25日〜9月5日に切り出した。年代記事は従来の3本ではなく**4本**とし、JH94「7/25〜7/31」→JH95「8/1〜8/16」→JH96「8/17〜8/29」→JH97「8/30〜9/5」→A39 map necessity / data-quality judgment の構成。資産凍結、南部仏印実進駐、日仏印共同防衛議定書、石油輸出制限、日米首脳会談構想、9月3日の帝国国策遂行要領連絡会議決定までを扱い、9月6日の御前会議正式決定は次フェーズへ送る。現在地は phase cut ✅ → 次はJH94。
+
+- JH94「1941-07-25〜07-31」を実装。7月25日の米国による対日資産凍結発表と26日付大統領令第8832号を分け、金融資産の没収ではなく資金移動・決済・輸出入を許可制へ置く制度転換として整理した。英国の並行措置、28日の蘭印凍結規則、日本側の対抗規制を別制度として扱い、28日の南部仏印実進駐、29日の共同防衛議定書まで接続した。JH93との隣接接続確認完了。図版publication gateではJACARの資金凍結報告電報と日仏共同防衛議定書の一次史料2点を採用。8月1日の石油輸出規制強化は次ページへ送る。次はJH95「1941-08-01〜08-16」。

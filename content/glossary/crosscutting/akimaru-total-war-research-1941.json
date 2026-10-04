@@ -1,0 +1,21 @@
+{
+  "page": "akimaru-total-war-research-1941",
+  "termRefs": [
+    {
+      "id": "akimaru-kikan",
+      "core": true
+    },
+    {
+      "id": "total-war-research-institute",
+      "core": true
+    },
+    {
+      "id": "eibei-economic-war-capacity-1941",
+      "core": true
+    },
+    {
+      "id": "first-total-war-tabletop-exercise-1941",
+      "core": true
+    }
+  ]
+}

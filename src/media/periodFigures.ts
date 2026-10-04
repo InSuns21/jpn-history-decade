@@ -14,13 +14,15 @@ function commonsFigure(
 
 function commonsDocumentFigure(
   fileName: string,
-  previewUrl: string,
   meta: Omit<HistoricalFigureDefinition, 'imageUrl' | 'sourceUrl'>,
 ): HistoricalFigureDefinition {
   const encoded = encodeURIComponent(fileName)
   return {
     ...meta,
-    imageUrl: previewUrl,
+    imageUrl:
+      'https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/' +
+      encoded +
+      '&width=1280',
     sourceUrl: 'https://commons.wikimedia.org/wiki/File:' + encoded,
   }
 }
@@ -670,7 +672,6 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
   '1939-10-18': [
     commonsDocumentFigure(
       'NDL1267879 価格等統制令・軍需工場事業場検査令解説.pdf',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/NDL1267879_%E4%BE%A1%E6%A0%BC%E7%AD%89%E7%B5%B1%E5%88%B6%E4%BB%A4%E3%83%BB%E8%BB%8D%E9%9C%80%E5%B7%A5%E5%A0%B4%E4%BA%8B%E6%A5%AD%E5%A0%B4%E6%A4%9C%E6%9F%BB%E4%BB%A4%E8%A7%A3%E8%AA%AC.pdf/page1-1280px-NDL1267879_%E4%BE%A1%E6%A0%BC%E7%AD%89%E7%B5%B1%E5%88%B6%E4%BB%A4%E3%83%BB%E8%BB%8D%E9%9C%80%E5%B7%A5%E5%A0%B4%E4%BA%8B%E6%A5%AD%E5%A0%B4%E6%A4%9C%E6%9F%BB%E4%BB%A4%E8%A7%A3%E8%AA%AC.pdf.jpg',
       {
       alt: '1939年の価格等統制令・軍需工場事業場検査令の解説書表紙',
       title: '『価格等統制令・軍需工場事業場検査令解説』',
@@ -735,7 +736,6 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
   '1940-06-29': [
     commonsDocumentFigure(
       "NDL11919132 Def. Doc. No. 54- The international situation and Japan's position - Address of the Foreign Minister, Mr. Hachiro ARITA, delivered over the air on June 29, 1940.pdf",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/NDL11919132_Def._Doc._No._54-_The_international_situation_and_Japan%27s_position_-_Address_of_the_Foreign_Minister%2C_Mr._Hachiro_ARITA%2C_delivered_over_the_air_on_June_29%2C_1940.pdf/page1-960px-thumbnail.pdf.jpg",
       {
       alt: '1940年6月29日に放送された有田八郎外相「国際情勢ト帝国ノ立場」の英訳文書表紙',
       title: '有田外相「国際情勢ト帝国ノ立場」',
@@ -810,7 +810,6 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
   '1940-12-01': [
     commonsDocumentFigure(
       'NDL1437109 統制経済と新体制.pdf',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/NDL1437109_%E7%B5%B1%E5%88%B6%E7%B5%8C%E6%B8%88%E3%81%A8%E6%96%B0%E4%BD%93%E5%88%B6.pdf/page1-1280px-NDL1437109_%E7%B5%B1%E5%88%B6%E7%B5%8C%E6%B8%88%E3%81%A8%E6%96%B0%E4%BD%93%E5%88%B6.pdf.jpg',
       {
         alt: '1940年刊行の小冊子『統制経済と新体制』の表紙と標題紙を写した国立国会図書館資料',
         title: '『統制経済と新体制』',
@@ -887,7 +886,6 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
   '1941-04-14': [
     commonsDocumentFigure(
       'NDL10275523 Court Exh. No. 1061- Excerpt of memorandum by Secretary of State Hull dated 16 Apr. 1941 Excerpt from Exhibit No. 58.pdf',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/NDL10275523_Court_Exh._No._1061-_Excerpt_of_memorandum_by_Secretary_of_State_Hull_dated_16_Apr._1941_Excerpt_from_Exhibit_No._58.pdf/page1-1280px-NDL10275523_Court_Exh._No._1061-_Excerpt_of_memorandum_by_Secretary_of_State_Hull_dated_16_Apr._1941_Excerpt_from_Exhibit_No._58.pdf.jpg',
       {
         alt: '1941年4月16日の野村吉三郎大使との会談を記録したハル国務長官覚書の法廷提出用複製',
         title: '4月16日のハル国務長官覚書',
@@ -911,7 +909,6 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
   '1941-05-12': [
     commonsDocumentFigure(
       'NDL10275542 Court Exh. No. 1070- Draft proposal handed by Japanese Ambassador NOMURA to U. S. Secretary of State on May 12, 1941 Excerpt from Exhibit No. 58.pdf',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/NDL10275542_Court_Exh._No._1070-_Draft_proposal_handed_by_Japanese_Ambassador_NOMURA_to_U._S._Secretary_of_State_on_May_12,_1941_Excerpt_from_Exhibit_No._58.pdf/page1-1280px-NDL10275542_Court_Exh._No._1070-_Draft_proposal_handed_by_Japanese_Ambassador_NOMURA_to_U._S._Secretary_of_State_on_May_12,_1941_Excerpt_from_Exhibit_No._58.pdf.jpg',
       {
         alt: '1941年5月12日に野村吉三郎大使がハル国務長官へ手交した日本側提案草案を収録する法廷提出資料',
         title: '5月12日の日本側対案',
@@ -925,7 +922,6 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
   '1941-06-01': [
     commonsDocumentFigure(
       'NDL10275564 Court Exh. No. 1081- Excerpt from memorandum of Secretary of State Hull dated 2 June 1941 Excerpt from Exhibit No. 58.pdf',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/NDL10275564_Court_Exh._No._1081-_Excerpt_from_memorandum_of_Secretary_of_State_Hull_dated_2_June_1941_Excerpt_from_Exhibit_No._58.pdf/page1-1280px-NDL10275564_Court_Exh._No._1081-_Excerpt_from_memorandum_of_Secretary_of_State_Hull_dated_2_June_1941_Excerpt_from_Exhibit_No._58.pdf.jpg',
       {
         alt: '1941年6月2日の野村吉三郎大使との会談を記録したハル国務長官覚書の法廷提出用複製',
         title: '6月2日のハル国務長官覚書',
@@ -984,7 +980,6 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
   '1941-07-25': [
     commonsDocumentFigure(
       'CNTS-00125339173 朝鮮新聞 1941-07-26.pdf',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/CNTS-00125339173_%E6%9C%9D%E9%AE%AE%E6%96%B0%E8%81%9E_1941-07-26.pdf/page1-960px-CNTS-00125339173_%E6%9C%9D%E9%AE%AE%E6%96%B0%E8%81%9E_1941-07-26.pdf.jpg',
       {
         alt: '1941年7月26日付「朝鮮新聞」の紙面。米国の対日強硬方針と在米資金凍結を扱う記事を掲載している',
         title: '資産凍結を報じた1941年7月26日付紙面',
@@ -995,7 +990,6 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     ),
     commonsDocumentFigure(
       'NDL10274630 Court Exh. No. 651- Copies of 2 letter....pdf',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/NDL10274630_Court_Exh._No._651-_Copies_of_2_letter....pdf/page1-960px-NDL10274630_Court_Exh._No._651-_Copies_of_2_letter....pdf.jpg',
       {
         alt: '1941年7月29日に調印された仏領インドシナ共同防衛に関する日本・フランス間議定書の条件を収録した法廷提出資料',
         title: '仏領インドシナ共同防衛に関する日仏議定書',
@@ -1028,7 +1022,6 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
   '1941-08-17': [
     commonsDocumentFigure(
       'NDL11919913 Def. Doc. No. 1400K-6- Statement handed by President Roosevelt to the Japanese Ambassador (Nomura) on Aug. 17, 1941 Excerpt from Foreign Relations of the United States, Japan- 1931-1941, vol.II.pdf',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/NDL11919913_Def._Doc._No._1400K-6-_Statement_handed_by_President_Roosevelt_to_the_Japanese_Ambassador_%28Nomura%29_on_Aug._17%2C_1941_Excerpt_from_Foreign_Relations_of_the_United_States%2C_Japan-_1931-1941%2C_vol.II.pdf/page1-1280px-thumbnail.pdf.jpg',
       {
         alt: '1941年8月17日にルーズヴェルト大統領から野村吉三郎大使へ手交された声明を収録する法廷提出資料',
         title: '8月17日のルーズヴェルト回答',

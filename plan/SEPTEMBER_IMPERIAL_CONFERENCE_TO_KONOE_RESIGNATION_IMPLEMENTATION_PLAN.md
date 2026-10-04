@@ -1,7 +1,7 @@
 # 1941年9月6日から10月17日まで — 帝国国策遂行要領・対米最終調整・10月15日期限・第三次近衛内閣総辞職 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH98 ✅ → JH99 ✅ → JH100 ✅ → JH101 ✅ → JH102 ✅ → A40 judgment ✅ adopted / high → A40 implementation / Data・Style Audit ✅ published (point-only reused-pattern) → Crosscutting publication gate ✅ → 次は S13 extension
+- **Progress:** phase cut ✅ → JH98 ✅ → JH99 ✅ → JH100 ✅ → JH101 ✅ → JH102 ✅ → A40 judgment ✅ adopted / high → A40 implementation / Data・Style Audit ✅ published (point-only reused-pattern) → Crosscutting publication gate ✅ → S13 extension ✅ → phase-end audit necessity judgment ✅ no-audit → 次は npm run check
 - **Created:** 2026-10-05
 - **Scope:** 1941-09-06〜1941-10-17
 - **Article count:** **5年代記事（JH98〜JH102）**
@@ -338,23 +338,38 @@ A40が扱うのは南方作戦準備の空間であり、国内配当や企業�
 - 新規横断記事は作らない
 - 次工程は **S13 extension**。年代記事の出来事列を再掲せず、既存四軸のうち「時間」が国内調整と政権存立へ作用する段階を追加する
 
+### S13 extension 実装結果（2026-10-05）
+
+- periodLabelを **1941年4月–10月17日** へ延長
+- relatedPeriodsへJH98〜JH102を追加
+- 既存四軸「要求・譲歩 / 軍事的位置 / 経済的選択肢 / 時間」は維持
+- 9月6日〜20日を「期限が日本側条件の一本化を急がせる段階」として追加
+- 9月25日〜10月2日を「具体的期限が外交成功の判定基準を前面化させる段階」として追加
+- 10月12日〜17日を「期限が内閣の共通判断形成と政権存立を拘束する段階」として追加
+- 比較表を10月17日まで拡張
+- 終点を「9月5日の並行運用開始前」から「10月17日の政権交代・外交継続」へ更新
+- 10月18日の東条内閣成立後、11月の甲案・乙案、ハル・ノートは先取りしていない
+- source citation / crosscutting glossary参照を更新し、未定義引用・未登録用語・未使用core termなし
+
 ---
 
-# 10. phase-end audit necessity judgment候補
+# 10. phase-end audit necessity judgment — ✅ no-audit（2026-10-05）
 
-フェーズ末に定型的な全体監査は置かない。次の具体的仮説が実装後も残る場合だけ独立監査する。
+独立監査は実施しない。
 
-- 9月6日の御前会議決定を即時・無条件の対米英開戦決定として書いていないか
-- 天皇の和平志向を示す下問・発言を、制度上の政策決定を一方的に取り消した「拒否権発動」として単純化していないか
-- 9月20日の了解案を、11月の甲案・乙案や日本側「最後通牒」と混同していないか
-- 9月25日の10月15日を、自動的に開戦する日付として扱っていないか
-- 10月2日の米側回答を首脳会談の永久拒絶・最後通牒として書いていないか
-- 野村・豊田・近衛・東条・陸海軍統帥部の認識差を「日本政府の一枚岩の意思」へ圧縮していないか
-- 10月16日の近衛内閣総辞職を、その時点での外交打切り・開戦決定と同一視していないか
-- 10月18日東条内閣成立後の国策再検討結果を本フェーズへ先取りしていないか
-- S13延長がJH98〜102の時系列再掲になっていないか
+計画時に挙げた横断仮説を、JH98〜JH102、A40、S13延長をまとめて確認した結果、各問題は年代実装・Crosscutting gate・S13延長の中で既に処理されており、複数記事を再監査しなければ判定できない未解決仮説は残っていない。
 
-具体的な未解決横断仮説が残らなければ **no-audit** としてCIへ進む。
+- 9月6日の御前会議は、即時・無条件の開戦決定ではなく、外交と戦争準備の期限付き並行方針としてJH98・S13で明示
+- 天皇の9月5日下問と9月6日の正式決定は段階を分け、拒否権発動のような単純化をしていない
+- 9月20日の了解案は、その時点の日本政府・統帥部の態度一本化として扱い、11月の甲案・乙案と区別
+- 9月25日の10月15日期限は、自動開戦日ではなく内部判断期限としてJH101・JH102・S13で一貫
+- 10月2日の米側回答は首脳会談の永久拒絶・最後通牒として扱っていない
+- 野村・豊田・近衛・東条・陸海軍の認識差を一枚岩へ圧縮せず、S13では「国内調整」を独立した制約として扱った
+- 10月16日の近衛内閣総辞職と17日の外交継続を並べ、総辞職=外交打切り=開戦決定としていない
+- 10月18日以後の国策再検討結果は先取りしていない
+- S13延長はJH98〜102の時系列再掲ではなく、既存四軸、とくに「時間」が文書一本化・成功判定・政権存立へ作用する比較へ変換した
+
+PROJECT_WORKFLOW_STANDARD 5.3の条件に照らし、ここで追加の独立「全体監査」を置くと既確認事項の再検査になる。したがって **no-audit** とし、通常の `npm run check` / CI / Pages確認へ進む。
 
 ---
 
@@ -447,8 +462,8 @@ A40が扱うのは南方作戦準備の空間であり、国内配当や企業�
 - [x] A40 map necessity / data-quality judgment completed
 - [x] A40採用時の必要監査完了、またはno-map理由記録
 - [x] Crosscutting publication gate completed
-- [ ] passing crosscutting extensions implemented
-- [ ] phase-end audit necessity judgment completed
+- [x] passing crosscutting extensions implemented
+- [x] phase-end audit necessity judgment completed
 - [ ] npm run check green
 - [ ] GitHub Actions CI green
 - [ ] GitHub Pages deploy green

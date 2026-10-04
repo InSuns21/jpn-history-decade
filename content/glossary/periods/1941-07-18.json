@@ -1,0 +1,11 @@
+{
+  "period": "1941-07-18",
+  "termRefs": [
+    {"id":"third-konoe-cabinet-1941","core":true},
+    {"id":"japan-french-indochina-joint-defense-understanding-1941","core":true},
+    {"id":"southern-measures-acceleration-1941-06-25","core":false},
+    {"id":"imperial-policy-guideline-1941-07-02","core":false},
+    {"id":"second-konoe-cabinet-resignation-1941","core":false},
+    {"id":"nomura-kichisaburo-us-ambassador-1941","core":false}
+  ]
+}

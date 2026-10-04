@@ -1006,4 +1006,26 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     },
   ],
 
+
+  '1941-08-01': [
+    {
+      imageUrl: 'https://www.jacar.archives.go.jp/das/image/B02030716100',
+      sourceUrl: 'https://www.jacar.archives.go.jp/aj/meta/listPhoto?REFCODE=B02030716100',
+      alt: '1941年8月7日に野村吉三郎駐米大使が豊田貞次郎外相へ送った、資産凍結・石油輸出制限後の米国対日政策を報告する外交電報',
+      title: '野村大使の米国対日政策報告',
+      dateLabel: '1941年8月7日',
+      credit: '外務省外交史料館・アジア歴史資料センター',
+      license: 'Public Domain',
+    },
+    {
+      imageUrl: 'https://www.jacar.archives.go.jp/das/image/B04013480700',
+      sourceUrl: 'https://www.jacar.archives.go.jp/aj/meta/listPhoto?REFCODE=B04013480700',
+      alt: '1941年8月1日の大本営政府連絡会議で検討された対ソ外交交渉要領案の公文書画像',
+      title: '対「ソ」外交交渉要領案',
+      dateLabel: '1941年8月1日',
+      credit: '外務省外交史料館・アジア歴史資料センター',
+      license: 'Public Domain',
+    },
+  ],
+
 }

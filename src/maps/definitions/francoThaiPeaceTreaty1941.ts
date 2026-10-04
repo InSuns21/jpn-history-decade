@@ -7,7 +7,7 @@ export const francoThaiPeaceTreaty1941Map: HistoricalMapDefinition = {
     '3月の東京調停で地域名として争われた空間は、5月9日の平和条約でメコン河・北緯15度・子午線・トンレサップ湖上の円弧を組み合わせる国境規則へどう変換されたのか。',
   readingNote:
     '条約第2条が定めた境界の「組み立て方」を読むための模式図。メコン河区間は代表waypointを結んだ一般化線で、1941年の主航路中央線を測量復元したものではない。北緯15度・子午線は条文上の幾何規則を示すが、接続点は概略である。トンレサップ湖上の円弧は、条文の半径20kmという規則と現在の同名河川付近の代表位置から説明用に作成したもので、1941年の湖岸・州境・最終標定点を示さない。条約後には境界画定委員会の作業が続き、タイ外務省の外交史は新境界の標定完了を1942年7月11日としている。背景地図・道路・国境は現代のOpenStreetMapで、1941年の歴史境界ではない。日本の調停・保障上の役割は条約・付属議定書上の制度関係であり、この線自体が日本の主権・統治範囲を表すものではない。',
-  status: 'draft',
+  status: 'published',
   period: { startYear: 1941, endYear: 1941 },
   initialView: {
     center: [103.35, 16.5],
@@ -299,7 +299,7 @@ export const francoThaiPeaceTreaty1941Map: HistoricalMapDefinition = {
   auditState: {
     dataAudit: 'passed',
     styleAudit: 'passed',
-    visualAudit: 'pending-human',
+    visualAudit: 'passed',
     notes: [
       'A37 map necessityはadopted / high。3月A35の「争点地域の相対配置」から、5月9日条約の「河川・緯線・子午線・湖上円弧を組み合わせた法的境界規則」へ情報状態が変わり、本文だけでは空間的な順序を追いにくい。',
       'Data Auditは、精密な1941年境界線の復元ではなく、条約第2条が指定した地理規則をschematic LineStringとして可視化する用途に精度を合わせた。',
@@ -307,7 +307,7 @@ export const francoThaiPeaceTreaty1941Map: HistoricalMapDefinition = {
       '条約後に境界画定委員会の作業が予定され、タイ外務省外交史は新境界の標定完了を1942年7月11日としているため、1941年5月の条約線を後年の測量済み境界と同一視しない。',
       'A35へ時点切替を追加せず別definitionにした。A35は交渉過程のpoint-only地図、A37は条約成立後のlineを含む地図で、時点・史料性格・監査要件が異なるためである。',
       'Style Auditは既存ThematicMapのline/point表現を再利用し、すべての境界規則線を破線として確定測量線に見せない。readingNote・popupでapproximate / schematicの意味を明示した。',
-      'LineStringを含むためHuman Visual Auditを後送し、HVA-013でDesktop / Tablet・Touch / Mobile / zoom / label / legend / popup / pan / pinch / 誤読を確認する。',
+      'HVA-013 Human Visual Auditは2026-10-04のユーザー実表示確認でpassed。Desktop / Tablet・Touch / Mobile、zoom / label / legend / popup / marker tap / pan / pinch、および模式線・現代背景地図の誤読有無を確認済みとしてpublishedへ昇格した。',
     ],
   },
 }

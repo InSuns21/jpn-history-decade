@@ -12,10 +12,10 @@
 
 ### 本線
 
-- [TRIPARTITE_PACT_TO_NANJING_RECOGNITION_IMPLEMENTATION_PLAN.md](./TRIPARTITE_PACT_TO_NANJING_RECOGNITION_IMPLEMENTATION_PLAN.md)
-  - Scope: 1940-09-27〜1940-11-30
-  - Progress: phase cut ✅ → 次は JH74「1940-09-27〜10-11」
-  - 三国同盟、大政翼賛会、米鉄鋼屑規制の実施強化、日蘭会商の小林代表帰国、南京政府正式承認までを状態遷移として追う
+- [BARBAROSSA_TO_PRE_ASSET_FREEZE_IMPLEMENTATION_PLAN.md](./BARBAROSSA_TO_PRE_ASSET_FREEZE_IMPLEMENTATION_PLAN.md)
+  - Scope: 1941-06-22〜1941-07-24
+  - Progress: phase cut ✅ → 次は JH90「1941-06-22〜06-24」
+  - 6月22日の米側回答・独ソ戦開始から、南部仏印進駐方針、7月2日御前会議、関特演、第3次近衛内閣成立、日仏印共同防衛了解を追い、7月25日の米国による日本資産凍結直前までを扱う
 
 遡及地図監査・実装planは [MAP_RETRO_AUDIT_AND_IMPLEMENTATION_PLAN.md](../plan_done/MAP_RETRO_AUDIT_AND_IMPLEMENTATION_PLAN.md) としてimplementation-complete / archive済み。Human Visual Auditの残件は [MAP_HUMAN_VISUAL_AUDIT_BACKLOG.md](../docs/MAP_HUMAN_VISUAL_AUDIT_BACKLOG.md) で継続管理する。
 

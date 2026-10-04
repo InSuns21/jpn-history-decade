@@ -302,7 +302,11 @@ map necessityは**candidate / 未判定**とする。
 - JACAR 1941年7月21日 第3次近衛内閣下の大本営政府連絡会議
   - https://www.jacar.go.jp/exhibition/nichibei/popup/19410721a.html
 - JACAR 1941年7月28日 南部仏印進駐（7月21日の共同防衛了解を含む経過確認）
+  - https://www.jacar.go.jp/exhibition/nichibei/popup/19410728a.html
+- JACAR 1941年7月24日 野村・ウェルズ会談／南部仏印進駐への米側警告
   - https://www.jacar.go.jp/exhibition/nichibei/popup/pop_12.html
+- JACAR 1941年7月24日 第41回大本営政府連絡会議
+  - https://www.jacar.go.jp/exhibition/nichibei/popup/19410724b.html
 
 ## 次フェーズ境界
 

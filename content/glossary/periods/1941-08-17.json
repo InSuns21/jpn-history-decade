@@ -1,0 +1,12 @@
+{
+  "period": "1941-08-17",
+  "termRefs": [
+    {"id":"konoe-message-1941-08","core":true},
+    {"id":"roosevelt-reply-summit-1941-08-17","core":true},
+    {"id":"konoe-roosevelt-summit-proposal-1941","core":false},
+    {"id":"nomura-kichisaburo-us-ambassador-1941","core":false},
+    {"id":"third-konoe-cabinet-1941","core":false},
+    {"id":"us-japanese-assets-freezing-1941","core":false},
+    {"id":"us-petroleum-export-controls-1941","core":false}
+  ]
+}

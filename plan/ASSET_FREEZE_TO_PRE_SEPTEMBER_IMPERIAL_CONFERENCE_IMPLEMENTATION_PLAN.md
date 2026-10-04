@@ -1,7 +1,7 @@
 # 1941年7月25日から9月5日まで — 資産凍結・南部仏印実進駐・石油輸出制限・日米首脳会談構想 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH94 ✅ → JH95 ✅ → JH96 ✅ → JH97 ✅ → A39 judgment ✅ adopted / high → A39 implementation / Data・Style Audit ✅ → 次は Human Visual Audit
+- **Progress:** phase cut ✅ → JH94 ✅ → JH95 ✅ → JH96 ✅ → JH97 ✅ → A39 judgment ✅ → implementation / Data・Style Audit ✅ → Human Visual Audit ✅ → 次は Crosscutting publication gate
 - **Created:** 2026-10-04
 - **Scope:** 1941-07-25〜1941-09-05
 - **Article count:** **4年代記事（JH94〜JH97）**
@@ -283,12 +283,12 @@ LineStringを含むため、Data Audit / Style Auditに加えて **Human Visual 
 
 - Map ID: `oil-supply-constraint-southward-space-1941`
 - 配置: JH95「『石油禁輸』は輸出・決済・輸送の連鎖として効いた」節の直後
-- status: **draft**
+- status: **published**
 - geometry: **Point + schematic LineString**
 - time slice: **7月28日以前 / 7月28日以後**
 - Data Audit: **passed**
 - Style Audit: **passed**
-- Human Visual Audit: **pending-human**
+- Human Visual Audit: **passed (2026-10-05)**
 - FRUS doc. 711の6月1日〜7月28日対日鉱油80,800トンと、凍結後の石油引渡し停止を供給関係の時点根拠として採用
 - FRUS doc. 290のTarakan言及を、蘭印石油供給圏の代表地点選定に使用。ただし80,800トンをタラカン単独の輸出量とは扱わない
 - 米国西海岸までLineStringを伸ばす案は不採用。太平洋全域表示では南部仏印―蘭印―日本の相対配置が読みにくくなり、さらに米国の金融統制を物理的航路と誤認させやすいため、米国の役割はreading note / provenanceで「ドル決済・輸出許可」の制度層として分離
@@ -297,6 +297,8 @@ LineStringを含むため、Data Audit / Style Auditに加えて **Human Visual 
 - Human Visual Audit事前確認で、2点直結の模式線が陸地を貫通することと、共通rendererの `minZoom: 3` 固定が広域表示を制約することを検出。LineStringを海上waypointによる模式リンクへ修正し、`HistoricalMapDefinition.initialView.minZoom` を追加してA39は `minZoom: 1.25` とした
 - 中間waypointは史料上の航路点ではなく、陸地横断を避けるための作図点。実航路・寄港地として解釈しない
 - CIで既存の広域地図2件に `initialView.zoom < 3` があることを検出。rendererの既定最小zoomを `min(3, initialView.zoom)` に変更し、定義した初期表示が固定minZoomでclampされないよう一般化。狭域地図（initial zoom >= 3）は従来どおりminZoom 3、A39はさらに `minZoom: 1.25` を明示する
+- 2026-10-05のHuman Visual Auditで修正版をOKと確認。海上waypoint模式線・広域zoom・time slice・凡例・ラベルを含めpassedとし、A39をpublishedへ昇格
+- 同監査の教訓をMAP_AUDIT_STANDARDへ一般化し、海上接続関係を2点直結LineStringへ安易に落とさないこと、cartographic waypointと史料上の経由点を区別すること、広域zoom時にも陸地貫通を再確認することを追加
 
 
 ---

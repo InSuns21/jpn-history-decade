@@ -1,7 +1,7 @@
 # 横断記事4本の分割・再編 実装計画
 
 - **Status:** active
-- **Progress:** plan cut ✅ → S02 ✅ → S05 ✅ → S09 split inventory ✅ → S09 split implementation ✅ → S09 CI ✅ → 次は S10「産業社会の負担と保護」split inventory
+- **Progress:** plan cut ✅ → S02 ✅ → S05 ✅ → S09 ✅ → S10 split inventory ✅ → S10 split implementation ✅ → 次は S10 CI / publication check
 - **Created:** 2026-10-05
 - **Scope:** 第2章「横断して読む」のうち、長期に延長され続けた構造史4本の再編
 - **Targets:**
@@ -262,7 +262,19 @@
 - **Dropped from direct migration:** 1929年拓務省節は複数の外地制度を一つの中央官庁から横断して見る節であり、4記事のいずれかへ押し込むと再び総論化するため移植しない。必要なら拓務行政そのものを中心問いとする別記事候補として判定する。
 - **Compatibility:** #/structure/external-rule-institutions はS09-Aへ残し、旧リンクを404にしない。
 
-## 12. Non-goals
+## 12. S10 inventory / split record
+
+- **Inventory:** 31節。全期間の比較軸・巨大総括・境界説明・残課題を外し、中心問いごとに5本へ再配置した。
+- **S10-A / industrial-social-burdens:** 旧routeを継承。1890年代〜1916年の工場制生産、労働運動、環境被害、工場法を扱う。
+- **S10-B / wartime-boom-urban-life:** 第一次世界大戦期〜1923年。戦時景気、米価、戦後恐慌、労働運動、都市インフラ負担を扱う。
+- **S10-C / depression-social-burdens:** 1927〜1936年。金融恐慌、昭和恐慌、失業・農村所得・債務、管理通貨・高橋財政後の救済支出配分を扱う。
+- **S10-D / wartime-allocation-controls:** 1937年秋〜1940年7月。資金・物資・労働力・価格・設備・輸送・基礎物資を優先用途へ配分する統制を扱う。
+- **S10-E / economic-mobilization-organization-1940-1941:** 1940年11月〜1941年5月。産業報国会、経済新体制、総動員法改正、物資動員計画、貿易統制を、職場・企業・業界組織と配当計画の接続として扱う。
+- **Reason for five articles:** PLAN初期案の4本では1937〜1941年の国内統制だけで一つの長大な制度史になるため、命令による資源配分と、職場・企業組織・物資計画を別の中心問いへ分けた。
+- **Scope reduction:** 1937年7〜8月の戦費負担はS02-D『戦費調達と戦時財政』へ委ねる。1941年夏の資産凍結・石油輸出許可・英蘭側措置・決済制約はS13『1941年日米交渉と経済圧力』へ委ね、S10へ重複掲載しない。
+- **Compatibility:** #/structure/industrial-social-burdens はS10-Aへ残し、旧リンクを404にしない。
+
+## 13. Non-goals
 
 - 第1章の年代記事そのものを再分割すること。
 - 第2章の全テーマ史・構造史を一括再設計すること。

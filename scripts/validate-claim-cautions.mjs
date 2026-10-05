@@ -13,7 +13,7 @@ const RULES = [
   { id: 'meaning-not-variant', pattern: /意味するものではない/u, label: '意味するものではない' },
   { id: 'not-same', pattern: /同一視しない/u, label: '同一視しない' },
   { id: 'not-same-variant', pattern: /同一視できない/u, label: '同一視できない' },
-  { id: 'not-the-case', pattern: /わけではない/u, label: 'わけではない' },
+  { id: 'not-the-case', pattern: /わけではな(?:い|く|かった)/u, label: 'わけではない/なく/なかった' },
   { id: 'not-the-same', pattern: /同じではない/u, label: '同じではない' },
   { id: 'not-the-thing', pattern: /ことではない/u, label: 'ことではない' },
   { id: 'not-completed-that-way', pattern: /(?:した|された)のではない/u, label: '〜したのではない' },
@@ -48,7 +48,7 @@ const RULES = [
   {
     id: 'reader-framing-loss',
     pattern:
-      /(?:とまとめると|と整理すると|として読むと|として見ると|と捉えると|と読むと|と見ると)[^。！？\n]{0,120}(?:見えにく|実態を失|単純化|見落と|誤)/u,
+      /(?:とまとめると|と整理すると|として読むと|として見ると|と捉えると|と読むと|と見ると|(?:だけで|だけから)(?:読む|見る|捉える|考える)と)[^。！？\n]{0,120}(?:見えにく|実態を失|単純化|見落と|誤)/u,
     label: '〜と読む/まとめると見えにくい・単純化する',
   },
   {

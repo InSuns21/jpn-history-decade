@@ -58,7 +58,7 @@ export const finalDiplomacyOperationalPreparation1941Map: HistoricalMapDefinitio
             labelPlacement: 'left',
             year: '1941-11-06以後',
             detail:
-              '11月6日の作戦準備命令が南方軍の集結地域として挙げたフランス領インドシナ。サイゴンは表示用代表点で、仏印全域の部隊配置を一地点へ限定しない。',
+              '11月6日の作戦準備命令が南方軍の集結地域として挙げたフランス領インドシナ。',
           },
         },
         {
@@ -71,7 +71,7 @@ export const finalDiplomacyOperationalPreparation1941Map: HistoricalMapDefinitio
             labelPlacement: 'left',
             year: '1941-11-06以後',
             detail:
-              '11月6日の作戦準備命令が集結地域として挙げた華南。広州付近は地域表示用の代表点で、特定の部隊集結地・港湾・飛行場を示さない。',
+              '11月6日の作戦準備命令が集結地域として挙げた華南。',
           },
         },
         {
@@ -84,7 +84,7 @@ export const finalDiplomacyOperationalPreparation1941Map: HistoricalMapDefinitio
             labelPlacement: 'right',
             year: '1941-11-06以後',
             detail:
-              '11月6日の作戦準備命令が集結地域として挙げた台湾。島内の特定基地・港・部隊位置を確定する点ではない。',
+              '11月6日の作戦準備命令が集結地域として挙げた台湾。',
           },
         },
         {
@@ -97,7 +97,7 @@ export const finalDiplomacyOperationalPreparation1941Map: HistoricalMapDefinitio
             labelPlacement: 'right',
             year: '1941-11-06以後',
             detail:
-              '11月6日の作戦準備命令が挙げた南西諸島を、沖縄本島付近の代表点で表示する。特定島・基地へ命令対象を限定する意味ではない。',
+              '11月6日の作戦準備命令が集結地域として挙げた南西諸島。',
           },
         },
         {
@@ -110,7 +110,7 @@ export const finalDiplomacyOperationalPreparation1941Map: HistoricalMapDefinitio
             labelPlacement: 'right',
             year: '1941-11-06以後',
             detail:
-              '11月6日の作戦準備命令が挙げた南洋群島を、パラオ付近の代表点で表示する。南洋群島全体の部隊配置を一地点へ限定しない。',
+              '11月6日の作戦準備命令が集結地域として挙げた南洋群島。',
           },
         },
       ],
@@ -159,7 +159,7 @@ export const finalDiplomacyOperationalPreparation1941Map: HistoricalMapDefinitio
             labelPlacement: 'left',
             year: '1941-11-22〜26',
             detail:
-              '真珠湾攻撃部隊は11月22日までに単冠湾へ集結し、11月25日の命令を受けて26日朝に出航した。同命令は、対米交渉が成功した場合には帰投して再集結する条件も残していた。',
+              '真珠湾攻撃部隊は11月22日までに単冠湾へ集結し、11月25日の命令を受けて26日朝に出航した。',
           },
         },
       ],

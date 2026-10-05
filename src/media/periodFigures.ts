@@ -1085,7 +1085,7 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
   '1941-12-06': [
     commonsDocumentFigure(
       'NDL9883676 Extract from Foreign Relations of U. S. - Japan 1931-1941 Vol. II, page 784. Cable sent by President Roosevelt to Secre....pdf',
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/NDL9883676_Extract_from_Foreign_Relations_of_U._S._-_Japan_1931-1941_Vol._II%2C_page_784._Cable_sent_by_President_Roosevelt_to_Secre....pdf/page1-960px-NDL9883676_Extract_from_Foreign_Relations_of_U._S._-_Japan_1931-1941_Vol._II%2C_page_784._Cable_sent_by_President_Roosevelt_to_Secre....pdf.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/NDL9883676_Extract_from_Foreign_Relations_of_U._S._-_Japan_1931-1941_Vol._II%2C_page_784._Cable_sent_by_President_Roosevelt_to_Secre....pdf/page1-960px-NDL9883676_Extract_from_Foreign_Relations_of_U._S._-_Japan_1931-1941_Vol._II%2C_page_784._Cable_sent_by_President_Roosevelt_to_Secre....pdf.jpg',
       {
         alt: '1941年12月6日付ルーズヴェルト大統領の昭和天皇宛親電に関する米国外交文書の公刊資料ページ',
         title: 'ルーズヴェルト大統領の昭和天皇宛親電関係資料',

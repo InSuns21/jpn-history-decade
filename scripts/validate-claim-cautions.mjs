@@ -13,7 +13,7 @@ const RULES = [
   { id: 'meaning-not-variant', pattern: /意味するものではない/u, label: '意味するものではない' },
   { id: 'not-same', pattern: /同一視しない/u, label: '同一視しない' },
   { id: 'not-same-variant', pattern: /同一視できない/u, label: '同一視できない' },
-  { id: 'not-the-case', pattern: /わけではな(?:い|く|かった)/u, label: 'わけではない/なく/なかった' },
+  { id: 'not-the-case', pattern: /わけではない/u, label: 'わけではない' },
   { id: 'not-the-same', pattern: /同じではない/u, label: '同じではない' },
   { id: 'not-the-thing', pattern: /ことではない/u, label: 'ことではない' },
   { id: 'not-completed-that-way', pattern: /(?:した|された)のではない/u, label: '〜したのではない' },

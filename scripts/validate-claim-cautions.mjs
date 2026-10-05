@@ -13,7 +13,7 @@ const RULES = [
   { id: 'meaning-not-variant', pattern: /意味するものではない/u, label: '意味するものではない' },
   { id: 'not-same', pattern: /同一視しない/u, label: '同一視しない' },
   { id: 'not-same-variant', pattern: /同一視できない/u, label: '同一視できない' },
-  { id: 'not-the-case', pattern: /わけではない/u, label: 'わけではない' },
+  { id: 'not-the-case', pattern: /わけではな(?:い|く|かった)/u, label: 'わけではない/なく/なかった' },
   { id: 'not-the-same', pattern: /同じではない/u, label: '同じではない' },
   { id: 'not-the-thing', pattern: /ことではない/u, label: 'ことではない' },
   { id: 'not-completed-that-way', pattern: /(?:した|された)のではない/u, label: '〜したのではない' },
@@ -28,6 +28,27 @@ const RULES = [
     id: 'misread-if-regarded',
     pattern: /考えると[^。！？\n]{0,80}(?:誤|間違)/u,
     label: '考えると…誤る/間違う',
+  },
+  {
+    id: 'reader-understanding-instruction',
+    pattern: /(?:理解|把握)するには[^。！？\n]{0,120}(?:必要|重要)/u,
+    label: '理解するには…必要/重要',
+  },
+  {
+    id: 'reader-viewing-instruction',
+    pattern: /(?:見る|読む|捉える)必要がある/u,
+    label: '見る/読む/捉える必要がある',
+  },
+  {
+    id: 'reader-framing-loss',
+    pattern:
+      /(?:とまとめると|と整理すると|として読むと|として見ると|と捉えると|と読むと|と見ると)[^。！？\n]{0,120}(?:見えにく|実態を失|単純化|見落と|誤)/u,
+    label: '〜と読む/まとめると見えにくい・単純化する',
+  },
+  {
+    id: 'reader-compression-simplifies',
+    pattern: /(?:縮める|まとめる)と[^。！？\n]{0,100}単純化/u,
+    label: '〜へ縮める/まとめると単純化する',
   },
 ]
 
@@ -56,6 +77,10 @@ const DENSITY_PATTERNS = [
   /そうとも言い切れない/gu,
   /単純化できない/gu,
   /必要はない/gu,
+  /わけではな(?:い|く|かった)/gu,
+  /(?:見る|読む|捉える)必要がある/gu,
+  /(?:理解|把握)するには/gu,
+  /(?:見えにくくなる|実態を失う)/gu,
 ]
 
 const DENSITY_MIN_COUNT = 8
@@ -332,7 +357,7 @@ if (structuralErrors.length > 0 || violations.length > 0 || densityViolations.le
   if (violations.length > 0 || densityViolations.length > 0) {
     console.error('')
     console.error(
-      'Move general misreading-prevention wording to interpretiveCautions, or rewrite the claim layer affirmatively.',
+      'Move general misreading-prevention or reader-directed interpretive framing to interpretiveCautions, or rewrite the claim layer as a direct historical claim.',
     )
     console.error(
       'Density counting excludes contemporaryAssumptions / interpretiveCautions and other non-claim metadata.',

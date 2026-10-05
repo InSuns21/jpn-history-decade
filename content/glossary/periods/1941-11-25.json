@@ -1,0 +1,12 @@
+{
+  "period": "1941-11-25",
+  "termRefs": [
+    {"id":"japan-us-proposal-b-1941-11","core":true},
+    {"id":"us-modus-vivendi-draft-1941-11","core":true},
+    {"id":"us-basis-for-agreement-1941-11-26","core":true},
+    {"id":"nomura-kichisaburo-us-ambassador-1941","core":true},
+    {"id":"kurusu-saburo-special-envoy-1941","core":true},
+    {"id":"us-japanese-assets-freezing-1941","core":false},
+    {"id":"imperial-policy-guideline-1941-11","core":false}
+  ]
+}

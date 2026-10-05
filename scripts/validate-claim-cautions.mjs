@@ -29,6 +29,33 @@ const RULES = [
     pattern: /考えると[^。！？\n]{0,80}(?:誤|間違)/u,
     label: '考えると…誤る/間違う',
   },
+  {
+    id: 'reader-understanding-correction',
+    pattern:
+      /(?:理解|把握)するには[^。！？\n]{0,120}(?:逆算|一方向だけ|一語|二語|単純|誤解|混同)[^。！？\n]{0,120}(?:必要|重要)/u,
+    label: '理解するには…逆算/単純化を避ける必要',
+  },
+  {
+    id: 'reader-multi-axis-instruction',
+    pattern: /(?:別の軸として|同時に)(?:読む|見る|捉える)必要がある/u,
+    label: '別の軸/同時に読む・見る必要がある',
+  },
+  {
+    id: 'reader-one-word-correction',
+    pattern: /(?:一語|二語)[^。！？\n]{0,80}(?:より|ではなく)[^。！？\n]{0,120}(?:読む|見る|捉える)必要がある/u,
+    label: '一語/二語より〜として読む・見る必要がある',
+  },
+  {
+    id: 'reader-framing-loss',
+    pattern:
+      /(?:とまとめると|と整理すると|として読むと|として見ると|と捉えると|と読むと|と見ると)[^。！？\n]{0,120}(?:見えにく|実態を失|単純化|見落と|誤)/u,
+    label: '〜と読む/まとめると見えにくい・単純化する',
+  },
+  {
+    id: 'reader-compression-simplifies',
+    pattern: /(?:縮める|まとめる)と[^。！？\n]{0,100}単純化/u,
+    label: '〜へ縮める/まとめると単純化する',
+  },
 ]
 
 const FRONTMATTER_SKIP_KEYS = new Set([
@@ -332,7 +359,7 @@ if (structuralErrors.length > 0 || violations.length > 0 || densityViolations.le
   if (violations.length > 0 || densityViolations.length > 0) {
     console.error('')
     console.error(
-      'Move general misreading-prevention wording to interpretiveCautions, or rewrite the claim layer affirmatively.',
+      'Move general misreading-prevention or reader-directed interpretive framing to interpretiveCautions, or rewrite the claim layer as a direct historical claim.',
     )
     console.error(
       'Density counting excludes contemporaryAssumptions / interpretiveCautions and other non-claim metadata.',

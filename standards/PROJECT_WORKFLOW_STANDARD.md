@@ -55,7 +55,7 @@ build前に段階的に以下を検査可能にする。
 少なくとも、
 - Project instruction length validation
 - content / glossary / internal-link validation
-- claim/caution validation（主張層の留保定型句、読者向け解釈指示などの意味機能、否定フレーミング密度を検査し、当時の前提・読み方の留保の囲みは密度集計から除外）
+- claim/caution validation（主張層の留保定型句、読者向け解釈指示などの意味機能、否定フレーミング密度を検査し、仮想読者への先回り反論候補はwarningで可視化する。当時の前提・読み方の留保の囲みは密度集計から除外）
 - published period body-depth audit（4,500字未満はsoft warning、2,500字未満だけ理由付き例外を要求するhard floor。文字数達成のための増補は禁止）
 - adjacent-period repetition audit（隣接年代の長段落類似を警告し、ほぼコピーに近い重複だけを失敗させる）
 - published period image-decision validation（図版登録または理由付きno-image判定を必須化）

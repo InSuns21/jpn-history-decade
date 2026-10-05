@@ -1,7 +1,7 @@
 # 1941年11月6日から12月1日まで — 甲案・乙案の実施、米側11月26日文書、第8回御前会議 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → 次は JH107「1941-11-06〜11-13」
+- **Progress:** phase cut ✅ → JH107 ✅ → 次は JH108「1941-11-14〜11-19」
 - **Created:** 2026-10-05
 - **Scope:** 1941-11-06〜1941-12-01
 - **Article count:** **5年代記事（JH107〜JH111）**
@@ -411,8 +411,8 @@ A42は「外交の進行」と「軍事準備の空間」を一枚に重ねれ�
 - [x] A42をmap necessity / data-quality judgment候補として設定
 - [x] Crosscutting publication gate候補を定義
 - [x] phase-end audit候補仮説を定義
-- [ ] JH107 published / JH106との隣接接続確認完了
-- [ ] JH107 図版採用または理由付きno-image判定完了
+- [x] JH107 published / JH106との隣接接続確認完了
+- [x] JH107 図版採用または理由付きno-image判定完了
 - [ ] JH108 published / JH107との隣接接続確認完了
 - [ ] JH108 図版採用または理由付きno-image判定完了
 - [ ] JH109 published / JH108との隣接接続確認完了

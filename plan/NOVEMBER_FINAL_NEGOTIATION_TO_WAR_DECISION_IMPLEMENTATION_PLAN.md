@@ -1,7 +1,7 @@
 # 1941年11月6日から12月1日まで — 甲案・乙案の実施、米側11月26日文書、第8回御前会議 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH107 ✅ → JH108 ✅ → JH109 ✅ → JH110 ✅ → JH111 ✅ → A42 judgment ✅ adopted / high → 次は A42 map implementation / Data・Style Audit
+- **Progress:** phase cut ✅ → JH107 ✅ → JH108 ✅ → JH109 ✅ → JH110 ✅ → JH111 ✅ → A42 judgment ✅ adopted / high → A42 implementation / Data・Style Audit ✅ → Visual Audit ✅ not-required-reused-pattern → 次は Crosscutting publication gate
 - **Created:** 2026-10-05
 - **Scope:** 1941-11-06〜1941-12-01
 - **Article count:** **5年代記事（JH107〜JH111）**
@@ -298,6 +298,19 @@ A42は **採用** とする。A40の9〜10月段階では「準備地域」と�
 
 **data-quality judgment:** 採用に必要な時点・役割・空間粒度は確保できる。南方軍の広域集結地域はJapanese Monograph No. 45、単冠湾の集結・出航と外交成功時の帰投条件は米海軍公式戦史、11月6日・20日の作戦準備段階は米陸軍公式戦史で相互に確認できる。一方、個別部隊の正確な駐屯地・海上航路・上陸地点まで確定する根拠はこの判定段階では採用しないため、A42はPoint中心の模式地図として実装する。
 
+### A42 implementation / audit result — ✅ completed
+
+- map ID: `final-diplomacy-operational-preparation-1941`
+- JH110「1941-11-25〜11-27」の「同じ11月26日 — 作戦準備は広域集結から実際の出航へ進んでいた」節直後へ配置
+- 11月6日の南方軍作戦準備命令が列挙する仏印・華南・台湾・南西諸島・南洋群島を、広域地域の代表Pointとして実装
+- 真珠湾攻撃部隊の単冠湾集結（11月22日まで）・11月25日命令・26日出航を、具体的な集結・出撃Pointとして別カテゴリで実装
+- 単冠湾Pointは海上保安庁水路誌の44°57′N, 147°41′Eを十進表記へ変換
+- 12月8日以後の実績航路・南方侵攻線・上陸地点は描かず、LineString / Polygonを不採用
+- Data Audit: passed。広域代表点と具体地点の精度区分、temporalCoverage、transformation、source provenanceを分離
+- Style Audit: passed。広域集結地域「集」と具体的集結・出撃地点「発」を別カテゴリ・凡例で区別し、兵力規模や作戦優先度をPoint sizeへ符号化しない
+- Human Visual Audit: `not-required-reused-pattern`。A40の監査済みpoint-only ThematicMap表示、ラベル、凡例、popup/touch interactionを変更せず再利用し、新規renderer / line / polygon / time sliceを導入しない
+- 広域zoomはA39/A40で監査済みの`minZoom`対応を再利用し、初期表示は単冠湾から南洋群島・仏印までを一画面で比較できる設定とした
+
 ---
 
 # 9. Crosscutting publication gate 候補
@@ -446,7 +459,7 @@ A42は **採用** とする。A40の9〜10月段階では「準備地域」と�
 - [x] JH111 published / JH110との隣接接続確認完了
 - [x] JH111 図版採用または理由付きno-image判定完了
 - [x] A42 map necessity / data-quality judgment completed
-- [ ] A42採用時の必要監査完了、またはno-map理由記録
+- [x] A42採用時の必要監査完了、またはno-map理由記録
 - [ ] Crosscutting publication gate completed
 - [ ] passing crosscutting extensions implemented
 - [ ] phase-end audit necessity judgment completed

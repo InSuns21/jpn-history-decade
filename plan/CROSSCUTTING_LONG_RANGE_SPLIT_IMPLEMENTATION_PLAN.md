@@ -1,7 +1,7 @@
 # 横断記事4本の分割・再編 実装計画
 
 - **Status:** active
-- **Progress:** plan cut ✅ → S02 ✅ → S05 ✅ → S09 split inventory ✅ → S09 split implementation ✅ → 次は S09 CI / publication check
+- **Progress:** plan cut ✅ → S02 ✅ → S05 ✅ → S09 split inventory ✅ → S09 split implementation ✅ → S09 CI ✅ → 次は S10「産業社会の負担と保護」split inventory
 - **Created:** 2026-10-05
 - **Scope:** 第2章「横断して読む」のうち、長期に延長され続けた構造史4本の再編
 - **Targets:**

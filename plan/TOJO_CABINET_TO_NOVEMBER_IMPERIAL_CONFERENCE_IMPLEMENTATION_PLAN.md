@@ -1,7 +1,7 @@
 # 1941年10月18日から11月5日まで — 東条内閣成立・国策再検討・11月5日御前会議 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → 次は JH103「1941-10-18〜10-22」
+- **Progress:** phase cut ✅ → JH103 ✅ → 次は JH104「1941-10-23〜10-26」
 - **Created:** 2026-10-05
 - **Scope:** 1941-10-18〜1941-11-05
 - **Article count:** **4年代記事（JH103〜JH106）**
@@ -386,8 +386,8 @@ JACAR展示の解説文を入口にし、本文執筆時は可能な範囲で掲
 - [x] A41をmap necessity / data-quality judgment候補として設定
 - [x] Crosscutting publication gate候補を定義
 - [x] phase-end audit候補仮説を定義
-- [ ] JH103 published / JH102との隣接接続確認完了
-- [ ] JH103 図版採用または理由付きno-image判定完了
+- [x] JH103 published / JH102との隣接接続確認完了
+- [x] JH103 図版採用または理由付きno-image判定完了
 - [ ] JH104 published / JH103との隣接接続確認完了
 - [ ] JH104 図版採用または理由付きno-image判定完了
 - [ ] JH105 published / JH104との隣接接続確認完了

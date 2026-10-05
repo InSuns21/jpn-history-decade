@@ -1044,4 +1044,15 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     ),
   ],
 
+
+  '1941-10-18': [
+    commonsFigure('Hideki Tōjō Cabinet 19411018 3.jpg', {
+      alt: '1941年10月18日、初閣議後に首相官邸で撮影された東条英機内閣の閣僚集合写真',
+      title: '東条英機内閣の成立',
+      dateLabel: '1941年10月18日',
+      credit: '朝日新聞（Commons記録。JACAR掲載は毎日新聞社提供）／JACAR特別展・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+
 }

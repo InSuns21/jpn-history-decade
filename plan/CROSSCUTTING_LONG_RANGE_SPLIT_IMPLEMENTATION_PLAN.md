@@ -1,7 +1,7 @@
 # 横断記事4本の分割・再編 実装計画
 
 - **Status:** active
-- **Progress:** plan cut ✅ → S02 split inventory ✅ → S02 split implementation ✅ → authoring standard ✅ → S02 CI ✅ → 次は S05「政治参加の回路」split inventory
+- **Progress:** plan cut ✅ → S02 ✅ → S05 split inventory ✅ → S05 split implementation ✅ → S05 CI ✅ → 次は S09「対外支配の制度差」split inventory
 - **Created:** 2026-10-05
 - **Scope:** 第2章「横断して読む」のうち、長期に延長され続けた構造史4本の再編
 - **Targets:**
@@ -239,7 +239,19 @@
 - **Scope reduction:** 旧記事末尾の1800〜1937全期間総括は削除し、各記事末尾を当該中心問いの範囲だけで閉じる。
 
 
-## 10. Non-goals
+## 10. S05 inventory / split record
+
+- **Inventory:** 33節。長期比較の総論・全期間まとめ・残課題を外し、政治参加の中心問いへ直接寄与する節を5本へ再配置した。
+- **S05-A / political-participation-channels:** 旧routeを継承。1874年建白から1890年総選挙まで、建白・地方議会・政党・選挙という入口の制度化を扱う。
+- **S05-B / party-government-1890-1918:** 初期議会から原内閣まで。議席・予算・法案を通じた政党の政府参加を扱う。
+- **S05-C / mass-politics-universal-suffrage:** 1919〜1930年。普選運動、女性の政治参加要求、第二次護憲運動、男子普通選挙、治安法制、制度適用地域の差を扱う。
+- **S05-D / elections-nonparty-cabinets-1931-1938:** 1931〜1938年5月。政党内閣慣行の中断後も続く選挙・議会と、首相選定・軍部大臣人事・戦時法制の別回路を扱う。
+- **S05-E / party-dissolution-yokusankai-1940-1941:** 1940年2月〜1941年4月。反軍演説と除名、政党解体、大政翼賛会、選挙延期、翼賛会改組を扱う。
+- **Scope reduction:** 1938〜39年の和平方針、五相会議、現地軍・軍中央・在外公館などを扱った旧節は、政治参加より戦争指導・政府内部調整の問いに属するためS05から外す。必要なら後続の横断記事必要性判定で別テーマとして扱い、S05へ戻さない。
+- **Compatibility:** #/structure/political-participation-channels はS05-Aへ残し、旧リンクを404にしない。
+- **Reason for five articles:** PLAN初期案の4本では1931〜1941年に、選挙・非政党内閣と政党解体・翼賛体制という独立した二つの問いが残るため、再度の長大化を避けて5本へ分けた。
+
+## 11. Non-goals
 
 - 第1章の年代記事そのものを再分割すること。
 - 第2章の全テーマ史・構造史を一括再設計すること。

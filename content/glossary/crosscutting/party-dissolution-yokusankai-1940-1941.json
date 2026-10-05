@@ -1,0 +1,45 @@
+{
+  "page": "party-dissolution-yokusankai-1940-1941",
+  "termRefs": [
+    {
+      "id": "taisei-yokusankai-1940",
+      "core": true
+    },
+    {
+      "id": "saito-takao-anti-military-speech-1940",
+      "core": true
+    },
+    {
+      "id": "saito-takao-expulsion-1940",
+      "core": true
+    },
+    {
+      "id": "konoe-new-order-movement-1940",
+      "core": true
+    },
+    {
+      "id": "political-party-dissolutions-1940",
+      "core": true
+    },
+    {
+      "id": "military-ministers-active-duty-system",
+      "core": true
+    },
+    {
+      "id": "taisei-yokusankai-practical-guidelines-1940",
+      "core": true
+    },
+    {
+      "id": "temporary-central-cooperation-council-1940",
+      "core": true
+    },
+    {
+      "id": "shugiin-term-extension-law-1941",
+      "core": true
+    },
+    {
+      "id": "taisei-yokusankai-reorganization-1941",
+      "core": true
+    }
+  ]
+}

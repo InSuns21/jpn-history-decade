@@ -1,0 +1,65 @@
+{
+  "page": "elections-nonparty-cabinets-1931-1938",
+  "termRefs": [
+    {
+      "id": "inukai-cabinet-1931",
+      "core": true
+    },
+    {
+      "id": "may-fifteenth-incident-1932",
+      "core": true
+    },
+    {
+      "id": "saito-cabinet-1932",
+      "core": true
+    },
+    {
+      "id": "okada-cabinet-1934",
+      "core": false
+    },
+    {
+      "id": "universal-manhood-suffrage-law-1925",
+      "core": true
+    },
+    {
+      "id": "general-election-1936",
+      "core": true
+    },
+    {
+      "id": "ugaki-cabinet-failure-1937",
+      "core": true
+    },
+    {
+      "id": "military-ministers-active-duty-system",
+      "core": true
+    },
+    {
+      "id": "hayashi-cabinet-1937",
+      "core": false
+    },
+    {
+      "id": "general-election-1937",
+      "core": true
+    },
+    {
+      "id": "first-konoe-cabinet-1937",
+      "core": false
+    },
+    {
+      "id": "temporary-military-expenses-special-account-1937",
+      "core": true
+    },
+    {
+      "id": "temporary-funds-adjustment-law-1937",
+      "core": true
+    },
+    {
+      "id": "teikoku-gikai",
+      "core": true
+    },
+    {
+      "id": "national-general-mobilization-law-1938",
+      "core": true
+    }
+  ]
+}

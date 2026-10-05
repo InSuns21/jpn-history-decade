@@ -1,0 +1,12 @@
+{
+  "period": "1941-12-06",
+  "termRefs": [
+    {"id":"imperial-headquarters-government-liaison-conference-1937","core":true},
+    {"id":"japan-us-final-memorandum-1941-12","core":true},
+    {"id":"roosevelt-emperor-message-1941-12-06","core":true},
+    {"id":"togo-shigenori-foreign-minister-1941","core":true},
+    {"id":"nomura-kichisaburo-us-ambassador-1941","core":true},
+    {"id":"kurusu-saburo-special-envoy-1941","core":true},
+    {"id":"war-decision-us-uk-netherlands-1941-12-01","core":false}
+  ]
+}

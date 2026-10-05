@@ -1082,6 +1082,20 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
   ],
 
 
+  '1941-12-06': [
+    commonsDocumentFigure(
+      'NDL9883676 Extract from Foreign Relations of U. S. - Japan 1931-1941 Vol. II, page 784. Cable sent by President Roosevelt to Secre....pdf',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/NDL9883676_Extract_from_Foreign_Relations_of_U._S._-_Japan_1931-1941_Vol._II%2C_page_784._Cable_sent_by_President_Roosevelt_to_Secre....pdf/page1-960px-NDL9883676_Extract_from_Foreign_Relations_of_U._S._-_Japan_1931-1941_Vol._II%2C_page_784._Cable_sent_by_President_Roosevelt_to_Secre....pdf.jpg',
+      {
+        alt: '1941年12月6日付ルーズヴェルト大統領の昭和天皇宛親電に関する米国外交文書の公刊資料ページ',
+        title: 'ルーズヴェルト大統領の昭和天皇宛親電関係資料',
+        dateLabel: '1941年12月6日',
+        credit: '米国国務省公刊外交文書／国立国会図書館・Wikimedia Commons',
+        license: 'Public Domain',
+      },
+    ),
+  ],
+
   '1941-12-02': [
     commonsDocumentFigure(
       'NDL9884783 Combined Fleet Top Secret Operation Order -1(Nov. 5, 1941), -2(Nov. 7, 1941), -7(Dec. 2, 1941).pdf',

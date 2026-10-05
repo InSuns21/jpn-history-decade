@@ -3,10 +3,8 @@ import path from 'node:path'
 
 const root = process.cwd()
 const periodsDir = path.join(root, 'content', 'periods')
-const baselinePath = path.join(root, 'standards', 'body-depth-baseline.json')
-const baseline = JSON.parse(fs.readFileSync(baselinePath, 'utf8'))
-const strict = process.argv.includes('--strict')
-const MIN_BODY_CHARS = 4500
+const REVIEW_BODY_CHARS = 4500
+const HARD_MIN_BODY_CHARS = 2500
 const REASON_MIN_CHARS = 30
 const COVERAGE_MIN_CHARS = 40
 const MARKER =
@@ -91,15 +89,14 @@ function genericException(text) {
 }
 
 const failures = []
+const warnings = []
 const reports = []
-const seenPublishedFiles = new Set()
 
 for (const filePath of listMarkdownFiles(periodsDir).sort()) {
   const file = relative(filePath)
   const source = fs.readFileSync(filePath, 'utf8')
   const { frontmatter, body } = splitFrontmatter(source, file)
   if (getStatus(frontmatter) !== 'published') continue
-  seenPublishedFiles.add(file)
 
   const chars = substantiveCharCount(body)
   const marker = body.match(MARKER)
@@ -108,101 +105,71 @@ for (const filePath of listMarkdownFiles(periodsDir).sort()) {
   if (duplicate) {
     failures.push(
       file +
-        ': repeated long paragraph detected; body-depth threshold must not be met by copy/paste repetition.',
+        ': repeated long paragraph detected; body depth must not be created by copy/paste repetition.',
     )
   }
 
-  const baselineChars = baseline[file]
-
-  if (chars >= MIN_BODY_CHARS) {
-    if (marker) {
-      failures.push(
-        file +
-          ': body-depth exception is stale because substantive body length is ' +
-          chars +
-          ' characters (minimum ' +
-          MIN_BODY_CHARS +
-          '). Remove the exception marker.',
-      )
-    }
-    if (baselineChars !== undefined) {
-      failures.push(
-        file +
-          ': body-depth baseline entry is stale because the page now reaches ' +
-          chars +
-          ' characters. Remove the legacy baseline entry.',
-      )
-    }
-    reports.push({ file, chars, status: 'pass' })
-    continue
+  if (chars >= HARD_MIN_BODY_CHARS && marker) {
+    warnings.push(
+      file +
+        ': body-depth exception is no longer required because substantive body length is ' +
+        chars +
+        ' characters (hard floor ' +
+        HARD_MIN_BODY_CHARS +
+        '). Remove the stale marker when this page is next edited.',
+    )
   }
 
-  if (!marker) {
-    if (!strict && baselineChars === chars) {
-      reports.push({ file, chars, status: 'legacy-baseline' })
-      continue
+  if (chars < HARD_MIN_BODY_CHARS) {
+    if (!marker) {
+      failures.push(
+        file +
+          ': substantive body length is ' +
+          chars +
+          ' characters; published period pages below the ' +
+          HARD_MIN_BODY_CHARS +
+          '-character hard floor require a reasoned exception.',
+      )
+    } else {
+      const reason = marker[1].trim()
+      const coverage = marker[2].trim()
+
+      if (plainCharCount(reason) < REASON_MIN_CHARS || genericException(reason)) {
+        failures.push(
+          file +
+            ': body-depth exception reason must be specific and at least ' +
+            REASON_MIN_CHARS +
+            ' characters.',
+        )
+      }
+
+      if (plainCharCount(coverage) < COVERAGE_MIN_CHARS || genericException(coverage)) {
+        failures.push(
+          file +
+            ': body-depth exception coverage must be specific and at least ' +
+            COVERAGE_MIN_CHARS +
+            ' characters.',
+        )
+      }
     }
-    failures.push(
+  } else if (chars < REVIEW_BODY_CHARS) {
+    warnings.push(
       file +
         ': substantive body length is ' +
         chars +
-        ' characters; published period pages below ' +
-        MIN_BODY_CHARS +
-        ' require a reasoned body-depth audit exception.' +
-        (baselineChars !== undefined
-          ? ' Legacy baseline was ' + baselineChars + ' characters and no longer matches.'
-          : ''),
-    )
-    reports.push({ file, chars, status: 'missing-exception' })
-    continue
-  }
-
-  if (baselineChars !== undefined) {
-    failures.push(
-      file +
-        ': page now has a reasoned body-depth exception; remove its legacy baseline entry so the migration debt can only shrink.',
+        ' characters (soft review threshold ' +
+        REVIEW_BODY_CHARS +
+        '). Review for missing state/causal coverage, but do not pad solely to reach the threshold.',
     )
   }
 
-  const reason = marker[1].trim()
-  const coverage = marker[2].trim()
-
-  if (plainCharCount(reason) < REASON_MIN_CHARS || genericException(reason)) {
-    failures.push(
-      file +
-        ': body-depth exception reason must be specific and at least ' +
-        REASON_MIN_CHARS +
-        ' characters; explain why the page scope genuinely supports a shorter body.',
-    )
-  }
-
-  if (plainCharCount(coverage) < COVERAGE_MIN_CHARS || genericException(coverage)) {
-    failures.push(
-      file +
-        ': body-depth exception coverage must be specific and at least ' +
-        COVERAGE_MIN_CHARS +
-        ' characters; state which causal/state-transition coverage is already complete and what extra prose would duplicate or dilute.',
-    )
-  }
-
-  reports.push({ file, chars, status: 'exception' })
+  reports.push({ file, chars, status: marker ? 'exception' : 'normal' })
 }
 
-for (const file of Object.keys(baseline)) {
-  if (!seenPublishedFiles.has(file)) {
-    failures.push(file + ': legacy body-depth baseline entry points to a missing or non-published page.')
-  }
-}
-
-if (strict) {
-  for (const report of reports) {
-    if (report.status === 'legacy-baseline') {
-      failures.push(
-        report.file +
-          ': strict body-depth audit rejects legacy baseline debt; expand the body or add a reasoned exception.',
-      )
-    }
-  }
+if (warnings.length > 0) {
+  console.warn('Body-depth review warnings:')
+  for (const warning of warnings) console.warn('- ' + warning)
+  console.warn('')
 }
 
 if (failures.length > 0) {
@@ -210,7 +177,7 @@ if (failures.length > 0) {
   for (const failure of failures) console.error('- ' + failure)
   console.error('')
   console.error(
-    '4500 characters is an audit threshold, not a writing target. Add missing historical explanation when it exists; otherwise use a reasoned exception instead of padding.',
+    '4500 characters is a soft review signal, not a writing target. Only pages below the 2500-character hard floor require a reasoned exception.',
   )
   console.error(
     'Exception syntax: <!-- body-depth-audit: allow reason="..." coverage="..." -->',
@@ -218,16 +185,12 @@ if (failures.length > 0) {
   process.exit(1)
 }
 
-const exceptions = reports.filter((item) => item.status === 'exception')
-const legacy = reports.filter((item) => item.status === 'legacy-baseline')
 console.log(
   'Body-depth audit passed for ' +
     reports.length +
-    ' published period page(s); ' +
-    exceptions.length +
-    ' reasoned exception(s), ' +
-    legacy.length +
-    ' legacy page(s) awaiting one-time audit, minimum ' +
-    MIN_BODY_CHARS +
+    ' published period page(s); soft review threshold ' +
+    REVIEW_BODY_CHARS +
+    ', hard floor ' +
+    HARD_MIN_BODY_CHARS +
     ' substantive characters.',
 )

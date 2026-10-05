@@ -227,7 +227,7 @@
 
 ---
 
-## 10. S02 inventory / split record
+## 9. S02 inventory / split record
 
 - **Inventory:** 26節。旧記事の長期総括1節を除き、25節を4つの中心問いへ再配置した。
 - **S02-A / fiscal-transition:** 旧routeを継承。石高制・都市市場・信用・商品経済・藩政改革・幕末財政の5節。
@@ -238,7 +238,8 @@
 - **ID ordering:** S02系を第2章で隣接表示できるよう、crosscutting IDを s02b 等へ拡張する。compilerは sNN または sNNx を許可する。
 - **Scope reduction:** 旧記事末尾の1800〜1937全期間総括は削除し、各記事末尾を当該中心問いの範囲だけで閉じる。
 
-## 9. Non-goals
+
+## 10. Non-goals
 
 - 第1章の年代記事そのものを再分割すること。
 - 第2章の全テーマ史・構造史を一括再設計すること。

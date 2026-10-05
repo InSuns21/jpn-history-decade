@@ -1,0 +1,73 @@
+{
+  "page": "fiscal-state-building",
+  "termRefs": [
+    {
+      "id": "chiso-kaisei",
+      "core": true
+    },
+    {
+      "id": "bank-of-japan-1882",
+      "core": true
+    },
+    {
+      "id": "dajokan-satsu",
+      "core": true
+    },
+    {
+      "id": "shinka-jorei",
+      "core": true
+    },
+    {
+      "id": "seinan-war",
+      "core": false
+    },
+    {
+      "id": "kokuritsu-ginko",
+      "core": true
+    },
+    {
+      "id": "fukan-shihei",
+      "core": true
+    },
+    {
+      "id": "matsukata-finance",
+      "core": true
+    },
+    {
+      "id": "convertible-banknote-ordinance-1884",
+      "core": true
+    },
+    {
+      "id": "sino-japanese-war-1894-1895",
+      "core": false
+    },
+    {
+      "id": "shimonoseki-treaty-1895",
+      "core": false
+    },
+    {
+      "id": "nisshin-sengo-keiei",
+      "core": true
+    },
+    {
+      "id": "gold-standard-1897",
+      "core": true
+    },
+    {
+      "id": "russo-japanese-war-1904-1905",
+      "core": false
+    },
+    {
+      "id": "russo-japanese-war-finance",
+      "core": true
+    },
+    {
+      "id": "portsmouth-treaty-1905",
+      "core": false
+    },
+    {
+      "id": "russo-japanese-postwar-finance",
+      "core": true
+    }
+  ]
+}

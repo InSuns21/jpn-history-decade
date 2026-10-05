@@ -1,7 +1,7 @@
 # 横断記事4本の分割・再編 実装計画
 
 - **Status:** active
-- **Progress:** plan cut ✅ → 次は S02「石高制・貨幣経済・財政」split inventory
+- **Progress:** plan cut ✅ → S02 split inventory ✅ → S02 split implementation ✅ → authoring standard ✅ → S02 CI ✅ → 次は S05「政治参加の回路」split inventory
 - **Created:** 2026-10-05
 - **Scope:** 第2章「横断して読む」のうち、長期に延長され続けた構造史4本の再編
 - **Targets:**
@@ -227,7 +227,19 @@
 
 ---
 
-## 9. Non-goals
+## 9. S02 inventory / split record
+
+- **Inventory:** 26節。旧記事の長期総括1節を除き、25節を4つの中心問いへ再配置した。
+- **S02-A / fiscal-transition:** 旧routeを継承。石高制・都市市場・信用・商品経済・藩政改革・幕末財政の5節。
+- **S02-B / fiscal-state-building:** 明治初期財政から1917年金輸出禁止まで13節。全国課税・発券統合・中央銀行・公債・金本位制・戦時財政を「国家信用を作る制度」で束ねる。
+- **S02-C / fiscal-crisis-managed-currency:** 1920年反動恐慌から1937年7月6日まで5節。金融危機、金解禁・再禁止、管理通貨、高橋財政、1936年以後の財政抑制問題を扱う。
+- **S02-D / wartime-finance-1937:** 1937年7月11日〜11月12日の2節。追加予算・特別税・公債・臨時軍事費特別会計による実戦費調達に限定する。
+- **Compatibility:** #/structure/fiscal-transition はS02-Aへ残し、旧リンクを404にしない。
+- **ID ordering:** S02系を第2章で隣接表示できるよう、crosscutting IDを s02b 等へ拡張する。compilerは sNN または sNNx を許可する。
+- **Scope reduction:** 旧記事末尾の1800〜1937全期間総括は削除し、各記事末尾を当該中心問いの範囲だけで閉じる。
+
+
+## 10. Non-goals
 
 - 第1章の年代記事そのものを再分割すること。
 - 第2章の全テーマ史・構造史を一括再設計すること。

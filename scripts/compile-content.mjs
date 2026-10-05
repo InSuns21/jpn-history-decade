@@ -616,7 +616,7 @@ function compileCrosscutting(filePath, expectedKind) {
   if (!parsed) return null
 
   const frontmatter = parsed.data ?? {}
-  const id = requireString(frontmatter, 'id', relative, /^s\d{2}$/)
+  const id = requireString(frontmatter, 'id', relative, /^s\d{2}[a-z]?$/)
   const routeKey = requireString(frontmatter, 'routeKey', relative, /^[a-z0-9-]+$/)
   const kind = requireString(frontmatter, 'kind', relative)
 

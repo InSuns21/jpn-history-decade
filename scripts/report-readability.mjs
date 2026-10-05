@@ -290,9 +290,26 @@ function analyseDocument(kind, file) {
   }
 }
 
-const inventory = contentKinds
+const allPublished = contentKinds
   .flatMap(({ kind, dir }) => listMarkdownFiles(dir).map((file) => analyseDocument(kind, file)))
   .filter((item) => item.status === 'published')
+
+const baselineFile = path.join(root, 'docs', 'readability-retro-r0-baseline.json')
+let baselinePaths = null
+if (fs.existsSync(baselineFile)) {
+  const baseline = JSON.parse(fs.readFileSync(baselineFile, 'utf8'))
+  baselinePaths = new Set((baseline.inventory ?? []).map((item) => item.path))
+}
+const inventory = baselinePaths
+  ? allPublished.filter((item) => baselinePaths.has(item.path))
+  : allPublished
+const newAuthoring = baselinePaths
+  ? allPublished.filter((item) => !baselinePaths.has(item.path))
+  : []
+const currentPaths = new Set(allPublished.map((item) => item.path))
+const missingBaselinePaths = baselinePaths
+  ? [...baselinePaths].filter((itemPath) => !currentPaths.has(itemPath)).sort()
+  : []
 
 const signalTotals = Object.keys(inventory[0]?.signals ?? {}).reduce((totals, key) => {
   totals[key] = inventory.reduce((sum, item) => sum + item.signals[key], 0)
@@ -314,7 +331,10 @@ const waves = Object.fromEntries(
 const report = {
   schemaVersion: 1,
   note: 'Readability signals are review aids only. They are not pass/fail criteria or a readability score.',
+  currentPublishedCount: allPublished.length,
   inventoryCount: inventory.length,
+  newAuthoring: newAuthoring.map((item) => ({ kind: item.kind, path: item.path, routeKey: item.routeKey })),
+  missingBaselinePaths,
   byKind,
   byPriority,
   signalTotals,
@@ -326,7 +346,8 @@ if (process.argv.includes('--json')) {
   process.stdout.write(`${JSON.stringify(report)}\n`)
 } else {
   console.log('High-school readability screening (report-only)')
-  console.log(`inventory: ${report.inventoryCount} (period ${byKind.period}, structure ${byKind.structure}, theme ${byKind.theme})`)
+  console.log(`retro inventory: ${report.inventoryCount} (period ${byKind.period}, structure ${byKind.structure}, theme ${byKind.theme})`)
+  console.log(`current published: ${report.currentPublishedCount}; new-authoring: ${report.newAuthoring.length}; missing baseline paths: ${report.missingBaselinePaths.length}`)
   console.log(`priority: high ${byPriority.high}, medium ${byPriority.medium}, low ${byPriority.low}`)
   console.log(
     `signals: >=100 ${signalTotals.long100}, >=120 ${signalTotals.long120}, abstract-lead ${signalTotals.abstractLead}, deictic ${signalTotals.deictic}, entity-dense ${signalTotals.entityDense}, comma-dense ${signalTotals.commaDense}, first-term-dense ${signalTotals.firstTermDense}`,

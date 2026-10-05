@@ -72,6 +72,22 @@
     {
       "id": "japan-us-proposal-b-1941-11",
       "core": true
+    },
+    {
+      "id": "kurusu-saburo-special-envoy-1941",
+      "core": false
+    },
+    {
+      "id": "us-modus-vivendi-draft-1941-11",
+      "core": true
+    },
+    {
+      "id": "us-basis-for-agreement-1941-11-26",
+      "core": true
+    },
+    {
+      "id": "war-decision-us-uk-netherlands-1941-12-01",
+      "core": true
     }
   ]
 }

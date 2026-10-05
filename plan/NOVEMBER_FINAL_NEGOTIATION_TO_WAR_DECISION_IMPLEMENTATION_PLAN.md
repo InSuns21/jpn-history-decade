@@ -1,7 +1,7 @@
 # 1941年11月6日から12月1日まで — 甲案・乙案の実施、米側11月26日文書、第8回御前会議 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH107 ✅ → JH108 ✅ → JH109 ✅ → JH110 ✅ → JH111 ✅ → A42 judgment ✅ adopted / high → A42 implementation / Data・Style Audit ✅ → Visual Audit ✅ not-required-reused-pattern → 次は Crosscutting publication gate
+- **Progress:** phase cut ✅ → JH107 ✅ → JH108 ✅ → JH109 ✅ → JH110 ✅ → JH111 ✅ → A42 ✅ → Crosscutting publication gate ✅ → S13 extension ✅ → 次は phase-end audit necessity judgment
 - **Created:** 2026-10-05
 - **Scope:** 1941-11-06〜1941-12-01
 - **Article count:** **5年代記事（JH107〜JH111）**
@@ -313,39 +313,44 @@ A42は **採用** とする。A40の9〜10月段階では「準備地域」と�
 
 ---
 
-# 9. Crosscutting publication gate 候補
+# 9. Crosscutting publication gate — ✅ completed
 
-## S13「日米交渉と経済圧力」
+## S13「日米交渉と経済圧力」— ✅ pass / extension implemented
 
-**extension candidate。**
+S13は1941年12月1日まで延長した。本フェーズで新しく成立した比較軸は、11月5日に制度化された「外交成功なら武力発動中止」という条件分岐が、実際の外交案へ投入され、最後に閉じるまでの過程である。
 
-11月5日時点のS13は「12月1日まで外交、成功なら武力発動中止」という条件分岐の成立までを扱う。本フェーズでは、その分岐が実際の甲案・乙案交渉へ投入され、米側暫定協定案の検討と不採用、11月26日米側文書、日本側の不成立判断を経て、12月1日に正式開戦決定へ閉じる。
+年代記事の会談列を再掲するのではなく、既存S13の四軸「要求・譲歩 / 軍事的位置 / 経済条件 / 時間」を使って次の状態変化を追加した。
 
-新しい比較軸は、単なる事件追加ではなく、**政策上の条件分岐が実交渉の結果によってどのように解消されたか**である。年代記事の再編集にならず、この変化を比較として書ける場合に限り延長する。
+- **11月6〜19日:** 甲案を正式に実施しつつ、野村・来栖が南部仏印撤兵と凍結解除を先に交換する限定的打開案も探索。条件分岐が抽象的期限から実際の交渉手順へ移る
+- **11月20〜25日:** 日本側乙案と米側modus vivendiが、条件は異なるものの「南部仏印と経済措置を先に動かし、根本問題のための時間を買う」暫定設計を別々に具体化。夏の経済圧力が交渉カードとしても機能する段階を追加
+- **11月26〜12月1日:** 米側はmodus vivendiを提示せず包括案を提示し、日本側は期限内妥結見込みを失う方向へ進む。12月1日の第8回御前会議で、外交成功時の武力発動中止という分岐が閉じる
 
-## S10系列「産業社会の負担と保護」
+S13のperiodLabel / summary / framingQuestionを12月1日まで更新し、JH107〜JH111をrelatedPeriodsへ追加した。比較表へ11月の3段階を追加し、end-stateを「11月5日の条件分岐成立」から「12月1日の条件分岐閉鎖」へ更新した。
 
-**原則hold。**
+## S10系列「産業社会の負担と保護」— hold / no extension
 
-このフェーズの中心は外交・開戦意思決定であり、新しい配給・価格・賃金・労働配置・企業統制の制度段階が成立しない限り延長しない。
+本フェーズでは新しい配給・価格・賃金・労働配置・企業統制の制度段階は成立していない。石油供給回復は乙案の重要条件だが、国内の負担配分制度を更新する材料ではなく、S13の経済条件として扱う。
 
-## S12「秋丸機関と総力戦研究所」
+## S12「秋丸機関と総力戦研究所」— hold / no extension
 
-**原則hold。**
+11月後半の政策判断と研究成果を比較することは可能だが、研究所・秋丸機関の新活動や、政策担当者が研究成果を直接参照したことを示す新史料は本フェーズで確認していない。年代記事との類似だけから直接因果を作らない。
 
-11月後半の政策判断と研究成果の類似・不一致だけで直接因果を作らない。研究所・秋丸機関の新活動、政策担当者による直接参照など新史料が確認できた場合だけ再判定する。
+## S09系列「対外支配の制度差」— hold / next-phase reconsideration
 
-## S09系列「対外支配の制度差」
+11月22日の対タイ措置要領は南方作戦後の対タイ関係を準備する文書だが、このフェーズでは軍事進入・同盟形成・占領／協力関係の制度がまだ実施されていない。12月以後の実施段階で再評価する。
 
-**conditional hold。**
+## S05系列「政治参加の回路」— hold / no extension
 
-11月22日の「対タイ措置要領」は将来の対タイ政策を考える重要史料だが、この時点ではまだ12月以後の軍事進入・同盟形成・権限配分が実現していない。計画文書だけで新しい支配制度類型を成立扱いせず、実施段階は次フェーズで再評価する。
+連絡会議・閣議・御前会議は国家意思決定手続として重要だが、S05系列が扱う国民・政党・議会・地域社会の政治参加回路に新しい制度段階を作っていない。
 
-## S05系列「政治参加の回路」
+### Crosscutting gate 判定結果
 
-**hold。**
-
-政府・統帥部の国家意思決定手続を、国内の政治参加制度史へそのまま混入しない。
+- **S13: pass / extension implemented**
+- **S10系列: hold**
+- **S12: hold**
+- **S09系列: hold / next-phase reconsideration**
+- **S05系列: hold**
+- 新規横断記事は作らない
 
 ---
 
@@ -460,8 +465,8 @@ A42は **採用** とする。A40の9〜10月段階では「準備地域」と�
 - [x] JH111 図版採用または理由付きno-image判定完了
 - [x] A42 map necessity / data-quality judgment completed
 - [x] A42採用時の必要監査完了、またはno-map理由記録
-- [ ] Crosscutting publication gate completed
-- [ ] passing crosscutting extensions implemented
+- [x] Crosscutting publication gate completed
+- [x] passing crosscutting extensions implemented
 - [ ] phase-end audit necessity judgment completed
 - [ ] npm run check green
 - [ ] GitHub Actions CI green

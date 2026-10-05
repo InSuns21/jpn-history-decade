@@ -39,6 +39,28 @@ const FRONTMATTER_SKIP_KEYS = new Set([
   'mapPlacements',
 ])
 
+const DENSITY_SKIP_KEYS = new Set([
+  'contemporaryAssumptions',
+  'interpretiveCautions',
+  'sources',
+  'nextIssues',
+  'maps',
+  'mapPlacements',
+])
+
+const DENSITY_PATTERNS = [
+  /ではない/gu,
+  /ではなかった/gu,
+  /とは限らない/gu,
+  /とは考えにくい/gu,
+  /そうとも言い切れない/gu,
+  /単純化できない/gu,
+  /必要はない/gu,
+]
+
+const DENSITY_MIN_COUNT = 8
+const DENSITY_MAX_PER_1000_CHARS = 0.8
+
 const YAML_ALLOW = /^\s*#\s*claim-caution-lint:\s*allow\s+reason="([^"]+)"\s*$/
 const MD_ALLOW = /^\s*<!--\s*claim-caution-lint:\s*allow\s+reason="([^"]+)"\s*-->\s*$/
 const MARKER_TEXT = 'claim-caution-lint: allow reason='
@@ -178,8 +200,76 @@ function validateBody(body, bodyStartLine, file) {
   return violations
 }
 
+function countDensityMatches(text) {
+  let count = 0
+  for (const pattern of DENSITY_PATTERNS) {
+    pattern.lastIndex = 0
+    count += [...text.matchAll(pattern)].length
+  }
+  return count
+}
+
+function densityTextFromFrontmatter(frontmatter) {
+  const lines = frontmatter.split(/\r?\n/)
+  let currentKey = ''
+  let allowNext = false
+  const eligible = []
+
+  for (const line of lines) {
+    const keyMatch = line.match(/^([A-Za-z][A-Za-z0-9]*):/)
+    if (keyMatch) currentKey = keyMatch[1]
+
+    if (line.match(YAML_ALLOW)) {
+      allowNext = true
+      continue
+    }
+    if (/^\s*#/.test(line) || line.trim() === '') continue
+    if (DENSITY_SKIP_KEYS.has(currentKey)) {
+      allowNext = false
+      continue
+    }
+    if (allowNext) {
+      allowNext = false
+      continue
+    }
+    eligible.push(line.trim())
+  }
+
+  return eligible.join('\n')
+}
+
+function densityTextFromBody(body) {
+  const lines = body.split(/\r?\n/)
+  let allowNext = false
+  let inFence = false
+  const eligible = []
+
+  for (const line of lines) {
+    if (/^\s*\`\`\`/.test(line)) {
+      inFence = !inFence
+      allowNext = false
+      continue
+    }
+    if (inFence) continue
+
+    if (line.match(MD_ALLOW)) {
+      allowNext = true
+      continue
+    }
+    if (line.trim() === '' || /^\s*>/.test(line) || /^\s*<!--/.test(line)) continue
+    if (allowNext) {
+      allowNext = false
+      continue
+    }
+    eligible.push(line.trim())
+  }
+
+  return eligible.join('\n')
+}
+
 const files = contentDirs.flatMap(listMarkdownFiles).sort()
 const violations = []
+const densityViolations = []
 const structuralErrors = []
 
 for (const filePath of files) {
@@ -193,9 +283,23 @@ for (const filePath of files) {
 
   violations.push(...validateFrontmatter(split.frontmatter, file))
   violations.push(...validateBody(split.body, split.bodyStartLine, file))
+
+  const densityText =
+    densityTextFromFrontmatter(split.frontmatter) + '\n' + densityTextFromBody(split.body)
+  const densityCount = countDensityMatches(densityText)
+  const densityRate = (densityCount * 1000) / Math.max(densityText.length, 1)
+
+  if (densityCount >= DENSITY_MIN_COUNT && densityRate >= DENSITY_MAX_PER_1000_CHARS) {
+    densityViolations.push({
+      file,
+      count: densityCount,
+      chars: densityText.length,
+      rate: densityRate,
+    })
+  }
 }
 
-if (structuralErrors.length > 0 || violations.length > 0) {
+if (structuralErrors.length > 0 || violations.length > 0 || densityViolations.length > 0) {
   console.error('Claim/caution lint failed:')
   for (const error of structuralErrors) console.error('- ' + error)
   for (const violation of violations) {
@@ -212,13 +316,29 @@ if (structuralErrors.length > 0 || violations.length > 0) {
         violation.excerpt,
     )
   }
-  if (violations.length > 0) {
+  for (const violation of densityViolations) {
+    console.error(
+      '- ' +
+        violation.file +
+        ' [negative-framing-density] ' +
+        violation.count +
+        ' guarded expression(s), ' +
+        violation.rate.toFixed(2) +
+        ' / 1000 chars (' +
+        violation.chars +
+        ' eligible chars)',
+    )
+  }
+  if (violations.length > 0 || densityViolations.length > 0) {
     console.error('')
     console.error(
       'Move general misreading-prevention wording to interpretiveCautions, or rewrite the claim layer affirmatively.',
     )
     console.error(
-      'If a negative formulation is historically indispensable, add a reasoned exception immediately before it:',
+      'Density counting excludes contemporaryAssumptions / interpretiveCautions and other non-claim metadata.',
+    )
+    console.error(
+      'If a negative formulation is historically indispensable in a claim layer, add a reasoned exception immediately before it:',
     )
     console.error('  YAML: # claim-caution-lint: allow reason="制度上の未発効そのものが主張"')
     console.error('  Markdown: <!-- claim-caution-lint: allow reason="制度上の未発効そのものが主張" -->')
@@ -229,5 +349,5 @@ if (structuralErrors.length > 0 || violations.length > 0) {
 console.log(
   'Claim/caution lint passed for ' +
     files.length +
-    ' article(s); no guarded caution-style wording remains in claim layers.',
+    ' article(s); guarded caution wording and negative-framing density are within limits.',
 )

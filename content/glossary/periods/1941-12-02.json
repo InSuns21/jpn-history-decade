@@ -1,0 +1,14 @@
+{
+  "period": "1941-12-02",
+  "termRefs": [
+    {"id":"war-decision-us-uk-netherlands-1941-12-01","core":true},
+    {"id":"niitakayama-nobore-1208-1941","core":true},
+    {"id":"nomura-kichisaburo-us-ambassador-1941","core":true},
+    {"id":"kurusu-saburo-special-envoy-1941","core":true},
+    {"id":"japan-us-proposal-b-1941-11","core":true},
+    {"id":"imperial-headquarters-government-liaison-conference-1937","core":true},
+    {"id":"togo-shigenori-foreign-minister-1941","core":false},
+    {"id":"southern-indochina-advance-1941","core":false},
+    {"id":"japan-france-indochina-joint-defense-protocol-1941","core":false}
+  ]
+}

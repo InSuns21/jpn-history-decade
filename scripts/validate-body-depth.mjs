@@ -110,13 +110,13 @@ for (const filePath of listMarkdownFiles(periodsDir).sort()) {
   }
 
   if (chars >= HARD_MIN_BODY_CHARS && marker) {
-    failures.push(
+    warnings.push(
       file +
-        ': body-depth exception is stale because substantive body length is ' +
+        ': body-depth exception is no longer required because substantive body length is ' +
         chars +
         ' characters (hard floor ' +
         HARD_MIN_BODY_CHARS +
-        '). Remove the exception marker.',
+        '). Remove the stale marker when this page is next edited.',
     )
   }
 

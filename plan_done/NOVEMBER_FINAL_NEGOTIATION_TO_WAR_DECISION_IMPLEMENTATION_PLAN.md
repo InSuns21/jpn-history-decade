@@ -1,7 +1,7 @@
 # 1941年11月6日から12月1日まで — 甲案・乙案の実施、米側11月26日文書、第8回御前会議 実装計画
 
-- **Status:** active
-- **Progress:** phase cut ✅ → JH107 ✅ → JH108 ✅ → JH109 ✅ → JH110 ✅ → JH111 ✅ → A42 ✅ → Crosscutting publication gate ✅ → S13 extension ✅ → phase-end audit necessity judgment ✅ no-audit → 次は npm run check / CI / Pages / completion
+- **Status:** completed
+- **Progress:** phase cut ✅ → JH107〜JH111 ✅ → A42 ✅ adopted / published → Crosscutting publication gate ✅ → S13 extension ✅ → phase-end audit necessity judgment ✅ no-audit → npm run check ✅ → CI ✅ → Pages ✅ → phase completed
 - **Created:** 2026-10-05
 - **Scope:** 1941-11-06〜1941-12-01
 - **Article count:** **5年代記事（JH107〜JH111）**
@@ -467,8 +467,25 @@ JH107〜JH111、A42、S13延長を横断し、複数ページを改めて独立�
 - [x] Crosscutting publication gate completed
 - [x] passing crosscutting extensions implemented
 - [x] phase-end audit necessity judgment completed
-- [ ] npm run check green
-- [ ] GitHub Actions CI green
-- [ ] GitHub Pages deploy green
-- [ ] Status = completed
-- [ ] plan_done/へ移動
+- [x] npm run check green
+- [x] GitHub Actions CI green
+- [x] GitHub Pages deploy green
+- [x] Status = completed
+- [x] plan_done/へ移動
+
+
+---
+
+# Completion record
+
+- A42 map necessity judgment: **adopted / high**
+- A42 `final-diplomacy-operational-preparation-1941`: published。11月6日の南方軍正式集結地域と11月22〜26日の単冠湾集結・出航をPoint中心で実装し、Data / Style Audit passed、Human Visual AuditはA40 point-only再利用により `not-required-reused-pattern`
+- Crosscutting publication gate: **S13 extension only**。S10 / S12 / S05はhold、S09は次フェーズ再判定
+- S13「日米交渉と経済圧力」を1941年12月1日まで延長し、11月5日の条件分岐が甲案・乙案・米側modus vivendi検討を経て12月1日に閉じる比較軸を追加
+- phase-end audit necessity judgment: **no-audit**
+- A42 judgment PR #307: PR Quality Checks #179 / PR CI #969 success、main CI #970 / Pages #420 success
+- A42 implementation PR #308: PR Quality Checks #180 / PR CI #971 success、main CI #972 / Pages #421 success
+- S13 extension PR #309: PR CI #977 / Quality Checks #184 success、main commit `3580f2612559695861c984c04dc5d5ae7f3c732b`、main CI #978 / Pages #423 success
+- phase-end audit judgment PR #311: PR CI #979 / Quality Checks #185 success、main commit `4c6df4dacca31601c4d7ef8cb49834815a7a74c1`、main CI #980 / Pages #424 success
+- `npm run check`: main CI #980 の `npm run check` で green
+- Completed: 2026-10-05

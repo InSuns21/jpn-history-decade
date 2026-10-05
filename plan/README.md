@@ -12,10 +12,7 @@
 
 ### 本線
 
-- [NOVEMBER_FINAL_NEGOTIATION_TO_WAR_DECISION_IMPLEMENTATION_PLAN.md](./NOVEMBER_FINAL_NEGOTIATION_TO_WAR_DECISION_IMPLEMENTATION_PLAN.md)
-  - Scope: 1941-11-06〜1941-12-01
-  - Progress: phase cut ✅ → 次は JH107「1941-11-06〜11-13」
-  - 11月5日に決定した甲案・乙案を実際の対米交渉へ投入し、来栖三郎の参加、乙案への移行、米側の暫定協定検討と11月26日文書、11月27・29日の国内手続を経て、12月1日の第8回御前会議による対米英蘭開戦の正式決定までを5年代記事で追う。
+現在activeな個別実装planはない。1941年11月6日〜12月1日フェーズは完了・archive済み。次の本線作業は1941年12月2日以後のphase cutから開始する。
 
 遡及地図監査・実装planは [MAP_RETRO_AUDIT_AND_IMPLEMENTATION_PLAN.md](../plan_done/MAP_RETRO_AUDIT_AND_IMPLEMENTATION_PLAN.md) としてimplementation-complete / archive済み。Human Visual Auditの残件は [MAP_HUMAN_VISUAL_AUDIT_BACKLOG.md](../docs/MAP_HUMAN_VISUAL_AUDIT_BACKLOG.md) で継続管理する。
 

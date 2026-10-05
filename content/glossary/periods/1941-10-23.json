@@ -1,0 +1,25 @@
+{
+  "period": "1941-10-23",
+  "termRefs": [
+    {
+      "id": "tojo-cabinet-policy-reconsideration-1941-10",
+      "core": true
+    },
+    {
+      "id": "imperial-headquarters-government-liaison-conference-1937",
+      "core": true
+    },
+    {
+      "id": "imperial-policy-guideline-1941-09",
+      "core": true
+    },
+    {
+      "id": "tojo-cabinet-1941",
+      "core": false
+    },
+    {
+      "id": "us-petroleum-export-controls-1941",
+      "core": false
+    }
+  ]
+}

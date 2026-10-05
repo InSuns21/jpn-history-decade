@@ -1,7 +1,7 @@
 # 1941年11月6日から12月1日まで — 甲案・乙案の実施、米側11月26日文書、第8回御前会議 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH107 ✅ → JH108 ✅ → JH109 ✅ → JH110 ✅ → 次は JH111「1941-11-28〜12-01」
+- **Progress:** phase cut ✅ → JH107 ✅ → JH108 ✅ → JH109 ✅ → JH110 ✅ → JH111 ✅ → 次は A42 map necessity / data-quality judgment
 - **Created:** 2026-10-05
 - **Scope:** 1941-11-06〜1941-12-01
 - **Article count:** **5年代記事（JH107〜JH111）**
@@ -419,8 +419,8 @@ A42は「外交の進行」と「軍事準備の空間」を一枚に重ねれ�
 - [x] JH109 図版採用または理由付きno-image判定完了
 - [x] JH110 published / JH109との隣接接続確認完了
 - [x] JH110 図版採用または理由付きno-image判定完了
-- [ ] JH111 published / JH110との隣接接続確認完了
-- [ ] JH111 図版採用または理由付きno-image判定完了
+- [x] JH111 published / JH110との隣接接続確認完了
+- [x] JH111 図版採用または理由付きno-image判定完了
 - [ ] A42 map necessity / data-quality judgment completed
 - [ ] A42採用時の必要監査完了、またはno-map理由記録
 - [ ] Crosscutting publication gate completed

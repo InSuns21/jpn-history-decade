@@ -13,7 +13,7 @@ const RULES = [
   { id: 'meaning-not-variant', pattern: /意味するものではない/u, label: '意味するものではない' },
   { id: 'not-same', pattern: /同一視しない/u, label: '同一視しない' },
   { id: 'not-same-variant', pattern: /同一視できない/u, label: '同一視できない' },
-  { id: 'not-the-case', pattern: /わけではな(?:い|く|かった)/u, label: 'わけではない/なく/なかった' },
+  { id: 'not-the-case', pattern: /わけではない/u, label: 'わけではない' },
   { id: 'not-the-same', pattern: /同じではない/u, label: '同じではない' },
   { id: 'not-the-thing', pattern: /ことではない/u, label: 'ことではない' },
   { id: 'not-completed-that-way', pattern: /(?:した|された)のではない/u, label: '〜したのではない' },
@@ -30,14 +30,20 @@ const RULES = [
     label: '考えると…誤る/間違う',
   },
   {
-    id: 'reader-understanding-instruction',
-    pattern: /(?:理解|把握)するには[^。！？\n]{0,120}(?:必要|重要)/u,
-    label: '理解するには…必要/重要',
+    id: 'reader-understanding-correction',
+    pattern:
+      /(?:理解|把握)するには[^。！？\n]{0,120}(?:逆算|一方向だけ|一語|二語|単純|誤解|混同)[^。！？\n]{0,120}(?:必要|重要)/u,
+    label: '理解するには…逆算/単純化を避ける必要',
   },
   {
-    id: 'reader-viewing-instruction',
-    pattern: /(?:見る|読む|捉える)必要がある/u,
-    label: '見る/読む/捉える必要がある',
+    id: 'reader-multi-axis-instruction',
+    pattern: /(?:別の軸として|同時に)(?:読む|見る|捉える)必要がある/u,
+    label: '別の軸/同時に読む・見る必要がある',
+  },
+  {
+    id: 'reader-one-word-correction',
+    pattern: /(?:一語|二語)[^。！？\n]{0,80}(?:より|ではなく)[^。！？\n]{0,120}(?:読む|見る|捉える)必要がある/u,
+    label: '一語/二語より〜として読む・見る必要がある',
   },
   {
     id: 'reader-framing-loss',
@@ -77,10 +83,6 @@ const DENSITY_PATTERNS = [
   /そうとも言い切れない/gu,
   /単純化できない/gu,
   /必要はない/gu,
-  /わけではな(?:い|く|かった)/gu,
-  /(?:見る|読む|捉える)必要がある/gu,
-  /(?:理解|把握)するには/gu,
-  /(?:見えにくくなる|実態を失う)/gu,
 ]
 
 const DENSITY_MIN_COUNT = 8

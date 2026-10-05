@@ -1,0 +1,29 @@
+{
+  "period": "1941-10-27",
+  "termRefs": [
+    {
+      "id": "tojo-cabinet-policy-reconsideration-1941-10",
+      "core": true
+    },
+    {
+      "id": "imperial-headquarters-government-liaison-conference-1937",
+      "core": true
+    },
+    {
+      "id": "planning-board-1937",
+      "core": true
+    },
+    {
+      "id": "tripartite-pact-1940",
+      "core": true
+    },
+    {
+      "id": "togo-shigenori-foreign-minister-1941",
+      "core": false
+    },
+    {
+      "id": "netherlands-east-indies-1940",
+      "core": false
+    }
+  ]
+}

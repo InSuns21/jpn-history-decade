@@ -1,0 +1,53 @@
+{
+  "page": "party-government-1890-1918",
+  "termRefs": [
+    {
+      "id": "teikoku-gikai",
+      "core": true
+    },
+    {
+      "id": "initial-diet-politics",
+      "core": true
+    },
+    {
+      "id": "election-interference-1892",
+      "core": true
+    },
+    {
+      "id": "wakyo-chokucho-1893",
+      "core": false
+    },
+    {
+      "id": "kenseito-1898",
+      "core": true
+    },
+    {
+      "id": "first-okuma-cabinet-1898",
+      "core": false
+    },
+    {
+      "id": "rikken-seiyukai-1900",
+      "core": true
+    },
+    {
+      "id": "chian-keisatsu-ho-1900",
+      "core": true
+    },
+    {
+      "id": "social-democratic-party-1901",
+      "core": false
+    },
+    {
+      "id": "keien-era",
+      "core": true
+    },
+    {
+      "id": "first-constitutional-protection-movement",
+      "core": true
+    },
+    {
+      "id": "hara-cabinet-1918",
+      "core": true
+    }
+  ]
+}

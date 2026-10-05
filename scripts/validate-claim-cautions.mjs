@@ -58,6 +58,31 @@ const RULES = [
   },
 ]
 
+const ANTICIPATORY_REBUTTAL_RULES = [
+  {
+    id: 'anticipatory-importance-misreading',
+    pattern:
+      /この(?:整理|点|こと|違い)が重要なのは[^。！？\n]{0,180}(?:理解|読む|見る|捉える)と/u,
+    label: '「この点が重要なのは…と理解すると」型の先回り反論',
+  },
+  {
+    id: 'anticipatory-must-read',
+    pattern: /(?:として|と)読まなければならない/u,
+    label: '「〜として読まなければならない」型の読者矯正',
+  },
+  {
+    id: 'anticipatory-not-this-structure',
+    pattern: /これは「[^」]{1,140}」という構造ではない/u,
+    label: '「これは〜という構造ではない」型の仮想反論',
+  },
+  {
+    id: 'anticipatory-only-does-not-decide',
+    pattern:
+      /一方、[^。！？\n]{0,120}だけで[^。！？\n]{0,120}(?:成否|全体)[^。！？\n]{0,80}(?:決まらなかった|説明できない)/u,
+    label: '「一方、〜だけで全体は決まらない」型の先回り反論',
+  },
+]
+
 const FRONTMATTER_SKIP_KEYS = new Set([
   'interpretiveCautions',
   'sources',
@@ -227,6 +252,67 @@ function validateBody(body, bodyStartLine, file) {
   return violations
 }
 
+function findAnticipatoryRebuttal(text) {
+  for (const rule of ANTICIPATORY_REBUTTAL_RULES) {
+    if (rule.pattern.test(text)) return rule
+  }
+  return null
+}
+
+function validateAnticipatoryFrontmatter(frontmatter, file) {
+  const warnings = []
+  const lines = frontmatter.split(/\r?\n/)
+  let currentKey = ''
+
+  for (let index = 0; index < lines.length; index += 1) {
+    const line = lines[index]
+    const keyMatch = line.match(/^([A-Za-z][A-Za-z0-9]*):/)
+    if (keyMatch) currentKey = keyMatch[1]
+    if (/^\s*#/.test(line) || line.trim() === '') continue
+    if (DENSITY_SKIP_KEYS.has(currentKey)) continue
+
+    const rule = findAnticipatoryRebuttal(line)
+    if (!rule) continue
+    warnings.push({
+      file,
+      line: index + 2,
+      rule,
+      excerpt: line.trim(),
+      context: 'frontmatter:' + (currentKey || 'unknown'),
+    })
+  }
+
+  return warnings
+}
+
+function validateAnticipatoryBody(body, bodyStartLine, file) {
+  const warnings = []
+  const lines = body.split(/\r?\n/)
+  let inFence = false
+
+  for (let index = 0; index < lines.length; index += 1) {
+    const line = lines[index]
+    const absoluteLine = bodyStartLine + index
+    if (/^\s*\`\`\`/.test(line)) {
+      inFence = !inFence
+      continue
+    }
+    if (inFence || line.trim() === '' || /^\s*>/.test(line) || /^\s*<!--/.test(line)) continue
+
+    const rule = findAnticipatoryRebuttal(line)
+    if (!rule) continue
+    warnings.push({
+      file,
+      line: absoluteLine,
+      rule,
+      excerpt: line.trim(),
+      context: 'markdown-body',
+    })
+  }
+
+  return warnings
+}
+
 function countDensityMatches(text) {
   let count = 0
   for (const pattern of DENSITY_PATTERNS) {
@@ -297,6 +383,7 @@ function densityTextFromBody(body) {
 const files = contentDirs.flatMap(listMarkdownFiles).sort()
 const violations = []
 const densityViolations = []
+const anticipatoryWarnings = []
 const structuralErrors = []
 
 for (const filePath of files) {
@@ -310,6 +397,8 @@ for (const filePath of files) {
 
   violations.push(...validateFrontmatter(split.frontmatter, file))
   violations.push(...validateBody(split.body, split.bodyStartLine, file))
+  anticipatoryWarnings.push(...validateAnticipatoryFrontmatter(split.frontmatter, file))
+  anticipatoryWarnings.push(...validateAnticipatoryBody(split.body, split.bodyStartLine, file))
 
   const densityText =
     densityTextFromFrontmatter(split.frontmatter) + '\n' + densityTextFromBody(split.body)
@@ -324,6 +413,28 @@ for (const filePath of files) {
       rate: densityRate,
     })
   }
+}
+
+if (anticipatoryWarnings.length > 0) {
+  console.warn('Claim/caution lint warning: possible anticipatory rebuttal framing found:')
+  for (const warning of anticipatoryWarnings) {
+    console.warn(
+      '- ' +
+        warning.file +
+        ':' +
+        warning.line +
+        ' [' +
+        warning.rule.label +
+        '] ' +
+        warning.context +
+        ': ' +
+        warning.excerpt,
+    )
+  }
+  console.warn(
+    'Before PR/publication, check whether the passage can state the historical fact directly without inventing a reader misconception to rebut.',
+  )
+  console.warn('')
 }
 
 if (structuralErrors.length > 0 || violations.length > 0 || densityViolations.length > 0) {
@@ -376,5 +487,7 @@ if (structuralErrors.length > 0 || violations.length > 0 || densityViolations.le
 console.log(
   'Claim/caution lint passed for ' +
     files.length +
-    ' article(s); guarded caution wording and negative-framing density are within limits.',
+    ' article(s); guarded caution wording and negative-framing density are within limits' +
+    (anticipatoryWarnings.length > 0 ? '; anticipatory-rebuttal warning(s): ' + anticipatoryWarnings.length : '') +
+    '.',
 )

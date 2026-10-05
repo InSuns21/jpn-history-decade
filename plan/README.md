@@ -21,7 +21,7 @@
 
 - [CROSSCUTTING_LONG_RANGE_SPLIT_IMPLEMENTATION_PLAN.md](./CROSSCUTTING_LONG_RANGE_SPLIT_IMPLEMENTATION_PLAN.md)
   - Scope: S02「石高制・貨幣経済・財政」 / S05「政治参加の回路」 / S09「対外支配の制度差」 / S10「産業社会の負担と保護」
-  - Progress: plan cut ✅ → S02 ✅ → S05 split inventory ✅ → S05 split implementation ✅ → 次は S05 CI / publication check
+  - Progress: plan cut ✅ → S02 ✅ → S05 split inventory ✅ → S05 split implementation ✅ → S05 CI ✅ → 次は S09 split inventory
   - 長期延長で複数の中心問いを抱えた4本を、年代の等分ではなく制度・中心問いの境界で分割する。新年代との関連だけを理由に横断記事を自動延長しない原則も規約へ反映する。
 
 遡及地図監査・実装planは [MAP_RETRO_AUDIT_AND_IMPLEMENTATION_PLAN.md](../plan_done/MAP_RETRO_AUDIT_AND_IMPLEMENTATION_PLAN.md) としてimplementation-complete / archive済み。Human Visual Auditの残件は [MAP_HUMAN_VISUAL_AUDIT_BACKLOG.md](../docs/MAP_HUMAN_VISUAL_AUDIT_BACKLOG.md) で継続管理する。

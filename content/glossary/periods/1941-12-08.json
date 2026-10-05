@@ -1,0 +1,14 @@
+{
+  "period": "1941-12-08",
+  "termRefs": [
+    {"id":"malaya-operation-opening-1941-12-08","core":true},
+    {"id":"pearl-harbor-attack-1941-12-08","core":true},
+    {"id":"japan-us-final-memorandum-1941-12","core":true},
+    {"id":"declaration-rescript-us-uk-1941-12-08","core":true},
+    {"id":"japan-thailand-transit-agreement-1941-12-08","core":true},
+    {"id":"nomura-kichisaburo-us-ambassador-1941","core":false},
+    {"id":"kurusu-saburo-special-envoy-1941","core":false},
+    {"id":"togo-shigenori-foreign-minister-1941","core":false},
+    {"id":"war-decision-us-uk-netherlands-1941-12-01","core":false}
+  ]
+}

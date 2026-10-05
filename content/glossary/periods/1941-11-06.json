@@ -1,0 +1,25 @@
+{
+  "period": "1941-11-06",
+  "termRefs": [
+    {
+      "id": "imperial-policy-guideline-1941-11",
+      "core": true
+    },
+    {
+      "id": "japan-us-proposal-a-1941-11",
+      "core": true
+    },
+    {
+      "id": "japan-us-proposal-b-1941-11",
+      "core": false
+    },
+    {
+      "id": "nomura-kichisaburo-us-ambassador-1941",
+      "core": true
+    },
+    {
+      "id": "togo-shigenori-foreign-minister-1941",
+      "core": false
+    }
+  ]
+}

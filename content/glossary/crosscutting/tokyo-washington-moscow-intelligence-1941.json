@@ -1,0 +1,21 @@
+{
+  "page": "tokyo-washington-moscow-intelligence-1941",
+  "termRefs": [
+    {
+      "id": "nomura-kichisaburo-us-ambassador-1941",
+      "core": true
+    },
+    {
+      "id": "kurusu-saburo-special-envoy-1941",
+      "core": true
+    },
+    {
+      "id": "imperial-policy-guideline-1941-11",
+      "core": true
+    },
+    {
+      "id": "us-basis-for-agreement-1941-11-26",
+      "core": false
+    }
+  ]
+}

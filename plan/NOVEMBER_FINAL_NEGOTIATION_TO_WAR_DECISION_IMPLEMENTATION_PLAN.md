@@ -1,7 +1,7 @@
 # 1941年11月6日から12月1日まで — 甲案・乙案の実施、米側11月26日文書、第8回御前会議 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH107 ✅ → JH108 ✅ → JH109 ✅ → JH110 ✅ → JH111 ✅ → 次は A42 map necessity / data-quality judgment
+- **Progress:** phase cut ✅ → JH107 ✅ → JH108 ✅ → JH109 ✅ → JH110 ✅ → JH111 ✅ → A42 judgment ✅ adopted / high → 次は A42 map implementation / Data・Style Audit
 - **Created:** 2026-10-05
 - **Scope:** 1941-11-06〜1941-12-01
 - **Article count:** **5年代記事（JH107〜JH111）**
@@ -283,6 +283,21 @@ A42は「外交の進行」と「軍事準備の空間」を一枚に重ねれ�
 - A40の再掲で足りる場合はno-map
 - LineString / Polygon採用時はData Audit / Style Audit / Human Visual Audit必須
 
+## 判定結果 — **adopted / high**
+
+A42は **採用** とする。A40の9〜10月段階では「準備地域」と「作戦対象方面」を模式点で示し、11月の正式作戦序列・具体的集結・出撃は意図的に逆投影しなかった。11月6日以後は、同じ南方空間に対して制度段階と実行準備の双方で新しい状態が生じているため、A40の焼き直しではない。
+
+- Japanese Monograph No. 45は、11月6日に大本営が南方軍・南海支隊・支那派遣軍へ、対米交渉不成立時の任務を示す命令を発し、南方軍主力を仏印・華南・台湾・南西諸島・南洋諸島へ集結させるよう命じたと記録する。9月6日後の一般的な「準備地域」から、正式な作戦準備命令を受けた「集結地域」へ段階が変わった。
+- 米海軍公式戦史は、真珠湾攻撃部隊が11月22日までに択捉島単冠湾へ集結し、11月26日に出航したことを示す。11月25日の命令には、対米交渉が成功した場合は部隊を帰投・再集結させる条件も残されていた。したがって軍事準備の具体化と外交分岐の残存を同じ時点構造として読める。
+- 米陸軍公式戦史も、11月6日に南方軍へ詳細作戦準備を命じ、11月20日には攻撃命令が出された一方、外交交渉の結果が判明するまで作戦開始を待つ条件が付されたと整理する。JH107〜JH111の「外交継続と作戦発動準備の並行」を、制度説明だけでなく空間配置でも補強できる。
+- A40との主題差は、A40が**9〜10月の準備範囲と対象方面**、A42が**11月の正式集結命令と具体的な集結・出撃準備地点**を扱う点に置く。A42ではA40の対象方面を全面再掲せず、11月に史料上の段階が変わったfeatureを優先する。
+- ワシントンを軍事準備地点と同じ地図へ点表示すると、外交交渉の場所と作戦空間を同一の地理変数として読ませやすい。そのため外交側はreadingNoteと時点注記で示し、地図geometryは軍事準備の空間へ限定する。
+- 海上進攻路・真珠湾までの実航路・南方侵攻線はこの地図では描かない。11月中の準備段階を示す目的には、正式集結地域の代表Pointと、単冠湾など史料で確認できる集結・出撃Pointで足りる。これにより12月8日以後の実績経路を逆投影する危険を避ける。
+- Point geometryは「地域の代表点」または「集結・出撃地点」として属性を分ける。仏印・華南・台湾・南西諸島・南洋諸島は広域命令のラベルアンカーであり、部隊の精密駐屯地を意味しない。単冠湾は史料で確認できる具体的集結地点として別カテゴリにする。
+- 新しいLineString / Polygon / time-slice rendererは不要で、既存のpoint-only ThematicMap表示・凡例・popup/touch interactionを再利用できる。実装時はData Audit / Style Auditを行い、変更がPoint featureと既存表示パターンに限定されることを確認した場合のみHuman Visual Audit再利用例外を適用する。
+
+**data-quality judgment:** 採用に必要な時点・役割・空間粒度は確保できる。南方軍の広域集結地域はJapanese Monograph No. 45、単冠湾の集結・出航と外交成功時の帰投条件は米海軍公式戦史、11月6日・20日の作戦準備段階は米陸軍公式戦史で相互に確認できる。一方、個別部隊の正確な駐屯地・海上航路・上陸地点まで確定する根拠はこの判定段階では採用しないため、A42はPoint中心の模式地図として実装する。
+
 ---
 
 # 9. Crosscutting publication gate 候補
@@ -391,6 +406,15 @@ A42は「外交の進行」と「軍事準備の空間」を一枚に重ねれ�
 - 1941-12-01 第8回御前会議
   - https://www.jacar.go.jp/exhibition/nichibei/popup/pop_27.html
 
+## 作戦準備・軍事史料
+
+- Japanese Monograph No. 45, *History of Imperial General Headquarters Army Section* / Southern Operations preparation — 11月6日の南方軍集結命令と9月以後の準備段階
+  - https://www.ibiblio.org/hyperwar/Japan/Monos/pdfs/JM-45/JM-45.pdf
+- U.S. Naval History and Heritage Command, *Pearl Harbor: Why, How, Fleet Salvage and Final Appraisal* — 11月22日までの単冠湾集結、11月25日命令、11月26日出航
+  - https://www.history.navy.mil/research/library/online-reading-room/title-list-alphabetically/p/pearl-harbor-why-how.html
+- U.S. Army Center of Military History, *Command Decisions: Japan's Decision for War* — 11月6日の南方軍準備命令、11月20日の攻撃命令と外交結果待ち条件
+  - https://history.army.mil/portals/143/Images/Publications/catalog/70-7.pdf
+
 ## 米側・FRUS
 
 - Secretary Hull to President Roosevelt, November 26, 1941 — modus vivendiを提示せず包括案へ進む判断
@@ -421,7 +445,7 @@ A42は「外交の進行」と「軍事準備の空間」を一枚に重ねれ�
 - [x] JH110 図版採用または理由付きno-image判定完了
 - [x] JH111 published / JH110との隣接接続確認完了
 - [x] JH111 図版採用または理由付きno-image判定完了
-- [ ] A42 map necessity / data-quality judgment completed
+- [x] A42 map necessity / data-quality judgment completed
 - [ ] A42採用時の必要監査完了、またはno-map理由記録
 - [ ] Crosscutting publication gate completed
 - [ ] passing crosscutting extensions implemented

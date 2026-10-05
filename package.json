@@ -14,7 +14,7 @@
     "validate:instructions": "node scripts/validate-instruction-length.mjs",
     "validate:claim-cautions": "node scripts/validate-claim-cautions.mjs",
     "validate:images": "node scripts/validate-images.mjs",
-    "check": "npm run validate:instructions && npm run validate:period-ranges && npm run validate:claim-cautions && npm run validate:body-depth && npm run validate:period-repetition && npm run validate:images && npm run compile:content && npm run validate:maps && npm run audit:readability -- --json && npm run lint && npm run typecheck && vite build",
+    "check": "npm run validate:instructions && npm run validate:period-ranges && npm run validate:claim-cautions && npm run validate:body-depth && npm run validate:period-repetition && npm run validate:images && npm run compile:content && npm run validate:maps && npm run audit:readability && npm run lint && npm run typecheck && vite build",
     "preview": "vite preview",
     "validate:body-depth": "node scripts/validate-body-depth.mjs",
     "validate:period-repetition": "node scripts/validate-period-repetition.mjs",

@@ -1082,6 +1082,16 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
   ],
 
 
+  '1941-12-08': [
+    commonsFigure('Imperial Rescript Declaring the Pacific War.jpg', {
+      alt: '1941年12月8日に発せられたアメリカ・イギリスに対する宣戦の詔書の文書画像',
+      title: '米英に対する宣戦の詔書',
+      dateLabel: '1941年12月8日',
+      credit: '日本政府公文書／U.S. Army Center of Military History・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+
   '1941-12-06': [
     commonsDocumentFigure(
       'NDL9883676 Extract from Foreign Relations of U. S. - Japan 1931-1941 Vol. II, page 784. Cable sent by President Roosevelt to Secre....pdf',

@@ -1,7 +1,7 @@
 # 1941年10月18日から11月5日まで — 東条内閣成立・国策再検討・11月5日御前会議 実装計画
 
-- **Status:** active
-- **Progress:** phase cut ✅ → JH103 ✅ → JH104 ✅ → JH105 ✅ → JH106 ✅ → A41 ✅ no-map → Crosscutting publication gate ✅ → S13 extension ✅ → phase-end audit judgment ✅ no-audit → 次は npm run check
+- **Status:** completed
+- **Progress:** phase cut ✅ → JH103〜JH106 ✅ → A41 ✅ no-map → Crosscutting publication gate ✅ → S13 extension ✅ → phase-end audit necessity judgment ✅ no-audit → npm run check ✅ → PR #300 / CI #950 ✅ → main CI #951 ✅ → Pages #413 ✅ → phase completed
 - **Created:** 2026-10-05
 - **Scope:** 1941-10-18〜1941-11-05
 - **Article count:** **4年代記事（JH103〜JH106）**
@@ -437,11 +437,11 @@ JACAR展示の解説文を入口にし、本文執筆時は可能な範囲で掲
 - [x] Crosscutting publication gate completed
 - [x] passing crosscutting extensions implemented
 - [x] phase-end audit necessity judgment completed
-- [ ] npm run check green
-- [ ] GitHub Actions CI green
-- [ ] GitHub Pages deploy green
-- [ ] Status = completed
-- [ ] plan_done/へ移動
+- [x] npm run check green
+- [x] GitHub Actions CI green
+- [x] GitHub Pages deploy green
+- [x] Status = completed
+- [x] plan_done/へ移動
 
 ---
 
@@ -459,3 +459,18 @@ JACAR展示の解説文を入口にし、本文執筆時は可能な範囲で掲
 - 甲案・乙案をハル・ノートへの回答として書かない
 - 11月6日以後の甲案提示・来栖派遣・乙案提示・11月26日米側覚書を本フェーズへ先取りしない
 - フェーズ末に理由のない独立全体監査を追加しない
+
+---
+
+# 13. Completion record
+
+- Crosscutting publication gate: S13 extension only; S10 / S12 / S05 / S09 hold
+- S13 extended through 1941-11-05 with the policy-time transition from recalculated waiting horizon to a conditional diplomacy / armed-action branch
+- phase-end audit necessity judgment: no-audit
+- PR: #300 `Extend S13 through November 5 crosscutting gate`
+- PR Quality Checks #167: success
+- PR CI #950: success
+- main commit: `11c124e2774ac0b10d9d10d947b67dc6b9017516`
+- main CI #951: success
+- GitHub Pages #413: success
+- Completed: 2026-10-05

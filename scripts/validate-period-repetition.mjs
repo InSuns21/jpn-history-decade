@@ -33,10 +33,18 @@ function splitFrontmatter(source, file) {
 }
 
 function field(frontmatter, name) {
-  const match = frontmatter.match(
-    new RegExp("^" + name + ":\\s*[\\\"']?([^\\\"'\\n]+)[\\\"']?\\s*$", "mu"),
-  )
-  return match?.[1]?.trim() ?? ''
+  const prefix = name + ':'
+  const line = frontmatter.split('\n').find((item) => item.startsWith(prefix))
+  if (!line) return ''
+  let value = line.slice(prefix.length).trim()
+  if (
+    value.length >= 2 &&
+    ((value.startsWith('"') && value.endsWith('"')) ||
+      (value.startsWith("'") && value.endsWith("'")))
+  ) {
+    value = value.slice(1, -1)
+  }
+  return value.trim()
 }
 
 function normalizeParagraph(paragraph) {

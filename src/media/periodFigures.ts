@@ -1081,4 +1081,19 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     ),
   ],
 
+
+  '1941-12-02': [
+    commonsDocumentFigure(
+      'NDL9884783 Combined Fleet Top Secret Operation Order -1(Nov. 5, 1941), -2(Nov. 7, 1941), -7(Dec. 2, 1941).pdf',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/NDL9884783_Combined_Fleet_Top_Secret_Operation_Order_-1%28Nov._5%2C_1941%29%2C_-2%28Nov._7%2C_1941%29%2C_-7%28Dec._2%2C_1941%29.pdf/page1-960px-NDL9884783_Combined_Fleet_Top_Secret_Operation_Order_-1%28Nov._5%2C_1941%29%2C_-2%28Nov._7%2C_1941%29%2C_-7%28Dec._2%2C_1941%29.pdf.jpg',
+      {
+        alt: '1941年11月5日・7日および12月2日の連合艦隊極秘作戦命令を収録する国立国会図書館所蔵資料の表紙',
+        title: '連合艦隊極秘作戦命令',
+        dateLabel: '1941年11月5日・7日／12月2日',
+        credit: '連合艦隊関係文書／国立国会図書館・Wikimedia Commons',
+        license: 'Public Domain',
+      },
+    ),
+  ],
+
 }

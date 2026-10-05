@@ -1,7 +1,7 @@
 # 1941年12月2日から12月25日まで — 作戦発動、対米覚書、開戦初動、戦争の制度化 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → 次は JH112
+- **Progress:** phase cut ✅ → JH112 ✅ → 次は JH113
 - **Created:** 2026-10-06
 - **Scope:** 1941-12-02〜1941-12-25
 - **Article count:** **5年代記事（JH112〜JH116）**
@@ -400,8 +400,8 @@ JH115で戦争は多国間・多戦域へ拡大した。JH116では、**日本�
 - [x] A43をmap necessity / data-quality judgment候補として設定
 - [x] Crosscutting publication gate候補を定義
 - [x] phase-end audit候補仮説を定義
-- [ ] JH112 published / JH111との隣接接続確認完了
-- [ ] JH112 図版採用または理由付きno-image判定完了
+- [x] JH112 published / JH111との隣接接続確認完了
+- [x] JH112 図版採用または理由付きno-image判定完了
 - [ ] JH113 published / JH112との隣接接続確認完了
 - [ ] JH113 図版採用または理由付きno-image判定完了
 - [ ] JH114 published / JH113との隣接接続確認完了

@@ -1066,4 +1066,19 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     }),
   ],
 
+
+  '1941-11-25': [
+    commonsDocumentFigure(
+      'Hull Note.djvu',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Hull_Note.djvu/page2-500px-Hull_Note.djvu.jpg',
+      {
+        alt: '1941年11月26日米時間に野村・来栖両大使へ手交された米側包括提案、いわゆるハル・ノートの外務省保存資料表紙',
+        title: '米側「太平洋全域の包括的合意の基礎案」関係資料',
+        dateLabel: '1941年11月26日（米時間）',
+        credit: '米国国務省／アジア歴史資料センター・Wikimedia Commons',
+        license: 'Public Domain',
+      },
+    ),
+  ],
+
 }

@@ -1,0 +1,33 @@
+{
+  "period": "1941-11-14",
+  "termRefs": [
+    {
+      "id": "japan-us-proposal-a-1941-11",
+      "core": true
+    },
+    {
+      "id": "kurusu-saburo-special-envoy-1941",
+      "core": true
+    },
+    {
+      "id": "nomura-kichisaburo-us-ambassador-1941",
+      "core": true
+    },
+    {
+      "id": "tripartite-pact-1940",
+      "core": true
+    },
+    {
+      "id": "us-japanese-assets-freezing-1941",
+      "core": false
+    },
+    {
+      "id": "southern-indochina-advance-1941",
+      "core": false
+    },
+    {
+      "id": "japan-us-proposal-b-1941-11",
+      "core": false
+    }
+  ]
+}

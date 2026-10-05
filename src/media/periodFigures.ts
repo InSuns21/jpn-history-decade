@@ -1055,4 +1055,15 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     }),
   ],
 
+
+  '1941-11-14': [
+    commonsFigure('Nomura and Kurusu 27 November 1941.jpg', {
+      alt: '1941年11月17日（米時間）、ルーズヴェルト大統領との会談後に記者団の取材を受ける野村吉三郎駐米大使と来栖三郎特命全権大使',
+      title: '野村・来栖両大使、ホワイトハウス会談後',
+      dateLabel: '1941年11月17日（米時間）',
+      credit: '毎日新聞／アジア歴史資料センター・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+
 }

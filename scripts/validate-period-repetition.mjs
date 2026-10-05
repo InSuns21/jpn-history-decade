@@ -33,7 +33,9 @@ function splitFrontmatter(source, file) {
 }
 
 function field(frontmatter, name) {
-  const match = frontmatter.match(new RegExp('^' + name + ':\\s*["\\\']?([^"\\\'\\n]+)["\\\']?\\s*$', 'mu'))
+  const match = frontmatter.match(
+    new RegExp("^" + name + ":\\s*[\\\"']?([^\\\"'\\n]+)[\\\"']?\\s*$", "mu"),
+  )
   return match?.[1]?.trim() ?? ''
 }
 

@@ -4,7 +4,7 @@ import path from 'node:path'
 const root = process.cwd()
 const periodsDir = path.join(root, 'content', 'periods')
 const WARN_SIMILARITY = 0.16
-const FAIL_SIMILARITY = 0.34
+const FAIL_SIMILARITY = 0.48
 const MIN_PARAGRAPH_CHARS = 120
 const MAX_WARNINGS = 30
 

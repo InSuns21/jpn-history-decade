@@ -1,0 +1,25 @@
+{
+  "page": "kwantung-smr-rights",
+  "termRefs": [
+    {
+      "id": "portsmouth-treaty-1905",
+      "core": false
+    },
+    {
+      "id": "kwantung-leased-territory-1905",
+      "core": true
+    },
+    {
+      "id": "kwantung-governor-general-1906",
+      "core": true
+    },
+    {
+      "id": "south-manchuria-railway-1906",
+      "core": true
+    },
+    {
+      "id": "kwantung-agency-1919",
+      "core": true
+    }
+  ]
+}

@@ -38,119 +38,11 @@
       "core": true
     },
     {
-      "id": "portsmouth-treaty-1905",
-      "core": false
-    },
-    {
-      "id": "kwantung-leased-territory-1905",
-      "core": true
-    },
-    {
-      "id": "kwantung-governor-general-1906",
-      "core": true
-    },
-    {
-      "id": "south-manchuria-railway-1906",
-      "core": true
-    },
-    {
       "id": "march-first-movement-1919",
       "core": true
     },
     {
       "id": "korea-cultural-rule-1919",
-      "core": true
-    },
-    {
-      "id": "kwantung-agency-1919",
-      "core": true
-    },
-    {
-      "id": "takumusho-1929",
-      "core": true
-    },
-    {
-      "id": "kwantung-army-1919",
-      "core": true
-    },
-    {
-      "id": "manchukuo-establishment-1932",
-      "core": true
-    },
-    {
-      "id": "japan-manchukuo-protocol-1932",
-      "core": true
-    },
-    {
-      "id": "lytton-report-1932",
-      "core": true
-    },
-    {
-      "id": "manchukuo-empire-1934",
-      "core": true
-    },
-    {
-      "id": "east-hebei-autonomous-regime-1935",
-      "core": true
-    },
-    {
-      "id": "hebei-chahar-political-council-1935",
-      "core": true
-    },
-    {
-      "id": "chinese-provisional-government-1937",
-      "core": true
-    },
-    {
-      "id": "chinese-reformed-government-1938",
-      "core": true
-    },
-    {
-      "id": "china-regime-internal-guidance-1938",
-      "core": true
-    },
-    {
-      "id": "koa-in-1938",
-      "core": true
-    },
-    {
-      "id": "wang-jingwei-operation-1938",
-      "core": true
-    },
-    {
-      "id": "hainan-occupation-1939",
-      "core": true
-    },
-    {
-      "id": "nanjing-national-government-1940",
-      "core": true
-    },
-    {
-      "id": "matsuoka-henry-agreement-1940",
-      "core": true
-    },
-    {
-      "id": "nishihara-martin-agreement-1940",
-      "core": true
-    },
-    {
-      "id": "northern-french-indochina-advance-1940",
-      "core": true
-    },
-    {
-      "id": "japan-china-basic-treaty-1940",
-      "core": true
-    },
-    {
-      "id": "japan-manchukuo-china-joint-declaration-1940",
-      "core": true
-    },
-    {
-      "id": "franco-thai-peace-treaty-1941",
-      "core": true
-    },
-    {
-      "id": "japan-french-indochina-joint-defense-understanding-1941",
       "core": true
     }
   ]

@@ -123,8 +123,25 @@ function collectStrings(value, output = []) {
   return output
 }
 
-function publicFrontmatterText(frontmatter) {
-  return PUBLIC_FRONTMATTER_FIELDS.flatMap((field) => collectStrings(frontmatter[field])).join('\n')
+function publicFrontmatterSegments(frontmatter) {
+  return PUBLIC_FRONTMATTER_FIELDS.flatMap((field) => collectStrings(frontmatter[field]))
+}
+
+function bodySegments(body) {
+  const segments = []
+  for (const block of body.split(/\n\s*\n/)) {
+    const lines = block
+      .split('\n')
+      .map((line) => line.trim())
+      .filter(Boolean)
+    if (lines.length === 0) continue
+    if (lines.every((line) => /^[-*]\s+/.test(line))) {
+      segments.push(...lines)
+    } else {
+      segments.push(lines.join(' '))
+    }
+  }
+  return segments
 }
 
 function stripMarkdown(value) {
@@ -139,8 +156,8 @@ function stripMarkdown(value) {
 }
 
 function splitSentences(text) {
-  const normalized = text.replace(/\r/g, '')
-  const chunks = normalized.split(/(?<=[。！？])|\n+/u)
+  const normalized = text.replace(/\r/g, '').replace(/\n+/g, ' ')
+  const chunks = normalized.split(/(?<=[。！？])/u)
   return chunks.map((chunk) => chunk.trim()).filter(Boolean)
 }
 
@@ -191,8 +208,9 @@ function analyseDocument(kind, file) {
   const routeKey = String(frontmatter.routeKey ?? '')
   const status = String(frontmatter.status ?? '')
   const title = String(frontmatter.title ?? '')
-  const publicText = `${publicFrontmatterText(frontmatter)}\n${body}`
-  const sentences = splitSentences(publicText)
+  const publicSegments = [...publicFrontmatterSegments(frontmatter), ...bodySegments(body)]
+  const publicText = publicSegments.join('\n')
+  const sentences = publicSegments.flatMap((segment) => splitSentences(segment))
 
   let long100 = 0
   let long120 = 0
@@ -243,8 +261,20 @@ function analyseDocument(kind, file) {
     firstTermDense,
   }
   const activeFamilies = Object.values(signals).filter((value) => value > 0).length
-  const severeOverlap = long120 > 0 && (abstractLead > 0 || entityDense > 0 || commaDense > 0)
-  const priority = activeFamilies >= 4 || severeOverlap ? 'high' : activeFamilies >= 2 ? 'medium' : 'low'
+  const coreFamilies = [long100, long120, abstractLead, deictic, firstTermDense].filter(
+    (value) => value > 0,
+  ).length
+  const highOverlap =
+    long120 >= 2 ||
+    (abstractLead >= 2 && deictic >= 1) ||
+    (long100 >= 3 && (abstractLead >= 1 || deictic >= 1 || firstTermDense >= 1)) ||
+    firstTermDense >= 2 ||
+    (coreFamilies >= 3 && (long120 >= 1 || deictic >= 1))
+  const mediumOverlap =
+    coreFamilies >= 1 ||
+    (entityDense >= 10 && commaDense >= 10) ||
+    (entityDense >= 6 && commaDense >= 6)
+  const priority = highOverlap ? 'high' : mediumOverlap ? 'medium' : 'low'
 
   return {
     kind,
@@ -255,6 +285,7 @@ function analyseDocument(kind, file) {
     wave: kind === 'period' ? periodWave(routeKey) : 'R11',
     priority,
     activeFamilies,
+    coreFamilies,
     signals,
   }
 }

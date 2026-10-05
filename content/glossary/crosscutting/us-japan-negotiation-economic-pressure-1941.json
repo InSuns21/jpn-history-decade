@@ -56,6 +56,22 @@
     {
       "id": "third-konoe-cabinet-resignation-1941",
       "core": true
+    },
+    {
+      "id": "tojo-cabinet-policy-reconsideration-1941-10",
+      "core": true
+    },
+    {
+      "id": "imperial-policy-guideline-1941-11",
+      "core": true
+    },
+    {
+      "id": "japan-us-proposal-a-1941-11",
+      "core": true
+    },
+    {
+      "id": "japan-us-proposal-b-1941-11",
+      "core": true
     }
   ]
 }

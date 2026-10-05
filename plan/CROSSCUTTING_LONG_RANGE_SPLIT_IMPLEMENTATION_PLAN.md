@@ -1,7 +1,7 @@
 # 横断記事4本の分割・再編 実装計画
 
 - **Status:** active
-- **Progress:** plan cut ✅ → S02 ✅ → S05 split inventory ✅ → S05 split implementation ✅ → S05 CI ✅ → 次は S09「対外支配の制度差」split inventory
+- **Progress:** plan cut ✅ → S02 ✅ → S05 ✅ → S09 split inventory ✅ → S09 split implementation ✅ → 次は S09 CI / publication check
 - **Created:** 2026-10-05
 - **Scope:** 第2章「横断して読む」のうち、長期に延長され続けた構造史4本の再編
 - **Targets:**
@@ -251,7 +251,18 @@
 - **Compatibility:** #/structure/political-participation-channels はS05-Aへ残し、旧リンクを404にしない。
 - **Reason for five articles:** PLAN初期案の4本では1931〜1941年に、選挙・非政党内閣と政党解体・翼賛体制という独立した二つの問いが残るため、再度の長大化を避けて5本へ分けた。
 
-## 11. Non-goals
+## 11. S09 inventory / split record
+
+- **Inventory:** 29節。全類型共通の総論・巨大比較・地図論・全期間総括を外し、制度類型ごとの4本へ再配置した。
+- **S09-A / external-rule-institutions:** 旧routeを継承。台湾・朝鮮について、領土編入までの法的経路、総督府統治、現地社会、1919〜20年の統治・地方制度再編を扱う。
+- **S09-B / kwantung-smr-rights:** 関東州の租借地行政と南満洲鉄道の会社権益を扱う。領土主権、租借地行政、軍事権限、企業権益を分離する。
+- **S09-C / manchukuo-occupied-china-rule:** 満洲国、華北・華中の占領地政権、興亜院、南京国民政府承認を扱い、政府形式と日本側の実効的権限を比較する。
+- **S09-D / indochina-thailand-access-mediation:** 北部仏印進駐、仏タイ調停・保障、南部仏印共同防衛を扱い、相手側主権・行政を残した軍事アクセスと政治的役割を分ける。
+- **Scope reduction:** 旧記事の『まず支配したを分解する』『同じ軸で比較する』『地図で表現すべきなのは…』『1941年時点で見える構造』という全類型横断の巨大総括は削除し、各記事末尾でその制度類型だけを閉じる。
+- **Dropped from direct migration:** 1929年拓務省節は複数の外地制度を一つの中央官庁から横断して見る節であり、4記事のいずれかへ押し込むと再び総論化するため移植しない。必要なら拓務行政そのものを中心問いとする別記事候補として判定する。
+- **Compatibility:** #/structure/external-rule-institutions はS09-Aへ残し、旧リンクを404にしない。
+
+## 12. Non-goals
 
 - 第1章の年代記事そのものを再分割すること。
 - 第2章の全テーマ史・構造史を一括再設計すること。

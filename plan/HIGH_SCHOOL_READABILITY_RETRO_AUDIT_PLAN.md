@@ -36,10 +36,10 @@ PLAN作成時点のリポジトリには、少なくとも次のMarkdown原稿�
 | 種別 | ディレクトリ | ファイル数 | 扱い |
 |---|---|---:|---|
 | 年代史 | content/periods/ | 114 | 全件監査・必要箇所修正 |
-| 構造史 | content/structures/ | 20 | 全件screening後、全件人間確認 |
+| 構造史 | content/structures/ | 21 | 全件screening後、全件人間確認 |
 | テーマ史 | content/themes/ | 5 | 全件screening後、全件人間確認 |
 
-合計 **139原稿** を初期監査在庫とする。ただしR0でfrontmatterの公開状態を読み取り、実際の公開本文リストを固定する。作業中に本線フェーズで新規公開された原稿は、本PLANの負債在庫を無制限に増やさない。新規原稿は更新済み執筆規約を通常DoDとして適用する。
+合計 **140原稿** をR0で確定した初期監査在庫とする。ただしR0でfrontmatterの公開状態を読み取り、実際の公開本文リストを固定する。作業中に本線フェーズで新規公開された原稿は、本PLANの負債在庫を無制限に増やさない。新規原稿は更新済み執筆規約を通常DoDとして適用する。
 
 ### 2.2 対象
 
@@ -96,9 +96,20 @@ PLAN作成時点のリポジトリには、少なくとも次のMarkdown原稿�
 
 ---
 
-## 4. R0 — 全139原稿のinventoryと候補抽出
+## 4. R0 — 全140原稿のinventoryと候補抽出
 
 最初に監査対象を固定し、機械的な候補抽出を行う。
+
+**R0 completed: 2026-10-06**
+
+- 基準commit: `bf7dfbbba853f6a60ef1000a62240128063f1e79`
+- 公開在庫: 年代史114件 / 構造史21件 / テーマ史5件 = **140件**
+- screening baseline: high 42 / medium 89 / low 9
+- report-only実装: `scripts/report-readability.mjs` / `npm run audit:readability`
+- 詳細inventory・wave一覧・before値: [docs/READABILITY_RETRO_R0.md](../docs/READABILITY_RETRO_R0.md)
+- 機械可読baseline: [docs/readability-retro-r0-baseline.json](../docs/readability-retro-r0-baseline.json)
+
+PLAN作成時の139件はR0前の概算で、frontmatter実読により構造史が20件ではなく21件と確認されたため140件へ訂正した。以後この140件を遡及負債として固定し、後から公開された原稿はnew-authoringへ分離する。
 
 ### 4.1 inventory
 
@@ -155,9 +166,9 @@ R2〜R6を年単位に分けるのは、1937年以後の記事密度が高く、
 
 ---
 
-## 6. R11 — 構造史20件・テーマ史5件
+## 6. R11 — 構造史21件・テーマ史5件
 
-年代史で校正した基準を25件の横断記事へ適用する。
+年代史で校正した基準を26件の横断記事へ適用する。
 
 横断記事は年代史より抽象語を使う必然性が高いため、「抽象語が多い」こと自体を問題にしない。次を重点確認する。
 
@@ -253,8 +264,8 @@ report-onlyでよいものは、文長、抽象語密度、指示語、読点密
 
 ## 12. Definition of Done
 
-- [ ] R0で監査対象inventoryを固定
-- [ ] report-onlyの候補抽出手段を用意
+- [x] R0で監査対象inventoryを固定
+- [x] report-onlyの候補抽出手段を用意
 - [ ] 年代史114件をR1〜R10で全件Human Readability Audit
 - [ ] 必要な年代史修正を完了
 - [ ] 構造史・テーマ史の公開対象を全件Human Readability Audit

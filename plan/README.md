@@ -17,13 +17,6 @@
   - Progress: phase cut ✅ → JH103 ✅ → JH104 ✅ → JH105 ✅ → JH106 ✅ → A41 ✅ no-map → 次は Crosscutting publication gate
   - 東条英機内閣成立から、9月6日国策の再検討、作戦・船舶・資源・外交見通しの再点検、11月1日の政策収束、11月5日の御前会議による新たな「帝国国策遂行要領」と対米甲案・乙案の正式決定までを追う。11月6日以後の甲案提示・来栖派遣・乙案・11月26日の米側覚書は次フェーズへ送る。
 
-### 横断記事再編
-
-- [CROSSCUTTING_LONG_RANGE_SPLIT_IMPLEMENTATION_PLAN.md](./CROSSCUTTING_LONG_RANGE_SPLIT_IMPLEMENTATION_PLAN.md)
-  - Scope: S02「石高制・貨幣経済・財政」 / S05「政治参加の回路」 / S09「対外支配の制度差」 / S10「産業社会の負担と保護」
-  - Progress: plan cut ✅ → S02 ✅ → S05 ✅ → S09 ✅ → S10 split inventory ✅ → S10 split implementation ✅ → 次は S10 CI / publication check
-  - 長期延長で複数の中心問いを抱えた4本を、年代の等分ではなく制度・中心問いの境界で分割する。新年代との関連だけを理由に横断記事を自動延長しない原則も規約へ反映する。
-
 遡及地図監査・実装planは [MAP_RETRO_AUDIT_AND_IMPLEMENTATION_PLAN.md](../plan_done/MAP_RETRO_AUDIT_AND_IMPLEMENTATION_PLAN.md) としてimplementation-complete / archive済み。Human Visual Auditの残件は [MAP_HUMAN_VISUAL_AUDIT_BACKLOG.md](../docs/MAP_HUMAN_VISUAL_AUDIT_BACKLOG.md) で継続管理する。
 
 ## ライフサイクル

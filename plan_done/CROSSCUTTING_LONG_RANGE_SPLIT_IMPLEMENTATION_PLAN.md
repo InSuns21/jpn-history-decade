@@ -1,8 +1,9 @@
 # 横断記事4本の分割・再編 実装計画
 
-- **Status:** active
-- **Progress:** plan cut ✅ → S02 ✅ → S05 ✅ → S09 ✅ → S10 split inventory ✅ → S10 split implementation ✅ → 次は S10 CI / publication check
+- **Status:** completed
+- **Progress:** plan cut ✅ → S02 ✅ → S05 ✅ → S09 ✅ → S10 ✅ → CI ✅ → Pages ✅ → archived ✅
 - **Created:** 2026-10-05
+- **Completed:** 2026-10-05
 - **Scope:** 第2章「横断して読む」のうち、長期に延長され続けた構造史4本の再編
 - **Targets:**
   1. `s02 / fiscal-transition` — 「石高制・貨幣経済・財政」1800〜1937年11月12日
@@ -10,7 +11,7 @@
   3. `s09 / external-rule-institutions` — 「対外支配の制度差」1895〜1941年7月24日
   4. `s10 / industrial-social-burdens` — 「産業社会の負担と保護」1890年代〜1941年9月5日
 - **Primary goal:** 第2章が「年代史をもう一本、長い因果鎖として再構成する場所」になるのを避け、各横断記事を一つの中心問いで閉じる。長期比較の価値は残しつつ、後年の出来事が増えるたびに同じ記事を自動延長する運用から離れる。
-- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](./JPN_HISTORY_DECADE_PLAN.md)
+- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](../plan/JPN_HISTORY_DECADE_PLAN.md)
 - **Standards:** [CONTENT_AUTHORING_STANDARD.md](../standards/CONTENT_AUTHORING_STANDARD.md) / [PROJECT_WORKFLOW_STANDARD.md](../standards/PROJECT_WORKFLOW_STANDARD.md)
 
 ---
@@ -281,3 +282,17 @@
 - 「近現代史24」というサイト名に合わせて記事総数を24本へ固定すること。
 - 分割記事数をノルマ化すること。
 - 1941年以後の未実装時代まで、先回りして横断記事を延長すること。
+
+
+---
+
+## 14. Completion summary
+
+- S02「石高制・貨幣経済・財政」: 4本へ分割。
+- S05「政治参加の回路」: 5本へ分割。
+- S09「対外支配の制度差」: 4本へ分割。
+- S10「産業社会の負担と保護」: 5本へ分割。
+- 旧routeKeyは各系列の先頭記事へ残し、既存URLの互換性を維持した。
+- 長期記事を新年代との関連だけで自動延長しない原則を `CONTENT_AUTHORING_STANDARD.md` へ反映した。
+- S05では1938〜39年の政府・軍内部の戦争指導を政治参加記事から外し、S09では全類型を束ねる巨大総括と拓務省節を直接移植せず、S10では1937年戦費をS02-D、1941年夏の対外供給制約をS13へ委譲した。
+- 最終のS10公開変更は PR #298 で main へマージし、commit `3c68c4d38bb2f4becd871678237268c7d9a3d795` で CI / GitHub Pages deploy green を確認した。

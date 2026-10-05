@@ -1,0 +1,49 @@
+{
+  "page": "depression-social-burdens",
+  "termRefs": [
+    {
+      "id": "showa-financial-panic-1927",
+      "core": true
+    },
+    {
+      "id": "earthquake-bills-1923",
+      "core": true
+    },
+    {
+      "id": "world-depression-1929",
+      "core": true
+    },
+    {
+      "id": "gold-embargo-lifting-1930",
+      "core": true
+    },
+    {
+      "id": "inoue-finance-1929",
+      "core": true
+    },
+    {
+      "id": "showa-depression-1930",
+      "core": true
+    },
+    {
+      "id": "census-1930",
+      "core": true
+    },
+    {
+      "id": "gold-export-reembargo-1931",
+      "core": true
+    },
+    {
+      "id": "managed-currency-transition-1932",
+      "core": true
+    },
+    {
+      "id": "takahashi-finance-1932",
+      "core": true
+    },
+    {
+      "id": "boj-government-bond-underwriting-1932",
+      "core": true
+    }
+  ]
+}

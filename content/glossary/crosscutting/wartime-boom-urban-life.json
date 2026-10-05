@@ -1,0 +1,25 @@
+{
+  "page": "wartime-boom-urban-life",
+  "termRefs": [
+    {
+      "id": "wwi-wartime-boom",
+      "core": true
+    },
+    {
+      "id": "rice-riots-1918",
+      "core": true
+    },
+    {
+      "id": "postwar-panic-1920",
+      "core": true
+    },
+    {
+      "id": "first-census-1920",
+      "core": false
+    },
+    {
+      "id": "imperial-capital-reconstruction-1923",
+      "core": false
+    }
+  ]
+}

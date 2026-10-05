@@ -1,0 +1,29 @@
+{
+  "page": "economic-mobilization-organization-1940-1941",
+  "termRefs": [
+    {
+      "id": "dainihon-sangyo-hokokukai-1940",
+      "core": true
+    },
+    {
+      "id": "economic-new-system-outline-1940",
+      "core": true
+    },
+    {
+      "id": "national-general-mobilization-law-1938",
+      "core": true
+    },
+    {
+      "id": "national-mobilization-law-amendment-1941",
+      "core": true
+    },
+    {
+      "id": "material-mobilization-q1-plan-1941",
+      "core": true
+    },
+    {
+      "id": "trade-control-order-1941",
+      "core": true
+    }
+  ]
+}

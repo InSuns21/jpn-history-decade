@@ -1,0 +1,41 @@
+{
+  "period": "1941-10-31",
+  "termRefs": [
+    {
+      "id": "tojo-cabinet-policy-reconsideration-1941-10",
+      "core": true
+    },
+    {
+      "id": "imperial-headquarters-government-liaison-conference-1937",
+      "core": true
+    },
+    {
+      "id": "army-general-staff",
+      "core": true
+    },
+    {
+      "id": "gozen-kaigi",
+      "core": true
+    },
+    {
+      "id": "imperial-policy-guideline-1941-11",
+      "core": true
+    },
+    {
+      "id": "japan-us-proposal-a-1941-11",
+      "core": true
+    },
+    {
+      "id": "japan-us-proposal-b-1941-11",
+      "core": true
+    },
+    {
+      "id": "togo-shigenori-foreign-minister-1941",
+      "core": false
+    },
+    {
+      "id": "nomura-kichisaburo-us-ambassador-1941",
+      "core": false
+    }
+  ]
+}

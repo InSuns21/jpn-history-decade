@@ -385,6 +385,7 @@ report-onlyでよいものは、文長、抽象語密度、指示語、読点密
 - [ ] 全対象のfinal screeningを実施
 - [x] unresolved high-priority readability debt = 0
 - [x] hard CI化の要否を最終判定し、採用しない場合も理由を記録
+- Final screening詳細: [docs/READABILITY_RETRO_FINAL.md](../docs/READABILITY_RETRO_FINAL.md)
 - [ ] npm run check green
 - [ ] GitHub Actions CI green
 - [ ] 公開本文変更後のGitHub Pages deploy green

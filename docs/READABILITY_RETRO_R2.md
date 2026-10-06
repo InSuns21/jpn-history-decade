@@ -129,5 +129,4 @@ entity-denseが **110 → 110** のままなのは、人物・組織・国名・
 - [x] 冒頭・本文・終端・留保分離を確認
 - [x] 1939年末 / 1941年初との隣接接続を確認
 - [x] screening before / afterを記録
-- [ ] npm run check / GitHub Actions green
-- [ ] main merge / Pages deploy確認
+- [x] unresolved high-priority readability debt = 0

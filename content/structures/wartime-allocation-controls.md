@@ -169,7 +169,7 @@ maps: []
 
 9月10日に公布された[[term:temporary-funds-adjustment-law-1937|臨時資金調整法]]は、「物資及資金ノ需給ノ適合」を目的に、企業の新設・増資や設備資金の供給などを調整する枠組みを設けた。[@ndl-temporary-funds-adjustment] 第72回帝国議会で政府は、民間の自主的な調整も利用しつつ、重要な用途へ資金を向ける必要を説明していた。[@diet-72-house-sept5]
 
-同じ時期には[[term:foreign-exchange-control-law-1933|外国為替管理法]]の改正、[[term:temporary-import-export-measures-law-1937|輸出入品等に関する臨時措置]]、[[term:military-industry-mobilization-law|軍需工業動員法]]を「事変」に適用するための法律も公布された。[@ndl-foreign-exchange-control][@ndl-import-export-temporary][@ndl-military-industry-application] これにより政府は、資金だけでなく外貨・輸出入・軍需生産についても、平時より強く優先順位をつける制度を持つようになった。
+同じ時期には[[term:foreign-exchange-control-law-1933|外国為替管理法]]が改正され、外国為替への統制が強まった。さらに[[term:temporary-import-export-measures-law-1937|輸出入品等に関する臨時措置]]と、[[term:military-industry-mobilization-law|軍需工業動員法]]を「事変」に適用するための法律も公布された。[@ndl-foreign-exchange-control][@ndl-import-export-temporary][@ndl-military-industry-application] これにより政府は、資金に加えて外貨・輸出入・軍需生産にも優先順位をつける制度を持つようになった。
 
 ここでいう負担には、税としての現金支払いに加え、資金・外貨・物資へのアクセス制約も含まれる。政策上の優先順位がつけば、ある企業は設備資金や輸入原料を得やすくなり、別の用途は資金・外貨・物資へのアクセスを制約され得る。法律成立時点では企業・市場・家計への統制は段階的だった。産業・家計ごとの実際の影響は、個別の実施状況や統計によって異なる。
 
@@ -221,9 +221,9 @@ maps: []
 
 ## 1939年10月〜1940年1月26日 — 配置の統制から、取引条件そのものの統制へ {#price-wage-material-controls-1939}
 
-1939年夏までの統制は、労働力をどこへ配置するか、企業利益をどこへ回すか、電力や米の不足をどう配分するかという資源配分の問題を強めていた。10月18日に公布され20日に施行された[[term:price-control-order-1939|価格等統制令]]、[[term:temporary-wage-measures-order-1939|賃金臨時措置令]]、[[term:company-staff-salary-temporary-measures-order-1939|会社職員給与臨時措置令]]は、商品・運賃等の価格と、労働者・職員へ支払う所得の両側を共通の基準日へ結びつけて抑える制度を置いた。[@ndl-price-control-order-1939][@ndl-temporary-wage-measures-order-1939][@nagoya-company-salary-order-1939]
+1939年夏までの統制は、労働力をどこへ配置するか、企業利益をどこへ回すか、電力や米の不足をどう配分するかという資源配分の問題を強めていた。10月18日には[[term:price-control-order-1939|価格等統制令]]が公布され、20日に施行された。さらに[[term:temporary-wage-measures-order-1939|賃金臨時措置令]]と[[term:company-staff-salary-temporary-measures-order-1939|会社職員給与臨時措置令]]も同時期に施行され、商品・運賃等の価格と労働者・職員へ支払う所得を共通の基準日へ結びつけた。[@ndl-price-control-order-1939][@ndl-temporary-wage-measures-order-1939][@nagoya-company-salary-order-1939]
 
-同じ時期の[[term:electric-power-adjustment-order-1939|電力調整令]]は電力の生産・配給・消費を行政調整へ組み込み、12月の[[term:tenant-rent-control-order-1939|小作料統制令]]は農村の土地利用負担へ、[[term:mobilization-material-use-requisition-order-1939|総動員物資使用収用令]]は重要物資の使用・収用へ統制範囲を広げた。[@ndl-electric-power-adjustment-order-1939][@ndl-tenant-rent-control-order-1939][@nagoya-mobilization-material-requisition-order-1939]
+同じ時期の[[term:electric-power-adjustment-order-1939|電力調整令]]は、電力の生産・配給・消費を行政調整へ組み込んだ。12月には[[term:tenant-rent-control-order-1939|小作料統制令]]が農村の土地利用負担へ、[[term:mobilization-material-use-requisition-order-1939|総動員物資使用収用令]]が重要物資の使用・収用へ統制範囲を広げた。[@ndl-electric-power-adjustment-order-1939][@ndl-tenant-rent-control-order-1939][@nagoya-mobilization-material-requisition-order-1939]
 
 1939年秋には負担配分の仕組みが一段変わった。1937〜1939年夏の制度は、税・公債、資金・外貨、採用・徴用、企業配当、電力・米の優先配分を通じて「誰へ資源を回すか」を調整していた。そこへ、**「いくらで売るか」「いくらで働くか」「どの条件で電力・土地・物資を使うか」という取引条件への行政統制**が加わった。
 
@@ -231,7 +231,7 @@ maps: []
 
 ## 1940年2月〜3月29日 — 取引条件から、設備・土地・輸送力の利用権へ {#asset-use-and-transport-controls-1940}
 
-1939年秋までの統制は、価格・賃金・給与・電力・小作料・重要物資などについて、企業や家計が市場や契約で決める条件へ行政基準を広げていた。1940年2月1日には、1939年12月に公布されていた[[term:factory-business-premises-use-requisition-order-1939|工場事業場使用収用令]]と[[term:land-structures-management-use-requisition-order-1939|土地工作物管理使用収用令]]が施行され、工場・事業場・土地・工作物の使用、管理、収用を総動員上の行政命令へ接続する制度が動き始めた。[@jacar-wartime-system-timeline-1940][@ndl-kanpo-1940-02-01]
+1939年秋までの統制は、価格・賃金・給与・電力・小作料・重要物資などについて、企業や家計が市場や契約で決める条件へ行政基準を広げていた。1940年2月1日には、1939年12月公布の[[term:factory-business-premises-use-requisition-order-1939|工場事業場使用収用令]]と[[term:land-structures-management-use-requisition-order-1939|土地工作物管理使用収用令]]が施行された。工場・事業場・土地・工作物の使用、管理、収用を総動員上の行政命令へ接続する制度が動き始めた。[@jacar-wartime-system-timeline-1940][@ndl-kanpo-1940-02-01]
 
 同じ2月1日には[[term:shipping-control-order-1940|海運統制令]]が公布・施行され、海上輸送能力も総動員上の配分・利用調整へ組み込まれた。原料・燃料・食料を運ぶ船舶と海運は、生産量そのものとは別に、物資を必要な場所へ移す能力である。政府がこの能力の利用条件へ関与することで、統制対象は「何を何個使うか」から「輸送能力を誰がどの用途へ使うか」へ広がった。[@jacar-wartime-system-timeline-1940]
 
@@ -253,6 +253,6 @@ maps: []
 
 ## 市場取引から行政配分へ {#wartime-allocation-balance}
 
-1937年秋の資金・輸出入統制から1940年の石炭・米穀・海運統制まで、政府の関与は企業が投資資金を得る条件、誰を雇うか、価格や賃金をどう決めるか、設備や土地を誰が使うか、基礎物資をどの用途へ配るかへ段階的に広がった。
+1937年秋から1940年にかけて、政府の統制対象は資金・輸出入から労働、価格・賃金、設備・土地、石炭・米穀・海運へ段階的に広がった。企業や家計が資金・物資・労働力をどの用途へ使えるかを、行政が優先順位に沿って調整する範囲が拡大した。
 
 この変化の中心は、限られた資源の優先順位を行政が決める範囲が広がったことにある。軍需・重要産業へ配分を寄せるほど、非優先用途の企業・労働者・農家・家計には資金・物資・雇用・消費面の制約が強く現れた。

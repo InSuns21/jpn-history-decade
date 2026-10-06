@@ -1,0 +1,12 @@
+{
+  "period": "1941-12-09",
+  "termRefs": [
+    {"id":"china-declaration-war-japan-1941-12-09","core":true},
+    {"id":"battle-off-malaya-1941-12-10","core":true},
+    {"id":"wake-island-first-landing-1941-12-11","core":true},
+    {"id":"axis-declarations-war-us-1941-12-11","core":true},
+    {"id":"tripartite-pact-1940","core":false},
+    {"id":"pearl-harbor-attack-1941-12-08","core":false},
+    {"id":"malaya-operation-opening-1941-12-08","core":false}
+  ]
+}

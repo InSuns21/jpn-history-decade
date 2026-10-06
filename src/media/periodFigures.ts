@@ -1120,4 +1120,15 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     ),
   ],
 
+  '1941-12-09': [
+    commonsFigure('HMS Prince of Wales and HMS Repulse underway with a destroyer on 10 December 1941 (80-G-413520).jpg', {
+      alt: '1941年12月10日、マレー沖で日本軍機の攻撃を受けるHMS Prince of WalesとHMS Repulse。手前に英駆逐艦が見える',
+      title: 'マレー沖海戦のPrince of WalesとRepulse',
+      dateLabel: '1941年12月10日',
+      credit: '撮影者不詳／U.S. Naval History and Heritage Command・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+
+
 }

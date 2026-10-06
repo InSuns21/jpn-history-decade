@@ -227,6 +227,17 @@ report-only機能は通常CIを落とさない。監査途中で閾値を通す�
 - 史実・source ID / URL・glossary term ID・地図・図版・年代境界は変更していない。
 - 詳細: [docs/READABILITY_RETRO_R7.md](../docs/READABILITY_RETRO_R7.md)
 
+**R8 completed: 2026-10-06**
+
+- 1906〜1930年の7記事を全件Human Readability Auditし、7件すべてを実修正した。
+- R0 screeningのhigh候補は1件から0件へ減少した。修正後に残るmedium候補4件も人間確認済みである。
+- 100字以上文 4→0、120字以上文 1→0、分析語先行 2→0、広い指示語 2→0、first-term-dense 2→0。
+- 政党政治・帝国統治・金融制度を、「回路」「構造」より先に内閣・政党・元老・軍・総督府・銀行・枢密院などの具体的な主体と手続で追えるよう修正した。
+- 1906〜1923年に残っていたcaution型の `contemporaryAssumptions` を、肯定的な当時の前提と `interpretiveCautions` へ再分離した。
+- 1901→1906、R8内の各隣接年代、1929→1931の接続を確認した。
+- 史実・source ID / URL・glossary term ID・地図・図版・年代境界は変更していない。
+- 詳細: [docs/READABILITY_RETRO_R8.md](../docs/READABILITY_RETRO_R8.md)
+
 R2〜R6を年単位に分けるのは、1937年以後の記事密度が高く、57件を一括修正するとレビュー差分が大きくなりすぎるためである。
 
 各waveはさらに **5〜10記事程度の小PR** へ分けてよい。日付境界よりレビュー可能な差分量を優先する。ただし隣接ページの接続を壊す分割は避ける。

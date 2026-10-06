@@ -278,6 +278,17 @@ R2〜R6を年単位に分けるのは、1937年以後の記事密度が高く、
 
 既存の中心問い・比較軸は原則維持し、年代記事の要約へ戻さない。
 
+**R11 completed: 2026-10-07**
+
+- 構造史21件・テーマ史5件の26記事を全件Human Readability Auditし、26件すべてを実修正した。
+- R0 screeningのhigh候補は7件から0件へ減少した。修正後に残るmedium候補17件も全件人間確認済みである。
+- 100字以上文 33→17、120字以上文 6→2、分析語先行 10→7、広い指示語 11→3、first-term-dense 7→4。
+- 横断記事に残っていた「このページの比較軸」「S05/S13」「この構造・回路」などの編集者語を、具体的な主体・制度・権限へ戻した。
+- 通説批判や仮想読者への反論から始まる箇所を、既存史料で支えられた主体・行為・結果の肯定文へ直した。
+- 史実・source ID / URL・glossary term ID・relatedPeriods・地図・図版は意図的に変更していない。
+- hard CI追加は不要と判定し、readability signalはreport-onlyのレビュー補助として残す。
+- 詳細: [docs/READABILITY_RETRO_R11.md](../docs/READABILITY_RETRO_R11.md)
+
 ---
 
 ## 7. 1原稿ごとのHuman Readability Audit
@@ -366,14 +377,14 @@ report-onlyでよいものは、文長、抽象語密度、指示語、読点密
 - [x] report-onlyの候補抽出手段を用意
 - [x] 年代史114件をR1〜R10で全件Human Readability Audit
 - [x] 必要な年代史修正を完了
-- [ ] 構造史・テーマ史の公開対象を全件Human Readability Audit
-- [ ] 必要な横断記事修正を完了
-- [ ] 各修正で史実・引用・出典・用語リンクを維持または再検証
-- [ ] 修正した年代ページの隣接接続を確認
+- [x] 構造史・テーマ史の公開対象を全件Human Readability Audit
+- [x] 必要な横断記事修正を完了
+- [x] 各修正で史実・引用・出典・用語リンクを維持または再検証
+- [x] 修正した年代ページの隣接接続を確認
 - [ ] claim/caution・body-depth・repetition・image/map等の既存validationを壊していない
 - [ ] 全対象のfinal screeningを実施
-- [ ] unresolved high-priority readability debt = 0
-- [ ] hard CI化の要否を最終判定し、採用しない場合も理由を記録
+- [x] unresolved high-priority readability debt = 0
+- [x] hard CI化の要否を最終判定し、採用しない場合も理由を記録
 - [ ] npm run check green
 - [ ] GitHub Actions CI green
 - [ ] 公開本文変更後のGitHub Pages deploy green

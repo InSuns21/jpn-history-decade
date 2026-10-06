@@ -168,6 +168,15 @@ report-only機能は通常CIを落とさない。監査途中で閾値を通す�
 - 史実・source ID / URL・glossary term ID・地図・図版・年代境界は変更していない。
 - 詳細: [docs/READABILITY_RETRO_R1.md](../docs/READABILITY_RETRO_R1.md)
 
+**R2 completed: 2026-10-06**
+
+- 1940年の14記事を全件Human Readability Auditし、14件すべてを実修正した。
+- R0 screeningのhigh候補は6件から0件へ減少した。修正後に残るmedium候補11件も人間確認済みである。
+- 100字以上文 13→8、120字以上文 0→0、分析語先行 19→6、広い指示語 11→3。
+- 1〜3月は重複説明の一本化、7〜12月は「回路」「構造」などの分析語を具体的な組織・会議・交渉手続へ戻す修正を中心とした。
+- 史実・source ID / URL・glossary term ID・地図・図版・年代境界は変更していない。
+- 詳細: [docs/READABILITY_RETRO_R2.md](../docs/READABILITY_RETRO_R2.md)
+
 R2〜R6を年単位に分けるのは、1937年以後の記事密度が高く、57件を一括修正するとレビュー差分が大きくなりすぎるためである。
 
 各waveはさらに **5〜10記事程度の小PR** へ分けてよい。日付境界よりレビュー可能な差分量を優先する。ただし隣接ページの接続を壊す分割は避ける。

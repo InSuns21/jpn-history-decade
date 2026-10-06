@@ -22,7 +22,7 @@ R0でhigh候補だった1923年は **high 1 → 0** となった。100字以上�
 
 ## 2. screening before / after
 
-screeningはreport-onlyのレビュー補助であり、pass/fail基準ではない。
+screeningはreport-onlyのレビュー補助であり、pass/fail基準ではない。下表のafter値は最終文面の再集計結果である。
 
 | signal | R0 before | R8 after |
 |---|---:|---:|

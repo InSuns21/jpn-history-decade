@@ -3,7 +3,7 @@
 - **Status:** final screening completed
 - **Completed:** 2026-10-07
 - **Scope:** published 140記事（年代史114・構造史21・テーマ史5）
-- **Parent plan:** [HIGH_SCHOOL_READABILITY_RETRO_AUDIT_PLAN.md](../plan/HIGH_SCHOOL_READABILITY_RETRO_AUDIT_PLAN.md)
+- **Parent plan:** [HIGH_SCHOOL_READABILITY_RETRO_AUDIT_PLAN.md](../plan_done/HIGH_SCHOOL_READABILITY_RETRO_AUDIT_PLAN.md)
 - **Baseline:** [readability-retro-r0-baseline.json](./readability-retro-r0-baseline.json)
 
 ---

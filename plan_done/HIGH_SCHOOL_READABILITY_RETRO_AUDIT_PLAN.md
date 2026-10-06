@@ -1,11 +1,11 @@
 # 高校生可読性 全体監査・修正計画
 
-- **Status:** active
+- **Status:** completed
 - **Created:** 2026-10-06
 - **Primary goal:** 公開本文を「高校生が無理なく読み進め、本文だけで誰が何をし、何が変わったかを追える」水準へ揃える。史実・制度差・分析水準は落とさず、説明順を **具体 → 仕組み → 抽象** へ直す。
 - **Trigger:** [1941年後半 高校生可読性監査](../docs/READABILITY_AUDIT_1941_H2.md)
 - **Authoring rule:** [CONTENT_AUTHORING_STANDARD.md](../standards/CONTENT_AUTHORING_STANDARD.md)
-- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](./JPN_HISTORY_DECADE_PLAN.md)
+- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](../plan/JPN_HISTORY_DECADE_PLAN.md)
 
 ---
 
@@ -381,16 +381,24 @@ report-onlyでよいものは、文長、抽象語密度、指示語、読点密
 - [x] 必要な横断記事修正を完了
 - [x] 各修正で史実・引用・出典・用語リンクを維持または再検証
 - [x] 修正した年代ページの隣接接続を確認
-- [ ] claim/caution・body-depth・repetition・image/map等の既存validationを壊していない
-- [ ] 全対象のfinal screeningを実施
+- [x] claim/caution・body-depth・repetition・image/map等の既存validationを壊していない
+- [x] 全対象のfinal screeningを実施
 - [x] unresolved high-priority readability debt = 0
 - [x] hard CI化の要否を最終判定し、採用しない場合も理由を記録
 - Final screening詳細: [docs/READABILITY_RETRO_FINAL.md](../docs/READABILITY_RETRO_FINAL.md)
-- [ ] npm run check green
-- [ ] GitHub Actions CI green
-- [ ] 公開本文変更後のGitHub Pages deploy green
-- [ ] Status = completed
-- [ ] plan_done/へ移動
+- [x] npm run check green
+- [x] GitHub Actions CI green
+- [x] 公開本文変更後のGitHub Pages deploy green
+- [x] Status = completed
+- [x] plan_done/へ移動
+
+---
+
+### Closeout
+
+- PR #340 merge後のmainで CI ✅ / GitHub Pages deploy ✅ を確認済み。
+- final screeningは high 0 / medium 94 / low 46。mediumはR1〜R11でHuman Review済み。
+- 新規hard CIは追加せず、`audit:readability` をreport-onlyで恒久運用する。
 
 ---
 

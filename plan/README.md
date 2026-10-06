@@ -18,9 +18,7 @@
 
 ### 横断的な品質負債返済
 
-- [HIGH_SCHOOL_READABILITY_RETRO_AUDIT_PLAN.md](./HIGH_SCHOOL_READABILITY_RETRO_AUDIT_PLAN.md)
-  - 公開本文の高校生可読性を全体監査し、必要箇所を「具体 → 仕組み → 抽象」へ修正する
-  - 本線の新規年代実装とは別に、既存原稿の遡及負債を閉じる
+現在activeな横断品質負債返済PLANはない。高校生可読性の遡及監査は [HIGH_SCHOOL_READABILITY_RETRO_AUDIT_PLAN.md](../plan_done/HIGH_SCHOOL_READABILITY_RETRO_AUDIT_PLAN.md) として完了・archive済み。
 
 遡及地図監査・実装planは [MAP_RETRO_AUDIT_AND_IMPLEMENTATION_PLAN.md](../plan_done/MAP_RETRO_AUDIT_AND_IMPLEMENTATION_PLAN.md) としてimplementation-complete / archive済み。Human Visual Auditの残件は [MAP_HUMAN_VISUAL_AUDIT_BACKLOG.md](../docs/MAP_HUMAN_VISUAL_AUDIT_BACKLOG.md) で継続管理する。
 

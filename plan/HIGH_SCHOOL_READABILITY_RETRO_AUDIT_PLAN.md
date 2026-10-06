@@ -248,6 +248,16 @@ report-only機能は通常CIを落とさない。監査途中で閾値を通す�
 - 史実・source ID / URL・glossary term ID・地図・図版・年代境界は変更していない。
 - 詳細: [docs/READABILITY_RETRO_R9.md](../docs/READABILITY_RETRO_R9.md)
 
+**R10 completed: 2026-10-07**
+
+- 1800〜1867年の9記事を全件Human Readability Auditし、9件すべてを実修正した。
+- R0 screeningのhigh候補は4件から0件へ減少した。修正後に残るmedium候補2件も人間確認済みである。
+- 100字以上文 4→0、120字以上文 0→0、分析語先行 14→0、広い指示語 6→0、first-term-dense 5→2。
+- 幕藩体制・市場経済・飢饉・天保改革・開国・幕末政局を、抽象的な「構造」「枠組み」や仮想読者への訂正文より先に、幕府・藩・村町・商人・朝廷・有力藩・外国使節などの具体的な主体と行動で追えるよう修正した。
+- R10内の全隣接年代と1865→1868の接続を確認した。
+- 史実・source ID / URL・glossary term ID・地図・図版・年代境界は変更していない。
+- 詳細: [docs/READABILITY_RETRO_R10.md](../docs/READABILITY_RETRO_R10.md)
+
 R2〜R6を年単位に分けるのは、1937年以後の記事密度が高く、57件を一括修正するとレビュー差分が大きくなりすぎるためである。
 
 各waveはさらに **5〜10記事程度の小PR** へ分けてよい。日付境界よりレビュー可能な差分量を優先する。ただし隣接ページの接続を壊す分割は避ける。
@@ -354,8 +364,8 @@ report-onlyでよいものは、文長、抽象語密度、指示語、読点密
 
 - [x] R0で監査対象inventoryを固定
 - [x] report-onlyの候補抽出手段を用意
-- [ ] 年代史114件をR1〜R10で全件Human Readability Audit
-- [ ] 必要な年代史修正を完了
+- [x] 年代史114件をR1〜R10で全件Human Readability Audit
+- [x] 必要な年代史修正を完了
 - [ ] 構造史・テーマ史の公開対象を全件Human Readability Audit
 - [ ] 必要な横断記事修正を完了
 - [ ] 各修正で史実・引用・出典・用語リンクを維持または再検証

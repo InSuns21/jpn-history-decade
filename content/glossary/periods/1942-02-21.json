@@ -1,0 +1,25 @@
+{
+  "period": "1942-02-21",
+  "termRefs": [
+    {
+      "id": "sittang-bridge-battle-1942-02-22",
+      "core": true
+    },
+    {
+      "id": "timor-invasion-1942-02-20",
+      "core": true
+    },
+    {
+      "id": "abda-command-1942-01-15",
+      "core": false
+    },
+    {
+      "id": "abda-dissolution-1942-02-25",
+      "core": true
+    },
+    {
+      "id": "bataan-defense-begins-1942-01-07",
+      "core": false
+    }
+  ]
+}

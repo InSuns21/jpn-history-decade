@@ -231,3 +231,5 @@ README には概要だけを置き、フェーズ進捗・監査結果・地図�
 
 
 - 1942年2月16日〜3月9日フェーズはJH122〜JH125、A45 published、Crosscutting publication gate、phase-end audit necessity judgment no-audit、`npm run check`、CI、Pagesまで完了。phase-end audit judgment PR #366はPR CI #1137 / Quality Checks #285 success、main commit `14f8892d720ad54c3fb2587b347e4d05434c3589` のmain CI #1138 / GitHub Pages #477もsuccess。全Definition of Doneを満たし、計画を `plan_done/JAVA_CONQUEST_TO_RANGOON_FALL_IMPLEMENTATION_PLAN.md` へarchiveした。次は1942年3月10日以後のphase cut。
+
+- 次フェーズを `plan/OCCUPATION_CONSOLIDATION_TO_BATAAN_FALL_IMPLEMENTATION_PLAN.md` として1942年3月10日〜4月9日に切り出した。4本構成で、JH126「1942-03-10〜03-17」→JH127「1942-03-18〜03-24」→JH128「1942-03-25〜03-31」→JH129「1942-04-01〜04-09」→A46 map necessity / data-quality judgment とする。3月9日のジャワ降伏・ラングーン占領後を「南方作戦完了」とせず、占領統治の制度化、3月25日の戦時海運管理令による船舶・船員・配船の国家管理、トングー／プローム方面の後退、アンダマン進出、4月上旬のインド洋作戦、4月9日のバターン降伏を、残存戦線と外周作戦が並行する状態遷移として扱う。バターン降伏後の捕虜移送・バターン死の行進、ドーリットル空襲、ビルマ油田方面、コレヒドール戦は次フェーズへ送る。現在地は phase cut ✅ → 次は JH126「1942-03-10〜03-17」。

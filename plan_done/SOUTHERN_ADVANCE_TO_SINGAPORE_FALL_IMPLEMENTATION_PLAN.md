@@ -1,13 +1,13 @@
 # 1941年12月26日から1942年2月15日まで — 占領軍政の開始、南方進攻の拡大、シンガポール陥落 実装計画
 
-- **Status:** active
-- **Progress:** phase cut ✅ → JH117 ✅ → JH118 ✅ → JH119 ✅ → JH120 ✅ → JH121 ✅ → A44 ✅ → Crosscutting publication gate ✅ → phase-end audit necessity judgment ✅ no-audit → 次は npm run check / CI / Pages / completion
+- **Status:** completed
+- **Progress:** phase cut ✅ → JH117〜JH121 ✅ → A44 ✅ adopted / published → Crosscutting publication gate ✅ → S09-E extension ✅ → phase-end audit necessity judgment ✅ no-audit → npm run check ✅ → CI ✅ → Pages ✅ → phase completed
 - **Created:** 2026-10-07
 - **Scope:** 1941-12-26〜1942-02-15
 - **Article count:** **5年代記事（JH117〜JH121）**
 - **Primary goal:** 12月25日時点の「香港・グアム・ウェークでは軍事占領成立、フィリピン・マレーでは主要作戦継続」という不均一な戦域状態から、香港での軍政開始、マニラ占領とバターン防衛線への後退、蘭印・ラバウル・ビルマ方面への戦域拡大、マレー半島からシンガポール島への戦線移動、2月15日のシンガポール降伏までを追う。攻略作戦・守備側の後退・都市占領・軍政開始・資源施設確保を同じ「占領」にまとめず、戦闘の結果が行政・治安・資源利用へ変換される制度段階を分ける。
 - **Previous phase:** [WAR_OPENING_TO_HONG_KONG_FALL_IMPLEMENTATION_PLAN.md](../plan_done/WAR_OPENING_TO_HONG_KONG_FALL_IMPLEMENTATION_PLAN.md)
-- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](./JPN_HISTORY_DECADE_PLAN.md)
+- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](../plan/JPN_HISTORY_DECADE_PLAN.md)
 - **Workspace rules:** [../SYSTEM_PROMPT.md](../SYSTEM_PROMPT.md)
 
 ---
@@ -337,16 +337,16 @@ JH117〜JH121、A44、S09-Eを横断し、複数ページを改めて独立監�
 
 ## 各年代
 
-- [ ] JH117〜JH121をpublishedで実装
-- [ ] 各記事で直前年代との接続確認を実施
-- [ ] 本文を具体 → 仕組み → 抽象で構成
-- [ ] 主張層・contemporaryAssumptions・interpretiveCautionsを分離
-- [ ] 高校生が本文だけで主体・行為・結果を追える
-- [ ] 定着した事件名・地名・制度名を初出で明示
-- [ ] global glossaryとperiod glossary参照を整備
-- [ ] 図版publication gateを各記事で判定
-- [ ] 連続noImageが3ページ以上なら再監査記録を更新
-- [ ] 主要史実を公的史料・公的戦史で検証
+- [x] JH117〜JH121をpublishedで実装
+- [x] 各記事で直前年代との接続確認を実施
+- [x] 本文を具体 → 仕組み → 抽象で構成
+- [x] 主張層・contemporaryAssumptions・interpretiveCautionsを分離
+- [x] 高校生が本文だけで主体・行為・結果を追える
+- [x] 定着した事件名・地名・制度名を初出で明示
+- [x] global glossaryとperiod glossary参照を整備
+- [x] 図版publication gateを各記事で判定
+- [x] 連続noImageが3ページ以上なら再監査記録を更新
+- [x] 主要史実を公的史料・公的戦史で検証
 
 ## フェーズ
 
@@ -355,9 +355,24 @@ JH117〜JH121、A44、S09-Eを横断し、複数ページを改めて独立監�
 - [x] Crosscutting publication gate
 - [x] S09-E extension / new article / holdを比較軸で決定
 - [x] phase-end audit necessity judgment
-- [ ] `npm run check` green
-- [ ] PR CI green
-- [ ] main CI green
-- [ ] GitHub Pages deploy green
-- [ ] Status / Progress / docsを更新
-- [ ] 完了後 `plan_done/` へarchiveし、`plan/` に重複を残さない
+- [x] `npm run check` green
+- [x] PR CI green
+- [x] main CI green
+- [x] GitHub Pages deploy green
+- [x] Status / Progress / docsを更新
+- [x] 完了後 `plan_done/` へarchiveし、`plan/` に重複を残さない
+
+
+---
+
+# Completion record
+
+- JH117〜JH121: published。各年代で直前年代との隣接接続確認、図版publication gate、主要史実の公的史料・公的戦史による検証を完了
+- A44 map necessity judgment: **adopted / high**
+- A44 `southern-advance-status-1942-02-15`: published。香港・マニラの占領後管理、バターン・ビルマ・パレンバンの継戦、シンガポール・タラカン・バリックパパン・ラバウル・アンボンの軍事占領、タイの同盟国・作戦通過基盤をPointで分離。Data / Style Audit passed、Human Visual AuditはA43のpoint-only表示再利用により `not-required-reused-pattern`
+- Crosscutting publication gate: **S09-E extension implemented**。S05 / S10 / S12 / S13はhold、新規crosscutting articleは追加なし
+- S09-E `war-opening-alliance-occupation-1941`: 1942年2月15日まで延長。守備隊降伏／都市占領／軍政機構／国家政府の存続／残存戦線で1941年12月25日と1942年2月15日の状態差を比較
+- phase-end audit necessity judgment: **no-audit**。7候補仮説はJH117〜JH121 / A44 / S09-Eの実装内で解消済み
+- phase-end audit judgment PR #356: PR CI #1114 / Quality Checks #272 success、main commit `db0ecfa5c956039f1a98e79e70cb2d857f02b31d`、main CI #1115 / GitHub Pages #467 success
+- `npm run check`: PR CI #1114 / main CI #1115 の両方で green
+- Completed: 2026-10-07

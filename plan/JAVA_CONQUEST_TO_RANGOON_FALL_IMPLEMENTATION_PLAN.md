@@ -1,7 +1,7 @@
 # 1942年2月16日から3月9日まで — 占領統治の立ち上がり、ABDA解体、ジャワ攻略、ラングーン占領 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH122 ✅ → JH123 ✅ → JH124 ✅ → 次は JH125「1942-03-02〜03-09」
+- **Progress:** phase cut ✅ → JH122 ✅ → JH123 ✅ → JH124 ✅ → JH125 ✅ → 次は A45「ABDA解体後の占領拠点と残存戦線」map necessity / data-quality judgment
 - **Created:** 2026-10-07
 - **Scope:** 1942-02-16〜1942-03-09
 - **Article count:** **4年代記事（JH122〜JH125）**

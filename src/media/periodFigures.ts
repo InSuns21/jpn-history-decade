@@ -1131,4 +1131,15 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
   ],
 
 
+  '1941-12-12': [
+    commonsFigure('Wreckage Wildcat Wake Island.jpg', {
+      alt: '1941年12月23日の日本軍占領後、ウェーク島飛行場付近で撮影された米海兵隊VMF-211のF4F-3ワイルドキャット残骸',
+      title: '占領後のウェーク島飛行場',
+      dateLabel: '1941年12月23日以後',
+      credit: 'Official U.S. Navy Photograph 80-G-179006／National Archives・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+
+
 }

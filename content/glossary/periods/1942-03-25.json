@@ -1,0 +1,21 @@
+{
+  "period": "1942-03-25",
+  "termRefs": [
+    {
+      "id": "wartime-shipping-management-order-1942",
+      "core": true
+    },
+    {
+      "id": "shipping-operation-association-1942",
+      "core": true
+    },
+    {
+      "id": "toungoo-defense-1942-03",
+      "core": true
+    },
+    {
+      "id": "swpa-poa-command-1942-03-30",
+      "core": true
+    }
+  ]
+}

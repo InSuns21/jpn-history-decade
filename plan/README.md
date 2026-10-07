@@ -12,9 +12,7 @@
 
 ### 本線
 
-- [WAR_OPENING_TO_HONG_KONG_FALL_IMPLEMENTATION_PLAN.md](./WAR_OPENING_TO_HONG_KONG_FALL_IMPLEMENTATION_PLAN.md)
-  - 1941年12月2日〜12月25日
-  - JH112〜JH116、開戦初動から戦争の制度化まで
+現在activeな個別実装planはない。1941年12月2日〜12月25日フェーズは完了・archive済み。次の本線作業は1941年12月26日以後のphase cutから開始する。
 
 ### 横断的な品質負債返済
 

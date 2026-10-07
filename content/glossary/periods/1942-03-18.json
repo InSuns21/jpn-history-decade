@@ -1,0 +1,21 @@
+{
+  "period": "1942-03-18",
+  "termRefs": [
+    {
+      "id": "usfip-wainwright-command-1942-03-21",
+      "core": true
+    },
+    {
+      "id": "bataan-bombardment-1942-03-24",
+      "core": true
+    },
+    {
+      "id": "toungoo-defense-1942-03",
+      "core": true
+    },
+    {
+      "id": "andaman-occupation-1942-03-23",
+      "core": true
+    }
+  ]
+}

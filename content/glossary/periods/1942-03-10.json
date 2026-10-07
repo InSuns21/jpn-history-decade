@@ -1,0 +1,21 @@
+{
+  "period": "1942-03-10",
+  "termRefs": [
+    {
+      "id": "lae-salamaua-carrier-raid-1942-03-10",
+      "core": true
+    },
+    {
+      "id": "java-16th-army-military-government-1942-03",
+      "core": true
+    },
+    {
+      "id": "burma-15th-army-military-government-1942-03-15",
+      "core": true
+    },
+    {
+      "id": "macarthur-philippines-departure-1942-03",
+      "core": true
+    }
+  ]
+}

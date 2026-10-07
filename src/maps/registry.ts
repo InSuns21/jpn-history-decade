@@ -18,6 +18,7 @@ import { oilSupplyConstraintSouthwardSpace1941Map } from './definitions/oilSuppl
 import { southernOperationPreparation1941Map } from './definitions/southernOperationPreparation1941.ts'
 import { finalDiplomacyOperationalPreparation1941Map } from './definitions/finalDiplomacyOperationalPreparation1941.ts'
 import { openingMultifrontOperations1941Map } from './definitions/openingMultifrontOperations1941.ts'
+import { southernAdvanceStatus1942Map } from './definitions/southernAdvanceStatus1942.ts'
 import { railwayExpansion1872To1890Map } from './definitions/railwayExpansion1872To1890.ts'
 import { sinoRussoJapaneseWarTheatersMap } from './definitions/sinoRussoJapaneseWarTheaters.ts'
 import { firstWorldWarEastAsiaPacificMap } from './definitions/firstWorldWarEastAsiaPacific.ts'
@@ -52,6 +53,7 @@ export const mapDefinitions: HistoricalMapDefinition[] = [
   southernOperationPreparation1941Map,
   finalDiplomacyOperationalPreparation1941Map,
   openingMultifrontOperations1941Map,
+  southernAdvanceStatus1942Map,
   railwayExpansion1872To1890Map,
   sinoRussoJapaneseWarTheatersMap,
   firstWorldWarEastAsiaPacificMap,

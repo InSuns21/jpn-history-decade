@@ -1,0 +1,13 @@
+{
+  "period": "1942-01-12",
+  "termRefs": [
+    {"id":"abda-command-1942-01-15","core":true},
+    {"id":"bataan-defense-begins-1942-01-07","core":false},
+    {"id":"gemas-battle-1942-01-14","core":true},
+    {"id":"muar-battle-1942-01-16","core":true},
+    {"id":"nei-invasion-tarakan-menado-1942-01-11","core":false},
+    {"id":"japan-thailand-alliance-1941-12-21","core":false},
+    {"id":"burma-invasion-1942-01-20","core":true},
+    {"id":"rabaul-capture-1942-01-23","core":true}
+  ]
+}

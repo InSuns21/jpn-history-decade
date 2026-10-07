@@ -1191,4 +1191,16 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     },
   ],
 
+  '1942-02-01': [
+    {
+      imageUrl: 'https://s3-ap-southeast-2.amazonaws.com/awm-media/collection/127903/screen/4245418.JPG',
+      sourceUrl: 'https://www.awm.gov.au/collection/C218441',
+      alt: '1942年2月15日、シンガポールのフォード自動車工場で行われた降伏交渉。山下奉文中将と日本軍将校、パーシヴァル中将ら英軍代表が机を囲む',
+      title: 'シンガポール降伏交渉',
+      dateLabel: '1942年2月15日',
+      credit: 'Australian War Memorial, 127903',
+      license: 'Public Domain',
+    },
+  ],
+
 }

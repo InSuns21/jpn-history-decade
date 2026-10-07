@@ -1,0 +1,21 @@
+{
+  "period": "1942-02-26",
+  "termRefs": [
+    {
+      "id": "java-sea-battle-1942-02-27",
+      "core": true
+    },
+    {
+      "id": "sunda-strait-battle-1942-02-28",
+      "core": true
+    },
+    {
+      "id": "java-landings-1942-03-01",
+      "core": true
+    },
+    {
+      "id": "abda-dissolution-1942-02-25",
+      "core": false
+    }
+  ]
+}

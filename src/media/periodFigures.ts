@@ -1215,4 +1215,17 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     },
   ],
 
+  '1942-02-21': [
+    {
+      imageUrl: 'https://s3-ap-southeast-2.amazonaws.com/awm-media/collection/P00707.013/screen/3946744.JPG',
+      sourceUrl: 'https://www.awm.gov.au/collection/C209626',
+      alt: '1942年、ポルトガル領ティモールの村で行動するオーストラリア第2/2独立中隊の兵士2人',
+      title: '東ティモールで抵抗を続ける第2/2独立中隊',
+      dateLabel: '1942年',
+      credit: '撮影者不詳／Australian War Memorial, P00707.013',
+      license: 'Public Domain',
+    },
+  ],
+
+
 }

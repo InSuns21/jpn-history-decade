@@ -220,3 +220,6 @@ README には概要だけを置き、フェーズ進捗・監査結果・地図�
 
 
 - JH125「1942-03-02〜03-09」を実装。JH124末尾の「ジャワ上陸後は道路・飛行場・都市をめぐる地上戦へ移る」を受け、3月1日に確保されたカリジャティ飛行場へ航空部隊が前進し、上陸地点から内陸へ進む地上部隊と航空支援が近い距離で結びついた過程を整理した。西ジャワではブラックフォースによる3月4〜5日のルウィリアン遅滞戦と、同5日のバタヴィア占領を分離し、首都占領後もバンドン方面の組織的防御が続いたことを明記。3月8日のカリジャティ降伏交渉では蘭印総督と蘭印軍司令官テア・ポルテンの役割を分け、9日の全軍への停戦・降伏命令を組織的防衛の終端として扱った。同時にビルマでは7日のラングーン撤退と8日の日本軍進入を、港湾・中国向け海上補給入口の喪失と北方への後退戦継続として実装し、ジャワ降伏・ラングーン占領を南方作戦全体の完了とは扱っていない。JH124との隣接接続確認完了。図版publication gateではAustralian War Memorial所蔵、John Munslow Williams撮影のルウィリアン戦闘中の豪州第2/2開拓大隊写真（C332753、Public Domain）を採用。次はA45「ABDA解体後の占領拠点と残存戦線」map necessity / data-quality judgment。
+
+
+- A45「ABDA解体後の占領拠点と残存戦線」を **adopted / high** と判定し、`post-abda-occupation-resistance-1942-03-09` をpublishedで実装。A44から約3週間で、シンガポールは軍事占領から占領行政へ、パレンバンは攻略中から軍事占領へ、ジャワとラングーンは新たな軍事占領へ移る一方、バターン／コレヒドール、東ティモール、ビルマ中北部には戦闘・抵抗が残った状態をPointで比較した。Java / Burma / TimorのPolygon、進撃LineString、前線geometryは採用せず、広域支配や正確な前線を過剰主張しない。JH125の`state-transition`節直後へ配置。Data / Style Audit passed、A44と同じ4カテゴリ・point-only表示・記号・凡例・popup/touch interactionを再利用し、変更をPoint feature・ラベル・属性値に限定したためHuman Visual Auditは `not-required-reused-pattern`。次はCrosscutting publication gate。

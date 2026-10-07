@@ -1,7 +1,7 @@
 # 1942年2月16日から3月9日まで — 占領統治の立ち上がり、ABDA解体、ジャワ攻略、ラングーン占領 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH122 ✅ → JH123 ✅ → JH124 ✅ → JH125 ✅ → 次は A45「ABDA解体後の占領拠点と残存戦線」map necessity / data-quality judgment
+- **Progress:** phase cut ✅ → JH122 ✅ → JH123 ✅ → JH124 ✅ → JH125 ✅ → A45 ✅ → 次は Crosscutting publication gate
 - **Created:** 2026-10-07
 - **Scope:** 1942-02-16〜1942-03-09
 - **Article count:** **4年代記事（JH122〜JH125）**
@@ -228,7 +228,7 @@ JH124は3月1日に複数地点からジャワ本島へ上陸し、海上阻止�
 
 # 7. A45 — 「ABDA解体後の占領拠点と残存戦線」map necessity / data-quality judgment
 
-JH125後に判定する。
+**判定結果: adopted / high。** A44から約3週間で、シンガポールは軍事占領から占領行政へ、パレンバンは攻略中から軍事占領へ、ジャワとラングーンは新たな軍事占領へ移った。一方、バターン・コレヒドール、東ティモール、ビルマ中北部には戦闘・抵抗が残った。同一広域で状態類型が短期間に再配置されたため、本文とA44だけを往復するより、3月9日時点をPointで比較する地図の理解効果が高いと判定した。
 
 ## historical question
 
@@ -261,6 +261,16 @@ A44は2月15日時点の「占領後管理／軍事占領／継続戦闘／同�
 - 3月9日時点の「降伏命令」と、個別部隊の降伏・残存抵抗の時間差を属性で扱う
 - point-onlyでA44の表示を再利用する場合は、Human Visual Audit省略条件を満たすか監査する
 - LineString / Polygon / 新interactionを採用する場合はHuman Visual Audit必須
+
+## 実装結果
+
+- `post-abda-occupation-resistance-1942-03-09` をpublishedで実装
+- A44と同じ4カテゴリ（占領後管理／軍事占領成立／戦闘・抵抗継続／同盟国・作戦通過基盤）を維持
+- 香港・シンガポール・マニラ、パレンバン、ジャワ（バンドン）、ラングーン、西／東ティモール、バターン／コレヒドール、ビルマ中北部、タイをPointで比較
+- Java / Burma / TimorのPolygon、進撃LineString、前線geometryは採用しない
+- Data Audit / Style Audit passed
+- A44と同じpoint-only表示・記号・凡例・popup/touch interactionを再利用し、変更をPoint feature・ラベル・属性値に限定したため、Human Visual Auditは `not-required-reused-pattern`
+- JH125の `state-transition` 節直後へ配置
 
 ---
 

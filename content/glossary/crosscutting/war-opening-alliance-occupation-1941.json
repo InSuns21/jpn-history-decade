@@ -1,0 +1,25 @@
+{
+  "page": "war-opening-alliance-occupation-1941",
+  "termRefs": [
+    {
+      "id": "malaya-operation-opening-1941-12-08",
+      "core": true
+    },
+    {
+      "id": "japan-thailand-alliance-1941-12-21",
+      "core": true
+    },
+    {
+      "id": "lingayen-gulf-landings-1941-12-22",
+      "core": true
+    },
+    {
+      "id": "wake-island-capture-1941-12-23",
+      "core": true
+    },
+    {
+      "id": "hong-kong-surrender-1941-12-25",
+      "core": true
+    }
+  ]
+}

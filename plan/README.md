@@ -12,7 +12,7 @@
 
 ### 本線
 
-現在activeな個別実装planはない。1942年2月16日〜3月9日フェーズは [JAVA_CONQUEST_TO_RANGOON_FALL_IMPLEMENTATION_PLAN.md](../plan_done/JAVA_CONQUEST_TO_RANGOON_FALL_IMPLEMENTATION_PLAN.md) として完了・archive済み。次は1942年3月10日以後のphase cut。
+現在の本線active planは [OCCUPATION_CONSOLIDATION_TO_BATAAN_FALL_IMPLEMENTATION_PLAN.md](./OCCUPATION_CONSOLIDATION_TO_BATAAN_FALL_IMPLEMENTATION_PLAN.md)。1942年3月10日〜4月9日をJH126〜JH129の4年代記事で実装し、占領統治の制度化、戦時海運国家管理、ビルマ中部戦、インド洋作戦、バターン降伏を状態遷移として追う。現在地は phase cut ✅ → 次は JH126「1942-03-10〜03-17」。
 
 ### 横断的な品質負債返済
 

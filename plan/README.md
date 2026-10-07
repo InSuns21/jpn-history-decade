@@ -12,7 +12,7 @@
 
 ### 本線
 
-現在activeな個別実装planは [SOUTHERN_ADVANCE_TO_SINGAPORE_FALL_IMPLEMENTATION_PLAN.md](SOUTHERN_ADVANCE_TO_SINGAPORE_FALL_IMPLEMENTATION_PLAN.md)。1941年12月26日〜1942年2月15日を、占領軍政の開始、マニラ占領、蘭印・ラバウル・ビルマ方面への戦域拡大、マレー半島からシンガポール島への戦線移動、シンガポール降伏までの5年代記事（JH117〜JH121）で実装する。現在地は phase cut ✅ → 次は JH117「1941-12-26〜1942-01-02」。
+現在activeな個別実装planは [JAVA_CONQUEST_TO_RANGOON_FALL_IMPLEMENTATION_PLAN.md](JAVA_CONQUEST_TO_RANGOON_FALL_IMPLEMENTATION_PLAN.md)。1942年2月16日〜3月9日を、シンガポール・香港の占領統治開始、ティモール・ビルマ方面の戦線変化、ABDA最高司令部解体、ジャワ海海戦、ジャワ本島上陸、ラングーン占領、ジャワ降伏までの5年代記事（JH122〜JH126）で実装する。現在地は phase cut ✅ → 次は JH122「1942-02-16〜02-20」。
 
 ### 横断的な品質負債返済
 

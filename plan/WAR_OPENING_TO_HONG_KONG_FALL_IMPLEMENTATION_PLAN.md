@@ -1,7 +1,7 @@
 # 1941年12月2日から12月25日まで — 作戦発動、対米覚書、開戦初動、戦争の制度化 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH112 ✅ → JH113 ✅ → JH114 ✅ → JH115 ✅ → JH116 ✅ → 次は A43
+- **Progress:** phase cut ✅ → JH112 ✅ → JH113 ✅ → JH114 ✅ → JH115 ✅ → JH116 ✅ → A43 ✅ → 次は Crosscutting publication gate
 - **Created:** 2026-10-06
 - **Scope:** 1941-12-02〜1941-12-25
 - **Article count:** **5年代記事（JH112〜JH116）**
@@ -332,11 +332,17 @@ JH115で戦争は多国間・多戦域へ拡大した。JH116では、**日本�
 - タイは同盟・通過協定の制度類型として、占領地と同じカテゴリにしない
 - 実装採用時はData Audit / Style Audit必須。time slice、LineString、Polygon、新しいinteractionを導入する場合はHuman Visual Audit必須
 
-### 初期判定
+### 最終判定 — ✅ adopted / high
 
-**map necessity: high / data-quality: likely sufficient for point-first implementation**
+**map necessity: high / data-quality: sufficient for point-first implementation**
 
-最終採否はJH112〜JH116実装後に行う。
+JH114〜JH116実装後に再判定し、A43は採用した。地図の問いは、**「12月8日に始まった主要戦域が、12月25日までにどの状態へ分かれたか」**とする。A42の「11月の集結・出撃準備」とは時点・問いを分離し、実戦開始後の広域配置を扱う。
+
+実装は `opening-multifront-operations-1941`。ハワイ、マレー半島、ルソン島、グアム、ウェーク島、香港、ミリ、バンコクの8地点をPointで示し、12月25日時点の状態を「初撃後」「戦闘継続」「軍事占領成立」「国家間同盟成立」の4類型へ分けた。各Pointに `eventDate / localDate / eventType / status` を持たせ、真珠湾は現地時間12月7日と日本時間12月8日を併記した。
+
+LineString / Polygon / time-slice UIは導入しない。海上航路・進攻路・戦線・占領範囲を描かず、フィリピン・マレーは12月25日時点で「戦闘継続」として後の占領結果を逆投影しない。タイは軍事占領地と別カテゴリにした。
+
+Data Audit / Style Audit は passed。表示はA36・A42と同一のThematicMap point-only表示・ラベル・凡例・popup/touch interaction・広域zoom設計を再利用し、新しいinteractionを導入しないため、MAP_AUDIT_STANDARDのpoint-only再利用例外を適用して Human Visual Audit は `not-required-reused-pattern` とした。地図は12月25日までの結果を含むため、JH114へ先出しせず、JH116の `state-transition` 節直後へ配置した。
 
 ---
 
@@ -459,8 +465,8 @@ JH115で戦争は多国間・多戦域へ拡大した。JH116では、**日本�
 - [x] JH115 図版採用または理由付きno-image判定完了
 - [x] JH116 published / JH115との隣接接続確認完了
 - [x] JH116 図版採用または理由付きno-image判定完了
-- [ ] A43 map necessity / data-quality judgment completed
-- [ ] A43採用時の必要監査完了、またはno-map理由記録
+- [x] A43 map necessity / data-quality judgment completed
+- [x] A43採用時の必要監査完了、またはno-map理由記録
 - [ ] Crosscutting publication gate completed
 - [ ] passing crosscutting extensions implemented
 - [ ] phase-end audit necessity judgment completed

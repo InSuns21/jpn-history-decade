@@ -1,0 +1,33 @@
+{
+  "period": "1942-02-01",
+  "termRefs": [
+    {
+      "id": "ambon-surrender-1942-02-03",
+      "core": true
+    },
+    {
+      "id": "laha-massacre-1942",
+      "core": false
+    },
+    {
+      "id": "singapore-island-invasion-1942-02-08",
+      "core": true
+    },
+    {
+      "id": "palembang-airborne-operation-1942-02-14",
+      "core": true
+    },
+    {
+      "id": "singapore-surrender-1942-02-15",
+      "core": true
+    },
+    {
+      "id": "abda-command-1942-01-15",
+      "core": false
+    },
+    {
+      "id": "malaya-withdrawal-singapore-1942-01-31",
+      "core": false
+    }
+  ]
+}

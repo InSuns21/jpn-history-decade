@@ -12,7 +12,7 @@
 
 ### 本線
 
-現在activeな個別実装planはない。1941年12月2日〜12月25日フェーズは完了・archive済み。次の本線作業は1941年12月26日以後のphase cutから開始する。
+現在activeな個別実装planは [SOUTHERN_ADVANCE_TO_SINGAPORE_FALL_IMPLEMENTATION_PLAN.md](SOUTHERN_ADVANCE_TO_SINGAPORE_FALL_IMPLEMENTATION_PLAN.md)。1941年12月26日〜1942年2月15日を、占領軍政の開始、マニラ占領、蘭印・ラバウル・ビルマ方面への戦域拡大、マレー半島からシンガポール島への戦線移動、シンガポール降伏までの5年代記事（JH117〜JH121）で実装する。現在地は phase cut ✅ → 次は JH117「1941-12-26〜1942-01-02」。
 
 ### 横断的な品質負債返済
 

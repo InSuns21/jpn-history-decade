@@ -1,0 +1,21 @@
+{
+  "period": "1942-03-02",
+  "termRefs": [
+    {
+      "id": "blackforce-java-1942",
+      "core": true
+    },
+    {
+      "id": "leuwiliang-battle-1942-03-04",
+      "core": true
+    },
+    {
+      "id": "kalijati-capitulation-1942-03-08",
+      "core": true
+    },
+    {
+      "id": "rangoon-evacuation-1942-03-07",
+      "core": true
+    }
+  ]
+}

@@ -1237,5 +1237,17 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     }),
   ],
 
+  '1942-03-02': [
+    {
+      imageUrl: 'https://s3-ap-southeast-2.amazonaws.com/awm-media/collection/030390/10/screen/3900107.JPG',
+      sourceUrl: 'https://www.awm.gov.au/collection/C332753',
+      alt: '1942年3月、ジャワ島ルウィリアンの戦闘中、簡易寝台で休む豪州第2/2開拓大隊のE・R・ミーガー少佐',
+      title: 'ルウィリアン戦闘中の豪州兵',
+      dateLabel: '1942年3月',
+      credit: 'John Munslow Williams／Australian War Memorial',
+      license: 'Public Domain',
+    },
+  ],
+
 
 }

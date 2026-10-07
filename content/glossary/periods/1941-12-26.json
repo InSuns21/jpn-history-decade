@@ -1,0 +1,10 @@
+{
+  "period": "1941-12-26",
+  "termRefs": [
+    {"id":"hong-kong-23rd-army-military-administration-1941-12-26","core":true},
+    {"id":"manila-open-city-1941-12-26","core":false},
+    {"id":"bataan-withdrawal-1941-12","core":true},
+    {"id":"declaration-united-nations-1942-01-01","core":false},
+    {"id":"manila-occupation-1942-01-02","core":true}
+  ]
+}

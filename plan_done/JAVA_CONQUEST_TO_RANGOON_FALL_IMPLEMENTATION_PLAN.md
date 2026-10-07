@@ -1,7 +1,7 @@
 # 1942年2月16日から3月9日まで — 占領統治の立ち上がり、ABDA解体、ジャワ攻略、ラングーン占領 実装計画
 
-- **Status:** active
-- **Progress:** phase cut ✅ → JH122 ✅ → JH123 ✅ → JH124 ✅ → JH125 ✅ → A45 ✅ → Crosscutting publication gate ✅ → phase-end audit necessity judgment ✅ no-audit → 次は npm run check / CI / Pages / completion
+- **Status:** completed
+- **Progress:** phase cut ✅ → JH122〜JH125 ✅ → A45 ✅ adopted / published → Crosscutting publication gate ✅ → phase-end audit necessity judgment ✅ no-audit → npm run check ✅ → CI ✅ → Pages ✅ → phase completed
 - **Created:** 2026-10-07
 - **Scope:** 1942-02-16〜1942-03-09
 - **Article count:** **4年代記事（JH122〜JH125）**
@@ -392,16 +392,16 @@ PROJECT_WORKFLOW_STANDARD 5.2 / 5.3 の条件を満たす未解決の横断仮�
 
 ## 各年代
 
-- [ ] JH122〜JH125をpublishedで実装
-- [ ] 各記事で直前年代との接続確認を実施
-- [ ] 本文を具体 → 仕組み → 抽象で構成
-- [ ] 主張層・contemporaryAssumptions・interpretiveCautionsを分離
-- [ ] 高校生が本文だけで主体・行為・結果を追える
-- [ ] 定着した事件名・地名・制度名を初出で明示
-- [ ] global glossaryとperiod glossary参照を整備
-- [ ] 図版publication gateを各記事で判定
-- [ ] 連続noImageが3ページ以上なら再監査記録を更新
-- [ ] 主要史実を公的史料・公的戦史で検証
+- [x] JH122〜JH125をpublishedで実装
+- [x] 各記事で直前年代との接続確認を実施
+- [x] 本文を具体 → 仕組み → 抽象で構成
+- [x] 主張層・contemporaryAssumptions・interpretiveCautionsを分離
+- [x] 高校生が本文だけで主体・行為・結果を追える
+- [x] 定着した事件名・地名・制度名を初出で明示
+- [x] global glossaryとperiod glossary参照を整備
+- [x] 図版publication gateを各記事で判定
+- [x] 連続noImageが3ページ以上なら再監査記録を更新
+- [x] 主要史実を公的史料・公的戦史で検証
 
 ## フェーズ
 
@@ -410,9 +410,23 @@ PROJECT_WORKFLOW_STANDARD 5.2 / 5.3 の条件を満たす未解決の横断仮�
 - [x] Crosscutting publication gate
 - [x] S09-E extension / S09-F new article / holdを比較軸で決定
 - [x] phase-end audit necessity judgment
-- [ ] `npm run check` green
-- [ ] PR CI green
-- [ ] main CI green
-- [ ] GitHub Pages deploy green
-- [ ] Status / Progress / docsを更新
-- [ ] 完了後 `plan_done/` へarchiveし、`plan/` に重複を残さない
+- [x] `npm run check` green
+- [x] PR CI green
+- [x] main CI green
+- [x] GitHub Pages deploy green
+- [x] Status / Progress / docsを更新
+- [x] 完了後 `plan_done/` へarchiveし、`plan/` に重複を残さない
+
+
+---
+
+# Completion record
+
+- JH122〜JH125: published。各年代で直前年代との隣接接続確認、図版publication gate、主要史実の公的史料・公的戦史による検証を完了
+- A45 map necessity judgment: **adopted / high**
+- A45 `post-abda-occupation-resistance-1942-03-09`: published。香港・シンガポール・マニラ、パレンバン、ジャワ（バンドン）、ラングーン、西／東ティモール、バターン／コレヒドール、ビルマ中北部、タイをPointで比較。Data / Style Audit passed、Human Visual AuditはA44のpoint-only表示再利用により `not-required-reused-pattern`
+- Crosscutting publication gate: S09-Eは1942年2月15日終端を維持。S09-Fは中心問いの分岐を確認したが比較材料不足のためhold / re-evaluate。S05 / S10 / S12 / S13もhold
+- phase-end audit necessity judgment: **no-audit**。8候補仮説はJH122〜JH125 / A45 / Crosscutting publication gateの実装内で解消済み
+- phase-end audit judgment PR #366: PR CI #1137 / Quality Checks #285 success、main commit `14f8892d720ad54c3fb2587b347e4d05434c3589`、main CI #1138 / GitHub Pages #477 success
+- `npm run check`: PR CI #1137 / main CI #1138 の両方で green
+- Completed: 2026-10-08

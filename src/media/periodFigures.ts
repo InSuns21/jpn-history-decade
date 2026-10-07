@@ -1166,4 +1166,17 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
   ],
 
 
+  '1942-01-12': [
+    {
+      imageUrl: 'https://s3-ap-southeast-2.amazonaws.com/awm-media/collection/ART24498/screen/3786662.JPG',
+      sourceUrl: 'https://www.awm.gov.au/collection/ART24498',
+      alt: '1942年1月15日、ゲマスのゴム園で日本軍へ砲撃するオーストラリア第2/15野戦連隊の25ポンド砲を描いた戦時画',
+      title: 'ゲマスで行動する25ポンド砲',
+      dateLabel: '1942年1月15日（戦時画、1942年ごろ制作）',
+      credit: 'Murray Griffin／Australian War Memorial, ART24498',
+      license: 'Public Domain',
+    },
+  ],
+
+
 }

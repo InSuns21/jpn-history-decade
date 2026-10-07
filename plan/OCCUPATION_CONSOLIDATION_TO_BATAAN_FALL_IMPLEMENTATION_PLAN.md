@@ -1,7 +1,7 @@
 # 1942年3月10日から4月9日まで — 占領統治の制度化、第二段作戦、バターン降伏 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH126 ✅ → JH127 ✅ → JH128 ✅ → 次は JH129「1942-04-01〜04-09」
+- **Progress:** phase cut ✅ → JH126 ✅ → JH127 ✅ → JH128 ✅ → JH129 ✅ → 次は A46「攻略後の外周展開と残存戦線」map necessity / data-quality judgment
 - **Created:** 2026-10-08
 - **Scope:** 1942-03-10〜1942-04-09
 - **Article count:** **4年代記事（JH126〜JH129）**

@@ -1,0 +1,10 @@
+{
+  "period": "1942-01-03",
+  "termRefs": [
+    {"id":"greater-manila-defense-headquarters-1942-01-03","core":true},
+    {"id":"bataan-defense-begins-1942-01-07","core":true},
+    {"id":"kuala-lumpur-occupation-1942-01-11","core":true},
+    {"id":"netherlands-declaration-war-japan-1941-12-08","core":false},
+    {"id":"nei-invasion-tarakan-menado-1942-01-11","core":true}
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "period": "1942-02-16",
+  "termRefs": [
+    {
+      "id": "singapore-surrender-1942-02-15",
+      "core": false
+    },
+    {
+      "id": "sook-ching-singapore-1942",
+      "core": true
+    },
+    {
+      "id": "hong-kong-23rd-army-military-administration-1941-12-26",
+      "core": false
+    },
+    {
+      "id": "hong-kong-occupied-territory-government-1942-02-19",
+      "core": true
+    },
+    {
+      "id": "darwin-air-raid-1942-02-19",
+      "core": true
+    },
+    {
+      "id": "abda-command-1942-01-15",
+      "core": false
+    },
+    {
+      "id": "badung-strait-battle-1942-02-19",
+      "core": false
+    },
+    {
+      "id": "timor-invasion-1942-02-20",
+      "core": true
+    }
+  ]
+}

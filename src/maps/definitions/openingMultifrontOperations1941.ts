@@ -67,6 +67,7 @@ export const openingMultifrontOperations1941Map: HistoricalMapDefinition = {
         'year',
         'eventDate',
         'localDate',
+        'eventType',
         'status',
         'detail',
       ],
@@ -82,6 +83,7 @@ export const openingMultifrontOperations1941Map: HistoricalMapDefinition = {
             year: '1941-12-07（現地）／12-08（JST）',
             eventDate: '1941-12-08 JST',
             localDate: '1941-12-07 Hawaii',
+            eventType: 'opening-strike',
             status: '初撃後・占領なし',
             detail:
               'ハワイ現地時間12月7日朝、日本海軍航空部隊が真珠湾の米太平洋艦隊・航空基地を攻撃した。日本時間では12月8日。12月25日時点で日本軍の軍事占領へは移っていない。',
@@ -98,6 +100,7 @@ export const openingMultifrontOperations1941Map: HistoricalMapDefinition = {
             year: '1941-12-08〜',
             eventDate: '1941-12-08',
             localDate: '1941-12-08 Malaya',
+            eventType: 'land-campaign',
             status: '12月25日時点で戦闘継続',
             detail:
               '12月8日、英領マレー北東岸コタバル方面で上陸作戦が始まった。日本軍はその後マレー半島を南下し、12月25日時点でも作戦は継続していた。',
@@ -114,6 +117,7 @@ export const openingMultifrontOperations1941Map: HistoricalMapDefinition = {
             year: '1941-12-08〜',
             eventDate: '1941-12-22',
             localDate: '1941-12-22 Philippines',
+            eventType: 'land-campaign',
             status: '12月25日時点で戦闘継続',
             detail:
               'フィリピンでは12月8日から航空攻撃が始まり、22日にはリンガエン湾方面で主力上陸が始まった。12月25日時点ではルソン島の戦闘は継続中だった。',
@@ -130,6 +134,7 @@ export const openingMultifrontOperations1941Map: HistoricalMapDefinition = {
             year: '1941-12-10',
             eventDate: '1941-12-10',
             localDate: '1941-12-10 Guam',
+            eventType: 'occupation',
             status: '軍事占領成立',
             detail:
               '12月8日の攻撃開始後、グアム守備隊は12月10日に降伏し、日本軍による軍事占領が成立した。',
@@ -146,6 +151,7 @@ export const openingMultifrontOperations1941Map: HistoricalMapDefinition = {
             year: '1941-12-23',
             eventDate: '1941-12-23',
             localDate: '1941-12-23 Wake',
+            eventType: 'occupation',
             status: '軍事占領成立',
             detail:
               '12月11日の第一次上陸は撃退されたが、日本軍は増援後の第二次上陸で12月23日にウェーク島を占領した。',
@@ -162,6 +168,7 @@ export const openingMultifrontOperations1941Map: HistoricalMapDefinition = {
             year: '1941-12-25',
             eventDate: '1941-12-25',
             localDate: '1941-12-25 Hong Kong',
+            eventType: 'occupation',
             status: '軍事占領成立',
             detail:
               '12月8日に戦闘が始まり、英植民地守備隊は12月25日に降伏した。これにより香港では日本軍の軍事占領が成立した。',
@@ -178,6 +185,7 @@ export const openingMultifrontOperations1941Map: HistoricalMapDefinition = {
             year: '1941-12-16〜',
             eventDate: '1941-12-16',
             localDate: '1941-12-16 Borneo',
+            eventType: 'occupation',
             status: '油田地帯の軍事占領開始',
             detail:
               '12月16日、英領ボルネオ北西部ミリ方面への上陸が始まり、油田地帯の確保へ進んだ。ここではミリ周辺の拠点状態だけを示し、ボルネオ全体の占領範囲は表さない。',
@@ -194,6 +202,7 @@ export const openingMultifrontOperations1941Map: HistoricalMapDefinition = {
             year: '1941-12-21',
             eventDate: '1941-12-21',
             localDate: '1941-12-21 Thailand',
+            eventType: 'alliance',
             status: '国家間同盟成立',
             detail:
               '12月8日の日本軍通過容認を経て、12月21日に日本とタイは同盟条約を締結した。タイ政府は条約主体として存続しており、香港・ウェーク等の軍事占領とは制度類型が異なる。',

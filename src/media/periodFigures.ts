@@ -1153,4 +1153,17 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     }),
   ],
 
+  '1942-01-03': [
+    {
+      imageUrl: 'https://s3-ap-southeast-2.amazonaws.com/awm-media/collection/127892/screen/4105169.JPG',
+      sourceUrl: 'https://www.awm.gov.au/collection/C218424',
+      alt: '1942年1月11日、クアラルンプール市街を進む日本陸軍部隊',
+      title: 'クアラルンプールへ進出した日本軍',
+      dateLabel: '1942年1月11日',
+      credit: '撮影者不詳／Australian War Memorial, 127892',
+      license: 'Public Domain',
+    },
+  ],
+
+
 }

@@ -1203,4 +1203,16 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     },
   ],
 
+  '1942-02-16': [
+    {
+      imageUrl: 'https://s3-ap-southeast-2.amazonaws.com/awm-media/collection/P01791.006/screen/4005943.JPG',
+      sourceUrl: 'https://www.awm.gov.au/collection/C271549',
+      alt: '1942年2月19日の日本軍空襲で損傷したダーウィンのオーストラリア空軍司令部建物',
+      title: 'ダーウィン空襲後のRAAF司令部',
+      dateLabel: '1942年2月19日',
+      credit: 'A. Bignall／Australian War Memorial, P01791.006',
+      license: 'Public Domain',
+    },
+  ],
+
 }

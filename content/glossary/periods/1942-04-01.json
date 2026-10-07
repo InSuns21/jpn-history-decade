@@ -1,0 +1,21 @@
+{
+  "period": "1942-04-01",
+  "termRefs": [
+    {
+      "id": "prome-withdrawal-1942-04-02",
+      "core": true
+    },
+    {
+      "id": "bataan-final-offensive-1942-04-03",
+      "core": true
+    },
+    {
+      "id": "indian-ocean-raid-1942-04",
+      "core": true
+    },
+    {
+      "id": "bataan-surrender-1942-04-09",
+      "core": true
+    }
+  ]
+}

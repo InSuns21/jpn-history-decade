@@ -1,0 +1,13 @@
+{
+  "period": "1941-12-12",
+  "termRefs": [
+    {"id":"greater-east-asia-war-name-1941-12-12","core":true},
+    {"id":"southern-economic-measures-1941-12-16","core":false},
+    {"id":"japan-thailand-alliance-1941-12-21","core":true},
+    {"id":"lingayen-gulf-landings-1941-12-22","core":false},
+    {"id":"wake-island-capture-1941-12-23","core":true},
+    {"id":"hong-kong-surrender-1941-12-25","core":true},
+    {"id":"japan-thailand-transit-agreement-1941-12-08","core":false},
+    {"id":"wake-island-first-landing-1941-12-11","core":false}
+  ]
+}

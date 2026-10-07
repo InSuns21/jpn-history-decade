@@ -1179,4 +1179,16 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
   ],
 
 
+  '1942-01-24': [
+    {
+      imageUrl: 'https://s3-ap-southeast-2.amazonaws.com/awm-media/collection/012467/screen/4089897.JPG',
+      sourceUrl: 'https://www.awm.gov.au/collection/C32144',
+      alt: '1942年1月31日、英連邦軍のシンガポール島撤退後に破壊されたジョホール・コーズウェーの切断部',
+      title: '撤退後に破壊されたジョホール・コーズウェー',
+      dateLabel: '1942年1月31日',
+      credit: 'Clifford Bottomley／Australian War Memorial, 012467',
+      license: 'Public Domain',
+    },
+  ],
+
 }

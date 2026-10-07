@@ -1261,4 +1261,16 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
   ],
 
 
+
+  '1942-04-01': [
+    commonsFigure('Japanese Breakthrough Apr 1942.jpg', {
+      alt: '1942年4月3〜6日、バターン半島マウント・サマット周辺で日本軍が米比軍防御線を突破した経過と予備部隊の移動を示す米陸軍公刊戦史図',
+      title: 'バターン最終攻勢のマウント・サマット突破',
+      dateLabel: '1942年4月3〜6日（1953年公刊戦史図）',
+      credit: 'Louis Morton／U.S. Army Center of Military History・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+
+
 }

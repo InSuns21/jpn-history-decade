@@ -1250,4 +1250,15 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
   ],
 
 
+  '1942-03-10': [
+    commonsFigure('Kiyokawa Maru and Mochizuki at Lae 1942.jpg', {
+      alt: '1942年3月10日、ラエ沖で米空母ヨークタウン航空隊の攻撃を受けて回避運動する日本海軍の水上機母艦清川丸と駆逐艦望月',
+      title: 'ラエ・サラモア空襲を受ける日本艦艇',
+      dateLabel: '1942年3月10日',
+      credit: 'U.S. Navy／Naval History and Heritage Command・Wikimedia Commons',
+      license: 'Public Domain Mark',
+    }),
+  ],
+
+
 }

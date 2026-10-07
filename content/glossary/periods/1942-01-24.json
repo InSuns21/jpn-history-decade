@@ -1,0 +1,29 @@
+{
+  "period": "1942-01-24",
+  "termRefs": [
+    {
+      "id": "balikpapan-capture-1942-01-24",
+      "core": true
+    },
+    {
+      "id": "kendari-capture-1942-01-26",
+      "core": true
+    },
+    {
+      "id": "abda-command-1942-01-15",
+      "core": false
+    },
+    {
+      "id": "southern-economic-measures-1941-12-16",
+      "core": false
+    },
+    {
+      "id": "moulmein-capture-1942-01-30",
+      "core": true
+    },
+    {
+      "id": "malaya-withdrawal-singapore-1942-01-31",
+      "core": true
+    }
+  ]
+}

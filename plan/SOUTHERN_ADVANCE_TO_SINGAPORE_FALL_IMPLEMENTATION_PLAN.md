@@ -1,7 +1,7 @@
 # 1941年12月26日から1942年2月15日まで — 占領軍政の開始、南方進攻の拡大、シンガポール陥落 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH117 ✅ → JH118 ✅ → JH119 ✅ → JH120 ✅ → JH121 ✅ → 次は A44「南方進攻の主要拠点と占領状態」map necessity / data-quality judgment
+- **Progress:** phase cut ✅ → JH117 ✅ → JH118 ✅ → JH119 ✅ → JH120 ✅ → JH121 ✅ → A44 ✅ → 次は Crosscutting publication gate
 - **Created:** 2026-10-07
 - **Scope:** 1941-12-26〜1942-02-15
 - **Article count:** **5年代記事（JH117〜JH121）**
@@ -204,6 +204,18 @@ JH120は、1月31日に英連邦軍がシンガポール島へ撤退してコー
 
 JH121後に判定する。
 
+### 最終判定 — ✅ adopted / high
+
+**map necessity: high / data-quality: sufficient for point-first implementation**
+
+JH117〜JH121実装後に再判定し、A44は採用した。地図の問いは、**「1942年2月15日時点で、南方の主要戦域が占領後管理・軍事占領・継続戦闘・同盟国のどの段階に分かれていたか」**とする。A43の1941年12月25日時点から状態を更新し、単なる進攻地点の追加ではなく、軍事占領が行政・拠点化へ進んだ地域と、なお戦闘が続く地域を同時点で比較する。
+
+実装は `southern-advance-status-1942-02-15`。香港、マニラ、バターン、タイ、シンガポール、タラカン、バリックパパン、ラバウル、ビルマ戦線、アンボン、パレンバンをPointで示し、「占領後の管理機構が稼働」「都市・拠点の軍事占領成立」「戦闘・攻略継続」「同盟国・作戦通過基盤」の4類型へ分けた。マニラとバターンを別Pointにし、首都占領をフィリピン制圧へ拡張しない。シンガポールは2月15日の降伏まで、パレンバンは2月14〜15日の攻略進行中として扱い、後続する占領行政・施設復旧・資源供給を先取りしない。
+
+LineString / Polygon / time-slice UIは導入しない。実進攻路・海上航路・前線・占領範囲を描かず、広大な「日本占領地」を一枚の面で示すことによる偽の精密さと、未制圧のバターン・ラングーン・ジャワへの結果の逆投影を避ける。
+
+Data Audit / Style Audit は passed。表示はA43と同一のThematicMap point-only表示・ラベル・凡例・popup/touch interaction・広域zoom設計を再利用し、新しいinteractionを導入しないため、MAP_AUDIT_STANDARDのpoint-only再利用例外を適用して Human Visual Audit は `not-required-reused-pattern` とした。地図はフェーズ終端の状態比較なのでJH121の `state-transition` 節直後へ配置した。
+
 ## historical question
 
 > 1942年2月15日時点で、南方の主要戦域は「軍政開始」「都市・拠点占領」「戦闘継続」「同盟国経由」のどこまで進んでいたのか。
@@ -325,8 +337,8 @@ JH117〜JH121とA44判定後に実施する。
 
 ## フェーズ
 
-- [ ] A44 map necessity / data-quality judgment
-- [ ] map採用時はData / Style / Human Visual Auditまたは再利用例外条件を満たす
+- [x] A44 map necessity / data-quality judgment
+- [x] map採用時はData / Style / Human Visual Auditまたは再利用例外条件を満たす
 - [ ] Crosscutting publication gate
 - [ ] S09-E extension / new article / holdを比較軸で決定
 - [ ] phase-end audit necessity judgment

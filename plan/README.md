@@ -12,7 +12,7 @@
 
 ### 本線
 
-現在activeな個別実装planは [JAVA_CONQUEST_TO_RANGOON_FALL_IMPLEMENTATION_PLAN.md](JAVA_CONQUEST_TO_RANGOON_FALL_IMPLEMENTATION_PLAN.md)。1942年2月16日〜3月9日を、シンガポール・香港の占領統治開始、ティモール・ビルマ方面の戦線変化、ABDA最高司令部解体、ジャワ海海戦、ジャワ本島上陸、ラングーン占領、ジャワ降伏までの5年代記事（JH122〜JH126）で実装する。現在地は phase cut ✅ → 次は JH122「1942-02-16〜02-20」。
+現在activeな個別実装planは [JAVA_CONQUEST_TO_RANGOON_FALL_IMPLEMENTATION_PLAN.md](JAVA_CONQUEST_TO_RANGOON_FALL_IMPLEMENTATION_PLAN.md)。1942年2月16日〜3月9日を、シンガポール・香港の占領統治開始、ティモール・ビルマ方面の戦線変化、ABDA最高司令部解体、ジャワ海海戦、ジャワ本島上陸、ラングーン占領、ジャワ降伏までの4年代記事（JH122〜JH125）で実装する。現在地は phase cut ✅ → 次は JH122「1942-02-16〜02-20」。
 
 ### 横断的な品質負債返済
 

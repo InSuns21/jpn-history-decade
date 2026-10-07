@@ -1,7 +1,7 @@
 # 1941年12月26日から1942年2月15日まで — 占領軍政の開始、南方進攻の拡大、シンガポール陥落 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH117 ✅ → JH118 ✅ → JH119 ✅ → JH120 ✅ → JH121 ✅ → A44 ✅ → 次は Crosscutting publication gate
+- **Progress:** phase cut ✅ → JH117 ✅ → JH118 ✅ → JH119 ✅ → JH120 ✅ → JH121 ✅ → A44 ✅ → Crosscutting publication gate ✅ → 次は phase-end audit necessity judgment
 - **Created:** 2026-10-07
 - **Scope:** 1941-12-26〜1942-02-15
 - **Article count:** **5年代記事（JH117〜JH121）**
@@ -245,15 +245,13 @@ map necessityがlow / mediumならno-map理由を記録し、地図を目的化�
 
 ---
 
-# 9. Crosscutting publication gate
+# 9. Crosscutting publication gate — ✅ completed
 
-JH117〜JH121とA44判定後に実施する。
+JH117〜JH121とA44を横断し、既存横断記事へ新しい比較軸が成立したかを判定した。
 
-## strong candidate
+## S09-E「開戦初動――同盟・軍事占領・継続戦闘」— ✅ extension implemented
 
-### S09-E「開戦初動――同盟・軍事占領・継続戦闘」
-
-**extension strong candidate。**
+**Gate result: pass / extension implemented.**
 
 12月25日時点では、香港・グアム・ウェークの軍事占領、タイの国家間同盟、フィリピン・マレーの継続戦闘という比較だった。本フェーズでは、
 
@@ -264,16 +262,20 @@ JH117〜JH121とA44判定後に実施する。
 
 という新しい状態差が増える。
 
-延長時は年代記事の作戦列を再掲せず、**守備隊降伏／都市占領／軍政機構／国家政府の存続／残存戦線**の比較軸を更新する。比較軸がS09-Eを越えて恒常的な「南方軍政制度」へ変わる場合だけ、S09-F等の新規記事を再判定する。
+S09-Eを1942年2月15日まで延長した。年代記事の作戦列は再掲せず、**守備隊降伏／都市占領／軍政機構／国家政府の存続／残存戦線**で12月25日時点と2月15日時点を比較する構成へ更新した。香港の第二十三軍軍政庁、マニラ占領後の都市警備とバターン抗戦の並存、蘭印占領拠点と未攻略ジャワの併存、シンガポール降伏後に占領行政が残る段階を追加した。
 
-## hold unless new evidence creates a new comparison axis
+現時点では、比較軸はまだ「戦闘結果が地域ごとに異なる制度状態へ分岐する」S09-Eの中心問いの範囲に収まる。南方軍政の行政制度・経済制度が地域横断で恒常化し、軍事占領そのものより占領統治制度の比較が主題になる時点でS09-F等の新規記事を再判定する。
+
+## hold
 
 - S05「政治参加の回路」
 - S10「産業社会の負担と保護」
 - S12（研究・政策接続系列）
 - S13「日米交渉と経済圧力」
 
-南方資源の確保は重要だが、国内の価格・配給・労働制度に新しい比較段階が成立しない限りS10へ機械的に追加しない。S13は12月1日で外交分岐が閉じており、戦争実施史を後付けしない。
+南方資源の確保は重要だが、国内の価格・配給・労働制度に新しい比較段階が成立しないためS10はholdする。S13は12月1日で外交分岐が閉じており、戦争実施史を後付けしない。S05は政治参加制度、S12は研究・政策接続にこの期間固有の新段階が確認できないためholdする。
+
+**Gate result:** S09-Eのみpassing / extension implemented。S05 / S10 / S12 / S13はhold。新規crosscutting articleは追加しない。
 
 ---
 
@@ -339,8 +341,8 @@ JH117〜JH121とA44判定後に実施する。
 
 - [x] A44 map necessity / data-quality judgment
 - [x] map採用時はData / Style / Human Visual Auditまたは再利用例外条件を満たす
-- [ ] Crosscutting publication gate
-- [ ] S09-E extension / new article / holdを比較軸で決定
+- [x] Crosscutting publication gate
+- [x] S09-E extension / new article / holdを比較軸で決定
 - [ ] phase-end audit necessity judgment
 - [ ] `npm run check` green
 - [ ] PR CI green

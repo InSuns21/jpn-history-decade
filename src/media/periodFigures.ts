@@ -1227,5 +1227,15 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     },
   ],
 
+  '1942-02-26': [
+    commonsFigure('HMS Exeter (68) sinking after the Battle of the Java Sea on 1 March 1942.jpg', {
+      alt: '1942年3月1日、ジャワ海海戦後の退避中に日本軍艦艇の攻撃を受けて沈没する英重巡洋艦HMS Exeter',
+      title: 'ジャワ海からの退避中に沈没するHMS Exeter',
+      dateLabel: '1942年3月1日',
+      credit: '日本海軍撮影／U.S. Naval History and Heritage Command・Wikimedia Commons',
+      license: 'Public Domain Mark',
+    }),
+  ],
+
 
 }

@@ -1,7 +1,7 @@
 # 1941年12月2日から12月25日まで — 作戦発動、対米覚書、開戦初動、戦争の制度化 実装計画
 
-- **Status:** active
-- **Progress:** phase cut ✅ → JH112 ✅ → JH113 ✅ → JH114 ✅ → JH115 ✅ → JH116 ✅ → A43 ✅ → Crosscutting publication gate ✅ → S09-E ✅ → phase-end audit necessity judgment ✅ no-audit → 次は npm run check / CI / Pages / completion
+- **Status:** completed
+- **Progress:** phase cut ✅ → JH112〜JH116 ✅ → A43 ✅ adopted / published → Crosscutting publication gate ✅ → S09-E ✅ → phase-end audit necessity judgment ✅ no-audit → npm run check ✅ → CI ✅ → Pages ✅ → phase completed
 - **Created:** 2026-10-06
 - **Scope:** 1941-12-02〜1941-12-25
 - **Article count:** **5年代記事（JH112〜JH116）**
@@ -475,8 +475,25 @@ JH112〜JH116、A43、S09-Eを横断し、複数ページを改めて独立監�
 - [x] Crosscutting publication gate completed
 - [x] passing crosscutting extensions implemented
 - [x] phase-end audit necessity judgment completed
-- [ ] npm run check green
-- [ ] GitHub Actions CI green
-- [ ] GitHub Pages deploy green
-- [ ] Status = completed
-- [ ] plan_done/へ移動
+- [x] npm run check green
+- [x] GitHub Actions CI green
+- [x] GitHub Pages deploy green
+- [x] Status = completed
+- [x] plan_done/へ移動
+
+
+---
+
+# Completion record
+
+- JH112〜JH116: published。各年代で直前年代との隣接接続確認と図版publication gateを完了
+- A43 map necessity judgment: **adopted / high**
+- A43 `opening-multifront-operations-1941`: published。ハワイ、マレー半島、ルソン島、グアム、ウェーク島、香港、ミリ、バンコクをPointで配置し、12月25日時点の「初撃後」「戦闘継続」「軍事占領成立」「国家間同盟成立」を分離。Data / Style Audit passed、Human Visual Auditは既存point-only表示再利用により `not-required-reused-pattern`
+- Crosscutting publication gate: **S09-E new article only**。S13は12月1日終端維持、S10 / S05 / S12はhold
+- S09-E `war-opening-alliance-occupation-1941`: published。タイの国家間同盟、香港・グアム・ウェークの軍事占領、フィリピン・マレーの継続戦闘を、政府・条約主体・守備隊降伏・軍事支配の所在で比較
+- phase-end audit necessity judgment: **no-audit**
+- A43 implementation PR #344: main commit `527010dc843707045f55b0a09424a7c2308e65e1`、main CI #1086 / Pages #455 success
+- Crosscutting publication gate / S09-E PR #345: main commit `13389ca47065fe56b10cd406a517738a49f3b531`、main CI #1089 / Pages #456 success
+- phase-end audit judgment PR #346: PR CI #1090 / Quality Checks #258 success、main commit `c7cbda4e6a58ed3a5aaed1caa93c2ce8eeecdf12`、main CI #1091 / Pages #457 success
+- `npm run check`: PR CI #1090 / main CI #1091 の両方で green
+- Completed: 2026-10-07

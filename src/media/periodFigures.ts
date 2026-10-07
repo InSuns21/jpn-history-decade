@@ -1142,4 +1142,15 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
   ],
 
 
+
+  '1941-12-26': [
+    commonsFigure('Imperial Japanese Army Enters Manila on Motorcycles (1942).jpg', {
+      alt: '1942年1月2日、マニラ市内へ入り小型オートバイで進む日本陸軍兵士',
+      title: '日本軍のマニラ入城',
+      dateLabel: '1942年1月2日',
+      credit: 'Carl Mydans／Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+
 }

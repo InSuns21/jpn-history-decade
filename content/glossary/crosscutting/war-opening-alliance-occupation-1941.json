@@ -20,6 +20,22 @@
     {
       "id": "hong-kong-surrender-1941-12-25",
       "core": true
+    },
+    {
+      "id": "hong-kong-23rd-army-military-administration-1941-12-26",
+      "core": true
+    },
+    {
+      "id": "manila-occupation-1942-01-02",
+      "core": true
+    },
+    {
+      "id": "bataan-defense-begins-1942-01-07",
+      "core": true
+    },
+    {
+      "id": "singapore-surrender-1942-02-15",
+      "core": true
     }
   ]
 }

@@ -88,6 +88,14 @@
     {
       "id": "coal-distribution-control-law-1940",
       "core": true
+    },
+    {
+      "id": "wartime-shipping-management-order-1942",
+      "core": true
+    },
+    {
+      "id": "shipping-operation-association-1942",
+      "core": true
     }
   ]
 }

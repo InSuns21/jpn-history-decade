@@ -1,0 +1,33 @@
+{
+  "period": "1942-04-25",
+  "termRefs": [
+    {
+      "id": "burma-road-lashio-1942",
+      "core": true
+    },
+    {
+      "id": "yokusan-election-1942",
+      "core": true
+    },
+    {
+      "id": "yokusan-political-council-1942",
+      "core": true
+    },
+    {
+      "id": "wartime-shipping-management-order-1942",
+      "core": true
+    },
+    {
+      "id": "shipping-operation-association-1942",
+      "core": true
+    },
+    {
+      "id": "mo-operation-1942",
+      "core": false
+    },
+    {
+      "id": "taisei-yokusankai-1940",
+      "core": false
+    }
+  ]
+}

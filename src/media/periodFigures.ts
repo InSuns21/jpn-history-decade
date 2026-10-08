@@ -1293,4 +1293,14 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     }),
   ],
 
+
+  '1942-04-25': [
+    commonsFigure('Imperial Rule Assistance Election Speech.JPG', {
+      alt: '1942年の翼賛選挙貫徹大講演会。会場で聴衆に向けて演説を行う様子を撮影した同時代の写真',
+      title: '翼賛選挙貫徹大講演会',
+      dateLabel: '1942年（撮影日未特定）',
+      credit: '撮影者不詳／毎日新聞社刊『昭和史第9巻 戦線と銃後』掲載・Wikimedia Commons',
+      license: 'Public Domain（PD-Japan-oldphoto / PD-1996）',
+    }),
+  ],
 }

@@ -1,0 +1,25 @@
+{
+  "page": "occupation-military-government-1942",
+  "termRefs": [
+    {
+      "id": "hong-kong-23rd-army-military-administration-1941-12-26",
+      "core": true
+    },
+    {
+      "id": "hong-kong-occupied-territory-government-1942-02-19",
+      "core": true
+    },
+    {
+      "id": "syonan-special-municipality-1942",
+      "core": true
+    },
+    {
+      "id": "java-16th-army-military-government-1942-03",
+      "core": true
+    },
+    {
+      "id": "burma-15th-army-military-government-1942-03-15",
+      "core": true
+    }
+  ]
+}

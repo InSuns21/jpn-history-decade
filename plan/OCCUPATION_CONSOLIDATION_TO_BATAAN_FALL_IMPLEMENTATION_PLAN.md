@@ -1,7 +1,7 @@
 # 1942年3月10日から4月9日まで — 占領統治の制度化、第二段作戦、バターン降伏 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH126 ✅ → JH127 ✅ → JH128 ✅ → JH129 ✅ → A46 ✅ Point-only同形式再利用承認 / Data・Style ✅ / Pages ✅ → 次は Crosscutting publication gate
+- **Progress:** phase cut ✅ → JH126 ✅ → JH127 ✅ → JH128 ✅ → JH129 ✅ → A46 ✅ Point-only同形式再利用承認 / Data・Style ✅ / Pages ✅ → Crosscutting publication gate ✅ S09-F published / S10延長 / S05・S02・S13・第二段作戦 hold → 次は phase-end audit necessity judgment
 - **Created:** 2026-10-08
 - **Scope:** 1942-03-10〜1942-04-09
 - **Article count:** **4年代記事（JH126〜JH129）**
@@ -290,6 +290,16 @@ JH126〜JH129とA46判定後に、既存横断記事の延長・新規記事・h
 - S13「日米交渉と経済圧力」: 1941年12月で終わる交渉史へ開戦後作戦を後付けしない
 - 新規「第二段作戦」横断記事: 年代記事とA46の再編集になるなら追加しない
 
+## 判定結果（2026-10-08）— S09-F公開・S10延長
+
+- **S09-F: published**。JACARの香港占領地総督部／民治部・憲兵隊、昭南特別市と第25軍軍政部、第16軍のジャワ軍政、第15軍軍政部の編成資料を比較した。4地域で共通する「軍事占領後の行政権限主体」「地方組織の置き方」「治安・住民管理」「前線と統治の並行」という軸が成立したため、`content/structures/occupation-military-government-1942.md` を新設。香港の総督部方式、シンガポールの第25軍＋特別市、ジャワの第16軍、ビルマの第15軍軍政部を同じ比較表で整理。ジャワの部局分掌など4月9日時点で未確認の制度を他地域から補完せず、香港と南方軍の指揮系統も区別した。JH126〜129の戦闘日誌の再掲ではなく、地域をまたいだ権限配置の差を中心問いにした。
+- **S10: extension**。1940年海運統制令の「利用条件への介入」から、1942年3月25日戦時海運管理令による「船の所有と使用判断・配船判断の分離」「船員の徴用・労務管理」「逓信省海務院と船舶運営会の分業」への転換を `content/structures/wartime-allocation-controls.md` に追加。日本法令索引の公布日3月25日とJACARの3月24日表記差を確認し、日本法令索引へ統一。船舶運営会の5月1日業務開始を4月9日以前に遡及しない。S10は国家の配分権限の長期変化、JH128は3月25〜31日の歴史経過を説明する責務に分けた。
+- **S05 / S02 / S13: hold**。国内議会・政党・行政責任、課税・公債・会計、開戦前の日米交渉について、本期間の出来事は既存記事の中心問いを新段階へ進めない。連想だけで延長しない。
+- **「第二段作戦」新規横断記事: hold**。軍事作戦の位置関係はJH126〜129とA46が担うため、独立横断記事化すると内容が重なる。
+- **公開素材**：S09-Fは機構の比較が中心で、図版採用による理解増分と利用条件を満たす必要資料がないためnoImage。地図はA46の占領・攻撃地点の空間比較と役割が重なり、行政管轄の正確な境界を示す資料も揃わないためno-map。S10は既存の行政配分比較を延長し、図版・地図は追加しない。
+
+このgateでは新規記事1本と既存記事1本の延長までに留め、次工程をphase-end audit necessity judgmentとする。
+
 ---
 
 # 9. phase-end audit necessity judgment
@@ -376,8 +386,8 @@ JH126〜JH129とA46判定後に、既存横断記事の延長・新規記事・h
 
 - [ ] A46 map necessity / data-quality judgment
 - [ ] map採用時はData / Style / Human Visual Auditまたは再利用例外条件を満たす
-- [ ] Crosscutting publication gate
-- [ ] S09-F publication / hold、S10 extension / holdを比較軸で決定
+- [x] Crosscutting publication gate
+- [x] S09-F publication / hold、S10 extension / holdを比較軸で決定
 - [ ] phase-end audit necessity judgment
 - [ ] `npm run check` green
 - [ ] PR CI green

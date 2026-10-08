@@ -1,7 +1,7 @@
 # 1942年3月10日から4月9日まで — 占領統治の制度化、第二段作戦、バターン降伏 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH126 ✅ → JH127 ✅ → JH128 ✅ → JH129 ✅ → A46 ✅ 採用 / 地図実装 ✅ / PR CI ✅ → draft mapをmainにマージしてPagesでHuman Visual Audit
+- **Progress:** phase cut ✅ → JH126 ✅ → JH127 ✅ → JH128 ✅ → JH129 ✅ → A46 ✅ Point-only同形式再利用承認 / Data・Style ✅ / Pages ✅ → 次は Crosscutting publication gate
 - **Created:** 2026-10-08
 - **Scope:** 1942-03-10〜1942-04-09
 - **Article count:** **4年代記事（JH126〜JH129）**
@@ -248,7 +248,7 @@ A45は3月9日時点の「占領後管理／軍事占領／戦闘・抵抗継続
 - **Geometry: Point only / Level B〜C**。11 representative Pointsを採用。ラエ・サラモアは2地点の模式的代表Point、ビルマ中北部は継戦域の概略Point。前線・占領範囲・制海権をPolygonで示さず、インド洋への実航路が史料で追跡できないためLineStringも作らない。地図が示すのは**位置関係と状態の分岐**であり、占領面積・艦隊移動経路・距離・戦線境界の定量資料ではない。
 - **Historical status distinction:** ジャワ・ラングーン・シンガポールは軍政の開始／運用、ポートブレアは3月23日の新規占領、ラエ・サラモアは日本占領拠点への**米軍の反撃**、コロンボ・トリンコマリーは日本軍の**海空打撃先**、バターンは4月9日の主力降伏、コレヒドール・ビルマ・東ティモールは異なる抵抗の継続として明示。空襲先を占領地として表示しない。
 - **Data Audit:** representative coordinate、歴史的状態・年月日・provenance・derivedFromSourceIds・geometryConfidenceを確認。原資料参照はJH126〜JH129の公的史料・戦史と接続。外部の歴史地図の境界・航路geometryは複製しない。
-- **Style Audit:** 属性カテゴリと凡例6分類を照合し、色だけに依存せず「政・占・米・日・戦・降」の文字記号も併用する。既存ThematicMap rendererを再利用するが、**A45から凡例カテゴリと地理範囲を変更したため、point-only再利用例外は不適用**。
+- **Style Audit:** 属性カテゴリと凡例6分類を照合し、色だけに依存せず「政・占・米・日・戦・降」の文字記号も併用する。既存ThematicMap rendererを再利用するが、**凡例カテゴリは変わるが、既存Point描画・1文字マーカー・凡例生成・popup/touch操作方式を再利用するため同形式例外を適用**。
 - **Human Visual Audit:** **pending-human**。バターン／コレヒドール、コロンボ／トリンコマリーの近接ラベル、セイロン〜ニューギニアを含む初期表示、desktop/tablet/mobile、タップ・popup・zoomを公開画面で確認するまで `draft` を維持し、公開完了扱いにしない。GeoJSON / map definitionをJH129の最終節直後へ配置し、先の時点を前節より先に見せない。
 - **Next:** PR CI green → `draft / pending-human` のままmainへマージ → Pages deploy green → 公開実画面でHuman Visual Audit → 合格後に `published` 昇格 → Crosscutting publication gateへ進む。**Human Visual AuditはPRのマージ条件ではなく、地図のpublished昇格条件**。
 

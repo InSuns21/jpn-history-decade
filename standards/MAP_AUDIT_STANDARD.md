@@ -555,7 +555,7 @@ Human Visual Audit をGitHub Pages上で行うため、`draft` / `pending-human`
 - [ ] 主要地点を初期表示で識別できる
 - [ ] tap / click で補足情報へ到達できる
 - [ ] zoom別確認 passed（再利用パターン例外では省略可）
-- [ ] 再利用パターン例外を使う場合、再利用元地図ID・同一UI/interactionであること・point-onlyであることを notes に記録
+- [ ] 再利用パターン例外を使う場合、再利用元地図ID・同じ形式のUI・凡例生成・interactionであること、point-onlyであること、カテゴリ差分を notes に記録
 - [ ] 不確実性の表現を確認
 - [ ] geometryの精度が地図の問いに対して十分であり、精密さを過剰主張していない
 - [ ] approximate / schematic geometryを使う場合、生成根拠・用途・測定不可の範囲が追跡可能

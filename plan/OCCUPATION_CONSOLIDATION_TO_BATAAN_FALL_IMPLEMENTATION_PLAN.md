@@ -1,7 +1,7 @@
 # 1942年3月10日から4月9日まで — 占領統治の制度化、第二段作戦、バターン降伏 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH126 ✅ → JH127 ✅ → JH128 ✅ → JH129 ✅ → A46 ✅ 地図採用判断 / Pointデータ・スタイル実装 ✅ / Human Visual Audit pending → 次は A46 Human Visual Audit
+- **Progress:** phase cut ✅ → JH126 ✅ → JH127 ✅ → JH128 ✅ → JH129 ✅ → A46 ✅ 採用 / 地図実装 ✅ / PR CI ✅ → draft mapをmainにマージしてPagesでHuman Visual Audit
 - **Created:** 2026-10-08
 - **Scope:** 1942-03-10〜1942-04-09
 - **Article count:** **4年代記事（JH126〜JH129）**
@@ -250,7 +250,7 @@ A45は3月9日時点の「占領後管理／軍事占領／戦闘・抵抗継続
 - **Data Audit:** representative coordinate、歴史的状態・年月日・provenance・derivedFromSourceIds・geometryConfidenceを確認。原資料参照はJH126〜JH129の公的史料・戦史と接続。外部の歴史地図の境界・航路geometryは複製しない。
 - **Style Audit:** 属性カテゴリと凡例6分類を照合し、色だけに依存せず「政・占・米・日・戦・降」の文字記号も併用する。既存ThematicMap rendererを再利用するが、**A45から凡例カテゴリと地理範囲を変更したため、point-only再利用例外は不適用**。
 - **Human Visual Audit:** **pending-human**。バターン／コレヒドール、コロンボ／トリンコマリーの近接ラベル、セイロン〜ニューギニアを含む初期表示、desktop/tablet/mobile、タップ・popup・zoomを公開画面で確認するまで `draft` を維持し、公開完了扱いにしない。GeoJSON / map definitionをJH129の最終節直後へ配置し、先の時点を前節より先に見せない。
-- **Next:** PR CIで `npm run check` を確認し、Pagesプレビューまたは公開実画面でHuman Visual Auditを実施した後に `published` 昇格、次のCrosscutting publication gateへ進む。
+- **Next:** PR CI green → `draft / pending-human` のままmainへマージ → Pages deploy green → 公開実画面でHuman Visual Audit → 合格後に `published` 昇格 → Crosscutting publication gateへ進む。**Human Visual AuditはPRのマージ条件ではなく、地図のpublished昇格条件**。
 
 ---
 

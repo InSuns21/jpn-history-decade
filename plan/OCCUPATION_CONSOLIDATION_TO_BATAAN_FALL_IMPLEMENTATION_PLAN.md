@@ -249,8 +249,8 @@ A45は3月9日時点の「占領後管理／軍事占領／戦闘・抵抗継続
 - **Historical status distinction:** ジャワ・ラングーン・シンガポールは軍政の開始／運用、ポートブレアは3月23日の新規占領、ラエ・サラモアは日本占領拠点への**米軍の反撃**、コロンボ・トリンコマリーは日本軍の**海空打撃先**、バターンは4月9日の主力降伏、コレヒドール・ビルマ・東ティモールは異なる抵抗の継続として明示。空襲先を占領地として表示しない。
 - **Data Audit:** representative coordinate、歴史的状態・年月日・provenance・derivedFromSourceIds・geometryConfidenceを確認。原資料参照はJH126〜JH129の公的史料・戦史と接続。外部の歴史地図の境界・航路geometryは複製しない。
 - **Style Audit:** 属性カテゴリと凡例6分類を照合し、色だけに依存せず「政・占・米・日・戦・降」の文字記号も併用する。既存ThematicMap rendererを再利用するが、**凡例カテゴリは変わるが、既存Point描画・1文字マーカー・凡例生成・popup/touch操作方式を再利用するため同形式例外を適用**。
-- **Human Visual Audit:** **pending-human**。バターン／コレヒドール、コロンボ／トリンコマリーの近接ラベル、セイロン〜ニューギニアを含む初期表示、desktop/tablet/mobile、タップ・popup・zoomを公開画面で確認するまで `draft` を維持し、公開完了扱いにしない。GeoJSON / map definitionをJH129の最終節直後へ配置し、先の時点を前節より先に見せない。
-- **Next:** PR CI green → `draft / pending-human` のままmainへマージ → Pages deploy green → 公開実画面でHuman Visual Audit → 合格後に `published` 昇格 → Crosscutting publication gateへ進む。**Human Visual AuditはPRのマージ条件ではなく、地図のpublished昇格条件**。
+- **Human Visual Audit:** `not-required-reused-pattern`（2026-10-08承認）。A45 `post-abda-occupation-resistance-1942-03-09` のPoint描画・文字マーカー・既存凡例生成・popup/touch操作・レスポンシブ構成を再利用する。カテゴリ・記号・色の差分はデータ属性であり、Data / Style Audit passed。JH129の最終節直後へ配置。
+- **Next:** A46 published → Crosscutting publication gateへ進む。PR #373マージ済み、main CI #1156 / Pages #484 success。
 
 ---
 

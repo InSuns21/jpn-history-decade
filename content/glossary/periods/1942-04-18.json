@@ -1,0 +1,25 @@
+{
+  "period": "1942-04-18",
+  "termRefs": [
+    {
+      "id": "doolittle-raid-1942-04-18",
+      "core": true
+    },
+    {
+      "id": "japan-offshore-picket-1942-04",
+      "core": true
+    },
+    {
+      "id": "midway-aleutians-plan-1942-04",
+      "core": true
+    },
+    {
+      "id": "yenangyaung-relief-1942-04",
+      "core": false
+    },
+    {
+      "id": "corregidor-siege-1942-04",
+      "core": false
+    }
+  ]
+}

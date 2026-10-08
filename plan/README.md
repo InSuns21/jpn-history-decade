@@ -12,7 +12,7 @@
 
 ### 本線
 
-現在のactive planは [BATAAN_CAPTIVITY_TO_CORAL_SEA_IMPLEMENTATION_PLAN.md](./BATAAN_CAPTIVITY_TO_CORAL_SEA_IMPLEMENTATION_PLAN.md)（**1942年4月10日〜5月8日、JH130〜JH133の4記事**）。JH130〜JH133 published、A47 Point-only published、Crosscutting gate（S05・S10延長、S09-F hold）、phase-end audit necessity judgment **no-audit** まで完了。次はCI / Pages確認、完了判定、`plan_done/` への移動。直前の1942年3月10日〜4月9日フェーズは [OCCUPATION_CONSOLIDATION_TO_BATAAN_FALL_IMPLEMENTATION_PLAN.md](../plan_done/OCCUPATION_CONSOLIDATION_TO_BATAAN_FALL_IMPLEMENTATION_PLAN.md) として完了・archive済み。
+現在activeな年代実装PLANはありません。1942年4月10日〜5月8日（JH130〜JH133、A47、S05-E / S10-D延長、phase-end audit necessity judgment no-audit）は [BATAAN_CAPTIVITY_TO_CORAL_SEA_IMPLEMENTATION_PLAN.md](../plan_done/BATAAN_CAPTIVITY_TO_CORAL_SEA_IMPLEMENTATION_PLAN.md) として完了・archive済み。次は1942年5月9日以後のphase cutを、出来事による状態遷移を基準に検討します。
 
 ### 横断的な品質負債返済
 

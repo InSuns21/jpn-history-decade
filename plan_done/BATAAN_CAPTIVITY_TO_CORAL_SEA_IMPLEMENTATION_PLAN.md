@@ -1,13 +1,13 @@
 # 1942年4月10日〜5月8日 — バターン降伏後の捕虜移送、本土初空襲、翼賛選挙、珊瑚海海戦 実装計画
 
-- **Status:** active
-- **Progress:** phase cut ✅ → JH130 ✅ → JH131 ✅ → JH132 ✅ → JH133 ✅ published → A47 ✅ adopted / Point-only published → Crosscutting publication gate ✅ S05-E / S10-D extension, S09-F hold → phase-end audit necessity judgment ✅ no-audit → 次は CI / Pages / completion / archive
+- **Status:** completed
+- **Progress:** phase cut ✅ → JH130〜JH133 ✅ published → A47 ✅ Point-only published → Crosscutting publication gate ✅ S05-E / S10-D extension, S09-F hold → phase-end audit necessity judgment ✅ no-audit → PR CI ✅ → main CI ✅ → GitHub Pages ✅ → phase completed / archived
 - **Created:** 2026-10-08
 - **Scope:** 1942-04-10〜1942-05-08
 - **Planned period articles:** **4本（JH130〜JH133）**
 - **Primary goal:** バターンの米比軍主力降伏から捕虜移送と収容へ任務が変化し、コレヒドール等の抗戦は続いたこと、米軍の日本本土初空襲が日本の本土防空と海軍作戦判断を揺さぶったこと、翼賛選挙が戦時の代表選出を変えたこと、ビルマの対中陸路が遮断されたこと、そして珊瑚海での海空戦によって日本軍のポートモレスビー海上攻略が停止することを、**占領・捕虜管理／本土防衛／戦時政治／陸上交通／海上攻勢の制約**という別々の変化として追う。
 - **Previous phase:** [OCCUPATION_CONSOLIDATION_TO_BATAAN_FALL_IMPLEMENTATION_PLAN.md](../plan_done/OCCUPATION_CONSOLIDATION_TO_BATAAN_FALL_IMPLEMENTATION_PLAN.md)
-- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](./JPN_HISTORY_DECADE_PLAN.md)
+- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](../plan/JPN_HISTORY_DECADE_PLAN.md)
 - **Workspace rules:** [../SYSTEM_PROMPT.md](../SYSTEM_PROMPT.md)
 
 ---
@@ -221,25 +221,25 @@ JH130〜JH133の本文・比較・読み方の留保、S09-Fの公開範囲、�
 ## 11. Definition of Done
 
 ### 各年代
-- [ ] JH130〜JH133をpublishedで実装
-- [ ] 直前年代との接続確認を記事の実装作業内で完了
-- [ ] 主体・行為・結果を本文だけで追え、高校日本史の初出用語を補足
-- [ ] 本文は具体→仕組み→抽象、主張層は肯定文主体
-- [ ] `contemporaryAssumptions` と `interpretiveCautions` を分離・重複除去
-- [ ] 出典・用語ID・本文内重要リンクをvalidate
-- [ ] 各記事で図版採否を判定し、無掲載なら理由を記録。3記事以上noImageが連続した場合は追加監査記録
-- [ ] 歴史事実・日付・数値・捕虜取扱いに関する記述を信頼できる史料で照合
+- [x] JH130〜JH133をpublishedで実装
+- [x] 直前年代との接続確認を記事の実装作業内で完了
+- [x] 主体・行為・結果を本文だけで追え、高校日本史の初出用語を補足
+- [x] 本文は具体→仕組み→抽象、主張層は肯定文主体
+- [x] `contemporaryAssumptions` と `interpretiveCautions` を分離・重複除去
+- [x] 出典・用語ID・本文内重要リンクをvalidate
+- [x] 各記事で図版採否を判定し、無掲載なら理由を記録。3記事以上noImageが連続した場合は追加監査記録
+- [x] 歴史事実・日付・数値・捕虜取扱いに関する記述を信頼できる史料で照合
 
 ### フェーズ
 - [x] A47 map necessity / data-quality judgment（採用時はData / Style / Human Visual Auditまたは規約上のPoint-only再利用例外）
 - [x] Crosscutting publication gate（S05 / S09-F / S10等の延長・hold）
 - [x] phase-end independent auditの要否を具体的な未解決問題だけで判定（no-audit）
-- [ ] `npm run check` green
-- [ ] PR CI green
-- [ ] main CI green
-- [ ] GitHub Pages deploy green
-- [ ] Status / Progress / docsを更新
-- [ ] 完了後に `plan_done/` へ移動し、`plan/` に重複を残さない
+- [x] `npm run check` green
+- [x] PR CI green
+- [x] main CI green
+- [x] GitHub Pages deploy green
+- [x] Status / Progress / docsを更新
+- [x] 完了後に `plan_done/` へ移動し、`plan/` に重複を残さない
 
 **JH130完了記録（2026-10-08）:** バターン死の行進の4月10〜11日の出発地点、サンフェルナンド／カパス経由の移送とオドネル収容所、コレヒドールでの砲撃・抗戦継続、ビルマの油田・撤退路、4月16日のミッドウェー・アリューシャン作戦協議を公的史料等で照合し、`content/periods/1942-04-10.md` をpublishedで実装した。JH129末尾の未解決論点と接続確認済み。新規用語3件、年代用語リンク、権利状態と時点を確認した1942年4月の捕虜写真（NARA / USMC 114538、Commons）の採用により図版publication gateを完了。主題地図はこの単独記事に付けず、フェーズ末のA47判定に委ねる。PR CI・main CI・Pagesの実績はPR作業で追記する。
 
@@ -255,4 +255,4 @@ JH130〜JH133の本文・比較・読み方の留保、S09-Fの公開範囲、�
 
 **Phase-end audit judgment完了（2026-10-09）:** JH130〜JH133・S09-F・A47における捕虜処遇、4月16日作戦協議／18日空襲、5月7日船団反転／8日空母戦／11日前後の後続判断、5月6日コレヒドール降伏／他島への命令を照合し、4件とも独立監査対象となる未解決の具体的矛盾はないと判断（no-audit）。5月8日以後の命令日・現地の降伏実施は次フェーズの個別記事で検証する。
 
-**Next action:** CI / Pages確認 → Definition of Done確認 → phase completion / plan archive。
+**Completed（2026-10-09）:** JH130〜JH133 published、A47 Point-only published、S05-E / S10-D延長・S09-F hold、phase-end audit necessity judgment no-audit。PR #386はPR CI #37807521246／Quality Checks #37807521347 success、main commit `419e5f68703e05d4c259012cbefcdc0fd8cef733` はmain CI #37807638424／GitHub Pages #37807638305 success。完了条件を満たしたため `plan_done/` へ移動し、次は1942年5月9日以後のphase cut。

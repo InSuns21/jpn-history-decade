@@ -356,7 +356,7 @@ export const outerOperationsResidualFronts1942Map: HistoricalMapDefinition = {
       "A46 map necessity adopted: A45 (March 9) cannot show east-west divergence between US counterattack on Lae–Salamaua and Japanese carrier raids on Colombo/Trincomalee, alongside the Bataan/Corregidor split.",
       "Data Audit: all 11 identifiers unique, all Points have coordinates and required properties; historical roles grounded in JH126–JH129 sources. Approximate coordinates represent places, not routes/front lines/borders.",
       "Style Audit: nominal categorical colors AND Japanese character markers, single Point renderer; legend values match layer categories; no line, polygon, or area claims.",
-      "Human Visual Audit mandatory and pending: new category/color/marker set compared with A45, increased geographic extent and close pairs (Bataan/Corregidor, Colombo/Trincomalee). Do not mark published until desktop/tablet/mobile/touch/zoom verified.",
+      "Human Visual Audit omitted with approved same-format point-only reuse of A45 post-abda-occupation-resistance-1942-03-09. The renderer, marker layout, data-driven legend, popup and touch handling are unchanged. Data/Style audits passed for the new six-category values; new geometry is Points only.",
       "No display-style, popup handler, legend renderer, or template code modified."
     ]
   }

@@ -1,7 +1,7 @@
 # 1942年3月10日から4月9日まで — 占領統治の制度化、第二段作戦、バターン降伏 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH126 ✅ → JH127 ✅ → JH128 ✅ → JH129 ✅ → A46 ✅ Point-only同形式再利用承認 / Data・Style ✅ / Pages ✅ → Crosscutting publication gate ✅ S09-F published / S10延長 / S05・S02・S13・第二段作戦 hold → 次は phase-end audit necessity judgment
+- **Progress:** phase cut ✅ → JH126 ✅ → JH127 ✅ → JH128 ✅ → JH129 ✅ → A46 ✅ → Crosscutting publication gate ✅ → phase-end audit necessity judgment ✅ no-audit → 次は `npm run check` / PR CI / main CI / Pages / completion
 - **Created:** 2026-10-08
 - **Scope:** 1942-03-10〜1942-04-09
 - **Article count:** **4年代記事（JH126〜JH129）**
@@ -319,6 +319,23 @@ JH126〜JH129とA46判定後に、既存横断記事の延長・新規記事・h
 
 各年代の隣接接続確認、A46 map audit、Crosscutting publication gate、通常validationで解消済みなら **no-audit** とし、重複する独立監査は実施しない。
 
+## 判定結果（2026-10-08）— no-audit
+
+8候補をJH126〜JH129、A46、Crosscutting publication gate（S09-F / S10）へ突き合わせた結果、**複数年代・横断記事を同時に再監査しなければ判定できない未解決問題は残っていない**。
+
+1. ジャワ・ラングーンはJH126とS09-Fで「攻略後に軍政機構を立ち上げ、行政・治安・交通通信等を継続運用する段階」として扱い、即時の全面行政掌握へ一般化していない。
+2. マッカーサー離脱はJH126〜JH127でウェインライト／USFIPとバターン現地指揮を分離し、司令官移動と守備隊抵抗の継続を別状態として記述済み。
+3. アンダマン進出はJH127、インド洋空襲はJH129・A46で軍事占領／海空打撃先として限定し、インド侵攻開始やベンガル湾全面支配へ拡張していない。
+4. トングー撤退・プローム撤退はJH128〜JH129で日付を分離し、4月9日時点でもビルマ戦役継続を明記している。
+5. 戦時海運管理令はJH128とS10で制度成立、船舶運営会の5月1日業務開始、実際の輸送制約を分け、法令制定を船腹不足・損耗解消と同一視していない。
+6. バターン主力降伏はJH129・A46でコレヒドール抗戦継続と分離し、フィリピン全軍降伏として扱っていない。
+7. ラエ・サラモア空襲はJH126・A46で日本占領拠点への米空母反撃として位置づけ、連合国側の海空優勢回復という全面的転換へ一般化していない。
+8. インド洋作戦とバターン最終攻勢はJH129で並行作戦として示す一方、残存戦線・輸送負担・英東洋艦隊の存続も残しており、無制約な戦力余裕の証明として単純化していない。
+
+以上は各年代の隣接接続確認、A46のData / Style監査と再利用例外、S09-F/S10のpublication gateで既に確認済みである。PROJECT_WORKFLOW_STANDARD 5.2 / 5.3に従い、ここで独立監査を追加すると同じ論点の重複確認になるため、**phase-end independent audit = not required / no-audit** と判定する。
+
+次は `npm run check` / PR CI / main CI / GitHub Pages / phase completion / PLAN archive。
+
 ---
 
 # 10. 調査アンカー
@@ -371,24 +388,24 @@ JH126〜JH129とA46判定後に、既存横断記事の延長・新規記事・h
 
 ## 各年代
 
-- [ ] JH126〜JH129をpublishedで実装
-- [ ] 各記事で直前年代との接続確認を実施
-- [ ] 本文を具体 → 仕組み → 抽象で構成
-- [ ] 主張層・contemporaryAssumptions・interpretiveCautionsを分離
-- [ ] 高校生が本文だけで主体・行為・結果を追える
-- [ ] 定着した事件名・地名・制度名を初出で明示
-- [ ] global glossaryとperiod glossary参照を整備
-- [ ] 図版publication gateを各記事で判定
-- [ ] 連続noImageが3ページ以上なら再監査記録を更新
-- [ ] 主要史実を公的史料・公的戦史で検証
+- [x] JH126〜JH129をpublishedで実装
+- [x] 各記事で直前年代との接続確認を実施
+- [x] 本文を具体 → 仕組み → 抽象で構成
+- [x] 主張層・contemporaryAssumptions・interpretiveCautionsを分離
+- [x] 高校生が本文だけで主体・行為・結果を追える
+- [x] 定着した事件名・地名・制度名を初出で明示
+- [x] global glossaryとperiod glossary参照を整備
+- [x] 図版publication gateを各記事で判定
+- [x] 連続noImageが3ページ以上なら再監査記録を更新
+- [x] 主要史実を公的史料・公的戦史で検証
 
 ## フェーズ
 
-- [ ] A46 map necessity / data-quality judgment
-- [ ] map採用時はData / Style / Human Visual Auditまたは再利用例外条件を満たす
+- [x] A46 map necessity / data-quality judgment
+- [x] map採用時はData / Style / Human Visual Auditまたは再利用例外条件を満たす
 - [x] Crosscutting publication gate
 - [x] S09-F publication / hold、S10 extension / holdを比較軸で決定
-- [ ] phase-end audit necessity judgment
+- [x] phase-end audit necessity judgment
 - [ ] `npm run check` green
 - [ ] PR CI green
 - [ ] main CI green

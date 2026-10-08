@@ -246,3 +246,6 @@ README には概要だけを置き、フェーズ進捗・監査結果・地図�
 - A46「攻略後の外周展開と残存戦線」は **adopted / Point-only published**。11代表Pointと6分類（政・占・米・日・戦・降）で、占領後軍政拠点、日米双方の海空攻撃地点、バターン主力降伏、コレヒドール・ビルマ・東ティモールの継戦を区別した。実航路LineString・占領範囲Polygonは置かない。Data / Style Audit passed。A45 `post-abda-occupation-resistance-1942-03-09` と同じThematicMap Point描画方式・1文字マーカー・属性駆動の凡例生成・popup/touch操作・レスポンシブ表示を再利用しており、新しいカテゴリ・記号・色は既存形式内のデータ差分である。2026-10-08のユーザー承認により個別Human Visual Auditを `not-required-reused-pattern` とした。規約を同一値ではなく同一形式で判定するよう明確化し、地図をpublishedへ昇格。PR #373でdraft地図をmainに導入済み（CI #1156 / Pages #484 success）。次はCrosscutting publication gate。
 
 - 1942年3月10日〜4月9日フェーズのCrosscutting publication gateを実施。S09-F「南方占領統治――軍政機構と行政権限の地域差」を新規公開し、香港／シンガポール／ジャワ／ビルマの指揮主体・都市行政・軍政成立段階を比較。S10「戦時統制と資源配分」は戦時海運管理令（3月25日）と船舶運営会の配船一元化（実務開始5月1日）を1940年の海運統制令と比較する節で延長。S05／S02／S13と第二段作戦の新規横断記事は新しい独立比較軸がないためhold。次はphase-end audit necessity judgment。
+
+
+- 1942年3月10日〜4月9日フェーズのphase-end audit necessity judgmentを **no-audit** と判定。候補8件（占領直後の軍政を全面行政掌握とみなすこと、マッカーサー離脱と守備隊抵抗消滅の同一視、アンダマン／インド洋作戦のインド侵攻化、トングー／プローム後退のビルマ戦役終結化、戦時海運管理令の船腹不足解消化、バターン降伏のフィリピン全軍降伏化、ラエ・サラモア空襲の海空優勢回復への過大評価、インド洋作戦＋バターン攻勢の無制約な戦力余裕化）は、JH126〜JH129、A46、S09-F、S10ですでに分離・検証済み。PROJECT_WORKFLOW_STANDARD 5.2 / 5.3に従い、重複する独立監査は実施しない。次は `npm run check` / PR CI / main CI / Pages / completion / PLAN archive。

@@ -508,7 +508,9 @@ Human Visual Audit をGitHub Pages上で行うため、`draft` / `pending-human`
 
 ## Visual Audit をやり直す
 
-- style変更
+既存Point形式内でカテゴリ・文字マーカー・色を変更するだけの場合は1章の例外条件とData / Style Auditで判定する。
+
+- style変更（新たな描画方式・UI仕様の変更）
 - template変更
 - 地図コンテナサイズ変更
 - popup / legend UI変更

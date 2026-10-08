@@ -30,7 +30,7 @@ Data Audit は「測量級・GIS級の精密geometryだけを通す審査」で�
 
 Visual Audit は完全自動化が難しいため、機械判定できない項目は **human review required** として残す。
 
-ただし、**既にHuman Visual Audit済みの地図と同一の表示コンポーネント・点記号・凡例・interactionを再利用し、変更点が点featureの位置・ラベル・属性値だけであるpoint-only地図**は、個別のHuman Visual Auditを省略できる。この例外では Data Audit と Style Audit は省略せず、再利用元の地図IDと同一パターンである理由を `auditState.notes` に残す。線・polygon、新しい表示ロジック、凡例仕様変更、popup/interaction変更、レイアウト変更を含む場合は例外対象外とする。
+ただし、**既にHuman Visual Audit済みの地図と同じ形式の表示コンポーネント・点マーカー・凡例生成・interactionを再利用するpoint-only地図**は、個別のHuman Visual Auditを省略できる。この例外では Data Audit と Style Audit は省略せず、再利用元の地図IDと同一パターンである理由を `auditState.notes` に残す。線・polygon、新しい表示ロジック、凡例仕様変更、popup/interaction変更、レイアウト変更を含む場合は例外対象外とする。
 
 特に interactive map は、viewport 幅だけでなく入力方式も監査対象とする。Desktop の mouse 操作が成功しても、Tablet / Touch で同じ操作が成立するとは限らないため、少なくとも代表的な touch 環境を独立に確認する。
 

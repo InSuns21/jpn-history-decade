@@ -12,7 +12,7 @@
 
 ### 本線
 
-現在activeな年代実装PLANはありません。1942年4月10日〜5月8日（JH130〜JH133、A47、S05-E / S10-D延長、phase-end audit necessity judgment no-audit）は [BATAAN_CAPTIVITY_TO_CORAL_SEA_IMPLEMENTATION_PLAN.md](../plan_done/BATAAN_CAPTIVITY_TO_CORAL_SEA_IMPLEMENTATION_PLAN.md) として完了・archive済み。次は1942年5月9日以後のphase cutを、出来事による状態遷移を基準に検討します。
+現在の本線は **1942年5月9日〜6月7日** を対象とする [MO_CANCELLATION_TO_MIDWAY_ALEUTIANS_IMPLEMENTATION_PLAN.md](MO_CANCELLATION_TO_MIDWAY_ALEUTIANS_IMPLEMENTATION_PLAN.md)（Status: active、予定年代記事 **4本**：JH134〜JH137）です。phase cut ✅ → 次は **JH134「1942-05-09〜05-16」**。直前の1942年4月10日〜5月8日フェーズは [BATAAN_CAPTIVITY_TO_CORAL_SEA_IMPLEMENTATION_PLAN.md](../plan_done/BATAAN_CAPTIVITY_TO_CORAL_SEA_IMPLEMENTATION_PLAN.md) としてcompleted / archived済み。
 
 ### 横断的な品質負債返済
 

@@ -1,7 +1,7 @@
 # 1942年4月10日〜5月8日 — バターン降伏後の捕虜移送、本土初空襲、翼賛選挙、珊瑚海海戦 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH130 ✅ published → 次は JH131「1942-04-18〜04-24」
+- **Progress:** phase cut ✅ → JH130 ✅ → JH131 ✅ published → 次は JH132「1942-04-25〜05-02」
 - **Created:** 2026-10-08
 - **Scope:** 1942-04-10〜1942-05-08
 - **Planned period articles:** **4本（JH130〜JH133）**

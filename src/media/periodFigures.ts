@@ -1303,4 +1303,14 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
       license: 'Public Domain（PD-Japan-oldphoto / PD-1996）',
     }),
   ],
+
+  '1942-05-03': [
+    commonsFigure('USS Lexington (CV-2) hit and burning during the Battle of the Coral Sea, 8 May 1942 (80-G-7414).jpg', {
+      alt: '1942年5月8日の珊瑚海海戦で日本軍機の攻撃を受け、煙を上げる米空母レキシントン。周囲に対空砲火の炸裂が見える',
+      title: '珊瑚海で被弾した米空母レキシントン',
+      dateLabel: '1942年5月8日',
+      credit: '撮影者不詳／U.S. Navy・Naval History and Heritage Command（80-G-7414）・Wikimedia Commons',
+      license: 'Public Domain Mark',
+    }),
+  ],
 }

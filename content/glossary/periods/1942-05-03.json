@@ -1,0 +1,29 @@
+{
+  "period": "1942-05-03",
+  "termRefs": [
+    {
+      "id": "tulagi-occupation-1942-05-03",
+      "core": true
+    },
+    {
+      "id": "corregidor-surrender-1942-05-06",
+      "core": true
+    },
+    {
+      "id": "coral-sea-battle-1942-05",
+      "core": true
+    },
+    {
+      "id": "shoho-coral-sea-1942-05-07",
+      "core": true
+    },
+    {
+      "id": "mo-operation-1942",
+      "core": false
+    },
+    {
+      "id": "corregidor-siege-1942-04",
+      "core": false
+    }
+  ]
+}

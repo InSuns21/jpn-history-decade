@@ -252,3 +252,5 @@ README には概要だけを置き、フェーズ進捗・監査結果・地図�
 
 
 - 1942年3月10日〜4月9日フェーズはJH126〜JH129、A46 published、S09-F新設、S10延長、phase-end audit necessity judgment no-audit、`npm run check`、CI、Pagesまで完了。phase-end audit judgment PR #377はPR CI #1165 / Quality Checks #302 success、main commit `6e3cb0e8bc576f068a6f0486c8b45486d35420d9` のmain CI #1166 / GitHub Pages #488もsuccess。全Definition of Doneを満たし、計画を `plan_done/OCCUPATION_CONSOLIDATION_TO_BATAAN_FALL_IMPLEMENTATION_PLAN.md` へarchive。次は1942年4月10日以後のphase cut。
+
+- 次フェーズを `plan/BATAAN_CAPTIVITY_TO_CORAL_SEA_IMPLEMENTATION_PLAN.md` として **1942年4月10日〜5月8日** に切り出した。**年代記事4本**：JH130「1942-04-10〜04-17」（バターン降伏後の捕虜移送・死の行進、コレヒドール抗戦、ビルマ油田方面）→JH131「1942-04-18〜04-24」（ドーリットル空襲・本土防空と海軍次段作戦の判断）→JH132「1942-04-25〜05-02」（ビルマ公路遮断・翼賛選挙・船舶運営会の運用開始）→JH133「1942-05-03〜05-08」（ツラギ・コレヒドール降伏・珊瑚海海戦）。次にA47「南東方面への進攻と珊瑚海の空間」のmap necessity / data-quality judgment、Crosscutting publication gate（S05 / S09-F / S10）、具体的な問題に限定したphase-end audit necessity judgmentを置く。ミッドウェー作戦協議は4月18日空襲以前から存在し、空襲を作戦の唯一の起因としない。5月7日の進攻船団引き返しと5月11日以後の作戦中止を分離し、現フェーズには5月8日までの状態を書く。現在地は **phase cut ✅ → 次は JH130「1942-04-10〜04-17」**。

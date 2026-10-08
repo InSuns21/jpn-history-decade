@@ -1273,4 +1273,14 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
   ],
 
 
+  '1942-04-10': [
+    commonsFigure('March of Death - Resting 02.jpg', {
+      alt: '1942年4月のバターン降伏後、日本軍兵士の監視下で道路脇に集められた米軍捕虜。捕虜たちのそばに日本兵が立つ',
+      title: 'バターン死の行進の開始期に日本軍が監視する捕虜',
+      dateLabel: '1942年4月（日付未特定）',
+      credit: '撮影者不詳／米海軍歴史遺産司令部 USMC 114538・米国国立公文書館・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+
 }

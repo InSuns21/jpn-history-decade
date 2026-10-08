@@ -1,7 +1,7 @@
 # 1942年4月10日〜5月8日 — バターン降伏後の捕虜移送、本土初空襲、翼賛選挙、珊瑚海海戦 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH130 ✅ → JH131 ✅ → JH132 ✅ → JH133 ✅ published → A47 ✅ adopted / Point-only published → 次は Crosscutting publication gate
+- **Progress:** phase cut ✅ → JH130 ✅ → JH131 ✅ → JH132 ✅ → JH133 ✅ published → A47 ✅ adopted / Point-only published → Crosscutting publication gate ✅ S05-E / S10-D extension, S09-F hold → 次は phase-end audit necessity judgment
 - **Created:** 2026-10-08
 - **Scope:** 1942-04-10〜1942-05-08
 - **Planned period articles:** **4本（JH130〜JH133）**
@@ -219,7 +219,7 @@ JH132の**ビルマ公路遮断・翼賛選挙・海運運用と南東方面へ�
 
 ### フェーズ
 - [ ] A47 map necessity / data-quality judgment（採用時はData / Style / Human Visual Auditまたは規約上のPoint-only再利用例外）
-- [ ] Crosscutting publication gate（S05 / S09-F / S10等の延長・hold）
+- [x] Crosscutting publication gate（S05 / S09-F / S10等の延長・hold）
 - [ ] phase-end independent auditの要否を具体的な未解決問題だけで判定
 - [ ] `npm run check` green
 - [ ] PR CI green
@@ -238,4 +238,6 @@ JH132の**ビルマ公路遮断・翼賛選挙・海運運用と南東方面へ�
 
 **A47完了（2026-10-09）:** map necessity = adopted。ラバウル・ラエ・ツラギ・ポートモレスビー・ジョマード水道付近・エスピリトゥサント島・豪州北東岸の7代表Pointを実装。日本側拠点／占領済み／未占領目標、珊瑚海入口、連合軍の地理的参照を6カテゴリに分離した。5月7日の船団反転位置、5月8日の空母交戦位置、実艦隊航跡、制海権境界は座標化しない。AWM・NHHCにより地点の役割と5月1日〜8日の時点差を照合し、GeoJSONへ展開されるデータのprovenance・transformationsを記録。Data/Style Audit passed。A46の監査済みPoint-only表示コンポーネント、凡例生成、popup/touch操作を変更せず再利用し、`visualAudit: not-required-reused-pattern` の例外条件を満たす。JH133の`coral-intelligence`節直後に配置。PR・main CIとPagesの成否は別途確認する。
 
-**Next action:** Crosscutting publication gate（S05 / S09-F / S10等の延長・hold判定）。
+**Crosscutting publication gate完了（2026-10-09）:** S05（既存S05-E「政党解体と翼賛体制」）はpass / extension。1941年の任期延長・大政翼賛会政治活動制限後に、1942年4月30日翼賛選挙で代表更新が再開された。内閣の推薦方針、翼賛政治体制協議会の候補者推薦、選挙行政、有権者による投票、帝国議会の審議を分ける比較軸が成立するため、国立公文書館史料によりS05-E本文・期間・関連年代・用語を延長した。S09-Fはhold。バターン降伏後の捕虜移送・給養・収容と、香港・シンガポール・ジャワ・ビルマの住民行政・軍政機構比較は責任・法的対象が異なり、今回の期間だけで既存の中心問いを実質的に変更しない。捕虜処遇はJH130の主張層に残し、S09-Fへ混入させない。S10（既存S10-D「戦時統制と資源配分」）はpass / extension。3月25日の法令・団体設立から5月1日の船舶運営会業務開始へ段階が変わり、海務院による計画、船舶運営会の一元配船、海運業者の運航実務の分担を、JACARによる史実照合のうえ本文・期間・関連年代へ追加した。制度化による能力増加や、5月1日の輸送効果の数量は断定しない。S02は税・公債等の新たな制度転換がなくhold。珊瑚海／ミッドウェーの新規横断記事もJH131・JH133・A47と役割が重複するためhold。
+
+**Next action:** phase-end audit necessity judgment（未解決の具体的な横断問題だけ判定）。

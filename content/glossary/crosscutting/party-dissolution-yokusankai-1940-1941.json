@@ -40,6 +40,14 @@
     {
       "id": "taisei-yokusankai-reorganization-1941",
       "core": true
+    },
+    {
+      "id": "yokusan-election-1942",
+      "core": true
+    },
+    {
+      "id": "yokusan-political-council-1942",
+      "core": true
     }
   ]
 }

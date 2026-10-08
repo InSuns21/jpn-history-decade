@@ -1,7 +1,7 @@
 # 1942年4月10日〜5月8日 — バターン降伏後の捕虜移送、本土初空襲、翼賛選挙、珊瑚海海戦 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH130 ✅ → JH131 ✅ → JH132 ✅ → JH133 ✅ published → 次は A47「南東方面への進攻と珊瑚海の空間」map necessity / data-quality judgment
+- **Progress:** phase cut ✅ → JH130 ✅ → JH131 ✅ → JH132 ✅ → JH133 ✅ published → A47 ✅ adopted / Point-only published → 次は Crosscutting publication gate
 - **Created:** 2026-10-08
 - **Scope:** 1942-04-10〜1942-05-08
 - **Planned period articles:** **4本（JH130〜JH133）**
@@ -236,4 +236,6 @@ JH132の**ビルマ公路遮断・翼賛選挙・海運運用と南東方面へ�
 
 **JH133完了（2026-10-09）:** 5月3日のツラギ占領、4日の米空母ヨークタウンによる攻撃とポートモレスビー攻略船団出航、6日のコレヒドール降伏、7日の祥鳳沈没・ネオショー／シムス攻撃と船団反転、8日のレキシントン喪失・翔鶴／瑞鶴の航空戦力損耗を、米海軍NHHC／豪州戦争記念館／米陸軍CMH等で照合。コレヒドールの降伏決断と他地域への命令伝達、戦術的艦艇被害と海上上陸の可否、7〜8日の現場経過と5月11日前後の後続判断を分離した。JH132のMO作戦出撃準備・残存戦線からの隣接接続を確認。新規用語4件・本文重要リンクを追加し、珊瑚海海戦8日の米海軍撮影写真（80-G-7414、Public Domain Mark）を採用して図版publication gate通過。次はA47の地図要否判定。
 
-**Next action:** A47「南東方面への進攻と珊瑚海の空間」のmap necessity / data-quality judgment。
+**A47完了（2026-10-09）:** map necessity = adopted。ラバウル・ラエ・ツラギ・ポートモレスビー・ジョマード水道付近・エスピリトゥサント島・豪州北東岸の7代表Pointを実装。日本側拠点／占領済み／未占領目標、珊瑚海入口、連合軍の地理的参照を6カテゴリに分離した。5月7日の船団反転位置、5月8日の空母交戦位置、実艦隊航跡、制海権境界は座標化しない。AWM・NHHCにより地点の役割と5月1日〜8日の時点差を照合し、GeoJSONへ展開されるデータのprovenance・transformationsを記録。Data/Style Audit passed。A46の監査済みPoint-only表示コンポーネント、凡例生成、popup/touch操作を変更せず再利用し、`visualAudit: not-required-reused-pattern` の例外条件を満たす。JH133の`coral-intelligence`節直後に配置。PR・main CIとPagesの成否は別途確認する。
+
+**Next action:** Crosscutting publication gate（S05 / S09-F / S10等の延長・hold判定）。

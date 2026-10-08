@@ -1,7 +1,7 @@
 # 1942年4月10日〜5月8日 — バターン降伏後の捕虜移送、本土初空襲、翼賛選挙、珊瑚海海戦 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH130 ✅ → JH131 ✅ → JH132 ✅ → JH133 ✅ published → A47 ✅ adopted / Point-only published → Crosscutting publication gate ✅ S05-E / S10-D extension, S09-F hold → 次は phase-end audit necessity judgment
+- **Progress:** phase cut ✅ → JH130 ✅ → JH131 ✅ → JH132 ✅ → JH133 ✅ published → A47 ✅ adopted / Point-only published → Crosscutting publication gate ✅ S05-E / S10-D extension, S09-F hold → phase-end audit necessity judgment ✅ no-audit → 次は CI / Pages / completion / archive
 - **Created:** 2026-10-08
 - **Scope:** 1942-04-10〜1942-05-08
 - **Planned period articles:** **4本（JH130〜JH133）**
@@ -174,6 +174,19 @@ JH132の**ビルマ公路遮断・翼賛選挙・海運運用と南東方面へ�
 
 これらは**監査候補であって自動実施のチェックリストではない**。各記事内・隣接記事内で解消すればno-auditとして通常の完了処理へ進む。
 
+### 判定結果（2026-10-09）：no-audit
+
+JH130〜JH133の本文・比較・読み方の留保、S09-Fの公開範囲、およびCrosscutting publication gateの採否記録を照合した。以下の4件に、隣接確認・publication gateを越えて独立監査すべき具体的な矛盾は残っていない。
+
+1. **捕虜処遇（JH130 / JH131 / S09-F）：** JH130は4月10日以後の捕虜移送、警備兵による暴力・殺害、移送中の犠牲とオドネル収容所への到着後の死亡を分離し、捕虜の人数・死者推計を無根拠に単一化していない。JH131は収容継続を短く引き継ぐ。S09-Fは香港・シンガポール・ジャワ・ビルマの**占領地住民への軍政と行政権限**の比較記事であり、フィリピン戦時捕虜の収容責任を住民統治へ混入させないことをCrosscutting gateで確定済み。
+2. **空襲前後の作戦判断（JH130 / JH131）：** 4月16日までに進んでいたミッドウェー・アリューシャン作戦協議をJH130で説明し、4月18日のドーリットル空襲をJH131で**既存計画の支持を強めた出来事**として記述。空襲を作戦構想の起点とする逆向きの因果はない。正式実施決定の段階は後続の歴史的時点で確認する。
+3. **珊瑚海の船団反転（JH132 / JH133 / A47）：** JH132は5月2日までのMO作戦準備を述べ、JH133は5月7日の船団反転と8日の空母戦・航空援護能力の変化を区別する。5月11日前後の正式な作戦中止・延期判断は現フェーズへ遡及させない。A47も反転地点や艦隊航跡を無根拠に座標化せず、命令上の判断を地図から先取りしない。
+4. **コレヒドールの降伏命令（JH130〜JH133）：** 4月までの抗戦、5月6日の要塞降伏意思決定、6日夜〜7日以降の他島への降伏命令、各部隊の受領・武装解除を分離している。5月8日をフィリピン全域の一斉降伏日とは書いていない。
+
+**後続フェーズへの引継ぎ（独立監査ではない）：** 5月8日以後を扱う最初の記事では、MO作戦の正式命令の発出日と内容、フィリピン諸島の部隊ごとの命令受領・降伏または抵抗継続を、同時点の史料と照合して初出記述する。JH133の「次の時代への論点」に既に受け渡しており、現フェーズの公開状態を遡及修正する必要はない。
+
+`PROJECT_WORKFLOW_STANDARD.md` §5.2・§5.3に基づき、独立のphase-end auditは行わない。次は通常のCI / Pages検証とフェーズ完了・PLANアーカイブ。
+
 ---
 
 ## 10. 調査アンカー（執筆時に原資料へ再照合）
@@ -218,9 +231,9 @@ JH132の**ビルマ公路遮断・翼賛選挙・海運運用と南東方面へ�
 - [ ] 歴史事実・日付・数値・捕虜取扱いに関する記述を信頼できる史料で照合
 
 ### フェーズ
-- [ ] A47 map necessity / data-quality judgment（採用時はData / Style / Human Visual Auditまたは規約上のPoint-only再利用例外）
+- [x] A47 map necessity / data-quality judgment（採用時はData / Style / Human Visual Auditまたは規約上のPoint-only再利用例外）
 - [x] Crosscutting publication gate（S05 / S09-F / S10等の延長・hold）
-- [ ] phase-end independent auditの要否を具体的な未解決問題だけで判定
+- [x] phase-end independent auditの要否を具体的な未解決問題だけで判定（no-audit）
 - [ ] `npm run check` green
 - [ ] PR CI green
 - [ ] main CI green
@@ -240,4 +253,6 @@ JH132の**ビルマ公路遮断・翼賛選挙・海運運用と南東方面へ�
 
 **Crosscutting publication gate完了（2026-10-09）:** S05（既存S05-E「政党解体と翼賛体制」）はpass / extension。1941年の任期延長・大政翼賛会政治活動制限後に、1942年4月30日翼賛選挙で代表更新が再開された。内閣の推薦方針、翼賛政治体制協議会の候補者推薦、選挙行政、有権者による投票、帝国議会の審議を分ける比較軸が成立するため、国立公文書館史料によりS05-E本文・期間・関連年代・用語を延長した。S09-Fはhold。バターン降伏後の捕虜移送・給養・収容と、香港・シンガポール・ジャワ・ビルマの住民行政・軍政機構比較は責任・法的対象が異なり、今回の期間だけで既存の中心問いを実質的に変更しない。捕虜処遇はJH130の主張層に残し、S09-Fへ混入させない。S10（既存S10-D「戦時統制と資源配分」）はpass / extension。3月25日の法令・団体設立から5月1日の船舶運営会業務開始へ段階が変わり、海務院による計画、船舶運営会の一元配船、海運業者の運航実務の分担を、JACARによる史実照合のうえ本文・期間・関連年代へ追加した。制度化による能力増加や、5月1日の輸送効果の数量は断定しない。S02は税・公債等の新たな制度転換がなくhold。珊瑚海／ミッドウェーの新規横断記事もJH131・JH133・A47と役割が重複するためhold。
 
-**Next action:** phase-end audit necessity judgment（未解決の具体的な横断問題だけ判定）。
+**Phase-end audit judgment完了（2026-10-09）:** JH130〜JH133・S09-F・A47における捕虜処遇、4月16日作戦協議／18日空襲、5月7日船団反転／8日空母戦／11日前後の後続判断、5月6日コレヒドール降伏／他島への命令を照合し、4件とも独立監査対象となる未解決の具体的矛盾はないと判断（no-audit）。5月8日以後の命令日・現地の降伏実施は次フェーズの個別記事で検証する。
+
+**Next action:** CI / Pages確認 → Definition of Done確認 → phase completion / plan archive。

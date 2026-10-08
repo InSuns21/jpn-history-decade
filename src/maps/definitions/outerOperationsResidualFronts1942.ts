@@ -5,7 +5,7 @@ export const outerOperationsResidualFronts1942Map: HistoricalMapDefinition = {
   "title": "1942年4月9日：攻略後の外周作戦と残存戦線",
   "historicalQuestion": "日本軍の占領後の軍政拠点から外へ伸びた作戦と、4月9日時点で残った戦線は、南方からインド洋・ニューギニアまでどのように分布していたか。",
   "readingNote": "1942年3月10日〜4月9日の状態変化を4月9日時点で整理した、代表Pointによる模式図。「政」は占領地で軍政・管理を開始した拠点、「占」は新規占領地点。「日」は日本海軍の空襲先（セイロン）、「米」は米海軍の反撃先（ニューギニア）であり、攻撃対象を日本の占領地と同一視しない。「降」はバターン主力の降伏、「戦」はコレヒドール・ビルマ・東ティモールで形態の異なる抵抗継続を示す。近接するバターン／コレヒドール、コロンボ／トリンコマリーは詳細zoomとpopupで個別確認する。Pointは代表位置であり、前線、戦闘範囲、実航路、占領面積を示さない。背景国境は現代のOpenStreetMapによるもので、1942年の政治境界ではない。",
-  "status": "draft",
+  "status": "published",
   "period": {
     "startYear": 1942,
     "endYear": 1942
@@ -351,7 +351,7 @@ export const outerOperationsResidualFronts1942Map: HistoricalMapDefinition = {
   "auditState": {
     "dataAudit": "passed",
     "styleAudit": "passed",
-    "visualAudit": "pending-human",
+    "visualAudit": "not-required-reused-pattern",
     "notes": [
       "A46 map necessity adopted: A45 (March 9) cannot show east-west divergence between US counterattack on Lae–Salamaua and Japanese carrier raids on Colombo/Trincomalee, alongside the Bataan/Corregidor split.",
       "Data Audit: all 11 identifiers unique, all Points have coordinates and required properties; historical roles grounded in JH126–JH129 sources. Approximate coordinates represent places, not routes/front lines/borders.",

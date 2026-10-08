@@ -1,7 +1,7 @@
 # 1942年3月10日から4月9日まで — 占領統治の制度化、第二段作戦、バターン降伏 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH126 ✅ → JH127 ✅ → JH128 ✅ → JH129 ✅ → 次は A46「攻略後の外周展開と残存戦線」map necessity / data-quality judgment
+- **Progress:** phase cut ✅ → JH126 ✅ → JH127 ✅ → JH128 ✅ → JH129 ✅ → A46 ✅ 採用 / 地図実装 ✅ / PR CI ✅ → draft mapをmainにマージしてPagesでHuman Visual Audit
 - **Created:** 2026-10-08
 - **Scope:** 1942-03-10〜1942-04-09
 - **Article count:** **4年代記事（JH126〜JH129）**
@@ -241,6 +241,16 @@ A45は3月9日時点の「占領後管理／軍事占領／戦闘・抵抗継続
 - ビルマ前線を精密front lineとして描かない。公刊戦史の時点図に依拠できる場合もgeneralized / schematicとして扱う
 - A45 point-only表示を再利用する場合はHuman Visual Audit省略条件を満たすか判定する
 - 新しい線・面・凡例・interactionを採用する場合はHuman Visual Auditを必須とする
+
+## A46 判定記録（2026-10-08）
+
+- **Map necessity: adopted**。A45（3月9日）の占領・抗戦分布に対して、A46ではセイロン島の日本軍空母空襲（コロンボ／トリンコマリー）とニューギニアの米軍空母反撃（ラエ／サラモア）が両端へ広がり、**日本軍の占領後軍政拠点／日米双方の攻撃対象／残存戦線・バターン主力降伏**を同一時点で空間比較できる。表だけでは「後方化と外周作戦の東西への拡張」を直感的に捉えにくい。
+- **Geometry: Point only / Level B〜C**。11 representative Pointsを採用。ラエ・サラモアは2地点の模式的代表Point、ビルマ中北部は継戦域の概略Point。前線・占領範囲・制海権をPolygonで示さず、インド洋への実航路が史料で追跡できないためLineStringも作らない。地図が示すのは**位置関係と状態の分岐**であり、占領面積・艦隊移動経路・距離・戦線境界の定量資料ではない。
+- **Historical status distinction:** ジャワ・ラングーン・シンガポールは軍政の開始／運用、ポートブレアは3月23日の新規占領、ラエ・サラモアは日本占領拠点への**米軍の反撃**、コロンボ・トリンコマリーは日本軍の**海空打撃先**、バターンは4月9日の主力降伏、コレヒドール・ビルマ・東ティモールは異なる抵抗の継続として明示。空襲先を占領地として表示しない。
+- **Data Audit:** representative coordinate、歴史的状態・年月日・provenance・derivedFromSourceIds・geometryConfidenceを確認。原資料参照はJH126〜JH129の公的史料・戦史と接続。外部の歴史地図の境界・航路geometryは複製しない。
+- **Style Audit:** 属性カテゴリと凡例6分類を照合し、色だけに依存せず「政・占・米・日・戦・降」の文字記号も併用する。既存ThematicMap rendererを再利用するが、**A45から凡例カテゴリと地理範囲を変更したため、point-only再利用例外は不適用**。
+- **Human Visual Audit:** **pending-human**。バターン／コレヒドール、コロンボ／トリンコマリーの近接ラベル、セイロン〜ニューギニアを含む初期表示、desktop/tablet/mobile、タップ・popup・zoomを公開画面で確認するまで `draft` を維持し、公開完了扱いにしない。GeoJSON / map definitionをJH129の最終節直後へ配置し、先の時点を前節より先に見せない。
+- **Next:** PR CI green → `draft / pending-human` のままmainへマージ → Pages deploy green → 公開実画面でHuman Visual Audit → 合格後に `published` 昇格 → Crosscutting publication gateへ進む。**Human Visual AuditはPRのマージ条件ではなく、地図のpublished昇格条件**。
 
 ---
 

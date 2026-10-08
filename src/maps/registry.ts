@@ -20,6 +20,7 @@ import { finalDiplomacyOperationalPreparation1941Map } from './definitions/final
 import { openingMultifrontOperations1941Map } from './definitions/openingMultifrontOperations1941.ts'
 import { southernAdvanceStatus1942Map } from './definitions/southernAdvanceStatus1942.ts'
 import { postAbdaOccupationResistance1942Map } from './definitions/postAbdaOccupationResistance1942.ts'
+import { outerOperationsResidualFronts1942Map } from './definitions/outerOperationsResidualFronts1942.ts'
 import { railwayExpansion1872To1890Map } from './definitions/railwayExpansion1872To1890.ts'
 import { sinoRussoJapaneseWarTheatersMap } from './definitions/sinoRussoJapaneseWarTheaters.ts'
 import { firstWorldWarEastAsiaPacificMap } from './definitions/firstWorldWarEastAsiaPacific.ts'
@@ -56,6 +57,7 @@ export const mapDefinitions: HistoricalMapDefinition[] = [
   openingMultifrontOperations1941Map,
   southernAdvanceStatus1942Map,
   postAbdaOccupationResistance1942Map,
+  outerOperationsResidualFronts1942Map,
   railwayExpansion1872To1890Map,
   sinoRussoJapaneseWarTheatersMap,
   firstWorldWarEastAsiaPacificMap,

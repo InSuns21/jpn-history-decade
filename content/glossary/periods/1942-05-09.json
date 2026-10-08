@@ -1,0 +1,41 @@
+{
+  "period": "1942-05-09",
+  "termRefs": [
+    {
+      "id": "mo-cancellation-1942-05-11",
+      "core": true
+    },
+    {
+      "id": "visayas-mindanao-surrender-1942-05",
+      "core": true
+    },
+    {
+      "id": "burma-india-retreat-1942-05",
+      "core": true
+    },
+    {
+      "id": "naval-order-18-1942-05-05",
+      "core": true
+    },
+    {
+      "id": "mo-operation-1942",
+      "core": false
+    },
+    {
+      "id": "corregidor-surrender-1942-05-06",
+      "core": false
+    },
+    {
+      "id": "burma-road-lashio-1942",
+      "core": false
+    },
+    {
+      "id": "coral-sea-battle-1942-05",
+      "core": false
+    },
+    {
+      "id": "midway-aleutians-plan-1942-04",
+      "core": false
+    }
+  ]
+}

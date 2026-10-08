@@ -56,7 +56,7 @@ export const outerOperationsResidualFronts1942Map: HistoricalMapDefinition = {
           "ラエ／サラモアは両地点の中間付近の代表Pointとし、米軍攻撃の中心や侵攻経路の測定には使用しない。",
           "空襲先・米軍反撃先は占領地Pointと異なるカテゴリ・凡例を用い、占領範囲のPolygonや実航路・進攻LineStringを復元しない。"
         ],
-        "notes": "A46 uses Point-only geometry and the existing ThematicMap marker/popup renderer, but changes categories and adds Japanese/US attack-target symbols. Therefore the A45 reused-pattern visual-audit exemption is NOT claimed. Human Visual Audit of labels, small-screen pan/zoom, initial view, legend and touch interactions is required before publishing."
+        "notes": "A46 is Point-only and reuses A45 post-abda-occupation-resistance-1942-03-09: identical ThematicMap marker, label, schema-driven legend, popup and touch controls. Only Point positions, attributes, existing text marker values and categorical legend entries change. Data/Style audits passed. The user approved the same-format reused-pattern exception on 2026-10-08; no new renderer, legend logic, or layout was introduced."
       },
       "allowedGeometryTypes": [
         "Point"

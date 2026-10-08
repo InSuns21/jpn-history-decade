@@ -1283,4 +1283,14 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     }),
   ],
 
+  '1942-04-18': [
+    commonsFigure('USS Hornet (CV-8) launching a B-25B Mitchell bomber during the Doolittle Raid on April 18, 1942.jpg', {
+      alt: '1942年4月18日、米空母ホーネットの飛行甲板から離陸する陸軍航空軍の双発B-25爆撃機',
+      title: '空母ホーネットから発進するB-25爆撃機',
+      dateLabel: '1942年4月18日',
+      credit: 'U.S. Army Air Forces／U.S. Department of Defense・Wikimedia Commons',
+      license: 'Public Domain',
+    }),
+  ],
+
 }

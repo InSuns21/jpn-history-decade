@@ -1,7 +1,7 @@
 # 1942年3月10日から4月9日まで — 占領統治の制度化、第二段作戦、バターン降伏 実装計画
 
-- **Status:** active
-- **Progress:** phase cut ✅ → JH126 ✅ → JH127 ✅ → JH128 ✅ → JH129 ✅ → A46 ✅ → Crosscutting publication gate ✅ → phase-end audit necessity judgment ✅ no-audit → 次は `npm run check` / PR CI / main CI / Pages / completion
+- **Status:** completed
+- **Progress:** phase cut ✅ → JH126〜JH129 ✅ → A46 ✅ adopted / published → Crosscutting publication gate ✅ S09-F published / S10延長 → phase-end audit necessity judgment ✅ no-audit → `npm run check` ✅ → CI ✅ → Pages ✅ → phase completed
 - **Created:** 2026-10-08
 - **Scope:** 1942-03-10〜1942-04-09
 - **Article count:** **4年代記事（JH126〜JH129）**
@@ -406,9 +406,23 @@ JH126〜JH129とA46判定後に、既存横断記事の延長・新規記事・h
 - [x] Crosscutting publication gate
 - [x] S09-F publication / hold、S10 extension / holdを比較軸で決定
 - [x] phase-end audit necessity judgment
-- [ ] `npm run check` green
-- [ ] PR CI green
-- [ ] main CI green
-- [ ] GitHub Pages deploy green
-- [ ] Status / Progress / docsを更新
-- [ ] 完了後 `plan_done/` へarchiveし、`plan/` に重複を残さない
+- [x] `npm run check` green
+- [x] PR CI green
+- [x] main CI green
+- [x] GitHub Pages deploy green
+- [x] Status / Progress / docsを更新
+- [x] 完了後 `plan_done/` へarchiveし、`plan/` に重複を残さない
+
+
+---
+
+# Completion record
+
+- JH126〜JH129: published。各年代で直前年代との隣接接続確認、図版publication gate、主要史実の公的史料・公的戦史による検証を完了
+- A46 `outer-operations-residual-fronts-1942-04-09`: **adopted / Point-only published**。11代表Point・6分類。Data / Style Audit passed、A45と同じPoint描画・1文字マーカー・凡例生成・popup/touch操作・レスポンシブ表示を再利用し、Human Visual Auditは `not-required-reused-pattern`
+- Crosscutting publication gate: S09-F「南方占領統治――軍政機構と行政権限の地域差」を新規published。S10「戦時統制と資源配分」を戦時海運管理令・船舶運営会まで延長。S05 / S02 / S13 / 「第二段作戦」新規横断記事はhold
+- phase-end audit necessity judgment: **no-audit**。8候補仮説はJH126〜JH129 / A46 / S09-F / S10で解消済み
+- phase-end audit judgment PR #377: PR CI #1165 / Quality Checks #302 success
+- main commit `6e3cb0e8bc576f068a6f0486c8b45486d35420d9`: main CI #1166 success / GitHub Pages #488 success
+- `npm run check`: PR CI #1165 / main CI #1166 の両方で green
+- Completed: 2026-10-08

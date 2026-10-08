@@ -30,7 +30,7 @@ Data Audit は「測量級・GIS級の精密geometryだけを通す審査」で�
 
 Visual Audit は完全自動化が難しいため、機械判定できない項目は **human review required** として残す。
 
-ただし、**既にHuman Visual Audit済みの地図と同一の表示コンポーネント・点記号・凡例・interactionを再利用し、変更点が点featureの位置・ラベル・属性値だけであるpoint-only地図**は、個別のHuman Visual Auditを省略できる。この例外では Data Audit と Style Audit は省略せず、再利用元の地図IDと同一パターンである理由を `auditState.notes` に残す。線・polygon、新しい表示ロジック、凡例仕様変更、popup/interaction変更、レイアウト変更を含む場合は例外対象外とする。
+ただし、**既にHuman Visual Audit済みの地図と同じ形式の表示コンポーネント・点マーカー・凡例生成・interactionを再利用するpoint-only地図**は、個別のHuman Visual Auditを省略できる。「同じ形式」は、記号・色・カテゴリ・凡例文言の一致ではなく、同じ描画方式・凡例項目スキーマと生成ロジック・popup/touch操作を指す。既存の文字マーカーと凡例スキーマに新しい分類・文字・色を登録するだけなら例外を適用できる。Data Audit と Style Audit は省略せず、追加カテゴリと凡例・記号・色の一致、出典・座標・初期表示範囲・近接地点の識別方針を確認し、再利用元IDと形式が同じ根拠を `auditState.notes` に記録する。線・polygon・新しい表示ロジック・凡例生成方式の変更・popup/interaction変更・レイアウト変更を含む場合、または具体的な視認性リスクが認められる場合は例外対象外とする。
 
 特に interactive map は、viewport 幅だけでなく入力方式も監査対象とする。Desktop の mouse 操作が成功しても、Tablet / Touch で同じ操作が成立するとは限らないため、少なくとも代表的な touch 環境を独立に確認する。
 
@@ -508,7 +508,9 @@ Human Visual Audit をGitHub Pages上で行うため、`draft` / `pending-human`
 
 ## Visual Audit をやり直す
 
-- style変更
+既存Point形式内でカテゴリ・文字マーカー・色を変更するだけの場合は1章の例外条件とData / Style Auditで判定する。
+
+- style変更（新たな描画方式・UI仕様の変更）
 - template変更
 - 地図コンテナサイズ変更
 - popup / legend UI変更
@@ -555,7 +557,7 @@ Human Visual Audit をGitHub Pages上で行うため、`draft` / `pending-human`
 - [ ] 主要地点を初期表示で識別できる
 - [ ] tap / click で補足情報へ到達できる
 - [ ] zoom別確認 passed（再利用パターン例外では省略可）
-- [ ] 再利用パターン例外を使う場合、再利用元地図ID・同一UI/interactionであること・point-onlyであることを notes に記録
+- [ ] 再利用パターン例外を使う場合、再利用元地図ID・同じ形式のUI・凡例生成・interactionであること、point-onlyであること、カテゴリ差分を notes に記録
 - [ ] 不確実性の表現を確認
 - [ ] geometryの精度が地図の問いに対して十分であり、精密さを過剰主張していない
 - [ ] approximate / schematic geometryを使う場合、生成根拠・用途・測定不可の範囲が追跡可能

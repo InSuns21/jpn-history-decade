@@ -5,7 +5,7 @@ export const outerOperationsResidualFronts1942Map: HistoricalMapDefinition = {
   "title": "1942年4月9日：攻略後の外周作戦と残存戦線",
   "historicalQuestion": "日本軍の占領後の軍政拠点から外へ伸びた作戦と、4月9日時点で残った戦線は、南方からインド洋・ニューギニアまでどのように分布していたか。",
   "readingNote": "1942年3月10日〜4月9日の状態変化を4月9日時点で整理した、代表Pointによる模式図。「政」は占領地で軍政・管理を開始した拠点、「占」は新規占領地点。「日」は日本海軍の空襲先（セイロン）、「米」は米海軍の反撃先（ニューギニア）であり、攻撃対象を日本の占領地と同一視しない。「降」はバターン主力の降伏、「戦」はコレヒドール・ビルマ・東ティモールで形態の異なる抵抗継続を示す。近接するバターン／コレヒドール、コロンボ／トリンコマリーは詳細zoomとpopupで個別確認する。Pointは代表位置であり、前線、戦闘範囲、実航路、占領面積を示さない。背景国境は現代のOpenStreetMapによるもので、1942年の政治境界ではない。",
-  "status": "draft",
+  "status": "published",
   "period": {
     "startYear": 1942,
     "endYear": 1942
@@ -56,7 +56,7 @@ export const outerOperationsResidualFronts1942Map: HistoricalMapDefinition = {
           "ラエ／サラモアは両地点の中間付近の代表Pointとし、米軍攻撃の中心や侵攻経路の測定には使用しない。",
           "空襲先・米軍反撃先は占領地Pointと異なるカテゴリ・凡例を用い、占領範囲のPolygonや実航路・進攻LineStringを復元しない。"
         ],
-        "notes": "A46 uses Point-only geometry and the existing ThematicMap marker/popup renderer, but changes categories and adds Japanese/US attack-target symbols. Therefore the A45 reused-pattern visual-audit exemption is NOT claimed. Human Visual Audit of labels, small-screen pan/zoom, initial view, legend and touch interactions is required before publishing."
+        "notes": "A46 is Point-only and reuses A45 post-abda-occupation-resistance-1942-03-09: identical ThematicMap marker, label, schema-driven legend, popup and touch controls. Only Point positions, attributes, existing text marker values and categorical legend entries change. Data/Style audits passed. The user approved the same-format reused-pattern exception on 2026-10-08; no new renderer, legend logic, or layout was introduced."
       },
       "allowedGeometryTypes": [
         "Point"
@@ -351,12 +351,12 @@ export const outerOperationsResidualFronts1942Map: HistoricalMapDefinition = {
   "auditState": {
     "dataAudit": "passed",
     "styleAudit": "passed",
-    "visualAudit": "pending-human",
+    "visualAudit": "not-required-reused-pattern",
     "notes": [
       "A46 map necessity adopted: A45 (March 9) cannot show east-west divergence between US counterattack on Lae–Salamaua and Japanese carrier raids on Colombo/Trincomalee, alongside the Bataan/Corregidor split.",
       "Data Audit: all 11 identifiers unique, all Points have coordinates and required properties; historical roles grounded in JH126–JH129 sources. Approximate coordinates represent places, not routes/front lines/borders.",
       "Style Audit: nominal categorical colors AND Japanese character markers, single Point renderer; legend values match layer categories; no line, polygon, or area claims.",
-      "Human Visual Audit mandatory and pending: new category/color/marker set compared with A45, increased geographic extent and close pairs (Bataan/Corregidor, Colombo/Trincomalee). Do not mark published until desktop/tablet/mobile/touch/zoom verified.",
+      "Human Visual Audit omitted with approved same-format point-only reuse of A45 post-abda-occupation-resistance-1942-03-09. The renderer, marker layout, data-driven legend, popup and touch handling are unchanged. Data/Style audits passed for the new six-category values; new geometry is Points only.",
       "No display-style, popup handler, legend renderer, or template code modified."
     ]
   }

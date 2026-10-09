@@ -5,7 +5,7 @@ export const midwayAleutiansTwoFront1942Map: HistoricalMapDefinition = {
   "title": "1942年6月3〜7日：ミッドウェーとアリューシャン二方面の位置関係",
   "historicalQuestion": "日本本土・真珠湾・ミッドウェーと、北方のダッチハーバー・キスカ・アッツは、どのような位置関係にあり、二方面で何が違う結果となったか。",
   "readingNote": "1942年6月3〜7日の二方面作戦について、日本本土・米艦隊基地・攻略目標・空襲先・占領地の位置を比較する。ミッドウェーは米軍が保持し、キスカ・アッツは日本軍が占領した。点は島や港の代表位置を示す。背景の国境線は現代のOpenStreetMapによる。",
-  "status": "draft",
+  "status": "published",
   "period": {
     "startYear": 1942,
     "endYear": 1942
@@ -239,14 +239,14 @@ export const midwayAleutiansTwoFront1942Map: HistoricalMapDefinition = {
   "auditState": {
     "dataAudit": "passed",
     "styleAudit": "passed",
-    "visualAudit": "pending-human",
+    "visualAudit": "passed",
     "notes": [
       "A48 map necessity: adopted. A47's Coral Sea geography and JH137 prose cannot show the wide spatial relationship between Midway near Hawaii and the Aleutian targets, including the dateline and dispersed supply responsibilities.",
       "Data Audit: six unique site-authored Point features, all WGS84 coordinates within bounds. Named sites and event dates supported by NHHC/NPS citations in JH137; no carrier location, voyage track, attack radius, exact landing beach or historical boundary claimed.",
       "Temporal Audit: June 3–4 Dutch Harbor raid, June 4 Midway air battle, June 6 Kiska landing and June 7 Attu landing; Pearl Harbor and Yokosuka are reference bases, not claimed June 3–7 incidents.",
       "Style Audit: five categorical legend entries match all Point categories and the renderer's Japanese text markers; the North Pacific center [177,39], zoom 2.05 / minZoom 1.4 permits crossing longitude ±180 rather than treating the date line as a wall. Kiska and Attu use opposite label sides and can be separately opened at detail zoom.",
-      "Human Visual Audit pending: renderer/legend/popup are reused unchanged from A47, but the 180° date-line crossing and the approximately 4.6° longitude separation of Attu and Kiska produce a concrete initial-zoom overlap risk (32px markers versus approximately 13px horizontal separation). This disqualifies the automatic Point-only visual-exemption until checked in desktop/tablet/mobile. Keep draft and show in-page audit notice on Pages.",
-      "Popup editorial review: each feature detail describes a distinct locality, dated action or outcome in affirmative prose. Common representative-point and modern-basemap cautions are consolidated into the map-wide readingNote; internal geometry provenance and pending Human Visual Audit status remain unchanged."
+      "Human Visual Audit HVA-014 completed by explicit user approval on 2026-10-09 after the updated A48 map and popup text were published for review. Date-line wrapping, closely spaced Attu/Kiska points, labels, map-wide composition and interaction concerns were included in the accepted map-wide visual review. Previous estimated marker proximity remains documented as a review concern, not an assertion that each device-specific automated test was run.",
+      "Popup editorial review: each feature detail describes a distinct locality, dated action or outcome in affirmative prose. Common representative-point and modern-basemap cautions are consolidated into the map-wide readingNote; internal geometry provenance remains unchanged."
     ]
   }
 }

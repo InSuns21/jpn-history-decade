@@ -1,0 +1,37 @@
+{
+  "period": "1942-06-03",
+  "termRefs": [
+    {
+      "id": "midway-battle-1942-06",
+      "core": true
+    },
+    {
+      "id": "midway-carrier-losses-1942-06",
+      "core": true
+    },
+    {
+      "id": "midway-yorktown-end-1942-06",
+      "core": true
+    },
+    {
+      "id": "aleutians-al-occupation-1942-06",
+      "core": true
+    },
+    {
+      "id": "dutch-harbor-raid-1942-06",
+      "core": true
+    },
+    {
+      "id": "midway-comint-1942-05",
+      "core": false
+    },
+    {
+      "id": "mi-al-sortie-1942-05",
+      "core": false
+    },
+    {
+      "id": "midway-tf16-tf17-1942-05",
+      "core": false
+    }
+  ]
+}

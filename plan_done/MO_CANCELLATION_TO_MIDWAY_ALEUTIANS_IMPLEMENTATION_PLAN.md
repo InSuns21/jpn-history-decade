@@ -1,13 +1,13 @@
 # 1942年5月9日〜6月7日 — MO作戦中止からミッドウェー・アリューシャン作戦 実装計画
 
-- **Status:** active
-- **Progress:** phase cut ✅ → JH134 ✅ → JH135 ✅ → JH136 ✅ → JH137 ✅ → A48 ✅ adopted Point-only / Data・Style・Human Visual Audit passed → phase-end audit necessity judgment ✅ no-audit → PR CI ✅ / main CI ✅ / Pages ✅ → plan archive pending
+- **Status:** completed
+- **Progress:** phase cut ✅ → JH134〜JH137 ✅ → A48 ✅ / HVA-014 passed → Crosscutting gate ✅ → no-audit ✅ → PR/main CI ✅ / Pages ✅ → completed / archived
 - **Created:** 2026-10-09
 - **Scope:** 1942-05-09〜1942-06-07
 - **Planned period articles:** **4本（JH134〜JH137）**
 - **Primary goal:** 珊瑚海での損失を受けた日本軍のポートモレスビー海上攻略中止判断と、なお進むミッドウェー・アリューシャン攻略計画を区別する。ビルマからの英印・中国軍の後退、フィリピン各地への降伏命令の実施、米軍による通信情報の解読・作戦目標推定、双方の艦隊出撃、6月上旬の戦闘と北方島嶼占領を通じ、**指揮命令／補給・占領／情報と選択肢／海空戦の結果**がどう変わるかを追う。
-- **Previous phase:** [BATAAN_CAPTIVITY_TO_CORAL_SEA_IMPLEMENTATION_PLAN.md](../plan_done/BATAAN_CAPTIVITY_TO_CORAL_SEA_IMPLEMENTATION_PLAN.md)
-- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](JPN_HISTORY_DECADE_PLAN.md)
+- **Previous phase:** [BATAAN_CAPTIVITY_TO_CORAL_SEA_IMPLEMENTATION_PLAN.md](BATAAN_CAPTIVITY_TO_CORAL_SEA_IMPLEMENTATION_PLAN.md)
+- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](../plan/JPN_HISTORY_DECADE_PLAN.md)
 - **Workspace rules:** [../SYSTEM_PROMPT.md](../SYSTEM_PROMPT.md)
 
 ---
@@ -115,7 +115,7 @@
 - **通信情報：解消済み。** JH135は5月19日の攻撃目標推定・22日のAF確認・後続の日付推定、JH136は事前配備と敵艦隊位置の未把握、JH137は6月3日の船団・4日の空母の現場索敵を記述。後から判明した戦闘結果を事前の認識へ投影していない。
 - **MI／AL：解消済み。** JH135〜137は中部太平洋の島攻略・艦隊決戦と北太平洋の基地攻撃・島嶼占領を別目的として記述。JH137のMI攻略失敗とキスカ（6日）・アッツ（7日）の占領、A48の地理的Pointは別結果であり、ALを単なる陽動へ一元化していない。
 
-PROJECT_WORKFLOW_STANDARD 5.2／5.3に従い、重複する独立監査は実施しない。**Next:** CI / Pages / phase completion / PLAN archive。
+PROJECT_WORKFLOW_STANDARD 5.2／5.3に従い、重複する独立監査は実施しない。**Closure:** PR/main CI・Pagesが成功し、完成PLANをarchiveした。
 
 ## 10. 調査アンカー（本文執筆時に日付・出典を再検証）
 
@@ -154,7 +154,7 @@ PROJECT_WORKFLOW_STANDARD 5.2／5.3に従い、重複する独立監査は実施
 - [x] Crosscutting publication gate（S05-E延長／S09-F・S10-D・新規記事hold、2026-10-09）
 - [x] phase-end independent auditの要否を具体的な残存仮説だけから判定
 - [x] `npm run check` green、PR CI / main CI / GitHub Pages deploy green
-- [ ] Status / Progress / docsを更新し、全DoD充足後のみ`plan_done/`へ移動
+- [x] Status / Progress / docsを更新し、全DoD充足後のみ`plan_done/`へ移動
 
 **Phase cut record (2026-10-09):** 4本構成（JH134〜137）と5月9日〜6月7日の区間を決定。次の実装工程はJH134。年代本文・図版・地図の公開完了をphase cut時点で宣言しない。
 
@@ -178,4 +178,4 @@ PROJECT_WORKFLOW_STANDARD 5.2／5.3に従い、重複する独立監査は実施
 
 **Phase-end audit necessity judgment (2026-10-09):** JH133〜137・A48・Crosscutting gateの記述を4仮説（MO現場反転／正式中止、コレヒドール／地域別降伏、COMINT事前推定／戦闘中索敵、MI／ALの目的／成果）で対照した。いずれも既存記事で区別済みで、未解決の横断矛盾がないため **no-audit**。独立監査を追加せず、CI / Pagesと完了処理に進む。
 
-**CI / Pages verified (2026-10-09):** 判定PR [#400](https://github.com/InSuns21/jpn-history-decade/pull/400) をsquash merge。PR Quality Checks [#37918965053](https://github.com/InSuns21/jpn-history-decade/actions/runs/37918965053) とCI [#37918965055](https://github.com/InSuns21/jpn-history-decade/actions/runs/37918965055) はsuccess。main commit `9f5d798d6f6cdd171995fa7ffd2a54b8fb0861fe` のCI [#37919082718](https://github.com/InSuns21/jpn-history-decade/actions/runs/37919082718) とPages [#37919082745](https://github.com/InSuns21/jpn-history-decade/actions/runs/37919082745) もsuccess。`plan_done/` への移動は、GitHubのファイル削除操作が接続ツール側でブロックされたため未実施。`plan/` 側はactiveのまま残し、archive完了とは扱わない。
+**CI / Pages verified (2026-10-09):** 判定PR [#400](https://github.com/InSuns21/jpn-history-decade/pull/400) をsquash merge。PR Quality Checks [#37918965053](https://github.com/InSuns21/jpn-history-decade/actions/runs/37918965053) とCI [#37918965055](https://github.com/InSuns21/jpn-history-decade/actions/runs/37918965055) はsuccess。main commit `9f5d798d6f6cdd171995fa7ffd2a54b8fb0861fe` のCI [#37919082718](https://github.com/InSuns21/jpn-history-decade/actions/runs/37919082718) とPages [#37919082745](https://github.com/InSuns21/jpn-history-decade/actions/runs/37919082745) もsuccess。2026-10-09にStatusをcompletedへ更新し、元ファイルを削除して`plan_done/`へ一意に移動。次は1942年6月8日以後のphase cut。

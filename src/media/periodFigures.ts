@@ -1313,4 +1313,16 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
       license: 'Public Domain Mark',
     }),
   ],
+  '1942-05-26': [
+    {
+      imageUrl: 'https://s3-ap-southeast-2.amazonaws.com/awm-media/collection/060696/screen/4077351.JPG',
+      sourceUrl: 'https://www.awm.gov.au/collection/C48694',
+      alt: '1942年6月1日、シドニー港で沈没した日本海軍の特殊潜航艇をクレーンで引き揚げる作業。周囲に作業員と船が見える',
+      title: 'シドニー港での特殊潜航艇引き揚げ',
+      dateLabel: '1942年6月1日',
+      credit: 'Ronald Noel Keam／Australian War Memorial（060696）',
+      license: 'Public Domain',
+    },
+  ],
+
 }

@@ -1,7 +1,7 @@
 # 1942年5月9日〜6月7日 — MO作戦中止からミッドウェー・アリューシャン作戦 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH134 ✅ → JH135 ✅ → JH136 ✅ → JH137 ✅ → A48 ✅ adopted Point-only / Data・Style・Human Visual Audit passed → phase-end audit necessity judgment ✅ no-audit → 次は CI / Pages / phase completion
+- **Progress:** phase cut ✅ → JH134 ✅ → JH135 ✅ → JH136 ✅ → JH137 ✅ → A48 ✅ adopted Point-only / Data・Style・Human Visual Audit passed → phase-end audit necessity judgment ✅ no-audit → PR CI ✅ / main CI ✅ / Pages ✅ → plan archive pending
 - **Created:** 2026-10-09
 - **Scope:** 1942-05-09〜1942-06-07
 - **Planned period articles:** **4本（JH134〜JH137）**
@@ -153,7 +153,7 @@ PROJECT_WORKFLOW_STANDARD 5.2／5.3に従い、重複する独立監査は実施
 - [x] A48 map necessity / data-quality judgment：Point-only採用、Data / Style Audit passed。HVA-014は2026-10-09のユーザー承認によりpassed、地図をpublishedへ昇格。
 - [x] Crosscutting publication gate（S05-E延長／S09-F・S10-D・新規記事hold、2026-10-09）
 - [x] phase-end independent auditの要否を具体的な残存仮説だけから判定
-- [ ] `npm run check` green、PR CI / main CI / GitHub Pages deploy green
+- [x] `npm run check` green、PR CI / main CI / GitHub Pages deploy green
 - [ ] Status / Progress / docsを更新し、全DoD充足後のみ`plan_done/`へ移動
 
 **Phase cut record (2026-10-09):** 4本構成（JH134〜137）と5月9日〜6月7日の区間を決定。次の実装工程はJH134。年代本文・図版・地図の公開完了をphase cut時点で宣言しない。
@@ -177,3 +177,5 @@ PROJECT_WORKFLOW_STANDARD 5.2／5.3に従い、重複する独立監査は実施
 **Crosscutting publication gate record (2026-10-09):** S05-Eに1942年5月20日翼賛政治会創立と議会会派の再編を追加し、国立国会図書館・JACARを出典として候補推薦・投票・議員組織・議会審議を分離。S09-Fはフィリピン降伏命令の地域差と住民統治機構を混同しないためhold。S10-Dは艦隊・商船の運用制約を新たな統制法制成立と混同しないためhold。新規横断記事も重複を避けhold。次はphase-end audit necessity judgment。
 
 **Phase-end audit necessity judgment (2026-10-09):** JH133〜137・A48・Crosscutting gateの記述を4仮説（MO現場反転／正式中止、コレヒドール／地域別降伏、COMINT事前推定／戦闘中索敵、MI／ALの目的／成果）で対照した。いずれも既存記事で区別済みで、未解決の横断矛盾がないため **no-audit**。独立監査を追加せず、CI / Pagesと完了処理に進む。
+
+**CI / Pages verified (2026-10-09):** 判定PR [#400](https://github.com/InSuns21/jpn-history-decade/pull/400) をsquash merge。PR Quality Checks [#37918965053](https://github.com/InSuns21/jpn-history-decade/actions/runs/37918965053) とCI [#37918965055](https://github.com/InSuns21/jpn-history-decade/actions/runs/37918965055) はsuccess。main commit `9f5d798d6f6cdd171995fa7ffd2a54b8fb0861fe` のCI [#37919082718](https://github.com/InSuns21/jpn-history-decade/actions/runs/37919082718) とPages [#37919082745](https://github.com/InSuns21/jpn-history-decade/actions/runs/37919082745) もsuccess。`plan_done/` への移動は、GitHubのファイル削除操作が接続ツール側でブロックされたため未実施。`plan/` 側はactiveのまま残し、archive完了とは扱わない。

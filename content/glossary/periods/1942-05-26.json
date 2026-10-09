@@ -1,0 +1,37 @@
+{
+  "period": "1942-05-26",
+  "termRefs": [
+    {
+      "id": "mi-al-sortie-1942-05",
+      "core": true
+    },
+    {
+      "id": "midway-tf16-tf17-1942-05",
+      "core": true
+    },
+    {
+      "id": "yorktown-emergency-repair-1942-05",
+      "core": true
+    },
+    {
+      "id": "sydney-midget-submarine-raid-1942-05",
+      "core": true
+    },
+    {
+      "id": "midway-comint-1942-05",
+      "core": false
+    },
+    {
+      "id": "naval-order-18-1942-05-05",
+      "core": false
+    },
+    {
+      "id": "midway-aleutians-plan-1942-04",
+      "core": false
+    },
+    {
+      "id": "carrier-airgroup-readiness-1942-05",
+      "core": false
+    }
+  ]
+}

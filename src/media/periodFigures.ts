@@ -1325,4 +1325,14 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     },
   ],
 
+  '1942-06-03': [
+    commonsFigure('USS Yorktown (CV-5) sinking, 7 June 1942.jpg', {
+      alt: '1942年6月7日朝、ミッドウェー海戦の損傷から沈没する米空母ヨークタウン。艦体が転覆し、海面に船底が見える',
+      title: 'ミッドウェー海戦後、6月7日に沈没するヨークタウン',
+      dateLabel: '1942年6月7日',
+      credit: 'U.S. Navy／Naval History and Heritage Command（NH-95575）・Wikimedia Commons',
+      license: 'Public Domain Mark',
+    }),
+  ],
+
 }

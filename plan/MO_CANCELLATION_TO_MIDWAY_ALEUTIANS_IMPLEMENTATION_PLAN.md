@@ -1,7 +1,7 @@
 # 1942年5月9日〜6月7日 — MO作戦中止からミッドウェー・アリューシャン作戦 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH134 ✅ → JH135 ✅ → JH136 ✅ → JH137 ✅ → A48 ✅ adopted Point-only / Data・Style passed → 次は A48 Human Visual Audit
+- **Progress:** phase cut ✅ → JH134 ✅ → JH135 ✅ → JH136 ✅ → JH137 ✅ → A48 ✅ adopted Point-only / Data・Style・Human Visual Audit passed → 次は Crosscutting publication gate
 - **Created:** 2026-10-09
 - **Scope:** 1942-05-09〜1942-06-07
 - **Planned period articles:** **4本（JH134〜JH137）**
@@ -141,7 +141,7 @@ JH134〜JH137とA48のあと、既存横断記事の中心問いへの答えが*
 
 ### フェーズ
 - [x] 状態遷移に基づく4本のphase cutと記事境界の確定
-- [ ] A48 map necessity / data-quality judgment：Point-only採用、Data/Style Audit passed。日付変更線とアッツ／キスカ近接マーカーの表示リスクがあるためHuman Visual Auditはpending-human（実表示確認後に完了）
+- [x] A48 map necessity / data-quality judgment：Point-only採用、Data / Style Audit passed。HVA-014は2026-10-09のユーザー承認によりpassed、地図をpublishedへ昇格。
 - [ ] Crosscutting publication gate（S05-E / S09-F / S10-D等の延長・hold）
 - [ ] phase-end independent auditの要否を具体的な残存仮説だけから判定
 - [ ] `npm run check` green、PR CI / main CI / GitHub Pages deploy green
@@ -162,3 +162,5 @@ JH134〜JH137とA48のあと、既存横断記事の中心問いへの答えが*
 
 
 **A48 map decision (2026-10-09):** 「ミッドウェー・アリューシャン二方面作戦の空間」は採用。JH137のキスカ・アッツ上陸節直後へ、横須賀（日本本土の地理的参照港）、真珠湾、ミッドウェー、ダッチハーバー、キスカ、アッツの6代表Point／5分類を配置。NHHC／NPSを根拠に6月3〜7日の空襲・攻略未達・上陸を区別し、横須賀を各艦隊の出航地と断定せず、MI／ALの陽動関係を地図から推定しない。日付変更線にまたがる初期表示は177°E付近に置き、東経／西経を正規化せずPointのまま使用。艦隊所在・実航路・精密占領界の線面geometryは不採用。Data Audit／Style Audit passed。A47からThematicMapのPoint文字マーカー・凡例・popup/touch・レスポンシブ形式を再利用するが、±180度横断と初期zoomでアッツ／キスカの32pxマーカーが重なる固有の視認性リスクにより例外適用は見送る。Data / Style Audit passed、`status: draft` / `visualAudit: pending-human` としてPages表示・Human Visual Audit後にpublished昇格する。次はA48 Human Visual Audit。
+
+**A48 Human Visual Audit completion (2026-10-09):** 公開Pages上のA48について、ユーザーがポップアップ文面修正を確認してOKとした後、地図全体の表示・操作に関するHVA-014についても明示的にOKを回答。日付変更線を跨ぐ表示とアッツ／キスカの近接表示を含むHuman Visual Auditをuser-accepted / passedとして記録し、地図定義の `visualAudit: passed` / `status: published` に更新。Data / Style Auditの既存passedは維持。全端末の独立測定ログが新たに生成されたことは主張しない。次はCrosscutting publication gate。

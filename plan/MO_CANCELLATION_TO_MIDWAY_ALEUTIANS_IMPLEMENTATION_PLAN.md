@@ -1,7 +1,7 @@
 # 1942年5月9日〜6月7日 — MO作戦中止からミッドウェー・アリューシャン作戦 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH134 ✅ → JH135 ✅ → JH136 ✅ → JH137 ✅ → A48 ✅ adopted Point-only / Data・Style・Human Visual Audit passed → 次は Crosscutting publication gate
+- **Progress:** phase cut ✅ → JH134 ✅ → JH135 ✅ → JH136 ✅ → JH137 ✅ → A48 ✅ adopted Point-only / Data・Style・Human Visual Audit passed → phase-end audit necessity judgment ✅ no-audit → 次は CI / Pages / phase completion
 - **Created:** 2026-10-09
 - **Scope:** 1942-05-09〜1942-06-07
 - **Planned period articles:** **4本（JH134〜JH137）**
@@ -97,15 +97,7 @@
 - **S10-Dはhold：** MI／AL出撃・空母と航空隊の損耗・船団の撤退・補給制約はJH134〜137の軍事的実運用として説明済み。戦時海運管理令の3月制度成立と船舶運営会の5月1日業務開始から、今回新しい国家配船制度や実際の優先配分先を示す記録を得ていない。空母の軍事的運用を民間海運統制制度と同じ配分回路へ置かない。
 - **新規軍事情報・二方面作戦記事はhold：** JH135〜137とA48により情報推定、出撃、実戦、アリューシャン占領を分離しており、独立した長期比較軸のない新規記事は重複になる。
 
-**Next:** phase-end audit necessity judgment。継続案件は未解決の横断仮説の有無だけで判定し、定型監査は作らない。
-
-
-JH134〜JH137とA48のあと、既存横断記事の中心問いへの答えが**実質的に変化した場合のみ**延長する。
-
-- **S09-F（軍事占領から占領統治へ）: re-evaluate。** フィリピンの地域別降伏・占領開始と軍政の制度段階を、香港・シンガポール・ジャワ・ビルマとの比較で説明できるか検討。捕虜収容の問題を住民統治と混同しない。
-- **S10-D（戦時統制と資源配分）: re-evaluate。** 空母航空隊・商船・燃料・運航調整について新たな制度／実運用の変化があれば検証し、既存の3月制定・5月実務開始の繰返しならhold。
-- **S05-E（政治参加の回路）: hold candidate。** 4月30日選挙以後の代表・議会権限の新たな変化がないなら機械延長しない。
-- **新規軍事情報・二方面作戦の横断記事: hold candidate。** 年代記事4本・A48で説明できる戦闘や通信情報の時系列を再編集して別記事にはしない。複数時期・地域の独立比較軸が発見された場合だけ再判定する。
+**Gate closed:** S05-E延長、S09-F／S10-D／新規記事hold。判定根拠は上記4項目に集約し、旧re-evaluate候補を未着手タスクとして残さない。
 
 ## 9. phase-end audit necessity judgment
 
@@ -116,7 +108,14 @@ JH134〜JH137とA48のあと、既存横断記事の中心問いへの答えが*
 - JH135の通信解析による推定とJH136〜137の実戦の相違が、当時の「既知／未知」を後世知識で上書きしていないか。
 - JH137およびA48で、AL作戦の本来の目的と現実の成果を、MI作戦の陽動という一つの後世の説明へ不当に従属させていないか。
 
-これらは**監査候補**であり自動実施タスクではない。各ページの実装段階で解消した場合は「no-audit」と判定し、CI・Pages・完了処理へ進む。
+**Decision (2026-10-09): no-audit。** 候補4件について、JH133〜137の本文・年代の隣接接続記録、A48の掲載内容、Crosscutting publication gateを照合した。独立した横断監査でなければ検出できない未解決矛盾は確認されなかった。
+
+- **MO作戦：解消済み。** JH133の5月7日の攻略船団反転、8日の空母戦と、JH134の11日のMO中止を別の主体・段階・日付として記述済み。5月5日の大海令第18号に基づくMI／AL準備はMO中止から生まれた計画として扱っていない（JH134・135）。
+- **フィリピン：解消済み。** JH133の5月6日のコレヒドール降伏・各島への命令発信と、JH134の10日のシャープの降伏、15〜16日のセブ島での命令受領と降伏実施、および抗戦継続の地域差を分離済み。降伏軍の捕虜収容と住民統治はS09-F gateで役割分離済み。
+- **通信情報：解消済み。** JH135は5月19日の攻撃目標推定・22日のAF確認・後続の日付推定、JH136は事前配備と敵艦隊位置の未把握、JH137は6月3日の船団・4日の空母の現場索敵を記述。後から判明した戦闘結果を事前の認識へ投影していない。
+- **MI／AL：解消済み。** JH135〜137は中部太平洋の島攻略・艦隊決戦と北太平洋の基地攻撃・島嶼占領を別目的として記述。JH137のMI攻略失敗とキスカ（6日）・アッツ（7日）の占領、A48の地理的Pointは別結果であり、ALを単なる陽動へ一元化していない。
+
+PROJECT_WORKFLOW_STANDARD 5.2／5.3に従い、重複する独立監査は実施しない。**Next:** CI / Pages / phase completion / PLAN archive。
 
 ## 10. 調査アンカー（本文執筆時に日付・出典を再検証）
 
@@ -142,18 +141,18 @@ JH134〜JH137とA48のあと、既存横断記事の中心問いへの答えが*
 ## 11. Definition of Done
 
 ### 各年代
-- [ ] JH134〜JH137をそれぞれpublished実装し、各ページの直前年代との隣接接続をその記事作業内で検証（JH134 ✅ ／ JH135 ✅ ／ JH136 ✅ ／ JH137 ✅）
-- [ ] 高校生が主体・行為・結果を本文で追えること、重要用語初出の役割説明、具体→仕組み→抽象
-- [ ] 当時の前提と読み方の留保を分離し、因果の先取りと架空の反論を排除
-- [ ] 全体用語辞書・年代参照・本文リンク・出典IDを検証
-- [ ] 図版は採用か理由つきnoImageを各記事で判定。連続noImageなら規約の再監査
-- [ ] 米海軍NHHC、米陸軍CMH、AWM、NPS等の史料と年代を照合し、必要な被害・占領・撤退の地域差を保持
+- [x] JH134〜JH137をそれぞれpublished実装し、各ページの直前年代との隣接接続をその記事作業内で検証（JH134 ✅ ／ JH135 ✅ ／ JH136 ✅ ／ JH137 ✅）
+- [x] 高校生が主体・行為・結果を本文で追えること、重要用語初出の役割説明、具体→仕組み→抽象
+- [x] 当時の前提と読み方の留保を分離し、因果の先取りと架空の反論を排除
+- [x] 全体用語辞書・年代参照・本文リンク・出典IDを検証
+- [x] 図版は採用か理由つきnoImageを各記事で判定。連続noImageなら規約の再監査
+- [x] 米海軍NHHC、米陸軍CMH、AWM、NPS等の史料と年代を照合し、必要な被害・占領・撤退の地域差を保持
 
 ### フェーズ
 - [x] 状態遷移に基づく4本のphase cutと記事境界の確定
 - [x] A48 map necessity / data-quality judgment：Point-only採用、Data / Style Audit passed。HVA-014は2026-10-09のユーザー承認によりpassed、地図をpublishedへ昇格。
 - [x] Crosscutting publication gate（S05-E延長／S09-F・S10-D・新規記事hold、2026-10-09）
-- [ ] phase-end independent auditの要否を具体的な残存仮説だけから判定
+- [x] phase-end independent auditの要否を具体的な残存仮説だけから判定
 - [ ] `npm run check` green、PR CI / main CI / GitHub Pages deploy green
 - [ ] Status / Progress / docsを更新し、全DoD充足後のみ`plan_done/`へ移動
 
@@ -176,3 +175,5 @@ JH134〜JH137とA48のあと、既存横断記事の中心問いへの答えが*
 **A48 Human Visual Audit completion (2026-10-09):** 公開Pages上のA48について、ユーザーがポップアップ文面修正を確認してOKとした後、地図全体の表示・操作に関するHVA-014についても明示的にOKを回答。日付変更線を跨ぐ表示とアッツ／キスカの近接表示を含むHuman Visual Auditをuser-accepted / passedとして記録し、地図定義の `visualAudit: passed` / `status: published` に更新。Data / Style Auditの既存passedは維持。全端末の独立測定ログが新たに生成されたことは主張しない。次はCrosscutting publication gate。
 
 **Crosscutting publication gate record (2026-10-09):** S05-Eに1942年5月20日翼賛政治会創立と議会会派の再編を追加し、国立国会図書館・JACARを出典として候補推薦・投票・議員組織・議会審議を分離。S09-Fはフィリピン降伏命令の地域差と住民統治機構を混同しないためhold。S10-Dは艦隊・商船の運用制約を新たな統制法制成立と混同しないためhold。新規横断記事も重複を避けhold。次はphase-end audit necessity judgment。
+
+**Phase-end audit necessity judgment (2026-10-09):** JH133〜137・A48・Crosscutting gateの記述を4仮説（MO現場反転／正式中止、コレヒドール／地域別降伏、COMINT事前推定／戦闘中索敵、MI／ALの目的／成果）で対照した。いずれも既存記事で区別済みで、未解決の横断矛盾がないため **no-audit**。独立監査を追加せず、CI / Pagesと完了処理に進む。

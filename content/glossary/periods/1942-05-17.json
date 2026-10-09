@@ -1,0 +1,37 @@
+{
+  "period": "1942-05-17",
+  "termRefs": [
+    {
+      "id": "midway-comint-1942-05",
+      "core": true
+    },
+    {
+      "id": "af-midway-confirmation-1942-05-22",
+      "core": true
+    },
+    {
+      "id": "carrier-airgroup-readiness-1942-05",
+      "core": true
+    },
+    {
+      "id": "yokusan-seijikai-1942-05-20",
+      "core": true
+    },
+    {
+      "id": "naval-order-18-1942-05-05",
+      "core": false
+    },
+    {
+      "id": "midway-aleutians-plan-1942-04",
+      "core": false
+    },
+    {
+      "id": "yokusan-election-1942",
+      "core": false
+    },
+    {
+      "id": "taisei-yokusankai-1940",
+      "core": false
+    }
+  ]
+}

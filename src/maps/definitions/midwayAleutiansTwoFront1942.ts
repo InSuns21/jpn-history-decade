@@ -5,7 +5,7 @@ export const midwayAleutiansTwoFront1942Map: HistoricalMapDefinition = {
   "title": "1942年6月3〜7日：ミッドウェーとアリューシャン二方面の位置関係",
   "historicalQuestion": "日本本土・真珠湾・ミッドウェーと、北方のダッチハーバー・キスカ・アッツは、どのような位置関係にあり、二方面で何が違う結果となったか。",
   "readingNote": "1942年6月3〜7日のMI・AL作戦を、島・港湾の代表地点で比較する模式地図。「本」は日本本土の地理的参照港（横須賀）で出撃地・作戦指揮位置を確定しない。「米」は米太平洋艦隊の主要基地である真珠湾、「目」は日本が攻略を目指したが米側が保持したミッドウェー、「空」は6月3〜4日に日本側が空襲したダッチハーバー、「占」は日本側が6月6〜7日に上陸したキスカ・アッツを示す。各地点は地理的代表座標であり、航空隊・艦隊の位置、航跡、攻撃範囲、占領領域を示さない。アリューシャンの西部は日付変更線をまたいで表示される。ミッドウェーと北方AL作戦を一方の陽動・従属関係と決めつけず、成果の違いを比較する。背景地図の国境は現代のOpenStreetMapによるもので1942年の政治境界ではない。",
-  "status": "published",
+  "status": "draft",
   "period": {
     "startYear": 1942,
     "endYear": 1942
@@ -239,13 +239,13 @@ export const midwayAleutiansTwoFront1942Map: HistoricalMapDefinition = {
   "auditState": {
     "dataAudit": "passed",
     "styleAudit": "passed",
-    "visualAudit": "not-required-reused-pattern",
+    "visualAudit": "pending-human",
     "notes": [
       "A48 map necessity: adopted. A47's Coral Sea geography and JH137 prose cannot show the wide spatial relationship between Midway near Hawaii and the Aleutian targets, including the dateline and dispersed supply responsibilities.",
       "Data Audit: six unique site-authored Point features, all WGS84 coordinates within bounds. Named sites and event dates supported by NHHC/NPS citations in JH137; no carrier location, voyage track, attack radius, exact landing beach or historical boundary claimed.",
       "Temporal Audit: June 3–4 Dutch Harbor raid, June 4 Midway air battle, June 6 Kiska landing and June 7 Attu landing; Pearl Harbor and Yokosuka are reference bases, not claimed June 3–7 incidents.",
       "Style Audit: five categorical legend entries match all Point categories and the renderer's Japanese text markers; the North Pacific center [177,39], zoom 2.05 / minZoom 1.4 permits crossing longitude ±180 rather than treating the date line as a wall. Kiska and Attu use opposite label sides and can be separately opened at detail zoom.",
-      "Human Visual Audit exemption: identical ThematicMap Point-only renderer, labeled glyphs, schema-driven legend, popup mouse/touch and layout as A47 coral-sea-spatial-operations-1942-05-08. Only six Point coordinates, categories, labelPlacement values and descriptions differ. No renderer, style algorithm, popup handler, legend generation, interaction or layout changes.",
+      "Human Visual Audit pending: renderer/legend/popup are reused unchanged from A47, but the 180° date-line crossing and the approximately 4.6° longitude separation of Attu and Kiska produce a concrete initial-zoom overlap risk (32px markers versus approximately 13px horizontal separation). This disqualifies the automatic Point-only visual-exemption until checked in desktop/tablet/mobile. Keep draft and show in-page audit notice on Pages.",
       "Reading note and popups expressly distinguish status and temporal differences and say that modern basemap boundaries are not 1942 borders. The map depicts no real ship routes or fabricated battle zones."
     ]
   }

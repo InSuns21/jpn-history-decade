@@ -4,7 +4,7 @@ export const midwayAleutiansTwoFront1942Map: HistoricalMapDefinition = {
   "id": "midway-aleutians-two-front-1942-06-07",
   "title": "1942年6月3〜7日：ミッドウェーとアリューシャン二方面の位置関係",
   "historicalQuestion": "日本本土・真珠湾・ミッドウェーと、北方のダッチハーバー・キスカ・アッツは、どのような位置関係にあり、二方面で何が違う結果となったか。",
-  "readingNote": "1942年6月3〜7日のMI・AL作戦を、島・港湾の代表地点で比較する模式地図。「本」は日本本土の地理的参照港（横須賀）で出撃地・作戦指揮位置を確定しない。「米」は米太平洋艦隊の主要基地である真珠湾、「目」は日本が攻略を目指したが米側が保持したミッドウェー、「空」は6月3〜4日に日本側が空襲したダッチハーバー、「占」は日本側が6月6〜7日に上陸したキスカ・アッツを示す。各地点は地理的代表座標であり、航空隊・艦隊の位置、航跡、攻撃範囲、占領領域を示さない。アリューシャンの西部は日付変更線をまたいで表示される。ミッドウェーと北方AL作戦を一方の陽動・従属関係と決めつけず、成果の違いを比較する。背景地図の国境は現代のOpenStreetMapによるもので1942年の政治境界ではない。",
+  "readingNote": "1942年6月3〜7日の二方面作戦について、日本本土・米艦隊基地・攻略目標・空襲先・占領地の位置を比較する。ミッドウェーは米軍が保持し、キスカ・アッツは日本軍が占領した。点は島や港の代表位置を示す。背景の国境線は現代のOpenStreetMapによる。",
   "status": "draft",
   "period": {
     "startYear": 1942,
@@ -84,7 +84,7 @@ export const midwayAleutiansTwoFront1942Map: HistoricalMapDefinition = {
             "year": "1942",
             "eventDate": "1942-06-03",
             "status": "日本本土の参照海軍港",
-            "detail": "日本本土から北太平洋を俯瞰するための位置参照。連合艦隊や両作戦の各部隊がここから出航したという意味ではない。"
+            "detail": "東京湾口の主要海軍港。日本本土と中部・北太平洋の作戦目標との位置関係を示す。"
           }
         },
         {
@@ -104,7 +104,7 @@ export const midwayAleutiansTwoFront1942Map: HistoricalMapDefinition = {
             "year": "1942",
             "eventDate": "1942-06-03",
             "status": "米太平洋艦隊の主要基地",
-            "detail": "米空母部隊は5月末に真珠湾から出撃し、ミッドウェー北東の洋上へ向かった。点は基地の位置で、米空母の戦闘中の位置ではない。"
+            "detail": "米太平洋艦隊の主要基地。5月末、米空母エンタープライズ・ホーネット・ヨークタウンがここから出撃し、ミッドウェー方面へ向かった。"
           }
         },
         {
@@ -124,7 +124,7 @@ export const midwayAleutiansTwoFront1942Map: HistoricalMapDefinition = {
             "year": "1942",
             "eventDate": "1942-06-04",
             "status": "日本側の攻略目標・米側が保持",
-            "detail": "6月4日、日本軍は島を空襲したが日本側の空母4隻が戦闘不能になり、攻略は中止された。米軍の飛行場・基地は保持された。"
+            "detail": "6月4日、日本軍の空母航空隊が島の飛行場や施設を空襲した。米軍は基地を保持し、日本軍は攻略を中止した。"
           }
         },
         {
@@ -144,7 +144,7 @@ export const midwayAleutiansTwoFront1942Map: HistoricalMapDefinition = {
             "year": "1942",
             "eventDate": "1942-06-03",
             "status": "6月3〜4日の日本側空襲対象",
-            "detail": "ウナラスカ島の港湾・基地が攻撃された。空襲の目標位置であり、AL空母部隊の海上位置を意味しない。"
+            "detail": "アリューシャン列島東部、ウナラスカ島の港湾・軍事基地。6月3〜4日、日本海軍の艦載機が空襲し、施設や船舶などに被害が出た。"
           }
         },
         {
@@ -164,7 +164,7 @@ export const midwayAleutiansTwoFront1942Map: HistoricalMapDefinition = {
             "year": "1942",
             "eventDate": "1942-06-06",
             "status": "日本側が6月6日に上陸",
-            "detail": "西部アリューシャンの島。米側の観測施設があった地点への上陸・占領を示す島の代表位置で、占領境界や上陸海岸の精密位置ではない。"
+            "detail": "6月6日、日本軍の海軍陸戦隊が上陸し、米側の気象観測施設を押さえた。西部アリューシャンに日本軍の駐屯拠点が生まれた。"
           }
         },
         {
@@ -184,7 +184,7 @@ export const midwayAleutiansTwoFront1942Map: HistoricalMapDefinition = {
             "year": "1942",
             "eventDate": "1942-06-07",
             "status": "日本側が6月7日に上陸",
-            "detail": "キスカより西方にある有人島。6月7日の上陸を示す島の代表位置で、住民への後年の被害や島内の占領範囲をこの点で表さない。"
+            "detail": "6月7日、日本軍が上陸した。島には先住民ウナンガンの住民が暮らしており、日本軍の占領下に置かれた。"
           }
         }
       ]
@@ -246,7 +246,7 @@ export const midwayAleutiansTwoFront1942Map: HistoricalMapDefinition = {
       "Temporal Audit: June 3–4 Dutch Harbor raid, June 4 Midway air battle, June 6 Kiska landing and June 7 Attu landing; Pearl Harbor and Yokosuka are reference bases, not claimed June 3–7 incidents.",
       "Style Audit: five categorical legend entries match all Point categories and the renderer's Japanese text markers; the North Pacific center [177,39], zoom 2.05 / minZoom 1.4 permits crossing longitude ±180 rather than treating the date line as a wall. Kiska and Attu use opposite label sides and can be separately opened at detail zoom.",
       "Human Visual Audit pending: renderer/legend/popup are reused unchanged from A47, but the 180° date-line crossing and the approximately 4.6° longitude separation of Attu and Kiska produce a concrete initial-zoom overlap risk (32px markers versus approximately 13px horizontal separation). This disqualifies the automatic Point-only visual-exemption until checked in desktop/tablet/mobile. Keep draft and show in-page audit notice on Pages.",
-      "Reading note and popups expressly distinguish status and temporal differences and say that modern basemap boundaries are not 1942 borders. The map depicts no real ship routes or fabricated battle zones."
+      "Popup editorial review: each feature detail describes a distinct locality, dated action or outcome in affirmative prose. Common representative-point and modern-basemap cautions are consolidated into the map-wide readingNote; internal geometry provenance and pending Human Visual Audit status remain unchanged."
     ]
   }
 }

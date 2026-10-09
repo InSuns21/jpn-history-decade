@@ -1,7 +1,7 @@
 # 1942年5月9日〜6月7日 — MO作戦中止からミッドウェー・アリューシャン作戦 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH134 ✅ → JH135 ✅ → JH136 ✅ → JH137 ✅ → 次は A48 map necessity / data-quality judgment
+- **Progress:** phase cut ✅ → JH134 ✅ → JH135 ✅ → JH136 ✅ → JH137 ✅ → A48 ✅ adopted Point-only → 次は Crosscutting publication gate
 - **Created:** 2026-10-09
 - **Scope:** 1942-05-09〜1942-06-07
 - **Planned period articles:** **4本（JH134〜JH137）**
@@ -81,7 +81,7 @@
 
 **Historical question:** ハワイ北西のミッドウェーとアラスカ方面のアリューシャン列島を、日本軍はなぜ同時に作戦目標としたのか。日本本土・前進基地・米太平洋艦隊の拠点との位置関係は何か。
 
-**Initial state: candidate / necessity undecided.** JH137の戦役後に、本文・史料図と比較して地図化の増分を判定する。
+**Decision (2026-10-09): adopted / Point-only。** JH137本文では両方面の戦況を区別できるが、アリューシャン列島・ミッドウェー・真珠湾・日本本土の位置関係は地図によって明確になる。
 
 - Point候補：ミッドウェー、真珠湾、ダッチハーバー（ウナラスカ島）、キスカ、アッツ、日本本土の関係港湾／指揮拠点。公刊資料に基づく役割と、緯度経度が示すのが**地理上の位置**か**移動中艦隊の位置**かを区別する。
 - 南北の作戦距離と列島の配置が中心論点になる場合のみ採用。航跡・戦闘位置・作戦範囲を根拠なく精密な線・面で描かない。
@@ -141,7 +141,7 @@ JH134〜JH137とA48のあと、既存横断記事の中心問いへの答えが*
 
 ### フェーズ
 - [x] 状態遷移に基づく4本のphase cutと記事境界の確定
-- [ ] A48 map necessity / data-quality judgment（採用時は規約所定の監査）
+- [x] A48 map necessity / data-quality judgment：Point-only採用、Data/Style Audit passed、A47同形式再利用によりHuman Visual Audit個別省略
 - [ ] Crosscutting publication gate（S05-E / S09-F / S10-D等の延長・hold）
 - [ ] phase-end independent auditの要否を具体的な残存仮説だけから判定
 - [ ] `npm run check` green、PR CI / main CI / GitHub Pages deploy green
@@ -159,3 +159,6 @@ JH134〜JH137とA48のあと、既存横断記事の中心問いへの答えが*
 
 
 **JH137 publication record (2026-10-09):** JH137「1942-06-03〜06-07」をpublished。JH136のMI／AL出撃と米空母3隻の事前配置を簡潔に受け、3日の攻略船団索敵と4日の空母機動部隊発見を区別。4日の日本空母四隻の戦闘不能と5日の処分、5〜6日の追撃・三隈沈没、6日の伊168によるヨークタウン・ハマン雷撃と7日のヨークタウン沈没をNHHCで照合。北方はNPSとNHHCで3〜4日のダッチハーバー空襲、6日のキスカ・7日のアッツ上陸を独立に説明し、住民への後年の被害を6月7日に先取りしない。新規重要用語5件と年代参照、本文の重要語リンクを追加。図版publication gateは米海軍NH-95575（7日沈没直後のヨークタウン）をCommonsの撮影日・権利表示で確認して採用。JH136からの隣接接続と後知恵・二方面作戦の混同を点検。次はA48の地図採用・品質判定。
+
+
+**A48 map decision (2026-10-09):** 「ミッドウェー・アリューシャン二方面作戦の空間」は採用。JH137のキスカ・アッツ上陸節直後へ、横須賀（日本本土の地理的参照港）、真珠湾、ミッドウェー、ダッチハーバー、キスカ、アッツの6代表Point／5分類を配置。NHHC／NPSを根拠に6月3〜7日の空襲・攻略未達・上陸を区別し、横須賀を各艦隊の出航地と断定せず、MI／ALの陽動関係を地図から推定しない。日付変更線にまたがる初期表示は177°E付近に置き、東経／西経を正規化せずPointのまま使用。艦隊所在・実航路・精密占領界の線面geometryは不採用。Data Audit／Style Audit passed。A47からThematicMapのPoint文字マーカー・カテゴリ別凡例・popup/touch・レスポンシブ形式を変更せず再利用するため、同形式再利用例外 `visualAudit: not-required-reused-pattern` を適用。次はCrosscutting publication gate。

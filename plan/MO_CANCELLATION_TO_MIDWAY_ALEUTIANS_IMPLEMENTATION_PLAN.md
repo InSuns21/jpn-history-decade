@@ -90,6 +90,16 @@
 
 ## 8. Crosscutting publication gate
 
+**Decision (2026-10-09): S05-E extended / S09-F hold / S10-D hold / 新規記事hold。**
+
+- **S05-Eを延長：** JH132の4月30日翼賛選挙では候補者の推薦と代表選出の回路が変わり、JH135の5月20日には翼賛政治会の結成と議会内各会派の解散によって当選後の議員組織まで変化した。NDL「翼賛政治会創立総会次第・規約・宣言・綱領」およびJACARの阿部信行関係公文書を照合し、`content/structures/party-dissolution-yokusankai-1940-1941.md` に独立節を追加する。大政翼賛会（行政協力）、翼賛政治体制協議会（候補者推薦）、翼賛政治会（当選後の議員組織）、帝国議会（審議）の役割を分離する。
+- **S09-Fはhold：** JH134はフィリピンの司令官別・島嶼別の降伏命令の受領・武装解除を明確にしたが、捕虜処遇・残存軍への降伏指示は住民統治の行政権限を直接示すものではない。マニラの警備・第14軍の軍政は別史料で確認できるものの、今回の局面固有の新たな統治機構成立や地域間で比較可能な行政職掌変更を確定できない。香港・シンガポール・ジャワ・ビルマの既存比較へフィリピンを推測で追加しない。
+- **S10-Dはhold：** MI／AL出撃・空母と航空隊の損耗・船団の撤退・補給制約はJH134〜137の軍事的実運用として説明済み。戦時海運管理令の3月制度成立と船舶運営会の5月1日業務開始から、今回新しい国家配船制度や実際の優先配分先を示す記録を得ていない。空母の軍事的運用を民間海運統制制度と同じ配分回路へ置かない。
+- **新規軍事情報・二方面作戦記事はhold：** JH135〜137とA48により情報推定、出撃、実戦、アリューシャン占領を分離しており、独立した長期比較軸のない新規記事は重複になる。
+
+**Next:** phase-end audit necessity judgment。継続案件は未解決の横断仮説の有無だけで判定し、定型監査は作らない。
+
+
 JH134〜JH137とA48のあと、既存横断記事の中心問いへの答えが**実質的に変化した場合のみ**延長する。
 
 - **S09-F（軍事占領から占領統治へ）: re-evaluate。** フィリピンの地域別降伏・占領開始と軍政の制度段階を、香港・シンガポール・ジャワ・ビルマとの比較で説明できるか検討。捕虜収容の問題を住民統治と混同しない。
@@ -142,7 +152,7 @@ JH134〜JH137とA48のあと、既存横断記事の中心問いへの答えが*
 ### フェーズ
 - [x] 状態遷移に基づく4本のphase cutと記事境界の確定
 - [x] A48 map necessity / data-quality judgment：Point-only採用、Data / Style Audit passed。HVA-014は2026-10-09のユーザー承認によりpassed、地図をpublishedへ昇格。
-- [ ] Crosscutting publication gate（S05-E / S09-F / S10-D等の延長・hold）
+- [x] Crosscutting publication gate（S05-E延長／S09-F・S10-D・新規記事hold、2026-10-09）
 - [ ] phase-end independent auditの要否を具体的な残存仮説だけから判定
 - [ ] `npm run check` green、PR CI / main CI / GitHub Pages deploy green
 - [ ] Status / Progress / docsを更新し、全DoD充足後のみ`plan_done/`へ移動
@@ -164,3 +174,5 @@ JH134〜JH137とA48のあと、既存横断記事の中心問いへの答えが*
 **A48 map decision (2026-10-09):** 「ミッドウェー・アリューシャン二方面作戦の空間」は採用。JH137のキスカ・アッツ上陸節直後へ、横須賀（日本本土の地理的参照港）、真珠湾、ミッドウェー、ダッチハーバー、キスカ、アッツの6代表Point／5分類を配置。NHHC／NPSを根拠に6月3〜7日の空襲・攻略未達・上陸を区別し、横須賀を各艦隊の出航地と断定せず、MI／ALの陽動関係を地図から推定しない。日付変更線にまたがる初期表示は177°E付近に置き、東経／西経を正規化せずPointのまま使用。艦隊所在・実航路・精密占領界の線面geometryは不採用。Data Audit／Style Audit passed。A47からThematicMapのPoint文字マーカー・凡例・popup/touch・レスポンシブ形式を再利用するが、±180度横断と初期zoomでアッツ／キスカの32pxマーカーが重なる固有の視認性リスクにより例外適用は見送る。Data / Style Audit passed、`status: draft` / `visualAudit: pending-human` としてPages表示・Human Visual Audit後にpublished昇格する。次はA48 Human Visual Audit。
 
 **A48 Human Visual Audit completion (2026-10-09):** 公開Pages上のA48について、ユーザーがポップアップ文面修正を確認してOKとした後、地図全体の表示・操作に関するHVA-014についても明示的にOKを回答。日付変更線を跨ぐ表示とアッツ／キスカの近接表示を含むHuman Visual Auditをuser-accepted / passedとして記録し、地図定義の `visualAudit: passed` / `status: published` に更新。Data / Style Auditの既存passedは維持。全端末の独立測定ログが新たに生成されたことは主張しない。次はCrosscutting publication gate。
+
+**Crosscutting publication gate record (2026-10-09):** S05-Eに1942年5月20日翼賛政治会創立と議会会派の再編を追加し、国立国会図書館・JACARを出典として候補推薦・投票・議員組織・議会審議を分離。S09-Fはフィリピン降伏命令の地域差と住民統治機構を混同しないためhold。S10-Dは艦隊・商船の運用制約を新たな統制法制成立と混同しないためhold。新規横断記事も重複を避けhold。次はphase-end audit necessity judgment。

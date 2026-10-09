@@ -12,7 +12,9 @@
 
 ### 本線
 
-現在の本線は **1942年5月9日〜6月7日** を対象とする [MO_CANCELLATION_TO_MIDWAY_ALEUTIANS_IMPLEMENTATION_PLAN.md](MO_CANCELLATION_TO_MIDWAY_ALEUTIANS_IMPLEMENTATION_PLAN.md)（Status: active、予定年代記事 **4本**：JH134〜JH137）です。phase cut ✅ → JH134〜JH137 ✅ published → A48 ✅ published/HVA-014 passed → Crosscutting gate ✅ → phase-end audit necessity judgment ✅ no-audit → PR CI / main CI / Pages ✅ success、次は **PLAN archive（元ファイル削除操作の制約により未完了）**。直前の1942年4月10日〜5月8日フェーズは [BATAAN_CAPTIVITY_TO_CORAL_SEA_IMPLEMENTATION_PLAN.md](../plan_done/BATAAN_CAPTIVITY_TO_CORAL_SEA_IMPLEMENTATION_PLAN.md) としてcompleted / archived済み。
+1942年5月9日〜6月7日フェーズは[MO_CANCELLATION_TO_MIDWAY_ALEUTIANS_IMPLEMENTATION_PLAN.md](../plan_done/MO_CANCELLATION_TO_MIDWAY_ALEUTIANS_IMPLEMENTATION_PLAN.md)として **completed / archived**。JH134〜JH137 published、A48 published / HVA-014 passed、Crosscutting gate、no-audit判定、CI / Pages成功を確認済み。
+
+次工程は **1942年6月8日以後のphase cut**。自然な状態遷移をもとに4〜5記事のPLANを作る。
 
 ### 横断的な品質負債返済
 

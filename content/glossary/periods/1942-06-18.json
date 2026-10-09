@@ -1,0 +1,37 @@
+{
+  "period": "1942-06-18",
+  "termRefs": [
+    {
+      "id": "ghormley-sopac-command-1942-06",
+      "core": true
+    },
+    {
+      "id": "lower-solomons-warning-1942-06-25",
+      "core": true
+    },
+    {
+      "id": "solomons-joint-command-talks-1942-06",
+      "core": true
+    },
+    {
+      "id": "papuan-infantry-battalion-1942",
+      "core": true
+    },
+    {
+      "id": "maroubra-force-kokoda-1942-06",
+      "core": true
+    },
+    {
+      "id": "kokoda-track-1942",
+      "core": true
+    },
+    {
+      "id": "swpa-poa-command-1942-03-30",
+      "core": false
+    },
+    {
+      "id": "tulagi-occupation-1942-05-03",
+      "core": false
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "period": "1942-06-08",
+  "termRefs": [
+    {
+      "id": "post-midway-carrier-replenishment-1942-06",
+      "core": true
+    },
+    {
+      "id": "midway-postbattle-reports-1942-06",
+      "core": true
+    },
+    {
+      "id": "kiska-blitz-1942-06",
+      "core": true
+    },
+    {
+      "id": "unangan-aleutian-civilians-1942-06",
+      "core": true
+    },
+    {
+      "id": "atka-evacuation-burning-1942-06",
+      "core": true
+    },
+    {
+      "id": "aleutians-al-occupation-1942-06",
+      "core": false
+    },
+    {
+      "id": "midway-carrier-losses-1942-06",
+      "core": false
+    }
+  ]
+}

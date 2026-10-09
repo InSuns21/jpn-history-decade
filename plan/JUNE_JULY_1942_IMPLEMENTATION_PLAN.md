@@ -1,7 +1,7 @@
 # 1942年6月8日〜7月21日 — ミッドウェー後の作戦再編から南太平洋反攻準備・パプア北岸上陸 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → 次は JH138「1942-06-08〜06-17」
+- **Progress:** phase cut ✅ → JH138 ✅ published → 次は JH139「1942-06-18〜06-30」
 - **Created:** 2026-10-09
 - **Scope:** 1942-06-08〜1942-07-21
 - **Planned period articles:** **4本（JH138〜JH141）**
@@ -128,5 +128,7 @@ JH137は6月7日、ミッドウェー島の米側保持、日本空母4隻の喪
 - [ ] 具体的な未解決仮説に限定したphase-end audit necessity judgment
 - [ ] `npm run check` green、PR CI / main CI green、公開変更時はPages deploy green
 - [ ] Status / Progress / docsを更新し、全DoD充足後に `plan_done/` へ一意に移動
+
+**JH138 implementation record (2026-10-09):** キスカ駐屯・米軍の6月11〜13日連続爆撃と補給限界、6月14日ナザン湾攻撃、アッツ住民の日本軍拘束、アトカ村の米軍焼却・退避措置を、出典と主体・時点を分けてpublished化した。JH137のnextIssuesから空母戦力補充・北方駐屯・情報の照合へ接続し、米軍の正式な南太平洋反攻命令は後続JH139/JH140へ送る。重要語5件、図版不採用理由、隣接接続まで完了。次はJH139。
 
 **Phase cut record (2026-10-09):** 4本（JH138〜JH141）、1942-06-08〜07-21を確定。次の実装工程はJH138。地図の採否、本文公開、CI／Pages完了はこの時点では宣言しない。

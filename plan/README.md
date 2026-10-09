@@ -12,7 +12,7 @@
 
 ### 本線
 
-現在の本線は **1942年6月8日〜7月21日** を対象とする [JUNE_JULY_1942_IMPLEMENTATION_PLAN.md](JUNE_JULY_1942_IMPLEMENTATION_PLAN.md)（Status: active、予定年代記事 **4本**：JH138〜JH141）です。phase cut ✅ → 次は **JH138「1942-06-08〜06-17」**。直前の1942年5月9日〜6月7日フェーズは [MO_CANCELLATION_TO_MIDWAY_ALEUTIANS_IMPLEMENTATION_PLAN.md](../plan_done/MO_CANCELLATION_TO_MIDWAY_ALEUTIANS_IMPLEMENTATION_PLAN.md) としてcompleted / archived済み。
+現在の本線は **1942年6月8日〜7月21日** を対象とする [JUNE_JULY_1942_IMPLEMENTATION_PLAN.md](JUNE_JULY_1942_IMPLEMENTATION_PLAN.md)（Status: active、予定年代記事 **4本**：JH138〜JH141）です。phase cut ✅ → JH138 ✅ published → 次は **JH139「1942-06-18〜06-30」**。直前の1942年5月9日〜6月7日フェーズは [MO_CANCELLATION_TO_MIDWAY_ALEUTIANS_IMPLEMENTATION_PLAN.md](../plan_done/MO_CANCELLATION_TO_MIDWAY_ALEUTIANS_IMPLEMENTATION_PLAN.md) としてcompleted / archived済み。
 
 ### 横断的な品質負債返済
 

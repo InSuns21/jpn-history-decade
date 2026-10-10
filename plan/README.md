@@ -12,7 +12,9 @@
 
 ### 本線
 
-現在の本線は **1942年6月8日〜7月21日** を対象とする [JUNE_JULY_1942_IMPLEMENTATION_PLAN.md](JUNE_JULY_1942_IMPLEMENTATION_PLAN.md)（Status: active、予定年代記事 **4本**：JH138〜JH141）です。phase cut ✅ → JH138 ✅ published → 次は **JH139「1942-06-18〜06-30」**。直前の1942年5月9日〜6月7日フェーズは [MO_CANCELLATION_TO_MIDWAY_ALEUTIANS_IMPLEMENTATION_PLAN.md](../plan_done/MO_CANCELLATION_TO_MIDWAY_ALEUTIANS_IMPLEMENTATION_PLAN.md) としてcompleted / archived済み。
+1942年6月8日〜7月21日フェーズは [JUNE_JULY_1942_IMPLEMENTATION_PLAN.md](../plan_done/JUNE_JULY_1942_IMPLEMENTATION_PLAN.md) に **completed / archived（2026-10-10）** として保存済み。JH138〜JH141 published、A49 published／HVA-015 passed、Crosscutting gateはすべてhold、phase-end audit necessity judgmentはno-audit。直前の1942年5月9日〜6月7日フェーズは [MO_CANCELLATION_TO_MIDWAY_ALEUTIANS_IMPLEMENTATION_PLAN.md](../plan_done/MO_CANCELLATION_TO_MIDWAY_ALEUTIANS_IMPLEMENTATION_PLAN.md) を参照。
+
+**次工程：1942年7月22日以後のphase cut。** 現在activeな短期実装PLANはない。
 
 ### 横断的な品質負債返済
 

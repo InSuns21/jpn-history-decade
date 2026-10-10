@@ -300,3 +300,8 @@ README には概要だけを置き、フェーズ進捗・監査結果・地図�
 
 - **2026-10-10 A49 HVA-015 approved and published:** ユーザーがGitHub PagesのA49地図を「通っています」と明示承認したため、Data / Style passedに加えてvisualAudit passedを記録し、地図を`draft`から`published`へ昇格。9 Point＋模式LineStringの位置関係・凡例・操作についてのユーザー承認であり、個別端末の新規測定ログ取得を示すものではない。HVA backlogをcompletedへ更新。
 - **1942-06-08〜07-21 Crosscutting publication gate — all hold:** S05-Eは米陸海軍の作戦指揮を日本の議会・翼賛政治会の制度変更として扱わず延長しない。S09-Fはアッツ日本軍の住民拘束・アトカ米当局の住民避難・キスカ駐屯・ゴナ上陸を香港／昭南／ジャワ／ビルマの軍政行政機構成立と区別し、新しい行政職掌の資料がないため延長しない。S10-Dは空母・艦艇・輸送船の現場配分を1942年5月の船舶運営会以後の新たな国内統制制度として扱わず延長しない。新規横断記事も年代4本＋A49で説明が成立し、独立比較軸がないためhold。次はphase-end audit necessity judgment。
+
+
+- **1942年6月8日〜7月21日フェーズのphase-end audit necessity judgment：no-audit（2026-10-10）。** JH137〜JH141、A49、S05-E／S09-F／S10-Dのpublication gateを照合。①MI中止・北方占領継続・日本軍南方進攻の作戦目的、②米6月25日準備指示→7月2日統合指令→10日ニミッツ命令→16〜17日現地計画、③アッツ日本軍の住民拘束／アトカ米軍の住民避難・村落焼却／キスカ増援、④5月11日MO海上攻略中止→7月21日ゴナ北岸上陸と山地輸送制約を既存の記事・地図で分離済み。具体的な未解決の横断矛盾はなく独立監査を設けない。
+
+- **1942年6月8日〜7月21日フェーズはcompleted / archived（2026-10-10）。** JH138〜JH141 published、A49 published／HVA-015 passed、S05-E／S09-F／S10-D／新規横断記事はhold、phase-end no-audit。PR #409 Quality Checks [#38024367857](https://github.com/InSuns21/jpn-history-decade/actions/runs/38024367857) / CI [#38024367839](https://github.com/InSuns21/jpn-history-decade/actions/runs/38024367839)、main `8986b7c0bc0bcfd52643cceefb614aacb33c4996` CI [#38024410636](https://github.com/InSuns21/jpn-history-decade/actions/runs/38024410636) / Pages [#38024410634](https://github.com/InSuns21/jpn-history-decade/actions/runs/38024410634) はsuccess。archive PR CIはmerge前に確認。`plan/JUNE_JULY_1942_IMPLEMENTATION_PLAN.md` を削除して `plan_done/` へ一意に移動。次は1942年7月22日以後のphase cut。

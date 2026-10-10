@@ -1,13 +1,13 @@
 # 1942年6月8日〜7月21日 — ミッドウェー後の作戦再編から南太平洋反攻準備・パプア北岸上陸 実装計画
 
-- **Status:** active
-- **Progress:** phase cut ✅ → JH138 ✅ published → JH139 ✅ published → JH140 ✅ published → JH141 ✅ published → A49 ✅ published / HVA-015 ✅ passed → Crosscutting publication gate ✅ hold（S05-E／S09-F／S10-D／新規）→ 次は phase-end audit necessity judgment
+- **Status:** completed
+- **Progress:** phase cut ✅ → JH138 ✅ published → JH139 ✅ published → JH140 ✅ published → JH141 ✅ published → A49 ✅ published / HVA-015 ✅ passed → Crosscutting publication gate ✅ hold（S05-E／S09-F／S10-D／新規）→ phase-end audit necessity judgment ✅ no-audit → CI / Pages ✅ → completed / archived
 - **Created:** 2026-10-09
 - **Scope:** 1942-06-08〜1942-07-21
 - **Planned period articles:** **4本（JH138〜JH141）**
 - **Primary goal:** ミッドウェー海戦後の日米の作戦資源と情報の変化、アリューシャン西部の日本軍占領と住民・米軍への影響、南太平洋の連合軍反攻命令と現地航空基地建設、パプア北岸への日本軍上陸を区別する。政治・指揮権、航空・海上輸送、現地守備と占領、情報伝達の制約をつなぎ、6月7日時点で確定していなかった判断を先取りしない。
-- **Previous phase:** [MO_CANCELLATION_TO_MIDWAY_ALEUTIANS_IMPLEMENTATION_PLAN.md](../plan_done/MO_CANCELLATION_TO_MIDWAY_ALEUTIANS_IMPLEMENTATION_PLAN.md)
-- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](JPN_HISTORY_DECADE_PLAN.md)
+- **Previous phase:** [MO_CANCELLATION_TO_MIDWAY_ALEUTIANS_IMPLEMENTATION_PLAN.md](MO_CANCELLATION_TO_MIDWAY_ALEUTIANS_IMPLEMENTATION_PLAN.md)
+- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](../plan/JPN_HISTORY_DECADE_PLAN.md)
 - **Workspace rules:** [../SYSTEM_PROMPT.md](../SYSTEM_PROMPT.md)
 
 ---
@@ -90,6 +90,15 @@ JH137は6月7日、ミッドウェー島の米側保持、日本空母4隻の喪
 
 候補は、(1) ミッドウェー作戦の実戦での中止と後続の日本海軍南方作戦修正の日時・主体、(2) 米軍反攻指令の6月25日準備命令／7月2日統合指令／7月9〜17日実施計画の役割差、(3) 北方占領の軍事行動と住民対応の主体・時間差、(4) ポートモレスビー海上攻略中止と7月21日パプア北岸上陸の作戦手段の変化。隣接・通常ゲートで解消済みなら**no-audit**として完了する。
 
+**2026-10-10判定：no-audit。** JH137〜JH141、A49および横断記事publication gateで以下の4仮説を照合した。
+
+1. ミッドウェー攻略中止、戦力再編、北方駐屯、パプア北岸への進攻は主体・目的・時点を分離済み。日本海軍の後続命令の日付を補足検証する余地はあるが、現行記事間の具体的矛盾ではない。
+2. 米側6月25日準備指示→7月2日共同指令→7月10日ニミッツ命令→7月16〜17日前後ゴームリー実施計画は、決定権限と具体化の段階差を区別済み。
+3. アッツ住民の日本軍による拘束とアトカでの米軍による避難・家屋焼却、キスカの軍事駐屯・増援は主体・行為・時間差を区別済み。S09-Fの住民行政制度と混同しない。
+4. 5月11日のMO海上攻略中止から7月21日のゴナ・バサブア付近への先遣隊上陸への手段変更は、JH134／JH139／JH141とA49で接続。後日の山地での交戦を7月21日の結果へ遡及させない。
+
+これらは直前ページとの接続・地図監査・Crosscutting gateで処理済みであり、複数記事を対象とした独立監査でなければ検出できない新たな問題は残らない。
+
 ## 6. 調査アンカー
 
 - U.S. Naval History and Heritage Command, *Battle of Midway*（戦闘終結後の帰投・作戦上の結果）
@@ -125,9 +134,9 @@ JH137は6月7日、ミッドウェー島の米側保持、日本空母4隻の喪
 - [x] JH138〜JH141の記事公開
 - [x] A49 map necessity / data quality judgmentと採用時の必要監査（HVA-015承認・published）
 - [x] Crosscutting publication gate（S05-E、S09-F、S10-D、新規記事要否：すべてhold）
-- [ ] 具体的な未解決仮説に限定したphase-end audit necessity judgment
-- [ ] `npm run check` green、PR CI / main CI green、公開変更時はPages deploy green
-- [ ] Status / Progress / docsを更新し、全DoD充足後に `plan_done/` へ一意に移動
+- [x] 具体的な未解決仮説に限定したphase-end audit necessity judgment（no-audit）
+- [x] `npm run check` green、PR CI / main CI green、公開変更時はPages deploy green（PR #409／main、archive PRはマージ前に確認）
+- [x] Status / Progress / docsを更新し、全DoD充足後に `plan_done/` へ一意に移動
 
 **JH138 implementation record (2026-10-09):** キスカ駐屯・米軍の6月11〜13日連続爆撃と補給限界、6月14日ナザン湾攻撃、アッツ住民の日本軍拘束、アトカ村の米軍焼却・退避措置を、出典と主体・時点を分けてpublished化した。JH137のnextIssuesから空母戦力補充・北方駐屯・情報の照合へ接続し、米軍の正式な南太平洋反攻命令は後続JH139/JH140へ送る。重要語5件、図版不採用理由、隣接接続まで完了。次はJH139。
 
@@ -149,3 +158,5 @@ JH137は6月7日、ミッドウェー島の米側保持、日本空母4隻の喪
 - **新規横断記事 — hold:** ミッドウェー後の編成変更、ウォッチタワー、ゴナ上陸、ココダ道は年代記事とA49で因果・地理の説明が成立する。独立した横断比較軸を追加する根拠がないため「1942年6〜7月の軍事動向」総集編は作らない。
 
 **次工程：** phase-end audit necessity judgment。①ミッドウェー以後の日本海軍南方作戦判断、②米軍の6月25日準備→7月2日統合指令→7月10日・17日実施計画、③北方の軍事行動とアッツ／アトカ住民への対応、④5月のポートモレスビー海上攻略中止→7月21日の北岸上陸について、年代ページ接続・地図・横断判定に残っている *具体的な* 横断矛盾がある場合だけ独立監査とする。
+
+**Phase completion / archive（2026-10-10）：** JH138〜JH141 published、A49 published／HVA-015 passed、S05-E・S09-F・S10-D／新規記事はhold、phase-end judgmentはno-audit。PR #409のCI [#38024367839](https://github.com/InSuns21/jpn-history-decade/actions/runs/38024367839)／Quality Checks [#38024367857](https://github.com/InSuns21/jpn-history-decade/actions/runs/38024367857)、main `8986b7c0bc0bcfd52643cceefb614aacb33c4996` のCI [#38024410636](https://github.com/InSuns21/jpn-history-decade/actions/runs/38024410636)／Pages [#38024410634](https://github.com/InSuns21/jpn-history-decade/actions/runs/38024410634) は成功済み。アーカイブPRはマージ前にCIを確認。次は1942年7月22日以後のphase cut。

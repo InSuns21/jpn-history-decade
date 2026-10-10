@@ -1,0 +1,41 @@
+{
+  "period": "1942-11-01",
+  "termRefs": [
+    {
+      "id": "greater-east-asia-ministry-ordinance-1942",
+      "core": true
+    },
+    {
+      "id": "greater-east-asia-ministry-establishment-plan-1942",
+      "core": true
+    },
+    {
+      "id": "pure-diplomacy-1942",
+      "core": true
+    },
+    {
+      "id": "imperial-general-headquarters-1937",
+      "core": true
+    },
+    {
+      "id": "guadalcanal-november-reinforcement-1942",
+      "core": true
+    },
+    {
+      "id": "war-conduct-outline-1942-03-07",
+      "core": true
+    },
+    {
+      "id": "wartime-shipping-management-order-1942",
+      "core": true
+    },
+    {
+      "id": "shipping-operation-association-1942",
+      "core": true
+    },
+    {
+      "id": "food-control-act-1942",
+      "core": true
+    }
+  ]
+}

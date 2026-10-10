@@ -1,7 +1,7 @@
 # 1942年6月8日〜7月21日 — ミッドウェー後の作戦再編から南太平洋反攻準備・パプア北岸上陸 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH138 ✅ published → JH139 ✅ published → JH140 ✅ published → JH141 ✅ published → A49 adopted / Data・Style passed / HVA-015 pending → 次は Human Visual Audit
+- **Progress:** phase cut ✅ → JH138 ✅ published → JH139 ✅ published → JH140 ✅ published → JH141 ✅ published → A49 ✅ published / HVA-015 ✅ passed → Crosscutting publication gate ✅ hold（S05-E／S09-F／S10-D／新規）→ 次は phase-end audit necessity judgment
 - **Created:** 2026-10-09
 - **Scope:** 1942-06-08〜1942-07-21
 - **Planned period articles:** **4本（JH138〜JH141）**
@@ -73,7 +73,7 @@ JH137は6月7日、ミッドウェー島の米側保持、日本空母4隻の喪
 - まず既存A47「南東方面への進攻と珊瑚海の空間」、A48「ミッドウェー・アリューシャン二方面作戦の空間」で説明できる範囲を比較。南太平洋の通信・航空支援範囲とパプア山地越えが新しい理解を与える場合のみ採用し、単にPointを増やすための地図を作らない。
 - Point候補：ラバウル、ツラギ、ルンガ岬、エファテ／エスピリトゥサント、ポートモレスビー、ゴナ／ギルワ、ココダ。島・港・飛行場と当時の任務を区別し、7月21日段階の支配状態を確認する。
 - 山脈横断・ココダ道のLineStringや作戦範囲Polygonを採用する場合は時点と幾何根拠・概略度を明示しData / Style / Human Visual Auditを必須とする。既存Point-onlyと同形式のみなら再利用監査例外の可否を記録し、見た目の特殊リスクを個別判断する。
-- **判定（2026-10-10）：adopted。** 既存A47/A48とは時点・地理的問いが異なるため、ソロモン諸島の米軍攻略予定地とゴナ上陸・ココダ山地を同じ地図で比較する。9 Point＋山地徒歩回廊の模式LineStringをJH141「日本軍」節の直後へ配置。AWM戦時地図・公的戦史を根拠にData / Style Auditはpassed。ラインは7月21日までの日本軍進出を意味せず、後年整理された地図から地形関係を模式化したため**HVA-015 pending-human／map status draft**。公開表示でDesktop・Tablet/Touch・Mobile、初期／詳細／zoom-out、近接するツラギ・ルンガ岬とパプア側のラベル、線と背景海岸線、タップ・pan・pinchを確認し、承認後にpublishedへ移す。
+- **判定（2026-10-10）：adopted。** 既存A47/A48とは時点・地理的問いが異なるため、ソロモン諸島の米軍攻略予定地とゴナ上陸・ココダ山地を同じ地図で比較する。9 Point＋山地徒歩回廊の模式LineStringをJH141「日本軍」節の直後へ配置。AWM戦時地図・公的戦史を根拠にData / Style Auditはpassed。ラインは7月21日までの日本軍進出を意味せず、後年整理された地図から地形関係を模式化したため**HVA-015 passed（2026-10-10ユーザー承認）／map status published**。実表示の凡例・ラベル・模式線・操作についてユーザーの明示承認を得た。個別の端末測定ログを新たに取得したとは主張しない。
 
 ## 4. Crosscutting publication gate
 
@@ -123,8 +123,8 @@ JH137は6月7日、ミッドウェー島の米側保持、日本空母4隻の喪
 ### フェーズ
 - [x] 1942年6月8日〜7月21日の自然な状態遷移に基づき4本でphase cut
 - [x] JH138〜JH141の記事公開
-- [ ] A49 map necessity / data quality judgmentと採用時の必要監査
-- [ ] Crosscutting publication gate（S05-E、S09-F、S10-D、新規記事要否）
+- [x] A49 map necessity / data quality judgmentと採用時の必要監査（HVA-015承認・published）
+- [x] Crosscutting publication gate（S05-E、S09-F、S10-D、新規記事要否：すべてhold）
 - [ ] 具体的な未解決仮説に限定したphase-end audit necessity judgment
 - [ ] `npm run check` green、PR CI / main CI green、公開変更時はPages deploy green
 - [ ] Status / Progress / docsを更新し、全DoD充足後に `plan_done/` へ一意に移動
@@ -140,3 +140,12 @@ JH137は6月7日、ミッドウェー島の米側保持、日本空母4隻の喪
 **JH141 implementation record (2026-10-10):** 7月16〜17日前後のゴームリー作戦計画1-42、フレッチャー・ターナー・ヴァンデグリフトの洋上・輸送・地上任務、7月20日の米第1海兵師団作戦命令7-42とウェリントンの積載準備、横山先遣隊のラバウルからパプア北岸への船団移動・21日夕方のバサブア／ゴナ付近上陸を、NHHC・米海兵隊公刊史・AWM・豪州政府退役軍人省で照合した。21日夜までの約1,500人の上陸を後続増援の人数と区別し、23日のアワラ接触戦闘は次期へ送った。JH140末尾の米側の指揮任務・輸送準備と豪州・パプア側前進警戒をJH141冒頭へ接続し、独立した隣接年代監査を増設しない。用語7件追加、coreリンク・図版要否判定まで完了。1942年7月20日のウェリントンの水陸両用車両積載準備（U.S. Navy 80-G-10760、Public Domain Mark）を撮影日と権利を確認して採用。次はA49地図採否判定。
 
 **A49 implementation record (2026-10-10):** Point-onlyにすればHVA例外は使えるが、山地横断と補給経路という中心問いの空間構造を削るため採用しない。AWMの1942年戦時地図に基づく模式LineStringを採用し、地図自身をdraft/HVA待ちとしてPages表示・レビュー対象にする。Crosscutting gateへの移行はHVA後とする。
+
+**HVA-015 / Crosscutting publication gate record (2026-10-10):** ユーザーがA49のGitHub Pages実表示を「通っています」と明示承認。`south-pacific-kokoda-transport-1942-07-21`のData / Style Audit passedを維持し、Human Visual Auditをpassed、map statusをpublishedへ昇格。個別端末の再測定を追加実施したとの主張はしない。続けてJH138〜JH141および既存3横断記事の中心問い・終端時点を照合した。
+
+- **S05-E — hold:** 5月20日の翼賛政治会成立以降、この期間の焦点は日米の軍司令部内・軍種間の作戦指揮と部隊の移管である。日本の政党・選挙・議会・行政協力組織に新しい制度変更が生じたことを示す史料を今回の年代原稿には確認できず、既存の「政党解体と翼賛体制」の比較軸を7月まで延長しない。軍の作戦命令と帝国議会の参加制度を混同しない。
+- **S09-F — hold:** アッツ住民に対する日本軍の拘束、アトカ住民への米当局の避難・焼却、キスカ・アッツの軍事駐屯、ツラギの基地、ゴナの上陸を別の行為として扱う。香港・昭南・ジャワ・ビルマの占領地軍政機構と比較できる新たな行政権限・住民統治機関の成立までは確認できないため、1942年4月までの既存比較記事を延長しない。住民被害はJH138、上陸はJH141で記述を保持する。
+- **S10-D — hold:** 空母・輸送船・航空隊・燃料・荷揚げの配分はJH139〜JH141の作戦上の制約であり、1942年3月の船舶国家使用や5月の船舶運営会のように国内法令・配船機構の権限が7月に新設・変更されたことを示すものではない。資源配分の制度史は既存S10-Dを維持する。
+- **新規横断記事 — hold:** ミッドウェー後の編成変更、ウォッチタワー、ゴナ上陸、ココダ道は年代記事とA49で因果・地理の説明が成立する。独立した横断比較軸を追加する根拠がないため「1942年6〜7月の軍事動向」総集編は作らない。
+
+**次工程：** phase-end audit necessity judgment。①ミッドウェー以後の日本海軍南方作戦判断、②米軍の6月25日準備→7月2日統合指令→7月10日・17日実施計画、③北方の軍事行動とアッツ／アトカ住民への対応、④5月のポートモレスビー海上攻略中止→7月21日の北岸上陸について、年代ページ接続・地図・横断判定に残っている *具体的な* 横断矛盾がある場合だけ独立監査とする。

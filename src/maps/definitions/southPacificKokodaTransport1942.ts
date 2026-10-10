@@ -5,7 +5,7 @@ export const southPacificKokodaTransport1942Map: HistoricalMapDefinition = {
   "title": "1942年7月：南太平洋の反攻目標とパプア山岳路",
   "historicalQuestion": "米軍が目標としたツラギ・ガダルカナルと、日本軍のゴナ上陸・ココダ方面進出のあいだで、港・飛行場・山岳路が補給をどう制約したか。",
   "readingNote": "1942年7月21日を基準に、米軍の攻略予定地、日本軍の既存基地と21日の上陸地、豪州・パプア側の防備地点を示す。ニューギニア山地の破線は、ココダから南側山麓へ通じる地形的な連絡方向を後年の戦時地図も参照して模式化したもので、7月21日までの日本軍の進出線や正確な道筋ではない。点は地名の代表位置で、海上の船団航路や航空機の航続範囲は示さない。「オワーズ・コーナー」は後に付いた地名を位置参照に用いた。背景の道路・海岸線・国境は現代のOpenStreetMapに基づく。",
-  "status": "draft",
+  "status": "published",
   "period": {
     "startYear": 1942,
     "endYear": 1942
@@ -401,13 +401,13 @@ export const southPacificKokodaTransport1942Map: HistoricalMapDefinition = {
   "auditState": {
     "dataAudit": "passed",
     "styleAudit": "passed",
-    "visualAudit": "pending-human",
+    "visualAudit": "passed",
     "notes": [
       "A49 map necessity: adopted. A47 focuses May Coral Sea sea-approach and A48 focuses June Midway/Aleutians. Neither can show simultaneously the July US Solomons landing objectives and Gona/Kokoda cross-mountain transport constraint.",
       "Data Audit: 9 unique named/locality reference Points and 1 schematic LineString. All coordinates are longitude/latitude WGS84 and within [147.15,-17.73] to [168.39,-4.2]. Point names, control/plan roles and dates follow official histories; AWM wartime trail sheet supplies the land route association, not a reconstructed 21 July movement.",
       "The October-1942 refinement of route knowledge is distinguished from the information available on 21 July. Owers Corner is a retrospective location name only. Cartographic interpolation waypoints are explicitly not documentary stopping points.",
       "Style Audit: line drawn as dashed, all seven point categories plus one line category correspond to features and legend. Markers for Gona, Kokoda, the American targets and rear reference islands distinguish actor and operation stage.",
-      "A49 includes LineString, so point-only reused-pattern exemption is inapplicable. HVA-015 pending: inspect Tulagi/Lunga proximity, Papuan points/route legibility at initial and detail zoom, sea vs land alignment of line, popups and tap/pan/pinch on desktop/tablet/mobile. Do not mark published before human review."
+      "HVA-015 passed on 2026-10-10 by the user’s explicit confirmation that the published Pages map passed their visual review. The review scope includes Tulagi/Lunga proximity, the Papuan point labels and schematic trail, land alignment, popups, touch and zoom. No new per-device measurement logs were provided in this turn; approval is recorded as user confirmation rather than independently replayed device testing."
     ]
   }
 }

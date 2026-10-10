@@ -6,6 +6,7 @@ import { findMapDefinition } from '../../maps/registry'
 import { Glossary } from './Glossary'
 import { HistoricalFigure } from './HistoricalFigure'
 import { LinkedText } from './LinkedText'
+import { ProseTable } from './ProseTable'
 import { TimelineNav } from './TimelineNav'
 import { ThematicMap } from './ThematicMap'
 
@@ -27,6 +28,10 @@ function ContentBlocks({
               <LinkedText text={block.text} routeKey={routeKey} sourceIds={sourceIds} />
             </p>
           )
+        }
+
+        if (block.type === 'table') {
+          return <ProseTable key={'table-' + index} block={block} routeKey={routeKey} sourceIds={sourceIds} />
         }
 
         if (block.type === 'list') {

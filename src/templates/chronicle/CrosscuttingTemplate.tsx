@@ -4,6 +4,7 @@ import type { CrosscuttingTemplateProps } from '../types'
 import { findMapDefinition } from '../../maps/registry'
 import { Glossary } from './Glossary'
 import { LinkedText } from './LinkedText'
+import { ProseTable } from './ProseTable'
 import { ThematicMap } from './ThematicMap'
 
 function ContentBlocks({
@@ -30,6 +31,18 @@ function ContentBlocks({
                 sourceIds={sourceIds}
               />
             </p>
+          )
+        }
+
+        if (block.type === 'table') {
+          return (
+            <ProseTable
+              key={'table-' + index}
+              block={block}
+              routeKey={routeKey}
+              pageKind={pageKind}
+              sourceIds={sourceIds}
+            />
           )
         }
 

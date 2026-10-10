@@ -1414,4 +1414,14 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     }),
   ],
 
+  '1942-09-11': [
+    commonsFigure('"Bloody Ridge," Guadalcanal, 15 September 1942.jpg', {
+      alt: '1942年9月15日、ガダルカナル島のエドソンの丘の戦闘後に撮影した高地とヘンダーソン飛行場方向の眺望。細い道路と樹林が続く',
+      title: 'エドソンの丘からヘンダーソン飛行場方向を望む',
+      dateLabel: '1942年9月15日（飛行場防御戦後に撮影）',
+      credit: 'Thayer Soule／Archives Branch, USMC History Division（COLL/2266）・Wikimedia Commons（改変なし）',
+      license: 'CC BY 2.0',
+    }),
+  ],
+
 }

@@ -37,6 +37,7 @@ import { xuzhouRail1938Map } from './definitions/xuzhouRail1938.ts'
 import { yellowRiverFlood1938Map } from './definitions/yellowRiverFlood1938.ts'
 import { wuhanGuangdongSupply1938Map } from './definitions/wuhanGuangdongSupply1938.ts'
 import { hainanSupply1939Map } from './definitions/hainanSupply1939.ts'
+import { guadalcanalLandingSavo1942Map } from './definitions/guadalcanalLandingSavo1942.ts'
 import type { HistoricalMapDefinition } from './schema.ts'
 
 export const mapDefinitions: HistoricalMapDefinition[] = [
@@ -64,6 +65,7 @@ export const mapDefinitions: HistoricalMapDefinition[] = [
   coralSeaSpatialOperations1942Map,
   midwayAleutiansTwoFront1942Map,
   southPacificKokodaTransport1942Map,
+  guadalcanalLandingSavo1942Map,
   railwayExpansion1872To1890Map,
   sinoRussoJapaneseWarTheatersMap,
   firstWorldWarEastAsiaPacificMap,

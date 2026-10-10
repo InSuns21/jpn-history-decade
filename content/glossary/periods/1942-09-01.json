@@ -1,0 +1,33 @@
+{
+  "period": "1942-09-01",
+  "termRefs": [
+    {
+      "id": "tojo-cabinet-1941",
+      "core": true
+    },
+    {
+      "id": "greater-east-asia-ministry-establishment-plan-1942",
+      "core": true
+    },
+    {
+      "id": "pure-diplomacy-1942",
+      "core": true
+    },
+    {
+      "id": "koa-in-1938",
+      "core": true
+    },
+    {
+      "id": "takumusho-1929",
+      "core": true
+    },
+    {
+      "id": "imperial-general-headquarters-1937",
+      "core": true
+    },
+    {
+      "id": "shipping-operation-association-1942",
+      "core": true
+    }
+  ]
+}

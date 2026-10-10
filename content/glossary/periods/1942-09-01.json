@@ -28,6 +28,11 @@
     {
       "id": "shipping-operation-association-1942",
       "core": true
+    },
+    {
+      "id": "food-control-act-1942",
+      "core": true,
+      "periodNote": "1942年2月にすでに制定された制度として、9月上旬の国民生活の継続状態を示す。"
     }
   ]
 }

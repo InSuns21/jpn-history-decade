@@ -1386,4 +1386,21 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     }),
   ],
 
+  '1942-08-21': [
+    commonsFigure('Japanese bomb hits USS Enterprise (CV-6) flight deck during Battle of the Eastern Solomons, 24 August 1942 (80-G-17489).jpg', {
+      alt: '1942年8月24日、第二次ソロモン海戦で日本軍爆弾が米空母エンタープライズの飛行甲板に命中し、巨大な爆発と煙が広がる瞬間',
+      title: 'エンタープライズ飛行甲板での爆弾命中',
+      dateLabel: '1942年8月24日',
+      credit: 'Marion Riley／U.S. Navy・U.S. National Archives（80-G-17489）・Wikimedia Commons',
+      license: 'Public Domain Mark',
+    }),
+    commonsFigure('Aerial view of the immobile Japanese carrier Ryujo with two destroyers during the Battle of the Eastern Solomons, 24 August 1942 (80-G-88018).jpg', {
+      alt: '1942年8月24日、米軍機の攻撃で航行不能になった日本空母龍驤を上空から撮影した写真。付近で駆逐艦2隻が乗員の救助に当たる',
+      title: '航空攻撃を受けて航行不能になった空母龍驤',
+      dateLabel: '1942年8月24日',
+      credit: 'U.S. Army Air Forces／Naval History and Heritage Command（80-G-88018）・Wikimedia Commons',
+      license: 'Public Domain Mark',
+    }),
+  ],
+
 }

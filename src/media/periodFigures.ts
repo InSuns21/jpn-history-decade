@@ -1445,4 +1445,13 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
   ],
 
 
+  '1942-11-12': [
+    commonsFigure('NavalGuadalcanalBeachedTransports1.jpg', {
+      alt: '1942年11月15日、ガダルカナル島北岸の海岸に乗り上げ、米軍の攻撃で炎上する日本軍の輸送船',
+      title: 'ガダルカナル北岸で炎上する日本軍輸送船',
+      dateLabel: '1942年11月15日',
+      credit: 'U.S. Navy（撮影者不詳）／米海軍戦闘記録・Wikimedia Commons（改変なし）',
+      license: 'Public Domain（米国連邦政府著作物）',
+    }),
+  ],
 }

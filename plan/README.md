@@ -12,7 +12,7 @@
 
 ### 本線
 
-現在の本線は **1942年9月1日〜11月30日** の政治史を背骨とする社会の状態遷移を扱う [SEPTEMBER_NOVEMBER_1942_POLITICAL_HISTORY_IMPLEMENTATION_PLAN.md](SEPTEMBER_NOVEMBER_1942_POLITICAL_HISTORY_IMPLEMENTATION_PLAN.md)（Status: active、暫定予定 **5本：JH147〜JH151**）です。JH147「1942-09-01〜09-10」は政治・外交・戦況・配船・食糧配給を同じ時間窓の変化／継続状態として再構成。次は **JH148「1942-09-11〜09-17」**。9月11日の官制要綱と17日の外相人事を、軍事・物流・暮らしの条件と接続します。JH149以降の日付は史料で状態変化を確かめ、必要ならphase cutを再調整します。
+現在の本線は **1942年9月1日〜11月30日** の政治史を背骨とする社会の状態遷移を扱う [SEPTEMBER_NOVEMBER_1942_POLITICAL_HISTORY_IMPLEMENTATION_PLAN.md](SEPTEMBER_NOVEMBER_1942_POLITICAL_HISTORY_IMPLEMENTATION_PLAN.md)（Status: active、暫定予定 **5本：JH147〜JH151**）です。JH147「1942-09-01〜09-10」は政治・外交・戦況・配船・食糧配給を同じ時間窓の変化／継続状態として再構成。JH148「1942-09-11〜09-17」も官制要綱・17日の外相人事を、外交・占領地行政・南方の軍事補給・商船配船・食糧配給と結びつけて公開。次は **JH149「1942-09-18以後」（着手前に10月内の境界を再判定）**。史料で状態変化を確かめ、必要ならphase cutを再調整します。
 
 前の1942年7月22日〜8月31日フェーズは [KOKODA_GUADALCANAL_AUGUST_1942_IMPLEMENTATION_PLAN.md](../plan_done/KOKODA_GUADALCANAL_AUGUST_1942_IMPLEMENTATION_PLAN.md) として **completed / archived** 済みです。JH142〜JH146 published、A50 Point-only published・Data/Style passed・監査済み表示の再利用例外、S05／S09／S10と新規横断はhold、独立監査不要、PR／main CIとPages成功を確認しています。
 

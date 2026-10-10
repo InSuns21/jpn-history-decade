@@ -38,6 +38,8 @@ R1遡及実装の4地図に加え、R2実装のA21〜A28（A20を除く8地図�
 
 **HVA-014 completion (2026-10-09):** A48地図のポップアップ文面修正を確認済みとしたユーザーが、続いて地図全体の表示・操作についても明示的にOKを回答したため、Human Visual Auditをpassedとして閉じた。日付変更線横断、アッツ／キスカの接近地点とラベル、popup／tap／pan／pinch、表示範囲の懸念を含めたユーザー承認記録。個別の端末別測定記録を新たに取得したとの主張はしない。
 
+| HVA-015 | A49 | south-pacific-kokoda-transport-1942-07-21 | /period/1942-07-12 | new | point + schematic line | passed | passed | pending-human | ルンガ岬／ツラギとパプア側の近接ラベル・点線の見え方 | marker tap・線近くのpan/pinch | 9点・8区分凡例、山路の読みやすさ | initial 3 / Papua detail 6 / zoom-out 2 | 後年の道路名称・後年再構成の徒歩経路を7月21日の進軍達成域・精密道筋と誤認しないこと。破線の海岸線横断や見切れも確認 | A49 implementation PR | — | pending |
+
 ## 新規登録テンプレート
 
 | Backlog ID | A | Map ID | Route | Change | Geometry | Data | Style | Visual | Desktop | Tablet / Touch | Mobile | Zoom | 誤読注意点 | 実装commit | 完了commit | Status |

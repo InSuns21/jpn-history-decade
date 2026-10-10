@@ -1,0 +1,37 @@
+{
+  "period": "1942-07-12",
+  "termRefs": [
+    {
+      "id": "watchtower-ghormley-plan-1942-07",
+      "core": true
+    },
+    {
+      "id": "watchtower-carrier-support-1942-07",
+      "core": true
+    },
+    {
+      "id": "watchtower-amphibious-force-1942-07",
+      "core": true
+    },
+    {
+      "id": "amphibious-combat-loading-1942-07",
+      "core": true
+    },
+    {
+      "id": "marine-operation-order-7-42",
+      "core": true
+    },
+    {
+      "id": "yokoyama-advance-party-1942-07",
+      "core": true
+    },
+    {
+      "id": "gona-basabua-landings-1942-07-21",
+      "core": true
+    },
+    {
+      "id": "kokoda-track-1942",
+      "core": false
+    }
+  ]
+}

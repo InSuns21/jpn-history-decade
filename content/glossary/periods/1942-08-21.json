@@ -1,0 +1,37 @@
+{
+  "period": "1942-08-21",
+  "termRefs": [
+    {
+      "id": "ichiki-detachment-guadalcanal-1942-08",
+      "core": true
+    },
+    {
+      "id": "ilu-tenaru-battle-1942-08-21",
+      "core": true
+    },
+    {
+      "id": "henderson-field-1942-08",
+      "core": true
+    },
+    {
+      "id": "eastern-solomons-battle-1942-08",
+      "core": true
+    },
+    {
+      "id": "guadalcanal-convoy-interception-1942-08-25",
+      "core": true
+    },
+    {
+      "id": "south-seas-detachment-1942-08",
+      "core": true
+    },
+    {
+      "id": "maroubra-force-kokoda-1942-06",
+      "core": true
+    },
+    {
+      "id": "milne-bay-japanese-landing-1942-08-25",
+      "core": true
+    }
+  ]
+}

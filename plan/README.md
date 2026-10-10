@@ -12,9 +12,11 @@
 
 ### 本線
 
-現在の本線は **1942年9月1日〜10月31日** の政治史を背骨とする社会状態遷移を扱う [SEPTEMBER_OCTOBER_1942_STATE_TRANSITION_IMPLEMENTATION_PLAN.md](SEPTEMBER_OCTOBER_1942_STATE_TRANSITION_IMPLEMENTATION_PLAN.md)（Status: active、**5本：JH147〜JH151**）です。JH147〜JH150はpublished。次は **JH151「1942-10-25〜10-31」本文実装**。9月18日の陸海軍中央協定、10月3日の第21号作戦中止、10月25〜30日の戦争指導判断を独立した境界とし、輸送・生産・食糧・衣料の継続状態も観測します。11月1日の大東亜省施行以降は次フェーズで別途区切ります。
+1942年9月1日〜10月31日フェーズは [SEPTEMBER_OCTOBER_1942_STATE_TRANSITION_IMPLEMENTATION_PLAN.md](../plan_done/SEPTEMBER_OCTOBER_1942_STATE_TRANSITION_IMPLEMENTATION_PLAN.md) として **completed / archived**。JH147〜JH151 published、S05-E／S09-F／S10-D／新規横断記事はall hold、新主題地図不要、独立監査不要です。
 
-前の1942年7月22日〜8月31日フェーズは [KOKODA_GUADALCANAL_AUGUST_1942_IMPLEMENTATION_PLAN.md](../plan_done/KOKODA_GUADALCANAL_AUGUST_1942_IMPLEMENTATION_PLAN.md) として **completed / archived** 済みです。JH142〜JH146 published、A50 Point-only published・Data/Style passed・監査済み表示の再利用例外、S05／S09／S10と新規横断はhold、独立監査不要、PR／main CIとPages成功を確認しています。
+**次工程は1942年11月1日以降のphase cut**。大東亜省官制の11月1日施行、統制会への権限委譲方針（17日）、臨時生産増強委員会設置決定（27日）について社会状態を確認し、新PLANの区切りを再判定します。現時点で次のactive実装PLANは未作成です。
+
+前フェーズの1942年7月22日〜8月31日も [KOKODA_GUADALCANAL_AUGUST_1942_IMPLEMENTATION_PLAN.md](../plan_done/KOKODA_GUADALCANAL_AUGUST_1942_IMPLEMENTATION_PLAN.md) へcompleted / archived済みです。
 
 ### 横断的な品質負債返済
 

@@ -144,7 +144,7 @@ export const southPacificKokodaTransport1942Map: HistoricalMapDefinition = {
             "year": "1942-07",
             "eventDate": "1942-07-21",
             "status": "南太平洋の航空・輸送支援を考える参照島",
-            "detail": "米軍の南太平洋での基地整備・航空援護を考えるための島の位置。7月21日時点の航空部隊配置を点で示すものではない。"
+            "detail": "米軍の南太平洋における基地整備・航空援護の地理的条件を示す参照島。"
           }
         },
         {
@@ -164,7 +164,7 @@ export const southPacificKokodaTransport1942Map: HistoricalMapDefinition = {
             "year": "1942-07",
             "eventDate": "1942-07-21",
             "status": "ニューヘブリディーズ諸島の後方参照地点",
-            "detail": "米軍の南太平洋の基地・輸送上の位置関係を読むための参照島。滑走路の稼働状況と部隊位置を示すものではない。"
+            "detail": "米軍の南太平洋の基地・輸送上の位置関係を読むための参照島。"
           }
         },
         {
@@ -204,7 +204,7 @@ export const southPacificKokodaTransport1942Map: HistoricalMapDefinition = {
             "year": "1942-07",
             "eventDate": "1942-07-21",
             "status": "豪州・パプア側の前進警戒拠点",
-            "detail": "豪州第39大隊B中隊とパプア歩兵大隊が周辺の道と飛行場を警戒。日本軍の7月21日の到達地を表す点ではない。"
+            "detail": "豪州第39大隊B中隊とパプア歩兵大隊が周辺の道と飛行場を警戒していた。"
           }
         },
         {

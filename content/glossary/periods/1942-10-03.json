@@ -1,0 +1,37 @@
+{
+  "period": "1942-10-03",
+  "termRefs": [
+    {
+      "id": "operation-21-cancellation-1942-10-03",
+      "core": true
+    },
+    {
+      "id": "army-navy-central-agreement-1942-09-18",
+      "core": true
+    },
+    {
+      "id": "cape-esperance-battle-1942-10",
+      "core": true
+    },
+    {
+      "id": "henderson-field-1942-08",
+      "core": true
+    },
+    {
+      "id": "wartime-shipping-management-order-1942",
+      "core": true
+    },
+    {
+      "id": "shipping-operation-association-1942",
+      "core": true
+    },
+    {
+      "id": "food-control-act-1942",
+      "core": true
+    },
+    {
+      "id": "war-conduct-outline-1942-03-07",
+      "core": true
+    }
+  ]
+}

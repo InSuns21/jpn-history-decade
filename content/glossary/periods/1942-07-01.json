@@ -1,0 +1,33 @@
+{
+  "period": "1942-07-01",
+  "termRefs": [
+    {
+      "id": "jcs-pacific-directive-1942-07-02",
+      "core": true
+    },
+    {
+      "id": "lunga-airfield-construction-1942-07",
+      "core": true
+    },
+    {
+      "id": "watchtower-order-1942-07-10",
+      "core": true
+    },
+    {
+      "id": "kiska-reinforcement-1942-07-01",
+      "core": true
+    },
+    {
+      "id": "kiska-growler-1942-07-05",
+      "core": true
+    },
+    {
+      "id": "ghormley-sopac-command-1942-06",
+      "core": false
+    },
+    {
+      "id": "swpa-poa-command-1942-03-30",
+      "core": false
+    }
+  ]
+}

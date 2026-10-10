@@ -1,11 +1,12 @@
 # 1942年9〜10月 — 戦争下の日本社会の状態遷移（政治・軍事・輸送・生活）実装計画
 
-- **Status:** active（先行フェーズcompleted / archived、2026-10-10から本線）
+- **Status:** completed / archived（2026-10-11）
+- **Progress:** JH147〜JH151 published ✅ → 横断gate all hold ✅ → no-new-map ✅ → no-audit ✅ → JH151 main CI / Pages green ✅ → archived ✅
 - **Created:** 2026-10-10
 - **Scope:** 1942-09-01〜1942-10-31（11月1日以後は次フェーズへ）
 - **Planned period articles:** **5本（JH147〜JH151）**。JH147〜151をpublished原稿として実装。
 - **Previous phase:** [KOKODA_GUADALCANAL_AUGUST_1942_IMPLEMENTATION_PLAN.md](../plan_done/KOKODA_GUADALCANAL_AUGUST_1942_IMPLEMENTATION_PLAN.md)
-- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](JPN_HISTORY_DECADE_PLAN.md)
+- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](../plan/JPN_HISTORY_DECADE_PLAN.md)
 - **Standards:** [CONTENT_AUTHORING_STANDARD.md](../standards/CONTENT_AUTHORING_STANDARD.md) / [IMAGE_ASSET_STANDARD.md](../standards/IMAGE_ASSET_STANDARD.md) / [PROJECT_WORKFLOW_STANDARD.md](../standards/PROJECT_WORKFLOW_STANDARD.md)
 
 ## 1. 主線の転換
@@ -75,14 +76,14 @@
 
 上記以外の閣議・人事・物資決定や日付を記事に入れる前に、国立公文書館・JACAR・官報・政府公文書などで確認する。後世の叙述は当時の認識と混同しない。
 
-## 6. Definition of Done（未着手）
+## 6. Definition of Done（完了）
 
 - [x] 前期完了後のphase cutを済ませ、JH147の実日付・JH148以後の状態遷移候補と暫定範囲を再判定（JH149〜JH151の境界は今回確定）
-- [ ] JH147以降の本文を政治史中心で執筆し、個別隣接接続・用語・出典・図版要否を確認
-- [ ] S05／S09／S10のpublication gateを制度上の変化に基づいて判定
-- [ ] 主題地図は行政権限の地域差・実効性を示す必要がある場合だけ採用し、必要監査を完了
-- [ ] \`npm run check\` / PR CI / main CI / Pages deploy 成功
-- [ ] completed化した計画のみplan_doneへ一意に移動
+- [x] JH147以降の本文を政治史中心で執筆し、個別隣接接続・用語・出典・図版要否を確認
+- [x] S05／S09／S10のpublication gateを制度上の変化に基づいて判定
+- [x] 主題地図は行政権限の地域差・実効性を示す必要がある場合だけ採用し、必要監査を完了
+- [x] \`npm run check\` / PR CI / main CI / Pages deploy 成功
+- [x] completed化した計画のみplan_doneへ一意に移動
 
 **Planning record (2026-10-10):** JH146を8月31日で閉じる時点から、政治史主軸へ復帰するための次期計画を作成。戦闘日付単位の継続をやめ、大東亜省と外務省の権限・政府内判断を中心とする記事へ切り替える。JH147以降の具体的記事境界は一次史料で確定する。
 
@@ -109,3 +110,16 @@
 **JH151 implementation record (2026-10-11):** 10月25日〜31日のpublished原稿を追加。防衛研究所・屋代論文pp.91–92で第二師団の攻勢失敗（25日まで）、服部卓四郎・陸軍省軍務局・田中新一の意見差と30日の3月7日大綱維持判断を検証。NHHCの米海軍戦史・戦闘報告から26日の南太平洋海戦でのホーネット喪失、エンタープライズ・翔鶴・瑞鳳の損傷、艦載機・搭乗員の消耗を確認し、海上戦果と飛行場奪回の成否を分離した。国内は戦時海運管理令下のA/B/C船の配船、原料輸送と工業生産、食糧管理法・米穀通帳・衣料切符、翌11月1日の大東亜省施行前の行政を継続状態として叙述。JH150の10月中旬増援・重砲揚陸から攻勢結果への接続を記事実装内で確認。辞書2語追加・7語core参照、出典12件、1942年10月26日の米海軍写真（80-G-33947、Commons Public Domain）を新規採用。A49/A50が広域・島内位置を説明済みで、この期間固有の新たな空間geometryを伴う論点はないため主題地図を新設しない。次工程はS05/S09/S10の横断記事延長判定、地図採用最終判定、必要ならフェーズ末監査仮説の検討。PR CI・main CI・Pagesは結果確認後に追記する。
 
 **JH151 verification (2026-10-11):** PR #429 was squash merged as `191dd8fc759ac4e16db14d55676fa15a8acdfc44`. PR CI #38072092403 and Quality Checks #38072092406 succeeded. Main CI #38072154076 and Pages #38072154066 succeeded. Next: S05/S09/S10 crosscutting publication gate; keep this PLAN active until its remaining checks are complete.
+
+
+**Crosscutting publication gate (2026-10-11): all hold.**
+- **S05-E 政治参加の回路：hold。** 9月の大東亜省設置方針・官制要綱・外相交代と10月の軍中央による戦争指導判断は、帝国議会や翼賛政治会の審議権限・参加回路の新設を伴うものではない。軍の作戦決定を政治参加制度の転換として扱わない。
+- **S09-F 南方占領統治：hold。** 東京での対外行政の再編準備と、香港・昭南・ジャワ・ビルマなど各地で継続した軍政の指揮・実務を区別する。9〜10月に新しい現地行政機構や住民統治の権限移転が確認されたわけではなく、11月1日の大東亜省施行は次期に判定する。
+- **S10-D 戦時統制と資源配分：hold。** ガダルカナルへの軍用船・商船投入、損耗、翌1943年度輸送計画の初期検討は、国家使用船C船の配船・軍徴用船A/B船・工業原料輸送への継続的な制約を示す。1942年3月の戦時海運管理令、5月の船舶運営会による配船実務開始から、新しい国内権限・法令が成立したことを示す史料は未確認。
+- **新規横断記事：hold。** 省庁権限・作戦方針・輸送・国内生活を比較する論点は年代5本と既存S09-F/S10-Dで読める。異なる中心問いに基づく横断比較が立たない段階で戦況を再編集した記事は作らない。
+
+**Map necessity decision (2026-10-11): no-new-map.** JH147〜151は既存A49の南太平洋・パプア広域関係とA50のガダルカナル沿岸の地点関係を背景に、中央での決定、対外行政・軍政、船舶・生産・暮らしの状態変化を扱う。新たな境界や航路geometryを必要とする独立した地理的問いは確認できないため新設しない。地図実装変更がないので新たなData/Style/Human Visual Auditも不要。
+
+**Phase-end audit necessity judgment (2026-10-11): no-audit.** 独立監査候補の①大東亜省の9月1日設置方針→11日官制要綱→11月1日の施行、②9月18日の陸海軍協定・ココダ後退命令→24日の現地撤退、③10月3日の第21号作戦中止→11〜15日のガダルカナル増援→25日までの奪回失敗→30日の戦争指導大綱維持、④米穀通帳・衣料切符・国家使用船・軍徴用船の継続は、JH147〜151の各記事で時点・主体・制度を区別済み。横断publication gateで役割重複・制度変更の有無を確認し、独立監査でしか判明しない未解決の矛盾・目的論化・論点重複は具体化しなかった。独立監査は設けない。
+
+**Phase completion record (2026-10-11):** JH147〜JH151 published、個別の隣接年代接続・用語・出典・図版採否を完了。JH151のPR #429（CI #38072092403、Quality Checks #38072092406）、main（CI #38072154076、Pages #38072154066）がすべてsuccess。横断記事はall hold、新規主題地図なし、no-audit。次のphase cutは1942年11月1日以降を対象とする。本PLANをcompletedとして`plan_done/`へ一意に移動した。

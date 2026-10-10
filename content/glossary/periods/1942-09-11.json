@@ -1,0 +1,33 @@
+{
+  "period": "1942-09-11",
+  "termRefs": [
+    {
+      "id": "tojo-cabinet-1941",
+      "core": true
+    },
+    {
+      "id": "greater-east-asia-ministry-organization-outline-1942",
+      "core": true
+    },
+    {
+      "id": "pure-diplomacy-1942",
+      "core": true
+    },
+    {
+      "id": "henderson-field-1942-08",
+      "core": true
+    },
+    {
+      "id": "edsons-ridge-battle-1942-09",
+      "core": true
+    },
+    {
+      "id": "south-seas-detachment-1942-08",
+      "core": true
+    },
+    {
+      "id": "food-control-act-1942",
+      "core": true
+    }
+  ]
+}

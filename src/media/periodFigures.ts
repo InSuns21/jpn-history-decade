@@ -1347,4 +1347,14 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
   ],
 
 
+  '1942-07-22': [
+    commonsFigure('AWM 128400 kokoda village and airfield.jpg', {
+      alt: '1942年7月14日に撮影されたパプアのココダ集落と細長い飛行場。7月末の攻防の対象となる滑走路と周囲の地形が見える',
+      title: 'ココダ集落と飛行場',
+      dateLabel: '1942年7月14日（戦闘前の撮影）',
+      credit: '撮影者不詳／Australian War Memorial（128400）・Wikimedia Commons',
+      license: 'CC0 1.0',
+    }),
+  ],
+
 }

@@ -1,0 +1,33 @@
+{
+  "period": "1942-07-22",
+  "termRefs": [
+    {
+      "id": "yokoyama-advance-party-1942-07",
+      "core": true
+    },
+    {
+      "id": "papuan-infantry-battalion-1942",
+      "core": true
+    },
+    {
+      "id": "kokoda-first-battle-1942-07",
+      "core": true
+    },
+    {
+      "id": "kokoda-track-1942",
+      "core": true
+    },
+    {
+      "id": "maroubra-force-kokoda-1942-06",
+      "core": true
+    },
+    {
+      "id": "koro-landing-rehearsal-1942-07",
+      "core": true
+    },
+    {
+      "id": "watchtower-carrier-support-1942-07",
+      "core": true
+    }
+  ]
+}

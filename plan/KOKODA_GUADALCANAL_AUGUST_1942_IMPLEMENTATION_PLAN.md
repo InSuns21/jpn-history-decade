@@ -1,7 +1,7 @@
 # 1942年7月22日〜8月31日 — ココダ初期戦・ガダルカナル上陸から8月末の攻防 実装計画
 
 - **Status:** active
-- **Progress:** phase cut ✅ → JH142 ✅ → JH143 ✅ → JH144 ✅ → JH145 ✅ published → **次はJH146「1942-08-26〜08-31」**
+- **Progress:** JH142〜JH146 ✅ → A50 ✅ → S05/S09/S10 gate ✅ all hold → phase-end ✅ no-audit → CI・Pages・archive 待ち
 - **Created:** 2026-10-10
 - **Scope:** 1942-07-22〜1942-08-31
 - **Planned period articles:** **5本（JH142〜JH146）**
@@ -118,9 +118,9 @@ A49はラバウル〜ガダルカナル／パプアの広域関係とココダ�
 - [x] 歴史資料アンカー・境界時点の確認事項・A50候補・横断ゲートを設定
 - [x] JH142〜JH146の年代記事をpublished実装し、**各記事の作業内で**直前年代との接続確認を完了
 - [x] 記事ごとのsource ID、global glossary用語リンク、図版要否・権利判定、本文と留保層の分離を記事実装で記録（最終CI判定は別途）
-- [ ] A50 map necessity / data-quality judgment、採用時のData / Style / Human Visual Auditを必要に応じて完了
-- [ ] Crosscutting publication gate（S05-E／S09-F／S10-D／新規）
-- [ ] 未解決の具体仮説に限定したphase-end audit necessity judgment
+- [x] A50 map necessity / data-quality judgment、Data / Style passed、Point-only再利用例外
+- [x] Crosscutting publication gate（S05-E／S09-F／S10-D／新規：all hold）
+- [x] 未解決の具体仮説に限定したphase-end audit necessity judgment（no-audit）
 - [ ] `npm run check` green、PR CI / main CI green、公開変更時はPages deploy green
 - [ ] Status / docsを更新し、完了条件を満たしたら元PLANを削除して`plan_done/`へ一意に移動
 

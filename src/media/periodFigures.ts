@@ -1375,4 +1375,15 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     }),
   ],
 
+
+  '1942-08-10': [
+    commonsFigure('HendersonFirstPBY.gif', {
+      alt: '1942年8月12日、ガダルカナル島の建設中のヘンダーソン飛行場に着陸した米海軍のPBYカタリナ飛行艇。負傷した米海兵隊員を後送した',
+      title: '8月12日、ヘンダーソン飛行場に着陸したPBY飛行艇',
+      dateLabel: '1942年8月12日（20日の戦闘航空隊進出に先行）',
+      credit: '撮影者不詳／米政府刊行の米海兵隊戦史・Wikimedia Commons',
+      license: 'Public Domain Mark',
+    }),
+  ],
+
 }

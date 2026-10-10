@@ -1424,4 +1424,14 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     }),
   ],
 
+  '1942-10-03': [
+    commonsFigure('Boeing B-17F of the 26th BS, 11th BG approaching the north coast of Guadalcanal, Solomon Islands, 15 October 1942 (342-FH-3A44155-22490AC).jpg', {
+      alt: '1942年10月15日、ガダルカナル北岸で米軍機が日本の輸送船を攻撃する際の空撮。海岸の輸送船から煙が上がり、上空には米陸軍航空軍のB-17爆撃機が飛んでいる',
+      title: 'ガダルカナル北岸の日本軍輸送船と米軍機',
+      dateLabel: '1942年10月15日',
+      credit: 'U.S. Army Air Forces／U.S. National Archives（342-FH-3A44155-22490AC、NAID 204987143）・Wikimedia Commons（改変なし）',
+      license: 'Public Domain Mark',
+    }),
+  ],
+
 }

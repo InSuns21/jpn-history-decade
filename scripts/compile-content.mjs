@@ -182,6 +182,33 @@ function validateMapPlacements(frontmatter, sections, maps, file) {
   return placements
 }
 
+function splitMarkdownTableRow(line) {
+  let value = line.trim()
+  if (value.startsWith('|')) value = value.slice(1)
+  if (value.endsWith('|')) value = value.slice(0, -1)
+
+  const cells = []
+  let cell = ''
+  for (let index = 0; index < value.length; index += 1) {
+    if (value[index] === '\\' && value[index + 1] === '|') {
+      cell += '|'
+      index += 1
+    } else if (value[index] === '|') {
+      cells.push(cell.trim())
+      cell = ''
+    } else {
+      cell += value[index]
+    }
+  }
+  cells.push(cell.trim())
+  return cells
+}
+
+function isMarkdownTableDivider(line, columnCount) {
+  const cells = splitMarkdownTableRow(line)
+  return cells.length === columnCount && cells.every((cell) => /^:?-{3,}:?$/.test(cell))
+}
+
 function parseMarkdownSections(body, file) {
   const lines = body.split(/\r?\n/)
   const sections = []
@@ -212,8 +239,8 @@ function parseMarkdownSections(body, file) {
     questionMode = false
   }
 
-  for (const rawLine of lines) {
-    const line = rawLine.trim()
+  for (let lineIndex = 0; lineIndex < lines.length; lineIndex += 1) {
+    const line = lines[lineIndex].trim()
 
     if (/^<!--\s*claim-caution-lint:\s*allow\s+reason="[^"]+"\s*-->$/.test(line)) {
       continue
@@ -287,6 +314,29 @@ function parseMarkdownSections(body, file) {
 
     if (questionMode) {
       pushError(file, '考えてみる must contain list items only')
+      continue
+    }
+
+    const headers = line.includes('|') ? splitMarkdownTableRow(line) : []
+    if (headers.length >= 2 && isMarkdownTableDivider((lines[lineIndex + 1] ?? '').trim(), headers.length)) {
+      flushParagraph()
+      flushList()
+      const rows = []
+      let nextIndex = lineIndex + 2
+      while (nextIndex < lines.length) {
+        const rowLine = lines[nextIndex].trim()
+        if (!rowLine || !rowLine.includes('|') || /^#{2,3}\s/.test(rowLine)) break
+        const cells = splitMarkdownTableRow(rowLine)
+        if (cells.length !== headers.length) {
+          pushError(file, 'table row has ' + cells.length + ' columns; expected ' + headers.length)
+        } else {
+          rows.push(cells)
+        }
+        nextIndex += 1
+      }
+      if (rows.length === 0) pushError(file, 'Markdown table must have at least one data row')
+      current.blocks.push({ type: 'table', headers, rows })
+      lineIndex = nextIndex - 1
       continue
     }
 

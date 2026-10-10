@@ -12,9 +12,7 @@
 
 ### 本線
 
-1942年6月8日〜7月21日フェーズは [JUNE_JULY_1942_IMPLEMENTATION_PLAN.md](../plan_done/JUNE_JULY_1942_IMPLEMENTATION_PLAN.md) に **completed / archived（2026-10-10）** として保存済み。JH138〜JH141 published、A49 published／HVA-015 passed、Crosscutting gateはすべてhold、phase-end audit necessity judgmentはno-audit。直前の1942年5月9日〜6月7日フェーズは [MO_CANCELLATION_TO_MIDWAY_ALEUTIANS_IMPLEMENTATION_PLAN.md](../plan_done/MO_CANCELLATION_TO_MIDWAY_ALEUTIANS_IMPLEMENTATION_PLAN.md) を参照。
-
-**次工程：1942年7月22日以後のphase cut。** 現在activeな短期実装PLANはない。
+現在の本線は **1942年7月22日〜8月31日** を対象とする [KOKODA_GUADALCANAL_AUGUST_1942_IMPLEMENTATION_PLAN.md](KOKODA_GUADALCANAL_AUGUST_1942_IMPLEMENTATION_PLAN.md)（Status: active、予定年代記事 **5本：JH142〜JH146**）です。phase cut ✅ → **次はJH142「1942-07-22〜08-06」**。直前の1942年6月8日〜7月21日フェーズは [JUNE_JULY_1942_IMPLEMENTATION_PLAN.md](../plan_done/JUNE_JULY_1942_IMPLEMENTATION_PLAN.md) としてcompleted / archived済み。JH141・A49/HVA-015・横断判定・no-auditは完了しています。
 
 ### 横断的な品質負債返済
 

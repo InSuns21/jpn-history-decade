@@ -1,12 +1,12 @@
 # 1942年7月22日〜8月31日 — ココダ初期戦・ガダルカナル上陸から8月末の攻防 実装計画
 
-- **Status:** active
-- **Progress:** JH142〜JH146 ✅ → A50 ✅ → S05/S09/S10 gate ✅ all hold → phase-end ✅ no-audit → CI・Pages・archive 待ち
+- **Status:** completed / archived (2026-10-10)
+- **Progress:** JH142〜JH146 ✅ → A50 ✅ → S05/S09/S10 gate ✅ all hold → phase-end ✅ no-audit → PR CI ✅ → main CI ✅ → Pages ✅ → archived ✅
 - **Created:** 2026-10-10
 - **Scope:** 1942-07-22〜1942-08-31
 - **Planned period articles:** **5本（JH142〜JH146）**
 - **Previous phase:** [JUNE_JULY_1942_IMPLEMENTATION_PLAN.md](../plan_done/JUNE_JULY_1942_IMPLEMENTATION_PLAN.md)
-- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](JPN_HISTORY_DECADE_PLAN.md)
+- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](../plan/JPN_HISTORY_DECADE_PLAN.md)
 - **Workspace rules:** [../SYSTEM_PROMPT.md](../SYSTEM_PROMPT.md)
 - **Standards:** [CONTENT_AUTHORING_STANDARD.md](../standards/CONTENT_AUTHORING_STANDARD.md) / [IMAGE_ASSET_STANDARD.md](../standards/IMAGE_ASSET_STANDARD.md) / [MAP_AUDIT_STANDARD.md](../standards/MAP_AUDIT_STANDARD.md) / [PROJECT_WORKFLOW_STANDARD.md](../standards/PROJECT_WORKFLOW_STANDARD.md)
 
@@ -83,7 +83,7 @@ A49はラバウル〜ガダルカナル／パプアの広域関係とココダ�
 - 軍の意思決定は統帥・陸海軍省・政府の権限を混同せず、誰に命令権・予算・配船権・行政権限があり、どの決定が別主体に依存したかを具体化する。
 - **継続追跡の軸**は内閣と外務省の権限、占領地政策と軍政・民政、海運・物資配分、議会と翼賛政治、国内の供給と国民生活。必要に応じて既存S05・S09・S10の記事へ接続し、軍事総集編として重複した横断記事を増やさない。
 - 9月のミルン湾日本軍撤収・ココダ道の戦闘・ガダルカナル増援は、今後の中央判断を左右した点を明示して継続的に扱う。ただし8月31日以前にその帰結を知っていたかのように書かない。
-- 詳細な次期実装の期間・記事候補・一次史料アンカーは [SEPTEMBER_NOVEMBER_1942_POLITICAL_HISTORY_IMPLEMENTATION_PLAN.md](SEPTEMBER_NOVEMBER_1942_POLITICAL_HISTORY_IMPLEMENTATION_PLAN.md) に分離する。
+- 詳細な次期実装の期間・記事候補・一次史料アンカーは [SEPTEMBER_NOVEMBER_1942_POLITICAL_HISTORY_IMPLEMENTATION_PLAN.md](../plan/SEPTEMBER_NOVEMBER_1942_POLITICAL_HISTORY_IMPLEMENTATION_PLAN.md) に分離する。
 
 ## 6. 調査アンカー（出版時には個別source IDを設定）
 
@@ -121,8 +121,8 @@ A49はラバウル〜ガダルカナル／パプアの広域関係とココダ�
 - [x] A50 map necessity / data-quality judgment、Data / Style passed、Point-only再利用例外
 - [x] Crosscutting publication gate（S05-E／S09-F／S10-D／新規：all hold）
 - [x] 未解決の具体仮説に限定したphase-end audit necessity judgment（no-audit）
-- [ ] `npm run check` green、PR CI / main CI green、公開変更時はPages deploy green
-- [ ] Status / docsを更新し、完了条件を満たしたら元PLANを削除して`plan_done/`へ一意に移動
+- [x] `npm run check` green、PR CI / main CI green、公開変更時はPages deploy green
+- [x] Status / docsを更新し、完了条件を満たしたら元PLANを削除して`plan_done/`へ一意に移動
 
 **Phase cut record (2026-10-10):** 旧1942-06-08〜07-21フェーズのcompleted / archivedとA49/HVA-015 passedを前提に、JH142〜JH146の5本で1942-07-22〜08-31を計画。7月下旬のパプア初期接触、8月7〜9日の上陸・サボ島沖海戦、8月20日の飛行場航空隊到着、21〜25日の海陸反撃、26〜31日のイースラバ・ミルン湾戦闘を別の状態変化として整理した。**記事公開・地図公開・フェーズ完了は本工程では宣言しない。次はJH142。**
 
@@ -142,3 +142,5 @@ A49はラバウル〜ガダルカナル／パプアの広域関係とココダ�
 **Crosscutting publication gate (2026-10-10): all hold.** S05-Eは当期間の陸海軍命令から日本国内の議会・翼賛政治会制度の新たな改変を確認できないためhold。S09-Fは米軍の飛行場確保と日本軍のパプア地上作戦を、日本の占領地での新しい行政機構・住民統治権限と同一視できないためhold。S10-Dは輸送船・航空機・人力運搬の現場配分を、船舶運営会など国内配船制度の新規変更へ直結させる史料がないためhold。戦域3か所の出来事を並べ直す新規横断戦記も独立の制度比較軸がなくhold。大東亜省の権限再編は9月以降の次期政治史計画で扱う。
 
 **Phase-end audit necessity judgment (2026-10-10): no-audit.** ①JH143にサボ島沖海戦の警戒艦艇損失・日本軍の輸送船攻撃見送り・米軍の9日撤収を分けて記述し、A50と整合。②JH142〜JH144に7月末ココダ占拠・8月8日豪州軍一時奪回・再喪失・18日の日本軍後続上陸を時点別に記録。③JH144の20日飛行場航空隊到着・JH145の25日増援船団攻撃・JH146の30日航空隊補充／31日サラトガ被雷は別主体と日付で説明済み。④JH146はイースラバ30日の後退判断・ミルン湾30〜31日の滑走路防御を記述し、9月初旬の日本軍撤収は先取りしない。すべて隣接年代確認・A50判定・今回の横断gateで処理済みで、独立監査でしか見つからない具体的矛盾・役割重複は残らない。通常の公開CI・Pages確認後にアーカイブへ進む。
+
+**Phase completion record (2026-10-10):** A50採用・Data/Style passed・point-only A48再利用例外、S05/S09/S10/新規crosscutting all hold、独立監査不要をPR [#418](https://github.com/InSuns21/jpn-history-decade/pull/418) でマージ。PR Quality Checks [#38054511172](https://github.com/InSuns21/jpn-history-decade/actions/runs/38054511172) / CI [#38054511173](https://github.com/InSuns21/jpn-history-decade/actions/runs/38054511173)、main `5a32331de4f5aa49a0c9e334a45183ad1ae73fd8` CI [#38054571864](https://github.com/InSuns21/jpn-history-decade/actions/runs/38054571864) / Pages [#38054571874](https://github.com/InSuns21/jpn-history-decade/actions/runs/38054571874) は全てsuccess。計画書をcompletedとしてこの`plan_done/`へ移動し、元`plan/`の同名ファイルを削除する。次期は1942年9月以降の政治史（大東亜省設置・東郷外相辞任・省庁権限）を中心に実装する。

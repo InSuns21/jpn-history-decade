@@ -3,7 +3,7 @@
 - **Status:** active（先行フェーズcompleted / archived、2026-10-10から本線）
 - **Created:** 2026-10-10
 - **Scope:** 1942-09-01〜1942-10-31（11月1日以後は次フェーズへ）
-- **Planned period articles:** **5本（JH147〜JH151）**。JH147〜148はpublished、JH149〜151は期間境界を確定し、記事自体は未執筆。
+- **Planned period articles:** **5本（JH147〜JH151）**。JH147〜150はpublished、JH151は期間境界を確定し、記事自体は未執筆。
 - **Previous phase:** [KOKODA_GUADALCANAL_AUGUST_1942_IMPLEMENTATION_PLAN.md](../plan_done/KOKODA_GUADALCANAL_AUGUST_1942_IMPLEMENTATION_PLAN.md)
 - **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](JPN_HISTORY_DECADE_PLAN.md)
 - **Standards:** [CONTENT_AUTHORING_STANDARD.md](../standards/CONTENT_AUTHORING_STANDARD.md) / [IMAGE_ASSET_STANDARD.md](../standards/IMAGE_ASSET_STANDARD.md) / [PROJECT_WORKFLOW_STANDARD.md](../standards/PROJECT_WORKFLOW_STANDARD.md)
@@ -36,8 +36,8 @@
 |---|---|---|
 | **JH147** | **1942-09-01〜09-10**（published） | 省設置方針と外相交代。外交官交換・戦場補給・国家使用船・配給の継続 |
 | **JH148** | **1942-09-11〜09-17**（published） | 官制要綱と谷外相就任。川口支隊の失敗・ワスプ沈没・イオリバイワの前進限界。輸送・生活制度の持続 |
-| **JH149** | **1942-09-18〜10-02**（次工程） | 第8次陸海軍中央協定／ココダ撤退命令→24日の実行。南東方面への作戦優先化と輸送・食糧・占領地行政の継続状態 |
-| **JH150** | **1942-10-03〜10-24**（予定） | 第21号作戦中止と中国方面の作戦準備の見直し。ガダルカナルの商船・艦艇増援と重砲揚陸、翌年度輸送計画の検討、産業・生活の制約 |
+| **JH149** | **1942-09-18〜10-02**（published） | 第8次陸海軍中央協定／ココダ撤退命令→24日の実行。南東方面への作戦優先化と輸送・食糧・占領地行政の継続状態 |
+| **JH150** | **1942-10-03〜10-24**（published） | 第21号作戦中止と中国方面の作戦準備の見直し。ガダルカナルの商船・艦艇増援と重砲揚陸、翌年度輸送計画の検討、産業・生活の制約 |
 | **JH151** | **1942-10-25〜10-31**（予定） | ガダルカナル奪回失敗後の戦争指導論議と30日の新方針見送り。南太平洋海戦・現地補給・国内の物資配分を10月末の社会断面として観測 |
 
 **判断：** 18日の陸海軍中央協定、10月3日の他方面作戦の中止、10月25〜30日の戦争指導方針の判断は独立した政策選択肢の変化であり、9月18日〜10月31日を1本に固定しない。JH151は7日間だが、30日に中央が新方針の採用を見送った「変えない決定」を前の作戦実行局面から分離するため独立させる。一方、10月の食糧・衣料には独立した全国共通の新制度施行日を確認できず、期間を通じる継続状態として描く。翌年度輸送計画の初期検討も確定日を創作しない。
@@ -101,3 +101,5 @@
 **JH149 implementation record (2026-10-11):** 9月18日〜10月2日をpublished原稿として追加。NIDS（9/18第8次陸海軍中央協定・9/22参謀次長指示）、AWM（9/18ココダ後退命令→9/24撤退開始→9/28豪州軍再占領）、USMC史料（9/18第7海兵連隊・補給品到着）を時点ごとに区別。戦時海運管理令・船舶運営会のC船配船、軍A/B船、食糧管理法下の米穀通帳、1942年衣料切符制、占領地軍政と官制準備の継続を同時期の社会状態として記述。JH148の川口支隊失敗・イオリバイワ前進・船腹／米配給の残存制約を前提1〜2文に圧縮し、9/18以後固有の決定と現地行動へ直結。2語の全体辞書定義、8つのcore用語リンク、出典11件、図版不採用理由を追加。主題地図は今回の問いが中央意思決定・命令伝達・輸送条件の違いであり、A49（パプア・南太平洋広域）とA50（ルンガ沿岸）の既存地図にない新たなgeometryを必要としないため新設しない。次はJH150「1942-10-03〜10-24」。PR CI、main CI、Pagesの実績は確認後に追記する。
 
 **JH149 verification record (2026-10-11):** PR [#425](https://github.com/InSuns21/jpn-history-decade/pull/425) はsquash merge、main commit `d3d749d4efebde0a34680ff9440d2bed310032d2` に反映。修正後のPR CI [#38066582389](https://github.com/InSuns21/jpn-history-decade/actions/runs/38066582389)／Quality Checks [#38066582393](https://github.com/InSuns21/jpn-history-decade/actions/runs/38066582393)、main CI [#38066646228](https://github.com/InSuns21/jpn-history-decade/actions/runs/38066646228)／Pages [#38066646208](https://github.com/InSuns21/jpn-history-decade/actions/runs/38066646208) は全success。次工程はJH150「1942-10-03〜10-24」。
+
+**JH150 implementation record (2026-10-11):** 10月3日〜24日をpublished原稿として追加。NIDS（第21号作戦中止と第5号作戦準備見直しの時点差）、NHHC（10月11〜12日の水上機母艦による重砲・兵員揚陸とエスペランス岬沖海戦、13〜14日の戦艦砲撃）、米陸軍公刊戦史（15日の輸送船・貨物損耗、米軍航空隊の復旧）を照合。国内のA/B/C船の配船、翌年度海上輸送計画の10月初期検討、食糧管理・衣料切符、占領地軍政と大東亜省準備を同時期の社会状態として扱った。JH149の「南東方面重点化→他方面作戦中止」「重砲輸送課題→11〜15日の実行」に直接接続し、前期説明を冒頭2文へ圧縮。用語2件新設・計8件coreリンク、史料12件、10月15日撮影の米陸軍航空軍空撮（NARA・Commons Public Domain Mark）採用。新規主題地図は、A49の南太平洋広域図・A50のガダルカナルの点地図が位置関係を示すため追加不要。次工程はJH151「10月25日〜31日」。PR CI／main CI／Pages結果は確認後に記録する。

@@ -1403,4 +1403,15 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     }),
   ],
 
+
+  '1942-08-26': [
+    commonsFigure('No 75 Sqn RAAF Kittyhawk Milne Bay Sept 1942.jpg', {
+      alt: '1942年9月、ミルン湾の椰子林内の仮設滑走路に置かれた豪州空軍第75飛行隊のキティホーク戦闘機。鋼板で補強した地面と簡易整備施設が見える',
+      title: 'ミルン湾の第75飛行隊キティホークと仮設滑走路',
+      dateLabel: '1942年9月（8月末の戦闘後に撮影）',
+      credit: '撮影者不詳／Australian War Memorial（026644）・Wikimedia Commons（公開ファイルは縦方向約3%トリミング）',
+      license: 'Public Domain（オーストラリアで著作権期間満了）',
+    }),
+  ],
+
 }

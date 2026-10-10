@@ -1,0 +1,33 @@
+{
+  "period": "1942-10-25",
+  "termRefs": [
+    {
+      "id": "guadalcanal-october-offensive-1942",
+      "core": true
+    },
+    {
+      "id": "battle-santa-cruz-1942-10",
+      "core": true
+    },
+    {
+      "id": "henderson-field-1942-08",
+      "core": true
+    },
+    {
+      "id": "war-conduct-outline-1942-03-07",
+      "core": true
+    },
+    {
+      "id": "wartime-shipping-management-order-1942",
+      "core": true
+    },
+    {
+      "id": "shipping-operation-association-1942",
+      "core": true
+    },
+    {
+      "id": "food-control-act-1942",
+      "core": true
+    }
+  ]
+}

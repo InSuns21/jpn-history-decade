@@ -1434,4 +1434,15 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     }),
   ],
 
+  '1942-10-25': [
+    commonsFigure('Japanese aircraft attack USS Hornet (CV-8) during the Battle of the Santa Cruz Islands on 26 October 1942 (80-G-33947).jpg', {
+      alt: '1942年10月26日の南太平洋海戦で、米空母ホーネットへ突入する日本の九九式艦上爆撃機と上空を飛ぶ九七式艦上攻撃機。周囲に対空砲火の炸裂が見える',
+      title: '南太平洋海戦で攻撃を受ける空母ホーネット',
+      dateLabel: '1942年10月26日',
+      credit: 'U.S. Navy（撮影者不詳）／Naval History and Heritage Command（80-G-33947）・Wikimedia Commons（改変なし）',
+      license: 'Public Domain（米国連邦政府著作物）',
+    }),
+  ],
+
+
 }

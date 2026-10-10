@@ -1357,4 +1357,22 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     }),
   ],
 
+
+  '1942-08-07': [
+    commonsFigure('Ships and landing craft off the Guadalcanal invasion beaches on 7 August 1942 (80-G-374870).jpg', {
+      alt: '1942年8月7日、ガダルカナル島の上陸浜沖に集まる米軍の輸送艦船と上陸艇。輸送船と海岸を小型艇が結んでいる',
+      title: 'ガダルカナル上陸初日の輸送船団',
+      dateLabel: '1942年8月7日',
+      credit: 'U.S. Navy／Naval History and Heritage Command（80-G-374870）・Wikimedia Commons',
+      license: 'Public Domain Mark',
+    }),
+    commonsFigure('USS Quincy (CA-39) under fire during the Battle of Savo Island on 9 August 1942 (NH 50346).jpg', {
+      alt: '1942年8月9日未明、サボ島沖海戦で日本巡洋艦から撮影された米巡洋艦クインシー。炎上する艦体が探照灯に照らされている',
+      title: 'サボ島沖海戦で炎上する巡洋艦クインシー',
+      dateLabel: '1942年8月9日',
+      credit: '日本海軍撮影／U.S. Naval History and Heritage Command（NH 50346）・Wikimedia Commons',
+      license: 'Public Domain Mark／PD-Japan-oldphoto',
+    }),
+  ],
+
 }

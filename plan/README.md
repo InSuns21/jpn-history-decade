@@ -14,7 +14,7 @@
 
 1942年9月1日〜10月31日フェーズは [SEPTEMBER_OCTOBER_1942_STATE_TRANSITION_IMPLEMENTATION_PLAN.md](../plan_done/SEPTEMBER_OCTOBER_1942_STATE_TRANSITION_IMPLEMENTATION_PLAN.md) として **completed / archived**。JH147〜JH151 published、S05-E／S09-F／S10-D／新規横断記事はall hold、新主題地図不要、独立監査不要です。
 
-**次工程は1942年11月1日以降のphase cut**。大東亜省官制の11月1日施行、統制会への権限委譲方針（17日）、臨時生産増強委員会設置決定（27日）について社会状態を確認し、新PLANの区切りを再判定します。現時点で次のactive実装PLANは未作成です。
+**現在のactive実装PLAN：** [NOVEMBER_EARLY_DECEMBER_1942_STATE_TRANSITION_IMPLEMENTATION_PLAN.md](NOVEMBER_EARLY_DECEMBER_1942_STATE_TRANSITION_IMPLEMENTATION_PLAN.md)（**1942年11月1日〜12月9日、予定4記事 JH152〜JH155、phase cut confirmed／本文未着手**）。11月1日大東亜省施行、12〜15日第三次ソロモン海戦での輸送能力損耗、17日統制会への委譲方針、27日生産増強政策を境界とする。11月30日ルンガ沖夜戦はJH155内に収め、12月10日の御前会議を次フェーズ起点とする。**次工程：JH152「1942-11-01〜11-11」原稿実装。**
 
 前フェーズの1942年7月22日〜8月31日も [KOKODA_GUADALCANAL_AUGUST_1942_IMPLEMENTATION_PLAN.md](../plan_done/KOKODA_GUADALCANAL_AUGUST_1942_IMPLEMENTATION_PLAN.md) へcompleted / archived済みです。
 

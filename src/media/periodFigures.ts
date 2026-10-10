@@ -1335,4 +1335,16 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     }),
   ],
 
+
+  '1942-07-12': [
+    commonsFigure('USS McCawley (AP-10) with LVTs at Wellington July 1942.jpg', {
+      alt: '1942年7月20日、ウェリントンの岸壁で米海兵隊の輸送船への積み込みを待つLVT-1水陸両用車両。背景に輸送船が停泊している',
+      title: 'ウェリントンで上陸作戦に備える水陸両用車両',
+      dateLabel: '1942年7月20日',
+      credit: 'U.S. Navy／U.S. National Archives（80-G-10760）・Wikimedia Commons',
+      license: 'Public Domain Mark',
+    }),
+  ],
+
+
 }

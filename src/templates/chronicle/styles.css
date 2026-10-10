@@ -2350,3 +2350,53 @@ button:focus-visible {
     font-size: clamp(2.45rem, 12vw, 3.6rem);
   }
 }
+
+
+/* Markdown tables belong to the article text; wide comparisons scroll independently. */
+.prose-table-wrap {
+  max-width: 100%;
+  margin: 14px 0 30px;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  scrollbar-width: thin;
+}
+.prose-table-wrap:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 3px;
+}
+.prose-table {
+  width: 100%;
+  min-width: 1060px;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: .81rem;
+  line-height: 1.8;
+}
+.prose-table th,
+.prose-table td {
+  min-width: 190px;
+  padding: 14px 16px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+.prose-table tr > :last-child { border-right: 0; }
+.prose-table tbody tr:last-child > * { border-bottom: 0; }
+.prose-table thead th {
+  background: #e9e5dc;
+  font-weight: 700;
+}
+.prose-table thead th:first-child,
+.prose-table tbody th {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  width: 140px;
+  min-width: 140px;
+  background: var(--paper-deep);
+}
+.prose-table tbody th { color: var(--green); }
+.prose-table tbody tr:nth-child(even) td { background: #f3f0e8; }

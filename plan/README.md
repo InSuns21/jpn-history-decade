@@ -12,7 +12,7 @@
 
 ### 本線
 
-現在の本線は **1942年9月1日〜10月31日** の政治史を背骨とする社会状態遷移を扱う [SEPTEMBER_OCTOBER_1942_STATE_TRANSITION_IMPLEMENTATION_PLAN.md](SEPTEMBER_OCTOBER_1942_STATE_TRANSITION_IMPLEMENTATION_PLAN.md)（Status: active、**5本：JH147〜JH151**）です。JH147・JH148はpublished。次は **JH149「1942-09-18〜10-02」本文実装**。9月18日の陸海軍中央協定、10月3日の第21号作戦中止、10月25〜30日の戦争指導判断を独立した境界とし、輸送・生産・食糧・衣料の継続状態も観測します。11月1日の大東亜省施行以降は次フェーズで別途区切ります。
+現在の本線は **1942年9月1日〜10月31日** の政治史を背骨とする社会状態遷移を扱う [SEPTEMBER_OCTOBER_1942_STATE_TRANSITION_IMPLEMENTATION_PLAN.md](SEPTEMBER_OCTOBER_1942_STATE_TRANSITION_IMPLEMENTATION_PLAN.md)（Status: active、**5本：JH147〜JH151**）です。JH147〜JH150はpublished。次は **JH151「1942-10-25〜10-31」本文実装**。9月18日の陸海軍中央協定、10月3日の第21号作戦中止、10月25〜30日の戦争指導判断を独立した境界とし、輸送・生産・食糧・衣料の継続状態も観測します。11月1日の大東亜省施行以降は次フェーズで別途区切ります。
 
 前の1942年7月22日〜8月31日フェーズは [KOKODA_GUADALCANAL_AUGUST_1942_IMPLEMENTATION_PLAN.md](../plan_done/KOKODA_GUADALCANAL_AUGUST_1942_IMPLEMENTATION_PLAN.md) として **completed / archived** 済みです。JH142〜JH146 published、A50 Point-only published・Data/Style passed・監査済み表示の再利用例外、S05／S09／S10と新規横断はhold、独立監査不要、PR／main CIとPages成功を確認しています。
 

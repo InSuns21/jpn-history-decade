@@ -1,0 +1,29 @@
+{
+  "period": "1943-02-27",
+  "termRefs": [
+    {
+      "id": "world-situation-assessment-1943",
+      "core": true
+    },
+    {
+      "id": "burma-independence-guidelines-1943",
+      "core": true
+    },
+    {
+      "id": "bismarck-sea-battle-1943",
+      "core": true
+    },
+    {
+      "id": "chamber-of-commerce-economy-law-1943",
+      "core": true
+    },
+    {
+      "id": "imperial-headquarters-government-liaison-conference-1937",
+      "core": true
+    },
+    {
+      "id": "administrative-agency-powers-delegation-order-1943",
+      "core": false
+    }
+  ]
+}

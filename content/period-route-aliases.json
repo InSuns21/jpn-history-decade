@@ -81,5 +81,28 @@
       "gona-basabua-landings-1942-07-21",
       "kokoda-track-1942"
     ]
+  },
+  "1942-09-11": {
+    "target": "1942-09-01",
+    "legacySections": [
+      "ministry-outline",
+      "foreign-office-authority",
+      "tani-foreign-minister",
+      "occupied-areas",
+      "guadalcanal-september",
+      "wasp-and-convoys",
+      "ioribaiwa",
+      "merchant-shipping-and-food",
+      "september-snapshot"
+    ],
+    "legacyTerms": [
+      "tojo-cabinet-1941",
+      "greater-east-asia-ministry-organization-outline-1942",
+      "pure-diplomacy-1942",
+      "henderson-field-1942-08",
+      "edsons-ridge-battle-1942-09",
+      "south-seas-detachment-1942-08",
+      "food-control-act-1942"
+    ]
   }
 }

@@ -1,0 +1,33 @@
+{
+  "period": "1943-03-18",
+  "termRefs": [
+    {
+      "id": "wartime-administration-special-measures-law-1943",
+      "core": true
+    },
+    {
+      "id": "wartime-administrative-authority-exception-1943",
+      "core": true
+    },
+    {
+      "id": "administrative-agency-powers-delegation-order-1943",
+      "core": true
+    },
+    {
+      "id": "industrial-control-association-1941",
+      "core": false
+    },
+    {
+      "id": "metal-recovery-headquarters-1943",
+      "core": true
+    },
+    {
+      "id": "burma-independence-guidelines-1943",
+      "core": true
+    },
+    {
+      "id": "chamber-of-commerce-economy-law-1943",
+      "core": false
+    }
+  ]
+}

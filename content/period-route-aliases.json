@@ -39,5 +39,25 @@
       "milne-bay-battle-1942-08",
       "henderson-field-1942-08"
     ]
+  },
+  "1942-06-18": {
+    "target": "1942-06-08",
+    "legacySections": [
+      "sopac-command",
+      "south-pacific-logistics",
+      "kokoda-order",
+      "king-june-twenty-five",
+      "interservice-negotiation"
+    ],
+    "legacyTerms": [
+      "ghormley-sopac-command-1942-06",
+      "lower-solomons-warning-1942-06-25",
+      "solomons-joint-command-talks-1942-06",
+      "papuan-infantry-battalion-1942",
+      "maroubra-force-kokoda-1942-06",
+      "kokoda-track-1942",
+      "swpa-poa-command-1942-03-30",
+      "tulagi-occupation-1942-05-03"
+    ]
   }
 }

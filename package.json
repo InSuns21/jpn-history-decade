@@ -19,7 +19,8 @@
     "preview": "vite preview",
     "validate:body-depth": "node scripts/validate-body-depth.mjs",
     "validate:period-repetition": "node scripts/validate-period-repetition.mjs",
-    "audit:readability": "node scripts/report-readability.mjs"
+    "audit:readability": "node scripts/report-readability.mjs",
+    "audit:previous": "node scripts/audit-previous-period.mjs"
   },
   "dependencies": {
     "maplibre-gl": "^6.11.2",

@@ -380,7 +380,20 @@ function densityTextFromBody(body) {
   return eligible.join('\n')
 }
 
-const files = contentDirs.flatMap(listMarkdownFiles).sort()
+const onlyIndex = process.argv.indexOf('--only')
+const onlyPath = onlyIndex < 0 ? null : process.argv[onlyIndex + 1]
+if (onlyIndex >= 0 && (!onlyPath || onlyPath.startsWith('--'))) {
+  console.error('Usage: validate-claim-cautions.mjs [--only content/periods/filename.md]')
+  process.exit(1)
+}
+const allFiles = contentDirs.flatMap(listMarkdownFiles).sort()
+const files = onlyPath
+  ? allFiles.filter((file) => relative(file) === onlyPath.replaceAll('\\', '/'))
+  : allFiles
+if (onlyPath && files.length !== 1) {
+  console.error('Claim/caution lint target was not found: ' + onlyPath)
+  process.exit(1)
+}
 const violations = []
 const densityViolations = []
 const anticipatoryWarnings = []

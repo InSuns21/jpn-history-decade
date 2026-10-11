@@ -76,6 +76,16 @@ npm run check
 
 用語定義は `content/glossary/terms.json` に一度だけ置き、各年代は `content/glossary/periods/<routeKey>.json`、構造史・テーマ史は `content/glossary/crosscutting/<routeKey>.json` からID参照します。用語リンクは `[[term:<id>|表示語]]` を使い、存在しない参照先や、その年代の中核語が本文から一度も利用されていない状態を content compiler で検出します。辞書を一度だけIDインデックス化し、年代ごとの総当たり検索を避けています。
 
+次のPLAN工程・年代記事に着手する際は、直前のpublished記事に対する追跡査読を実施します。
+
+```bash
+npm run audit:previous                         # 最新のpublished年代記事
+npm run audit:previous -- --next JH163         # JH163着手時はJH162を査読
+npm run audit:previous -- --previous JH162     # 対象を明示
+```
+
+留保表現チェック・可読性シグナルは機械検出し、過度な細部・意味的重複・史実の根拠は本文を読み直して判定します。修正と検証を次工程の作業内で完了し、判定をPLANまたはPRへ記録します。詳細は[執筆規約](standards/CONTENT_AUTHORING_STANDARD.md#34-次工程着手時の直前執筆記事追跡査読)を参照してください。
+
 ## GitHub Pages
 
 `.github/workflows/pages.yml` が `main` への push を検知して `dist/` を GitHub Pages にデプロイします。

@@ -1,0 +1,33 @@
+{
+  "period": "1943-02-01",
+  "termRefs": [
+    {
+      "id": "administrative-agency-powers-delegation-order-1943",
+      "core": true
+    },
+    {
+      "id": "industrial-control-association-1941",
+      "core": true
+    },
+    {
+      "id": "guadalcanal-ke-evacuation-1943",
+      "core": true
+    },
+    {
+      "id": "guadalcanal-withdrawal-decision-1942",
+      "core": true
+    },
+    {
+      "id": "imperial-general-headquarters-1937",
+      "core": true
+    },
+    {
+      "id": "wartime-shipping-management-order-1942",
+      "core": false
+    },
+    {
+      "id": "priority-material-production-measures-1942",
+      "core": false
+    }
+  ]
+}

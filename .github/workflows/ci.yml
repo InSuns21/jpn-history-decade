@@ -29,3 +29,6 @@ jobs:
 
       - name: Validate content, lint, typecheck, and build
         run: npm run check
+
+      - name: Smoke-test previous-article review selector
+        run: npm run audit:previous

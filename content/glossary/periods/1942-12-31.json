@@ -1,0 +1,29 @@
+{
+  "period": "1942-12-31",
+  "termRefs": [
+    {
+      "id": "guadalcanal-withdrawal-decision-1942",
+      "core": true
+    },
+    {
+      "id": "imperial-general-headquarters-1937",
+      "core": true
+    },
+    {
+      "id": "henderson-field-1942-08",
+      "core": true
+    },
+    {
+      "id": "third-solomons-battle-1942-11",
+      "core": true
+    },
+    {
+      "id": "guadalcanal-november-reinforcement-1942",
+      "core": true
+    },
+    {
+      "id": "wartime-shipping-management-order-1942",
+      "core": true
+    }
+  ]
+}

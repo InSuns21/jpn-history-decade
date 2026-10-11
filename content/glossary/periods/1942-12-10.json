@@ -1,0 +1,37 @@
+{
+  "period": "1942-12-10",
+  "termRefs": [
+    {
+      "id": "gozen-kaigi",
+      "core": true
+    },
+    {
+      "id": "imperial-headquarters-government-liaison-conference-1937",
+      "core": true
+    },
+    {
+      "id": "imperial-general-headquarters-1937",
+      "core": true
+    },
+    {
+      "id": "temporary-production-expansion-committee-1942",
+      "core": true
+    },
+    {
+      "id": "wartime-shipping-management-order-1942",
+      "core": true
+    },
+    {
+      "id": "shipping-operation-association-1942",
+      "core": true
+    },
+    {
+      "id": "industrial-control-association-1941",
+      "core": true
+    },
+    {
+      "id": "food-control-act-1942",
+      "core": true
+    }
+  ]
+}

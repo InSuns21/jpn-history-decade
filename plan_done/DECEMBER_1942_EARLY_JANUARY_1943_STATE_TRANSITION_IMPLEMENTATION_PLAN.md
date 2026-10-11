@@ -1,6 +1,6 @@
 # 1942年12月10日〜1943年1月13日 — 作戦と国力の調整・対中国政策・ガダルカナル撤退 実装計画
 
-- **Status:** active / phase-cut confirmed（2026-10-11）
+- **Status:** completed / archived（2026-10-11）
 - **Scope:** 1942-12-10〜1943-01-13（両端含む）
 - **Planned period articles:** **4本（JH156〜JH159）**
 - **Previous phase:** [NOVEMBER_EARLY_DECEMBER_1942_STATE_TRANSITION_IMPLEMENTATION_PLAN.md](../plan_done/NOVEMBER_EARLY_DECEMBER_1942_STATE_TRANSITION_IMPLEMENTATION_PLAN.md) — completed / archived
@@ -74,8 +74,8 @@
 - [x] JH159 published（JH158からの隣接接続、1/9署名と実施段階の区別を含む）
 - [x] S05／S09／S10／新規横断記事のpublication gateと新規地図要否を判定
 - [x] 独立したphase-end監査の必要性を具体的な未解決問題に基づいて判定
-- [ ] `npm run check`、PR CI、main CI、公開変更時Pagesの成功を確認
-- [ ] completed後に本PLANを`plan_done/`へ一意に移動し、`plan/`の元ファイルを削除
+- [x] `npm run check`相当のCI、PR CI、main CI、公開変更時Pagesの成功を確認
+- [x] completed後に本PLANを`plan_done/`へ一意に移動し、`plan/`の元ファイルを削除
 
 **JH156 implementation record (2026-10-11):** 12月10日の御前・大本営政府連絡会議決定と16日の臨時生産増強委員会初会合を、中央の戦争指導方針と官庁間の実務協議として区別。JH155の11月27日閣議決定、11月30日補給中止、12月9日の残存制約を新記事冒頭2文に圧縮し、政軍の権限、徴用船・国家使用船、重点工場・炭鉱と家庭の配給、ガダルカナルの少量補給へ接続。JACAR、NDL、NIDSなど公的資料10件、既存用語8件、図版の理由付きnoImageと連続noImage監査を登録。既存A49/A50で現地位置関係を参照できるため新規地図は不要。次工程はJH157「1942-12-21〜12-30」。CI / PR / Pages結果は実行結果に基づき別記する。
 
@@ -90,3 +90,5 @@
 **Crosscutting publication gate（2026-10-11）：S10-D extended / S05-E・S09-F hold。** S05-Eは政治参加・代表・議会審議から政策への経路が中心問いであり、12月10日の御前会議や12月21日の対中国方針はその制度自体を変更した史料ではないため延長を保留。S09-Fは香港・昭南・ジャワ・ビルマの1942年春の軍政機構と行政指揮の地域差を扱う。12月21日の南京政府強化方針と1月9日の租界還付・治外法権協定は中国の政府間外交・主権上の権限を扱い、S09-Fへ混在させると中心問いが増えるため保留。S10-Dは11月27日の五重点産業の資源配分方針から、12月10日の作戦需要と物的国力の中央調整方針、16日の委員会初会合という新しい段階への変化があるため、12月20日まで延長。既存の配船・統制会・委員会の比較表に2行を加え、政策決定と実務協議・現物供給を区別。12月21日以後の中国の物資獲得方針、12月31日のガダルカナル撤退決定と1月9日の対外合意は各年代で扱い、S10の政策実績として再録しない。新規横断記事はS10との重複または中国政策の今後の履行待ちとなるため保留。新規地図はA49/A50とJH157/JH159の条文・地域差の本文比較で目的を満たし、確かな追加の空間比較軸がないため不採用。
 
 **Phase-end audit necessity judgment（2026-10-11）：no-audit。** JH156〜159とS10延長・横断判定で、11月27日配分決定→12月10日中央方針→16日実務協議、12月21日対中国方針→1月9日文書、12月31日ガダルカナル撤退決定→翌2月の実行を区別した。東京の対外行政と現地軍政、南京と重慶、租界の行政権と治外法権、協定の実施細目と占領地の実際の支配、作戦と国内の資源・生活負担をそれぞれの記事で扱っている。隣接接続・通常のcontent validation・publication gateでは検出できない固有の横断矛盾／目的論化／役割重複の監査仮説は具体化せず、独立監査不要。次はPR CI→main CI→Pagesの成功を確認し、PLANをcompletedに更新してplan_done/へ一意に移動する。
+
+**Phase completion / archive record（2026-10-11）：** JH156〜159 published、S10-Dは12月20日までextended、S05-E・S09-Fはhold、新規横断記事・地図は不採用、独立監査はno-audit。publication gateはPR [#444](https://github.com/InSuns21/jpn-history-decade/pull/444) で反映しsquash merge（main `1632a29bb498ed7bb86ce1a13d54213ea04a491b`）。PR [CI #38108359507](https://github.com/InSuns21/jpn-history-decade/actions/runs/38108359507)／[Quality Checks #38108359445](https://github.com/InSuns21/jpn-history-decade/actions/runs/38108359445)、main [CI #38108403963](https://github.com/InSuns21/jpn-history-decade/actions/runs/38108403963)／[Pages #38108403941](https://github.com/InSuns21/jpn-history-decade/actions/runs/38108403941) はいずれもsuccess。よって本計画を`plan_done/`へ一意に移し、`plan/`の元ファイルを削除。次は1943年1月14日以後のphase cut（ビルマ独立・占領地帰属と行政官庁職権委譲令の施行段階）を判定する。

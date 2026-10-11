@@ -1,0 +1,33 @@
+{
+  "period": "1943-04-16",
+  "termRefs": [
+    {
+      "id": "rice-price-measures-1943",
+      "core": true
+    },
+    {
+      "id": "food-control-act-1942",
+      "core": true
+    },
+    {
+      "id": "tojo-cabinet-1941",
+      "core": false
+    },
+    {
+      "id": "shigemitsu-foreign-minister-1943",
+      "core": true
+    },
+    {
+      "id": "ando-home-minister-1943",
+      "core": true
+    },
+    {
+      "id": "wartime-administrative-authority-exception-1943",
+      "core": false
+    },
+    {
+      "id": "material-mobilization-plan-1942",
+      "core": false
+    }
+  ]
+}

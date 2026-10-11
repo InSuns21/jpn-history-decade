@@ -1,0 +1,33 @@
+{
+  "period": "1943-01-21",
+  "termRefs": [
+    {
+      "id": "administrative-agency-powers-delegation-order-1943",
+      "core": true
+    },
+    {
+      "id": "industrial-control-association-1941",
+      "core": true
+    },
+    {
+      "id": "important-industry-organizations-order-1941",
+      "core": true
+    },
+    {
+      "id": "administrative-delegation-policy-1942",
+      "core": true
+    },
+    {
+      "id": "priority-material-production-measures-1942",
+      "core": false
+    },
+    {
+      "id": "wartime-shipping-management-order-1942",
+      "core": false
+    },
+    {
+      "id": "guadalcanal-withdrawal-decision-1942",
+      "core": false
+    }
+  ]
+}

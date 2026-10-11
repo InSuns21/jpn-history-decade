@@ -72,7 +72,9 @@ npm run dev
 npm run check
 ```
 
-`check` はSYSTEM_PROMPT文字数、Markdownコンパイルと用語・出典リンク検証、本文厚み、年代ページの図版要否判定、地図監査ガード、ESLint、TypeScript型チェック、Vite本番ビルドを順番に検証します。
+1942年の記事粒度の遡及判定は [1942年記事粒度レビュー](docs/PERIOD_GRANULARITY_REVIEW_1942.md) に記録しています。新規短期記事の理由チェックは `npm run validate:period-granularity`、過密度の参照レポートは `npm run audit:period-granularity` で確認できます。1943年5月9日以降の14日未満の記事は、独立性を示す `granularityDecision` の3項目が必須です。14日は下限ではありません。
+
+`check` はSYSTEM_PROMPT文字数、記事境界の理由・期間、Markdownコンパイルと用語・出典リンク検証、本文厚み、年代ページの図版要否判定、地図監査ガード、ESLint、TypeScript型チェック、Vite本番ビルドを順番に検証します。
 
 用語定義は `content/glossary/terms.json` に一度だけ置き、各年代は `content/glossary/periods/<routeKey>.json`、構造史・テーマ史は `content/glossary/crosscutting/<routeKey>.json` からID参照します。用語リンクは `[[term:<id>|表示語]]` を使い、存在しない参照先や、その年代の中核語が本文から一度も利用されていない状態を content compiler で検出します。辞書を一度だけIDインデックス化し、年代ごとの総当たり検索を避けています。
 

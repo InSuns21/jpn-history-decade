@@ -1,0 +1,41 @@
+{
+  "period": "1943-02-10",
+  "termRefs": [
+    {
+      "id": "germany-italy-liaison-instructions-1943",
+      "core": true
+    },
+    {
+      "id": "tripartite-war-cooperation-proposal-1943",
+      "core": true
+    },
+    {
+      "id": "imperial-headquarters-government-liaison-conference-1937",
+      "core": true
+    },
+    {
+      "id": "tripartite-pact-1940",
+      "core": true
+    },
+    {
+      "id": "soviet-japanese-neutrality-pact-1941",
+      "core": true
+    },
+    {
+      "id": "german-soviet-war-1941",
+      "core": false
+    },
+    {
+      "id": "guadalcanal-ke-evacuation-1943",
+      "core": false
+    },
+    {
+      "id": "wartime-shipping-management-order-1942",
+      "core": false
+    },
+    {
+      "id": "administrative-agency-powers-delegation-order-1943",
+      "core": false
+    }
+  ]
+}

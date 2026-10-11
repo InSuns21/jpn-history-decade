@@ -124,6 +124,30 @@
     {
       "id": "chamber-of-commerce-economy-law-1943",
       "core": true
+    },
+    {
+      "id": "wartime-administration-special-measures-law-1943",
+      "core": true
+    },
+    {
+      "id": "wartime-administrative-authority-exception-1943",
+      "core": true
+    },
+    {
+      "id": "price-adjustment-subsidy-policy-1943",
+      "core": true
+    },
+    {
+      "id": "land-transport-supervision-integration-1943",
+      "core": true
+    },
+    {
+      "id": "rice-price-measures-1943",
+      "core": true
+    },
+    {
+      "id": "material-mobilization-plan-1943",
+      "core": true
     }
   ]
 }

@@ -294,6 +294,33 @@ const allPublished = contentKinds
   .flatMap(({ kind, dir }) => listMarkdownFiles(dir).map((file) => analyseDocument(kind, file)))
   .filter((item) => item.status === 'published')
 
+// A targeted report is used as a follow-up review aid at the next article's start.
+// Keep the global CI report unchanged when --only is absent.
+const onlyIndex = process.argv.indexOf('--only')
+if (onlyIndex >= 0) {
+  const onlyPath = process.argv[onlyIndex + 1]
+  if (!onlyPath || onlyPath.startsWith('--')) {
+    console.error('Usage: report-readability.mjs [--only content/periods/filename.md]')
+    process.exit(1)
+  }
+  const target = allPublished.find((item) => item.path === onlyPath.replaceAll('\\', '/'))
+  if (!target) {
+    console.error('Published readability target was not found: ' + onlyPath)
+    process.exit(1)
+  }
+  if (process.argv.includes('--json')) {
+    console.log(JSON.stringify(target))
+  } else {
+    console.log('High-school readability signals for ' + target.path)
+    console.log('Priority: ' + target.priority + ' (report-only; not a correctness verdict)')
+    for (const [signal, count] of Object.entries(target.signals)) {
+      console.log('- ' + signal + ': ' + count)
+    }
+    console.log('Re-read long sentences, abstraction-first paragraphs and dense terminology in context.')
+  }
+  process.exit(0)
+}
+
 const baselineFile = path.join(root, 'docs', 'readability-retro-r0-baseline.json')
 let baselinePaths = null
 if (fs.existsSync(baselineFile)) {

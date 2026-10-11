@@ -623,3 +623,5 @@ jpn-history-decade/
 
 - **1942年9〜10月フェーズ（2026-10-11）：** 9月18日協定、10月3日第21号作戦中止、10月25〜30日戦争指導論議を含むJH147〜JH151を公開。横断記事はall hold、地図追加不要、独立監査不要を判定し [完了PLAN](../plan_done/SEPTEMBER_OCTOBER_1942_STATE_TRANSITION_IMPLEMENTATION_PLAN.md) にarchive済み。
 - **1942年11月1日〜12月9日フェーズ completed / archived（2026-10-11）：** JH152〜JH155の4記事を公開し、S10「戦時統制と資源配分」を11月17日の統制会への権限委譲方針、18日の軍需金融、27日の重要産業増産策まで延長。S05・S09は保留、新規横断記事・新地図不要、独立監査不要。PR #437のCI・main CI・Pages成功を確認。 [完了PLAN](../plan_done/NOVEMBER_EARLY_DECEMBER_1942_STATE_TRANSITION_IMPLEMENTATION_PLAN.md) へアーカイブ。次は1942年12月10日以後のphase cut。
+
+- **1943年3月18日〜5月8日フェーズ（2026-10-11）：** 戦時行政特例、価格・米価・陸運行政、昭和18年度物資動員計画、ビルマ独立準備をJH165〜168で公開。S05-EとS09-Fは保留、S10-Dを5月8日まで延長し、独立監査不要を判定。[完了PLAN](../plan_done/MARCH_MAY_1943_STATE_TRANSITION_IMPLEMENTATION_PLAN.md)にアーカイブ。次は1943年5月9日以後のphase cut。

@@ -12,9 +12,9 @@
 
 ### 本線
 
-**1943年3月18日〜5月8日フェーズ：active / phase cut confirmed。** [現行PLAN](MARCH_MAY_1943_STATE_TRANSITION_IMPLEMENTATION_PLAN.md)。予定4記事はJH165=3/18〜3/29、JH166=3/30〜4/15、JH167=4/16〜4/29、JH168=4/30〜5/8。3月18日の首相権限強化、価格・輸送行政、4月16日の米価対策、20日の内閣改造、30日の物動計画、5月8日のビルマ独立準備を並行観測する。JH165〜166の本文を実装。JH166着手時のJH165追跡査読では記事末の反復段落を整理した。次はJH167「1943年4月16〜29日」の本文実装。
+**activeな本線の個別実装PLANはない（2026-10-11）。** 1943年3月18日〜5月8日のJH165〜168は published。S05-E・S09-Fは保留、S10-Dは1943年5月8日まで延長し、独立監査不要と判定した。[完了PLAN](../plan_done/MARCH_MAY_1943_STATE_TRANSITION_IMPLEMENTATION_PLAN.md)へアーカイブ済み。次は1943年5月9日以後のphase cut（5月末の大東亜政略判断など）。
 
-前フェーズは [1942年12月10日〜1943年1月13日](../plan_done/DECEMBER_1942_EARLY_JANUARY_1943_STATE_TRANSITION_IMPLEMENTATION_PLAN.md) にアーカイブ済み。過去の全フェーズは `plan_done/` を参照。
+直前の完了フェーズは [1943年3月18日〜5月8日](../plan_done/MARCH_MAY_1943_STATE_TRANSITION_IMPLEMENTATION_PLAN.md)。過去の全フェーズは `plan_done/` を参照。
 
 ### 横断的な品質負債返済
 

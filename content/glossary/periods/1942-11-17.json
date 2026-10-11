@@ -1,0 +1,45 @@
+{
+  "period": "1942-11-17",
+  "termRefs": [
+    {
+      "id": "industrial-control-association-1941",
+      "core": true
+    },
+    {
+      "id": "important-industry-organizations-order-1941",
+      "core": true
+    },
+    {
+      "id": "administrative-delegation-policy-1942",
+      "core": true
+    },
+    {
+      "id": "greater-east-asia-ministry-ordinance-1942",
+      "core": true
+    },
+    {
+      "id": "imperial-general-headquarters-1937",
+      "core": true
+    },
+    {
+      "id": "bank-of-japan-1882",
+      "core": true
+    },
+    {
+      "id": "government-guaranteed-munitions-bill-1942",
+      "core": true
+    },
+    {
+      "id": "wartime-shipping-management-order-1942",
+      "core": true
+    },
+    {
+      "id": "shipping-operation-association-1942",
+      "core": true
+    },
+    {
+      "id": "food-control-act-1942",
+      "core": true
+    }
+  ]
+}

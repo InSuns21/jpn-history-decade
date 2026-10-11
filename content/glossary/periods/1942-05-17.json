@@ -32,6 +32,22 @@
     {
       "id": "taisei-yokusankai-1940",
       "core": false
+    },
+    {
+      "id": "mi-al-sortie-1942-05",
+      "core": true
+    },
+    {
+      "id": "midway-tf16-tf17-1942-05",
+      "core": true
+    },
+    {
+      "id": "yorktown-emergency-repair-1942-05",
+      "core": true
+    },
+    {
+      "id": "sydney-midget-submarine-raid-1942-05",
+      "core": true
     }
   ]
 }

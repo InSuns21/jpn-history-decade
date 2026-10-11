@@ -1313,7 +1313,7 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
       license: 'Public Domain Mark',
     }),
   ],
-  '1942-05-26': [
+  '1942-05-17': [
     {
       imageUrl: 'https://s3-ap-southeast-2.amazonaws.com/awm-media/collection/060696/screen/4077351.JPG',
       sourceUrl: 'https://www.awm.gov.au/collection/C48694',

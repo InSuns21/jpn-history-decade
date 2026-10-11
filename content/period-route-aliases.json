@@ -1,0 +1,22 @@
+{
+  "1942-05-26": {
+    "target": "1942-05-17",
+    "legacySections": [
+      "japanese-sortie",
+      "american-sortie",
+      "point-luck",
+      "sydney-raid",
+      "next"
+    ],
+    "legacyTerms": [
+      "mi-al-sortie-1942-05",
+      "midway-tf16-tf17-1942-05",
+      "yorktown-emergency-repair-1942-05",
+      "sydney-midget-submarine-raid-1942-05",
+      "midway-comint-1942-05",
+      "naval-order-18-1942-05-05",
+      "midway-aleutians-plan-1942-04",
+      "carrier-airgroup-readiness-1942-05"
+    ]
+  }
+}

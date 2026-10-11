@@ -12,13 +12,9 @@
 
 ### 本線
 
-1942年9月1日〜10月31日フェーズは [SEPTEMBER_OCTOBER_1942_STATE_TRANSITION_IMPLEMENTATION_PLAN.md](../plan_done/SEPTEMBER_OCTOBER_1942_STATE_TRANSITION_IMPLEMENTATION_PLAN.md) として **completed / archived**。JH147〜JH151 published、S05-E／S09-F／S10-D／新規横断記事はall hold、新主題地図不要、独立監査不要です。
+**1943年1月14日〜3月17日フェーズ：completed / archived。** [完了PLAN](../plan_done/JANUARY_MARCH_1943_STATE_TRANSITION_IMPLEMENTATION_PLAN.md)。JH160〜164 published、S10-Dを1943年3月17日まで延長、S05-EとS09-Fは保留、新規横断記事・地図と独立監査は不要。JH164を次工程着手時に追跡査読し、主張層のメタ表現を修正した。次は**1943年3月18日以後のphase cut**（戦時行政特例法・戦時行政職権特例を入口に、首相と省庁の指揮調整権限、占領地政策、輸送・産業・生活を並行観測）。次フェーズの境界を判定するまでは新active実装PLANは置かない。
 
-**1942年11月1日〜12月9日フェーズ：completed / archived。** [完了PLAN](../plan_done/NOVEMBER_EARLY_DECEMBER_1942_STATE_TRANSITION_IMPLEMENTATION_PLAN.md)。JH152〜155 published、S10-D延長、S05-E・S09-F保留、新規横断記事・主題地図は追加せず、独立監査不要。
-
-**1942年12月10日〜1943年1月13日フェーズ：completed / archived。** [完了PLAN](../plan_done/DECEMBER_1942_EARLY_JANUARY_1943_STATE_TRANSITION_IMPLEMENTATION_PLAN.md)。JH156〜159 published、S10-Dを12月20日まで延長、S05-E・S09-Fは保留、新規横断記事・地図と独立監査は不要。PR/main CIおよびPages successを確認済み。**1943年1月14日〜3月17日フェーズ：active / phase cut completed。** [実装PLAN](JANUARY_MARCH_1943_STATE_TRANSITION_IMPLEMENTATION_PLAN.md) により、JH160（1/14〜20）→JH161（1/21〜31）→JH162（2/1〜9）→JH163（2/10〜26）→JH164（2/27〜3/17）の**5記事**に確定。ビルマ独立・占領地帰属方針、行政官庁職権委譲令の公布／施行、ガダルカナル撤退の実施／公表、対独伊協力、世界情勢判断、3月10日のビルマ独立指導要綱を状態遷移として扱う。JH160〜JH163の本文・出典・図版／地図採否判定と隣接接続まで実施済み。JH163着手時にはJH162を追跡査読して撤収日・艦名の反復と節末総括を圧縮した。次工程は**JH164「1943年2月27日〜3月17日」の本文実装**。
-
-前フェーズの1942年7月22日〜8月31日も [KOKODA_GUADALCANAL_AUGUST_1942_IMPLEMENTATION_PLAN.md](../plan_done/KOKODA_GUADALCANAL_AUGUST_1942_IMPLEMENTATION_PLAN.md) へcompleted / archived済みです。
+前フェーズは [1942年12月10日〜1943年1月13日](../plan_done/DECEMBER_1942_EARLY_JANUARY_1943_STATE_TRANSITION_IMPLEMENTATION_PLAN.md) にアーカイブ済み。過去の全フェーズは `plan_done/` を参照。
 
 ### 横断的な品質負債返済
 

@@ -622,4 +622,4 @@ jpn-history-decade/
 **「いつ何が起きたか」だけではなく、「その時代の日本社会はどのようなシステムで、なぜその状態にあり、どこが変化したのか」を読むための日本史サイト**を目標とする。
 
 - **1942年9〜10月フェーズ（2026-10-11）：** 9月18日協定、10月3日第21号作戦中止、10月25〜30日戦争指導論議を含むJH147〜JH151を公開。横断記事はall hold、地図追加不要、独立監査不要を判定し [完了PLAN](../plan_done/SEPTEMBER_OCTOBER_1942_STATE_TRANSITION_IMPLEMENTATION_PLAN.md) にarchive済み。
-- **1942年11月1日〜12月9日のphase cut（2026-10-11）：** 新active [PLAN](NOVEMBER_EARLY_DECEMBER_1942_STATE_TRANSITION_IMPLEMENTATION_PLAN.md) で**4記事 JH152〜JH155**を確定。境界は11月1日の大東亜省官制施行、12〜15日の第三次ソロモン海戦による増援輸送能力の変化、17日の統制会への権限委譲方針、27日の生産増強委員会・重要産業の確保策。11月30日のルンガ沖夜戦はJH155内に置き、12月10日の御前会議を次フェーズ起点とする。次工程はJH152原稿実装。
+- **1942年11月1日〜12月9日フェーズ completed / archived（2026-10-11）：** JH152〜JH155の4記事を公開し、S10「戦時統制と資源配分」を11月17日の統制会への権限委譲方針、18日の軍需金融、27日の重要産業増産策まで延長。S05・S09は保留、新規横断記事・新地図不要、独立監査不要。PR #437のCI・main CI・Pages成功を確認。 [完了PLAN](../plan_done/NOVEMBER_EARLY_DECEMBER_1942_STATE_TRANSITION_IMPLEMENTATION_PLAN.md) へアーカイブ。次は1942年12月10日以後のphase cut。

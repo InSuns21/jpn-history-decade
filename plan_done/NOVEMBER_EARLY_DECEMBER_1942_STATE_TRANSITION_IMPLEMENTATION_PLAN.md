@@ -1,11 +1,11 @@
 # 1942年11月1日〜12月9日 — 対外行政・海上補給・産業統制・暮らしの状態遷移 実装計画
 
-- **Status:** active / JH152〜JH155 published（2026-10-11）
+- **Status:** completed / archived（2026-10-11）
 - **Scope:** 1942-11-01〜1942-12-09（両端含む）
 - **Planned period articles:** **4本（JH152〜JH155）**
 - **Previous phase:** [SEPTEMBER_OCTOBER_1942_STATE_TRANSITION_IMPLEMENTATION_PLAN.md](../plan_done/SEPTEMBER_OCTOBER_1942_STATE_TRANSITION_IMPLEMENTATION_PLAN.md) — completed / archived
 - **Next phase entry candidate:** 1942-12-10 の御前会議における作戦と物的国力の調整。12月10日以後の記事数・終点は次回phase cutで確定する。
-- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](JPN_HISTORY_DECADE_PLAN.md)
+- **Parent plan:** [JPN_HISTORY_DECADE_PLAN.md](../plan/JPN_HISTORY_DECADE_PLAN.md)
 - **Standards:** [CONTENT_AUTHORING_STANDARD.md](../standards/CONTENT_AUTHORING_STANDARD.md) / [IMAGE_ASSET_STANDARD.md](../standards/IMAGE_ASSET_STANDARD.md) / [MAP_AUDIT_STANDARD.md](../standards/MAP_AUDIT_STANDARD.md) / [PROJECT_WORKFLOW_STANDARD.md](../standards/PROJECT_WORKFLOW_STANDARD.md)
 
 ## 1. 中心問いと観測軸
@@ -73,8 +73,8 @@
 - [x] JH155 published（JH154との隣接接続を含む）
 - [x] S05／S09／S10／新規横断記事のpublication gateと新規地図要否を判定
 - [x] 具体的未解決仮説に対するphase-end独立監査要否を判定
-- [ ] `npm run check`・PR CI・main CI／公開時Pages成功を確認
-- [ ] completed後に本PLANを`plan_done/`へ**移動**し、`plan/`側の元ファイルを残さない
+- [x] `npm run check`・PR CI・main CI／公開時Pages成功を確認
+- [x] completed後に本PLANを`plan_done/`へ**移動**し、`plan/`側の元ファイルを残さない
 
 **Phase-cut record (2026-10-11):** 10月末のJH151を継承し、11月1日新省施行・12〜15日増援輸送の破綻・17日官庁権限委譲方針・27日生産増強策を独立した状態遷移として整理。11月30日の夜戦は海戦結果と補給の差としてJH155内で説明。12月10日の御前会議を次期の新しい戦争指導判断とし、今回は12月9日で閉じる。記事本文・図版・地図はこのphase-cut工程では追加しない。次工程はJH152本文実装。
 
@@ -98,4 +98,4 @@
 
 **Phase-end audit necessity judgment (2026-10-11): no-audit.** 比較した候補は①9月1日の大東亜省設置方針・11月1日の官制施行・占領地軍政の権限、②11月17日の職権委譲方針と1943年1月21日の令公布／2月1日の施行、③11月18日の金融措置と実際の利用、④11月27日の委員会・各大臣の措置と工場への配分・増産実績、⑤11月中旬の大型船団喪失から25日の潜水艦補給・30日のルンガ沖夜戦の戦果／補給成否、⑥重点部門への特配と従来からの米穀・衣料配給、朝鮮人炭鉱労働者の移動取締り。JH152〜155の隣接接続、S10延長およびpublication gateにより、主体・時点・法的権限・実績をそれぞれ分離済み。複数記事を同時に比較しなければ解けない具体的な残存矛盾、重複、目的論化の仮説はなく、PROJECT_WORKFLOW_STANDARD 5.2/5.3に従い独立監査を追加しない。
 
-**Verification next:** S10延長・判定記録のPR CI、main CI / Pagesを確認後、フェーズPLANのDoDを満たす場合のみ completed 化し、plan_done/ へ一意に移動する。
+**Completion verification (2026-10-11):** S10延長・横断判定PR [#437](https://github.com/InSuns21/jpn-history-decade/pull/437) はsquash merge。PR CI [#38100434146](https://github.com/InSuns21/jpn-history-decade/actions/runs/38100434146) / Quality Checks [#38100433777](https://github.com/InSuns21/jpn-history-decade/actions/runs/38100433777) はsuccess。main commit `0f0dafb6836defcd8f2c225609e38bf4cea502ea` のCI [#38100483014](https://github.com/InSuns21/jpn-history-decade/actions/runs/38100483014)・Pages [#38100483051](https://github.com/InSuns21/jpn-history-decade/actions/runs/38100483051) もsuccess。JH152〜155 published、S10延長、S05/S09 hold、新規横断記事hold、新地図不要、独立監査不要の全DoDを完了。PLANをplan_doneへ移動し、元ファイルは削除する。次は12月10日以後のphase cut。

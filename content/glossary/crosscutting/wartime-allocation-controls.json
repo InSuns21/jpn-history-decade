@@ -96,6 +96,26 @@
     {
       "id": "shipping-operation-association-1942",
       "core": true
+    },
+    {
+      "id": "industrial-control-association-1941",
+      "core": true
+    },
+    {
+      "id": "important-industry-organizations-order-1941",
+      "core": true
+    },
+    {
+      "id": "administrative-delegation-policy-1942",
+      "core": true
+    },
+    {
+      "id": "temporary-production-expansion-committee-1942",
+      "core": true
+    },
+    {
+      "id": "priority-material-production-measures-1942",
+      "core": true
     }
   ]
 }

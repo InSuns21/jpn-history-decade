@@ -1454,4 +1454,13 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
       license: 'Public Domain（米国連邦政府著作物）',
     }),
   ],
+  '1943-03-18': [
+    commonsFigure('The first Burmese delegation to Japan (1943).jpg', {
+      alt: '1943年に訪日したビルマの政治指導者4人。左からバー・モウ、タキン・ミャ、テイン・マウン、アウンサンが並ぶ',
+      title: '1943年に日本を訪れたビルマ代表団',
+      dateLabel: '1943年（撮影月日未詳）',
+      credit: '撮影者不詳／Dr. Ba Maw Library・Wikimedia Commons（改変なし）',
+      license: 'Public Domain（PD-Myanmar / PD-Japan-oldphoto / PD-1996）',
+    }),
+  ],
 }

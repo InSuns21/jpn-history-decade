@@ -16,7 +16,7 @@
 
 **1942年11月1日〜12月9日フェーズ：completed / archived。** [完了PLAN](../plan_done/NOVEMBER_EARLY_DECEMBER_1942_STATE_TRANSITION_IMPLEMENTATION_PLAN.md)。JH152〜155 published、S10-D延長、S05-E・S09-F保留、新規横断記事・主題地図は追加せず、独立監査不要。
 
-**現在active：1942年12月10日〜1943年1月13日。** [DECEMBER_1942_EARLY_JANUARY_1943_STATE_TRANSITION_IMPLEMENTATION_PLAN.md](DECEMBER_1942_EARLY_JANUARY_1943_STATE_TRANSITION_IMPLEMENTATION_PLAN.md)。12月10日の作戦・国力調整、21日の対中国処理根本方針、31日のガダルカナル撤退決定、1943年1月9日の日華共同宣言・協定を**JH156〜JH159の4本**で扱う。phase cut確定、記事はこれから実装。次工程JH156「1942年12月10〜20日」。
+**現在active：1942年12月10日〜1943年1月13日。** [DECEMBER_1942_EARLY_JANUARY_1943_STATE_TRANSITION_IMPLEMENTATION_PLAN.md](DECEMBER_1942_EARLY_JANUARY_1943_STATE_TRANSITION_IMPLEMENTATION_PLAN.md)。12月10日の作戦・国力調整、21日の対中国処理根本方針、31日のガダルカナル撤退決定、1943年1月9日の日華共同宣言・協定を**JH156〜JH159の4本**で扱う。phase cut確定、JH156〜JH159の4記事をpublishedとして実装済み。次工程はS05・S09・S10・新規横断記事と地図のpublication gate判定、その後に具体的問題に限る独立監査の必要性を判定。
 
 前フェーズの1942年7月22日〜8月31日も [KOKODA_GUADALCANAL_AUGUST_1942_IMPLEMENTATION_PLAN.md](../plan_done/KOKODA_GUADALCANAL_AUGUST_1942_IMPLEMENTATION_PLAN.md) へcompleted / archived済みです。
 

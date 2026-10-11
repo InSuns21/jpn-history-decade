@@ -1,0 +1,29 @@
+{
+  "period": "1942-12-21",
+  "termRefs": [
+    {
+      "id": "china-policy-fundamental-guidelines-1942",
+      "core": true
+    },
+    {
+      "id": "gozen-kaigi",
+      "core": true
+    },
+    {
+      "id": "nanjing-national-government-1940",
+      "core": true
+    },
+    {
+      "id": "japan-china-basic-treaty-1940",
+      "core": true
+    },
+    {
+      "id": "shanghai-international-settlement",
+      "core": true
+    },
+    {
+      "id": "greater-east-asia-ministry-ordinance-1942",
+      "core": true
+    }
+  ]
+}

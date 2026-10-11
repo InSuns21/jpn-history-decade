@@ -59,5 +59,27 @@
       "swpa-poa-command-1942-03-30",
       "tulagi-occupation-1942-05-03"
     ]
+  },
+  "1942-07-12": {
+    "target": "1942-07-01",
+    "legacySections": [
+      "watchtower-command",
+      "ghormley-plan",
+      "marine-loading",
+      "japan-papua-plan",
+      "kokoda-defense",
+      "gona-landings",
+      "comparison"
+    ],
+    "legacyTerms": [
+      "watchtower-ghormley-plan-1942-07",
+      "watchtower-carrier-support-1942-07",
+      "watchtower-amphibious-force-1942-07",
+      "amphibious-combat-loading-1942-07",
+      "marine-operation-order-7-42",
+      "yokoyama-advance-party-1942-07",
+      "gona-basabua-landings-1942-07-21",
+      "kokoda-track-1942"
+    ]
   }
 }

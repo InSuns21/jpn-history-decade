@@ -12,7 +12,7 @@
 
 ### 本線
 
-**1943年1月14日〜3月17日フェーズ：completed / archived。** [完了PLAN](../plan_done/JANUARY_MARCH_1943_STATE_TRANSITION_IMPLEMENTATION_PLAN.md)。JH160〜164 published、S10-Dを1943年3月17日まで延長、S05-EとS09-Fは保留、新規横断記事・地図と独立監査は不要。JH164を次工程着手時に追跡査読し、主張層のメタ表現を修正した。次は**1943年3月18日以後のphase cut**（戦時行政特例法・戦時行政職権特例を入口に、首相と省庁の指揮調整権限、占領地政策、輸送・産業・生活を並行観測）。次フェーズの境界を判定するまでは新active実装PLANは置かない。
+**1943年3月18日〜5月8日フェーズ：active / phase cut confirmed。** [現行PLAN](MARCH_MAY_1943_STATE_TRANSITION_IMPLEMENTATION_PLAN.md)。予定4記事はJH165=3/18〜3/29、JH166=3/30〜4/15、JH167=4/16〜4/29、JH168=4/30〜5/8。3月18日の首相権限強化、価格・輸送行政、4月16日の米価対策、20日の内閣改造、30日の物動計画、5月8日のビルマ独立準備を並行観測する。JH164は次工程着手時の追跡査読を行い、重複した末尾節を整理した。次はJH165の本文実装。
 
 前フェーズは [1942年12月10日〜1943年1月13日](../plan_done/DECEMBER_1942_EARLY_JANUARY_1943_STATE_TRANSITION_IMPLEMENTATION_PLAN.md) にアーカイブ済み。過去の全フェーズは `plan_done/` を参照。
 

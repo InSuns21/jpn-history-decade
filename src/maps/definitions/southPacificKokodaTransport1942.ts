@@ -30,7 +30,7 @@ export const southPacificKokodaTransport1942Map: HistoricalMapDefinition = {
         "sourceType": "derived",
         "license": "Site-authored approximate geographic reference points, not copied map geometry. Historical roles/date sourced from official histories; place coordinates are approximate locality representatives.",
         "derivedFromSourceIds": [
-          "nhhc-guadalcanal-jh141",
+          "nhhc-guadalcanal-jh140",
           "nhhc-savo-jh141",
           "awm-papua-timeline-jh141",
           "awm-kokoda-track-jh141",

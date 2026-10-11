@@ -32,6 +32,18 @@
     {
       "id": "milne-bay-japanese-landing-1942-08-25",
       "core": true
+    },
+    {
+      "id": "kokoda-track-1942",
+      "core": true
+    },
+    {
+      "id": "isurava-battle-1942-08",
+      "core": true
+    },
+    {
+      "id": "milne-bay-battle-1942-08",
+      "core": true
     }
   ]
 }

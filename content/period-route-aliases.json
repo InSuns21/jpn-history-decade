@@ -18,5 +18,26 @@
       "midway-aleutians-plan-1942-04",
       "carrier-airgroup-readiness-1942-05"
     ]
+  },
+  "1942-08-26": {
+    "target": "1942-08-21",
+    "legacySections": [
+      "isurava-outposts",
+      "isurava-defense",
+      "isurava-withdrawal",
+      "milne-first-defense",
+      "milne-third-strip",
+      "guadalcanal-air-carrier",
+      "transition-to-government"
+    ],
+    "legacyTerms": [
+      "kokoda-track-1942",
+      "south-seas-detachment-1942-08",
+      "maroubra-force-kokoda-1942-06",
+      "isurava-battle-1942-08",
+      "milne-bay-japanese-landing-1942-08-25",
+      "milne-bay-battle-1942-08",
+      "henderson-field-1942-08"
+    ]
   }
 }

@@ -1387,6 +1387,13 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
   ],
 
   '1942-08-21': [
+    commonsFigure('No 75 Sqn RAAF Kittyhawk Milne Bay Sept 1942.jpg', {
+      alt: '1942年9月、ミルン湾の椰子林内の仮設滑走路に置かれた豪州空軍第75飛行隊のキティホーク戦闘機。鋼板で補強した地面と簡易整備施設が見える',
+      title: 'ミルン湾の第75飛行隊キティホークと仮設滑走路',
+      dateLabel: '1942年9月（8月末の戦闘後に撮影）',
+      credit: '撮影者不詳／Australian War Memorial（026644）・Wikimedia Commons（公開ファイルは縦方向約3%トリミング）',
+      license: 'Public Domain（オーストラリアで著作権期間満了）',
+    }),
     commonsFigure('Japanese bomb hits USS Enterprise (CV-6) flight deck during Battle of the Eastern Solomons, 24 August 1942 (80-G-17489).jpg', {
       alt: '1942年8月24日、第二次ソロモン海戦で日本軍爆弾が米空母エンタープライズの飛行甲板に命中し、巨大な爆発と煙が広がる瞬間',
       title: 'エンタープライズ飛行甲板での爆弾命中',
@@ -1404,15 +1411,7 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
   ],
 
 
-  '1942-08-26': [
-    commonsFigure('No 75 Sqn RAAF Kittyhawk Milne Bay Sept 1942.jpg', {
-      alt: '1942年9月、ミルン湾の椰子林内の仮設滑走路に置かれた豪州空軍第75飛行隊のキティホーク戦闘機。鋼板で補強した地面と簡易整備施設が見える',
-      title: 'ミルン湾の第75飛行隊キティホークと仮設滑走路',
-      dateLabel: '1942年9月（8月末の戦闘後に撮影）',
-      credit: '撮影者不詳／Australian War Memorial（026644）・Wikimedia Commons（公開ファイルは縦方向約3%トリミング）',
-      license: 'Public Domain（オーストラリアで著作権期間満了）',
-    }),
-  ],
+
 
   '1942-09-11': [
     commonsFigure('"Bloody Ridge," Guadalcanal, 15 September 1942.jpg', {

@@ -15,14 +15,15 @@
     "validate:instructions": "node scripts/validate-instruction-length.mjs",
     "validate:claim-cautions": "node scripts/validate-claim-cautions.mjs",
     "validate:images": "node scripts/validate-images.mjs",
-    "check": "npm run validate:instructions && npm run validate:period-ranges && npm run validate:period-granularity && npm run validate:claim-cautions && npm run validate:body-depth && npm run validate:period-repetition && npm run validate:images && npm run compile:content && npm run validate:markdown-tables && npm run validate:maps && npm run audit:readability && npm run lint && npm run typecheck && vite build",
+    "check": "npm run validate:instructions && npm run validate:period-ranges && npm run validate:period-granularity && npm run validate:period-aliases && npm run validate:claim-cautions && npm run validate:body-depth && npm run validate:period-repetition && npm run validate:images && npm run compile:content && npm run validate:markdown-tables && npm run validate:maps && npm run audit:readability && npm run lint && npm run typecheck && vite build",
     "preview": "vite preview",
     "validate:body-depth": "node scripts/validate-body-depth.mjs",
     "validate:period-repetition": "node scripts/validate-period-repetition.mjs",
     "audit:readability": "node scripts/report-readability.mjs",
     "audit:previous": "node scripts/audit-previous-period.mjs",
     "validate:period-granularity": "node scripts/validate-period-granularity.mjs",
-    "audit:period-granularity": "node scripts/validate-period-granularity.mjs --report"
+    "audit:period-granularity": "node scripts/validate-period-granularity.mjs --report",
+    "validate:period-aliases": "node scripts/validate-period-aliases.mjs"
   },
   "dependencies": {
     "maplibre-gl": "^6.11.2",

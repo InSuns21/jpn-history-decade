@@ -1,0 +1,37 @@
+{
+  "period": "1943-08-01",
+  "termRefs": [
+    {
+      "id": "burma-state-1943",
+      "core": true
+    },
+    {
+      "id": "japan-burma-alliance-1943",
+      "core": true
+    },
+    {
+      "id": "japan-burma-secret-military-agreement-1943",
+      "core": true
+    },
+    {
+      "id": "japan-thai-territory-treaty-1943",
+      "core": true
+    },
+    {
+      "id": "philippines-independence-preparatory-commission-1943",
+      "core": true
+    },
+    {
+      "id": "burma-independence-preparatory-committee-1943",
+      "core": false
+    },
+    {
+      "id": "philippines-independence-guidelines-1943",
+      "core": false
+    },
+    {
+      "id": "thai-burma-territorial-policy-1943",
+      "core": false
+    }
+  ]
+}

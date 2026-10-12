@@ -14,7 +14,6 @@ relatedPeriods:
   - "1941-12-26"
   - "1942-01-03"
   - "1942-01-12"
-  - "1942-01-24"
   - "1942-02-01"
 sources:
   - id: "jacar-thailand-relations-194112-s09e"

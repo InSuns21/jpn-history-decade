@@ -12,9 +12,9 @@
 
 ### 本線
 
-**active PLAN:** [SEPTEMBER_OCTOBER_1943_PHILIPPINE_REPUBLIC_IMPLEMENTATION_PLAN.md](SEPTEMBER_OCTOBER_1943_PHILIPPINE_REPUBLIC_IMPLEMENTATION_PLAN.md)。JH173（1943年9月1〜30日）をpublishedとし、憲法採択・カリバピ承認・国民議会とラウレル選出を扱う。次は10月の共和国発足前後の制度移行。S05-E・S09-Fは保留、S10-Dは1943年7月まで延長済み。
+**active PLAN:** [NOVEMBER_1943_GREATER_EAST_ASIA_CONFERENCE_IMPLEMENTATION_PLAN.md](NOVEMBER_1943_GREATER_EAST_ASIA_CONFERENCE_IMPLEMENTATION_PLAN.md)。1943年11月のphase cutを完了。JH176（11月1〜19日、軍需省設置・大東亜会議・共同宣言）→JH177（11月20〜30日、タラワ・マキンへの米軍上陸と中央太平洋の防衛）の2記事を予定する。12月1日のカイロ宣言公表は次フェーズへ送る。記事数を4本へ合わせるため11月を日付だけで細分化しない。
 
-直前の完了フェーズは [1943年5月9日〜8月31日](../plan_done/MAY_AUGUST_1943_STATE_TRANSITION_IMPLEMENTATION_PLAN.md)。過去の全フェーズは `plan_done/` を参照。
+直前の完了フェーズは [1943年9〜10月](../plan_done/SEPTEMBER_OCTOBER_1943_PHILIPPINE_REPUBLIC_IMPLEMENTATION_PLAN.md)。JH173〜175は公開済み。フェーズの追跡査読によりJH175へ10月30日の日華同盟条約を補完し、11月会議との接続を整えた。S05・S09は延長保留、S10は1943年7月まで延長済み。過去の全フェーズは `plan_done/` を参照。
 
 ### 横断的な品質負債返済
 

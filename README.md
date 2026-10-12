@@ -15,7 +15,7 @@
 - 年代史・構造史・テーマ史を Markdown + frontmatter から共通コンテンツモデルへコンパイル
 - 必要な記事だけ MapLibre GL JS の主題地図を表示
 - GitHub Actions で品質チェックし、`main` 更新時に GitHub Pages へ自動デプロイ
-- 1800〜1943年10月31日までの年代史166ページを実装。1943年5〜8月のJH169〜172ではアッツ島の喪失と戦況公表、大東亜政略指導大綱、企業整備・地方行政、ビルマ独立・日タイ領土条約を扱い、S05・S09は延長保留、S10を7月まで延長して[完了PLAN](plan_done/MAY_AUGUST_1943_STATE_TRANSITION_IMPLEMENTATION_PLAN.md)へアーカイブした。JH173は9月のフィリピン憲法採択・代表選出、JH174は10月前半のラウレルらの訪日と政府発足準備、JH175は10月14日の共和国発足と大統領就任、日比同盟条約の署名・批准・実施・批准書交換、民政と日本軍の権限関係を扱う。[完了PLAN](plan_done/SEPTEMBER_OCTOBER_1943_PHILIPPINE_REPUBLIC_IMPLEMENTATION_PLAN.md)に進捗と直前記事の査読記録を掲載。次は1943年11月の大東亜会議を中心としたphase cutの判定。1942年の遡及記事粒度調整と旧URL・アンカー保全は[レビュー記録](docs/PERIOD_GRANULARITY_REVIEW_1942.md)を参照。
+- 1800〜1943年10月31日までの年代史166ページを実装。1943年5〜8月のJH169〜172ではアッツ島の喪失と戦況公表、大東亜政略指導大綱、企業整備・地方行政、ビルマ独立・日タイ領土条約を扱い、S05・S09は延長保留、S10を7月まで延長して[完了PLAN](plan_done/MAY_AUGUST_1943_STATE_TRANSITION_IMPLEMENTATION_PLAN.md)へアーカイブした。JH173は9月のフィリピン憲法採択・代表選出、JH174は10月前半のラウレルらの訪日と政府発足準備、JH175は10月14日の共和国発足と大統領就任、日比同盟条約の署名・批准・実施・批准書交換、民政と日本軍の権限関係を扱う。[完了PLAN](plan_done/SEPTEMBER_OCTOBER_1943_PHILIPPINE_REPUBLIC_IMPLEMENTATION_PLAN.md)に進捗と直前記事の査読記録を掲載。1943年11月のphase cutを完了し、[大東亜会議と中央太平洋戦局の実装PLAN](plan/NOVEMBER_1943_GREATER_EAST_ASIA_CONFERENCE_IMPLEMENTATION_PLAN.md)でJH176（11月1〜19日）・JH177（11月20〜30日）を予定した。次の執筆対象はJH176。1942年の遡及記事粒度調整と旧URL・アンカー保全は[レビュー記録](docs/PERIOD_GRANULARITY_REVIEW_1942.md)を参照。
 
 フェーズごとの進捗、監査結果、地図判定、CI実績などは [実装状況](docs/IMPLEMENTATION_STATUS.md) に分離しています。
 

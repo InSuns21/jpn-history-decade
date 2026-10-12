@@ -33,7 +33,6 @@ relatedPeriods:
   - "1943-02-27"
   - "1943-03-18"
   - "1943-03-30"
-  - "1943-04-16"
   - "1943-04-30"
 sources:
   - id: "ndl-temporary-funds-adjustment"

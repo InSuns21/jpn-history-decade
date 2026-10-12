@@ -24,6 +24,26 @@
     {
       "id": "temporary-military-expenses-special-account-1937",
       "core": false
+    },
+    {
+      "id": "rice-price-measures-1943",
+      "core": true
+    },
+    {
+      "id": "food-control-act-1942",
+      "core": true
+    },
+    {
+      "id": "tojo-cabinet-1941",
+      "core": false
+    },
+    {
+      "id": "shigemitsu-foreign-minister-1943",
+      "core": true
+    },
+    {
+      "id": "ando-home-minister-1943",
+      "core": true
     }
   ]
 }

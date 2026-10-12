@@ -1,0 +1,29 @@
+{
+  "period": "1943-05-31",
+  "termRefs": [
+    {
+      "id": "greater-east-asia-political-guidelines-1943",
+      "core": true
+    },
+    {
+      "id": "war-production-enterprise-reorganization-1943",
+      "core": true
+    },
+    {
+      "id": "food-production-emergency-guidelines-1943",
+      "core": true
+    },
+    {
+      "id": "burma-independence-guidelines-1943",
+      "core": false
+    },
+    {
+      "id": "burma-independence-preparatory-committee-1943",
+      "core": false
+    },
+    {
+      "id": "material-mobilization-plan-1943",
+      "core": false
+    }
+  ]
+}

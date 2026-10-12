@@ -1,0 +1,33 @@
+{
+  "period": "1943-06-26",
+  "termRefs": [
+    {
+      "id": "philippines-independence-guidelines-1943",
+      "core": true
+    },
+    {
+      "id": "enterprise-reorganization-finance-act-1943",
+      "core": true
+    },
+    {
+      "id": "regional-administrative-councils-1943",
+      "core": true
+    },
+    {
+      "id": "tokyo-metropolitan-system-1943",
+      "core": true
+    },
+    {
+      "id": "thai-burma-territorial-policy-1943",
+      "core": true
+    },
+    {
+      "id": "greater-east-asia-political-guidelines-1943",
+      "core": false
+    },
+    {
+      "id": "war-production-enterprise-reorganization-1943",
+      "core": false
+    }
+  ]
+}

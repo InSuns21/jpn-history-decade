@@ -12,11 +12,9 @@
 
 ### 本線
 
-1943年11月のフェーズは [完了PLAN](../plan_done/NOVEMBER_1943_GREATER_EAST_ASIA_CONFERENCE_IMPLEMENTATION_PLAN.md) へアーカイブ済み。JH176（11月1〜19日・軍需省と大東亜会議）とJH177（11月20〜30日・タラワ／マキン上陸と島嶼防衛）を公開し、main CI・Pages deployの成功を確認した。
+1943年12月は[完了PLAN](../plan_done/DECEMBER_1943_CAIRO_DECLARATION_IMPLEMENTATION_PLAN.md)へarchive済み。JH178（12月1〜14日・カイロ宣言の公表とマーシャル空襲）とJH179（12月15〜31日・アラウェとグロスター岬）を公開し、PR #490、main CI、Pages deployの成功を実測。12月分のS05・S09・S10の延長は保留、新規地図・横断記事も不要と判定した。
 
-**次工程:** 1943年12月1日以降のphase cut。カイロ宣言の公表による外交上の情報変化と、中部太平洋の防衛・輸送判断を分け、自然な記事境界を決める。現時点で本線のactive PLANはない。
-
-S05「政治参加」、S09「占領統治」、S10「戦時統制と資源配分」は1943年11月の追加延長を保留した。理由は完了PLANに記録する。過去の全フェーズは `plan_done/` を参照。
+**現在のactive PLAN:** [1944年1月〜2月前半の国内軍需・ニューギニア・マーシャル防衛](JANUARY_FEBRUARY_1944_STATE_TRANSITION_IMPLEMENTATION_PLAN.md)。予定記事はJH180（1月1〜10日・サイドル上陸）、JH181（1月11〜30日・発注調整と企業整備・資金融通）、JH182（1月31日〜2月16日・マーシャル諸島攻略）の3本。2月17日のエニウェトク上陸・トラック空襲は次のphase cutとする。
 
 ### 横断的な品質負債返済
 

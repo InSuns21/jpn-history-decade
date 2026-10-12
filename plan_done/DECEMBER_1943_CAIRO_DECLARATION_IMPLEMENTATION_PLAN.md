@@ -1,6 +1,6 @@
 # 1943年12月：カイロ宣言の公表と島嶼戦局 PLAN
 
-**Status:** active — 12月1〜31日の2記事（JH178・JH179）を原稿・用語・図版として実装。JH179のPR/main CI・Pages deployは実測後に判定。  
+**Status:** completed — JH178・JH179公開、PR/main CI・Pages成功、横断記事・地図延長判定完了、archive。
 **着手:** 2026-10-13（日本時間）  
 **前工程:** [1943年11月大東亜会議・中央太平洋戦局](../plan_done/NOVEMBER_1943_GREATER_EAST_ASIA_CONFERENCE_IMPLEMENTATION_PLAN.md)  
 **対象:** 1943年12月1〜31日。次フェーズは1944年1月以降。
@@ -63,4 +63,16 @@
 - JH179の着手時には今回公開したJH178の追跡査読を通常工程に組み込み、12月前半と後半の記事接続を確認する。
 - S05 / S09 / S10の延長は、この月の個別外交・上陸作戦にとどまらない制度上の新たな横断比較が得られた場合のみ検討する。独立の接続監査を定型工程として設けない。
 
-**次工程:** JH179のPR CI / main CI / Pages deployを確認し、S05・S09・S10の延長保留と新規地図・横断記事不要の判定を確定したうえで、1944年1月のphase cutへ進む。
+**次工程（完了後）:** 1944年1月以降のphase cutを次PLANへ切り出す。
+
+## 12月フェーズの完了判定（2026-10-13）
+
+- **記事・範囲:** JH178（12月1〜14日）とJH179（12月15〜31日）をpublishedとして実装。前半のカイロ宣言の対外公表とマーシャルへの空襲、後半のアラウェ／グロスター岬上陸による海岸・飛行場支配の変化を分離し、時点・主体を混同しない。
+- **PR・main公開ゲート:** JH179の[PR #490](https://github.com/InSuns21/jpn-history-decade/pull/490) はマージ済み。PR head `7e771c50e6571dff8e19fdb873d59de5eee5eb32` の [CI 38286195509](https://github.com/InSuns21/jpn-history-decade/actions/runs/38286195509) と [Quality Checks 38286195554](https://github.com/InSuns21/jpn-history-decade/actions/runs/38286195554) はsuccess。main `2089ec5aad313e0c0f393f93ca6acc69ea47fe7c` の [CI 38286411258](https://github.com/InSuns21/jpn-history-decade/actions/runs/38286411258) と [Pages 38286411029](https://github.com/InSuns21/jpn-history-decade/actions/runs/38286411029) もsuccess。これらはJH179公開時点の実測でありarchive PRのCIとは区別する。
+- **直前published JH179の追跡査読:** GitHub mainの`content/periods/1943-12-15.md`について全frontmatter（summary・snapshot・changes・contemporaryAssumptions・interpretiveCautions・nextIssues・sources）とMarkdown本文全5節・比較表を通読。アラウェ・グロスター岬の地形と上陸輸送、ラバウル方面の航空反撃、12月30〜31日の飛行場地区確保と滑走路再使用の時間差を確認した。用語は112騎兵連隊の任務を初出で説明し、出典IDと重要用語を本文から参照。部隊名・時刻の羅列、仮想読者への否定的反論を主文とする箇所は見当たらず、時点混同の注意はinterpretiveCautionsに分離。次記事へ引き継ぐサイドル・後退路の論点も明確。**修正なしで維持**。GitHubコネクタ作業のため`npm run audit:previous -- --next JH180`のローカル実行は未実施。意味的査読と機械検査の違いを保持する。
+- **S05「政治参加」:** 12月1日の米英中共同声明の対外公表は、日本の議会・政治参加・行政決定の制度的再編を直接示さない。11月の共同宣言との比較を年代記事に記載済みのため、延長保留。
+- **S09「占領統治」:** 南東方面の陸上拠点の支配変化と、占領地の住民統治機構・権限移転は別。新しい軍政・民政制度の横断比較根拠が確認されず、延長保留。
+- **S10「戦時統制と資源配分」:** 12月後半の燃料・兵員・海上輸送制約はJH179の現地作戦の説明として扱い、国内の新制度決定を確認できないため既存横断記事へ一般論を再掲せず延長保留。翌1944年1月の発注調整・電力制限・企業整備・軍需会社金融は次PLANの制度史の主題として検討する。
+- **図版・地図:** JH178はクェゼリン空襲写真、JH179はグロスター岬上陸写真を史料として採用済み。新しいMapLibre地図は実装せず、地図監査の新規対象なし。既存の資料地図と地点比較を使った判断を維持。
+- **追加横断記事・独立監査:** 宣言の成立と公表、空襲と占領、拠点占領と運用再開、戦地の補給と国内制度を別個に叙述している。複数記事を同時再監査しなければ検出できない具体的な未解決仮説はなく、追加の横断記事・地図・独立全体監査は作らない。
+- **完了:** 12月PLANのpublication gateと横断記事延長要否判定を満たし、本ファイルを`plan_done/`へ移動。次の[1944年1月〜2月前半PLAN](../plan/JANUARY_FEBRUARY_1944_STATE_TRANSITION_IMPLEMENTATION_PLAN.md)へ引き継ぐ。

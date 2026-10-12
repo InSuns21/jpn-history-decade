@@ -1469,4 +1469,14 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
       license: 'Public Domain Mark（米国連邦政府著作物）',
     }),
   ],
+  '1943-10-14': [
+    commonsFigure("Jose P. Laurel with Shigenori Kuroda during the Second Philippine Republic's inaugural session.jpg", {
+      alt: '1943年10月14日、発足したフィリピン共和国のラウレル大統領と日本軍司令官黒田重徳が国民議会の式典に臨む',
+      title: '共和国発足式に臨むラウレルと黒田重徳',
+      dateLabel: '1943年10月14日',
+      credit: '日本放送協会（NHK）ニュース映像の一場面／Wikimedia Commons（改変なし）',
+      license: 'Public Domain（PD-Japan-oldphoto）',
+    }),
+  ],
+
 }

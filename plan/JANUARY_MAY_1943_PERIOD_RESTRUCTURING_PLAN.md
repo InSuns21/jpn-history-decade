@@ -161,4 +161,4 @@ R1〜R4は必要に応じて複数の小さなPRへ分割する。最初から�
 - **S10の役割:** 3〜5月の施策を列挙し直す代わりに、首相・主務大臣・統制会の職権、価格補給の財政負担、陸運と取得・到着の情報連絡、家庭への配分の四軸で比較した。JH168との関連はS10のrelatedPeriods（1943-04-30）を保持してサイト上の関連記事導線で接続する。
 - **隣接境界:** JH166は3月30日〜4月29日の価格・輸送行政と米価・人事まで、JH168は4月30日の年度配分計画決定と5月8日のビルマ側の準備会合から開始する。4月30日の決定を3月末の価格調整へ前倒しせず、次の5月9日以降の大東亜政略方針も前倒ししない。
 - **参照・図版・地図:** JH168のrouteKey・期間・5個の節アンカー・core用語ID・出典IDを維持。S10のsection anchor・relatedPeriodsも維持した。新たな図版・地図を追加せず、既存の図版要否判断と地図監査の状態を変更しない。
-- **機械検証:** ローカルcheckoutがないため `npm run audit:previous` と `npm run check` は手元で未実行。PR Actions、merge後のmain CIとPages結果を確認して記録するまで公開ゲートは未確定とする。
+- **機械検証:** ローカルcheckoutがないため `npm run audit:previous` と `npm run check` は手元で未実行。PR #475の[CI](https://github.com/InSuns21/jpn-history-decade/actions/runs/38194689060)と[Quality Checks](https://github.com/InSuns21/jpn-history-decade/actions/runs/38194689056)はsuccess（content検証・lint・型検査・build・previous-article review selector smoke test）。merge後のmain CIとPages結果はR5の公開判定時に追加確認する。

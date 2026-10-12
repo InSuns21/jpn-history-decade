@@ -1,0 +1,17 @@
+{
+  "period": "1943-12-15",
+  "termRefs": [
+    {
+      "id": "arawe-landing-1943",
+      "core": true
+    },
+    {
+      "id": "cape-gloucester-landing-1943",
+      "core": true
+    },
+    {
+      "id": "cartwheel-operation-1943",
+      "core": true
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "period": "1943-05-09",
+  "termRefs": [
+    {
+      "id": "attu-battle-1943",
+      "core": true
+    },
+    {
+      "id": "gyokusai-attu-1943",
+      "core": true
+    },
+    {
+      "id": "koa-general-headquarters-1943",
+      "core": true
+    },
+    {
+      "id": "material-mobilization-plan-1943",
+      "core": false
+    }
+  ]
+}

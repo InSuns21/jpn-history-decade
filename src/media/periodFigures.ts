@@ -1460,4 +1460,13 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
       license: 'Public Domain（PD-Myanmar / PD-Japan-oldphoto / PD-1996）',
     }),
   ],
+  '1943-05-09': [
+    commonsFigure('80-G-50773 Attu Invasion, May 1943.jpg', {
+      alt: '1943年5月11日、アッツ島上陸作戦に参加する米軍兵士が輸送艦ヘイウッドの舷側から上陸艇へ乗り込む。海上での兵員輸送と上陸の手順が見える',
+      title: 'アッツ島上陸作戦で輸送艦から上陸艇へ移る米兵',
+      dateLabel: '1943年5月11日',
+      credit: 'U.S. Navy（撮影者不詳）／Naval History and Heritage Command（80-G-50773）・Wikimedia Commons（改変なし）',
+      license: 'Public Domain Mark（米国連邦政府著作物）',
+    }),
+  ],
 }

@@ -168,5 +168,25 @@
       "moulmein-capture-1942-01-30",
       "malaya-withdrawal-singapore-1942-01-31"
     ]
+  },
+  "1943-04-16": {
+    "target": "1943-03-30",
+    "legacySections": [
+      "rice-price-april16",
+      "farmers-collection",
+      "household-prices-wages",
+      "rice-administration",
+      "cabinet-april20",
+      "production-and-transport",
+      "materials-planning-april"
+    ],
+    "legacyTerms": [
+      "rice-price-measures-1943",
+      "food-control-act-1942",
+      "tojo-cabinet-1941",
+      "shigemitsu-foreign-minister-1943",
+      "ando-home-minister-1943",
+      "wartime-administrative-authority-exception-1943"
+    ]
   }
 }

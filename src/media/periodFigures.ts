@@ -1176,10 +1176,7 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
       credit: 'Murray Griffin／Australian War Memorial, ART24498',
       license: 'Public Domain',
     },
-  ],
-
-
-  '1942-01-24': [
+ 
     {
       imageUrl: 'https://s3-ap-southeast-2.amazonaws.com/awm-media/collection/012467/screen/4089897.JPG',
       sourceUrl: 'https://www.awm.gov.au/collection/C32144',
@@ -1189,7 +1186,8 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
       credit: 'Clifford Bottomley／Australian War Memorial, 012467',
       license: 'Public Domain',
     },
-  ],
+   ],
+
 
   '1942-02-01': [
     {

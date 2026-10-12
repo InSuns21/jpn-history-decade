@@ -146,5 +146,27 @@
       "food-control-act-1942",
       "war-conduct-outline-1942-03-07"
     ]
+  },
+  "1942-01-24": {
+    "target": "1942-01-12",
+    "legacySections": [
+      "balikpapan",
+      "kendari",
+      "bataan",
+      "moulmein",
+      "singapore-withdrawal",
+      "state-transition"
+    ],
+    "legacySectionRemap": {
+      "state-transition": "january-end-state"
+    },
+    "legacyTerms": [
+      "balikpapan-capture-1942-01-24",
+      "kendari-capture-1942-01-26",
+      "abda-command-1942-01-15",
+      "southern-economic-measures-1941-12-16",
+      "moulmein-capture-1942-01-30",
+      "malaya-withdrawal-singapore-1942-01-31"
+    ]
   }
 }

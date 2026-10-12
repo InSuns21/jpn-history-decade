@@ -124,5 +124,27 @@
       "lunga-point-battle-1942",
       "food-control-act-1942"
     ]
+  },
+  "1942-10-03": {
+    "target": "1942-09-18",
+    "legacySections": [
+      "operation-21",
+      "heavy-artillery-landing",
+      "field-and-merchants",
+      "shipping-production",
+      "daily-life",
+      "government-occupation",
+      "october-24"
+    ],
+    "legacyTerms": [
+      "operation-21-cancellation-1942-10-03",
+      "army-navy-central-agreement-1942-09-18",
+      "cape-esperance-battle-1942-10",
+      "henderson-field-1942-08",
+      "wartime-shipping-management-order-1942",
+      "shipping-operation-association-1942",
+      "food-control-act-1942",
+      "war-conduct-outline-1942-03-07"
+    ]
   }
 }

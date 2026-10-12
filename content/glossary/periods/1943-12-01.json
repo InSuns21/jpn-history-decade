@@ -1,0 +1,21 @@
+{
+  "period": "1943-12-01",
+  "termRefs": [
+    {
+      "id": "cairo-declaration-1943",
+      "core": true
+    },
+    {
+      "id": "cairo-conference-1943",
+      "core": true
+    },
+    {
+      "id": "greater-east-asia-joint-declaration-1943",
+      "core": true
+    },
+    {
+      "id": "marshall-carrier-raid-dec1943",
+      "core": true
+    }
+  ]
+}

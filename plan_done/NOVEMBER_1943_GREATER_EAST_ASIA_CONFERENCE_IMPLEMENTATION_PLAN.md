@@ -1,6 +1,6 @@
 # 1943年11月：大東亜会議と中央太平洋戦局の状態変化 PLAN
 
-**Status:** active — JH176・JH177本文と図版の実装済み、PR CI・Pages公開ゲート確認待ち  
+**Status:** completed — JH176・JH177公開、PR CI・main CI・GitHub Pages成功  
 **着手・phase cut:** 2026-10-12  
 **直前の完了工程:** [1943年9〜10月フィリピン共和国発足](../plan_done/SEPTEMBER_OCTOBER_1943_PHILIPPINE_REPUBLIC_IMPLEMENTATION_PLAN.md)  
 **対象:** 1943年11月1〜30日。12月1日のカイロ宣言公表は次フェーズの入口。
@@ -91,3 +91,15 @@
 - **地図採否:** ギルバート諸島とマーシャル諸島の相対的位置、礁湖・浅瀬は空間的論点であり、主題地図の有効性はある。ただしタラワ・マキン両環礁の陣地配置や接近経路を1943年11月の同一精度で示す新地図には当時の地図の基準時点・航空写真と視覚監査が必要となる。今工程では両環礁の役割と戦闘・確保時点の比較表、米陸軍戦史付図への出典リンクを採用。新地図は作成せず、未監査マップをpublishedへ載せない。既存地図の変更もなし。
 - **未実施のゲート:** GitHub上でのファイル更新のためローカル `npm run audit:previous -- --next JH177`・`npm run check` は未実施。PR Actionsの実測でcontent/glossary/画像と全件CIを確認し、main上のCI・Pages deployの実測を経てPLANのcompleted/archiveを判断する。
 
+
+## 11月フェーズ公開ゲートと完了判定（2026-10-12）
+
+- **JH177本文公開:** [PR #486](https://github.com/InSuns21/jpn-history-decade/pull/486) を squash merge。main commit `3c903785dcd86d9631dd55b148b7be2ecc005e09`。掲載対象は1943年11月20〜30日。
+- **PR CI:** `CI` run [38250587604](https://github.com/InSuns21/jpn-history-decade/actions/runs/38250587604) と `Quality Checks` run [38250587612](https://github.com/InSuns21/jpn-history-decade/actions/runs/38250587612) は success。初回のclaim/caution lint失敗は `changes.significance` の否定形を肯定の状態説明へ変更して解決。出典区分も規約に適合する `research` へ修正。
+- **main公開ゲート:** main CI run [38250699344](https://github.com/InSuns21/jpn-history-decade/actions/runs/38250699344) は success、GitHub Pages run [38250699176](https://github.com/InSuns21/jpn-history-decade/actions/runs/38250699176) も success。両方のcommit SHAが上記main commitと一致したことを確認。
+- **直前記事JH176:** 同フェーズの上記追跡査読で本文・frontmatter・史料リンクを確認し、修正不要を判断。新記事の`changes.before`と前記事の`nextIssues`が接続していることも確認。自動査読 `npm run audit:previous -- --next JH177` の単独実行は未実施だが、PR CIでcontent lint等を通過。
+- **横断記事:** S05の政治参加とS09の占領統治は11月上旬の会議で既存の多様な政府・軍事権限が確認されたが、各政府の制度を新たに変更する11月の措置は認めず延長保留。S10は軍需省・運輸通信省の所管変更という新情報を含むが、この期間だけで横断的な資源配分制度や生産・輸送実績の比較を増設できるほどの根拠がないため延長保留。いずれも年代記事の再録目的の延長を見送る。
+- **地図／横断監査:** JH176は制度・外交比較表、JH177は環礁と補給条件の比較表を採用し、新たな未監査マップを公開しない。複数年代・横断記事を横断しないと検出できない具体的な未解決矛盾は認められず、独立した追加監査は不要。
+- **次の入口:** 1943年12月1日のカイロ宣言の公表、11月に公表された大東亜共同宣言との政治的立場の対照、日本側が入手した情報と戦況判断の時点を分ける。新しいphase cutで期間境界を改めて判定する。
+
+**完了:** JH176・177および付随する図版・辞書の実装・隣接接続・追跡査読・公開CI/Pages確認が終了したため、計画を `plan_done/` へアーカイブする。

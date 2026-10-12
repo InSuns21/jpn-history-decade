@@ -1469,6 +1469,15 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
       license: 'Public Domain Mark（米国連邦政府著作物）',
     }),
   ],
+  '1943-11-20': [
+    commonsFigure('Marines take cover behind seawall at Red Beach no. 3, Tarawa.JPEG', {
+      alt: '1943年11月のタラワ・ベティオ島で、海岸の防壁の背後に身を伏せる米海兵隊員。倒木や土砂の間に位置を取り、海岸の狭い地形と上陸後の抵抗を示す',
+      title: 'タラワ上陸後、海岸の防壁に身を寄せる米海兵隊員',
+      dateLabel: '1943年11月（撮影日未詳）',
+      credit: 'U.S. Navy／U.S. Department of Defense（HD-SN-99-02572）・Wikimedia Commons（改変なし）',
+      license: 'Public Domain（米国連邦政府著作物）',
+    }),
+  ],
   '1943-11-01': [
     commonsFigure('Greater East Asia Conference.JPG', {
       alt: '1943年11月、東京の帝国議事堂前に並ぶ大東亜会議出席者。左からバー・モウ、張景恵、汪兆銘、東条英機、ワンワイタヤコーン、ラウレル、チャンドラ・ボース。六政府の代表と自由インド仮政府の陪席者を含む',

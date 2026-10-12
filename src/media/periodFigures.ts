@@ -1507,4 +1507,16 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     }),
   ],
 
+  '1943-12-15': [
+    {
+      imageUrl: 'https://www.history.navy.mil/content/history/nhhc/our-collections/photography/numerical-list-of-images/nhhc-series/nh-series/26-G-03000/26-G-3046/_jcr_content/mediaitem/image.img.jpg/1462989641710.jpg',
+      sourceUrl: 'https://www.history.navy.mil/our-collections/photography/numerical-list-of-images/nhhc-series/nh-series/26-G-03000/26-G-3046.html',
+      alt: '1943年12月26日ごろ、ニューブリテン島グロスター岬の浅瀬を歩いて上陸する米海兵隊員と米沿岸警備隊員。水陸両用車が先行し、兵士が担架や車両を運ぶ',
+      title: 'グロスター岬に上陸する米海兵隊と沿岸警備隊',
+      dateLabel: '1943年12月26日ごろ',
+      credit: '撮影者不詳／U.S. Coast Guard・U.S. National Archives（26-G-3046）・Naval History and Heritage Command（改変なし）',
+      license: 'Public Domain（米国連邦政府著作物）',
+    },
+  ],
+
 }

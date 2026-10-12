@@ -1469,6 +1469,15 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
       license: 'Public Domain Mark（米国連邦政府著作物）',
     }),
   ],
+  '1943-11-01': [
+    commonsFigure('Greater East Asia Conference.JPG', {
+      alt: '1943年11月、東京の帝国議事堂前に並ぶ大東亜会議出席者。左からバー・モウ、張景恵、汪兆銘、東条英機、ワンワイタヤコーン、ラウレル、チャンドラ・ボース。六政府の代表と自由インド仮政府の陪席者を含む',
+      title: '大東亜会議の出席者と自由インド仮政府の陪席者',
+      dateLabel: '1943年11月5〜6日（会議開催期間）',
+      credit: '撮影者不詳／毎日新聞社『昭和史 第11巻』掲載写真・Wikimedia Commons（現行画像は明暗・傾き等を調整）',
+      license: 'Public Domain（PD-Japan-oldphoto）',
+    }),
+  ],
   '1943-10-14': [
     commonsFigure("Jose P. Laurel with Shigenori Kuroda during the Second Philippine Republic's inaugural session.jpg", {
       alt: '1943年10月14日、発足したフィリピン共和国のラウレル大統領と日本軍司令官黒田重徳が国民議会の式典に臨む',

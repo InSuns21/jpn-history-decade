@@ -148,6 +148,14 @@
     {
       "id": "material-mobilization-plan-1943",
       "core": true
+    },
+    {
+      "id": "enterprise-reorganization-finance-act-1943",
+      "core": true
+    },
+    {
+      "id": "regional-administrative-councils-1943",
+      "core": true
     }
   ]
 }

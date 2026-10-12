@@ -12,9 +12,9 @@
 
 ### 本線
 
-**activeな本線の個別実装PLANはない（2026-10-11）。** 1943年3月18日〜5月8日のJH165〜168は published。S05-E・S09-Fは保留、S10-Dは1943年5月8日まで延長し、独立監査不要と判定した。[完了PLAN](../plan_done/MARCH_MAY_1943_STATE_TRANSITION_IMPLEMENTATION_PLAN.md)へアーカイブ済み。次は1943年5月9日以後のphase cut（5月末の大東亜政略判断など）。
+**active PLAN:** [SEPTEMBER_OCTOBER_1943_PHILIPPINE_REPUBLIC_IMPLEMENTATION_PLAN.md](SEPTEMBER_OCTOBER_1943_PHILIPPINE_REPUBLIC_IMPLEMENTATION_PLAN.md)。JH173（1943年9月1〜30日）をpublishedとし、憲法採択・カリバピ承認・国民議会とラウレル選出を扱う。次は10月の共和国発足前後の制度移行。S05-E・S09-Fは保留、S10-Dは1943年7月まで延長済み。
 
-直前の完了フェーズは [1943年3月18日〜5月8日](../plan_done/MARCH_MAY_1943_STATE_TRANSITION_IMPLEMENTATION_PLAN.md)。過去の全フェーズは `plan_done/` を参照。
+直前の完了フェーズは [1943年5月9日〜8月31日](../plan_done/MAY_AUGUST_1943_STATE_TRANSITION_IMPLEMENTATION_PLAN.md)。過去の全フェーズは `plan_done/` を参照。
 
 ### 横断的な品質負債返済
 

@@ -16,7 +16,7 @@ for (const [legacy, info] of Object.entries(aliases)) {
   const metadata = parseYaml(front[1])
   assert.equal(metadata.routeKey, info.target)
   assert.ok(metadata.endDate >= legacy, 'merged period does not cover old date: ' + legacy)
-  const anchors = new Set([...source.matchAll(/\\{#([a-z0-9-]+)\\}/g)].map((match) => match[1]))
+  const anchors = new Set([...source.matchAll(/\{#([a-z0-9-]+)\}/g)].map((match) => match[1]))
   const remap = info.legacySectionRemap ?? {}
   for (const [oldSection, newSection] of Object.entries(remap)) {
     assert.ok(info.legacySections.includes(oldSection), 'remapped section must be a legacy anchor: ' + legacy + '#' + oldSection)

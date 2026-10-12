@@ -1,0 +1,21 @@
+{
+  "period": "1943-10-14",
+  "termRefs": [
+    {
+      "id": "philippine-republic-1943",
+      "core": true
+    },
+    {
+      "id": "japan-philippines-alliance-1943",
+      "core": true
+    },
+    {
+      "id": "philippines-constitution-1943",
+      "core": true
+    },
+    {
+      "id": "philippines-national-assembly-1943",
+      "core": false
+    }
+  ]
+}

@@ -16,6 +16,16 @@ export function resolvePeriodRouteKey(routeKey: string) {
   return alias?.target ?? routeKey
 }
 
+/** Keep a former article's section links meaningful when article boundaries change. */
+export function resolvePeriodSectionId(routeKey: string, sectionId?: string) {
+  if (!sectionId) return undefined
+  const alias = (periodAliases as Record<string, {
+    target: string
+    legacySectionRemap?: Record<string, string>
+  }>)[routeKey]
+  return alias?.legacySectionRemap?.[sectionId] ?? sectionId
+}
+
 export function findPeriod(routeKey: string) {
   const canonical = resolvePeriodRouteKey(routeKey)
   return periods.find((period) => period.routeKey === canonical)

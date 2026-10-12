@@ -15,6 +15,7 @@
 
 ## 参照・図版・接続
 - 旧route `1943-04-16` → `1943-03-30`。旧JH167の7節アンカー（rice-price-april16 / farmers-collection / household-prices-wages / rice-administration / cabinet-april20 / production-and-transport / materials-planning-april）と6用語IDを保持する。
+- S10-Dの関連年代リストから統合済み旧JH167の重複参照を削除し、新JH166へ一本化。4月1日の帝国銀行営業開始も全国銀行協会の資料へ接続。
 - JH166の従来の7節アンカーも保持。旧JH167の本文・用語別JSON・noImage設定を削除し、新JH166の13件の出典を重複整理した。旧JH166・旧JH167は図版採否を個別に検討済みで、統合後は史料画像の権利／埋込可能性が不十分なためnoImage理由を一つに整理した。3記事連続noImageの監査記録は記事統合で連続条件が消えたため削除した。
 - JH164終点（3月17日）→JH165（首相権限）→JH166（価格・運送・米価・閣僚）→JH168（4月30日年度計画）の対象期間・冒頭と次論点を接続。JH168のpreviousPeriodLabelを更新。
 

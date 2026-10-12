@@ -1497,4 +1497,14 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     }),
   ],
 
+  '1943-12-01': [
+    commonsFigure('80-G-205294.jpg', {
+      alt: '1943年12月4日のマーシャル諸島クェゼリン環礁。米空母機の攻撃を受けた日本側輸送船が礁湖内で爆発する様子を空から撮影した写真。背後に艦船と島の輪郭が見える',
+      title: 'クェゼリン環礁の日本側輸送船を攻撃する米空母機',
+      dateLabel: '1943年12月4日',
+      credit: 'U.S. Navy（撮影者不詳）／U.S. National Archives（80-G-205294）・Naval History and Heritage Command・Wikimedia Commons（改変なし）',
+      license: 'Public Domain（米国連邦政府著作物）',
+    }),
+  ],
+
 }

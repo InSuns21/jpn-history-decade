@@ -1,0 +1,29 @@
+{
+  "period": "1943-11-01",
+  "termRefs": [
+    {
+      "id": "munitions-ministry-1943",
+      "core": true
+    },
+    {
+      "id": "transport-communications-ministry-1943",
+      "core": true
+    },
+    {
+      "id": "greater-east-asia-conference-1943",
+      "core": true
+    },
+    {
+      "id": "greater-east-asia-joint-declaration-1943",
+      "core": true
+    },
+    {
+      "id": "free-india-provisional-government-1943",
+      "core": false
+    },
+    {
+      "id": "greater-east-asia-political-guidelines-1943",
+      "core": false
+    }
+  ]
+}

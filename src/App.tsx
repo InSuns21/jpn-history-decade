@@ -6,6 +6,7 @@ import {
   getPeriodNeighbors,
   getRelatedCrosscutting,
   periods,
+  resolvePeriodSectionId,
 } from './content-model/registry'
 import { activeTemplate } from './templates'
 
@@ -69,7 +70,7 @@ export function App() {
           next={neighbors.next}
           relatedCrosscutting={getRelatedCrosscutting(routeKey)}
           activeTermId={termId}
-          activeSectionId={sectionId}
+          activeSectionId={resolvePeriodSectionId(routeKey, sectionId)}
         />
       )
     }

@@ -32,6 +32,14 @@
     {
       "id": "food-control-act-1942",
       "core": true
+    },
+    {
+      "id": "operation-21-cancellation-1942-10-03",
+      "core": true
+    },
+    {
+      "id": "cape-esperance-battle-1942-10",
+      "core": true
     }
   ]
 }

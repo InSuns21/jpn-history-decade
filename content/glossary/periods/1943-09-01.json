@@ -1,0 +1,25 @@
+{
+  "period": "1943-09-01",
+  "termRefs": [
+    {
+      "id": "philippines-constitution-1943",
+      "core": true
+    },
+    {
+      "id": "kalibapi-1942-1943",
+      "core": true
+    },
+    {
+      "id": "philippines-independence-preparatory-commission-1943",
+      "core": true
+    },
+    {
+      "id": "philippines-national-assembly-1943",
+      "core": false
+    },
+    {
+      "id": "philippines-independence-guidelines-1943",
+      "core": false
+    }
+  ]
+}

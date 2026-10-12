@@ -1,5 +1,8 @@
 # 実装状況
 
+- 2026-10-13：JH178・JH179の1943年12月フェーズについて、[PR #490](https://github.com/InSuns21/jpn-history-decade/pull/490)のPR CI/Quality Checksとmain CI/Pagesがsuccessであることを実測。直近published JH179のfrontmatter・本文全5節・比較表を追跡査読し、史実の時点差・制度主体・留保分離を確認して修正不要と判断。S05/S09/S10の12月延長と新規地図・横断記事は保留／不要、[12月PLAN](../plan_done/DECEMBER_1943_CAIRO_DECLARATION_IMPLEMENTATION_PLAN.md)をcompletedとしてarchive。[1944年1月以降のphase cut](../plan/JANUARY_FEBRUARY_1944_STATE_TRANSITION_IMPLEMENTATION_PLAN.md)はサイドル上陸（1月2日）、軍需発注・企業整備・資金融通（11・18日）、マーシャル攻略（31日〜2月前半）を3記事として設計。archive変更そのもののCI/Pagesは本PRの検査で別途実測する。
+
+
 README には概要だけを置き、フェーズ進捗・監査結果・地図判定・CI実績などの詳細はこの文書で管理します。
 
 - 2026-10-11：1942年6月8〜30日の2記事（JH138、旧JH139）を1記事に統合。旧route `1942-06-18` の5節アンカー・8用語IDを新JH138へ互換移管し、隣接JH140の前時代ラベルを接続。アッツ住民の日本軍による拘束、アトカの米軍による焼却・避難をそれぞれ明示。6/25攻勢準備と7/2共同指令を分け、7月の記事との後知恵による重複を整理。図版採否は6月全体で再判定し、短期のnoImage連続登録を更新。1942年39→38記事、総年代166→165記事。直近公開JH168の全文追跡査読は現行本文と史料を再確認し、今回は維持と判定。詳細は [粒度レビュー](PERIOD_GRANULARITY_REVIEW_1942.md)。

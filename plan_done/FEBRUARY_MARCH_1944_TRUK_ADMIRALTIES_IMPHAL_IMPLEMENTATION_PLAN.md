@@ -1,6 +1,6 @@
 # 1944年2月17日〜3月29日：トラック・エニウェトクからアドミラルティ・インパールへ PLAN
 
-**Status:** active — JH183／JH184／JH185のpublished原稿・用語・図版を実装済み。PR／main CI・Pagesとフェーズ完了ゲートは検証中。  
+**Status:** completed — JH183／JH184／JH185公開、PR／main CI・Pagesのsuccess実測、横断publication gate・監査要否判定完了。  
 **着手:** 2026-10-13（日本時間）  
 **前工程:** [1944年1月〜2月16日の完了PLAN](../plan_done/JANUARY_FEBRUARY_1944_STATE_TRANSITION_IMPLEMENTATION_PLAN.md)  
 **対象:** 1944年2月17日〜3月29日（暫定）。次の明確な境界候補は3月30日のパラオ方面空母攻撃。
@@ -95,3 +95,13 @@ JH183 → JH184 → JH185 の順に、各記事の**前記事追跡査読**、�
 6. [National Army Museum, Battles of Imphal and Kohima](https://www.nam.ac.uk/explore/battle-imphal)
 7. [National Army Museum, The Far East Campaign](https://www.nam.ac.uk/explore/far-east-campaign)
 8. [NHHC, Alabama III (BB-60), 30 March Palau strike](https://www.history.navy.mil/research/histories/ship-histories/danfs/a/alabama-iii.html)
+
+## フェーズ完了・公開検証（2026-10-13）
+
+- **対象:** JH183（1944-02-17〜28）・JH184（02-29〜03-07）・JH185（03-08〜29）の3 published記事。各記事の主題、用語、図版採否、地図要否、前記事との接続を各実装時に判断済み。短期独立理由（12日／8日）も記録済み。
+- **横断publication gate:** S05「政治参加」、S09「占領統治」、S10「戦時統制と資源配分」は当該期間に固有の制度比較軸の変化がないため延長なし。戦地補給と国内軍需制度を混同しない。新規横断記事なし。
+- **地図・図版:** 各記事の史料写真採用と権利確認を記録済み。新規MapLibre地図はData／Style／Human Visual Auditを満たしたgeometryがなく公開しない。
+- **独立監査:** 各記事の隣接接続と今回の横断publication gateを超える、複数記事間に固有の未解決な矛盾・反復仮説を特定できないため、定型の追加全体監査は実施しない。
+- **公開検証の実測:** JH185 [PR #498](https://github.com/InSuns21/jpn-history-decade/pull/498) はmain `0eb8dec99c1c39c62a4af1af7309cf1be7aa3b2a`へmerge済み。PR CI run `38352895302` とQuality Checks run `38352895300` はsuccess、main CI run `38352973340` とPages deploy run `38352973478` もsuccess。JH183/JH184もmainの履歴へmerge済み。以上により当フェーズの公開ゲートは合格。
+- **次工程入口・JH185追跡査読:** `content/periods/1944-03-08.md` の最新published本文全6節・比較表とfrontmatter（summary／snapshot／changes／contemporaryAssumptions／interpretiveCautions／nextIssues／sources／図版根拠）を全文再読。3月8日の戦役基準と6日の先行渡河、英印軍の道路遮断と空輸、3月29日と4月以後の結果、軍と自由インド仮政府の主体差、過密な部隊名、留保主文化、末尾反復を点検。本文冒頭の「前の記事で扱った」および結尾の「次の記事境界では」は読者向け歴史叙述ではなく制作側のメタ表現だったため、前者を削除し、後者を3月29日のパラオでの艦艇退避判断に差し替えて米国国立公文書館の根拠を付けた。**改稿対象はこの2か所のみで、残りの因果説明は維持。**機械コマンド `npm run audit:previous -- --next JH186` はGitHub接続環境で未実行。人手査読・前回のgreenと今回変更のCI結果を区別する。
+- **継続:** 次のactive PLANは [1944年3月30日以降のパラオ空襲・連合艦隊指揮・コヒマ・ニューギニア](../plan/MARCH_MAY_1944_PALAU_KOHIMA_HOLLANDIA_IMPLEMENTATION_PLAN.md)。

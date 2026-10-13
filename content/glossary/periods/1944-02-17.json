@@ -1,0 +1,25 @@
+{
+  "period": "1944-02-17",
+  "termRefs": [
+    {
+      "id": "hailstone-operation-1944",
+      "core": true
+    },
+    {
+      "id": "catchpole-operation-1944",
+      "core": true
+    },
+    {
+      "id": "truk-base-1944",
+      "core": true
+    },
+    {
+      "id": "eniwetok-atoll-1944",
+      "core": true
+    },
+    {
+      "id": "kwajalein-atoll-1944",
+      "core": false
+    }
+  ]
+}

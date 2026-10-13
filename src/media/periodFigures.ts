@@ -1537,5 +1537,14 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
       license: 'Public Domain Mark（米国連邦政府著作物）',
     }),
   ],
+  '1944-02-17': [
+    commonsFigure('80-G-216899 Carrier raid on Truk, 17-18 February 1944.jpg', {
+      alt: '1944年2月17日、トラック島近海で米軍空母機の攻撃を避けて転舵する日本海軍駆逐艦秋風。艦の航跡と周囲に上がる機銃掃射の水柱、頭上を飛ぶ米軍機が写る',
+      title: 'トラック空襲下で回避行動を取る日本の駆逐艦',
+      dateLabel: '1944年2月17日',
+      credit: 'U.S. Navy（撮影者不詳）／National Archives・Naval History and Heritage Command（80-G-216899）・Wikimedia Commons（Commons収録画像は余白を裁断済み、サイトでの追加改変なし）',
+      license: 'Public Domain Mark（米国連邦政府著作物）',
+    }),
+  ],
 
 }

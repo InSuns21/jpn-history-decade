@@ -1,0 +1,29 @@
+{
+  "period": "1944-01-11",
+  "termRefs": [
+    {
+      "id": "munitions-ministry-1943",
+      "core": true
+    },
+    {
+      "id": "order-coordination-1944",
+      "core": true
+    },
+    {
+      "id": "second-sector-enterprise-reorganization-1944",
+      "core": true
+    },
+    {
+      "id": "munitions-designated-lenders-1944",
+      "core": true
+    },
+    {
+      "id": "munitions-company-1944",
+      "core": false
+    },
+    {
+      "id": "war-production-enterprise-reorganization-1943",
+      "core": false
+    }
+  ]
+}

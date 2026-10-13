@@ -1519,4 +1519,14 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     },
   ],
 
+  '1944-01-01': [
+    commonsFigure('Troops of the 32d Division near Saidor.jpg', {
+      alt: '1944年1月、ニューギニア北岸サイドル付近にいる米陸軍第32歩兵師団の兵士。熱帯の現地で活動する上陸部隊の姿',
+      title: 'サイドル付近の米第32歩兵師団の兵士',
+      dateLabel: '1944年1月（撮影日未詳）',
+      credit: 'U.S. Army Signal Corps／U.S. Army Center of Military History・Wikimedia Commons（改変なし）',
+      license: 'Public Domain（米陸軍の公式写真）',
+    }),
+  ],
+
 }

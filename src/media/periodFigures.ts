@@ -1557,4 +1557,14 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     }),
   ],
 
+
+  '1944-03-08': [
+    commonsFigure('Imphalradio.jpg', {
+      alt: '1944年のインパール戦役でシク教徒の通信兵が携帯無線機を操作し、前哨部隊からの日本軍位置情報を英印軍将校へ伝える様子。撮影日は3月から7月の間で未確定',
+      title: 'インパール方面で無線連絡を担う英印軍の通信兵',
+      dateLabel: '1944年3月8日〜7月3日の間（撮影日未詳）',
+      credit: 'British Information Service／U.S. Library of Congress（cph.3b24977）・Wikimedia Commons（改変なし）',
+      license: 'Public Domain（PD-BritishGov：英国政府制作写真）',
+    }),
+  ],
 }

@@ -1,0 +1,33 @@
+{
+  "period": "1944-03-08",
+  "termRefs": [
+    {
+      "id": "ugo-operation-1944",
+      "core": true
+    },
+    {
+      "id": "fifteenth-army-burma-1944",
+      "core": true
+    },
+    {
+      "id": "imphal-1944",
+      "core": true
+    },
+    {
+      "id": "kohima-dimapur-road-1944",
+      "core": true
+    },
+    {
+      "id": "fourth-corps-india-1944",
+      "core": true
+    },
+    {
+      "id": "indian-national-army-1944",
+      "core": true
+    },
+    {
+      "id": "free-india-provisional-government-1943",
+      "core": false
+    }
+  ]
+}

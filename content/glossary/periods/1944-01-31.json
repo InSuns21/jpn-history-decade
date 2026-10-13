@@ -1,0 +1,21 @@
+{
+  "period": "1944-01-31",
+  "termRefs": [
+    {
+      "id": "flintlock-operation-1944",
+      "core": true
+    },
+    {
+      "id": "kwajalein-atoll-1944",
+      "core": true
+    },
+    {
+      "id": "munitions-ministry-1943",
+      "core": false
+    },
+    {
+      "id": "marshall-carrier-raid-dec1943",
+      "core": false
+    }
+  ]
+}

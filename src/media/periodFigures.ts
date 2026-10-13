@@ -1547,4 +1547,14 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
     }),
   ],
 
+  '1944-02-29': [
+    commonsFigure('First Wave at Admiralty Islands.jpg', {
+      alt: '1944年2月29日、アドミラルティ諸島ロス・ネグロス島の海岸へ上陸する米陸軍の先遣兵。背後の上陸艇と、海岸の狭い荷揚げ場所が見える',
+      title: 'ロス・ネグロス島へ上陸する米軍先遣部隊',
+      dateLabel: '1944年2月29日',
+      credit: 'U.S. Army（撮影者不詳）／U.S. Army Center of Military History・Wikimedia Commons（改変なし）',
+      license: 'Public Domain（米国連邦政府著作物）',
+    }),
+  ],
+
 }

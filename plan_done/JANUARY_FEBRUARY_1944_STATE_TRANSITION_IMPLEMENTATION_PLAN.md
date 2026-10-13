@@ -1,6 +1,6 @@
 # 1944年1月〜2月前半：軍需資源配分とニューギニア・マーシャル防衛 PLAN
 
-**Status:** active — JH180〜JH182のpublished原稿・用語・図版判定を実装済み。フェーズ完了判定・PR/main CI・Pages確認は別工程。  
+**Status:** completed — JH180〜JH182のpublished実装・追跡査読・図版／地図・横断記事判断を完了し、各記事のPR CI/main CI/Pages成功を実測。2026-10-13にarchive。  
 **着手:** 2026-10-13（日本時間）  
 **前工程:** [1943年12月の完了PLAN](../plan_done/DECEMBER_1943_CAIRO_DECLARATION_IMPLEMENTATION_PLAN.md)  
 **対象:** 1944年1月1日〜2月16日（暫定）。次の境界候補は2月17日。
@@ -68,6 +68,13 @@
 - **図版:** NHHCの米海軍公式写真80-G-214679（1944年2月7日・第52任務部隊のクェゼリン礁湖内停泊）をWikimedia Commons版で採用。写真説明・日付・原所蔵・撮影者不詳・米国連邦政府著作物Public Domain Mark・改変なしを確認。米艦船の停泊と補給基盤の獲得を本文の主題へ結びつける。新規noImage登録なし。
 - **地図と横断記事:** 環礁の地形的な関係は水路・礁湖・飛行場の本文説明と主要拠点比較表で説明する。検証済みの島単位ジオメトリとHuman Visual Auditをこの工程で準備できないため新規MapLibre地図は保留。S05・S09の政治・軍政制度の転換は今回の中心問いに含まれず、S10は1月の国内軍需制度について既に延長済み。今回は新たな横断記事・期間延長を追加しない。
 - **検証:** 新記事・用語・図版を同一PRで検証する。GitHub接続からローカル `npm run check` と `audit:previous` は実行不能。PR CI・main CI・Pages deployは確認可能な実行結果だけを完了記録とする。
+
+## 最終受入判定・archive（2026-10-13）
+
+- **JH180・JH181・JH182:** 3記事ともpublished、期間は**1944年1月1日〜2月16日**で切れ目・重複なし。JH180〜182の各実装記録に史実・隣接接続・用語・図版・地図要否を記録済み。S10は1944年1月まで制度分担の比較を延長済み。S05／S09の延長、新規横断記事、新規地図は不要・保留を判断した。多年代をまたぐ独立監査を要する未解決の具体的仮説はなし。
+- **CI実測:** JH180 PR #492、JH181 PR #493、JH182 PR #494 でCI・Quality Checks success。mainのコミット `beb1ece7`（JH180）、`aaf7c6ad`（JH181）、`e9a415d5`（JH182）に対しCIとDeploy GitHub Pagesがいずれもsuccess。特に最新main `e9a415d5` ではCI run `38336367396`／Pages run `38336367427` がcompleted/success。**ローカル `npm run check` の実行実績ではない。** 本archive変更を含む後続PRのCI／main Pagesは別に確認する。
+- **次工程の入口での追跡査読:** 最新published JH182（`content/periods/1944-01-31.md`）を全文再読し、1月31日／2月1〜4日／12日の時点差、米軍の島と泊地の確保・日本側航空反撃の主体差、本文と留保の機能分離、重要用語・史料・比較表を確認。確定的な改稿必須項目はなく現状維持。GitHub接続での意味的査読であり、`npm run audit:previous -- --next JH183` の実行とは区別する。詳細を[次のactive PLAN](../plan/FEBRUARY_MARCH_1944_TRUK_ADMIRALTIES_IMPHAL_IMPLEMENTATION_PLAN.md)に記録。
+- **次フェーズ:** 2月17日のトラック空襲とエニウェトク上陸をJH183の入口とし、2月29日のロス・ネグロス上陸、3月8日のインパール方面攻勢との境界を判定した。3月30日以降のパラオ空襲は先取りしない。
 
 ## 実装順・完了条件
 

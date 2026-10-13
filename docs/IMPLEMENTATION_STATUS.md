@@ -1,5 +1,8 @@
 # 実装状況
 
+- 2026-10-13：1944年1月1日〜2月16日のJH180〜182をpublished。PR #492／#493／#494 のCI・Quality Checks、各main CI／Pagesがsuccessであることを確認。最新main `e9a415d5` のCI run `38336367396`、Pages run `38336367427` はともにsuccess。S10は1月まで延長、S05／S09・新規横断記事・地図は保留または不要と判定。latest JH182の本文5節・frontmatter・比較表を追跡査読し、留保主文化・過密細部・史実の時点混同などの改稿必須事項なしとして維持。ローカル `audit:previous`／`npm run check` はGitHub接続では未実行。[1月〜2月16日PLAN](../plan_done/JANUARY_FEBRUARY_1944_STATE_TRANSITION_IMPLEMENTATION_PLAN.md)はcompletedとしてarchive。新規[2月17日〜3月29日PLAN](../plan/FEBRUARY_MARCH_1944_TRUK_ADMIRALTIES_IMPHAL_IMPLEMENTATION_PLAN.md)でJH183（トラック・エニウェトク）、JH184（アドミラルティ初動）、JH185（インパール攻勢）の3記事を暫定設定。3月30日以降は次のphase cut。
+
+
 - 2026-10-13：JH178・JH179の1943年12月フェーズについて、[PR #490](https://github.com/InSuns21/jpn-history-decade/pull/490)のPR CI/Quality Checksとmain CI/Pagesがsuccessであることを実測。直近published JH179のfrontmatter・本文全5節・比較表を追跡査読し、史実の時点差・制度主体・留保分離を確認して修正不要と判断。S05/S09/S10の12月延長と新規地図・横断記事は保留／不要、[12月PLAN](../plan_done/DECEMBER_1943_CAIRO_DECLARATION_IMPLEMENTATION_PLAN.md)をcompletedとしてarchive。[1944年1月以降のphase cut](../plan/JANUARY_FEBRUARY_1944_STATE_TRANSITION_IMPLEMENTATION_PLAN.md)はサイドル上陸（1月2日）、軍需発注・企業整備・資金融通（11・18日）、マーシャル攻略（31日〜2月前半）を3記事として設計。archive変更そのもののCI/Pagesは本PRの検査で別途実測する。
 
 

@@ -1,0 +1,13 @@
+{
+  "period": "1944-01-01",
+  "termRefs": [
+    {
+      "id": "saidor-landing-1944",
+      "core": true
+    },
+    {
+      "id": "eighth-area-army-rabaul-1944",
+      "core": true
+    }
+  ]
+}

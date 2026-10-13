@@ -1,0 +1,21 @@
+{
+  "period": "1944-02-29",
+  "termRefs": [
+    {
+      "id": "brewer-operation-1944",
+      "core": true
+    },
+    {
+      "id": "admiralty-islands-1944",
+      "core": true
+    },
+    {
+      "id": "momote-airfield-1944",
+      "core": true
+    },
+    {
+      "id": "seeadler-harbor-1944",
+      "core": true
+    }
+  ]
+}

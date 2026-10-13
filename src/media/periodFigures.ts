@@ -1528,5 +1528,14 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
       license: 'Public Domain（米陸軍の公式写真）',
     }),
   ],
+  '1944-01-31': [
+    commonsFigure('U.S. Navy ships of Task Force 52 anchored in Kwajalein Lagoon, 7 February 1944 (80-G-214679).jpg', {
+      alt: '1944年2月7日、クェゼリン環礁の礁湖内に並ぶ米海軍の艦船。手前から停泊艦や輸送艦が見え、環礁の内水面が新しい補給拠点となった様子を示す',
+      title: '2月7日、クェゼリン環礁の礁湖内に停泊する米艦隊',
+      dateLabel: '1944年2月7日',
+      credit: 'U.S. Navy（撮影者不詳）／Naval History and Heritage Command（80-G-214679）・Wikimedia Commons（改変なし）',
+      license: 'Public Domain Mark（米国連邦政府著作物）',
+    }),
+  ],
 
 }

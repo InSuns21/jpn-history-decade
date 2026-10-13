@@ -14,7 +14,9 @@
 
 1943年12月は[完了PLAN](../plan_done/DECEMBER_1943_CAIRO_DECLARATION_IMPLEMENTATION_PLAN.md)へarchive済み。JH178（12月1〜14日・カイロ宣言の公表とマーシャル空襲）とJH179（12月15〜31日・アラウェとグロスター岬）を公開し、PR #490、main CI、Pages deployの成功を実測。12月分のS05・S09・S10の延長は保留、新規地図・横断記事も不要と判定した。
 
-**現在のactive PLAN:** [1944年1月〜2月前半の国内軍需・ニューギニア・マーシャル防衛](JANUARY_FEBRUARY_1944_STATE_TRANSITION_IMPLEMENTATION_PLAN.md)。予定記事はJH180（1月1〜10日・サイドル上陸）、JH181（1月11〜30日・発注調整と企業整備・資金融通）、JH182（1月31日〜2月16日・マーシャル諸島攻略）の3本。2月17日のエニウェトク上陸・トラック空襲は次のphase cutとする。
+**現在のactive PLAN:** [1944年2月17日〜3月29日のトラック・エニウェトク／アドミラルティ／インパール](./FEBRUARY_MARCH_1944_TRUK_ADMIRALTIES_IMPHAL_IMPLEMENTATION_PLAN.md)。暫定JH183（2月17〜28日）・JH184（2月29日〜3月7日、短期独立性を本文実装時に再判定）・JH185（3月8〜29日）の3本。3月30日のパラオ方面空母攻撃を次の境界候補とする。
+
+1944年1月〜2月16日のJH180〜JH182は3記事公開、S10を1944年1月まで延長、各PR／main CI／Pages successを確認し[完了PLAN](../plan_done/JANUARY_FEBRUARY_1944_STATE_TRANSITION_IMPLEMENTATION_PLAN.md)へアーカイブ済み。直前JH182の追跡査読は次のactive PLAN内に記録。
 
 ### 横断的な品質負債返済
 

@@ -1575,5 +1575,12 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
       credit: 'U.S. Navy（撮影者不詳）／Naval History and Heritage Command（80-G-251053）・Wikimedia Commons（改変なし）',
       license: 'Public Domain（米国連邦政府著作物）',
     }),
+    commonsFigure('Akashi burning 1944.jpg', {
+      alt: '1944年3月30日のパラオ空襲で被弾し、船体から煙と炎を上げる日本海軍の修理艦「明石」',
+      title: 'パラオ空襲で炎上する修理艦「明石」',
+      dateLabel: '1944年3月30日',
+      credit: 'U.S. Navy（撮影者不詳）／Wikimedia Commons（改変なし）',
+      license: 'Public Domain（米国連邦政府著作物）',
+    }),
   ],
 }

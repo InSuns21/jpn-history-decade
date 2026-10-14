@@ -1567,4 +1567,13 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
       license: 'Public Domain（PD-BritishGov：英国政府制作写真）',
     }),
   ],
+  '1944-03-30': [
+    commonsFigure('Carrier Air Group 10 aircraft over USS Enterprise (CV-6) off Palau in March 1944.jpg', {
+      alt: '1944年3月30日、パラオ攻撃へ向かう米空母エンタープライズ所属の雷撃機と急降下爆撃機。海面の空母と上空を飛ぶ編隊が写る',
+      title: 'パラオ空襲へ向かう米空母機の編隊',
+      dateLabel: '1944年3月30日',
+      credit: 'U.S. Navy（撮影者不詳）／Naval History and Heritage Command（80-G-251053）・Wikimedia Commons（改変なし）',
+      license: 'Public Domain（米国連邦政府著作物）',
+    }),
+  ],
 }

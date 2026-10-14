@@ -1,0 +1,25 @@
+{
+  "period": "1944-03-30",
+  "termRefs": [
+    {
+      "id": "task-force-58-1944",
+      "core": true
+    },
+    {
+      "id": "palau-fleet-base-1944",
+      "core": true
+    },
+    {
+      "id": "combined-fleet-hq-1944",
+      "core": true
+    },
+    {
+      "id": "z-plan-1944",
+      "core": true
+    },
+    {
+      "id": "truk-base-1944",
+      "core": false
+    }
+  ]
+}

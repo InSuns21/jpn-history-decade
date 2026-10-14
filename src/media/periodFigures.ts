@@ -1567,6 +1567,15 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
       license: 'Public Domain（PD-BritishGov：英国政府制作写真）',
     }),
   ],
+  '1944-04-04': [
+    commonsFigure('Douglas Dakota air drop Admin Box 1944.jpg', {
+      alt: '1944年、ビルマ西部アラカン方面の孤立した英印軍へ物資を投下した直後に上昇するダコタ輸送機。河床近くに補給物資を下ろす航空補給の方法を示す。コヒマでの撮影ではない',
+      title: '英印軍の包囲陣地へ物資を届ける航空補給（アラカン方面）',
+      dateLabel: '1944年2月ごろ（アラカン方面での撮影、コヒマではない）',
+      credit: 'Royal Air Force公式撮影者（氏名不詳）／Imperial War Museums（CI 602）・Wikimedia Commons（改変なし）',
+      license: 'Public Domain（英国政府制作写真、PD-UKGov）',
+    }),
+  ],
   '1944-03-30': [
     commonsFigure('Carrier Air Group 10 aircraft over USS Enterprise (CV-6) off Palau in March 1944.jpg', {
       alt: '1944年3月30日、パラオ攻撃へ向かう米空母エンタープライズ所属の雷撃機と急降下爆撃機。海面の空母と上空を飛ぶ編隊が写る',

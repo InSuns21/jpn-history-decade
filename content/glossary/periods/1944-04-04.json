@@ -1,0 +1,29 @@
+{
+  "period": "1944-04-04",
+  "termRefs": [
+    {
+      "id": "thirty-first-division-kohima-1944",
+      "core": true
+    },
+    {
+      "id": "indian-161-brigade-kohima-1944",
+      "core": true
+    },
+    {
+      "id": "air-supply-imphal-kohima-1944",
+      "core": true
+    },
+    {
+      "id": "fifteenth-army-burma-1944",
+      "core": false
+    },
+    {
+      "id": "kohima-dimapur-road-1944",
+      "core": true
+    },
+    {
+      "id": "fourth-corps-india-1944",
+      "core": false
+    }
+  ]
+}

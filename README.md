@@ -1,127 +1,53 @@
 # 近現代史24
 
-**「1800年から始める日本史」を副題に、1800年から現代までの日本史を、時代に応じた粒度で社会構造の変化として読むプロジェクト。**
-
-政治史を主軸に、経済・社会・人口・外交・軍事・技術・交通・情報・文化・災害・地理などを横断し、各時代を「その時点の人々から見た社会」として定点観測します。
+**「1800年から始める日本史」**を副題に、1800年から現代までの日本史を、社会の仕組みとその変化から読み解くプロジェクトです。
 
 > 歴史を「事件の列」ではなく、社会システムの状態遷移として読む。
 
-**公開サイト:** [GitHub Pages](https://insuns21.github.io/jpn-history-decade/)
+**[公開サイト（GitHub Pages）](https://insuns21.github.io/jpn-history-decade/)**
+
+## このサイトについて
+
+政治史を軸に、経済・社会・人口・外交・軍事・交通・技術・文化・地理などを結びつけ、各時代の人々に何が可能で、何が制約になっていたかを描きます。基本は10年単位ですが、変化の大きい時期は年・月・日単位まで粒度を調整します。
+
+主な読者は、日本史を教養として体系的に学びたい人です。中学校の歴史教科書程度の知識を前提に、高校生でも本文から「誰が何をし、何が変わったか」を追える説明を目指します。
+
+掲載内容は次のとおりです。
+
+- **年代史**：各時代の状態と前後の変化
+- **構造史・テーマ史**：制度や社会の長期的な変化
+- **重要用語・史料・出典**：本文を支える説明と参照先
+- **主題地図・図版**：歴史理解に役立つ場合に掲載する資料
 
 ## 現在の実装
 
-- Vite + React + TypeScript による GitHub Pages 向け静的サイト
-- hash ベースのルーティング
-- 年代史・構造史・テーマ史を Markdown + frontmatter から共通コンテンツモデルへコンパイル
-- 必要な記事だけ MapLibre GL JS の主題地図を表示
-- GitHub Actions で品質チェックし、`main` 更新時に GitHub Pages へ自動デプロイ
-- 1800〜1943年12月31日までの年代史170ページを実装。1943年5〜8月のJH169〜172ではアッツ島の喪失と戦況公表、大東亜政略指導大綱、企業整備・地方行政、ビルマ独立・日タイ領土条約を扱い、S05・S09は延長保留、S10を7月まで延長して[完了PLAN](plan_done/MAY_AUGUST_1943_STATE_TRANSITION_IMPLEMENTATION_PLAN.md)へアーカイブした。JH173は9月のフィリピン憲法採択・代表選出、JH174は10月前半のラウレルらの訪日と政府発足準備、JH175は10月14日の共和国発足と大統領就任、日比同盟条約の署名・批准・実施・批准書交換、民政と日本軍の権限関係を扱う。[完了PLAN](plan_done/SEPTEMBER_OCTOBER_1943_PHILIPPINE_REPUBLIC_IMPLEMENTATION_PLAN.md)に進捗と直前記事の査読記録を掲載。1943年11月のphase cutを完了し、[大東亜会議と中央太平洋戦局の完了PLAN](plan_done/NOVEMBER_1943_GREATER_EAST_ASIA_CONFERENCE_IMPLEMENTATION_PLAN.md)でJH176（11月1〜19日）・JH177（11月20〜30日）を実装した。JH176では11月1日の国内省庁再編と5〜6日の大東亜会議・共同宣言を実装し、会議参加六政府と自由インド仮政府の陪席、宣言の理念と軍事上の権限の違いを整理した。JH177では11月20日以降のタラワ・マキン上陸による前方基地の喪失と島嶼補給の制約を扱い、11月のカイロ会談と12月1日の共同声明公表を区別した。続く[JH178実装PLAN](plan/DECEMBER_1943_CAIRO_DECLARATION_IMPLEMENTATION_PLAN.md)で1943年12月1〜14日を扱い、カイロ宣言の対外公表、大東亜共同宣言との政治的な対照、12月4日のクェゼリン環礁空襲を接続した。JH179では12月15日のアラウェ上陸と26日のグロスター岬上陸、30日までの飛行場地区確保を、ラバウル方面の防衛・海空輸送・滑走路修復の時間差として整理した。12月実装PLANは[完了・アーカイブ済み](plan_done/DECEMBER_1943_CAIRO_DECLARATION_IMPLEMENTATION_PLAN.md)。[1944年1月〜2月前半の完了PLAN](plan_done/JANUARY_FEBRUARY_1944_STATE_TRANSITION_IMPLEMENTATION_PLAN.md)では、サイドル上陸、1月11・18日の軍需制度変更、1月31日からのマーシャル諸島攻略を分離して扱う。 JH180はサイドル上陸後の第十八軍のマダン撤退命令と山地・舟艇輸送を、JH181は1月11日発注調整、13日電力使用制限、18日第二種工業部門企業整備・軍需会社向け指定金融機関の制度を、それぞれ決定と実行を分けて掲載した。JH182は1月31日のクェゼリン環礁周辺小島への上陸、2月1〜4日の主要基地占領、マジュロ泊地の確保、12日の日本軍による航空反撃を扱い、島嶼守備と海空補給の差を整理した。S10「戦時統制と資源配分」は発注・工場系列・動力・金融の分担比較を1944年1月まで延長した。 JH180〜182のPR・main CI・Pagesは成功を実測し、前PLANをアーカイブした。[1944年2月17日〜3月29日のフェーズ](plan_done/FEBRUARY_MARCH_1944_TRUK_ADMIRALTIES_IMPHAL_IMPLEMENTATION_PLAN.md)はJH183（トラック／エニウェトク）、JH184（ロス・ネグロス）、JH185（インパール攻勢）を公開済み。JH185 [PR #498](https://github.com/InSuns21/jpn-history-decade/pull/498) のPR CI・main CI・Pagesはsuccessを実測し、フェーズをcompletedとしてarchiveした。次は[1944年3月30日〜5月5日のactive PLAN](plan/MARCH_MAY_1944_PALAU_KOHIMA_HOLLANDIA_IMPLEMENTATION_PLAN.md)で、パラオ・ヤップ・ウリシ・ウォレアイ空襲と古賀峯一連合艦隊司令長官の遭難、コヒマの包囲・増援、ホーランジア／アイタペ上陸、トラック再空襲と連合艦隊指揮継承を暫定4記事として切り分ける。1942年の遡及記事粒度調整と旧URL・アンカー保全は[レビュー記録](docs/PERIOD_GRANULARITY_REVIEW_1942.md)を参照。
+- Vite / React / TypeScript による GitHub Pages 向け静的サイト
+- Markdown + frontmatter の原稿を共通コンテンツモデルへ変換し、テンプレートで表示
+- 必要な記事だけ MapLibre GL JS による主題地図を表示
+- GitHub Actions による品質チェックと公開サイトへの自動デプロイ
 
-フェーズごとの進捗、監査結果、地図判定、CI実績などは [実装状況](docs/IMPLEMENTATION_STATUS.md) に分離しています。
-
-## 対象読者
-
-主対象は、**日本史を教養として体系的に読みたい読者**です。年齢や所属は限定しません。文章の難易度と説明の組み立ては、**高校生が無理なく読み進め、本文だけで「誰が何をし、何が変わったか」を追える水準**を基準にします。前提知識は**中学校の歴史教科書を読んだ程度**とし、高校日本史で詳しく扱う制度・人物・事件・用語は本文内で役割や位置づけを補います。内容の到達点は下げず、大学入試の論述・記述の整理にも利用できる水準を目指します。受験テクニックを公開面の中心には置きません。
-
-## 公開表示の方針
-
-公開サイトは、日本史の**教科書・資料集に近いフォントと文面**を基本とします。
-
-- 本文は明朝系、見出し・ナビ・表見出しはゴシック系
-- 平明な教科書調で叙述
-- 編集ステータス、TODO、未実装候補、企画書、変更履歴など制作側の情報は公開しない
-- 公開面は歴史本文、表・図・地図、史料・出典、ナビゲーションを中心とする
-- 歴史理解を助ける図版は Public Domain / CC0 / CC BY を中心に、出典・権利状態を確認して掲載する
-- デザイン品質は「上質な教科書・歴史資料集」を軸に、派手さではなくタイポグラフィ、余白、情報階層、レスポンシブ、アクセシビリティの完成度で高水準を目指す
-
-## コンテンツ実装方針
-
-歴史本文は、React/HTMLへ直書きせず **Markdown + frontmatter を正本**とし、build前に共通コンテンツモデルへコンパイルします。表示はテンプレート層へ分離し、`src/templates/index.ts` の active template を差し替えるだけでサイト全体のデザインを変更できる構成です。
-
-- 原稿：Markdown + frontmatter
-- コンテンツcompiler：frontmatter validation・用語/出典/地図参照整合性・中間モデル生成
-- 表示：React template
-- 地図：MarkdownにはMapLibre実装を書かず map ID のみ参照
-- MDXは原稿と表示実装が混ざりやすいため初期採用しない
-
-## コンテンツ構成
-
-- **年代史** — 各時代の社会を定点観測
-- **テーマ史** — 経済・人口・外交・技術などを時代横断で追跡
-- **構造史** — 幕藩体制、中央集権化、都市化、情報速度など長期構造を分析
-- **主題地図** — MapLibre による空間構造の可視化
-- **史料・出典** — 一次史料、公的統計、研究文献などへの導線
-- **重要用語** — 全体で一意な用語辞書を持ち、各年代では必要な語を「定義」と「他の制度・出来事とのつながり」で整理
-
-地図は各年代に機械的に配置せず、藩領、街道、港、鉄道、都市人口、工業地域、災害、戦災、人口移動など、**空間構造そのものが論点になる場合だけ使用**します。
-
-地図を公開する場合は、[地図監査標準](standards/MAP_AUDIT_STANDARD.md) に従い、データ・スタイル・実表示を分けて監査します。出典、基準時点、加工履歴、不確実性を追跡可能にします。既にHuman Visual Audit済みの地図と同じ形式の表示・凡例生成・interactionを再利用し、変更がPointの位置・属性・カテゴリ値だけの地図は、再利用元を記録したうえで個別の見た目監査を省略できます。
+**公開済みの範囲、最新の進捗、監査・CIの記録は [実装状況](docs/IMPLEMENTATION_STATUS.md) を参照してください。** 個別フェーズの計画と結果は `plan/`・`plan_done/` で管理します。
 
 ## 開発
 
-Node.js 24 を CI の基準環境としています。
+Node.js 24 を基準環境としています。
 
 ```bash
 npm install
 npm run dev
-```
-
-品質チェックは以下です。
-
-```bash
 npm run check
 ```
 
-1942年の記事粒度の遡及判定は [1942年記事粒度レビュー](docs/PERIOD_GRANULARITY_REVIEW_1942.md) に記録しています。新規短期記事の理由チェックは `npm run validate:period-granularity`、過密度の参照レポートは `npm run audit:period-granularity` で確認できます。1943年5月9日以降の14日未満の記事は、独立性を示す `granularityDecision` の3項目が必須です。14日は下限ではありません。
+`npm run check` が通常の品質チェックです。開発・検証・公開の詳細は[プロジェクト運用規約](standards/PROJECT_WORKFLOW_STANDARD.md)にまとめています。
 
-`check` はSYSTEM_PROMPT文字数、記事境界の理由・期間、Markdownコンパイルと用語・出典リンク検証、本文厚み、年代ページの図版要否判定、地図監査ガード、ESLint、TypeScript型チェック、Vite本番ビルドを順番に検証します。
+## 企画・規約・実装計画
 
-用語定義は `content/glossary/terms.json` に一度だけ置き、各年代は `content/glossary/periods/<routeKey>.json`、構造史・テーマ史は `content/glossary/crosscutting/<routeKey>.json` からID参照します。用語リンクは `[[term:<id>|表示語]]` を使い、存在しない参照先や、その年代の中核語が本文から一度も利用されていない状態を content compiler で検出します。辞書を一度だけIDインデックス化し、年代ごとの総当たり検索を避けています。
+- [全体企画・設計方針](plan/JPN_HISTORY_DECADE_PLAN.md)
+- [執筆・出典・用語・内部リンクの規約](standards/CONTENT_AUTHORING_STANDARD.md)
+- [図版の出典・権利に関する規約](standards/IMAGE_ASSET_STANDARD.md)
+- [地図監査の規約](standards/MAP_AUDIT_STANDARD.md)
+- [実装・CI・計画運用の規約](standards/PROJECT_WORKFLOW_STANDARD.md)
+- [現在有効な実装計画](plan/README.md) ／ [完了した実装計画](plan_done/)
+- [実装状況・監査記録](docs/IMPLEMENTATION_STATUS.md)
 
-次のPLAN工程・年代記事に着手する際は、直前のpublished記事に対する追跡査読を実施します。
-
-```bash
-npm run audit:previous                         # 最新のpublished年代記事
-npm run audit:previous -- --next JH163         # JH163着手時はJH162を査読
-npm run audit:previous -- --previous JH162     # 対象を明示
-```
-
-留保表現チェック・可読性シグナルは機械検出し、過度な細部・意味的重複・史実の根拠は本文を読み直して判定します。修正と検証を次工程の作業内で完了し、判定をPLANまたはPRへ記録します。詳細は[執筆規約](standards/CONTENT_AUTHORING_STANDARD.md#34-次工程着手時の直前執筆記事追跡査読)を参照してください。
-
-## GitHub Pages
-
-`.github/workflows/pages.yml` が `main` への push を検知して `dist/` を GitHub Pages にデプロイします。
-
-初回のみリポジトリの **Settings → Pages → Build and deployment → Source** を **GitHub Actions** に設定する必要があります。
-
-公開先は GitHub Pages の project site を想定しています。
-
-- `https://insuns21.github.io/jpn-history-decade/`
-
-Vite の `base` は `./` とし、project site・カスタムドメインのどちらでも扱いやすくしています。
-
-## ワークスペース用システムプロンプト
-
-AI向けの常時ルールは [SYSTEM_PROMPT.md](SYSTEM_PROMPT.md) に置き、**8,000文字以内**をCIで強制します。詳細規約は分離しています。
-
-- [執筆・出典・用語集・内部リンク](standards/CONTENT_AUTHORING_STANDARD.md)
-- [歴史図版の権利・出典・表示](standards/IMAGE_ASSET_STANDARD.md)
-- [地図監査](standards/MAP_AUDIT_STANDARD.md)
-- [実装・CI・plan運用](standards/PROJECT_WORKFLOW_STANDARD.md)
-
-詳細ルールをSYSTEM_PROMPTへ重複記載せず、該当standardを参照する運用です。
-
-## 企画書
-
-詳細な方針・ページ構成・MapLibre 主題地図方針・初期ロードマップ：
-
-- [plan/JPN_HISTORY_DECADE_PLAN.md](plan/JPN_HISTORY_DECADE_PLAN.md)
-- 完了済み実装計画は [`plan_done/`](plan_done/) に保存
-
-
-## 実装計画の運用
-
-- 現在有効な企画・実装計画：[`plan/`](plan/)
-- 完了済み実装計画：[`plan_done/`](plan_done/)
-
-実装計画は完了条件・監査・CI・Pages deployを満たした後、Statusを `completed` に変更して `plan/` から `plan_done/` へ移動します。長期企画書は個別フェーズ完了だけでは移動しません。
+AI向けの常時ルールは [SYSTEM_PROMPT.md](SYSTEM_PROMPT.md) に置き、詳細は上記の規約を参照します。

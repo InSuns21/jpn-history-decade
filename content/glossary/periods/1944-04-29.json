@@ -1,0 +1,37 @@
+{
+  "period": "1944-04-29",
+  "termRefs": [
+    {
+      "id": "truk-second-carrier-strike-1944",
+      "core": true
+    },
+    {
+      "id": "toyoda-soemu-combined-fleet-1944",
+      "core": true
+    },
+    {
+      "id": "truk-base-1944",
+      "core": true
+    },
+    {
+      "id": "task-force-58-1944",
+      "core": true
+    },
+    {
+      "id": "hailstone-operation-1944",
+      "core": false
+    },
+    {
+      "id": "combined-fleet-hq-1944",
+      "core": true
+    },
+    {
+      "id": "naval-general-staff",
+      "core": false
+    },
+    {
+      "id": "z-plan-1944",
+      "core": true
+    }
+  ]
+}

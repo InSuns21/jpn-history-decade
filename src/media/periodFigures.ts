@@ -1611,4 +1611,14 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
       license: 'Public Domain（米国海軍公式写真）',
     }),
   ],
+  '1944-04-29': [
+    commonsFigure('Attack on Japanese airbase on Truk in April 1944.jpg', {
+      alt: '1944年4月29日、トラック環礁モエン島の日本軍飛行場を攻撃する米海軍機から撮影した写真。滑走路と建物の近くへ投下された爆弾が見える',
+      title: 'トラック島再空襲で狙われた飛行場',
+      dateLabel: '1944年4月29日（米海軍資料の記載日）',
+      credit: 'U.S. Navy／National Museum of Naval Aviation（1992.273.013）・Wikimedia Commons（改変なし）',
+      license: 'Public Domain Mark（米国連邦政府著作物）',
+    }),
+  ],
+
 }

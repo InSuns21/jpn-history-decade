@@ -1592,4 +1592,23 @@ export const periodFiguresByRouteKey: Record<string, HistoricalFigureDefinition[
       license: 'Public Domain（米国連邦政府著作物）',
     }),
   ],
+
+  '1944-04-22': [
+    {
+      imageUrl: 'https://www.history.navy.mil/content/history/nhhc/our-collections/photography/numerical-list-of-images/nhhc-series/nh-series/80-G-177000/80-G-177381/_jcr_content/mediaitem/image.img.jpg/1439244479022.jpg',
+      sourceUrl: 'https://www.history.navy.mil/our-collections/photography/numerical-list-of-images/nhhc-series/nh-series/80-G-177000/80-G-177381.html',
+      alt: '1944年4月22日、米沿岸警備隊が操縦する上陸艇に乗ってアイタペの海岸へ向かう、装備を携えた連合軍兵士たち',
+      title: 'アイタペへ向かう上陸艇と兵士',
+      dateLabel: '1944年4月22日',
+      credit: 'U.S. Coast Guard公式撮影者（氏名不詳）／U.S. National Archives（80-G-177381）・Naval History and Heritage Command（改変なし）',
+      license: 'Public Domain（米国連邦政府著作物）',
+    },
+    commonsFigure('Douglas SBD-5 Dauntless covering landings at Tanahmerah Bay (Hollandia) on 22 April 1944.jpg', {
+      alt: '1944年4月22日、タナメラ湾の上陸浜へ向かう米軍上陸艇と、その上空で警戒する米海軍のSBD-5ドーントレス機',
+      title: 'タナメラ湾の上陸艇を掩護する米海軍艦載機',
+      dateLabel: '1944年4月22日',
+      credit: 'U.S. Navy公式撮影者（氏名不詳）／U.S. Army Center of Military History刊行戦史・Wikimedia Commons（改変なし）',
+      license: 'Public Domain（米国海軍公式写真）',
+    }),
+  ],
 }

@@ -1,0 +1,25 @@
+{
+  "period": "1944-04-22",
+  "termRefs": [
+    {
+      "id": "operation-reckless-1944",
+      "core": true
+    },
+    {
+      "id": "operation-persecution-1944",
+      "core": true
+    },
+    {
+      "id": "hollandia-sentani-airfields-1944",
+      "core": true
+    },
+    {
+      "id": "aitape-tadji-airfield-1944",
+      "core": true
+    },
+    {
+      "id": "task-force-58-1944",
+      "core": true
+    }
+  ]
+}
